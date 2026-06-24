@@ -1,0 +1,27 @@
+# Python environments
+.venv/
+venv/
+env/
+.env/
+
+# Python/cache artifacts
+__pycache__/
+**/__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Local editor and OS noise
+.DS_Store
+Thumbs.db
+
+# Downloaded public datasets and heavy mesh-extraction outputs
+datasets/
+M04_mesh_extraction/downloads/
+M04_mesh_extraction/raw/
+M04_mesh_extraction/models/
+M04_mesh_extraction/outputs/
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z

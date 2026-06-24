@@ -1,0 +1,92 @@
+{
+  "asset": "cloth_50x50_cells",
+  "source_kind": "synthetic",
+  "mesh_source": "/mnt/h/2026_paper_work/Wind_Deformable_3DGS/experiments/M02_mesh_proxy_binding/assets/cloth_50x50_cells.npz",
+  "gaussian_source": "/mnt/h/2026_paper_work/Wind_Deformable_3DGS/experiments/M02_mesh_proxy_binding/assets/cloth_50x50_cells_gaussians.npz",
+  "reports": [
+    {
+      "preset": {
+        "name": "calm",
+        "direction_degrees": 0.0,
+        "strength": 0.045,
+        "gust_frequency": 1.0,
+        "spatial_scale": 1.0,
+        "turbulence": 0.12
+      },
+      "transport_mode": "full",
+      "frames": 36,
+      "fps": 12.0,
+      "gif": "/mnt/h/2026_paper_work/Wind_Deformable_3DGS/experiments/M03_procedural_wind/outputs/cloth_50x50_cells_calm_full.gif",
+      "poster": "/mnt/h/2026_paper_work/Wind_Deformable_3DGS/experiments/M03_procedural_wind/outputs/cloth_50x50_cells_calm_full_poster.png",
+      "frame_dir": null,
+      "gaussian_count": 10000,
+      "drawn_gaussians": 1800,
+      "gs_bbox_min": [
+        -0.49667099118232727,
+        -0.49733299016952515,
+        -0.02153100073337555
+      ],
+      "gs_bbox_max": [
+        0.5044779777526855,
+        0.49734100699424744,
+        0.07119499891996384
+      ]
+    },
+    {
+      "preset": {
+        "name": "crosswind",
+        "direction_degrees": 45.0,
+        "strength": 0.075,
+        "gust_frequency": 1.6,
+        "spatial_scale": 2.1,
+        "turbulence": 0.42
+      },
+      "transport_mode": "full",
+      "frames": 36,
+      "fps": 12.0,
+      "gif": "/mnt/h/2026_paper_work/Wind_Deformable_3DGS/experiments/M03_procedural_wind/outputs/cloth_50x50_cells_crosswind_full.gif",
+      "poster": "/mnt/h/2026_paper_work/Wind_Deformable_3DGS/experiments/M03_procedural_wind/outputs/cloth_50x50_cells_crosswind_full_poster.png",
+      "frame_dir": null,
+      "gaussian_count": 10000,
+      "drawn_gaussians": 1800,
+      "gs_bbox_min": [
+        -0.4966740012168884,
+        -0.500078022480011,
+        -0.040369000285863876
+      ],
+      "gs_bbox_max": [
+        0.505611002445221,
+        0.5076410174369812,
+        0.11546500027179718
+      ]
+    },
+    {
+      "preset": {
+        "name": "gusty",
+        "direction_degrees": -35.0,
+        "strength": 0.105,
+        "gust_frequency": 2.2,
+        "spatial_scale": 3.2,
+        "turbulence": 0.82
+      },
+      "transport_mode": "full",
+      "frames": 36,
+      "fps": 12.0,
+      "gif": "/mnt/h/2026_paper_work/Wind_Deformable_3DGS/experiments/M03_procedural_wind/outputs/cloth_50x50_cells_gusty_full.gif",
+      "poster": "/mnt/h/2026_paper_work/Wind_Deformable_3DGS/experiments/M03_procedural_wind/outputs/cloth_50x50_cells_gusty_full_poster.png",
+      "frame_dir": null,
+      "gaussian_count": 10000,
+      "drawn_gaussians": 1800,
+      "gs_bbox_min": [
+        -0.4966779947280884,
+        -0.5118799805641174,
+        -0.05823500081896782
+      ],
+      "gs_bbox_max": [
+        0.5173310041427612,
+        0.5012310147285461,
+        0.15892499685287476
+      ]
+    }
+  ]
+}

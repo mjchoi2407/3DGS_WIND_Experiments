@@ -1,0 +1,36 @@
+{
+  "asset": "cloth_10x10_cells",
+  "source_kind": "synthetic",
+  "mesh_source": "/mnt/h/2026_paper_work/Wind_Deformable_3DGS/experiments/M02_mesh_proxy_binding/assets/cloth_10x10_cells.npz",
+  "gaussian_source": "/mnt/h/2026_paper_work/Wind_Deformable_3DGS/experiments/M02_mesh_proxy_binding/assets/cloth_10x10_cells_gaussians.npz",
+  "reports": [
+    {
+      "preset": {
+        "name": "calm",
+        "direction_degrees": 0.0,
+        "strength": 0.045,
+        "gust_frequency": 1.0,
+        "spatial_scale": 1.0,
+        "turbulence": 0.12
+      },
+      "transport_mode": "full",
+      "frames": 6,
+      "fps": 6.0,
+      "gif": "/mnt/h/2026_paper_work/Wind_Deformable_3DGS/experiments/M03_procedural_wind/outputs/cloth_10x10_cells_calm_full.gif",
+      "poster": "/mnt/h/2026_paper_work/Wind_Deformable_3DGS/experiments/M03_procedural_wind/outputs/cloth_10x10_cells_calm_full_poster.png",
+      "frame_dir": null,
+      "gaussian_count": 400,
+      "drawn_gaussians": 200,
+      "gs_bbox_min": [
+        -0.4833439886569977,
+        -0.48388901352882385,
+        -0.0032649999484419823
+      ],
+      "gs_bbox_max": [
+        0.49077901244163513,
+        0.48391398787498474,
+        0.0689539983868599
+      ]
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "asset": "synthetic_leaf_3dgs | 50x50 occupancy PLY proxy",
+  "source_kind": "ply",
+  "mesh_source": "generated 50x50 occupancy proxy from PLY Gaussian occupancy",
+  "gaussian_source": "/mnt/h/2026_paper_work/Wind_Deformable_3DGS/experiments/M01_static_3dgs_io/assets/synthetic_leaf_3dgs.ply",
+  "reports": [
+    {
+      "preset": {
+        "name": "calm",
+        "direction_degrees": 0.0,
+        "strength": 0.045,
+        "gust_frequency": 1.0,
+        "spatial_scale": 1.0,
+        "turbulence": 0.12
+      },
+      "transport_mode": "full",
+      "frames": 36,
+      "fps": 12.0,
+      "gif": "/mnt/h/2026_paper_work/Wind_Deformable_3DGS/experiments/M03_procedural_wind/outputs/synthetic_leaf_3dgs_50x50_occupancy_PLY_proxy_calm_full.gif",
+      "poster": "/mnt/h/2026_paper_work/Wind_Deformable_3DGS/experiments/M03_procedural_wind/outputs/synthetic_leaf_3dgs_50x50_occupancy_PLY_proxy_calm_full_poster.png",
+      "frame_dir": null,
+      "gaussian_count": 1812,
+      "drawn_gaussians": 1800,
+      "gs_bbox_min": [
+        -0.6311110258102417,
+        -0.2771320044994354,
+        -0.0757720023393631
+      ],
+      "gs_bbox_max": [
+        0.638791024684906,
+        0.2771010100841522,
+        0.06521099805831909
+      ]
+    },
+    {
+      "preset": {
+        "name": "crosswind",
+        "direction_degrees": 45.0,
+        "strength": 0.075,
+        "gust_frequency": 1.6,
+        "spatial_scale": 2.1,
+        "turbulence": 0.42
+      },
+      "transport_mode": "full",
+      "frames": 36,
+      "fps": 12.0,
+      "gif": "/mnt/h/2026_paper_work/Wind_Deformable_3DGS/experiments/M03_procedural_wind/outputs/synthetic_leaf_3dgs_50x50_occupancy_PLY_proxy_crosswind_full.gif",
+      "poster": "/mnt/h/2026_paper_work/Wind_Deformable_3DGS/experiments/M03_procedural_wind/outputs/synthetic_leaf_3dgs_50x50_occupancy_PLY_proxy_crosswind_full_poster.png",
+      "frame_dir": null,
+      "gaussian_count": 1812,
+      "drawn_gaussians": 1800,
+      "gs_bbox_min": [
+        -0.6311110258102417,
+        -0.2784090042114258,
+        -0.09561099857091904
+      ],
+      "gs_bbox_max": [
+        0.6403260231018066,
+        0.2825930118560791,
+        0.10484600067138672
+      ]
+    },
+    {
+      "preset": {
+        "name": "gusty",
+        "direction_degrees": -35.0,
+        "strength": 0.105,
+        "gust_frequency": 2.2,
+        "spatial_scale": 3.2,
+        "turbulence": 0.82
+      },
+      "transport_mode": "full",
+      "frames": 36,
+      "fps": 12.0,
+      "gif": "/mnt/h/2026_paper_work/Wind_Deformable_3DGS/experiments/M03_procedural_wind/outputs/synthetic_leaf_3dgs_50x50_occupancy_PLY_proxy_gusty_full.gif",
+      "poster": "/mnt/h/2026_paper_work/Wind_Deformable_3DGS/experiments/M03_procedural_wind/outputs/synthetic_leaf_3dgs_50x50_occupancy_PLY_proxy_gusty_full_poster.png",
+      "frame_dir": null,
+      "gaussian_count": 1812,
+      "drawn_gaussians": 1800,
+      "gs_bbox_min": [
+        -0.6311110258102417,
+        -0.28352901339530945,
+        -0.10931099951267242
+      ],
+      "gs_bbox_max": [
+        0.6504020094871521,
+        0.27865099906921387,
+        0.14746400713920593
+      ]
+    }
+  ]
+}
