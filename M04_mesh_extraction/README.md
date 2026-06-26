@@ -177,6 +177,295 @@ SIBR_DEFAULT_ITERATION=sibr_safe code/scripts/run_sibr_gaussian_viewer.sh
 
 The original `iteration_1000` PLY remains unchanged and should be used for method-side evaluation unless a viewer-specific diagnostic explicitly needs a filtered or converted copy.
 
+### 2026-06-26 CO3D kite category download
+
+CO3D category links were provided in `/mnt/h/co3d_links.txt`. For a first object-centric aerodynamic asset, `kite` was chosen over `plant` and `teddybear` because it is much smaller and still has a thin, wind-relevant surface.
+
+Checked category archive sizes:
+
+- `kite.zip`: `12,453,472,106` bytes, about `11.60 GiB`
+- `plant.zip`: about `49.12 GiB`
+- `teddybear.zip`: about `48.55 GiB`
+- `umbrella.zip`: about `39.06 GiB`
+
+Download command:
+
+```bash
+wget -c --progress=dot:giga \
+  -O experiments/M04_mesh_extraction/downloads/co3d/category_zips/kite.zip \
+  https://dl.fbaipublicfiles.com/co3d/kite.zip
+```
+
+Integrity and extraction commands:
+
+```bash
+unzip -tq experiments/M04_mesh_extraction/downloads/co3d/category_zips/kite.zip
+unzip -q -n \
+  experiments/M04_mesh_extraction/downloads/co3d/category_zips/kite.zip \
+  -d experiments/M04_mesh_extraction/raw/co3d
+```
+
+Result:
+
+- Archive: `downloads/co3d/category_zips/kite.zip`, `12G`
+- Extracted category: `raw/co3d/kite`, `12G`
+- Zip integrity check: no errors detected
+- CO3D category metadata: `sequence_annotations.jgz`, `frame_annotations.jgz`, `set_lists.json`
+- Sequence count: `163`
+- Frame annotations: `16,358`
+- Extracted file count under `raw/co3d/kite`: `65,600`
+- Candidate preview sheet: `outputs/co3d_kite_candidate_preview/kite_top_sequence_contact_sheet.jpg`
+
+Recommended first mesh-extraction candidate:
+
+- Sequence: `414_56867_109917`
+- Path: `raw/co3d/kite/414_56867_109917`
+- Size: `168M`
+- Files: `409`
+- Frames: `102`
+- Valid mask frames: `102 / 102`
+- CO3D point cloud: `840,238` points
+- CO3D point-cloud quality score: `-0.535`
+- CO3D viewpoint quality score: `1.499`
+- Visual note: wide triangular kite, the most directly relevant shape for a wind/aerodynamics asset among the inspected candidates.
+
+Backup candidates:
+
+- `402_52522_102936`: `82M`, `102` valid-mask frames, `338,343` point-cloud points, good metadata score.
+- `398_50636_99350`: `55M`, `102` valid-mask frames, `641,671` point-cloud points, clean square kite texture.
+
+### 2026-06-27 CO3D object category batch extraction
+
+The remaining object-centric CO3D categories were downloaded, extracted under `raw/co3d`, checked through their CO3D metadata files, and the verified zip archives were removed.
+
+Final extracted categories:
+
+| Category | Size | Sequences | Frame annotations | Files |
+| --- | ---: | ---: | ---: | ---: |
+| `broccoli` | `28G` | `405` | `39,148` | `157,001` |
+| `frisbee` | `8.6G` | `133` | `12,911` | `51,782` |
+| `kite` | `12G` | `163` | `16,358` | `65,600` |
+| `plant` | `51G` | `574` | `56,936` | `228,323` |
+| `teddybear` | `50G` | `749` | `72,865` | `292,215` |
+| `toyplane` | `18G` | `250` | `24,446` | `98,039` |
+| `umbrella` | `40G` | `503` | `48,372` | `193,997` |
+
+Final raw root:
+
+```text
+experiments/M04_mesh_extraction/raw/co3d
+```
+
+Final raw size:
+
+```text
+205G
+```
+
+`umbrella.zip` required an interrupted range-download recovery. The completed archive was verified with:
+
+```bash
+unzip -tq experiments/M04_mesh_extraction/downloads/co3d/category_zips/umbrella.zip
+```
+
+and returned:
+
+```text
+No errors detected in compressed data
+```
+
+After successful extraction and metadata checks, category zip archives were deleted. Only small download/recovery logs remain under:
+
+```text
+experiments/M04_mesh_extraction/downloads/co3d/category_zips
+```
+
+### 2026-06-27 Mip-NeRF 360 H-drive extraction
+
+The Mip-NeRF 360 archives were kept on the H drive and extracted directly into the WSL experiment raw folder to avoid copying unnecessary zip archives into the WSL VHDX.
+
+Source archives:
+
+- `/mnt/h/360_v2.zip`: selected scenes only, `bonsai`, `garden`, `stump`
+- `/mnt/h/360_extra_scenes.zip`: intended scenes, `flowers`, `treehill`
+
+Extraction commands used:
+
+```bash
+ionice -c2 -n7 nice -n 10 unzip -q -n /mnt/h/360_v2.zip \
+  'bonsai/*' 'garden/*' 'stump/*' \
+  -d experiments/M04_mesh_extraction/raw/mipnerf360
+
+ionice -c2 -n7 nice -n 10 unzip -q -n /mnt/h/360_extra_scenes.zip \
+  'treehill/*' \
+  -d experiments/M04_mesh_extraction/raw/mipnerf360
+
+ionice -c2 -n7 nice -n 10 unzip -q -n /mnt/h/360_extra_scenes.zip \
+  'flowers/*' \
+  -d experiments/M04_mesh_extraction/raw/mipnerf360
+```
+
+Usable extracted scenes:
+
+| Scene | Source archive | Size | Files | Status |
+| --- | --- | ---: | ---: | --- |
+| `bonsai` | `360_v2.zip` | `1.4G` | `1,172` | ready |
+| `garden` | `360_v2.zip` | `2.9G` | `744` | ready |
+| `stump` | `360_v2.zip` | `1.5G` | `504` | ready |
+| `flowers` | `360_extra_scenes.zip` | `2.5G` | `696` | ready |
+| `treehill` | `360_extra_scenes.zip` | `1.8G` | `568` | ready |
+
+The first copy of `/mnt/h/360_extra_scenes.zip` was corrupt or incomplete around the `flowers` entries. After redownloading the archive, `flowers/*` passed:
+
+```bash
+unzip -tq /mnt/h/360_extra_scenes.zip 'flowers/*'
+```
+
+and returned:
+
+```text
+No errors detected in /mnt/h/360_extra_scenes.zip for the 703 files tested.
+```
+
+The previous partial extraction was preserved but quarantined as:
+
+```text
+experiments/M04_mesh_extraction/raw/mipnerf360/flowers_incomplete_from_corrupt_zip
+```
+
+It contains only `80` files and should not be used for training or mesh extraction. Use `raw/mipnerf360/flowers` for the valid scene.
+
+### 2026-06-27 GOF Mip-NeRF 360 smoke 3DGS script
+
+Use this wrapper to train a small GOF/3DGS smoke model from the ready Mip-NeRF 360 scenes:
+
+```bash
+experiments/M04_mesh_extraction/scripts/run_gof_mip360_smoke.sh
+```
+
+Default behavior:
+
+- Scene: `bonsai`
+- Images: `images_4`
+- Iterations: `1000`
+- Output model: `models/gof_mip360_bonsai_i1000_images_4`
+- Log: `outputs/logs/gof_mip360_bonsai_i1000_images_4_<timestamp>.log`
+
+Recommended first check:
+
+```bash
+experiments/M04_mesh_extraction/scripts/run_gof_mip360_smoke.sh --dry-run
+```
+
+Then run the actual smoke training:
+
+```bash
+experiments/M04_mesh_extraction/scripts/run_gof_mip360_smoke.sh
+```
+
+To smoke test another ready scene:
+
+```bash
+experiments/M04_mesh_extraction/scripts/run_gof_mip360_smoke.sh \
+  --scene flowers \
+  --iterations 1000 \
+  --images images_4
+```
+
+The script checks CUDA availability in the user terminal, prints progress to the terminal, and mirrors the output to a log file. It does not overwrite an existing non-empty model directory unless `--backup-existing` is passed.
+
+Optional one-pass checks:
+
+```bash
+experiments/M04_mesh_extraction/scripts/run_gof_mip360_smoke.sh --run-render --run-mesh
+```
+
+If the smoke training already finished and the `point_cloud.ply` exists, run post steps without retraining:
+
+```bash
+experiments/M04_mesh_extraction/scripts/run_gof_mip360_smoke.sh \
+  --skip-train-if-ready \
+  --run-render \
+  --run-mesh
+```
+
+For higher-quality runs after smoke succeeds, use the same script with more iterations and the official image factor, for example `bonsai` with `--images images_2 --iterations 30000`.
+
+### 2026-06-27 GOF Mip-NeRF 360 전체 스모크 batch 스크립트
+
+Mip-NeRF 360 준비 scene 전체를 순차로 스모크 테스트하려면 다음 wrapper를 사용한다.
+
+```bash
+experiments/M04_mesh_extraction/scripts/run_gof_mip360_smoke_all.sh
+```
+
+기본 실행 대상:
+
+```text
+bonsai flowers garden stump treehill
+```
+
+기본값:
+
+- 각 scene `1000` iterations
+- 모든 scene `images_4`
+- GPU `0`
+- scene별 port는 `6009`부터 1씩 증가
+- batch 로그: `outputs/logs/gof_mip360_all_i1000_images_4_<timestamp>.log`
+
+먼저 전체 실행 계획을 확인한다.
+
+```bash
+experiments/M04_mesh_extraction/scripts/run_gof_mip360_smoke_all.sh --dry-run
+```
+
+문제가 없으면 실제 전체 스모크 학습을 실행한다.
+
+```bash
+experiments/M04_mesh_extraction/scripts/run_gof_mip360_smoke_all.sh
+```
+
+실행 중 터미널과 batch 로그에 다음 정보가 계속 표시된다.
+
+- 전체 진행률: `[현재/전체]`, percent, scene 이름
+- scene별 시작/종료 시각
+- scene별 command
+- scene별 exit status
+- scene별 소요 시간과 batch 누적 시간
+- 현재까지 성공/실패 요약
+
+일부 scene이 실패해도 나머지를 계속 확인하려면 다음 옵션을 사용한다.
+
+```bash
+experiments/M04_mesh_extraction/scripts/run_gof_mip360_smoke_all.sh --continue-on-error
+```
+
+학습 후 render와 mesh extraction까지 한 번에 확인하려면 다음처럼 실행한다.
+
+```bash
+experiments/M04_mesh_extraction/scripts/run_gof_mip360_smoke_all.sh \
+  --run-render \
+  --run-mesh
+```
+
+이미 학습된 point cloud가 있을 때 후처리만 이어서 확인하려면 다음처럼 실행한다.
+
+```bash
+experiments/M04_mesh_extraction/scripts/run_gof_mip360_smoke_all.sh \
+  --skip-train-if-ready \
+  --run-render \
+  --run-mesh
+```
+
+특정 scene만 묶어서 돌릴 수도 있다.
+
+```bash
+experiments/M04_mesh_extraction/scripts/run_gof_mip360_smoke_all.sh \
+  --scenes "bonsai flowers"
+```
+
+스모크가 성공한 뒤 품질용 run으로 넘어갈 때는 `--iterations 30000`과 `--official-factors`를 사용한다. `--official-factors`는 현재 보유 scene 기준 `bonsai=images_2`, 나머지 scene은 `images_4`를 사용한다.
+
 ## 로컬 데이터 배치 규칙
 
 대용량 데이터는 git에 넣지 않는다. 이 폴더의 `.gitignore`는 다음 경로를 무시한다.
