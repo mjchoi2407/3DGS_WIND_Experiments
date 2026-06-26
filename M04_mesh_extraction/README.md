@@ -466,6 +466,69 @@ experiments/M04_mesh_extraction/scripts/run_gof_mip360_smoke_all.sh \
 
 스모크가 성공한 뒤 품질용 run으로 넘어갈 때는 `--iterations 30000`과 `--official-factors`를 사용한다. `--official-factors`는 현재 보유 scene 기준 `bonsai=images_2`, 나머지 scene은 `images_4`를 사용한다.
 
+### 2026-06-27 GOF Mip-NeRF 360 연구용 고퀄 batch 스크립트
+
+연구용 고퀄 3DGS 모델을 한 번에 생성하려면 다음 wrapper를 사용한다. 기본값은 전체 준비 scene, `30000` iterations, 공식 factor, SIBR viewer 호환 변환, render까지 실행한다. Mesh extraction은 3DGS 품질을 확인한 뒤 별도 스크립트로 진행한다.
+
+```bash
+experiments/M04_mesh_extraction/scripts/run_gof_mip360_quality_all.sh --dry-run
+```
+
+계획이 맞으면 실제 실행한다.
+
+```bash
+experiments/M04_mesh_extraction/scripts/run_gof_mip360_quality_all.sh
+```
+
+기본 실행 대상과 출력 model 경로:
+
+```text
+bonsai   -> models/gof_mip360_bonsai_i30000_images_2
+flowers  -> models/gof_mip360_flowers_i30000_images_4
+garden   -> models/gof_mip360_garden_i30000_images_4
+stump    -> models/gof_mip360_stump_i30000_images_4
+treehill -> models/gof_mip360_treehill_i30000_images_4
+```
+
+각 scene마다 생성되는 주요 산출물:
+
+- 3DGS point cloud: `point_cloud/iteration_30000/point_cloud.ply`
+- SIBR 호환 viewer copy: `point_cloud/iteration_sibr_safe/point_cloud.ply`
+- SIBR 변환 요약: `point_cloud/iteration_sibr_safe/point_cloud.viewer_safe_summary.json`
+- render 결과: `train/ours_30000/`
+- batch 로그: `outputs/logs/gof_mip360_quality_i30000_official_factors_<timestamp>.log`
+
+특정 scene만 먼저 고퀄로 확인하려면 다음처럼 실행한다.
+
+```bash
+experiments/M04_mesh_extraction/scripts/run_gof_mip360_quality_all.sh \
+  --scenes "bonsai"
+```
+
+학습과 SIBR 변환만 먼저 끝내고 render를 나중에 돌리고 싶다면 다음처럼 실행한다.
+
+```bash
+experiments/M04_mesh_extraction/scripts/run_gof_mip360_quality_all.sh \
+  --scenes "bonsai flowers" \
+  --no-render
+```
+
+이미 point cloud가 있는 scene에서 변환과 후처리만 이어서 실행하려면 다음 옵션을 붙인다.
+
+```bash
+experiments/M04_mesh_extraction/scripts/run_gof_mip360_quality_all.sh \
+  --skip-train-if-ready
+```
+
+일부 scene이 실패해도 나머지 scene을 계속 진행하려면 다음 옵션을 사용한다.
+
+```bash
+experiments/M04_mesh_extraction/scripts/run_gof_mip360_quality_all.sh \
+  --continue-on-error
+```
+
+현재 render 단계는 predicted image와 GT image를 저장하는 단계이며, PSNR/SSIM/LPIPS 같은 수치 평가나 contact sheet 생성은 이 wrapper 안에서 자동 실행하지 않는다. 자동 비교가 필요하면 별도 render-evaluation 스크립트로 분리한다.
+
 ## 로컬 데이터 배치 규칙
 
 대용량 데이터는 git에 넣지 않는다. 이 폴더의 `.gitignore`는 다음 경로를 무시한다.
