@@ -54,12 +54,16 @@ PYTHONPATH=. ../.venv/bin/python -m unittest discover -s tests -v
 
 ## 완료 gate
 
-- [ ] Python 3.12 unit test가 통과한다.
-- [ ] Clean-source TD00 smoke가 통과한다.
-- [ ] ignored working run에 `run_manifest.json`, `td00_smoke_report.json`이 존재한다.
-- [ ] compact reference JSON의 hash와 working run이 일치한다.
-- [ ] reuse audit가 M01--M04를 새 완료 상태로 승격하지 않는다.
-- [ ] Python 3.10/3.11 미검증, GPU/physics 미검증 상태가 숨겨지지 않는다.
+- [x] Python 3.12 unit test 38개가 통과한다.
+- [x] Clean-source TD00 smoke가 통과한다.
+- [x] ignored working run에 `run_manifest.json`, `td00_smoke_report.json`이 존재한다.
+- [x] compact reference JSON의 hash와 working run이 일치한다.
+- [x] reuse audit가 M01--M04를 새 완료 상태로 승격하지 않는다.
+- [x] Python 3.10/3.11 미검증, GPU/physics 미검증 상태가 숨겨지지 않는다.
+
+검증된 reference run은 `td00-contracts-smoke-20260812t184509388327z-abde7ba`다.
+`reference_complete.json`이 manifest와 report의 SHA-256을 고정하며,
+독립 verifier에서 15개 check가 `pass`, 12개 TD01+ 항목이 `not_evaluated`로 확인됐다.
 
 ## 실패 사례와 결정
 
