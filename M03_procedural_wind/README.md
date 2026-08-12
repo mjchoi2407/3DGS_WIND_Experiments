@@ -1,6 +1,8 @@
 # M03 Procedural Wind Deformation
 
-## Goal
+> **현재 역할:** 이 폴더는 물리 force나 state를 푸는 solver가 아니라 위치를 직접 생성하는 legacy qualitative fixture다. Prescribed wind input과 transport smoke에는 재사용할 수 있지만 teacher, Global predictor 또는 Local residual model로 사용하지 않는다.
+
+## Historical Goal
 
 Replace hand-authored M02 deformation modes with a lightweight one-way procedural wind field, then verify that mesh-bound Gaussians remain stable under wind-like motion.
 
@@ -127,5 +129,5 @@ Generated qualitative previews:
 ## Notes
 
 - M3 uses global wind plus procedural spatial gusts, not a voxel wind grid.
-- Two-way coupling is out of scope for the current idea sketch.
-- M4 is the next step if we want topology-aware dynamics through a small mass-spring or XPBD-style mesh simulator.
+- Two-way fluid coupling was out of scope for this historical M03 experiment.
+- The current implementation entry point is TD00 in the checklist indexed by `ideas/README.md`; M04 is offline preprocessing/support rather than the next runtime physics milestone.

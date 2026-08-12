@@ -1,6 +1,8 @@
 # M02 Mesh Proxy Binding
 
-## Goal
+> **현재 역할:** 이 폴더의 XY mesh proxy와 triangle/barycentric runtime binding은 legacy baseline이다. 합성 cloth/leaf, frame·covariance 검사는 TD01/E0 fixture 후보로 남기지만, 새 방법의 target-runtime-mesh-free topology scaffold나 affine MLS transport를 구현한 것으로 간주하지 않는다.
+
+## Historical Goal
 
 Build clean `simulation mesh proxy` test assets for M2 and verify `Gaussian binding`, triangle-local frame transport, and covariance transport before using real 3DGS assets.
 
@@ -205,7 +207,7 @@ Expected counts:
 
 ## Metrics
 
-For this first mesh-only step, use structural sanity checks:
+For this preserved legacy mesh-only step, use structural sanity checks:
 
 - vertex count matches `(cells + 1)^2`
 - face count matches `2 * cells^2`
@@ -234,8 +236,8 @@ For this first mesh-only step, use structural sanity checks:
 - `viewer.html` remains the zero-setup fallback. `viewer_gpu.py` is the dense-inspection path.
 - The GPU viewer currently uses Python `moderngl + glfw` because those dependencies are already in the project `.venv` and are sufficient for this debug renderer. This is an implementation choice for M02, not a paper-level dependency on OpenGL.
 - The GPU viewer uses optional `tkinter` for the control panel. If `python3-tk` is not installed, it falls back to keyboard and mouse controls.
-- PLY mode currently uses an XY-projected Gaussian occupancy proxy. This is appropriate for the current synthetic leaf asset; arbitrary real assets may need a manually provided proxy, multi-view/depth-based extraction, or a stronger 3DGS-to-mesh extraction path in M5/M6.
-- M3 procedural wind is one-way and artist-controllable. It is not two-way fluid coupling and does not feed Gaussian or mesh motion back into a simulated wind field.
+- PLY mode uses an XY-projected Gaussian occupancy proxy. It is retained for regression and comparison only; the current direction instead starts from TD00 contracts and a topology-distilled, target-runtime-mesh-free scaffold.
+- M3 procedural wind is one-way and artist-controllable. This is a historical M03 constraint, not the current method's physical model or coupling claim.
 - Project root `.venv` currently has `numpy`, `moderngl`, and `glfw` installed. Use `requirements.txt` to reproduce this minimal environment.
 - A stale `code/venv` directory may exist from earlier setup attempts; do not use it for this experiment.
 

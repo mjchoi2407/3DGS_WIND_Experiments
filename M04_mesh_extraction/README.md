@@ -1,10 +1,12 @@
 # M04 Mesh Extraction Data Preparation
 
-이 실험 폴더는 GOF를 main mesh extractor로, SuGaR와 TSDF 계열을 비교군으로 쓰기 위한 테스트 데이터를 관리한다.
+> **현재 역할:** 이 폴더는 GOF/SuGaR/TSDF를 이용한 offline GS reconstruction·mesh preprocessing과 mesh-based baseline을 보존한다. 추출 mesh는 training privilege, oracle/debug 자료 또는 비교군으로만 사용하며 target runtime의 필수 입력이 아니다.
+
+이 실험 폴더는 GOF를 기존 주 extractor로, SuGaR와 TSDF 계열을 비교군으로 사용했던 테스트 데이터와 실행 기록을 관리한다.
 
 ## 목적
 
-첫 목표는 mesh extraction algorithm 자체를 새로 제안하는 것이 아니라, 공식 extractor를 Wind3DGS pipeline에 안정적으로 연결하는 것이다. 따라서 테스트 데이터는 다음 조건을 우선한다.
+기존 목표는 mesh extraction algorithm 자체를 새로 제안하는 것이 아니라 공식 extractor를 이전 Wind3DGS pipeline에 안정적으로 연결하는 것이었다. 현재 방법에서는 이 자산을 offline teacher/preprocessing 및 mesh baseline으로 제한한다.
 
 - GOF와 SuGaR가 모두 읽기 쉬운 COLMAP/3DGS 계열 포맷일 것
 - 너무 큰 데이터로 시작하지 않을 것
@@ -46,7 +48,7 @@
 - 단점: GOF는 Blender synthetic loader를 갖고 있지만, SuGaR README는 full pipeline의 기본 입력을 COLMAP dataset으로 설명하고 synthetic dataset support를 TODO로 둔다. 공통 baseline으로 쓰기에는 흔들린다.
 - 추천 용도: GOF-only quick test 또는 별도 object-centric 추가 실험
 
-## 권장 진행 순서
+## 기존 M04 진행 순서와 기록
 
 1. Local synthetic COLMAP-style smoke fixture를 만든다.
    - 목적: adapter path, camera parsing, output path, mesh file discovery가 정상인지 빠르게 확인한다.

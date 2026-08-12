@@ -1,5 +1,7 @@
 # M01 Static 3DGS I/O Baseline
 
+> **현재 역할:** 이 폴더는 새 방법의 mainline milestone이 아니라 static GS I/O와 renderer 회귀 기준선이다. TD01의 `CanonicalGaussianAsset` schema와 좌표계·covariance 계약을 다시 통과한 뒤에만 재사용 완료로 인정한다.
+
 ## Goal
 
 본격적인 real/pretrained 3DGS asset을 붙이기 전에, 최소한의 static 3DGS I/O pipeline을 고정한다.
@@ -90,7 +92,7 @@ nvcc --version
 .venv/bin/python experiments/M01_static_3dgs_io/scripts/render_static_baseline.py --backend gsplat
 ```
 
-If the build log contains `cooperative_groups has no member labeled_partition` and `compute_61` / `sm_61`, this is likely not a CUDA Toolkit setup issue anymore. `labeled_partition` requires Compute Capability 7.0 or newer, while `compute_61` means the visible GPU is CC 6.1. In that case, use a CC >= 7.0 GPU for `gsplat`, or keep using `--backend cpu_debug` for M01 pipeline development.
+If the build log contains `cooperative_groups has no member labeled_partition` and `compute_61` / `sm_61`, this is likely not a CUDA Toolkit setup issue anymore. `labeled_partition` requires Compute Capability 7.0 or newer, while `compute_61` means the visible GPU is CC 6.1. In that case, use a CC >= 7.0 GPU for `gsplat`, or keep using `--backend cpu_debug` for this legacy baseline.
 
 Current local confirmation:
 
@@ -134,4 +136,4 @@ Do not force `TORCH_CUDA_ARCH_LIST=7.0` unless the physical GPU really supports 
 - WSL 내부 CUDA Toolkit / `nvcc` 설치 후에는 `gsplat` JIT build가 시작된다.
 - 현재 사용자 local shell에서는 `NVIDIA GeForce GTX 1080 Ti`, Compute Capability `6.1`로 확인되었다.
 - `gsplat 1.5.3` CUDA backend는 이 GPU에서 `cooperative_groups::labeled_partition` 때문에 실패할 것으로 예상된다.
-- M01 pipeline development는 `cpu_debug` fallback으로 계속하고, 논문용 `gsplat` render 검증은 CC >= 7.0 GPU에서 진행한다.
+- TD contract 재검증 전에는 `cpu_debug`를 legacy I/O smoke에만 사용하고, 논문용 render 검증은 호환되는 CUDA backend/GPU에서 별도로 진행한다.
