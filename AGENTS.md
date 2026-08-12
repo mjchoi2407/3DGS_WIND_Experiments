@@ -18,17 +18,16 @@ Project tag for conversation/session tracking: `Wind3DGS`.
 Sibling work folders:
 
 - `../code`: reusable implementation, configs, scripts, dependencies, and code-side session notes
-- `../ideas`: idea sketches, checklists, bibliography, research direction changelog, and idea-side session notes
+- `../ideas`: canonical research index, current sketch, checklist, bibliography, archived prior ideas, and idea-side session notes
 - `../experiments`: experiment READMEs, assets, outputs, reports, wrappers, and experiment-side session notes
 
 ## Startup Protocol
 
 At the start of every meaningful task:
 
-1. Read `../RESEARCH_PROJECT_GUIDE.md` if available from the workspace root.
-2. Read this `AGENTS.md`.
-3. Check the active experiment README before changing experiment files.
-4. If the work depends on a milestone or research direction, check `../ideas/implementation_checklist.md` or `../ideas/idea_sketch.tex`.
+1. Read `../AGENTS.md`, `../README.md`, and this `AGENTS.md`.
+2. Check the active experiment README before changing experiment files.
+3. If the work depends on a milestone or research direction, read `../ideas/README.md` and the current documents indexed there.
 
 ## 새 채팅 초기화 규칙
 
@@ -56,7 +55,7 @@ At the start of every meaningful task:
 
 ## Session Tracking
 
-- Start substantial new conversations with a prefix like `[Wind3DGS | expNNN]` or `[Wind3DGS | code | expNNN]`.
+- Start substantial new conversations with a prefix like `[Wind3DGS | TD00]` or `[Wind3DGS | code | TD00]`.
 - At the end of meaningful experiment work, create or update a note under `sessions/`.
 - Name new session notes as `YYYY-MM-DD_NN_short_topic.md`, where `NN` is the next two-digit sequence for that date inside `experiments/sessions/`.
 - Keep numbering independent from `../code/sessions/` and `../ideas/sessions/`.
