@@ -391,6 +391,41 @@ experiments/M04_mesh_extraction/scripts/run_gof_mip360_smoke.sh \
 
 For higher-quality runs after smoke succeeds, use the same script with more iterations and the official image factor, for example `bonsai` with `--images images_2 --iterations 30000`.
 
+Mesh extraction을 목표로 할 때는 Gaussian이 지나치게 조밀하지 않아도 된다. `flowers`, `stump`처럼 densification 이후 VRAM 사용량이 11GB 근처까지 올라가는 scene은 먼저 `images_8`과 저밀도 preset을 같이 사용한다.
+
+```bash
+experiments/M04_mesh_extraction/scripts/run_gof_mip360_smoke.sh \
+  --scene stump \
+  --iterations 30000 \
+  --images images_8 \
+  --model-dir experiments/M04_mesh_extraction/models/gof_mip360_stump_i30000_images_8_mesh \
+  --checkpoint-every 1000 \
+  --resume \
+  --density-preset mesh
+```
+
+`--density-preset mesh`는 densification을 `2500` iteration까지만 수행하고, gradient threshold와 densification interval을 보수적으로 잡으며, opacity reset을 사실상 끈다. 그래도 VRAM이 계속 빠듯하면 다음처럼 더 강한 preset을 쓴다.
+
+```bash
+experiments/M04_mesh_extraction/scripts/run_gof_mip360_smoke.sh \
+  --scene stump \
+  --iterations 30000 \
+  --images images_8 \
+  --model-dir experiments/M04_mesh_extraction/models/gof_mip360_stump_i30000_images_8_safe \
+  --checkpoint-every 1000 \
+  --resume \
+  --density-preset safe
+```
+
+Density preset 요약:
+
+- `default`: GOF 기본 densification 설정을 유지한다.
+- `mesh`: mesh extraction용 저밀도 우선 설정이다. 품질과 VRAM 사이의 첫 시도값으로 쓴다.
+- `safe`: VRAM이 계속 부족하거나 학습 속도가 급격히 느려질 때 쓴다.
+- `off`: densification을 끈다. geometry가 너무 빈약할 수 있으므로 최후 확인용으로만 쓴다.
+
+`--model-dir`를 직접 지정하지 않으면 `mesh`, `safe`, `off` preset은 기본 model 디렉터리 끝에 각각 `_mesh`, `_safe`, `_off` suffix를 붙인다. 기존 default density checkpoint를 실수로 이어받지 않기 위한 분리 규칙이다.
+
 ### 2026-06-27 GOF Mip-NeRF 360 전체 스모크 batch 스크립트
 
 Mip-NeRF 360 준비 scene 전체를 순차로 스모크 테스트하려면 다음 wrapper를 사용한다.
@@ -493,10 +528,101 @@ treehill -> models/gof_mip360_treehill_i30000_images_4
 각 scene마다 생성되는 주요 산출물:
 
 - 3DGS point cloud: `point_cloud/iteration_30000/point_cloud.ply`
+- checkpoint: `chkpnt5000.pth`, `chkpnt10000.pth`, ... `chkpnt25000.pth`
 - SIBR 호환 viewer copy: `point_cloud/iteration_sibr_safe/point_cloud.ply`
 - SIBR 변환 요약: `point_cloud/iteration_sibr_safe/point_cloud.viewer_safe_summary.json`
 - render 결과: `train/ours_30000/`
 - batch 로그: `outputs/logs/gof_mip360_quality_i30000_official_factors_<timestamp>.log`
+
+기본값은 `5000` iteration마다 GOF checkpoint를 저장하고, 기존 model 디렉터리에 checkpoint가 있으면 최신 checkpoint에서 자동 재개한다. 학습 중단 뒤 같은 명령을 다시 실행하면 scene별 최신 `chkpnt*.pth`를 찾아 이어서 학습한다.
+
+```bash
+experiments/M04_mesh_extraction/scripts/run_gof_mip360_quality_all.sh \
+  --scenes "bonsai"
+```
+
+checkpoint 간격을 바꾸려면 다음처럼 실행한다.
+
+```bash
+experiments/M04_mesh_extraction/scripts/run_gof_mip360_quality_all.sh \
+  --checkpoint-every 2500
+```
+
+checkpoint 저장과 자동 재개를 끄려면 다음 옵션을 사용한다.
+
+```bash
+experiments/M04_mesh_extraction/scripts/run_gof_mip360_quality_all.sh \
+  --no-checkpoint \
+  --no-resume
+```
+
+주의: checkpoint 옵션을 추가하기 전에 이미 생성된 model 디렉터리에 `chkpnt*.pth`가 없다면 그 run은 중간부터 이어갈 수 없다. 이 경우 새 model 디렉터리를 지정하거나 `--backup-existing`으로 기존 디렉터리를 백업하고 처음부터 다시 시작한다.
+
+### 2026-06-27 GOF density 제어 옵션
+
+GOF 학습 중 VRAM 사용량은 iteration 수 자체가 메모리에 누적되어 증가한다기보다, densification으로 Gaussian 수가 늘어나면서 증가한다. `flowers`, `stump`, `garden`처럼 입력 사진 수와 sparse point가 많은 scene은 해상도를 `images_8`로 낮춰도 densification 이후 GPU memory가 계속 커질 수 있다.
+
+Mesh extraction용 3DGS를 먼저 확보하는 단계에서는 다음 순서로 낮은 밀도 run을 권장한다.
+
+1. `images_8 + --density-preset mesh`
+2. 그래도 VRAM이 10.5GB 이상에서 오래 머물면 `images_8 + --density-preset safe`
+3. geometry 연결성만 빠르게 확인하려면 짧은 iteration에서 `--density-preset off`
+
+전체 batch에서도 같은 옵션을 전달할 수 있다.
+
+```bash
+experiments/M04_mesh_extraction/scripts/run_gof_mip360_quality_all.sh \
+  --scenes "stump treehill flowers garden" \
+  --images images_8 \
+  --density-preset mesh \
+  --checkpoint-every 1000 \
+  --no-render
+```
+
+이 경우 출력 model은 예를 들어 `models/gof_mip360_stump_i30000_images_8_mesh`처럼 density preset suffix가 붙은 별도 디렉터리에 생성된다.
+
+Scene별로 더 보수적인 값을 직접 지정할 수도 있다.
+
+```bash
+experiments/M04_mesh_extraction/scripts/run_gof_mip360_smoke.sh \
+  --scene flowers \
+  --iterations 30000 \
+  --images images_8 \
+  --model-dir experiments/M04_mesh_extraction/models/gof_mip360_flowers_i30000_images_8_custom_density \
+  --checkpoint-every 1000 \
+  --resume \
+  --densify-until-iter 1200 \
+  --densify-grad-threshold 0.002 \
+  --densification-interval 400 \
+  --opacity-reset-interval 100000
+```
+
+`stump images_4_mid`에서 확인한 중간 density 설정을 `flowers`, `garden`, `treehill`에 반복 적용하려면 다음 임시 wrapper를 사용한다. 기본값은 `images_4`, `30000` iterations, `checkpoint-every=1000`, `densify_until_iter=5000`, `densify_grad_threshold=0.001`, `densification_interval=200`, `opacity_reset_interval=100000`이며, 학습 후 `iteration_sibr_safe` 변환까지 실행한다.
+
+```bash
+experiments/M04_mesh_extraction/scripts/run_gof_mip360_mid_density_remaining.sh --dry-run
+```
+
+계획이 맞으면 실제 실행한다.
+
+```bash
+experiments/M04_mesh_extraction/scripts/run_gof_mip360_mid_density_remaining.sh
+```
+
+기본 출력 model:
+
+```text
+flowers  -> models/gof_mip360_flowers_i30000_images_4_mid
+garden   -> models/gof_mip360_garden_i30000_images_4_mid
+treehill -> models/gof_mip360_treehill_i30000_images_4_mid
+```
+
+특정 scene만 실행하려면 다음처럼 지정한다.
+
+```bash
+experiments/M04_mesh_extraction/scripts/run_gof_mip360_mid_density_remaining.sh \
+  --scenes "flowers treehill"
+```
 
 특정 scene만 먼저 고퀄로 확인하려면 다음처럼 실행한다.
 
@@ -528,6 +654,67 @@ experiments/M04_mesh_extraction/scripts/run_gof_mip360_quality_all.sh \
 ```
 
 현재 render 단계는 predicted image와 GT image를 저장하는 단계이며, PSNR/SSIM/LPIPS 같은 수치 평가나 contact sheet 생성은 이 wrapper 안에서 자동 실행하지 않는다. 자동 비교가 필요하면 별도 render-evaluation 스크립트로 분리한다.
+
+### 2026-07-10 stump crop 수정 후 r05 주변 mesh sweep
+
+`stump` crop PLY에서 노이즈를 수정한 뒤에는 기존 variation model 폴더를 재사용하지 말고, filter_3D 복원부터 다시 수행한 새 sweep을 만든다. 다음 wrapper는 `iteration_crop`과 `iteration_edit` 중 더 최근 `point_cloud.ply`를 자동 선택해 `filter_3D`를 다시 붙이고, 이전 시각 확인에서 가장 좋았던 `r05_alpha_only` 주변 6개 후보를 생성한다.
+
+실행 전 경로와 파라미터만 확인한다.
+
+```bash
+experiments/M04_mesh_extraction/scripts/run_stump_cropfix_r05_mesh_sweep.sh --dry-run
+```
+
+계획이 맞으면 실제 실행한다.
+
+```bash
+experiments/M04_mesh_extraction/scripts/run_stump_cropfix_r05_mesh_sweep.sh
+```
+
+기본 후보:
+
+```text
+r05a_a081_g070 alpha=0.81 tetra=1.50 gaussian=0.70
+r05b_a082_g065 alpha=0.82 tetra=1.50 gaussian=0.65
+r05c_a082_g070 alpha=0.82 tetra=1.50 gaussian=0.70
+r05d_a082_g075 alpha=0.82 tetra=1.50 gaussian=0.75
+r05e_a083_g070 alpha=0.83 tetra=1.50 gaussian=0.70
+r05f_a084_g070 alpha=0.84 tetra=1.50 gaussian=0.70
+```
+
+실행이 끝나면 결과 `.ply`, `summary.tsv`, `manifest.tsv`, `sweep.log`, `README.md`가 다음 형식의 폴더에 모인다.
+
+```text
+experiments/M04_mesh_extraction/outputs/collected_meshes/stump_cropfix_r05_local_<timestamp>
+```
+
+자동 선택 대신 특정 crop PLY를 쓰고 싶으면 다음처럼 지정한다.
+
+```bash
+experiments/M04_mesh_extraction/scripts/run_stump_cropfix_r05_mesh_sweep.sh \
+  --crop-iteration edit
+```
+
+GOF의 `filter_mesh` 효과만 비교할 때는 `r05c`, `r05e`, `r05f` 세 후보로 축소한 샘플 preset을 사용한다. 이 preset은 `--filter-mesh`를 자동 적용하며 기존 결과와 구분되는 새 폴더에 모은다.
+
+```bash
+experiments/M04_mesh_extraction/scripts/run_stump_cropfix_r05_mesh_sweep.sh \
+  --preset r05-filter-sample
+```
+
+수집 폴더 형식:
+
+```text
+experiments/M04_mesh_extraction/outputs/collected_meshes/stump_cropfix_r05_filtermesh_sample_<timestamp>
+```
+
+2026-07-10 실제 생성 결과:
+
+```text
+experiments/M04_mesh_extraction/outputs/collected_meshes/stump_cropfix_r05_filtermesh_sample_20260710_221227
+```
+
+세 후보 모두 정상 완료됐으며, 같은 파라미터의 무필터 결과보다 vertex는 약 `5.8~6.1%`, face는 약 `11.0~11.5%` 감소했다. 시각 비교는 `fm_r05c`, `fm_r05e`, `fm_r05f` 순서로 진행한다.
 
 ## 로컬 데이터 배치 규칙
 

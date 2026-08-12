@@ -13,7 +13,7 @@ usage() {
   scene:       bonsai
   iterations: 1000
   images:     images_4
-  output:     experiments/M04_mesh_extraction/models/gof_mip360_<scene>_i<iterations>_<images>
+  output:     experiments/M04_mesh_extraction/models/gof_mip360_<scene>_i<iterations>_<images>[_density]
 
 옵션:
   -s, --scene NAME          raw/mipnerf360 아래 scene 이름. bonsai, flowers, garden, stump, treehill 중 하나.
@@ -23,6 +23,26 @@ usage() {
       --gpu ID              CUDA_VISIBLE_DEVICES 값. 기본값: 0.
       --port PORT           GOF viewer/server port 인자. 기본값: 6009.
       --data-device DEVICE  GOF data_device 인자. 기본값: cpu.
+      --checkpoint-every N  N iteration마다 GOF checkpoint를 저장한다. 0이면 끈다.
+      --checkpoint-iterations "LIST"
+                            공백 구분 checkpoint iteration 목록. 예: "5000 10000 15000".
+      --resume              model 디렉터리의 최신 chkpnt*.pth에서 자동 재개한다.
+      --no-resume           checkpoint 자동 재개를 끈다.
+      --start-checkpoint PATH
+                            지정한 checkpoint 파일에서 재개한다.
+      --density-preset NAME density preset. default, mesh, safe, off 중 하나.
+                            mesh: mesh extraction용 저밀도 설정.
+                            safe: VRAM이 빠듯할 때 쓰는 더 강한 저밀도 설정.
+                            off: densification을 끈다.
+      --densify-until-iter N
+                            GOF densify_until_iter override.
+      --densify-grad-threshold VALUE
+                            GOF densify_grad_threshold override. 클수록 덜 늘어난다.
+      --densification-interval N
+                            GOF densification_interval override. 클수록 덜 자주 늘어난다.
+      --opacity-reset-interval N
+                            GOF opacity_reset_interval override.
+      --percent-dense VALUE GOF percent_dense override.
       --run-render          학습 후 train view render를 실행한다.
       --run-mesh            학습 후 GOF extract_mesh.py를 실행한다.
       --skip-train-if-ready 해당 iteration의 point_cloud가 이미 있으면 학습을 건너뛰고 요청한 후처리만 실행한다.
@@ -32,6 +52,9 @@ usage() {
 
 환경 변수 override:
   GOF_PYTHON=/path/to/python
+  CHECKPOINT_EVERY=0
+  RESUME_FROM_CHECKPOINT=0
+  DENSITY_PRESET=default
   OMP_NUM_THREADS=4
   MPLCONFIGDIR=/tmp/mpl-gof
 EOF
@@ -49,6 +72,16 @@ MODEL_DIR="${MODEL_DIR:-}"
 GPU="${GPU:-0}"
 PORT="${PORT:-6009}"
 DATA_DEVICE="${DATA_DEVICE:-cpu}"
+CHECKPOINT_EVERY="${CHECKPOINT_EVERY:-0}"
+CHECKPOINT_ITERATIONS_RAW="${CHECKPOINT_ITERATIONS:-}"
+RESUME_FROM_CHECKPOINT="${RESUME_FROM_CHECKPOINT:-0}"
+START_CHECKPOINT="${START_CHECKPOINT:-}"
+DENSITY_PRESET="${DENSITY_PRESET:-default}"
+DENSIFY_UNTIL_ITER="${DENSIFY_UNTIL_ITER:-}"
+DENSIFY_GRAD_THRESHOLD="${DENSIFY_GRAD_THRESHOLD:-}"
+DENSIFICATION_INTERVAL="${DENSIFICATION_INTERVAL:-}"
+OPACITY_RESET_INTERVAL="${OPACITY_RESET_INTERVAL:-}"
+PERCENT_DENSE="${PERCENT_DENSE:-}"
 RUN_RENDER="${RUN_RENDER:-0}"
 RUN_MESH="${RUN_MESH:-0}"
 SKIP_TRAIN_IF_READY="${SKIP_TRAIN_IF_READY:-0}"
@@ -87,6 +120,52 @@ while [[ $# -gt 0 ]]; do
       ;;
     --data-device)
       DATA_DEVICE="$2"
+      shift 2
+      ;;
+    --checkpoint-every)
+      CHECKPOINT_EVERY="$2"
+      shift 2
+      ;;
+    --checkpoint-iterations)
+      CHECKPOINT_ITERATIONS_RAW="$2"
+      shift 2
+      ;;
+    --resume)
+      RESUME_FROM_CHECKPOINT=1
+      shift
+      ;;
+    --no-resume)
+      RESUME_FROM_CHECKPOINT=0
+      START_CHECKPOINT=""
+      shift
+      ;;
+    --start-checkpoint)
+      START_CHECKPOINT="$2"
+      RESUME_FROM_CHECKPOINT=1
+      shift 2
+      ;;
+    --density-preset)
+      DENSITY_PRESET="$2"
+      shift 2
+      ;;
+    --densify-until-iter)
+      DENSIFY_UNTIL_ITER="$2"
+      shift 2
+      ;;
+    --densify-grad-threshold)
+      DENSIFY_GRAD_THRESHOLD="$2"
+      shift 2
+      ;;
+    --densification-interval)
+      DENSIFICATION_INTERVAL="$2"
+      shift 2
+      ;;
+    --opacity-reset-interval)
+      OPACITY_RESET_INTERVAL="$2"
+      shift 2
+      ;;
+    --percent-dense)
+      PERCENT_DENSE="$2"
       shift 2
       ;;
     --run-render)
@@ -151,6 +230,65 @@ if [[ ! "$ITERATIONS" =~ ^[0-9]+$ ]]; then
   echo "iterations는 양의 정수여야 한다: $ITERATIONS" >&2
   exit 2
 fi
+if [[ ! "$CHECKPOINT_EVERY" =~ ^[0-9]+$ ]]; then
+  echo "checkpoint-every는 0 이상의 정수여야 한다: $CHECKPOINT_EVERY" >&2
+  exit 2
+fi
+
+case "$DENSITY_PRESET" in
+  default)
+    ;;
+  mesh)
+    DENSIFY_UNTIL_ITER="${DENSIFY_UNTIL_ITER:-2500}"
+    DENSIFY_GRAD_THRESHOLD="${DENSIFY_GRAD_THRESHOLD:-0.001}"
+    DENSIFICATION_INTERVAL="${DENSIFICATION_INTERVAL:-200}"
+    OPACITY_RESET_INTERVAL="${OPACITY_RESET_INTERVAL:-100000}"
+    ;;
+  safe)
+    DENSIFY_UNTIL_ITER="${DENSIFY_UNTIL_ITER:-1500}"
+    DENSIFY_GRAD_THRESHOLD="${DENSIFY_GRAD_THRESHOLD:-0.0015}"
+    DENSIFICATION_INTERVAL="${DENSIFICATION_INTERVAL:-300}"
+    OPACITY_RESET_INTERVAL="${OPACITY_RESET_INTERVAL:-100000}"
+    ;;
+  off)
+    DENSIFY_UNTIL_ITER="${DENSIFY_UNTIL_ITER:-0}"
+    OPACITY_RESET_INTERVAL="${OPACITY_RESET_INTERVAL:-100000}"
+    ;;
+  *)
+    echo "알 수 없는 density preset: $DENSITY_PRESET" >&2
+    echo "가능한 값: default mesh safe off" >&2
+    exit 2
+    ;;
+esac
+
+is_nonnegative_number() {
+  [[ "$1" =~ ^([0-9]+([.][0-9]*)?|[.][0-9]+)([eE][+-]?[0-9]+)?$ ]]
+}
+
+for pair in \
+  "densify-until-iter:$DENSIFY_UNTIL_ITER" \
+  "densification-interval:$DENSIFICATION_INTERVAL" \
+  "opacity-reset-interval:$OPACITY_RESET_INTERVAL"
+do
+  key="${pair%%:*}"
+  value="${pair#*:}"
+  if [[ -n "$value" && ! "$value" =~ ^[0-9]+$ ]]; then
+    echo "$key 값은 0 이상의 정수여야 한다: $value" >&2
+    exit 2
+  fi
+done
+
+for pair in \
+  "densify-grad-threshold:$DENSIFY_GRAD_THRESHOLD" \
+  "percent-dense:$PERCENT_DENSE"
+do
+  key="${pair%%:*}"
+  value="${pair#*:}"
+  if [[ -n "$value" ]] && ! is_nonnegative_number "$value"; then
+    echo "$key 값은 0 이상의 숫자여야 한다: $value" >&2
+    exit 2
+  fi
+done
 
 case "$SCENE" in
   bonsai|flowers|garden|stump|treehill)
@@ -164,7 +302,11 @@ esac
 
 SOURCE_DIR="${PROJECT_ROOT}/experiments/M04_mesh_extraction/raw/mipnerf360/${SCENE}"
 if [[ -z "$MODEL_DIR" ]]; then
-  MODEL_DIR="${PROJECT_ROOT}/experiments/M04_mesh_extraction/models/gof_mip360_${SCENE}_i${ITERATIONS}_${IMAGE_DIR}"
+  MODEL_SUFFIX=""
+  if [[ "$DENSITY_PRESET" != "default" ]]; then
+    MODEL_SUFFIX="_${DENSITY_PRESET}"
+  fi
+  MODEL_DIR="${PROJECT_ROOT}/experiments/M04_mesh_extraction/models/gof_mip360_${SCENE}_i${ITERATIONS}_${IMAGE_DIR}${MODEL_SUFFIX}"
 elif [[ "$MODEL_DIR" != /* ]]; then
   MODEL_DIR="${PROJECT_ROOT}/${MODEL_DIR}"
 fi
@@ -174,6 +316,9 @@ LOG_FILE="${LOG_DIR}/gof_mip360_${SCENE}_i${ITERATIONS}_${IMAGE_DIR}_$(date +%Y%
 LOCKDIR="${MODEL_DIR}.lock"
 PLY_PATH="${MODEL_DIR}/point_cloud/iteration_${ITERATIONS}/point_cloud.ply"
 MESH_PATH="${MODEL_DIR}/test/ours_${ITERATIONS}/fusion/mesh_binary_search_7.ply"
+START_CHECKPOINT_PATH=""
+MODEL_DIR_WARNING=""
+declare -a CHECKPOINT_ITERATIONS_ARGS=()
 
 require_path() {
   local path="$1"
@@ -181,6 +326,54 @@ require_path() {
   if [[ ! -e "$path" ]]; then
     echo "${label} 경로가 없다: ${path}" >&2
     exit 1
+  fi
+}
+
+latest_checkpoint() {
+  local dir="$1"
+  local best_iter=-1
+  local best_path=""
+  local path base iter
+
+  shopt -s nullglob
+  for path in "$dir"/chkpnt*.pth; do
+    base="${path##*/}"
+    iter="${base#chkpnt}"
+    iter="${iter%.pth}"
+    if [[ "$iter" =~ ^[0-9]+$ && "$iter" -gt "$best_iter" ]]; then
+      best_iter="$iter"
+      best_path="$path"
+    fi
+  done
+  shopt -u nullglob
+
+  printf '%s\n' "$best_path"
+}
+
+build_checkpoint_iterations() {
+  local raw="$1"
+  local every="$2"
+  local final_iter="$3"
+  local item
+
+  CHECKPOINT_ITERATIONS_ARGS=()
+  if [[ -n "$raw" ]]; then
+    read -r -a CHECKPOINT_ITERATIONS_ARGS <<< "$raw"
+    for item in "${CHECKPOINT_ITERATIONS_ARGS[@]}"; do
+      if [[ ! "$item" =~ ^[0-9]+$ || "$item" -le 0 ]]; then
+        echo "checkpoint iteration은 양의 정수여야 한다: $item" >&2
+        exit 2
+      fi
+    done
+    return
+  fi
+
+  if [[ "$every" -gt 0 ]]; then
+    item="$every"
+    while [[ "$item" -lt "$final_iter" ]]; do
+      CHECKPOINT_ITERATIONS_ARGS+=("$item")
+      item=$((item + every))
+    done
   fi
 }
 
@@ -193,6 +386,17 @@ require_path "$SOURCE_DIR/sparse/0/cameras.bin" "COLMAP cameras.bin"
 require_path "$SOURCE_DIR/sparse/0/images.bin" "COLMAP images.bin"
 require_path "$SOURCE_DIR/sparse/0/points3D.bin" "COLMAP points3D.bin"
 
+build_checkpoint_iterations "$CHECKPOINT_ITERATIONS_RAW" "$CHECKPOINT_EVERY" "$ITERATIONS"
+
+if [[ -n "$START_CHECKPOINT" ]]; then
+  if [[ "$START_CHECKPOINT" != /* ]]; then
+    START_CHECKPOINT_PATH="${PROJECT_ROOT}/${START_CHECKPOINT}"
+  else
+    START_CHECKPOINT_PATH="$START_CHECKPOINT"
+  fi
+  require_path "$START_CHECKPOINT_PATH" "start checkpoint"
+fi
+
 MODEL_READY=0
 if [[ -d "$MODEL_DIR" ]] && [[ -n "$(find "$MODEL_DIR" -mindepth 1 -maxdepth 1 -print -quit)" ]]; then
   if [[ "$SKIP_TRAIN_IF_READY" == "1" && -f "$PLY_PATH" ]]; then
@@ -201,6 +405,22 @@ if [[ -d "$MODEL_DIR" ]] && [[ -n "$(find "$MODEL_DIR" -mindepth 1 -maxdepth 1 -
     BACKUP_DIR="${MODEL_DIR}.bak_$(date +%Y%m%d_%H%M%S)"
     mv "$MODEL_DIR" "$BACKUP_DIR"
     echo "기존 model 디렉터리를 백업했다: $BACKUP_DIR"
+  elif [[ "$RESUME_FROM_CHECKPOINT" == "1" ]]; then
+    if [[ -z "$START_CHECKPOINT_PATH" ]]; then
+      START_CHECKPOINT_PATH="$(latest_checkpoint "$MODEL_DIR")"
+    fi
+    if [[ -z "$START_CHECKPOINT_PATH" ]]; then
+      MODEL_DIR_WARNING="model 디렉터리는 비어 있지 않지만 재개할 checkpoint가 없다. 실제 실행은 실패한다: $MODEL_DIR"
+      if [[ "$DRY_RUN" != "1" ]]; then
+        echo "model 디렉터리는 비어 있지 않지만 재개할 checkpoint가 없다:" >&2
+        echo "  $MODEL_DIR" >&2
+        echo "새 --model-dir를 지정하거나 --backup-existing으로 다시 실행해라." >&2
+        exit 1
+      fi
+    fi
+    if [[ -n "$START_CHECKPOINT_PATH" ]]; then
+      echo "기존 model 디렉터리에서 checkpoint 재개를 준비한다: $START_CHECKPOINT_PATH"
+    fi
   else
     echo "model 디렉터리가 이미 있고 비어 있지 않다:" >&2
     echo "  $MODEL_DIR" >&2
@@ -221,6 +441,28 @@ train_cmd=(
   --data_device "$DATA_DEVICE"
   --port "$PORT"
 )
+
+if [[ "${#CHECKPOINT_ITERATIONS_ARGS[@]}" -gt 0 ]]; then
+  train_cmd+=(--checkpoint_iterations "${CHECKPOINT_ITERATIONS_ARGS[@]}")
+fi
+if [[ -n "$START_CHECKPOINT_PATH" ]]; then
+  train_cmd+=(--start_checkpoint "$START_CHECKPOINT_PATH")
+fi
+if [[ -n "$DENSIFY_UNTIL_ITER" ]]; then
+  train_cmd+=(--densify_until_iter "$DENSIFY_UNTIL_ITER")
+fi
+if [[ -n "$DENSIFY_GRAD_THRESHOLD" ]]; then
+  train_cmd+=(--densify_grad_threshold "$DENSIFY_GRAD_THRESHOLD")
+fi
+if [[ -n "$DENSIFICATION_INTERVAL" ]]; then
+  train_cmd+=(--densification_interval "$DENSIFICATION_INTERVAL")
+fi
+if [[ -n "$OPACITY_RESET_INTERVAL" ]]; then
+  train_cmd+=(--opacity_reset_interval "$OPACITY_RESET_INTERVAL")
+fi
+if [[ -n "$PERCENT_DENSE" ]]; then
+  train_cmd+=(--percent_dense "$PERCENT_DENSE")
+fi
 
 render_cmd=(
   "$GOF_PYTHON" render.py
@@ -256,6 +498,19 @@ if [[ "$DRY_RUN" == "1" ]]; then
   echo "data_device:   $DATA_DEVICE"
   echo "model 준비됨:  $MODEL_READY"
   echo "준비 시 skip:  $SKIP_TRAIN_IF_READY"
+  echo "checkpoint_every: $CHECKPOINT_EVERY"
+  echo "checkpoint_iterations: ${CHECKPOINT_ITERATIONS_ARGS[*]:-(none)}"
+  echo "resume:        $RESUME_FROM_CHECKPOINT"
+  echo "start_checkpoint: ${START_CHECKPOINT_PATH:-(none)}"
+  echo "density_preset: $DENSITY_PRESET"
+  echo "densify_until_iter: ${DENSIFY_UNTIL_ITER:-(default)}"
+  echo "densify_grad_threshold: ${DENSIFY_GRAD_THRESHOLD:-(default)}"
+  echo "densification_interval: ${DENSIFICATION_INTERVAL:-(default)}"
+  echo "opacity_reset_interval: ${OPACITY_RESET_INTERVAL:-(default)}"
+  echo "percent_dense: ${PERCENT_DENSE:-(default)}"
+  if [[ -n "$MODEL_DIR_WARNING" ]]; then
+    echo "경고:          $MODEL_DIR_WARNING"
+  fi
   echo
   echo "학습 command:"
   print_cmd "${train_cmd[@]}"
@@ -301,6 +556,16 @@ mkdir -p "$LOG_DIR" "$MODEL_DIR" "$MPLCONFIGDIR"
   echo "mplconfigdir:   $MPLCONFIGDIR"
   echo "model 준비됨:   $MODEL_READY"
   echo "준비 시 skip:   $SKIP_TRAIN_IF_READY"
+  echo "checkpoint_every: $CHECKPOINT_EVERY"
+  echo "checkpoint_iterations: ${CHECKPOINT_ITERATIONS_ARGS[*]:-(none)}"
+  echo "resume:         $RESUME_FROM_CHECKPOINT"
+  echo "start_checkpoint: ${START_CHECKPOINT_PATH:-(none)}"
+  echo "density_preset: $DENSITY_PRESET"
+  echo "densify_until_iter: ${DENSIFY_UNTIL_ITER:-(default)}"
+  echo "densify_grad_threshold: ${DENSIFY_GRAD_THRESHOLD:-(default)}"
+  echo "densification_interval: ${DENSIFICATION_INTERVAL:-(default)}"
+  echo "opacity_reset_interval: ${OPACITY_RESET_INTERVAL:-(default)}"
+  echo "percent_dense: ${PERCENT_DENSE:-(default)}"
   echo "log:            $LOG_FILE"
   echo
   echo "입력 파일 수:"

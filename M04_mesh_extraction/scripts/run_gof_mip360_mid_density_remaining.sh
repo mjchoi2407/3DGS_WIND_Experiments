@@ -3,76 +3,62 @@ set -euo pipefail
 
 usage() {
   cat <<'EOF'
-준비된 Mip-NeRF 360 scene 전체에 대해 연구용 고퀄 GOF/3DGS 학습, SIBR 호환 변환,
-render를 순차 실행한다.
+flowers, garden, treehill에 대해 중간 density GOF/3DGS 학습을 순차 실행한다.
 
 사용법:
-  experiments/M04_mesh_extraction/scripts/run_gof_mip360_quality_all.sh
-  experiments/M04_mesh_extraction/scripts/run_gof_mip360_quality_all.sh --scenes "bonsai flowers"
-  experiments/M04_mesh_extraction/scripts/run_gof_mip360_quality_all.sh --iterations 30000 --official-factors
+  experiments/M04_mesh_extraction/scripts/run_gof_mip360_mid_density_remaining.sh
+  experiments/M04_mesh_extraction/scripts/run_gof_mip360_mid_density_remaining.sh --dry-run
+  experiments/M04_mesh_extraction/scripts/run_gof_mip360_mid_density_remaining.sh --scenes "flowers treehill"
 
 기본값:
-  scenes:      bonsai flowers garden stump treehill
-  iterations: 30000
-  images:     official factors, bonsai=images_2, 나머지=images_4
-  gpu:        0
-  port-start: 6109
-  render:     켬
-  convert:    켬, iteration_sibr_safe/point_cloud.ply 생성
-  checkpoint: 5000 iteration마다 저장, 기존 model은 최신 checkpoint에서 자동 재개
-  density:    default. mesh extraction용 저밀도는 --density-preset mesh 사용
-              non-default preset은 출력 model 디렉터리에 _mesh/_safe/_off suffix를 붙인다.
+  scenes:        flowers garden treehill
+  iterations:    30000
+  images:        images_4
+  model suffix:  mid
+  checkpoint:    1000 iteration마다 저장, 기존 checkpoint가 있으면 자동 재개
+  density:       densify_until_iter=5000, densify_grad_threshold=0.001,
+                 densification_interval=200, opacity_reset_interval=100000
+  postprocess:   학습 완료 후 iteration_sibr_safe/point_cloud.ply 생성
 
 옵션:
-      --scenes LIST          실행할 scene 목록. 따옴표로 감싼 공백 구분 문자열을 권장한다.
+      --scenes LIST          실행할 scene 목록. flower는 flowers로 자동 보정한다.
   -n, --iterations N         각 scene의 학습 iteration 수. 기본값: 30000.
-  -i, --images DIR           모든 scene에 사용할 이미지 폴더. 지정하면 official factors를 끈다.
-      --official-factors     현재 보유 scene 기준 bonsai=images_2, 나머지=images_4를 사용한다.
-      --no-official-factors  모든 scene에 --images 값을 사용한다.
+  -i, --images DIR           모든 scene에 사용할 이미지 폴더. 기본값: images_4.
+      --suffix NAME          출력 model suffix. 기본값: mid.
       --gpu ID               CUDA_VISIBLE_DEVICES 값. 기본값: 0.
-      --port-start PORT      scene별 port 시작값. scene마다 1씩 증가한다.
+      --port-start PORT      scene별 port 시작값. 기본값: 6209.
       --data-device DEVICE   GOF data_device 인자. 기본값: cpu.
-      --checkpoint-every N   N iteration마다 GOF checkpoint를 저장한다. 기본값: 5000.
-      --checkpoint-iterations "LIST"
-                            공백 구분 checkpoint iteration 목록. 예: "5000 10000 15000".
+      --checkpoint-every N   N iteration마다 GOF checkpoint 저장. 기본값: 1000.
       --no-checkpoint        checkpoint 저장을 끈다.
-      --resume               기존 model 디렉터리의 최신 checkpoint에서 자동 재개한다. 기본값: 켬.
       --no-resume            checkpoint 자동 재개를 끈다.
-      --density-preset NAME  density preset. default, mesh, safe, off 중 하나.
       --densify-until-iter N
-                            GOF densify_until_iter override.
+                            GOF densify_until_iter. 기본값: 5000.
       --densify-grad-threshold VALUE
-                            GOF densify_grad_threshold override. 클수록 덜 늘어난다.
+                            GOF densify_grad_threshold. 기본값: 0.001.
       --densification-interval N
-                            GOF densification_interval override. 클수록 덜 자주 늘어난다.
+                            GOF densification_interval. 기본값: 200.
       --opacity-reset-interval N
-                            GOF opacity_reset_interval override.
+                            GOF opacity_reset_interval. 기본값: 100000.
       --percent-dense VALUE  GOF percent_dense override.
-      --run-render           학습 후 train view render를 실행한다. 기본값: 켬.
-      --no-render            render 단계를 건너뛴다.
       --convert              SIBR 호환 PLY 변환을 실행한다. 기본값: 켬.
       --no-convert           SIBR 호환 PLY 변환을 건너뛴다.
       --max-radius VALUE     viewer-safe 변환의 최대 반경. 기본값: 12.
       --max-scale VALUE      viewer-safe 변환의 최대 Gaussian scale. 기본값: 1.0.
       --min-opacity VALUE    viewer-safe 변환의 최소 opacity. 기본값: 0.0.
       --viewer-python PATH   변환 모듈 실행에 사용할 Python. 기본값: .venv/bin/python.
-      --skip-train-if-ready  이미 point_cloud가 있으면 학습을 건너뛰고 변환/후처리만 실행한다.
+      --skip-train-if-ready  이미 point_cloud가 있으면 학습을 건너뛰고 변환만 실행한다.
       --backup-existing      기존 model 디렉터리가 있으면 timestamp suffix를 붙여 백업한다.
       --continue-on-error    한 scene이 실패해도 다음 scene을 계속 실행한다.
       --dry-run              학습 없이 전체 실행 계획과 scene별 command만 출력한다.
   -h, --help                 이 도움말을 출력한다.
 
 환경 변수 override:
-  SCENES="bonsai flowers garden stump treehill"
+  SCENES="flowers garden treehill"
   ITERATIONS=30000
   IMAGE_DIR=images_4
-  OFFICIAL_FACTORS=1
+  MODEL_SUFFIX=mid
   GPU=0
-  PORT_START=6109
-  CHECKPOINT_EVERY=5000
-  RESUME_FROM_CHECKPOINT=1
-  DENSITY_PRESET=default
-  VIEWER_PYTHON=.venv/bin/python
+  PORT_START=6209
 EOF
 }
 
@@ -82,23 +68,20 @@ SINGLE_SCRIPT="${SCRIPT_DIR}/run_gof_mip360_smoke.sh"
 FILTER_MODULE="wind3dgs.m04_mesh_extraction.filter_viewer_safe_ply"
 DEFAULT_VIEWER_PYTHON="${PROJECT_ROOT}/.venv/bin/python"
 
-SCENES_RAW="${SCENES:-bonsai flowers garden stump treehill}"
+SCENES_RAW="${SCENES:-flowers garden treehill}"
 ITERATIONS="${ITERATIONS:-30000}"
 IMAGE_DIR="${IMAGE_DIR:-images_4}"
-OFFICIAL_FACTORS="${OFFICIAL_FACTORS:-1}"
+MODEL_SUFFIX="${MODEL_SUFFIX:-mid}"
 GPU="${GPU:-0}"
-PORT_START="${PORT_START:-6109}"
+PORT_START="${PORT_START:-6209}"
 DATA_DEVICE="${DATA_DEVICE:-cpu}"
-CHECKPOINT_EVERY="${CHECKPOINT_EVERY:-5000}"
-CHECKPOINT_ITERATIONS_RAW="${CHECKPOINT_ITERATIONS:-}"
+CHECKPOINT_EVERY="${CHECKPOINT_EVERY:-1000}"
 RESUME_FROM_CHECKPOINT="${RESUME_FROM_CHECKPOINT:-1}"
-DENSITY_PRESET="${DENSITY_PRESET:-default}"
-DENSIFY_UNTIL_ITER="${DENSIFY_UNTIL_ITER:-}"
-DENSIFY_GRAD_THRESHOLD="${DENSIFY_GRAD_THRESHOLD:-}"
-DENSIFICATION_INTERVAL="${DENSIFICATION_INTERVAL:-}"
-OPACITY_RESET_INTERVAL="${OPACITY_RESET_INTERVAL:-}"
+DENSIFY_UNTIL_ITER="${DENSIFY_UNTIL_ITER:-5000}"
+DENSIFY_GRAD_THRESHOLD="${DENSIFY_GRAD_THRESHOLD:-0.001}"
+DENSIFICATION_INTERVAL="${DENSIFICATION_INTERVAL:-200}"
+OPACITY_RESET_INTERVAL="${OPACITY_RESET_INTERVAL:-100000}"
 PERCENT_DENSE="${PERCENT_DENSE:-}"
-RUN_RENDER="${RUN_RENDER:-1}"
 RUN_CONVERT="${RUN_CONVERT:-1}"
 SKIP_TRAIN_IF_READY="${SKIP_TRAIN_IF_READY:-0}"
 BACKUP_EXISTING="${BACKUP_EXISTING:-0}"
@@ -121,16 +104,11 @@ while [[ $# -gt 0 ]]; do
       ;;
     -i|--images)
       IMAGE_DIR="$2"
-      OFFICIAL_FACTORS=0
       shift 2
       ;;
-    --official-factors)
-      OFFICIAL_FACTORS=1
-      shift
-      ;;
-    --no-official-factors)
-      OFFICIAL_FACTORS=0
-      shift
+    --suffix)
+      MODEL_SUFFIX="$2"
+      shift 2
       ;;
     --gpu)
       GPU="$2"
@@ -148,26 +126,13 @@ while [[ $# -gt 0 ]]; do
       CHECKPOINT_EVERY="$2"
       shift 2
       ;;
-    --checkpoint-iterations)
-      CHECKPOINT_ITERATIONS_RAW="$2"
-      shift 2
-      ;;
     --no-checkpoint)
       CHECKPOINT_EVERY=0
-      CHECKPOINT_ITERATIONS_RAW=""
-      shift
-      ;;
-    --resume)
-      RESUME_FROM_CHECKPOINT=1
       shift
       ;;
     --no-resume)
       RESUME_FROM_CHECKPOINT=0
       shift
-      ;;
-    --density-preset)
-      DENSITY_PRESET="$2"
-      shift 2
       ;;
     --densify-until-iter)
       DENSIFY_UNTIL_ITER="$2"
@@ -188,14 +153,6 @@ while [[ $# -gt 0 ]]; do
     --percent-dense)
       PERCENT_DENSE="$2"
       shift 2
-      ;;
-    --run-render)
-      RUN_RENDER=1
-      shift
-      ;;
-    --no-render)
-      RUN_RENDER=0
-      shift
       ;;
     --convert)
       RUN_CONVERT=1
@@ -260,39 +217,14 @@ while [[ $# -gt 0 ]]; do
   esac
 done
 
-read -r -a SCENES <<< "$SCENES_RAW"
-
-if [[ "${#SCENES[@]}" -eq 0 ]]; then
-  echo "실행할 scene이 없다." >&2
-  exit 2
-fi
-if [[ ! "$ITERATIONS" =~ ^[0-9]+$ ]]; then
-  echo "iterations는 양의 정수여야 한다: $ITERATIONS" >&2
-  exit 2
-fi
-if [[ ! "$PORT_START" =~ ^[0-9]+$ ]]; then
-  echo "port-start는 양의 정수여야 한다: $PORT_START" >&2
-  exit 2
-fi
-if [[ ! "$CHECKPOINT_EVERY" =~ ^[0-9]+$ ]]; then
-  echo "checkpoint-every는 0 이상의 정수여야 한다: $CHECKPOINT_EVERY" >&2
-  exit 2
-fi
-case "$DENSITY_PRESET" in
-  default|mesh|safe|off)
-    ;;
-  *)
-    echo "알 수 없는 density preset: $DENSITY_PRESET" >&2
-    echo "가능한 값: default mesh safe off" >&2
-    exit 2
-    ;;
-esac
-
 is_nonnegative_number() {
   [[ "$1" =~ ^([0-9]+([.][0-9]*)?|[.][0-9]+)([eE][+-]?[0-9]+)?$ ]]
 }
 
 for pair in \
+  "iterations:$ITERATIONS" \
+  "port-start:$PORT_START" \
+  "checkpoint-every:$CHECKPOINT_EVERY" \
   "densify-until-iter:$DENSIFY_UNTIL_ITER" \
   "densification-interval:$DENSIFICATION_INTERVAL" \
   "opacity-reset-interval:$OPACITY_RESET_INTERVAL"
@@ -307,7 +239,10 @@ done
 
 for pair in \
   "densify-grad-threshold:$DENSIFY_GRAD_THRESHOLD" \
-  "percent-dense:$PERCENT_DENSE"
+  "percent-dense:$PERCENT_DENSE" \
+  "max-radius:$CONVERT_MAX_RADIUS" \
+  "max-scale:$CONVERT_MAX_SCALE" \
+  "min-opacity:$CONVERT_MIN_OPACITY"
 do
   key="${pair%%:*}"
   value="${pair#*:}"
@@ -316,6 +251,11 @@ do
     exit 2
   fi
 done
+
+if [[ "$MODEL_SUFFIX" =~ [[:space:]/] ]]; then
+  echo "suffix에는 공백이나 /를 넣을 수 없다: $MODEL_SUFFIX" >&2
+  exit 2
+fi
 if [[ ! -x "$SINGLE_SCRIPT" ]]; then
   echo "단일 scene 학습 스크립트를 실행할 수 없다: $SINGLE_SCRIPT" >&2
   exit 1
@@ -325,27 +265,22 @@ if [[ "$RUN_CONVERT" == "1" && ! -x "$VIEWER_PYTHON" ]]; then
   exit 1
 fi
 
-scene_image_dir() {
+normalize_scene() {
   local scene="$1"
-  if [[ "$OFFICIAL_FACTORS" == "1" ]]; then
-    case "$scene" in
-      bonsai) echo "images_2" ;;
-      flowers|garden|stump|treehill) echo "images_4" ;;
-      *) echo "$IMAGE_DIR" ;;
-    esac
+  if [[ "$scene" == "flower" ]]; then
+    echo "flowers"
   else
-    echo "$IMAGE_DIR"
+    echo "$scene"
   fi
 }
 
 check_scene_name() {
   local scene="$1"
   case "$scene" in
-    bonsai|flowers|garden|stump|treehill)
+    flowers|garden|treehill)
       ;;
     *)
-      echo "알 수 없거나 지원하지 않는 Mip-NeRF 360 scene: $scene" >&2
-      echo "가능한 값: bonsai flowers garden stump treehill" >&2
+      echo "이 임시 스크립트는 flowers, garden, treehill만 지원한다: $scene" >&2
       exit 2
       ;;
   esac
@@ -353,22 +288,11 @@ check_scene_name() {
 
 model_dir_for() {
   local scene="$1"
-  local image_dir="$2"
-  local suffix=""
-  if [[ "$DENSITY_PRESET" != "default" ]]; then
-    suffix="_${DENSITY_PRESET}"
+  local suffix_part=""
+  if [[ -n "$MODEL_SUFFIX" ]]; then
+    suffix_part="_${MODEL_SUFFIX}"
   fi
-  echo "${PROJECT_ROOT}/experiments/M04_mesh_extraction/models/gof_mip360_${scene}_i${ITERATIONS}_${image_dir}${suffix}"
-}
-
-point_cloud_for() {
-  local model_dir="$1"
-  echo "${model_dir}/point_cloud/iteration_${ITERATIONS}/point_cloud.ply"
-}
-
-sibr_point_cloud_for() {
-  local model_dir="$1"
-  echo "${model_dir}/point_cloud/iteration_sibr_safe/point_cloud.ply"
+  echo "${PROJECT_ROOT}/experiments/M04_mesh_extraction/models/gof_mip360_${scene}_i${ITERATIONS}_${IMAGE_DIR}${suffix_part}"
 }
 
 print_cmd() {
@@ -389,46 +313,64 @@ write_block() {
   fi
 }
 
+read -r -a RAW_SCENES <<< "$SCENES_RAW"
+SCENES=()
+for raw_scene in "${RAW_SCENES[@]}"; do
+  scene="$(normalize_scene "$raw_scene")"
+  check_scene_name "$scene"
+  SCENES+=("$scene")
+done
+
+if [[ "${#SCENES[@]}" -eq 0 ]]; then
+  echo "실행할 scene이 없다." >&2
+  exit 2
+fi
+
+for scene in "${SCENES[@]}"; do
+  source_dir="${PROJECT_ROOT}/experiments/M04_mesh_extraction/raw/mipnerf360/${scene}"
+  if [[ ! -d "$source_dir" ]]; then
+    echo "scene 디렉터리가 없다: $source_dir" >&2
+    exit 1
+  fi
+  if [[ ! -d "${source_dir}/${IMAGE_DIR}" ]]; then
+    echo "이미지 디렉터리가 없다: ${source_dir}/${IMAGE_DIR}" >&2
+    exit 1
+  fi
+  if [[ ! -f "${source_dir}/sparse/0/cameras.bin" || ! -f "${source_dir}/sparse/0/images.bin" || ! -f "${source_dir}/sparse/0/points3D.bin" ]]; then
+    echo "COLMAP sparse 파일이 부족하다: ${source_dir}/sparse/0" >&2
+    exit 1
+  fi
+done
+
+LOG_DIR="${PROJECT_ROOT}/experiments/M04_mesh_extraction/outputs/logs"
+BATCH_STAMP="$(date +%Y%m%d_%H%M%S)"
+BATCH_LOG="${LOG_DIR}/gof_mip360_mid_density_i${ITERATIONS}_${IMAGE_DIR}_${BATCH_STAMP}.log"
+
 build_train_cmd() {
   local scene="$1"
-  local image_dir="$2"
-  local port="$3"
+  local port="$2"
+  local model_dir="$3"
   local -n out_cmd="$4"
 
   out_cmd=(
     "$SINGLE_SCRIPT"
     --scene "$scene"
     --iterations "$ITERATIONS"
-    --images "$image_dir"
-    --model-dir "$(model_dir_for "$scene" "$image_dir")"
+    --images "$IMAGE_DIR"
+    --model-dir "$model_dir"
     --gpu "$GPU"
     --port "$port"
     --data-device "$DATA_DEVICE"
+    --checkpoint-every "$CHECKPOINT_EVERY"
+    --densify-until-iter "$DENSIFY_UNTIL_ITER"
+    --densify-grad-threshold "$DENSIFY_GRAD_THRESHOLD"
+    --densification-interval "$DENSIFICATION_INTERVAL"
+    --opacity-reset-interval "$OPACITY_RESET_INTERVAL"
   )
-  if [[ -n "$CHECKPOINT_ITERATIONS_RAW" ]]; then
-    out_cmd+=(--checkpoint-iterations "$CHECKPOINT_ITERATIONS_RAW")
-  elif [[ "$CHECKPOINT_EVERY" -gt 0 ]]; then
-    out_cmd+=(--checkpoint-every "$CHECKPOINT_EVERY")
-  else
-    out_cmd+=(--checkpoint-every 0)
-  fi
   if [[ "$RESUME_FROM_CHECKPOINT" == "1" ]]; then
     out_cmd+=(--resume)
   else
     out_cmd+=(--no-resume)
-  fi
-  out_cmd+=(--density-preset "$DENSITY_PRESET")
-  if [[ -n "$DENSIFY_UNTIL_ITER" ]]; then
-    out_cmd+=(--densify-until-iter "$DENSIFY_UNTIL_ITER")
-  fi
-  if [[ -n "$DENSIFY_GRAD_THRESHOLD" ]]; then
-    out_cmd+=(--densify-grad-threshold "$DENSIFY_GRAD_THRESHOLD")
-  fi
-  if [[ -n "$DENSIFICATION_INTERVAL" ]]; then
-    out_cmd+=(--densification-interval "$DENSIFICATION_INTERVAL")
-  fi
-  if [[ -n "$OPACITY_RESET_INTERVAL" ]]; then
-    out_cmd+=(--opacity-reset-interval "$OPACITY_RESET_INTERVAL")
   fi
   if [[ -n "$PERCENT_DENSE" ]]; then
     out_cmd+=(--percent-dense "$PERCENT_DENSE")
@@ -438,31 +380,6 @@ build_train_cmd() {
   fi
   if [[ "$BACKUP_EXISTING" == "1" ]]; then
     out_cmd+=(--backup-existing)
-  fi
-  if [[ "$DRY_RUN" == "1" ]]; then
-    out_cmd+=(--dry-run)
-  fi
-}
-
-build_post_cmd() {
-  local scene="$1"
-  local image_dir="$2"
-  local port="$3"
-  local -n out_cmd="$4"
-
-  out_cmd=(
-    "$SINGLE_SCRIPT"
-    --scene "$scene"
-    --iterations "$ITERATIONS"
-    --images "$image_dir"
-    --model-dir "$(model_dir_for "$scene" "$image_dir")"
-    --gpu "$GPU"
-    --port "$port"
-    --data-device "$DATA_DEVICE"
-    --skip-train-if-ready
-  )
-  if [[ "$RUN_RENDER" == "1" ]]; then
-    out_cmd+=(--run-render)
   fi
   if [[ "$DRY_RUN" == "1" ]]; then
     out_cmd+=(--dry-run)
@@ -486,8 +403,8 @@ build_convert_cmd() {
 }
 
 build_viewer_cmd() {
-  local model_dir="$1"
-  local scene="$2"
+  local scene="$1"
+  local model_dir="$2"
   local -n out_cmd="$3"
 
   out_cmd=(
@@ -498,90 +415,48 @@ build_viewer_cmd() {
   )
 }
 
-for scene in "${SCENES[@]}"; do
-  check_scene_name "$scene"
-  image_dir="$(scene_image_dir "$scene")"
-  source_dir="${PROJECT_ROOT}/experiments/M04_mesh_extraction/raw/mipnerf360/${scene}"
-  if [[ ! -d "$source_dir" ]]; then
-    echo "scene 디렉터리가 없다: $source_dir" >&2
-    exit 1
-  fi
-  if [[ ! -d "${source_dir}/${image_dir}" ]]; then
-    echo "이미지 디렉터리가 없다: ${source_dir}/${image_dir}" >&2
-    exit 1
-  fi
-  if [[ ! -f "${source_dir}/sparse/0/cameras.bin" || ! -f "${source_dir}/sparse/0/images.bin" || ! -f "${source_dir}/sparse/0/points3D.bin" ]]; then
-    echo "COLMAP sparse 파일이 부족하다: ${source_dir}/sparse/0" >&2
-    exit 1
-  fi
-done
-
-LOG_DIR="${PROJECT_ROOT}/experiments/M04_mesh_extraction/outputs/logs"
-BATCH_STAMP="$(date +%Y%m%d_%H%M%S)"
-IMAGE_TAG="$IMAGE_DIR"
-if [[ "$OFFICIAL_FACTORS" == "1" ]]; then
-  IMAGE_TAG="official_factors"
-fi
-BATCH_LOG="${LOG_DIR}/gof_mip360_quality_i${ITERATIONS}_${IMAGE_TAG}_${BATCH_STAMP}.log"
-
-if [[ "$DRY_RUN" != "1" ]]; then
-  mkdir -p "$LOG_DIR"
-fi
-
 print_plan() {
-  local output_target="$1"
+  local target="$1"
   {
-    echo "== GOF Mip-NeRF 360 연구용 고퀄 batch 계획 =="
+    echo "== GOF Mip-NeRF 360 중간 density 임시 batch 계획 =="
     date '+생성: %Y-%m-%d %H:%M:%S %Z'
     echo "project:          $PROJECT_ROOT"
-    echo "scene 수:         ${#SCENES[@]}"
     echo "scenes:           ${SCENES[*]}"
     echo "iterations:       $ITERATIONS"
-    echo "images:           $IMAGE_TAG"
+    echo "images:           $IMAGE_DIR"
+    echo "model_suffix:     $MODEL_SUFFIX"
     echo "gpu:              $GPU"
     echo "port 시작값:      $PORT_START"
     echo "data_device:      $DATA_DEVICE"
     echo "checkpoint_every: $CHECKPOINT_EVERY"
-    echo "checkpoint_iterations: ${CHECKPOINT_ITERATIONS_RAW:-(auto)}"
     echo "resume:           $RESUME_FROM_CHECKPOINT"
-    echo "density_preset:   $DENSITY_PRESET"
-    echo "densify_until_iter: ${DENSIFY_UNTIL_ITER:-(preset/default)}"
-    echo "densify_grad_threshold: ${DENSIFY_GRAD_THRESHOLD:-(preset/default)}"
-    echo "densification_interval: ${DENSIFICATION_INTERVAL:-(preset/default)}"
-    echo "opacity_reset_interval: ${OPACITY_RESET_INTERVAL:-(preset/default)}"
+    echo "densify_until_iter: $DENSIFY_UNTIL_ITER"
+    echo "densify_grad_threshold: $DENSIFY_GRAD_THRESHOLD"
+    echo "densification_interval: $DENSIFICATION_INTERVAL"
+    echo "opacity_reset_interval: $OPACITY_RESET_INTERVAL"
     echo "percent_dense:    ${PERCENT_DENSE:-(default)}"
     echo "run_convert:      $RUN_CONVERT"
-    echo "run_render:       $RUN_RENDER"
-    echo "skip_ready:       $SKIP_TRAIN_IF_READY"
-    echo "backup_existing:  $BACKUP_EXISTING"
-    echo "continue_error:   $CONTINUE_ON_ERROR"
-    echo "viewer python:    $VIEWER_PYTHON"
-    echo "convert radius:   $CONVERT_MAX_RADIUS"
-    echo "convert scale:    $CONVERT_MAX_SCALE"
-    echo "convert opacity:  $CONVERT_MIN_OPACITY"
     echo "batch log:        $BATCH_LOG"
     echo
     echo "scene별 command:"
-  } | write_block "$output_target" "write"
+  } | write_block "$target" "write"
 
   local idx=0
   for scene in "${SCENES[@]}"; do
     idx=$((idx + 1))
-    image_dir="$(scene_image_dir "$scene")"
     port=$((PORT_START + idx - 1))
-    model_dir="$(model_dir_for "$scene" "$image_dir")"
-    input_ply="$(point_cloud_for "$model_dir")"
-    output_ply="$(sibr_point_cloud_for "$model_dir")"
-    local train_cmd=()
-    local convert_cmd=()
-    local post_cmd=()
-    local viewer_cmd=()
-    build_train_cmd "$scene" "$image_dir" "$port" train_cmd
+    model_dir="$(model_dir_for "$scene")"
+    input_ply="${model_dir}/point_cloud/iteration_${ITERATIONS}/point_cloud.ply"
+    output_ply="${model_dir}/point_cloud/iteration_sibr_safe/point_cloud.ply"
+    train_cmd=()
+    convert_cmd=()
+    viewer_cmd=()
+    build_train_cmd "$scene" "$port" "$model_dir" train_cmd
     build_convert_cmd "$input_ply" "$output_ply" convert_cmd
-    build_post_cmd "$scene" "$image_dir" "$port" post_cmd
-    build_viewer_cmd "$model_dir" "$scene" viewer_cmd
+    build_viewer_cmd "$scene" "$model_dir" viewer_cmd
     {
-      printf '\n[%d/%d] %s / %s / port=%s\n' "$idx" "${#SCENES[@]}" "$scene" "$image_dir" "$port"
+      printf '\n[%d/%d] %s / %s / port=%s\n' "$idx" "${#SCENES[@]}" "$scene" "$IMAGE_DIR" "$port"
+      echo "model: $model_dir"
       echo "학습:"
       print_cmd "${train_cmd[@]}"
       if [[ "$RUN_CONVERT" == "1" ]]; then
@@ -590,13 +465,9 @@ print_plan() {
         printf '%q ' "${convert_cmd[@]}"
         printf '\n'
       fi
-      if [[ "$RUN_RENDER" == "1" ]]; then
-        echo "render 후처리:"
-        print_cmd "${post_cmd[@]}"
-      fi
       echo "viewer 확인:"
       print_cmd "${viewer_cmd[@]}"
-    } | write_block "$output_target" "append"
+    } | write_block "$target" "append"
   done
 }
 
@@ -607,35 +478,32 @@ if [[ "$DRY_RUN" == "1" ]]; then
   exit 0
 fi
 
+mkdir -p "$LOG_DIR"
 print_plan "$BATCH_LOG"
 
 batch_start_epoch="$(date +%s)"
-declare -a SUMMARY=()
 overall_status=0
+SUMMARY=()
 
 idx=0
 for scene in "${SCENES[@]}"; do
   idx=$((idx + 1))
-  image_dir="$(scene_image_dir "$scene")"
   port=$((PORT_START + idx - 1))
-  percent=$((idx * 100 / ${#SCENES[@]}))
-  scene_start_epoch="$(date +%s)"
-  model_dir="$(model_dir_for "$scene" "$image_dir")"
-  input_ply="$(point_cloud_for "$model_dir")"
-  output_ply="$(sibr_point_cloud_for "$model_dir")"
+  model_dir="$(model_dir_for "$scene")"
+  input_ply="${model_dir}/point_cloud/iteration_${ITERATIONS}/point_cloud.ply"
+  output_ply="${model_dir}/point_cloud/iteration_sibr_safe/point_cloud.ply"
   train_cmd=()
   convert_cmd=()
-  post_cmd=()
   viewer_cmd=()
-  build_train_cmd "$scene" "$image_dir" "$port" train_cmd
+  build_train_cmd "$scene" "$port" "$model_dir" train_cmd
   build_convert_cmd "$input_ply" "$output_ply" convert_cmd
-  build_post_cmd "$scene" "$image_dir" "$port" post_cmd
-  build_viewer_cmd "$model_dir" "$scene" viewer_cmd
+  build_viewer_cmd "$scene" "$model_dir" viewer_cmd
+  scene_start_epoch="$(date +%s)"
 
   {
     echo
     echo "================================================================"
-    printf '전체 진행: [%d/%d] %d%% | scene=%s | images=%s\n' "$idx" "${#SCENES[@]}" "$percent" "$scene" "$image_dir"
+    printf '전체 진행: [%d/%d] scene=%s images=%s\n' "$idx" "${#SCENES[@]}" "$scene" "$IMAGE_DIR"
     date '+scene 시작: %Y-%m-%d %H:%M:%S %Z'
     echo "model: $model_dir"
     echo "학습 command:"
@@ -649,8 +517,6 @@ for scene in "${SCENES[@]}"; do
   set -e
 
   convert_status=0
-  post_status=0
-
   if [[ "$train_status" -eq 0 && "$RUN_CONVERT" == "1" ]]; then
     {
       echo
@@ -671,49 +537,19 @@ for scene in "${SCENES[@]}"; do
     fi
   fi
 
-  if [[ "$train_status" -eq 0 && "$convert_status" -eq 0 && "$RUN_RENDER" == "1" ]]; then
-    {
-      echo
-      echo "render 후처리 command:"
-      print_cmd "${post_cmd[@]}"
-      echo "----------------------------------------------------------------"
-    } | tee -a "$BATCH_LOG"
-    set +e
-    "${post_cmd[@]}" 2>&1 | tee -a "$BATCH_LOG"
-    post_status=${PIPESTATUS[0]}
-    set -e
-  fi
-
   scene_end_epoch="$(date +%s)"
   scene_elapsed=$((scene_end_epoch - scene_start_epoch))
-  batch_elapsed=$((scene_end_epoch - batch_start_epoch))
   scene_status=0
-
   if [[ "$train_status" -ne 0 ]]; then
     scene_status="$train_status"
   elif [[ "$convert_status" -ne 0 ]]; then
     scene_status="$convert_status"
-  elif [[ "$post_status" -ne 0 ]]; then
-    scene_status="$post_status"
-  fi
-
-  ply_status="missing"
-  sibr_status="not_requested"
-  if [[ -f "$input_ply" ]]; then
-    ply_status="ok"
-  fi
-  if [[ "$RUN_CONVERT" == "1" ]]; then
-    if [[ -f "$output_ply" ]]; then
-      sibr_status="ok"
-    else
-      sibr_status="missing"
-    fi
   fi
 
   if [[ "$scene_status" -eq 0 ]]; then
-    SUMMARY+=("OK | ${scene} | ${image_dir} | ${scene_elapsed}s | point_cloud=${ply_status} | sibr=${sibr_status}")
+    SUMMARY+=("OK | ${scene} | ${scene_elapsed}s | model=${model_dir}")
   else
-    SUMMARY+=("FAIL(${scene_status}) | ${scene} | ${image_dir} | ${scene_elapsed}s | train=${train_status} | convert=${convert_status} | post=${post_status}")
+    SUMMARY+=("FAIL(${scene_status}) | ${scene} | train=${train_status} | convert=${convert_status}")
     overall_status="$scene_status"
   fi
 
@@ -723,9 +559,7 @@ for scene in "${SCENES[@]}"; do
     echo "scene exit status: $scene_status"
     echo "train status: $train_status"
     echo "convert status: $convert_status"
-    echo "post status: $post_status"
     echo "scene 소요 시간: ${scene_elapsed}s"
-    echo "batch 누적 시간: ${batch_elapsed}s"
     echo "point_cloud: $input_ply"
     if [[ "$RUN_CONVERT" == "1" ]]; then
       echo "sibr_safe: $output_ply"
@@ -750,7 +584,7 @@ done
 {
   echo
   echo "================================================================"
-  echo "전체 고퀄 batch 요약"
+  echo "전체 중간 density batch 요약"
   date '+종료: %Y-%m-%d %H:%M:%S %Z'
   echo "전체 소요 시간: $(( $(date +%s) - batch_start_epoch ))s"
   echo "batch log: $BATCH_LOG"
