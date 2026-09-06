@@ -6,7 +6,14 @@ Wind3DGS 프로젝트의 실험 기록, asset, output, report와 얇은 wrapper�
 
 ## 현재 방향
 
-현재 방법은 `../ideas/README.md`에서 찾는다. 새 실험은 `TD##` namespace를 사용한다. TD00은 Global--Local solver milestone을 완료 처리하기 전에 계약, manifest, artifact 소유권과 regression test를 고정한다.
+현재 방법과 R0--R7 개발 계약은 [ideas index](../ideas/README.md)에서 찾는다. 기존 TD##/M## 실험은 legacy/support이며 현행 R-stage 완료 근거로 자동 승계하지 않는다.
+
+## 현재 Teacher 개발 검증
+
+- [R1 Teacher GPU smoke](R1_teacher_smoke/README.md): 2026-09-07 사용자 GTX 1080 Ti 실행 12/12단계 통과와 compact evidence. 공간·시간 수렴은 `not_assessed`이며 학습 dataset은 아직 발행하지 않았다.
+- 누적 구현과 다음 작업: [code 인수인계](../code/sessions/2026-09-07_07_teacher_gpu_checkpoint.md).
+
+`R1_teacher_smoke/`는 현재 Teacher 개발 경로의 지원 검증 기록이다. R1 전체 완료나 새로운 acceptance 기준을 뜻하지 않는다.
 
 ## Legacy와 support 목록
 
