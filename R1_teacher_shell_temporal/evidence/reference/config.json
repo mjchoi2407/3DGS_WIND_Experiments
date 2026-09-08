@@ -1,0 +1,24 @@
+{
+  "policy": {
+    "algebra_tolerance": 1e-09,
+    "cluster_relative_gap": 1e-08,
+    "max_reference_rhs": 1000000,
+    "max_reference_steps": 50000,
+    "max_wall_time_s": 1800.0,
+    "policy_id": "modal_temporal_diagnosis_v1",
+    "reference_a_atol": 1e-10,
+    "reference_a_max_phase_step": 0.5,
+    "reference_a_rtol": 1e-08,
+    "reference_b_atol": 1e-11,
+    "reference_b_max_phase_step": 0.25,
+    "reference_b_rtol": 1e-09,
+    "reference_energy_limit": 1e-05,
+    "reference_error_limit": 0.0001,
+    "reference_integrator": "dop853_scaled_free_displacement_v1",
+    "response_energy_limit": 0.001,
+    "response_error_limit": 0.01,
+    "sample_intervals": 10240
+  },
+  "source_path_base": "workspace",
+  "source_run": "experiments/artifacts/runs/teacher_shell_dynamics/20260907_reference_v1"
+}

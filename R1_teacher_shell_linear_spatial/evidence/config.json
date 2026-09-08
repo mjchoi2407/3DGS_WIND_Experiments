@@ -1,0 +1,65 @@
+{
+  "aero_enabled": false,
+  "amplitude_m": 0.001,
+  "cases": [
+    [
+      "n4_forward",
+      4,
+      "forward"
+    ],
+    [
+      "n4_backward",
+      4,
+      "backward"
+    ],
+    [
+      "n4_checkerboard",
+      4,
+      "checkerboard"
+    ],
+    [
+      "n8_forward",
+      8,
+      "forward"
+    ],
+    [
+      "n8_backward",
+      8,
+      "backward"
+    ],
+    [
+      "n8_checkerboard",
+      8,
+      "checkerboard"
+    ],
+    [
+      "n16_forward",
+      16,
+      "forward"
+    ],
+    [
+      "n16_backward",
+      16,
+      "backward"
+    ],
+    [
+      "n16_checkerboard",
+      16,
+      "checkerboard"
+    ]
+  ],
+  "comparison_steps": 10240,
+  "damping": 0.0,
+  "force_n": 0.0,
+  "gravity_m_s2": 0.0,
+  "initial_field": "u_z=0.001*x^2",
+  "law": "rest_normal_modal_closed_form_v1",
+  "period_s": 1.0719083180935054,
+  "policy": {
+    "max_wall_time_s": 1800.0,
+    "policy_id": "normal_modal_linear_spatial_v1"
+  },
+  "response_error_limit": 0.01,
+  "roundoff_floor": 1e-10,
+  "source_report_sha256": "14700c5346b3f9502f724abd32febcc7a7a6266771ab08fbb750dae531e985f5"
+}

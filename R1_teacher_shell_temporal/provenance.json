@@ -1,0 +1,107 @@
+{
+  "convergence_status": "not_assessed",
+  "evidence_files": {
+    "reference/comparisons.csv": {
+      "bytes": 2167,
+      "sha256": "7ed1d61cbf31ffc62356d1c5da6c195b17102aad442c3009a9c749841283462e"
+    },
+    "reference/config.json": {
+      "bytes": 805,
+      "sha256": "bc3639ebdafef028386096a58f6d1ec5ca3b1b9fbe7b78fcfbc206caaa73da58"
+    },
+    "reference/environment.json": {
+      "bytes": 2457,
+      "sha256": "8c0e4312e9e82b5bf2278e071e7d1b28fbb43575016320f82cc779507cebe66e"
+    },
+    "reference/manifest.json": {
+      "bytes": 98623,
+      "sha256": "027152c91fd38c0d819fe144bea3e74e4591ebee4c8da4794f70bb6096099189"
+    },
+    "reference/report.json": {
+      "bytes": 531369,
+      "sha256": "dbc72afdfba337761b118d6798a3888b5778405b5a27f5f15a2a4fef2b50ffdc"
+    },
+    "reference/run.log": {
+      "bytes": 3909,
+      "sha256": "ceff21a74531e70c79c271714794ed9d67b2743b630db6cd5ab7a6d936c8c560"
+    },
+    "replay_manifest.json": {
+      "bytes": 98623,
+      "sha256": "287961ae0726420e2d0277cc4f26a5e8665d1d2d0745d2797062d97d7bc1f3c7"
+    },
+    "verification.json": {
+      "bytes": 1519,
+      "sha256": "6d454b1e7752df31d38582d0076b4ce042687e7b0b458abebe08d91beb090570"
+    },
+    "verify_reference.py": {
+      "bytes": 10343,
+      "sha256": "84ba40f95333f1126c90cb01f9466a0317d5c48aff0eab2b2acd87620ff91d0f"
+    }
+  },
+  "full_response_check": "failed",
+  "modal_check": "passed",
+  "newmark_solver_check": "failed",
+  "purpose": "Shell 모드·독립 시간 기준·시간 해상도 개발 진단과 실패 prefix·재실행 검산의 선택 보존",
+  "reference_check": "passed",
+  "report_sha256": "33ddc889a428d70a814d0e2df894a265f4469ab54c97e2260908137fd6a16579",
+  "retention": "원본과 재실행의 전체 상태·modal basis·step trace·checkpoint chunk는 ignored artifact로 보존한다. 두 run은 삭제·덮어쓰지 않는다. 각 manifest의 상대 경로·byte/hash로 회수하며 재실행에는 새 폴더를 사용한다.",
+  "runs": [
+    {
+      "evidence": "evidence/reference",
+      "files": {
+        "comparisons.csv": {
+          "bytes": 2167,
+          "sha256": "7ed1d61cbf31ffc62356d1c5da6c195b17102aad442c3009a9c749841283462e"
+        },
+        "config.json": {
+          "bytes": 805,
+          "sha256": "bc3639ebdafef028386096a58f6d1ec5ca3b1b9fbe7b78fcfbc206caaa73da58"
+        },
+        "environment.json": {
+          "bytes": 2457,
+          "sha256": "8c0e4312e9e82b5bf2278e071e7d1b28fbb43575016320f82cc779507cebe66e"
+        },
+        "manifest.json": {
+          "bytes": 98623,
+          "sha256": "027152c91fd38c0d819fe144bea3e74e4591ebee4c8da4794f70bb6096099189"
+        },
+        "report.json": {
+          "bytes": 531369,
+          "sha256": "dbc72afdfba337761b118d6798a3888b5778405b5a27f5f15a2a4fef2b50ffdc"
+        },
+        "run.log": {
+          "bytes": 3909,
+          "sha256": "ceff21a74531e70c79c271714794ed9d67b2743b630db6cd5ab7a6d936c8c560"
+        }
+      },
+      "label": "reference",
+      "original_run": "artifacts/runs/teacher_shell_temporal/20260908_reference_v1"
+    },
+    {
+      "label": "replay",
+      "manifest": {
+        "bytes": 98623,
+        "sha256": "287961ae0726420e2d0277cc4f26a5e8665d1d2d0745d2797062d97d7bc1f3c7"
+      },
+      "original_run": "artifacts/runs/teacher_shell_temporal/20260908_reference_v1_replay",
+      "report": {
+        "bytes": 531369,
+        "sha256": "dbc72afdfba337761b118d6798a3888b5778405b5a27f5f15a2a4fef2b50ffdc"
+      },
+      "selected_manifest": "evidence/replay_manifest.json"
+    }
+  ],
+  "schema_version": "wind3dgs.shell_temporal_evidence.v1",
+  "short_response_check": "not_assessed",
+  "source_check": "passed",
+  "source_run": "artifacts/runs/teacher_shell_dynamics/20260907_reference_v1",
+  "teacher_eligible": false,
+  "verification": {
+    "command": "PYTHONPATH=code .venv/bin/python experiments/R1_teacher_shell_temporal/evidence/verify_reference.py",
+    "result": "evidence/verification.json",
+    "script": "evidence/verify_reference.py",
+    "script_role": "이 두 run을 고정한 실험 기록 재검산용; reusable audit·solver 구현은 code가 소유한다.",
+    "temporary_result": "/tmp/wind3dgs_shell_temporal_verification.json",
+    "working_directory": "workspace root"
+  }
+}

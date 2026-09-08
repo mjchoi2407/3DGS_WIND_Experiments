@@ -1,0 +1,17 @@
+{
+  "artifact_root": "experiments/artifacts/runs/teacher_bending_audit/20260907_default_a001",
+  "command": "bash code/scripts/audit_teacher_bending.sh --resolutions 4 8 16 32 --width-m 1 --height-m 1 --amplitude-m 0.01 --edge-ke-n 10 --output ../experiments/artifacts/runs/teacher_bending_audit/20260907_default_a001",
+  "native_reference": {
+    "function": "evaluate_dihedral_angle_based_bending_force_hessian",
+    "newton_version": "1.3.0",
+    "reference_matches_previous_gpu_review": true,
+    "sources_sha256": {
+      "newton/_src/sim/builder.py": "a8091bfec9e88bdaebf463080ff464e02dc251a0d69d3265ad697354618bf556",
+      "newton/_src/solvers/vbd/particle_vbd_kernels.py": "aa13d6b69042c7894365f2caceebe3fd15cf9b72f128c9407a38e4b3bc95217b"
+    }
+  },
+  "note": "Newton 설치 파일을 읽어 기준 식을 확인했다. 감사 실행기는 Newton을 import하지 않으며 물리 계수·기존 GPU run을 변경하지 않았다.",
+  "review_date_kst": "2026-09-07",
+  "scope": "static_geometry_bending_only_no_solver",
+  "working_directory": "workspace root"
+}

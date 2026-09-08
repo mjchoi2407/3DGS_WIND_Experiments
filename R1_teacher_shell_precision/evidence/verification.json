@@ -1,0 +1,51 @@
+{
+  "comparisons_csv_recomputed": true,
+  "convergence_status": "not_assessed",
+  "meaning": "기록 무결성·수치 재검산·독립 재실행 일치이며 물리 수렴 판정과 구분한다.",
+  "replay_reports_arrays_trace_hashes_equal": true,
+  "report_sha256": "093fd1b440f61b7e604167abd25a902c1f0170071d018df3348245067c397be6",
+  "runs": [
+    {
+      "accepted_candidate_steps": 3457,
+      "case_elapsed_s": 120.95314969300034,
+      "checked_chunks": 108,
+      "checked_frames": 3463,
+      "checked_trial_vectors": 5982,
+      "inventoried_files": 198,
+      "iteration_vectors": 55702,
+      "max_kinematic_ratio": 0.02902367108415794,
+      "max_residual_to_limit_ratio": 0.9992323206140828,
+      "restart_same_position": {
+        "direct_acceleration_residual_m_s2": 3.122738683871254e-10,
+        "position_recovered_residual_m_s2": 2.4559169744649146e-08,
+        "residual_limit_m_s2": 1.3488614559733452e-08
+      },
+      "run": "artifacts/runs/teacher_shell_precision/20260908_reference_v1",
+      "source_files": 21,
+      "status": "passed"
+    },
+    {
+      "accepted_candidate_steps": 3457,
+      "case_elapsed_s": 121.73003387699919,
+      "checked_chunks": 108,
+      "checked_frames": 3463,
+      "checked_trial_vectors": 5982,
+      "inventoried_files": 198,
+      "iteration_vectors": 55702,
+      "max_kinematic_ratio": 0.02902367108415794,
+      "max_residual_to_limit_ratio": 0.9992323206140828,
+      "restart_same_position": {
+        "direct_acceleration_residual_m_s2": 3.122738683871254e-10,
+        "position_recovered_residual_m_s2": 2.4559169744649146e-08,
+        "residual_limit_m_s2": 1.3488614559733452e-08
+      },
+      "run": "artifacts/runs/teacher_shell_precision/20260908_reference_v1_replay",
+      "source_files": 21,
+      "status": "passed"
+    }
+  ],
+  "schema_version": "wind3dgs.shell_precision_verification.v1",
+  "state_and_iteration_physics_recomputed": true,
+  "status": "passed",
+  "teacher_eligible": false
+}

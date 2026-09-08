@@ -1,0 +1,68 @@
+{
+  "convergence_status": "not_assessed",
+  "date": "2026-09-08",
+  "decision": "P3 처방 압력 선형 fixture만 통과. 기존 x² 속도 실패와 비선형/공력/본 학습 적격성 미검증 유지.",
+  "evidence_sha256": {
+    "evidence/cubic_config.json": "3bb9aab6589f8a667f1909300cc0cafbee5141230017b00ea29e2dc701bdbf09",
+    "evidence/cubic_environment.json": "00cc75bcb37fa603e8c6cc152c44062a543131d5cc15a42d83aff3bdd0eafdb4",
+    "evidence/cubic_manifest.json": "5645e59df2f6d13199f6285a6df88c2066a9576b8427094950d075aa27707881",
+    "evidence/cubic_replay_manifest.json": "ad0649c8e7851b88878d674dfb947a5fc0a2c1cb6f4a303fc9ebb4a8c3dd891b",
+    "evidence/cubic_report.json": "799a48aa00e9eb40085ad030298d90a409959332092fbfdc784b312bc2cb46ac",
+    "evidence/initial_spectral_energy.json": "fdd9b88a6c69792384fa8e61aeb4f28694c77f20c7ca3166fd9405e023143527",
+    "evidence/interior_force_and_modes.png": "43dbc66083c1c164a6e2eae9b63e28df69e48d5be2be9fddb309947260c6598f",
+    "evidence/reference_config.json": "1d52efd7ab9d9aba562dd6c44b41a15f0c3efe5d498e035fe94d4f4c3b4a043e",
+    "evidence/reference_environment.json": "46e754d11219f5f8cd5b50b857075dea90a059229c9c7d747166b31011b91e1d",
+    "evidence/reference_manifest.json": "f9a163fe74f217b7f56e024f3b170419915e5087f447bc58a463ae71ad0c1b0c",
+    "evidence/reference_replay_manifest.json": "6b427efaa8ef54c40388c05fb27ed0920749e9c2aced8cc810c98fe552da2f28",
+    "evidence/reference_report.json": "b5c3929f2e65160f9f8127fe4ea9612e41a0871a5554c4efd5bcec0e77249fd7",
+    "evidence/response_convergence.png": "ebe8197e498bfc5885cd88fc982265d66f1d134513ab854b3896bfe261aa5faf",
+    "evidence/verification.json": "58a7aaa9eac98f1f47bc41a4fec0528d2c07791764d75d53306859da46ff81c2",
+    "evidence/verify_and_plot.py": "51a1c01a81f77579de4da7d0fc76ca3fd2d05e0e422afb4fa6c82b061ab878c3"
+  },
+  "original_source_run": "artifacts/runs/teacher_shell_linear_spatial/20260908_reference_v1",
+  "project": "Wind3DGS",
+  "raw_root": "artifacts/runs/teacher_spatial_remediation",
+  "retrieval_rule": "Ignored raw run은 각 manifest의 byte/hash와 함께 회수한다. 원본이 없으면 README 명령으로 새 경로에 재실행하며 동일 source snapshot을 확인한다.",
+  "runs": {
+    "cubic": {
+      "directory": "20260908_cubic_v1",
+      "elapsed_s": 104.29111927999838,
+      "inventory_bytes": 146317681,
+      "inventory_count": 16,
+      "report_sha256": "799a48aa00e9eb40085ad030298d90a409959332092fbfdc784b312bc2cb46ac",
+      "scope": "inventory_source_and_gate_recalculation",
+      "status": "passed"
+    },
+    "cubic_replay": {
+      "directory": "20260908_cubic_v1_replay",
+      "elapsed_s": 106.02469235799799,
+      "inventory_bytes": 146317681,
+      "inventory_count": 16,
+      "report_sha256": "799a48aa00e9eb40085ad030298d90a409959332092fbfdc784b312bc2cb46ac",
+      "scope": "inventory_source_and_gate_recalculation",
+      "status": "passed"
+    },
+    "reference": {
+      "directory": "20260908_reference_v1",
+      "elapsed_s": 45.784450830000424,
+      "inventory_bytes": 45156771,
+      "inventory_count": 55,
+      "report_sha256": "b5c3929f2e65160f9f8127fe4ea9612e41a0871a5554c4efd5bcec0e77249fd7",
+      "scope": "inventory_source_and_gate_recalculation",
+      "status": "passed"
+    },
+    "reference_replay": {
+      "directory": "20260908_reference_v1_replay",
+      "elapsed_s": 41.82592945500073,
+      "inventory_bytes": 45156770,
+      "inventory_count": 55,
+      "report_sha256": "b5c3929f2e65160f9f8127fe4ea9612e41a0871a5554c4efd5bcec0e77249fd7",
+      "scope": "inventory_source_and_gate_recalculation",
+      "status": "passed"
+    }
+  },
+  "schema_version": "wind3dgs.experiment_provenance.v1",
+  "stage": "R1 development diagnostic",
+  "teacher_eligible": false,
+  "validation": "신규 27개+기존 회귀 72개. 두 진단을 각각 독립 재실행해 runtime.json 외 모든 inventory byte 일치."
+}

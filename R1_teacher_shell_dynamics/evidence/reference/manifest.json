@@ -1,0 +1,414 @@
+{
+  "cases": [
+    {
+      "case_id": "translation",
+      "completed_steps": 8,
+      "status": "completed"
+    },
+    {
+      "case_id": "constant_acceleration",
+      "completed_steps": 8,
+      "status": "completed"
+    },
+    {
+      "case_id": "force_transition",
+      "completed_steps": 8,
+      "status": "completed"
+    },
+    {
+      "case_id": "all_pinned_reaction",
+      "completed_steps": 1,
+      "status": "completed"
+    },
+    {
+      "case_id": "linear_forward_40",
+      "completed_steps": 40,
+      "status": "completed"
+    },
+    {
+      "case_id": "linear_forward_80",
+      "completed_steps": 80,
+      "status": "completed"
+    },
+    {
+      "case_id": "linear_forward_160",
+      "completed_steps": 160,
+      "status": "completed"
+    },
+    {
+      "case_id": "linear_backward_40",
+      "completed_steps": 40,
+      "status": "completed"
+    },
+    {
+      "case_id": "linear_backward_80",
+      "completed_steps": 80,
+      "status": "completed"
+    },
+    {
+      "case_id": "linear_backward_160",
+      "completed_steps": 160,
+      "status": "completed"
+    },
+    {
+      "case_id": "linear_checkerboard_40",
+      "completed_steps": 40,
+      "status": "completed"
+    },
+    {
+      "case_id": "linear_checkerboard_80",
+      "completed_steps": 80,
+      "status": "completed"
+    },
+    {
+      "case_id": "linear_checkerboard_160",
+      "completed_steps": 160,
+      "status": "completed"
+    },
+    {
+      "case_id": "nonlinear_40",
+      "completed_steps": 40,
+      "status": "completed"
+    },
+    {
+      "case_id": "nonlinear_80",
+      "completed_steps": 80,
+      "status": "completed"
+    },
+    {
+      "case_id": "nonlinear_160",
+      "completed_steps": 160,
+      "status": "completed"
+    },
+    {
+      "case_id": "nonlinear_320",
+      "completed_steps": 320,
+      "status": "completed"
+    },
+    {
+      "case_id": "amplitude_0.0005000",
+      "completed_steps": 320,
+      "status": "completed"
+    },
+    {
+      "case_id": "amplitude_0.0002500",
+      "completed_steps": 320,
+      "status": "completed"
+    }
+  ],
+  "command": [
+    "python",
+    "-m",
+    "wind3dgs.evaluation.teacher_shell_dynamics_audit",
+    "--young-modulus-pa",
+    "1000000.0",
+    "--poisson-ratio",
+    "0.3",
+    "--thickness-m",
+    "0.01",
+    "--reference-mass-kg",
+    "0.1",
+    "--width-m",
+    "1.0",
+    "--height-m",
+    "1.0",
+    "--output",
+    "<new-output-dir>"
+  ],
+  "config_path": "config.json",
+  "config_sha256": "7cb520fb588d6077281f6eb723ade1ffe2ac41d998947b0b38c9c748b592a558",
+  "convergence_status": "not_assessed",
+  "created_at": "2026-09-07T08:10:59.999997+00:00",
+  "dataset_id": "not_applicable_synthetic_geometry",
+  "dataset_sha256_or_manifest_version": null,
+  "device": "cpu_numpy_scipy_gmres",
+  "environment": "environment.json",
+  "failure": null,
+  "milestone": "R1_shell_dynamics_development",
+  "models": [],
+  "object_package_id": "not_applicable",
+  "object_package_sha256": null,
+  "outputs": {
+    "cases.csv": {
+      "bytes": 2357,
+      "sha256": "3e9e50f822d8ffe2fd4984ed048579572a6041dc529ac6d53827fd4bcecfe2cd"
+    },
+    "cases/all_pinned_reaction/states.npz": {
+      "bytes": 2616,
+      "sha256": "e604c3c3067c0216eb67dfdf8b6ed2c9cff813bee83dd5056464a113831e03fa"
+    },
+    "cases/all_pinned_reaction/steps.jsonl": {
+      "bytes": 1299,
+      "sha256": "c0b99b04b4da62dc17aa0034ddd89ff5df2ebd8308c6324aa69f5f66b47e5b08"
+    },
+    "cases/all_pinned_reaction/summary.json": {
+      "bytes": 5444,
+      "sha256": "60600770eef0b75e08c123a4f8ba9ca31745a383c5ecc0ceaa1d5866abcc6008"
+    },
+    "cases/amplitude_0.0002500/states.npz": {
+      "bytes": 468128,
+      "sha256": "460f09c5d9bdc70e88f7d5cb4d4afbe12e3d7688b4116adf633d61ba605d987e"
+    },
+    "cases/amplitude_0.0002500/steps.jsonl": {
+      "bytes": 1735594,
+      "sha256": "605da2aa2df99c2e5aade9f83c2cfaab6e105afe168d00e3a0adbe7100d1903b"
+    },
+    "cases/amplitude_0.0002500/summary.json": {
+      "bytes": 5567,
+      "sha256": "597bea37fdb49234214186d288473c66dec9c78b62bd49222a5d368aadb94263"
+    },
+    "cases/amplitude_0.0005000/states.npz": {
+      "bytes": 471012,
+      "sha256": "f017b9d3486dbb2dfbba0f60a94a98b15fa81d5e457f4066c163fd6a04694d5b"
+    },
+    "cases/amplitude_0.0005000/steps.jsonl": {
+      "bytes": 1748292,
+      "sha256": "dfb9f29acc9a260f8fbe06a6441fa25f79071ae3061cb103fb3d4326cb553725"
+    },
+    "cases/amplitude_0.0005000/summary.json": {
+      "bytes": 5567,
+      "sha256": "d0aefaf0dc13235042c2d99bede6b8d8910fc5b305d3765f8b8f0780061e3e8a"
+    },
+    "cases/constant_acceleration/states.npz": {
+      "bytes": 7169,
+      "sha256": "20a0b5ac6e9fef751fb17ad979a55a25af784f2cd42782a416aee006e65caaeb"
+    },
+    "cases/constant_acceleration/steps.jsonl": {
+      "bytes": 32924,
+      "sha256": "c08893d5402ef316795a392d76007aef2afe9f36a3ab158d47854c06a90743cd"
+    },
+    "cases/constant_acceleration/summary.json": {
+      "bytes": 5484,
+      "sha256": "89258cccfe51b693fc1565eb1021bf85a4762834bed7613979981daccafdf68b"
+    },
+    "cases/force_transition/states.npz": {
+      "bytes": 7138,
+      "sha256": "8cf6f424b6d3829176b8b4e00b3ab18353d97c70b8e3ed9ea20a69387e3a61d9"
+    },
+    "cases/force_transition/steps.jsonl": {
+      "bytes": 32993,
+      "sha256": "d9db935a526e811df6f549473656c49c2bf17fa6bb5c62b69e081b69118ff028"
+    },
+    "cases/force_transition/summary.json": {
+      "bytes": 5479,
+      "sha256": "7f4dc2559953f0e30c97d9df07095b3fcaae7ac365706aff499a89f68d3f934d"
+    },
+    "cases/linear_backward_160/states.npz": {
+      "bytes": 96281,
+      "sha256": "fab5181d47b3863b5a116ae6a9dbc2180b7cc4542991b4a1738e8f1d18c4cf21"
+    },
+    "cases/linear_backward_160/steps.jsonl": {
+      "bytes": 388596,
+      "sha256": "bc3747227db9dd2c73833e8935417d193f39d0b7ab645387129ea193252382fb"
+    },
+    "cases/linear_backward_160/summary.json": {
+      "bytes": 5575,
+      "sha256": "7d5cb357ee1541d8f8ac31c8932c83567bbacc87fda1cd06147cc3945e4b47c3"
+    },
+    "cases/linear_backward_40/states.npz": {
+      "bytes": 25874,
+      "sha256": "3a6f1bd01343d378a33e05a70fd05675779fa36fe7da38b8e3fb9cce40b198c2"
+    },
+    "cases/linear_backward_40/steps.jsonl": {
+      "bytes": 103103,
+      "sha256": "b2ae1cceac68bd5322b01bd883923b76272347b64fec522af90053b3c092704d"
+    },
+    "cases/linear_backward_40/summary.json": {
+      "bytes": 5563,
+      "sha256": "085ce7b39b72db4b54627649b67ab3fb50d175cef1be0293c2ea725b4d32e078"
+    },
+    "cases/linear_backward_80/states.npz": {
+      "bytes": 49603,
+      "sha256": "c3d1036012a97dc48b1b41d523070a6bd5724ff069e4e66eaeb0c2ea9ab83f0a"
+    },
+    "cases/linear_backward_80/steps.jsonl": {
+      "bytes": 198661,
+      "sha256": "1d495d48dc2f86025e535c54bcba5fe88ae25affb691d07e196f1618257aebc9"
+    },
+    "cases/linear_backward_80/summary.json": {
+      "bytes": 5566,
+      "sha256": "f88d5b960b1bc08b50248d21909c79a5dc3565bd54d7606f73749185e37bd490"
+    },
+    "cases/linear_checkerboard_160/states.npz": {
+      "bytes": 87613,
+      "sha256": "ac76fd2db92c86b38f4590b97e4822087adc2dc0ca1469a60e1cebf137372054"
+    },
+    "cases/linear_checkerboard_160/steps.jsonl": {
+      "bytes": 390033,
+      "sha256": "d73a1d24b67ea40cb1360d286d01e7de8cc94638deee295a8c14181736d21b08"
+    },
+    "cases/linear_checkerboard_160/summary.json": {
+      "bytes": 5561,
+      "sha256": "068b146057228899b93b432c57307d64bd00db2457716a16dd4f7b7d7082578c"
+    },
+    "cases/linear_checkerboard_40/states.npz": {
+      "bytes": 23684,
+      "sha256": "5ddcfff55e32f3cd511998e1b4fe1ea4b94fcc34606cfab7f00a3369f34ac667"
+    },
+    "cases/linear_checkerboard_40/steps.jsonl": {
+      "bytes": 102394,
+      "sha256": "91f153a0fa56ecc26bf3b15e064d467d383f47dfb5f77665c883d7c51bb71923"
+    },
+    "cases/linear_checkerboard_40/summary.json": {
+      "bytes": 5548,
+      "sha256": "ed5b47dc88bbc3dfdf43d80a7b7e49cc61fe894d337c17cb26fb7935bb0f5595"
+    },
+    "cases/linear_checkerboard_80/states.npz": {
+      "bytes": 45305,
+      "sha256": "ef466ee60a072ee5a1004644712855ea21bbe059aab885fcc88530ce130d73ae"
+    },
+    "cases/linear_checkerboard_80/steps.jsonl": {
+      "bytes": 198903,
+      "sha256": "54b16da9730af53eec165c3988b58c22ce426fad7e3a7e2284401f37fd7e34c1"
+    },
+    "cases/linear_checkerboard_80/summary.json": {
+      "bytes": 5550,
+      "sha256": "fefc7c8257fc902e57ad794434e2c92235a9b016b18aa3aca32650340aa8af0b"
+    },
+    "cases/linear_forward_160/states.npz": {
+      "bytes": 96212,
+      "sha256": "1dfa6f3d0ef5b10a10dd4d4febbd0c591566bcdc9966e168b6f8cf6bf61bfd36"
+    },
+    "cases/linear_forward_160/steps.jsonl": {
+      "bytes": 388809,
+      "sha256": "8cae562787d814fc3e392a6512808171ac3aa5887bc2d195ee057b3f42334d08"
+    },
+    "cases/linear_forward_160/summary.json": {
+      "bytes": 5571,
+      "sha256": "254d3c1d8263bf3c20fa08c12bd41b88e4f6732b3b1f9db2522286500e2cdb12"
+    },
+    "cases/linear_forward_40/states.npz": {
+      "bytes": 25886,
+      "sha256": "36764728ae1ead05192986b95d06acaa49bcb27916fcb5019b20774dee8850a8"
+    },
+    "cases/linear_forward_40/steps.jsonl": {
+      "bytes": 103019,
+      "sha256": "cfd522865e886c89f6cda155c42b26631803d0129e11679a72181a026e27f068"
+    },
+    "cases/linear_forward_40/summary.json": {
+      "bytes": 5561,
+      "sha256": "f73ea07aed8a012afa5775cbb6934a881c0f89d1d9410fc7c95462c772e420ba"
+    },
+    "cases/linear_forward_80/states.npz": {
+      "bytes": 49590,
+      "sha256": "4176bc42830e20f6d79c4da8a336f6152f0350a35299a82f96d953dd79f3e6cb"
+    },
+    "cases/linear_forward_80/steps.jsonl": {
+      "bytes": 198358,
+      "sha256": "5c2920790b5667ba3694a24cceaac6593618e307027bb3d3ae18817f29f529dd"
+    },
+    "cases/linear_forward_80/summary.json": {
+      "bytes": 5564,
+      "sha256": "e2f717f54522abc22cb033a6743725b82e42349a9f695a15f0001a4ba0d0e5be"
+    },
+    "cases/nonlinear_160/states.npz": {
+      "bytes": 238417,
+      "sha256": "1e412292481cfe560a4aee2bafe906c1a33dd85833b72c28e90f6a0fed1a27f7"
+    },
+    "cases/nonlinear_160/steps.jsonl": {
+      "bytes": 934237,
+      "sha256": "181b71a927ef4eef520f47a48b2816bf9830b574649e65b34fc6ccc947134002"
+    },
+    "cases/nonlinear_160/summary.json": {
+      "bytes": 5560,
+      "sha256": "9115d6cdf6dc2c5a94c0c40b3a08666e28ab98780d9f924091b2170b74911d8d"
+    },
+    "cases/nonlinear_320/states.npz": {
+      "bytes": 473288,
+      "sha256": "a62e3421c54c5c1298af7f0dc7d564da34cbeac10625742b409d4a16bd31139b"
+    },
+    "cases/nonlinear_320/steps.jsonl": {
+      "bytes": 1753615,
+      "sha256": "d23d7c2456484c4cc4301436102657fe475b5bd4fe18c2cbf26f2095b08dba9e"
+    },
+    "cases/nonlinear_320/summary.json": {
+      "bytes": 5561,
+      "sha256": "44bb8046d300922773ea2cdc5ffde32d09fc581f795b6cb20d645581b103ec36"
+    },
+    "cases/nonlinear_40/states.npz": {
+      "bytes": 61360,
+      "sha256": "880389417a966da0d9a8ee249da871f2b7d8a3d182339685578df8b6b15252ab"
+    },
+    "cases/nonlinear_40/steps.jsonl": {
+      "bytes": 297533,
+      "sha256": "31485dc86c18051ad5d349f48153a5c1564f62a4d307c66e96a8ef01c82e69b2"
+    },
+    "cases/nonlinear_40/summary.json": {
+      "bytes": 5548,
+      "sha256": "368199ad54c9a72803506258f2db42494b457880c90d4c3b4de00592b72aa755"
+    },
+    "cases/nonlinear_80/states.npz": {
+      "bytes": 120423,
+      "sha256": "b937eae760e46e63a0e4a38d6b4a406257df87926ac316a3789341ea18015c61"
+    },
+    "cases/nonlinear_80/steps.jsonl": {
+      "bytes": 478492,
+      "sha256": "1ccd23855293ca9ed7580fc29f8021a7439e254580f4f9ee4beda0b452675b67"
+    },
+    "cases/nonlinear_80/summary.json": {
+      "bytes": 5549,
+      "sha256": "d014c75c5d6c7fd94f1bd669e0c77d9e7b07d81629ff3dfa07adc56fa086582c"
+    },
+    "cases/translation/states.npz": {
+      "bytes": 6775,
+      "sha256": "2c3d093a0e03094ea3ce0f6da5050fa31a3f5d8bc6cac2518575358c26e2b808"
+    },
+    "cases/translation/steps.jsonl": {
+      "bytes": 33149,
+      "sha256": "b962efc6cfa336841ef6edddfca1b11c1037848c7a76c2293694c1404eace4a8"
+    },
+    "cases/translation/summary.json": {
+      "bytes": 5473,
+      "sha256": "980269c06da9c3835011d7baf735344c0f911f532d93253ff94bfe81fbbd7db0"
+    },
+    "config.json": {
+      "bytes": 148,
+      "sha256": "52d355a5f604c07c5ce92dec1dc6eb984df798d8ccd07e5775552288acc1cf59"
+    },
+    "environment.json": {
+      "bytes": 2206,
+      "sha256": "8b5cfb50065028784889817a11622e00b1d6d318d22c8260e9825c03e02cd0b1"
+    },
+    "report.json": {
+      "bytes": 249902,
+      "sha256": "853505b372091f7ede7de494bd0b595a6cc359cafb66e06fa6821cff4d236d74"
+    },
+    "run.log": {
+      "bytes": 4122,
+      "sha256": "f2a544ccbfe63818a0c1b65da8135cd848f15c371e98837217d12c508f9ff531"
+    }
+  },
+  "pending_cases": [],
+  "report_sha256": "71fb96550403e551b7d88c67d37e6e01fafd90a0c38c620efdc210177a456348",
+  "reproducibility_key": "53f4b5de06683d1a60880ed79579d79aaec40e2f912f42a934d2f872ddee9d75",
+  "response_check": "failed",
+  "run_id": "caffa762ac954b23aba62ddadab02129",
+  "schema_version": "wind3dgs.teacher_shell_dynamics_audit.v1",
+  "seed": 20260907,
+  "software": {
+    "pyproject.toml": "56a3b734c9c2fe8ae39e557c3298f9cf22c3ce91c6f1dd477f33cb4087eaf0f0",
+    "scripts/audit_teacher_plate_reference.sh": "3ffed78976273b0e348e2c346e1ad57149a214326491a8b25260c9ed491a9e95",
+    "scripts/audit_teacher_shell_dynamics.sh": "4e5721d2f81f296b1c6704d093687ee7aed7dd15549f9588597b752e98565a02",
+    "scripts/audit_teacher_shell_structure.sh": "5b6678951d500c161b6ede65f1f92c1d40b26a985dc103486ac6e4dbfdd05f28",
+    "wind3dgs/evaluation/teacher_bending_audit.py": "c116b0b53c8b396b9bba99f752d80c0e85bf90e2e7fb4aaed8e06c2dad844755",
+    "wind3dgs/evaluation/teacher_bending_mapping.py": "2534070022c37010fa3a3bcb1c04dd68e79dc6fe3d0843a40593d8f1b892b973",
+    "wind3dgs/evaluation/teacher_plate_reference.py": "9c0dcbeffb8c9b7f9ac9533ef15b0053bc918f401a62df152a35b9814b212b6f",
+    "wind3dgs/evaluation/teacher_shell_dynamics_audit.py": "1fdf046bfc1397373d0a9f3dbd64e7e1a26688f791abde27ebae22f17e12528d",
+    "wind3dgs/evaluation/teacher_shell_structure_audit.py": "479f24617a7c77573f302d462561a17dad7147095713d2b542cd6d3e600e474f",
+    "wind3dgs/teacher/cloth_metrics.py": "0eaa69b483babb9ac968303156dcad7a651d0d920cffa909456a6ace58580940",
+    "wind3dgs/teacher/initial_state.py": "ae3bcb2823a7c3b81f9cbb533df6b5e57077fe5407167f3babc27f3fd9d8b21d",
+    "wind3dgs/teacher/physics_registry.py": "462ca765801e2d5d4f3ebb4589efce633a03aae8a2a5432c8e68b5e4221047e5",
+    "wind3dgs/teacher/sample_meshes.py": "d2f435edb31d927ab4b1ea081d785b5bbeedfae45f5fafddbabe605e3193011f",
+    "wind3dgs/teacher/shell_dynamics.py": "e623ef49d3523409ed4794cebf8a3d732c0482262376dde4efbd5d484f0b0b78",
+    "wind3dgs/teacher/shell_structure.py": "2056257d6a7ec35670051db0366197d3ebd1fe917da64c014ae6bdc4bf037879",
+    "wind3dgs/teacher/trajectory.py": "37d54b9c367b56e22352f366798626bfcc05804216bb11525887892b122fa65a"
+  },
+  "solver_check": "passed",
+  "source_repositories": {
+    "code": "7010682a4307f3037dd926579932502d22eee168",
+    "experiments": "61d972ece9e183786d03434f8df5360d9d3d7fdf"
+  },
+  "status": "completed",
+  "teacher_eligible": false,
+  "working_directory": "code"
+}

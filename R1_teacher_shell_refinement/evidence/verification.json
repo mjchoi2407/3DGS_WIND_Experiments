@@ -1,0 +1,47 @@
+{
+  "baseline_reused_steps_verified": 512,
+  "comparisons_csv_recomputed": true,
+  "convergence_status": "not_assessed",
+  "linear_correction_residuals_recomputed": true,
+  "meaning": "기록 무결성·수치 재검산·독립 재실행 일치이며 물리 수렴 판정과 구분한다.",
+  "replay_reports_arrays_trace_hashes_equal": true,
+  "report_sha256": "eb95b82ffaddf05a8c638925400621b9d32e26529a8a58612cd9c1e8b177c37b",
+  "runs": [
+    {
+      "accepted_candidate_steps": 3072,
+      "case_elapsed_s": 54.537837375999516,
+      "checked_chunks": 96,
+      "checked_frames": 3074,
+      "checked_linear_corrections": 6144,
+      "checked_trial_vectors": 3072,
+      "inventoried_files": 160,
+      "iteration_vectors": 33792,
+      "max_kinematic_ratio": 0.025181270505567392,
+      "max_recomputed_linear_ratio": 0.9940727469647612,
+      "max_residual_to_limit_ratio": 0.04131082593892944,
+      "run": "artifacts/runs/teacher_shell_refinement/20260908_reference_v1",
+      "source_files": 23,
+      "status": "passed"
+    },
+    {
+      "accepted_candidate_steps": 3072,
+      "case_elapsed_s": 54.836602896999466,
+      "checked_chunks": 96,
+      "checked_frames": 3074,
+      "checked_linear_corrections": 6144,
+      "checked_trial_vectors": 3072,
+      "inventoried_files": 160,
+      "iteration_vectors": 33792,
+      "max_kinematic_ratio": 0.025181270505567392,
+      "max_recomputed_linear_ratio": 0.9940727469647612,
+      "max_residual_to_limit_ratio": 0.04131082593892944,
+      "run": "artifacts/runs/teacher_shell_refinement/20260908_reference_v1_replay",
+      "source_files": 23,
+      "status": "passed"
+    }
+  ],
+  "schema_version": "wind3dgs.shell_refinement_verification.v1",
+  "state_and_iteration_physics_recomputed": true,
+  "status": "passed",
+  "teacher_eligible": false
+}

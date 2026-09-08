@@ -1,0 +1,113 @@
+{
+  "convergence_status": "not_assessed",
+  "evidence_files": {
+    "reference/comparisons.csv": {
+      "bytes": 1357,
+      "sha256": "08d16d42553edb0954feae37139788b9659ba5180c8977336c2ee899544e7f30"
+    },
+    "reference/config.json": {
+      "bytes": 839,
+      "sha256": "d3036468198420e81df8dc22190e467381e4a9ebd1d4153169927250abd3d58d"
+    },
+    "reference/environment.json": {
+      "bytes": 2829,
+      "sha256": "1aae5fcb86bdfd848a4e3ba61794cb626d842524d9398daa4b45ae1becacdbf0"
+    },
+    "reference/manifest.json": {
+      "bytes": 67733,
+      "sha256": "f3b318f968328c43a297d4f2d4aa751f08d0f8bca766465c631f12303de8131c"
+    },
+    "reference/report.json": {
+      "bytes": 272612,
+      "sha256": "f475081df64aa028898bbe6bfc3b82099214d8ac27fb9cee95fdef235bc67ca9"
+    },
+    "reference/run.log": {
+      "bytes": 2684,
+      "sha256": "552f427a869348a89de7ee671e3c10ab58609eb70115659f91ec954478244974"
+    },
+    "replay_manifest.json": {
+      "bytes": 67733,
+      "sha256": "48a65c314d2365f1b91880a4a0e667e2860f4bedadff25586e6ff4c34b698efa"
+    },
+    "verification.json": {
+      "bytes": 1980,
+      "sha256": "c1f64630bba3739846d1371842c0c65a64173ed44ed400d9b84583c7b39c016e"
+    },
+    "verify_reference.py": {
+      "bytes": 12543,
+      "sha256": "71af3158cfc3ecb72966b07e6fead40198fc1cb54cbbb3b9004a53923d561411"
+    }
+  },
+  "full_reference_error_check": "failed",
+  "full_response_check": "not_assessed",
+  "legacy_failure_replay_check": "passed",
+  "precision_regression_check": "passed",
+  "prefix_check": "passed",
+  "purpose": "가속도 변수 Newmark의 정밀도 회귀·시간 응답 한계·독립 재실행과 상태/반복 벡터 검산 보존",
+  "reference_check": "passed",
+  "report_sha256": "093fd1b440f61b7e604167abd25a902c1f0170071d018df3348245067c397be6",
+  "retention": "원본·재실행의 전체 상태·반복/trial 벡터·trace·chunk를 ignored artifact로 유지한다. 삭제·덮어쓰지 않으며 회수 시 각 manifest의 상대 경로·byte/hash를 확인한다. 재실행에는 새 폴더를 사용한다.",
+  "runs": [
+    {
+      "evidence": "evidence/reference",
+      "files": {
+        "comparisons.csv": {
+          "bytes": 1357,
+          "sha256": "08d16d42553edb0954feae37139788b9659ba5180c8977336c2ee899544e7f30"
+        },
+        "config.json": {
+          "bytes": 839,
+          "sha256": "d3036468198420e81df8dc22190e467381e4a9ebd1d4153169927250abd3d58d"
+        },
+        "environment.json": {
+          "bytes": 2829,
+          "sha256": "1aae5fcb86bdfd848a4e3ba61794cb626d842524d9398daa4b45ae1becacdbf0"
+        },
+        "manifest.json": {
+          "bytes": 67733,
+          "sha256": "f3b318f968328c43a297d4f2d4aa751f08d0f8bca766465c631f12303de8131c"
+        },
+        "report.json": {
+          "bytes": 272612,
+          "sha256": "f475081df64aa028898bbe6bfc3b82099214d8ac27fb9cee95fdef235bc67ca9"
+        },
+        "run.log": {
+          "bytes": 2684,
+          "sha256": "552f427a869348a89de7ee671e3c10ab58609eb70115659f91ec954478244974"
+        }
+      },
+      "label": "reference",
+      "original_run": "artifacts/runs/teacher_shell_precision/20260908_reference_v1"
+    },
+    {
+      "label": "replay",
+      "manifest": {
+        "bytes": 67733,
+        "sha256": "48a65c314d2365f1b91880a4a0e667e2860f4bedadff25586e6ff4c34b698efa"
+      },
+      "original_run": "artifacts/runs/teacher_shell_precision/20260908_reference_v1_replay",
+      "report": {
+        "bytes": 272612,
+        "sha256": "f475081df64aa028898bbe6bfc3b82099214d8ac27fb9cee95fdef235bc67ca9"
+      },
+      "selected_manifest": "evidence/replay_manifest.json"
+    }
+  ],
+  "schema_version": "wind3dgs.shell_precision_evidence.v1",
+  "short_response_check": "failed",
+  "solver_check": "passed",
+  "source_check": "passed",
+  "source_runs": [
+    "artifacts/runs/teacher_shell_dynamics/20260907_reference_v1",
+    "artifacts/runs/teacher_shell_temporal/20260908_reference_v1"
+  ],
+  "teacher_eligible": false,
+  "verification": {
+    "command": "PYTHONPATH=code .venv/bin/python experiments/R1_teacher_shell_precision/evidence/verify_reference.py",
+    "result": "evidence/verification.json",
+    "script": "evidence/verify_reference.py",
+    "script_role": "이 두 run을 고정한 실험 기록 검산용; reusable solver/audit는 code가 소유한다.",
+    "temporary_result": "/tmp/wind3dgs_shell_precision_verification.json",
+    "working_directory": "workspace root"
+  }
+}

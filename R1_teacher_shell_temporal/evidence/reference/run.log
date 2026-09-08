@@ -1,0 +1,71 @@
+Shell 시간 해상도 진단 시작: CPU / 기존 solver 정책 유지
+원본·rest 모드 검증 통과; 독립 시간 기준 계산 시작
+독립 기준 진행: reference_a / 12.5% / 1024 accepted step
+독립 기준 진행: reference_a / 25.0% / 2048 accepted step
+독립 기준 진행: reference_a / 37.5% / 3072 accepted step
+독립 기준 진행: reference_a / 50.0% / 4096 accepted step
+독립 기준 진행: reference_a / 62.5% / 5120 accepted step
+독립 기준 진행: reference_a / 75.0% / 6144 accepted step
+독립 기준 진행: reference_a / 87.5% / 7168 accepted step
+사례 보존: reference_a / completed
+독립 기준 진행: reference_b / 6.3% / 1024 accepted step
+독립 기준 진행: reference_b / 12.5% / 2048 accepted step
+독립 기준 진행: reference_b / 18.8% / 3072 accepted step
+독립 기준 진행: reference_b / 25.0% / 4096 accepted step
+독립 기준 진행: reference_b / 31.3% / 5120 accepted step
+독립 기준 진행: reference_b / 37.5% / 6144 accepted step
+독립 기준 진행: reference_b / 43.8% / 7168 accepted step
+독립 기준 진행: reference_b / 50.0% / 8192 accepted step
+독립 기준 진행: reference_b / 56.3% / 9216 accepted step
+독립 기준 진행: reference_b / 62.5% / 10240 accepted step
+독립 기준 진행: reference_b / 68.8% / 11264 accepted step
+독립 기준 진행: reference_b / 75.0% / 12288 accepted step
+독립 기준 진행: reference_b / 81.3% / 13312 accepted step
+독립 기준 진행: reference_b / 87.5% / 14336 accepted step
+독립 기준 진행: reference_b / 93.8% / 15360 accepted step
+사례 보존: reference_b / completed
+독립 기준 자체 대조 통과; Newmark 시간 간격 비교 시작
+Newmark 진행: newmark_full_640 / 128/640 step
+Newmark 진행: newmark_full_640 / 256/640 step
+Newmark 진행: newmark_full_640 / 384/640 step
+Newmark 진행: newmark_full_640 / 512/640 step
+Newmark 진행: newmark_full_640 / 640/640 step
+사례 보존: newmark_full_640 / completed
+Newmark 진행: newmark_full_1280 / 128/1280 step
+Newmark 진행: newmark_full_1280 / 256/1280 step
+Newmark 진행: newmark_full_1280 / 384/1280 step
+Newmark 진행: newmark_full_1280 / 512/1280 step
+Newmark 진행: newmark_full_1280 / 640/1280 step
+Newmark 진행: newmark_full_1280 / 768/1280 step
+Newmark 진행: newmark_full_1280 / 896/1280 step
+Newmark 진행: newmark_full_1280 / 1024/1280 step
+Newmark 진행: newmark_full_1280 / 1152/1280 step
+Newmark 진행: newmark_full_1280 / 1280/1280 step
+사례 보존: newmark_full_1280 / completed
+Newmark 진행: newmark_full_2560 / 128/2560 step
+Newmark 진행: newmark_full_2560 / 256/2560 step
+Newmark 진행: newmark_full_2560 / 384/2560 step
+Newmark 진행: newmark_full_2560 / 512/2560 step
+Newmark 진행: newmark_full_2560 / 640/2560 step
+Newmark 진행: newmark_full_2560 / 768/2560 step
+Newmark 진행: newmark_full_2560 / 896/2560 step
+Newmark 진행: newmark_full_2560 / 1024/2560 step
+Newmark 진행: newmark_full_2560 / 1152/2560 step
+Newmark 진행: newmark_full_2560 / 1280/2560 step
+Newmark 진행: newmark_full_2560 / 1408/2560 step
+Newmark 진행: newmark_full_2560 / 1536/2560 step
+Newmark 진행: newmark_full_2560 / 1664/2560 step
+Newmark 진행: newmark_full_2560 / 1792/2560 step
+Newmark 진행: newmark_full_2560 / 1920/2560 step
+Newmark 진행: newmark_full_2560 / 2048/2560 step
+Newmark 진행: newmark_full_2560 / 2176/2560 step
+Newmark 진행: newmark_full_2560 / 2304/2560 step
+Newmark 진행: newmark_full_2560 / 2432/2560 step
+Newmark 진행: newmark_full_2560 / 2560/2560 step
+사례 보존: newmark_full_2560 / completed
+Newmark 진행: newmark_short_5120 / 128/256 step
+Newmark 진행: newmark_short_5120 / 256/256 step
+사례 보존: newmark_short_5120 / completed
+사례 보존: newmark_short_10240 / failed
+진단 종료: reference passed / Newmark failed / 전체 failed / 초기 not_assessed
+물리 수렴: not_assessed / 학습 Teacher 채택: false

@@ -1,0 +1,181 @@
+{
+  "convergence_status": "not_assessed",
+  "evidence_files": {
+    "reference/comparisons.csv": {
+      "bytes": 798,
+      "sha256": "dc8feae771ab45f48137a41eadcb6dfebaa18d4d63e92571468c898d6725e564"
+    },
+    "reference/config.json": {
+      "bytes": 1274,
+      "sha256": "8c765c7a247d52dbf47f006d552ac71ffad6f4db9d41d33141d5b74f5e5ac430"
+    },
+    "reference/environment.json": {
+      "bytes": 3331,
+      "sha256": "32bda64627b7b6bfa094d22bbf577abae71acf04e0e6091ca1a8c5dbeb50cedc"
+    },
+    "reference/manifest.json": {
+      "bytes": 509883,
+      "sha256": "756cadd5b08e54e5e09318881487dda7e6968917f5c43113f354630bf2bff66c"
+    },
+    "reference/report.json": {
+      "bytes": 1939871,
+      "sha256": "1212003625d6ec7064f34633ed8ca5b922b96a9f6930c2f2b1b45f6cd0f60fc2"
+    },
+    "reference/run.log": {
+      "bytes": 37276,
+      "sha256": "9094c11805ee7496da0c50e9c5db963c8771d1c32421f0e6bbebe580dba0f0c4"
+    },
+    "replay_manifest.json": {
+      "bytes": 509883,
+      "sha256": "4e9401c09d2a0b79fa82b97d3c47e6f05f1adc7eff9f1a5236b8fa72a7f55f38"
+    },
+    "verification.json": {
+      "bytes": 2115,
+      "sha256": "5f57843b88c27d472d4c00c1a1fd03bb2b9a4c28ee73f8186322b66074a48419"
+    },
+    "verify_reference.py": {
+      "bytes": 22664,
+      "sha256": "aed80e1f165f93db33a90dda1e669ef27cbc19822032a11fb4c4eaa57394e004"
+    }
+  },
+  "execution": {
+    "concurrent": true,
+    "independent_processes": 2,
+    "logical_cpus_observed": 16,
+    "meaning": "독립 CPU 프로세스를 동시에 실행했다. 검산도 완료 checkpoint chunk부터 진행했으므로 runtime은 자원 경합과 I/O를 포함하며 성능 benchmark가 아니다.",
+    "per_audit_wall_time_limit_s": 7200
+  },
+  "full_response_check": "passed",
+  "prefix_check": "passed",
+  "purpose": "고정 공통 시각의 한 주기 full 시간 refinement와 두 run의 native 상태·반복 벡터 검산 보존",
+  "reference_check": "passed",
+  "reference_origin": "reused_verified_temporal_v1",
+  "report_sha256": "14700c5346b3f9502f724abd32febcc7a7a6266771ab08fbb750dae531e985f5",
+  "retention": "두 raw run의 initial state·native chunk·반복/trial 벡터·trace·공통 grid와 네 선행 원본을 모두 보존한다. 삭제·덮어쓰지 않는다. 회수 시 각 manifest 상대 경로·byte/hash 및 chunk.json의 상태/trace/vector identity와 hash chain을 확인한다. 재실행에는 새 폴더를 사용한다.",
+  "runs": [
+    {
+      "evidence": "evidence/reference",
+      "files": {
+        "comparisons.csv": {
+          "bytes": 798,
+          "sha256": "dc8feae771ab45f48137a41eadcb6dfebaa18d4d63e92571468c898d6725e564"
+        },
+        "config.json": {
+          "bytes": 1274,
+          "sha256": "8c765c7a247d52dbf47f006d552ac71ffad6f4db9d41d33141d5b74f5e5ac430"
+        },
+        "environment.json": {
+          "bytes": 3331,
+          "sha256": "32bda64627b7b6bfa094d22bbf577abae71acf04e0e6091ca1a8c5dbeb50cedc"
+        },
+        "manifest.json": {
+          "bytes": 509883,
+          "sha256": "756cadd5b08e54e5e09318881487dda7e6968917f5c43113f354630bf2bff66c"
+        },
+        "report.json": {
+          "bytes": 1939871,
+          "sha256": "1212003625d6ec7064f34633ed8ca5b922b96a9f6930c2f2b1b45f6cd0f60fc2"
+        },
+        "run.log": {
+          "bytes": 37276,
+          "sha256": "9094c11805ee7496da0c50e9c5db963c8771d1c32421f0e6bbebe580dba0f0c4"
+        }
+      },
+      "label": "reference",
+      "original_run": "artifacts/runs/teacher_shell_full_refinement/20260908_reference_v1",
+      "verification": {
+        "accepted_candidate_steps": 143360,
+        "audit_elapsed_s": 2742.384009231999,
+        "case_elapsed_s": 2679.2077227599984,
+        "checked_chunks": 560,
+        "checked_frames": 143363,
+        "checked_linear_corrections": 286720,
+        "checked_trial_vectors": 143360,
+        "inventoried_bytes": 2183688760,
+        "inventoried_files": 2262,
+        "iteration_vectors": 1576960,
+        "max_kinematic_ratio": 0.030616009915965737,
+        "max_recomputed_linear_ratio": 0.9988472172400915,
+        "max_residual_to_limit_ratio": 0.05494527313666108,
+        "run": "artifacts/runs/teacher_shell_full_refinement/20260908_reference_v1",
+        "source_files": 25,
+        "status": "passed"
+      }
+    },
+    {
+      "files": {
+        "comparisons.csv": {
+          "bytes": 798,
+          "sha256": "dc8feae771ab45f48137a41eadcb6dfebaa18d4d63e92571468c898d6725e564"
+        },
+        "config.json": {
+          "bytes": 1274,
+          "sha256": "8c765c7a247d52dbf47f006d552ac71ffad6f4db9d41d33141d5b74f5e5ac430"
+        },
+        "environment.json": {
+          "bytes": 3331,
+          "sha256": "32bda64627b7b6bfa094d22bbf577abae71acf04e0e6091ca1a8c5dbeb50cedc"
+        },
+        "manifest.json": {
+          "bytes": 509883,
+          "sha256": "4e9401c09d2a0b79fa82b97d3c47e6f05f1adc7eff9f1a5236b8fa72a7f55f38"
+        },
+        "report.json": {
+          "bytes": 1939871,
+          "sha256": "1212003625d6ec7064f34633ed8ca5b922b96a9f6930c2f2b1b45f6cd0f60fc2"
+        },
+        "run.log": {
+          "bytes": 37277,
+          "sha256": "0d2838a1ab270f2cc53dd3d373035283e2f7a35d8c8d1ee02d1f495df42f1da3"
+        }
+      },
+      "label": "replay",
+      "original_run": "artifacts/runs/teacher_shell_full_refinement/20260908_reference_v1_replay",
+      "selected_manifest": "evidence/replay_manifest.json",
+      "verification": {
+        "accepted_candidate_steps": 143360,
+        "audit_elapsed_s": 2750.6738332290006,
+        "case_elapsed_s": 2687.585949176999,
+        "checked_chunks": 560,
+        "checked_frames": 143363,
+        "checked_linear_corrections": 286720,
+        "checked_trial_vectors": 143360,
+        "inventoried_bytes": 2183688237,
+        "inventoried_files": 2262,
+        "iteration_vectors": 1576960,
+        "max_kinematic_ratio": 0.030616009915965737,
+        "max_recomputed_linear_ratio": 0.9988472172400915,
+        "max_residual_to_limit_ratio": 0.05494527313666108,
+        "run": "artifacts/runs/teacher_shell_full_refinement/20260908_reference_v1_replay",
+        "source_files": 25,
+        "status": "passed"
+      }
+    }
+  ],
+  "schema_version": "wind3dgs.shell_full_refinement_evidence.v1",
+  "short_regression_check": "passed",
+  "solver_check": "passed",
+  "source_check": "passed",
+  "source_runs": [
+    "artifacts/runs/teacher_shell_dynamics/20260907_reference_v1",
+    "artifacts/runs/teacher_shell_temporal/20260908_reference_v1",
+    "artifacts/runs/teacher_shell_precision/20260908_reference_v1",
+    "artifacts/runs/teacher_shell_refinement/20260908_reference_v1"
+  ],
+  "storage_id": "native_endpoint_chunks_256_v1",
+  "teacher_eligible": false,
+  "tests": {
+    "elapsed_s": 76.269,
+    "new_tests": 13,
+    "status": "passed",
+    "total_related_tests": 184
+  },
+  "verification": {
+    "command": "PYTHONPATH=code .venv/bin/python experiments/R1_teacher_shell_full_refinement/evidence/verify_reference.py",
+    "result": "evidence/verification.json",
+    "script": "evidence/verify_reference.py",
+    "script_role": "두 고정 run과 네 원본의 실험 검산용이다. Reusable runner·writer·reader는 code가 소유한다.",
+    "temporary_result": "/tmp/wind3dgs_shell_full_refinement_verification.json",
+    "working_directory": "workspace root"
+  }
+}

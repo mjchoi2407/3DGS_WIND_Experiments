@@ -1,0 +1,119 @@
+{
+  "baseline_check": "passed",
+  "baseline_origin": "reused_verified_precision_v1",
+  "convergence_status": "not_assessed",
+  "evidence_files": {
+    "reference/comparisons.csv": {
+      "bytes": 804,
+      "sha256": "d82c862642ac1395eb246b295d369da2c55f2510a6afa44773f88a44a9892863"
+    },
+    "reference/config.json": {
+      "bytes": 1179,
+      "sha256": "f97e053a48c3d5f35e6590e7f03ad8d6efb172194b8a6de80a33d690fd17263d"
+    },
+    "reference/environment.json": {
+      "bytes": 3075,
+      "sha256": "5b3018cf0c973d3ddfd3b1f0c81e4bdb5bd10665a64e03c333dd467502148cb6"
+    },
+    "reference/manifest.json": {
+      "bytes": 65404,
+      "sha256": "e72d3502515e61b7baa88d4159aef1c29d8d3a8f6af4cb6a808c94c389ba794f"
+    },
+    "reference/report.json": {
+      "bytes": 155353,
+      "sha256": "49adbe387b840f949f673ceffd5c2aa51cf4b4d84e36b46be91bddc0bb3c520a"
+    },
+    "reference/run.log": {
+      "bytes": 2284,
+      "sha256": "854b7af6da849c5a05000c12874c015eebe9a67639809ad731979d6fe72eff96"
+    },
+    "replay_manifest.json": {
+      "bytes": 65404,
+      "sha256": "d7c8838c1f162a7dd790513db63ce399b9d0facc486be9aae8c1e88b036012f3"
+    },
+    "verification.json": {
+      "bytes": 1810,
+      "sha256": "d0362b5047f5fe9aa96a34d85e1a3e7bc7e427bc501e2319bda0809c0557853c"
+    },
+    "verify_reference.py": {
+      "bytes": 16500,
+      "sha256": "b5c2ffcd72b955504076a905e6499d3915a937e7fe220f20114a4d5b019ad7e5"
+    }
+  },
+  "full_response_check": "not_assessed",
+  "purpose": "고정 공통 시각의 short 시간 refinement·독립 재실행과 native 상태/반복 벡터 검산 보존",
+  "reference_check": "passed",
+  "reference_origin": "reused_verified_temporal_v1",
+  "report_sha256": "eb95b82ffaddf05a8c638925400621b9d32e26529a8a58612cd9c1e8b177c37b",
+  "retention": "원본·재실행의 모든 native 상태·반복/trial 벡터·trace·chunk와 재사용한 세 입력 run을 유지한다. 삭제·덮어쓰지 않으며 회수 시 각 manifest의 상대 경로·byte/hash를 확인한다. 재실행에는 새 폴더를 사용한다.",
+  "runs": [
+    {
+      "evidence": "evidence/reference",
+      "files": {
+        "comparisons.csv": {
+          "bytes": 804,
+          "sha256": "d82c862642ac1395eb246b295d369da2c55f2510a6afa44773f88a44a9892863"
+        },
+        "config.json": {
+          "bytes": 1179,
+          "sha256": "f97e053a48c3d5f35e6590e7f03ad8d6efb172194b8a6de80a33d690fd17263d"
+        },
+        "environment.json": {
+          "bytes": 3075,
+          "sha256": "5b3018cf0c973d3ddfd3b1f0c81e4bdb5bd10665a64e03c333dd467502148cb6"
+        },
+        "manifest.json": {
+          "bytes": 65404,
+          "sha256": "e72d3502515e61b7baa88d4159aef1c29d8d3a8f6af4cb6a808c94c389ba794f"
+        },
+        "report.json": {
+          "bytes": 155353,
+          "sha256": "49adbe387b840f949f673ceffd5c2aa51cf4b4d84e36b46be91bddc0bb3c520a"
+        },
+        "run.log": {
+          "bytes": 2284,
+          "sha256": "854b7af6da849c5a05000c12874c015eebe9a67639809ad731979d6fe72eff96"
+        }
+      },
+      "label": "reference",
+      "original_run": "artifacts/runs/teacher_shell_refinement/20260908_reference_v1"
+    },
+    {
+      "label": "replay",
+      "manifest": {
+        "bytes": 65404,
+        "sha256": "d7c8838c1f162a7dd790513db63ce399b9d0facc486be9aae8c1e88b036012f3"
+      },
+      "original_run": "artifacts/runs/teacher_shell_refinement/20260908_reference_v1_replay",
+      "report": {
+        "bytes": 155353,
+        "sha256": "49adbe387b840f949f673ceffd5c2aa51cf4b4d84e36b46be91bddc0bb3c520a"
+      },
+      "selected_manifest": "evidence/replay_manifest.json"
+    }
+  ],
+  "schema_version": "wind3dgs.shell_refinement_evidence.v1",
+  "short_response_check": "passed",
+  "solver_check": "passed",
+  "source_check": "passed",
+  "source_runs": [
+    "artifacts/runs/teacher_shell_dynamics/20260907_reference_v1",
+    "artifacts/runs/teacher_shell_temporal/20260908_reference_v1",
+    "artifacts/runs/teacher_shell_precision/20260908_reference_v1"
+  ],
+  "teacher_eligible": false,
+  "tests": {
+    "elapsed_s": 52.228,
+    "new_tests": 16,
+    "status": "passed",
+    "total_related_tests": 171
+  },
+  "verification": {
+    "command": "PYTHONPATH=code .venv/bin/python experiments/R1_teacher_shell_refinement/evidence/verify_reference.py",
+    "result": "evidence/verification.json",
+    "script": "evidence/verify_reference.py",
+    "script_role": "이 두 run과 세 입력을 고정한 실험 기록 검산용; reusable solver/audit는 code가 소유한다.",
+    "temporary_result": "/tmp/wind3dgs_shell_refinement_verification.json",
+    "working_directory": "workspace root"
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "convergence_status": "not_assessed",
+  "evidence_files": {
+    "reference/cases.csv": {
+      "bytes": 2357,
+      "sha256": "3e9e50f822d8ffe2fd4984ed048579572a6041dc529ac6d53827fd4bcecfe2cd"
+    },
+    "reference/config.json": {
+      "bytes": 148,
+      "sha256": "52d355a5f604c07c5ce92dec1dc6eb984df798d8ccd07e5775552288acc1cf59"
+    },
+    "reference/environment.json": {
+      "bytes": 2206,
+      "sha256": "8b5cfb50065028784889817a11622e00b1d6d318d22c8260e9825c03e02cd0b1"
+    },
+    "reference/manifest.json": {
+      "bytes": 15081,
+      "sha256": "7d0a1292990a4adecbff14f2ef365f5c1aaa005f5e3821614be79d9f21ded281"
+    },
+    "reference/report.json": {
+      "bytes": 249902,
+      "sha256": "853505b372091f7ede7de494bd0b595a6cc359cafb66e06fa6821cff4d236d74"
+    },
+    "reference/run.log": {
+      "bytes": 4122,
+      "sha256": "f2a544ccbfe63818a0c1b65da8135cd848f15c371e98837217d12c508f9ff531"
+    },
+    "replay_manifest.json": {
+      "bytes": 15081,
+      "sha256": "dfa145d544d444ead057ec30433129ba83af4c26985b24afa59e19042ced6392"
+    },
+    "verification.json": {
+      "bytes": 2490,
+      "sha256": "314288b805f36622b88beb05346083a20b1e0f42513102e371cefb43356471cb"
+    },
+    "verify_reference.py": {
+      "bytes": 8580,
+      "sha256": "7756d6fb6e221be462f7c349349b01eecdc20849d0b4304fbf959de0785cb3e1"
+    }
+  },
+  "purpose": "CPU shell 동역학 개발 진단 원본과 재실행·상태 재검증의 선택 보존",
+  "report_sha256": "71fb96550403e551b7d88c67d37e6e01fafd90a0c38c620efdc210177a456348",
+  "response_check": "failed",
+  "retention": "원본 두 run은 삭제·덮어쓰지 않는다. 새 폴더로 재실행하고 아래 manifest의 상대 경로·byte/hash로 회수한다.",
+  "runs": [
+    {
+      "evidence": "evidence/reference",
+      "files": {
+        "cases.csv": {
+          "bytes": 2357,
+          "sha256": "3e9e50f822d8ffe2fd4984ed048579572a6041dc529ac6d53827fd4bcecfe2cd"
+        },
+        "config.json": {
+          "bytes": 148,
+          "sha256": "52d355a5f604c07c5ce92dec1dc6eb984df798d8ccd07e5775552288acc1cf59"
+        },
+        "environment.json": {
+          "bytes": 2206,
+          "sha256": "8b5cfb50065028784889817a11622e00b1d6d318d22c8260e9825c03e02cd0b1"
+        },
+        "manifest.json": {
+          "bytes": 15081,
+          "sha256": "7d0a1292990a4adecbff14f2ef365f5c1aaa005f5e3821614be79d9f21ded281"
+        },
+        "report.json": {
+          "bytes": 249902,
+          "sha256": "853505b372091f7ede7de494bd0b595a6cc359cafb66e06fa6821cff4d236d74"
+        },
+        "run.log": {
+          "bytes": 4122,
+          "sha256": "f2a544ccbfe63818a0c1b65da8135cd848f15c371e98837217d12c508f9ff531"
+        }
+      },
+      "label": "reference",
+      "original_run": "artifacts/runs/teacher_shell_dynamics/20260907_reference_v1"
+    },
+    {
+      "label": "replay",
+      "manifest": {
+        "bytes": 15081,
+        "sha256": "dfa145d544d444ead057ec30433129ba83af4c26985b24afa59e19042ced6392"
+      },
+      "original_run": "artifacts/runs/teacher_shell_dynamics/20260907_reference_v1_replay",
+      "report": {
+        "bytes": 249902,
+        "sha256": "853505b372091f7ede7de494bd0b595a6cc359cafb66e06fa6821cff4d236d74"
+      },
+      "selected_manifest": "evidence/replay_manifest.json"
+    }
+  ],
+  "schema_version": "wind3dgs.shell_dynamics_evidence.v1",
+  "solver_check": "passed",
+  "teacher_eligible": false,
+  "verification": {
+    "command": "PYTHONPATH=code .venv/bin/python experiments/R1_teacher_shell_dynamics/evidence/verify_reference.py",
+    "result": "evidence/verification.json",
+    "script": "evidence/verify_reference.py",
+    "script_role": "이 두 run을 고정한 실험 기록 재검산용; reusable solver 구현은 code가 소유한다.",
+    "temporary_result": "/tmp/wind3dgs_shell_dynamics_verification.json",
+    "working_directory": "workspace root"
+  }
+}

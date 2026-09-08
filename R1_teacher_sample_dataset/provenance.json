@@ -1,0 +1,38 @@
+{
+  "schema_version": "wind3dgs.experiment_provenance.v1",
+  "raw_run": "experiments/artifacts/runs/teacher_sample_dataset/20260908_sample_v1",
+  "dataset": "experiments/artifacts/datasets/teacher_samples/20260908_sample_v1",
+  "usage": "development_response_loader_only_v1",
+  "training_eligible": false,
+  "dataset_manifest_sha256": "1ab229207fa8ec60c282aa433c49d7a5f8a288deb1575688794b72b2afdae8f5",
+  "validation": {
+    "status": "passed",
+    "source_check": {
+      "status": "passed",
+      "sample_count": 15,
+      "source_case_count": 3,
+      "training_eligible": false
+    },
+    "sample_count": 15,
+    "batch_sizes": [
+      4,
+      4,
+      4,
+      3
+    ],
+    "dataset_manifest_sha256": "1ab229207fa8ec60c282aa433c49d7a5f8a288deb1575688794b72b2afdae8f5",
+    "run_inventory_files": 93,
+    "run_inventory_bytes": 1150138,
+    "dataset_files_including_manifest": 20,
+    "dataset_bytes_including_manifest": 125293,
+    "producer_source_files": 24,
+    "all_three_cpu_replays_max_error": 0.0,
+    "training_eligible": false,
+    "physical_acceptance": "not_assessed"
+  },
+  "retention": "원본 run 93개 inventory와 dataset manifest/20개 파일을 함께 보존한다. 새 실행에는 새 폴더를 쓴다.",
+  "retrieval": "Raw manifest의 byte/hash, dataset manifest hash, source-linked 검사를 수행한다.",
+  "remote_fetched": false,
+  "committed": false,
+  "pushed": false
+}

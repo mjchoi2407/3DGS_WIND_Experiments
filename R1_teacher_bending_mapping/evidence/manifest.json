@@ -1,0 +1,79 @@
+{
+  "command": [
+    "python",
+    "-m",
+    "wind3dgs.evaluation.teacher_bending_mapping",
+    "--hinge-bending-scale-n-m",
+    "1.0",
+    "--edge-ke-n",
+    "10.0",
+    "--resolutions",
+    "4",
+    "8",
+    "16",
+    "32",
+    "--width-m",
+    "1.0",
+    "--height-m",
+    "1.0",
+    "--curvatures-inv-m",
+    "0.000244140625",
+    "0.02",
+    "--output",
+    "<new-output-dir>"
+  ],
+  "config_path": "report.json:spec",
+  "config_sha256": "7672eea13efb4c0ab2e6ab910569f5c3c2b5f2322b9e8c749df57743897a0a11",
+  "convergence_status": "not_assessed",
+  "created_at": "2026-09-07T04:56:25.344330+00:00",
+  "dataset_id": "not_applicable_synthetic_geometry",
+  "dataset_sha256_or_manifest_version": null,
+  "device": "cpu_numpy_no_solver",
+  "environment": "environment.json",
+  "failure": null,
+  "isotropic_cylinder_check": "failed",
+  "milestone": "R1_bending_mapping_development",
+  "models": [],
+  "object_package_id": "not_applicable",
+  "object_package_sha256": null,
+  "outputs": {
+    "cases.csv": {
+      "bytes": 48806,
+      "sha256": "b07b756279bfde63eb7cf39dd3b9cfda18faec319fb6c09ba931ac96641ed4d6"
+    },
+    "environment.json": {
+      "bytes": 1252,
+      "sha256": "1a77a4d52af5dbe57220ef2a5c905034f304caa7b63550d38b199b21056de7c1"
+    },
+    "report.json": {
+      "bytes": 219271,
+      "sha256": "5d69f59cc29c1e2a25c86d5ec5ea5520fe71719264137db926c35eb16f1b093c"
+    },
+    "run.log": {
+      "bytes": 1458,
+      "sha256": "bd7bd00751f9361f4e2c6ef0b3eb6fd63693b823c3300d46d00c538b6fbbc017"
+    }
+  },
+  "report_sha256": "d3a2e65a6ae7d9700377d398475c1e020371f246104d6a346b1c278ad24fdd02",
+  "reproducibility_key": "5a217cbc5b069ee68523f57672c4f18a41f7c13cda59a353b704239f8a2de615",
+  "run_id": "c005fae75f80448f99f31b0625cb7e08",
+  "schema_version": "wind3dgs.teacher_bending_mapping_audit.v1",
+  "seed": null,
+  "software": {
+    "pyproject.toml": "56a3b734c9c2fe8ae39e557c3298f9cf22c3ce91c6f1dd477f33cb4087eaf0f0",
+    "scripts/audit_teacher_bending_mapping.sh": "579b6946bfddbb6e32142dc43ea1e799297ee753f484228345b371ff5d162506",
+    "wind3dgs/evaluation/teacher_bending_audit.py": "c116b0b53c8b396b9bba99f752d80c0e85bf90e2e7fb4aaed8e06c2dad844755",
+    "wind3dgs/evaluation/teacher_bending_mapping.py": "2534070022c37010fa3a3bcb1c04dd68e79dc6fe3d0843a40593d8f1b892b973",
+    "wind3dgs/teacher/initial_state.py": "ae3bcb2823a7c3b81f9cbb533df6b5e57077fe5407167f3babc27f3fd9d8b21d",
+    "wind3dgs/teacher/physics_registry.py": "462ca765801e2d5d4f3ebb4589efce633a03aae8a2a5432c8e68b5e4221047e5",
+    "wind3dgs/teacher/sample_meshes.py": "d2f435edb31d927ab4b1ea081d785b5bbeedfae45f5fafddbabe605e3193011f",
+    "wind3dgs/teacher/trajectory.py": "37d54b9c367b56e22352f366798626bfcc05804216bb11525887892b122fa65a"
+  },
+  "source_repositories": {
+    "code": "7010682a4307f3037dd926579932502d22eee168",
+    "experiments": "61d972ece9e183786d03434f8df5360d9d3d7fdf"
+  },
+  "status": "completed",
+  "teacher_eligible": false,
+  "working_directory": "code"
+}

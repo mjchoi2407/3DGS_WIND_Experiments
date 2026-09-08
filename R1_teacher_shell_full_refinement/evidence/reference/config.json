@@ -1,0 +1,33 @@
+{
+  "dynamics_source_run": "experiments/artifacts/runs/teacher_shell_dynamics/20260907_reference_v1",
+  "policy": {
+    "chunk_steps": 256,
+    "coarse_steps_per_T1": 20480,
+    "comparison_steps_per_T1": 10240,
+    "fine_steps_per_T1": 81920,
+    "max_wall_time_s": 7200.0,
+    "medium_steps_per_T1": 40960,
+    "policy_id": "acceleration_newmark_full_refinement_v1",
+    "response_energy_limit": 0.001,
+    "response_error_limit": 0.01
+  },
+  "precision_source_run": "experiments/artifacts/runs/teacher_shell_precision/20260908_reference_v1",
+  "refinement_source_run": "experiments/artifacts/runs/teacher_shell_refinement/20260908_reference_v1",
+  "solver_policy": {
+    "armijo_c1": 0.0001,
+    "correction_atol_length": 1e-10,
+    "correction_rtol": 1e-08,
+    "initial_guess_id": "start_acceleration_v1",
+    "integrator_id": "newmark_average_acceleration_acceleration_unknown_v1",
+    "linear_rtol": 1e-10,
+    "linear_solver_id": "mass_scaled_gmres_v1",
+    "max_backtracks": 20,
+    "max_linear_cycles": 20,
+    "max_newton_corrections": 30,
+    "residual_atol_bending": 1e-08,
+    "residual_rtol": 1e-08,
+    "restart": 50
+  },
+  "source_path_base": "workspace",
+  "temporal_source_run": "experiments/artifacts/runs/teacher_shell_temporal/20260908_reference_v1"
+}

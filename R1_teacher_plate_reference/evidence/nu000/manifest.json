@@ -1,0 +1,81 @@
+{
+  "candidate_check": "passed",
+  "command": [
+    "python",
+    "-m",
+    "wind3dgs.evaluation.teacher_plate_reference",
+    "--plate-rigidity-n-m",
+    "1.0",
+    "--poisson-ratio",
+    "0.0",
+    "--resolutions",
+    "4",
+    "8",
+    "16",
+    "32",
+    "--width-m",
+    "1.0",
+    "--height-m",
+    "1.0",
+    "--curvature-inv-m",
+    "0.02",
+    "--amplitude-m",
+    "0.001",
+    "--output",
+    "<new-output-dir>"
+  ],
+  "config_path": "report.json:spec",
+  "config_sha256": "4c57e8d6b00544f8b1b14aff1de716a7ae61ca978d2c29d1cd1ba43bdd274bf7",
+  "convergence_status": "not_assessed",
+  "created_at": "2026-09-07T06:06:56.964074+00:00",
+  "dataset_id": "not_applicable_synthetic_geometry",
+  "dataset_sha256_or_manifest_version": null,
+  "device": "cpu_numpy_no_solver",
+  "environment": "environment.json",
+  "failure": null,
+  "milestone": "R1_plate_reference_development",
+  "models": [],
+  "object_package_id": "not_applicable",
+  "object_package_sha256": null,
+  "outputs": {
+    "cases.csv": {
+      "bytes": 66838,
+      "sha256": "86cf27e49e365aef08070594b18f1f8b927efb8389b30a2d70fd6044c99c1a88"
+    },
+    "environment.json": {
+      "bytes": 1367,
+      "sha256": "c108e92014efcadba223217f82deeb025f9081ed4d2480999fbb2f834e2be9f8"
+    },
+    "report.json": {
+      "bytes": 297474,
+      "sha256": "a8c103d8cc9255ceb0d61288f9066e05ec515dab5629ad22a898bafcfbf3372c"
+    },
+    "run.log": {
+      "bytes": 1156,
+      "sha256": "cea77270683f83669f525d7024bcecef9b45eb262addb3c4736b6f54450ccc8a"
+    }
+  },
+  "report_sha256": "1ba40066067ef2350476f1936dfab3d58487b283823007f14c8f278d0826f1fe",
+  "reproducibility_key": "94c5333404cd576b12a3be5777e9aaf8e4a46ae8aef6d230385da6647b45fe6e",
+  "run_id": "ddb659497ddc474981674c4dc8a2e9a1",
+  "schema_version": "wind3dgs.teacher_plate_reference_audit.v1",
+  "seed": null,
+  "software": {
+    "pyproject.toml": "56a3b734c9c2fe8ae39e557c3298f9cf22c3ce91c6f1dd477f33cb4087eaf0f0",
+    "scripts/audit_teacher_plate_reference.sh": "3ffed78976273b0e348e2c346e1ad57149a214326491a8b25260c9ed491a9e95",
+    "wind3dgs/evaluation/teacher_bending_audit.py": "c116b0b53c8b396b9bba99f752d80c0e85bf90e2e7fb4aaed8e06c2dad844755",
+    "wind3dgs/evaluation/teacher_bending_mapping.py": "2534070022c37010fa3a3bcb1c04dd68e79dc6fe3d0843a40593d8f1b892b973",
+    "wind3dgs/evaluation/teacher_plate_reference.py": "9c0dcbeffb8c9b7f9ac9533ef15b0053bc918f401a62df152a35b9814b212b6f",
+    "wind3dgs/teacher/initial_state.py": "ae3bcb2823a7c3b81f9cbb533df6b5e57077fe5407167f3babc27f3fd9d8b21d",
+    "wind3dgs/teacher/physics_registry.py": "462ca765801e2d5d4f3ebb4589efce633a03aae8a2a5432c8e68b5e4221047e5",
+    "wind3dgs/teacher/sample_meshes.py": "d2f435edb31d927ab4b1ea081d785b5bbeedfae45f5fafddbabe605e3193011f",
+    "wind3dgs/teacher/trajectory.py": "37d54b9c367b56e22352f366798626bfcc05804216bb11525887892b122fa65a"
+  },
+  "source_repositories": {
+    "code": "7010682a4307f3037dd926579932502d22eee168",
+    "experiments": "61d972ece9e183786d03434f8df5360d9d3d7fdf"
+  },
+  "status": "completed",
+  "teacher_eligible": false,
+  "working_directory": "code"
+}

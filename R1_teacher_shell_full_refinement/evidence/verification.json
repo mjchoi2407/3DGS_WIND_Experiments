@@ -1,0 +1,52 @@
+{
+  "comparisons_csv_recomputed": true,
+  "convergence_status": "not_assessed",
+  "elapsed_s_including_wait_for_live_cases": 2395.7122562950008,
+  "full_response_check": "passed",
+  "linear_correction_residuals_recomputed": true,
+  "meaning": "두 run 각각의 모든 보존 상태·반복 벡터 검산과 독립 재실행 일치이며 물리 수렴 판정과 구분한다.",
+  "replay_reports_arrays_trace_hashes_equal": true,
+  "report_sha256": "14700c5346b3f9502f724abd32febcc7a7a6266771ab08fbb750dae531e985f5",
+  "runs": [
+    {
+      "accepted_candidate_steps": 143360,
+      "audit_elapsed_s": 2742.384009231999,
+      "case_elapsed_s": 2679.2077227599984,
+      "checked_chunks": 560,
+      "checked_frames": 143363,
+      "checked_linear_corrections": 286720,
+      "checked_trial_vectors": 143360,
+      "inventoried_bytes": 2183688760,
+      "inventoried_files": 2262,
+      "iteration_vectors": 1576960,
+      "max_kinematic_ratio": 0.030616009915965737,
+      "max_recomputed_linear_ratio": 0.9988472172400915,
+      "max_residual_to_limit_ratio": 0.05494527313666108,
+      "run": "artifacts/runs/teacher_shell_full_refinement/20260908_reference_v1",
+      "source_files": 25,
+      "status": "passed"
+    },
+    {
+      "accepted_candidate_steps": 143360,
+      "audit_elapsed_s": 2750.6738332290006,
+      "case_elapsed_s": 2687.585949176999,
+      "checked_chunks": 560,
+      "checked_frames": 143363,
+      "checked_linear_corrections": 286720,
+      "checked_trial_vectors": 143360,
+      "inventoried_bytes": 2183688237,
+      "inventoried_files": 2262,
+      "iteration_vectors": 1576960,
+      "max_kinematic_ratio": 0.030616009915965737,
+      "max_recomputed_linear_ratio": 0.9988472172400915,
+      "max_residual_to_limit_ratio": 0.05494527313666108,
+      "run": "artifacts/runs/teacher_shell_full_refinement/20260908_reference_v1_replay",
+      "source_files": 25,
+      "status": "passed"
+    }
+  ],
+  "schema_version": "wind3dgs.shell_full_refinement_verification.v1",
+  "state_and_iteration_physics_recomputed_for_each_run": true,
+  "status": "passed",
+  "teacher_eligible": false
+}

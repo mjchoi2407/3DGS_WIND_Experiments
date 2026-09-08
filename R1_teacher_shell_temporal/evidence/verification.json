@@ -1,0 +1,41 @@
+{
+  "comparisons_recomputed": true,
+  "convergence_status": "not_assessed",
+  "meaning": "무결성·기록 수치의 재검산과 독립 재실행 일치이며 물리 수렴 판정과 구분한다.",
+  "replay_arrays_and_trace_hashes_equal": true,
+  "replay_reports_equal": true,
+  "report_sha256": "33ddc889a428d70a814d0e2df894a265f4469ab54c97e2260908137fd6a16579",
+  "runs": [
+    {
+      "case_arrays": 72,
+      "case_elapsed_s": 451.72348709000016,
+      "checked_chunks": 248,
+      "checked_frames": 49800,
+      "inventoried_files": 453,
+      "max_newmark_v_error_m_s": 4.336808689942018e-19,
+      "max_newmark_x_error_m": 2.1980553950341357e-16,
+      "max_residual_to_limit_ratio": 0.9654112751506868,
+      "newmark_accepted_steps": 4740,
+      "run": "artifacts/runs/teacher_shell_temporal/20260908_reference_v1",
+      "source_files": 18,
+      "status": "passed"
+    },
+    {
+      "case_arrays": 72,
+      "case_elapsed_s": 455.8500114749995,
+      "checked_chunks": 248,
+      "checked_frames": 49800,
+      "inventoried_files": 453,
+      "max_newmark_v_error_m_s": 4.336808689942018e-19,
+      "max_newmark_x_error_m": 2.1980553950341357e-16,
+      "max_residual_to_limit_ratio": 0.9654112751506868,
+      "newmark_accepted_steps": 4740,
+      "run": "artifacts/runs/teacher_shell_temporal/20260908_reference_v1_replay",
+      "source_files": 18,
+      "status": "passed"
+    }
+  ],
+  "schema_version": "wind3dgs.shell_temporal_verification.v1",
+  "status": "passed",
+  "teacher_eligible": false
+}

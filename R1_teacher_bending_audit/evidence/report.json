@@ -1,0 +1,358 @@
+{
+  "contract": {
+    "analytic_check": "0.5*edge_ke*height*sum(diff(atan(segment_slope))^2), actual authored X grid",
+    "arithmetic": "float64 geometric audit; not Newton float32 kernel energy telemetry",
+    "energy": "0.5*edge_ke_n*sum_interior(rest_edge_length_m*theta_rad_squared); flat rest theta0=0",
+    "equivalent_stiffness": "2*E(A)/A^2 [N/m], profile-specific energy equivalent; not F(A)/A, nonlinear tangent, or full shell stiffness",
+    "initial_field": "delta_y=amplitude_m*((X-Xmin)/(Xmax-Xmin))^2; same field at every level",
+    "linearized_stiffness": "edge_ke*height*sum(diff(segment_slope/amplitude)^2) at A=0",
+    "native_double_area_floor_m2": 1e-06,
+    "native_floor_policy": "reject, do not drop degenerate/early-exit inputs",
+    "native_length_floor_m": 1e-06,
+    "native_reference": "Newton 1.3.0 evaluate_dihedral_angle_based_bending_force_hessian",
+    "positions": "float32 authored rest; ideal float64 field and existing Teacher float32 realization"
+  },
+  "convergence_status": "not_assessed",
+  "evidence_status": "native_bending_mesh_diagnostic_only",
+  "limitations": [
+    "bending_only_no_membrane_damping_aero_or_gravity",
+    "no_time_integration_or_solver_iteration_audit",
+    "no_material_rescaling_or_calibration",
+    "not_a_dynamic_convergence_or_causality_claim",
+    "not_a_dataset_acceptance_report"
+  ],
+  "report_sha256": "c6f8c3cbc55fda1831e6f43496371979611302cdcf672d7b01a40f07aadea13b",
+  "rows": [
+    {
+      "analytic_ideal_energy_j": 0.0003749109617453626,
+      "analytic_relative_error": 2.8918924307737056e-16,
+      "boundary_edge_count": 16,
+      "energy_equivalent_stiffness_n_m": 7.498217503726751,
+      "energy_j": 0.00037491087518633757,
+      "energy_ratio_to_coarsest": 1.0,
+      "energy_ratio_to_previous": null,
+      "energy_realization_relative_difference": -2.3087888526573998e-07,
+      "face_count": 32,
+      "ideal_energy_j": 0.0003749109617453625,
+      "initial_state_identity": {
+        "application_id": "float32_rest_plus_displacement_state_only_v1",
+        "frame_zero_velocity_id": "zero_after_initialization_v1",
+        "gravity_m_s2": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "policy": "displaced_gravity_off",
+        "realized_positions": {
+          "dtype": "<f4",
+          "sha256": "08da508e5cef808bdd64c3a10deccffef1e02d88357e3c6280084023a6917fe6",
+          "shape": [
+            25,
+            3
+          ],
+          "unit": "m"
+        },
+        "requested_displacement": {
+          "dtype": "<f4",
+          "sha256": "47d09a84e46bf78da7f4dd4f46d88d22a20c4e01126c0e9cf346dd1cd455865a",
+          "shape": [
+            25,
+            3
+          ],
+          "unit": "m"
+        },
+        "rest_mesh_sha256": "b3fc27d418e21437765319146360d3d699f357f4fc481d5c73b6af65414fc645"
+      },
+      "interior_edge_count": 40,
+      "linearized_profile_stiffness_n_m": 7.500000000000002,
+      "max_abs_dihedral_rad": 0.004999864476310076,
+      "mesh_identity": {
+        "faces": {
+          "dtype": "<i4",
+          "sha256": "abda399387891817bf4e12c606f87f027de69dde65331f90a0051ccd9ed292b4",
+          "shape": [
+            32,
+            3
+          ],
+          "unit": "1"
+        },
+        "pinned": {
+          "dtype": "|b1",
+          "sha256": "2003546b5396cbbe938121ca85a0d2fc39ca6c6a3bbeb5500ec156f0810e234a",
+          "shape": [
+            25
+          ],
+          "unit": "1"
+        },
+        "rest_positions": {
+          "dtype": "<f4",
+          "sha256": "766026a4c3bd29ff9ba46aaeacda18927bfc297a9b8ae54381108dcb5e4aa7f6",
+          "shape": [
+            25,
+            3
+          ],
+          "unit": "m"
+        }
+      },
+      "nominal_dx_m": 0.25,
+      "realization_max_error_m": 2.2351741811588166e-10,
+      "realized_height_m": 1.0,
+      "realized_width_m": 1.0,
+      "resolution": 4,
+      "stiffness_ratio_to_previous": null,
+      "vertex_count": 25
+    },
+    {
+      "analytic_ideal_energy_j": 0.00021869510195332502,
+      "analytic_relative_error": 0.0,
+      "boundary_edge_count": 32,
+      "energy_equivalent_stiffness_n_m": 4.373900563940555,
+      "energy_j": 0.00021869502819702775,
+      "energy_ratio_to_coarsest": 0.5833253785671924,
+      "energy_ratio_to_previous": 0.5833253785671924,
+      "energy_realization_relative_difference": -3.3725628332665996e-07,
+      "face_count": 128,
+      "ideal_energy_j": 0.00021869510195332502,
+      "initial_state_identity": {
+        "application_id": "float32_rest_plus_displacement_state_only_v1",
+        "frame_zero_velocity_id": "zero_after_initialization_v1",
+        "gravity_m_s2": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "policy": "displaced_gravity_off",
+        "realized_positions": {
+          "dtype": "<f4",
+          "sha256": "73459e7efca9ed3bb8fbdde504c0a392cdc6a645fb0e8a41748214a64fe3d847",
+          "shape": [
+            81,
+            3
+          ],
+          "unit": "m"
+        },
+        "requested_displacement": {
+          "dtype": "<f4",
+          "sha256": "9f959fa4de306e91c79ed5643cca1d969f0bdf8d434194713e930810a23f7c8e",
+          "shape": [
+            81,
+            3
+          ],
+          "unit": "m"
+        },
+        "rest_mesh_sha256": "9cb48e741119477ebe231c12f9eb33eaaf43c2d53a006152a52089dac6783095"
+      },
+      "interior_edge_count": 176,
+      "linearized_profile_stiffness_n_m": 4.375000000000001,
+      "max_abs_dihedral_rad": 0.002499983017186151,
+      "mesh_identity": {
+        "faces": {
+          "dtype": "<i4",
+          "sha256": "382b8460d32aa852a99d1992f19f7dc8a63d22be54c506554831230ce0537f91",
+          "shape": [
+            128,
+            3
+          ],
+          "unit": "1"
+        },
+        "pinned": {
+          "dtype": "|b1",
+          "sha256": "224fec15e0d4c7b4854be6b151bd84ef436ff6907947a8caa790094996480cc2",
+          "shape": [
+            81
+          ],
+          "unit": "1"
+        },
+        "rest_positions": {
+          "dtype": "<f4",
+          "sha256": "d8d442900ed30ef587d9f32d2ace4dc4b5aaddf218c92d7ef83a09e3a9393b01",
+          "shape": [
+            81,
+            3
+          ],
+          "unit": "m"
+        }
+      },
+      "nominal_dx_m": 0.125,
+      "realization_max_error_m": 2.2351741811588166e-10,
+      "realized_height_m": 1.0,
+      "realized_width_m": 1.0,
+      "resolution": 8,
+      "stiffness_ratio_to_previous": 0.5833253785671922,
+      "vertex_count": 81
+    },
+    {
+      "analytic_ideal_energy_j": 0.00011715720627196648,
+      "analytic_relative_error": 0.0,
+      "boundary_edge_count": 64,
+      "energy_equivalent_stiffness_n_m": 2.34314323550458,
+      "energy_j": 0.000117157161775229,
+      "energy_ratio_to_coarsest": 0.3124933671689298,
+      "energy_ratio_to_previous": 0.5357102204887768,
+      "energy_realization_relative_difference": -3.7980367491574483e-07,
+      "face_count": 512,
+      "ideal_energy_j": 0.00011715720627196648,
+      "initial_state_identity": {
+        "application_id": "float32_rest_plus_displacement_state_only_v1",
+        "frame_zero_velocity_id": "zero_after_initialization_v1",
+        "gravity_m_s2": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "policy": "displaced_gravity_off",
+        "realized_positions": {
+          "dtype": "<f4",
+          "sha256": "4eb703f17b9ff2d3f0bf21151fd3934cfd5be9c07274ff3c8e04d3605a166cab",
+          "shape": [
+            289,
+            3
+          ],
+          "unit": "m"
+        },
+        "requested_displacement": {
+          "dtype": "<f4",
+          "sha256": "0226dd357b101522830c4b7c87ce2684de02e9c181c91af4687a7c72f134b0eb",
+          "shape": [
+            289,
+            3
+          ],
+          "unit": "m"
+        },
+        "rest_mesh_sha256": "9b5054eecabf5124f26041ce16bad1dfe67d7f2b0f5270119522a92cebcab3fa"
+      },
+      "interior_edge_count": 736,
+      "linearized_profile_stiffness_n_m": 2.3437500000000004,
+      "max_abs_dihedral_rad": 0.0012499978561796637,
+      "mesh_identity": {
+        "faces": {
+          "dtype": "<i4",
+          "sha256": "ea311bfbb45f7bfda33b5e14bdd41cd62786eb6ad53054e3055c3346abbdb4fc",
+          "shape": [
+            512,
+            3
+          ],
+          "unit": "1"
+        },
+        "pinned": {
+          "dtype": "|b1",
+          "sha256": "954126ad676e0da64ecc1acaf4cb29ec0250613e8475ba8170c041a1aac3a438",
+          "shape": [
+            289
+          ],
+          "unit": "1"
+        },
+        "rest_positions": {
+          "dtype": "<f4",
+          "sha256": "9acb533b86654ae35a35544c02d0d7cd19e1f041b7063f253d15d36964490819",
+          "shape": [
+            289,
+            3
+          ],
+          "unit": "m"
+        }
+      },
+      "nominal_dx_m": 0.0625,
+      "realization_max_error_m": 2.2351741811588166e-10,
+      "realized_height_m": 1.0,
+      "realized_width_m": 1.0,
+      "resolution": 16,
+      "stiffness_ratio_to_previous": 0.5357102204887768,
+      "vertex_count": 289
+    },
+    {
+      "analytic_ideal_energy_j": 6.0530983046049936e-05,
+      "analytic_relative_error": 1.791152427940382e-15,
+      "boundary_edge_count": 128,
+      "energy_equivalent_stiffness_n_m": 1.2106201087202446,
+      "energy_j": 6.0531005436012236e-05,
+      "energy_ratio_to_coarsest": 0.16145438674172152,
+      "energy_ratio_to_previous": 0.5166650038189176,
+      "energy_realization_relative_difference": 3.6989259519807387e-07,
+      "face_count": 2048,
+      "ideal_energy_j": 6.053098304604983e-05,
+      "initial_state_identity": {
+        "application_id": "float32_rest_plus_displacement_state_only_v1",
+        "frame_zero_velocity_id": "zero_after_initialization_v1",
+        "gravity_m_s2": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "policy": "displaced_gravity_off",
+        "realized_positions": {
+          "dtype": "<f4",
+          "sha256": "b1b4a3dbbe91ab4cf7e4714d581a4abaeda798b1d3c355ca7a38e703bb93544a",
+          "shape": [
+            1089,
+            3
+          ],
+          "unit": "m"
+        },
+        "requested_displacement": {
+          "dtype": "<f4",
+          "sha256": "96b69272ba63ff66c6720fe7997a126522c4c9cb75c0a42283ab00ba885d4ee8",
+          "shape": [
+            1089,
+            3
+          ],
+          "unit": "m"
+        },
+        "rest_mesh_sha256": "e096fef534a89ebb40ec158718b675313f4d3ad934d34f573f23e6ff6a8e5225"
+      },
+      "interior_edge_count": 3008,
+      "linearized_profile_stiffness_n_m": 1.210937500000003,
+      "max_abs_dihedral_rad": 0.0006249997215446464,
+      "mesh_identity": {
+        "faces": {
+          "dtype": "<i4",
+          "sha256": "c13e3ac357cdf39c34bae6b417b0556c3942bdaab6e15be486e617b1acf91ec3",
+          "shape": [
+            2048,
+            3
+          ],
+          "unit": "1"
+        },
+        "pinned": {
+          "dtype": "|b1",
+          "sha256": "54a17b6aff16e3b2f7c97d1fa035c5cee42e3046a52eeb60e6b9bd09fcd8b4ee",
+          "shape": [
+            1089
+          ],
+          "unit": "1"
+        },
+        "rest_positions": {
+          "dtype": "<f4",
+          "sha256": "b4a5670b1a3d6b71e05977119bb1a6094b22038c4f072d3cbb50f811fd29b515",
+          "shape": [
+            1089,
+            3
+          ],
+          "unit": "m"
+        }
+      },
+      "nominal_dx_m": 0.03125,
+      "realization_max_error_m": 3.3527612630646075e-10,
+      "realized_height_m": 1.0,
+      "realized_width_m": 1.0,
+      "resolution": 32,
+      "stiffness_ratio_to_previous": 0.5166650038189176,
+      "vertex_count": 1089
+    }
+  ],
+  "schema_version": "wind3dgs.teacher_bending_audit.v1",
+  "spec": {
+    "amplitude_m": 0.01,
+    "edge_ke_n": 10.0,
+    "height_m": 1.0,
+    "resolutions": [
+      4,
+      8,
+      16,
+      32
+    ],
+    "width_m": 1.0
+  },
+  "spec_sha256": "779641a922dee818ebfc18e05c9e54cc822c43e1935aefeb89d32bf11d0cec41",
+  "status": "completed"
+}

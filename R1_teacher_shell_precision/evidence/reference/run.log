@@ -1,0 +1,44 @@
+Shell 가속도 변수 정밀도 진단 시작: CPU / 기존 물리·잔차 기준 유지
+원본 상태 검산: reference_a
+원본 상태 검산: reference_b
+원본 상태 검산: newmark_full_640
+원본 상태 검산: newmark_full_1280
+원본 상태 검산: newmark_full_2560
+원본 상태 검산: newmark_short_5120
+원본 상태 검산: newmark_short_10240
+원본·독립 기준 재검산 통과; 동일 state의 실패 step 대조 시작
+사례 보존: legacy_restart_5 / failed
+사례 보존: acceleration_restart_5 / completed
+가속도 Newmark 진행: acceleration_short_2560 / 128/128 step
+사례 보존: acceleration_short_2560 / completed
+가속도 Newmark 진행: acceleration_short_5120 / 128/256 step
+가속도 Newmark 진행: acceleration_short_5120 / 256/256 step
+사례 보존: acceleration_short_5120 / completed
+가속도 Newmark 진행: acceleration_short_10240 / 128/512 step
+가속도 Newmark 진행: acceleration_short_10240 / 256/512 step
+가속도 Newmark 진행: acceleration_short_10240 / 384/512 step
+가속도 Newmark 진행: acceleration_short_10240 / 512/512 step
+사례 보존: acceleration_short_10240 / completed
+가속도 Newmark 진행: acceleration_full_2560 / 128/2560 step
+가속도 Newmark 진행: acceleration_full_2560 / 256/2560 step
+가속도 Newmark 진행: acceleration_full_2560 / 384/2560 step
+가속도 Newmark 진행: acceleration_full_2560 / 512/2560 step
+가속도 Newmark 진행: acceleration_full_2560 / 640/2560 step
+가속도 Newmark 진행: acceleration_full_2560 / 768/2560 step
+가속도 Newmark 진행: acceleration_full_2560 / 896/2560 step
+가속도 Newmark 진행: acceleration_full_2560 / 1024/2560 step
+가속도 Newmark 진행: acceleration_full_2560 / 1152/2560 step
+가속도 Newmark 진행: acceleration_full_2560 / 1280/2560 step
+가속도 Newmark 진행: acceleration_full_2560 / 1408/2560 step
+가속도 Newmark 진행: acceleration_full_2560 / 1536/2560 step
+가속도 Newmark 진행: acceleration_full_2560 / 1664/2560 step
+가속도 Newmark 진행: acceleration_full_2560 / 1792/2560 step
+가속도 Newmark 진행: acceleration_full_2560 / 1920/2560 step
+가속도 Newmark 진행: acceleration_full_2560 / 2048/2560 step
+가속도 Newmark 진행: acceleration_full_2560 / 2176/2560 step
+가속도 Newmark 진행: acceleration_full_2560 / 2304/2560 step
+가속도 Newmark 진행: acceleration_full_2560 / 2432/2560 step
+가속도 Newmark 진행: acceleration_full_2560 / 2560/2560 step
+사례 보존: acceleration_full_2560 / completed
+진단 종료: 정밀도 passed / short failed / full 단일 대조 failed
+전체 시간 refinement: not_assessed / 물리 수렴: not_assessed / 학습 Teacher 채택: false

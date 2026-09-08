@@ -1,0 +1,52 @@
+{
+  "schema_version": "wind3dgs.experiment_provenance.v1",
+  "topic": "teacher_shell_linear_spatial",
+  "raw_runs": [
+    "experiments/artifacts/runs/teacher_shell_linear_spatial/20260908_reference_v1",
+    "experiments/artifacts/runs/teacher_shell_linear_spatial/20260908_reference_v1_replay"
+  ],
+  "source_full_run": "experiments/artifacts/runs/teacher_shell_full_refinement/20260908_reference_v1",
+  "report_sha256": "3a0d8e7ee5be505b190008d387c67a113a027ce0651595cb43b0812c8c33ba1a",
+  "runtime_sources_count": 30,
+  "validation": {
+    "status": "passed",
+    "runs": [
+      {
+        "status": "passed",
+        "sampled_frames": 92169,
+        "chunks": 720,
+        "case_count": 9,
+        "report_sha256": "3a0d8e7ee5be505b190008d387c67a113a027ce0651595cb43b0812c8c33ba1a",
+        "inventory_count": 1509,
+        "inventory_bytes": 266249546,
+        "elapsed_s": 30.873692827000923,
+        "teacher_eligible": false
+      },
+      {
+        "status": "passed",
+        "sampled_frames": 92169,
+        "chunks": 720,
+        "case_count": 9,
+        "report_sha256": "3a0d8e7ee5be505b190008d387c67a113a027ce0651595cb43b0812c8c33ba1a",
+        "inventory_count": 1509,
+        "inventory_bytes": 266249545,
+        "elapsed_s": 29.878035395999177,
+        "teacher_eligible": false
+      }
+    ],
+    "report_and_all_state_identities_exact": true,
+    "identical_inventory_files": 1508,
+    "runtime_only_byte_differences": [
+      "runtime.json"
+    ],
+    "physical_acceptance": {
+      "linear_spatial_check": "failed",
+      "teacher_eligible": false,
+      "convergence_status": "not_assessed"
+    }
+  },
+  "retention": "원본을 보존하고 inventory byte/hash로 회수·대조한다. 재실행은 새 폴더에 기록한다.",
+  "remote_fetched": false,
+  "committed": false,
+  "pushed": false
+}

@@ -1,0 +1,73 @@
+{
+  "convergence_status": "not_assessed",
+  "interpretation": "속도 차이는 XY 성분이 지배한다. 빠른 면내 진동의 시간 해상도 부족 가능성을 후속 검증한다. 원인 확정이나 수렴 통과 판정은 아니다.",
+  "replay": {
+    "reports_equal": true,
+    "state_and_trace_hashes_equal": true,
+    "state_arrays_equal": true
+  },
+  "report_sha256": "71fb96550403e551b7d88c67d37e6e01fafd90a0c38c620efdc210177a456348",
+  "response_check": "failed",
+  "rest_frequency": {
+    "dt320_omega_max": 12.796364634525505,
+    "model_sha256": "9c34f77e520731d753f048ec2c54ba4b69a47bb218c5c5fad131bd4322f24316",
+    "omega1_rad_s": 5.86168163929808,
+    "omega_max_over_omega1": 651.7134992611356,
+    "omega_max_rad_s": 3820.137052701701
+  },
+  "runs": [
+    {
+      "accepted_steps": 2105,
+      "inventoried_files": 62,
+      "max_energy_record_difference_j": 0.0,
+      "max_newmark_v_error_m_s": 3.3610267347050637e-18,
+      "max_newmark_x_error_m": 2.174287518185282e-16,
+      "max_residual_to_limit_ratio": 0.9921846515999894,
+      "run": "artifacts/runs/teacher_shell_dynamics/20260907_reference_v1",
+      "source_files": 16,
+      "state_arrays": 114,
+      "status": "passed",
+      "step_elapsed_s": 153.84190755397503
+    },
+    {
+      "accepted_steps": 2105,
+      "inventoried_files": 62,
+      "max_energy_record_difference_j": 0.0,
+      "max_newmark_v_error_m_s": 3.3610267347050637e-18,
+      "max_newmark_x_error_m": 2.174287518185282e-16,
+      "max_residual_to_limit_ratio": 0.9921846515999894,
+      "run": "artifacts/runs/teacher_shell_dynamics/20260907_reference_v1_replay",
+      "source_files": 16,
+      "state_arrays": 114,
+      "status": "passed",
+      "step_elapsed_s": 154.15857630802202
+    }
+  ],
+  "schema_version": "wind3dgs.shell_dynamics_verification.v1",
+  "solver_check": "passed",
+  "status": "passed",
+  "teacher_eligible": false,
+  "velocity_components": {
+    "method": "동일 free mass RMS의 공통 시각 최대값 / (A omega1), A=0.001m; 320-step 기준",
+    "rows": [
+      {
+        "steps": 40,
+        "xy": 0.10175745285910126,
+        "xyz": 0.10175993230950027,
+        "z": 0.005191672094104863
+      },
+      {
+        "steps": 80,
+        "xy": 0.10459624290975794,
+        "xyz": 0.10459735283171229,
+        "z": 0.0012515240646032413
+      },
+      {
+        "steps": 160,
+        "xy": 0.11393922102542837,
+        "xyz": 0.1139392212591894,
+        "z": 0.0003320247297347383
+      }
+    ]
+  }
+}
