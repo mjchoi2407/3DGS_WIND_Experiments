@@ -3,8 +3,8 @@
 ## 요청과 판정
 
 Wind3DGS experiment-side. 이 채팅의 모든 구현·실험을 논문 작성용 문서와 Git에 보존한다.
-[아이디어 연구 기록 TeX](../../ideas/development/r1_teacher_implementation_record.tex) /
-[PDF](../../ideas/development/r1_teacher_implementation_record.pdf)에 수식·단위·경계, 실패·수정 이유,
+[R1 통합 문서 TeX](../../ideas/development/r1_teacher_probe_oracle.tex) /
+[PDF](../../ideas/development/r1_teacher_probe_oracle.pdf)에 수식·단위·경계, 실패·수정 이유,
 분모·수치·재현 경로와 claim 경계를 통합했다. [Code checkpoint](../../code/sessions/2026-09-09_01_teacher_checkpoint.md)가 구현 계보를 소유한다.
 
 **개발 sample 15개 생성·검증 완료, 본 학습 Teacher 미승인.** P3 처방 압력은 공간/방향/독립 기준의
@@ -73,3 +73,9 @@ Fetch/push는 이번에 수행하지 않으며 원격 최신성을 주장하지 
 P3 nonlinear wind backend와 고차 probe/registry를 연결한 뒤 동일 물리/입력의 공간·시간·tip/work/spectrum을 검증한다.
 첫 accepted 입력군의 범위는 미결정이며 기존 displaced free-decay 요구를 삭제하지 않는다.
 Development sample은 accepted 데이터와 별도 identity로 유지한다.
+
+## 후속: 구현 기록의 R1 본문 통합
+
+사용자 요청에 따라 별도 구현 기록을 R1의 관련 절에 흡수하고 README·이 기록의 링크를 단일 R1 문서로 갱신했다.
+수식은 해당 절에서 직접 갱신하며 변경 이유와 실험 근거를 인접 설명·주석에 남긴다.
+이번 후속 변경은 문서 참조만 수정했으며 구현 source, 원본 artifact와 실험 판정은 유지했다.

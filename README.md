@@ -11,8 +11,8 @@ Wind3DGS 프로젝트의 실험 기록, asset, output, report와 얇은 wrapper�
 ## 현재 Teacher 개발 검증
 
 전체 작업과 최신 판정은 [2026-09-09 실험 checkpoint](sessions/2026-09-09_01_teacher_checkpoint.md),
-논문용 수식·반례·재현 근거는 [통합 연구 기록](../ideas/development/r1_teacher_implementation_record.tex) /
-[PDF](../ideas/development/r1_teacher_implementation_record.pdf)를 따른다.
+논문용 수식·반례·재현 근거는 [R1 통합 문서](../ideas/development/r1_teacher_probe_oracle.tex) /
+[PDF](../ideas/development/r1_teacher_probe_oracle.pdf)를 따른다.
 아래 항목은 각 실험 수행 당시의 판정을 보존한다.
 
 - [Teacher 공간 수렴 보완](R1_teacher_spatial_remediation/README.md): 내부 힘 결함 재현과 P2/P3/독립 판 비교. P3 처방 압력 조건은 연속 시간 상한을 포함해 공간·방향·독립 기준 1% 통과. 99개 검사와 네 run 재현 확인, 원래 x² 초기 속도 실패와 비선형/실제 공력 미검증 유지.
