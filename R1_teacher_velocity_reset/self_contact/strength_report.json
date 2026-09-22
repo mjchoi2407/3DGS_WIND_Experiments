@@ -1,0 +1,259 @@
+{
+  "schema": "wind3dgs.p3_contact_strength_comparison.v1",
+  "training_eligible": false,
+  "strength_comparison": [
+    {
+      "case": "face_approach_on_lbvh",
+      "passed": true,
+      "completed": true,
+      "accepted_substeps": 60,
+      "elapsed_s": 1.450518187000057,
+      "min_proxy_distance_lower_bound_m": 0.0045017958772075465,
+      "max_step_energy_balance_abs_j": 1.7963831624480397e-09,
+      "max_independent_residual_ratio": 0.6382542246712238,
+      "retries_on_completed_steps": 0,
+      "barrier_stiffness": 100.0
+    },
+    {
+      "case": "face_approach_on_lbvh",
+      "passed": true,
+      "completed": true,
+      "accepted_substeps": 60,
+      "elapsed_s": 1.4803412290000324,
+      "min_proxy_distance_lower_bound_m": 0.007260880849493634,
+      "max_step_energy_balance_abs_j": 2.4172100794383295e-07,
+      "max_independent_residual_ratio": 0.5803774419338279,
+      "retries_on_completed_steps": 0,
+      "barrier_stiffness": 1000.0
+    },
+    {
+      "case": "face_approach_on_lbvh",
+      "passed": true,
+      "completed": true,
+      "accepted_substeps": 60,
+      "elapsed_s": 1.5599520920000032,
+      "min_proxy_distance_lower_bound_m": 0.007904843142996887,
+      "max_step_energy_balance_abs_j": 3.808195076574367e-05,
+      "max_independent_residual_ratio": 0.87399340066101,
+      "retries_on_completed_steps": 0,
+      "barrier_stiffness": 10000.0
+    },
+    {
+      "case": "edge_crossing_on_lbvh",
+      "passed": true,
+      "completed": true,
+      "accepted_substeps": 60,
+      "elapsed_s": 1.4472042539999848,
+      "min_proxy_distance_lower_bound_m": 0.006398082651935806,
+      "max_step_energy_balance_abs_j": 2.2999747981863297e-09,
+      "max_independent_residual_ratio": 0.9920322436073188,
+      "retries_on_completed_steps": 0,
+      "barrier_stiffness": 100.0
+    },
+    {
+      "case": "edge_crossing_on_lbvh",
+      "passed": true,
+      "completed": true,
+      "accepted_substeps": 60,
+      "elapsed_s": 1.5056542310001078,
+      "min_proxy_distance_lower_bound_m": 0.007779597961450412,
+      "max_step_energy_balance_abs_j": 3.0913155118816914e-07,
+      "max_independent_residual_ratio": 0.3919377797038573,
+      "retries_on_completed_steps": 0,
+      "barrier_stiffness": 1000.0
+    },
+    {
+      "case": "edge_crossing_on_lbvh",
+      "passed": true,
+      "completed": true,
+      "accepted_substeps": 60,
+      "elapsed_s": 1.5496993449999081,
+      "min_proxy_distance_lower_bound_m": 0.008181725875842014,
+      "max_step_energy_balance_abs_j": 6.35981811658049e-05,
+      "max_independent_residual_ratio": 0.9961974275313992,
+      "retries_on_completed_steps": 0,
+      "barrier_stiffness": 10000.0
+    },
+    {
+      "case": "fast_approach_on_lbvh",
+      "passed": false,
+      "completed": false,
+      "accepted_substeps": 7,
+      "elapsed_s": 1.746198427999957,
+      "min_proxy_distance_lower_bound_m": 0.0011711662498226417,
+      "max_step_energy_balance_abs_j": 8.485011065790453e-06,
+      "max_independent_residual_ratio": 0.002908302460456404,
+      "retries_on_completed_steps": 0,
+      "barrier_stiffness": 100.0
+    },
+    {
+      "case": "fast_approach_on_lbvh",
+      "passed": true,
+      "completed": true,
+      "accepted_substeps": 12,
+      "elapsed_s": 0.4055462979999902,
+      "min_proxy_distance_lower_bound_m": 0.002421405832565356,
+      "max_step_energy_balance_abs_j": 1.1854878039135918e-06,
+      "max_independent_residual_ratio": 8.714357670061698e-05,
+      "retries_on_completed_steps": 0,
+      "barrier_stiffness": 1000.0
+    },
+    {
+      "case": "fast_approach_on_lbvh",
+      "passed": true,
+      "completed": true,
+      "accepted_substeps": 12,
+      "elapsed_s": 0.42773604200010595,
+      "min_proxy_distance_lower_bound_m": 0.0066293952185828165,
+      "max_step_energy_balance_abs_j": 6.420783590833728e-05,
+      "max_independent_residual_ratio": 0.8741971640134247,
+      "retries_on_completed_steps": 0,
+      "barrier_stiffness": 10000.0
+    }
+  ],
+  "smallest_tested_completing_stiffness": 1000.0,
+  "all_strong_sample_gates_passed": true,
+  "time_refinement": [
+    {
+      "case": "fast_dt_0.0005",
+      "contact_on": true,
+      "broad_phase": "lbvh",
+      "policy": {
+        "subdivisions": 3,
+        "minimum_distance_m": 0.001,
+        "activation_distance_m": 0.01,
+        "barrier_stiffness": 1000.0,
+        "broad_phase": "lbvh",
+        "proxy_error_budget_m": null,
+        "trajectory_max_depth": 12
+      },
+      "dt_s": 0.0005,
+      "duration_s": 0.012,
+      "speed_m_s": 1.0,
+      "accepted_substeps": 24,
+      "retries_on_completed_steps": 0,
+      "elapsed_s": 0.6533555809999143,
+      "completed": true,
+      "failure": null,
+      "independent_audit_elapsed_s": 0.08684834000018782,
+      "max_independent_residual_ratio": 1.533768699069088e-06,
+      "time_paths_certified": 24,
+      "time_paths_total": 24,
+      "min_proxy_distance_lower_bound_m": 0.0023986906368149877,
+      "min_signed_layer_gap_m": 0.005385283111641169,
+      "max_step_energy_balance_abs_j": 1.502667894126954e-07,
+      "counters": {
+        "candidate_builds": 217,
+        "candidate_pairs": 15684,
+        "candidate_seconds": 0.012568506998377416,
+        "evaluations": 121,
+        "hessian_builds": 48,
+        "ccd_queries": 72,
+        "trajectory_queries": 24
+      },
+      "passed": true,
+      "previous_dt_position_relative_error": 0.0025702733120521234,
+      "previous_dt_velocity_relative_error": 0.004909708123543348
+    },
+    {
+      "case": "fast_dt_0.00025",
+      "contact_on": true,
+      "broad_phase": "lbvh",
+      "policy": {
+        "subdivisions": 3,
+        "minimum_distance_m": 0.001,
+        "activation_distance_m": 0.01,
+        "barrier_stiffness": 1000.0,
+        "broad_phase": "lbvh",
+        "proxy_error_budget_m": null,
+        "trajectory_max_depth": 12
+      },
+      "dt_s": 0.00025,
+      "duration_s": 0.012,
+      "speed_m_s": 1.0,
+      "accepted_substeps": 48,
+      "retries_on_completed_steps": 0,
+      "elapsed_s": 1.1387922019998769,
+      "completed": true,
+      "failure": null,
+      "independent_audit_elapsed_s": 0.17309363100002884,
+      "max_independent_residual_ratio": 0.9606051351048206,
+      "time_paths_certified": 48,
+      "time_paths_total": 48,
+      "min_proxy_distance_lower_bound_m": 0.002393577584708488,
+      "min_signed_layer_gap_m": 0.0053827781453973066,
+      "max_step_energy_balance_abs_j": 1.9966446306203534e-08,
+      "counters": {
+        "candidate_builds": 371,
+        "candidate_pairs": 27006,
+        "candidate_seconds": 0.02113611700110596,
+        "evaluations": 210,
+        "hessian_builds": 96,
+        "ccd_queries": 113,
+        "trajectory_queries": 48
+      },
+      "passed": true,
+      "previous_dt_position_relative_error": 0.0006539431294665484,
+      "previous_dt_velocity_relative_error": 0.0012028433595302937
+    },
+    {
+      "case": "fast_dt_0.000125",
+      "contact_on": true,
+      "broad_phase": "lbvh",
+      "policy": {
+        "subdivisions": 3,
+        "minimum_distance_m": 0.001,
+        "activation_distance_m": 0.01,
+        "barrier_stiffness": 1000.0,
+        "broad_phase": "lbvh",
+        "proxy_error_budget_m": null,
+        "trajectory_max_depth": 12
+      },
+      "dt_s": 0.000125,
+      "duration_s": 0.012,
+      "speed_m_s": 1.0,
+      "accepted_substeps": 96,
+      "retries_on_completed_steps": 0,
+      "elapsed_s": 2.0476082319999023,
+      "completed": true,
+      "failure": null,
+      "independent_audit_elapsed_s": 0.33155575199998566,
+      "max_independent_residual_ratio": 0.040145440187769346,
+      "time_paths_certified": 96,
+      "time_paths_total": 96,
+      "min_proxy_distance_lower_bound_m": 0.0023923867188394322,
+      "min_signed_layer_gap_m": 0.005383370564121977,
+      "max_step_energy_balance_abs_j": 2.563667810158432e-09,
+      "counters": {
+        "candidate_builds": 673,
+        "candidate_pairs": 49113,
+        "candidate_seconds": 0.038088973996991626,
+        "evaluations": 385,
+        "hessian_builds": 192,
+        "ccd_queries": 192,
+        "trajectory_queries": 96
+      },
+      "passed": true,
+      "previous_dt_position_relative_error": 0.00016258188764603382,
+      "previous_dt_velocity_relative_error": 0.00030347464762737184
+    }
+  ],
+  "time_refinement_diagnostic_passed": true,
+  "time_refinement_relative_threshold": 0.01,
+  "canonical_time_convergence": false,
+  "source_reports": [
+    {
+      "path": "../experiments/artifacts/runs/p3_self_contact/20260922_weak_barrier_isolated/report.json",
+      "sha256": "e7b876f11f3628a80c83504162c7a288da3ab7eac9419bad3f2f7a0e9abbaa7c"
+    },
+    {
+      "path": "../experiments/artifacts/runs/p3_self_contact/20260922_barrier_1000/report.json",
+      "sha256": "b7688be8c3455823449b0308a6b5119e3039fee429560e3c49fc25ea23a0b1fa"
+    },
+    {
+      "path": "../experiments/artifacts/runs/p3_self_contact/20260922_barrier_10000/report.json",
+      "sha256": "5f2f7a02b586fc40a1bc4273f7cfd7b22eb9b3d54ff19ce54350728c2516f6cd"
+    }
+  ],
+  "source_sha256": "9a48c87d54a68c43826c932704ac70ca1f5754c6f006b16e9b479500c830852e"
+}

@@ -1,0 +1,38 @@
+{
+  "status": "complete",
+  "action": "smoke",
+  "shape": "handkerchief",
+  "backend": "gpu_resident",
+  "all_stages_gpu": true,
+  "training_eligible": false,
+  "production_enabled": false,
+  "full_trajectory_verified": false,
+  "source_manifest_sha256": "dd9f78508776cd6e3ec8f5a1b4f4bd5c3b9b3c444873f79b76b472f141aac802",
+  "phases": {
+    "preload": "complete",
+    "wind": "complete"
+  },
+  "initial_contact": {
+    "status": 0,
+    "energy_j": 0.0,
+    "force_norm_n": 0.0,
+    "proxy_error_bound_m": 0.0,
+    "p3_nodes": 925,
+    "proxy_vertices": 925,
+    "proxy_faces": 1728,
+    "candidate_counts": [
+      0,
+      7537
+    ],
+    "material": {
+      "E_pa": 22360679.774997897,
+      "nu": 0.3,
+      "h_m": 0.00044721359549995795,
+      "area_density_kg_m2": 0.1,
+      "membrane_scale_n_per_m": 10989.010989010989,
+      "bending_rigidity_n_m": 0.00018315018315018315
+    }
+  },
+  "scope": "각각 rest에서 시작한 중력/최대풍 64단계 프레임; 전체 궤적·실접촉 검증 아님",
+  "elapsed_s": 15.945946703999653
+}

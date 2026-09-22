@@ -1,0 +1,120 @@
+{
+  "status": "complete",
+  "shape": "triangular_flag",
+  "phase": "preload",
+  "backend": "gpu_resident",
+  "all_stages_gpu": true,
+  "self_collision_checked": true,
+  "training_eligible": false,
+  "production_enabled": false,
+  "smoke_only": true,
+  "source_frame": 0,
+  "completed_frames": 1,
+  "frames": [
+    {
+      "status": "passed",
+      "compute_audit_s": 3.1114441829995485,
+      "failure": 0,
+      "counts": [
+        1,
+        1,
+        128,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        192,
+        0,
+        0,
+        64,
+        64,
+        64,
+        2,
+        1
+      ],
+      "geometry_policy": "local_metric_refined_v1",
+      "time_failed": false,
+      "mass_info": 0,
+      "self_collision_checked": true,
+      "all_stages_gpu": true,
+      "contact_status": 0,
+      "contact_path_status": 0,
+      "first_bad": 64,
+      "refined_substeps": 0,
+      "min_area_ratio_lower": 0.9999989511373141,
+      "max_refinement_depth": 0,
+      "frame": 0,
+      "state_sha256": "5658bb623aedc4dca2bac5ccc88fbc1ec0220534e36ccfee0efe6968358554bc",
+      "max_force_ratio": 0.12641894333336384,
+      "flags": [
+        0
+      ]
+    }
+  ],
+  "initial_state_sha256": "3e44e55d4c0ac943c99b6a549d2a5adbab5919ec6427be32b5f11ff5709bfe6b",
+  "material": {
+    "E_pa": 22360679.774997897,
+    "nu": 0.3,
+    "h_m": 0.00044721359549995795,
+    "area_density_kg_m2": 0.1,
+    "membrane_scale_n_per_m": 10989.010989010989,
+    "bending_rigidity_n_m": 0.00018315018315018315
+  },
+  "policy": {
+    "force_atol_n": 1e-10,
+    "force_rtol": 1e-09,
+    "displacement_atol_m": 1e-12,
+    "displacement_rtol": 1e-09,
+    "linear_rtol": 1e-10,
+    "max_newton": 15,
+    "linear_cycles": 3,
+    "line_search_steps": 12,
+    "linear_restart": 240,
+    "linear_preconditioner": "current"
+  },
+  "contact_policy": {
+    "subdivisions": 3,
+    "minimum_distance_m": 0.001,
+    "activation_distance_m": 0.01,
+    "barrier_stiffness": 1000.0,
+    "broad_phase": "lbvh",
+    "proxy_error_budget_m": null,
+    "trajectory_max_depth": 12
+  },
+  "setup_s": 2.0987391489998117,
+  "gpu": "NVIDIA GeForce GTX 1080 Ti",
+  "graph_inventory": {
+    "kernels": 11757,
+    "device_copies": 1185,
+    "memsets": 2274,
+    "children": 17,
+    "host_copies": 0,
+    "host_callbacks": 0,
+    "conditionals": 35,
+    "conditional_bodies": 39
+  },
+  "step_graph_inventory": {
+    "kernels": 11673,
+    "device_copies": 1173,
+    "memsets": 2258,
+    "children": 17,
+    "host_copies": 0,
+    "host_callbacks": 0,
+    "conditionals": 35,
+    "conditional_bodies": 39
+  },
+  "audit_graph_inventory": {
+    "kernels": 223,
+    "device_copies": 9,
+    "memsets": 20,
+    "children": 1,
+    "host_copies": 0,
+    "host_callbacks": 0,
+    "conditionals": 1,
+    "conditional_bodies": 1
+  },
+  "checkpoint_sha256": "2d32a55ad402aa0e035d24f528ac1ccca027dde8e9725c6be58bf62caa32f97e",
+  "elapsed_s": 5.219100008000169
+}

@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0.0",
+  "run_id": "three_scenes_gpu_bend500_v1",
+  "milestone": "R1_development_only",
+  "created_at": "2026-09-22",
+  "source_repositories": {
+    "code": {
+      "base_commit": "6b4faddb85845508385ca44a89f81f2e3de17983",
+      "worktree": "uncommitted_changes_preserved",
+      "source_hashes": "manifest.json"
+    }
+  },
+  "command": "bash experiments/R1_teacher_velocity_reset/self_contact/run_gpu_three_scenes.sh --action preflight; bash experiments/R1_teacher_velocity_reset/self_contact/run_gpu_three_scenes.sh --action smoke",
+  "working_directory": "workspace_root",
+  "environment": {
+    "python": "3.12.3",
+    "packages": {
+      "numpy": "2.4.4",
+      "scipy": "1.18.1",
+      "ipctk": "1.6.0",
+      "warp-lang": "1.17.0"
+    }
+  },
+  "config_path": "suite.json",
+  "config_sha256": "b9ad35c86adb98a77edb31e67b3f3fe95ee31155b284df6eedd45731d70751e2",
+  "seed": "deterministic_fixture",
+  "device": "NVIDIA GeForce GTX 1080 Ti / driver 582.28 / API 13000",
+  "dataset_id": "synthetic_bend500_three_shapes",
+  "dataset_sha256_or_manifest_version": "5f8df4d0625fe35b05a0e3eb3ce1c72c297b36f38c0c6d4633929c652fe830fa",
+  "object_package_id": "not_applicable",
+  "object_package_sha256": "not_applicable",
+  "models": [],
+  "outputs": {
+    "scope": "3개 초기 검사와 6프레임384단계; 전체 궤적 미실행",
+    "status": "checks_complete",
+    "full_trajectory_verified": false,
+    "training_eligible": false
+  },
+  "software": {
+    "backend": "gpu_resident_contact_v1",
+    "precision": "float64_hilo",
+    "native_sha256": {
+      "libcudss.so.0": "5f76a3698d6b7114e6cf6ebe38a38096ccb8af090aa5b8af92d72c9b369b2e86",
+      "libcudss_workspace.so": "44869689ef5f02ffd0eeeeba558188d4f8382e750c2cc538a30520b156a4dbac",
+      "cudss_workspace.c": "dc5559f25f4aadcc361c81e6694e4c1f5885749ada4e5a05157d093ec8f1428a"
+    }
+  },
+  "reproducibility_key": "bd911c5b186767df7344f25b1acacd60562706997a15dbafe8c040f6b0dfeaf5"
+}

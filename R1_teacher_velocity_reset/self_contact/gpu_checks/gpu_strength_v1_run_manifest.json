@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0.0",
+  "run_id": "gpu_strength_v1",
+  "milestone": "R1_development_only",
+  "created_at": "2026-09-22",
+  "source_repositories": {
+    "code": {
+      "base_commit": "6b4faddb85845508385ca44a89f81f2e3de17983",
+      "worktree": "uncommitted_changes_preserved",
+      "source_hashes": "report.json#source_sha256"
+    }
+  },
+  "command": "bash experiments/R1_teacher_velocity_reset/self_contact/run_gpu_validation.sh --out experiments/artifacts/runs/p3_self_contact/gpu_strength_v1",
+  "working_directory": "workspace_root",
+  "environment": {
+    "python": "3.12.3",
+    "packages": {
+      "numpy": "2.4.4",
+      "scipy": "1.18.1",
+      "ipctk": "1.6.0",
+      "warp-lang": "1.17.0"
+    }
+  },
+  "config_path": "report.json",
+  "config_sha256": "ef922087ba7d3c50fb7d0a2e1a2be00d85c1befdcf7654cec098a3e6c064dc0d",
+  "seed": "deterministic_fixture",
+  "device": "NVIDIA GeForce GTX 1080 Ti / driver 582.28 / API 13000",
+  "dataset_id": "synthetic_patch_pair",
+  "dataset_sha256_or_manifest_version": "report.json#source_sha256",
+  "object_package_id": "not_applicable",
+  "object_package_sha256": "not_applicable",
+  "models": [],
+  "outputs": {
+    "scope": "국소6사례56단계; 엄격 기하 거절4사례 보존",
+    "status": "checks_complete",
+    "full_trajectory_verified": false,
+    "training_eligible": false
+  },
+  "software": {
+    "backend": "gpu_resident_contact_v1",
+    "precision": "float64_hilo",
+    "native_sha256": {
+      "libcudss.so.0": "5f76a3698d6b7114e6cf6ebe38a38096ccb8af090aa5b8af92d72c9b369b2e86",
+      "libcudss_workspace.so": "44869689ef5f02ffd0eeeeba558188d4f8382e750c2cc538a30520b156a4dbac",
+      "cudss_workspace.c": "dc5559f25f4aadcc361c81e6694e4c1f5885749ada4e5a05157d093ec8f1428a"
+    }
+  },
+  "reproducibility_key": "ef922087ba7d3c50fb7d0a2e1a2be00d85c1befdcf7654cec098a3e6c064dc0d"
+}

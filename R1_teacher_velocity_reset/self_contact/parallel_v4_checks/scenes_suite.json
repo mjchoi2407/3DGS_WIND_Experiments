@@ -1,0 +1,98 @@
+{
+  "schema": "p3_gpu_contact_three_scenes_v4",
+  "shapes": [
+    "reference_rectangle",
+    "handkerchief",
+    "triangular_flag"
+  ],
+  "contact_policy": {
+    "subdivisions": 3,
+    "minimum_distance_m": 0.001,
+    "activation_distance_m": 0.01,
+    "barrier_stiffness": 1000.0,
+    "broad_phase": "lbvh",
+    "proxy_error_budget_m": null,
+    "trajectory_max_depth": 12
+  },
+  "environment": {
+    "python": "3.12.3",
+    "packages": {
+      "numpy": "2.4.4",
+      "scipy": "1.18.1",
+      "ipctk": "1.6.0",
+      "warp-lang": "1.17.0"
+    }
+  },
+  "backend_selection": "GPU 전용; CPU fallback 없음",
+  "gpu_readiness": {
+    "all_stages_gpu": true,
+    "cpu_fallback_allowed": false,
+    "stages": [
+      {
+        "id": "proxy_update",
+        "description": "P3 보간·Bernstein 공간 오차",
+        "device": "cuda"
+      },
+      {
+        "id": "broad_phase",
+        "description": "LBVH 구축/refit·보수 AABB 후보",
+        "device": "cuda"
+      },
+      {
+        "id": "narrow_phase",
+        "description": "VF/EE 거리·초기 교차 검사",
+        "device": "cuda"
+      },
+      {
+        "id": "barrier",
+        "description": "IPC 힘·정확한 국소 Hessian/HVP",
+        "device": "cuda"
+      },
+      {
+        "id": "adjoint",
+        "description": "P3 Wᵀ 힘·HVP 전달",
+        "device": "cuda"
+      },
+      {
+        "id": "solver_ccd",
+        "description": "GPU 보수 진행과 Newton 보폭 제한",
+        "device": "cuda"
+      },
+      {
+        "id": "time_ccd",
+        "description": "이차 시간 경로·고정 공간 예산 검사",
+        "device": "cuda"
+      },
+      {
+        "id": "contact_solver",
+        "description": "Newmark/Krylov·독립 검산·프레임 rollback",
+        "device": "cuda"
+      }
+    ],
+    "precision": "AABB FP32 외향 여유; 실제 거리/힘/CCD FP64; 상태 FP64 hi/lo",
+    "scope": "고정 topology 준비·파일 I/O는 CPU; 반복 수치 계산과 승인/rollback은 GPU"
+  },
+  "precision": "float64_hilo",
+  "solver": "GPU Newmark",
+  "linear_preconditioner": "current_shell_only_approximation",
+  "retry": "rest/current 보조 풀이만; Gauss/contact-OFF fallback 없음",
+  "geometry_policy": "local_metric_refined_v1",
+  "reset_velocity": false,
+  "contact_calibration": "국소 샘플의 시험값; 실장면 최종 calibration 미완료",
+  "branch_contract": "접촉 ON preload 최종 u/v/time에서 calm·wind를 각각 시작",
+  "output_scope": "프레임 끝 raw hi/lo와 모든 substep GPU 검산 저장",
+  "training_eligible": false,
+  "production_enabled": false,
+  "r1_complete": false,
+  "code_base_commit": "6b4faddb85845508385ca44a89f81f2e3de17983",
+  "backend": "gpu_resident",
+  "frame_rollback": "모든 substep GPU 검산; 오류 시 GPU에서 프레임 시작 상태 복원",
+  "geometry_refinement_depth": 2,
+  "geometry_refinement_capacity": "max(1024,8*elements)",
+  "performance_policy": "gpu_contact_parallel_v1",
+  "native_sha256": {
+    "libcudss.so.0": "5f76a3698d6b7114e6cf6ebe38a38096ccb8af090aa5b8af92d72c9b369b2e86",
+    "libcudss_workspace.so": "44869689ef5f02ffd0eeeeba558188d4f8382e750c2cc538a30520b156a4dbac",
+    "cudss_workspace.c": "dc5559f25f4aadcc361c81e6694e4c1f5885749ada4e5a05157d093ec8f1428a"
+  }
+}

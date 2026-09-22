@@ -1,0 +1,106 @@
+{
+  "schema": "p3_contact_three_scenes_v1",
+  "shapes": [
+    "reference_rectangle",
+    "handkerchief",
+    "triangular_flag"
+  ],
+  "contact_policy": {
+    "subdivisions": 3,
+    "minimum_distance_m": 0.001,
+    "activation_distance_m": 0.01,
+    "barrier_stiffness": 1000.0,
+    "broad_phase": "lbvh",
+    "proxy_error_budget_m": null,
+    "trajectory_max_depth": 12
+  },
+  "environment": {
+    "python": "3.12.3",
+    "packages": {
+      "numpy": "2.4.4",
+      "scipy": "1.18.1",
+      "ipctk": "1.6.0"
+    }
+  },
+  "backend_selection": "실행 시 명시; 준비만으로 CPU/GPU를 선택하지 않음",
+  "gpu_readiness": {
+    "all_stages_gpu": false,
+    "implemented_backends": [
+      "cpu_reference"
+    ],
+    "gpu_backend_registered": false,
+    "cpu_fallback_allowed": false,
+    "stages": [
+      {
+        "id": "proxy_update",
+        "description": "P3 → 선형 proxy 보간",
+        "implementation": "NumPy/SciPy",
+        "device": "cpu",
+        "gpu_verified": false
+      },
+      {
+        "id": "broad_phase",
+        "description": "AABB·LBVH 구축과 후보 탐색",
+        "implementation": "IPC Toolkit CPU LBVH",
+        "device": "cpu",
+        "gpu_verified": false
+      },
+      {
+        "id": "narrow_phase",
+        "description": "VF/EE 거리·active set",
+        "implementation": "IPC Toolkit CPU",
+        "device": "cpu",
+        "gpu_verified": false
+      },
+      {
+        "id": "barrier",
+        "description": "접촉 에너지·힘·Hessian/HVP",
+        "implementation": "IPC Toolkit/SciPy",
+        "device": "cpu",
+        "gpu_verified": false
+      },
+      {
+        "id": "adjoint",
+        "description": "접촉력·Hessian을 P3 자유도로 전달",
+        "implementation": "SciPy sparse",
+        "device": "cpu",
+        "gpu_verified": false
+      },
+      {
+        "id": "solver_ccd",
+        "description": "Newton 보정의 충돌 없는 보폭",
+        "implementation": "IPC Toolkit AdditiveCCD",
+        "device": "cpu",
+        "gpu_verified": false
+      },
+      {
+        "id": "time_ccd",
+        "description": "시간 내부 경로·공간 오차 검사",
+        "implementation": "NumPy/TightInclusionCCD",
+        "device": "cpu",
+        "gpu_verified": false
+      },
+      {
+        "id": "contact_solver",
+        "description": "접촉 포함 Newton·Krylov·상태 승인",
+        "implementation": "CPU P3ShellStepper",
+        "device": "cpu",
+        "gpu_verified": false
+      }
+    ],
+    "scope": "현재 연결 경로의 정적 점검. GPU kernel·전송량·성능 검증은 미실행"
+  },
+  "precision": "CPU 기준 실행은 float64; hi/lo 아님",
+  "solver": "Newmark",
+  "linear_preconditioner": "rest",
+  "retry": "none",
+  "geometry_policy": "local_metric",
+  "reset_velocity": false,
+  "contact_calibration": "국소 샘플의 시험값; 실장면 최종 calibration 미완료",
+  "branch_contract": "접촉 ON preload 최종 u/v/time에서 calm·wind를 각각 시작",
+  "output_scope": "모든 substep 검산·프레임 끝 상태 저장; 전체 substep 상태 저장 아님",
+  "training_eligible": false,
+  "production_enabled": false,
+  "r1_complete": false,
+  "code_base_commit": "6b4faddb85845508385ca44a89f81f2e3de17983"
+}

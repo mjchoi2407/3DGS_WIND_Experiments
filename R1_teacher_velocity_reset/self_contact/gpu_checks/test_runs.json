@@ -1,0 +1,35 @@
+{
+  "date": "2026-09-22",
+  "cwd": "code",
+  "python": "../.venv/bin/python",
+  "environment": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "TBB_NUM_THREADS": "1"
+  },
+  "gpu_extra_environment": {
+    "WIND3DGS_TEST_DEVICE": "cuda:0",
+    "WARP_CACHE_PATH": "/tmp/wind3dgs-gpu-contact-cache",
+    "CUDSS_LIBRARY_PATH": "../experiments/artifacts/runs/p3_self_contact/three_scenes_gpu_bend500_v1/native/libcudss.so.0",
+    "LD_PRELOAD": "../experiments/artifacts/runs/p3_self_contact/three_scenes_gpu_bend500_v1/native/libcudss_workspace.so"
+  },
+  "runs": [
+    {
+      "scope": "CPU 접촉·proxy·CPU/GPU 실행기 단위 검사",
+      "arguments": "-m pytest tests/test_teacher_gpu_contact_scene_suite.py tests/test_teacher_self_contact_scene_suite.py tests/test_p3_collision_proxy.py tests/test_p3_shell_contact.py -q",
+      "passed": 33, "failed": 0, "skipped": 0, "elapsed_s": 6.63
+    },
+    {
+      "scope": "실제 CUDA 접촉·복원·독립 검산·접촉 OFF 회귀",
+      "arguments": "-m pytest tests/test_gpu_shell_contact.py tests/test_resident_contact_frame.py tests/test_resident_contact_stepper.py tests/test_resident_stepper_gpu.py tests/test_resident_audit.py tests/test_resident_current_first.py tests/test_resident_parallel_reductions.py tests/test_resident_preconditioner_reuse.py tests/test_resident_accepted_evaluation.py -x -q",
+      "passed": 32, "failed": 0, "skipped": 0, "elapsed_s": 32.98
+    },
+    {
+      "scope": "기존 CPU 동역학·중력·기하 회귀",
+      "arguments": "-m pytest tests/test_teacher_p3_shell_dynamics.py tests/test_gravity_wrinkles.py tests/test_local_geometry_certificate.py -q",
+      "passed": 16, "failed": 0, "skipped": 0, "elapsed_s": 8.77
+    }
+  ],
+  "total_passed": 81,
+  "scope_note": "고속·강한 반발 fixture의 물리적 기하 승인은 별도 실패로 보존한다. 테스트 통과는 거절 판정·CPU 동등성·복원 검사의 통과도 포함한다."
+}
