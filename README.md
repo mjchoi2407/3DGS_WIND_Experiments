@@ -10,9 +10,11 @@ Wind3DGS 프로젝트의 실험 기록, asset, output, report와 얇은 wrapper�
 
 ## 현재 Teacher 개발 검증
 
+맥락이 충분하면 재독하지 않는다. 부족할 때 [주제별 상태](sessions/README.md#현재-상태)에서 해당 note의 현재 상태와 상세 절 링크를 따른다.
+
+- [GPU 셀프 접촉 실행·결과](R1_teacher_velocity_reset/self_contact/README.md#현재-상태): 최신 인계와 승인된 실행·검증 범위.
 - [10초 시간 간격 탐색](R1_teacher_velocity_reset/timestep_search/README.md): 기존60 Hz 공력을 유지하는 Δt 최대256배 자동 탐색과 사용자 실행 안내.
 
-- [최신 실험 요약](sessions/README.md): 완료·진행·보류와 다음 선택.
 - [약한 바람 검증](R1_teacher_velocity_reset/p3_shell_random/README.md), [4배 바람 검증](R1_teacher_velocity_reset/p3_shell_random/scale4/README.md): 각각의 적용 조건과 정량 판정.
 - [GPU 성능·실패 원인](R1_teacher_velocity_reset/p3_shell_random/profiling/README.md): 정확도·속도·채택 여부.
 - [실험 근거 목록](teacher_evidence_index.md): 선행 비교·실패·개발 sample의 원본 진입점.
@@ -41,7 +43,7 @@ Wind3DGS 프로젝트의 실험 기록, asset, output, report와 얇은 wrapper�
 ## 작업 기록
 
 - 각 실험 폴더의 `README.md`에 재현 가능한 setup, 명령, metric과 관찰을 기록한다.
-- 결정·재발 방지·근거 링크는 `sessions/`에 짧게 기록한다. 중간 보고 원문은 기록하지 않는다.
+- 의미 있는 결과·방향 변경·중단 시 해당 note의 현재 상태를 갱신한다. 결정·검증 범위와 상세 문서·절 링크는 [필수 기록 규칙](../AGENTS.md#간결한-작업-기록)을 따른다.
 - 재사용 구현은 `../code`에 둔다.
 - 연구 framing과 milestone checklist는 `../ideas`에 둔다.
 
