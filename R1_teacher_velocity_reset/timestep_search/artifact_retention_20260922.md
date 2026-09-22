@@ -5,8 +5,8 @@
 
 ## 결과
 
-- `experiments/artifacts`: 378,361,958,400 → 51,054,501,888 bytes.
-- 회수 공간: 327,307,456,512 bytes.
+- `experiments/artifacts`: 378,361,958,400 → 51,054,505,984 bytes.
+- 회수 공간: 327,307,452,416 bytes.
 - 디스크 사용률: 71% → 39%.
 - 삭제 작업: 3,257개 경로.
 - 원본 삭제 목록·이유·보존 경로: `artifacts/retention/20260922_cleanup/cleanup_manifest.json`.
