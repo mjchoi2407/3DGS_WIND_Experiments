@@ -39,7 +39,9 @@
 `view_cloth_coarse_10s.sh`는 완료된 서브컴 run
 `artifacts/runs/sub_pc/20260912T223433Z-aca6fc4223714a02a9fe8afe7f4edeef`를 기본으로 연다.
 생성 스크립트의 메인컴 기본 출력 경로와 구분한다. 물리 재계산 없이 동결 뷰어를 사용하며,
-첫 실행에는 원본 hash 검증·표시 캐시 생성 시간이 필요하다. 캐시는 해당 run의 `playback/`에 별도로 저장한다.
+2026-09-22 정리에서 3조건×3메시의 표시 cache를 모두 생성·검증하고 raw substep chunk를 제거했다.
+캐시는 해당 run의 `playback/`에 있고 source report와 cache 파일 hash를 유지한다. 뷰어는 이 cache만 읽으며,
+cache를 잃으면 남은 report에서 복구할 수 없으므로 아래 생성 스크립트로 새 output을 다시 계산해야 한다.
 
 ```bash
 bash experiments/R1_teacher_velocity_reset/timestep_search/view_cloth_coarse_10s.sh bend_001 --shape handkerchief
@@ -51,6 +53,7 @@ bash experiments/R1_teacher_velocity_reset/timestep_search/view_cloth_coarse_10s
 `handkerchief` 중 선택한다. 메시 생략 또는 `both`는 직사각형·손수건을 함께 연다.
 `--time 8`로 시작 시각, `--prepare-only`로 창 없이 캐시 생성, `--help`로 사용법을 확인한다.
 완료 결과도 `visual_only`이며 엄격 기하 검산 통과나 학습 적격성을 뜻하지 않는다.
+정리 범위와 보존 원본은 [artifact 보존 보고서](../artifact_retention_20260922.md)를 따른다.
 
 ## 현재 상태 — 2026-09-13
 

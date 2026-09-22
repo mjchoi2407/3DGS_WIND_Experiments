@@ -178,12 +178,12 @@ bash experiments/R1_teacher_velocity_reset/timestep_search/retry_teacher_v3_prof
 ## 완료 데이터 취합
 
 2026-09-16 사용자 요청으로 메인 HL01 mixed를 종료하고 두 PC의 완료 시험만 묶었다.
-Canonical 산출물은 `experiments/artifacts/runs/teacher_precision_v3/completed_dual_gpu_20260916.zip`이다.
+2026-09-22 artifact 정리 이후 canonical 전달본은
+`experiments/artifacts/runs/teacher_precision_v3/completed_dual_gpu_20260916_compact.zip`이다.
 같은 이름의 폴더에서 report.md, GPU별 summary.json/excluded_runs.json과 manifest를 확인한다.
-원본은 보존하고 미완료 시뮬레이션 배열은 제외했다. 실패 이력·미판정은 유지한다.
+중복 full ZIP과 재생성 가능한 native/cache는 제거했으며 checkpoint·linear snapshot·실패 이력·미판정은 유지한다.
 
-512MB 업로드 제한용 무손실 압축본은 같은 경로의
-`completed_dual_gpu_20260916_compact.zip`이다. 동일 파일 중복 저장을 제거하고 큰 JSON에는
+이 무손실 압축본은 512MB 업로드 제한을 만족하도록 동일 파일 중복 저장을 제거하고 큰 JSON에는
 ZIP LZMA를 사용한다. 업로드는 ZIP 하나로 가능하며, 분석 시 내부 `COMPACT_README.md`와
 `restore_completed_v3.py`를 따라 원래 구조를 복원한다. SHA-256 기준 원본 파일 바이트는 같다.
 표준 Python 3.11 이상으로 복원할 수 있으며 일부 기본 ZIP 뷰어는 LZMA를 지원하지 않을 수 있다.

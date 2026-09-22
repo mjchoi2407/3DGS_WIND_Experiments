@@ -2,6 +2,8 @@
 
 ## 현재 상태
 
+- **Artifact 정리 완료:** 시각·성능 확인이 끝난 raw 궤적을 playback/report-only로 전환해 327.3GB 회수. 기하 실패·최신 적응형·1/500·checkpoint는 보존했고 10초 9개 playback hash/진입을 검증했다. [인계](2026-09-22_01_artifact_cleanup.md).
+
 - **Adaptive Mixed32 세 장면 준비:** 현행 후보만 실행하고 예전 FP64 hi/lo는 완료 구간 비교에만 재사용. CPU 준비·manifest 검증 통과, GPU 본 실행 대기. [인계](2026-09-20_04_adaptive_integrator.md).
 
 - **Gauss 전용 FP32 우선/FP64 묶음 복구:** 양 GPU 고부하3프레임과 프리로드를 통과/복구0. RTX5070 혼합은 R64 대비 고부하22.83%·저부하13.92% 단축, GTX1080Ti는 각각2.66%·-3.59%로 약함. 저부하는 Newmark 유지. [인계](2026-09-20_03_gauss_precision_frame.md).

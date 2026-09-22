@@ -2,7 +2,7 @@
 set -euo pipefail
 cd -- "$(dirname -- "${BASH_SOURCE[0]}")/../../.."
 if [[ "${1:-}" == --help || "${1:-}" == -h ]]; then
-  printf '%s\n' '사용법: bash experiments/R1_teacher_velocity_reset/timestep_search/view_cloth_coarse_10s.sh [baseline|bend_010|bend_001] [--shape reference_rectangle|triangular_flag|handkerchief|both] [--time 초] [--prepare-only]' '서브컴에서 완료한 10초 결과를 재생합니다. 기본은 baseline의 직사각형·손수건입니다.' '첫 실행은 저장 상태의 해시 검증과 표시 캐시 생성에 시간이 걸립니다. 이후에는 캐시를 재사용합니다.'
+  printf '%s\n' '사용법: bash experiments/R1_teacher_velocity_reset/timestep_search/view_cloth_coarse_10s.sh [baseline|bend_010|bend_001] [--shape reference_rectangle|triangular_flag|handkerchief|both] [--time 초] [--prepare-only]' '서브컴에서 완료한 10초 결과의 검증된 경량 cache를 재생합니다. 기본은 baseline의 직사각형·손수건입니다.' '2026-09-22 raw substep chunk는 정리했고 3조건×3메시 cache와 원본 report/hash를 보존했습니다. cache를 잃으면 run_cloth_coarse_10s.sh로 새 output을 다시 계산해야 합니다.'
   exit 0
 fi
 variant="${1:-baseline}"

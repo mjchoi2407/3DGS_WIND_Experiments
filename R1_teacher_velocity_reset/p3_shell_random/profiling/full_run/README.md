@@ -1,5 +1,9 @@
 # 전체 1.5초 자연 응답: baseline 대 HVP/graph 비교
 
+> **2026-09-22 보존 상태:** 성능·검산 판정, config, manifest와 source identity를 유지하고 baseline/fast의
+> 180개 frame 배열은 report-only로 정리했다. 아래 수치는 보존 report가 authority다. 궤적이 다시 필요하면
+> `full_comparison.py --output 새로운_폴더`로 처음부터 계산하며 과거 wall-clock의 정확 재현은 보장하지 않는다.
+
 ## 현재 상태
 
 2026-09-10 16:32 KST 전체 비교 완료. 사용자 재개 후 기존·개선 방식 각90 frame,
@@ -62,7 +66,8 @@ CPU 반복 풀이를 유지한 개선 방식의 결과이며 CuPy GPU LU의 성�
 
 ### 사용자용 연결·이어하기 명령
 
-Workspace root에서 다음 한 줄을 실행한다. 기본 대상은 이번 완료 결과다. 현재 실행하면 완료 요약을 표시하며 다시 계산하지 않는다.
+Workspace root에서 다음 한 줄을 실행한다. 기본 대상은 당시 완료 결과이며 현재는 정리된 요약 조회용이다.
+새 궤적은 아래 `full_comparison.py --output` 명령으로 별도 생성한다.
 
 ```bash
 bash experiments/R1_teacher_velocity_reset/p3_shell_random/profiling/run_full_comparison.sh
