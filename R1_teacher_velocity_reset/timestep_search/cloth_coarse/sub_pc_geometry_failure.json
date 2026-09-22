@@ -1,0 +1,83 @@
+{
+  "run": "experiments/artifacts/runs/sub_pc/20260912T162242Z-59eb2516b2124c6d997d086fcd6f86e6",
+  "manifest_sha256": "8155ab1cd75cdc3abeb76a6ada567a0b3803a87b68ae763c08467f78bdf7f34d",
+  "manifest_files_verified": 393,
+  "new_gpu_run_plan_differences": [
+    "gpu_execution",
+    "audit_backend"
+  ],
+  "mesh_and_wind_bytes_equal": true,
+  "failures": [
+    {
+      "scene": "bend_001/handkerchief",
+      "frame": 98,
+      "substep": 27,
+      "physical_time_s": 1.640624999999927,
+      "force_ratio": 0.022753445432610032,
+      "update_error_m": 5.421010862427522e-20,
+      "energy_ledger_error_j": 0.0,
+      "projected_gradient_upper": 1.0002261078049683,
+      "flags": [
+        "geometry_bound_unresolved"
+      ],
+      "failure_sha256": "8530ff3b4d954d7ab1f074de4851d04a3788656f92b32de57518842743ca27f6"
+    },
+    {
+      "scene": "bend_001/reference_rectangle",
+      "frame": 174,
+      "substep": 27,
+      "physical_time_s": 2.907291666667295,
+      "force_ratio": 0.007143815075704783,
+      "update_error_m": 1.0842021724855044e-19,
+      "energy_ledger_error_j": 0.0,
+      "projected_gradient_upper": 1.0000664328274331,
+      "flags": [
+        "geometry_bound_unresolved"
+      ],
+      "failure_sha256": "39613ad8ecf3b966eb07ce985702eb295d69e2b73e22fd9f0ae675f04f885d5a"
+    },
+    {
+      "scene": "bend_001/triangular_flag",
+      "frame": 183,
+      "substep": 59,
+      "physical_time_s": 3.0656250000007543,
+      "force_ratio": 0.005341274468911588,
+      "update_error_m": 1.0842021724855044e-19,
+      "energy_ledger_error_j": 0.0,
+      "projected_gradient_upper": 1.0006292885168648,
+      "flags": [
+        "geometry_bound_unresolved"
+      ],
+      "failure_sha256": "ad89a055286cedcfab0278c0623e039d90f8a630034399573052f62c06d7b961"
+    },
+    {
+      "scene": "bend_010/handkerchief",
+      "frame": 112,
+      "substep": 51,
+      "physical_time_s": 1.8802083333332467,
+      "force_ratio": 0.004630681856119628,
+      "update_error_m": 1.0842021724855044e-19,
+      "energy_ledger_error_j": 0.0,
+      "projected_gradient_upper": 1.0005055256007762,
+      "flags": [
+        "geometry_bound_unresolved"
+      ],
+      "failure_sha256": "81fc40c0992c3dfe3645efa5568e90cc4566464fb4f29360eeda41f7825c9e91"
+    },
+    {
+      "scene": "bend_010/triangular_flag",
+      "frame": 205,
+      "substep": 34,
+      "physical_time_s": 3.425781250001041,
+      "force_ratio": 0.005721624069790025,
+      "update_error_m": 5.421010862427522e-20,
+      "energy_ledger_error_j": 0.0,
+      "projected_gradient_upper": 1.001166560032967,
+      "flags": [
+        "geometry_bound_unresolved"
+      ],
+      "failure_sha256": "ed60383fd235979cb54de815a24f5769fcf234b2d3f7fe2afbc92f1218b22f2a"
+    }
+  ],
+  "scope": "저장된 실패 기록 확인. 실제 자기 교차 판정은 미실행"
+}

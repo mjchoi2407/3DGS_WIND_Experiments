@@ -1,0 +1,27 @@
+{
+  "status": "prepared_not_started",
+  "resolution": 32,
+  "frames": 600,
+  "fps": 60,
+  "backend": "precision_hvp_graph",
+  "state_encoding": "hi_lo_v1",
+  "first_candidate_only": true,
+  "first_substeps": 4,
+  "dt_s": 0.004166666666666667,
+  "wind": "ten_second_v1과 동일 생성 조건·seed; 준비 시 배열 대조",
+  "screen_frames": [
+    150,
+    300,
+    450,
+    600
+  ],
+  "bundle_scope": "후속 후보는 첫 후보 종료 후 별도 결정 전 실행하지 않음",
+  "nominal_uv_uncompressed_bytes": 2039328000,
+  "physical_tolerances": "ShellSolvePolicy 기본값 유지",
+  "spatial_convergence": "시간 정확도 후보 확보 후 수행; 현재 미실행",
+  "training_eligible": false,
+  "r1_complete": false,
+  "segment_seconds": 2.5,
+  "first_trial_limit_hours": 4,
+  "bundle_total_limit_hours": 4
+}

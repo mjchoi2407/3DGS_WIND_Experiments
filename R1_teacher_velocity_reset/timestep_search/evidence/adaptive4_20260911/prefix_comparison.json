@@ -1,0 +1,56 @@
+{
+  "first_substeps": 64,
+  "second_substeps": 256,
+  "bounds": {
+    "u_m": {
+      "absolute_rms_upper": 3.787879276520527e-09,
+      "reference_peak_lower": 0.00011114206318512865,
+      "relative_upper": 3.408141947312135e-05
+    },
+    "v_m_s": {
+      "absolute_rms_upper": 6.449504531547747e-06,
+      "reference_peak_lower": 0.004557292810641738,
+      "relative_upper": 0.0014152052105336536
+    }
+  },
+  "compared_frames": 6,
+  "compared_seconds": 0.1,
+  "passed": true,
+  "threshold_relative": 0.01,
+  "report_identities": [
+    {
+      "size_bytes": 2726,
+      "sha256": "a6157d376a735bae7f672b5a89d6530b6df1be5887688a3fd23353a9a13ef0e9"
+    },
+    {
+      "size_bytes": 2741,
+      "sha256": "607d5aa43cec1afaa574f1684c66e54a73d8d33ffec3c1f097427f3f9604ba0b"
+    }
+  ],
+  "scope": "동일 rest에서 시작한 명시된 구간 전체의 Newmark 수치 보간 비교. 독립 ODE 정답 인증은 아님.",
+  "training_eligible": false,
+  "r1_complete": false,
+  "generated_training_samples": 0,
+  "same_dt_path_max_difference": {
+    "u_m": 2.314969549780717e-17,
+    "v_m_s": 1.152709071022581e-12,
+    "time_s": 0.0
+  },
+  "compute_s_4": 71.90723814201192,
+  "compute_s_1": 265.1154232060071,
+  "compute_speedup": 3.6869087181796933,
+  "costs": {
+    "64": {
+      "setup_s": 14.284071863003192,
+      "compute_s": 71.90723814201192,
+      "audit_s": 19.81835087199579,
+      "write_s": 9.45564552299038
+    },
+    "256": {
+      "setup_s": 12.120261625997955,
+      "compute_s": 265.1154232060071,
+      "audit_s": 84.41818568798772,
+      "write_s": 38.59546773301554
+    }
+  }
+}

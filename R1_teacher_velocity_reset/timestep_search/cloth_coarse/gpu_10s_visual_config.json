@@ -1,0 +1,37 @@
+{
+  "schema": "cloth_coarse_sweep_v1",
+  "source_run": "experiments/artifacts/runs/teacher_timestep_search/20260912_three_scenes_10s_v4",
+  "frames": 600,
+  "reference_rectangle_resolution": 16,
+  "triangular_flag": {
+    "width_m": 1.2,
+    "height_m": 0.75,
+    "resolution": [
+      12,
+      12
+    ]
+  },
+  "handkerchief": {
+    "width_m": 0.7,
+    "height_m": 0.7,
+    "resolution": [
+      12,
+      8
+    ],
+    "clip_width_fraction": 0.12
+  },
+  "cases": {
+    "baseline": 1.0,
+    "bend_010": 0.1,
+    "bend_001": 0.01
+  },
+  "gpu_execution": {
+    "backend": "resident_cloth_gpu_v2",
+    "save_interval_s": 2.0,
+    "save_interval_by_mesh_s": {},
+    "geometry_policy": "visual_only_geometry_warning",
+    "audit_each_frame": true,
+    "compression": "stored",
+    "visual_only": true
+  }
+}

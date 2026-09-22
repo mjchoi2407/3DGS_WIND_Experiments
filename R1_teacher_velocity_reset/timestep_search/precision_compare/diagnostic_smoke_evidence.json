@@ -1,0 +1,429 @@
+{
+  "source_run": "experiments/artifacts/runs/teacher_precision_compare/20260913_four_diagnostic_smoke_v1",
+  "manifest_sha256": "82dca85984b3efb28b62bb9adc3db96257bc4e341f203e9b823e9c391af79670",
+  "comparison_sha256": "f0be383de82c38c72a91f72eabf48e332de6d77c4ded8e91f85259edd7a3238d",
+  "scope": "4개 경로 각각2프레임·128단계, 경고 후 진행과 low part 검증. 전체 길이 성능/정확도 채택 아님.",
+  "comparison": {
+    "analysis_script_sha256": "5221254d6d4604c24a9f0e381d099d18dc0b7a2c3a6d3253b0c10ab7e99e1f7e",
+    "scope": "경고 포함 공통 진행 substep의 궤적 차이, 프레임 마지막 후보(실패 포함)의 독립 CPU FP64/longdouble 재평가. 수렴·학습 적격 판정 아님.",
+    "lanes": {
+      "reference_hilo": {
+        "status": "complete",
+        "advanced_steps": 128,
+        "warning_steps": 0,
+        "warning_counts": {
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "7": 0,
+          "8": 0
+        },
+        "samples": [
+          {
+            "file": "frame_0000.npz",
+            "independent_update_error_m": 0.0,
+            "kinetic_energy_j": 0.0,
+            "independent_energy_balance_residual_j": 0.0,
+            "energy_ledger_difference_j": 0.0,
+            "pinned_state_max": 0.0,
+            "warning_mask": 0,
+            "candidate_failed": false,
+            "internal_force_residual_n": 0.0,
+            "independent_force_residual_n": 0.0,
+            "independent_force_ratio_official": 0.0,
+            "internal_linear_residual_n": 0.0,
+            "independent_linear_relative_residual": null,
+            "aero_force_difference_n": 0.0,
+            "elastic_energy_j": 0.0,
+            "max_strain_component": 0.0,
+            "linear_solve_in_sample_step": false,
+            "assembly_relative_error": null,
+            "assembly_relative_tolerance": 1e-10,
+            "newton_iterations_last_attempt": 0,
+            "linear_iterations_cumulative": 0,
+            "failure_code": 0
+          },
+          {
+            "file": "frame_0001.npz",
+            "independent_update_error_m": 6.139231108792002e-26,
+            "kinetic_energy_j": 2.6763862842258215e-10,
+            "independent_energy_balance_residual_j": 9.56266024551049e-24,
+            "energy_ledger_difference_j": 5.169878828456423e-26,
+            "pinned_state_max": 0.0,
+            "warning_mask": 0,
+            "candidate_failed": false,
+            "internal_force_residual_n": 8.269775181578325e-12,
+            "independent_force_residual_n": 8.269775181600458e-12,
+            "independent_force_ratio_official": 0.08268786509933199,
+            "internal_linear_residual_n": 9.276544895568517e-21,
+            "independent_linear_relative_residual": 1.1217407972263302e-09,
+            "aero_force_difference_n": 2.949243077532298e-21,
+            "elastic_energy_j": 1.7577160141252734e-12,
+            "max_strain_component": 6.512212991083288e-11,
+            "linear_solve_in_sample_step": true,
+            "assembly_relative_error": 3.7771219209439585e-16,
+            "assembly_relative_tolerance": 1e-10,
+            "newton_iterations_last_attempt": 1,
+            "linear_iterations_cumulative": 191,
+            "failure_code": 0
+          }
+        ],
+        "timings": [
+          {
+            "frame": 0,
+            "compute_record_s": 0.8953545360127464,
+            "transfer_write_hash_s": 0.06253601500065997,
+            "cudss_info": [
+              0,
+              0,
+              0
+            ],
+            "failure_code": 0,
+            "warning_steps": 0
+          },
+          {
+            "frame": 1,
+            "compute_record_s": 3.420572059985716,
+            "transfer_write_hash_s": 0.05990744702285156,
+            "cudss_info": [
+              0,
+              0,
+              0
+            ],
+            "failure_code": 0,
+            "warning_steps": 0
+          }
+        ],
+        "error": null,
+        "gpu_array_dtypes": {
+          "state": "<class 'warp._src.types.float64'>",
+          "force": "<class 'warp._src.types.vec3d'>",
+          "mass": "<class 'warp._src.types.float64'>",
+          "current": "<class 'warp._src.types.float64'>",
+          "cudss_rhs": "<class 'warp._src.types.float64'>",
+          "gmres_basis": "<class 'warp._src.types.float64'>",
+          "reduction": "<class 'warp._src.types.float64'>"
+        }
+      },
+      "fp32_hilo": {
+        "status": "complete",
+        "advanced_steps": 128,
+        "warning_steps": 61,
+        "warning_counts": {
+          "1": 26,
+          "2": 2,
+          "3": 33,
+          "7": 14,
+          "8": 0
+        },
+        "samples": [
+          {
+            "file": "frame_0000.npz",
+            "independent_update_error_m": 0.0,
+            "kinetic_energy_j": 0.0,
+            "independent_energy_balance_residual_j": 0.0,
+            "energy_ledger_difference_j": 0.0,
+            "pinned_state_max": 0.0,
+            "warning_mask": 0,
+            "candidate_failed": false,
+            "internal_force_residual_n": 0.0,
+            "independent_force_residual_n": 0.0,
+            "independent_force_ratio_official": 0.0,
+            "internal_linear_residual_n": 0.0,
+            "independent_linear_relative_residual": null,
+            "aero_force_difference_n": 0.0,
+            "elastic_energy_j": 0.0,
+            "max_strain_component": 0.0,
+            "linear_solve_in_sample_step": false,
+            "assembly_relative_error": null,
+            "assembly_relative_tolerance": 1e-10,
+            "newton_iterations_last_attempt": 0,
+            "linear_iterations_cumulative": 0,
+            "failure_code": 0
+          },
+          {
+            "file": "frame_0001.npz",
+            "independent_update_error_m": 1.6613081380284004e-15,
+            "kinetic_energy_j": 2.6734523564597867e-10,
+            "independent_energy_balance_residual_j": -1.38945737897898e-14,
+            "energy_ledger_difference_j": 1.0041752949645311e-14,
+            "pinned_state_max": 0.0,
+            "warning_mask": 8,
+            "candidate_failed": false,
+            "internal_force_residual_n": 1.2145429536758456e-05,
+            "independent_force_residual_n": 0.00017864277179225138,
+            "independent_force_ratio_official": 1783040.112619162,
+            "internal_linear_residual_n": 3.1009441976009855e-12,
+            "independent_linear_relative_residual": 2.28135072272081e-07,
+            "aero_force_difference_n": 1.876614699160497e-12,
+            "elastic_energy_j": 2.171229495700119e-12,
+            "max_strain_component": 4.939865849706848e-08,
+            "linear_solve_in_sample_step": true,
+            "assembly_relative_error": 1.6552066028907575e-07,
+            "assembly_relative_tolerance": 1e-10,
+            "newton_iterations_last_attempt": 11,
+            "linear_iterations_cumulative": 1457,
+            "failure_code": 0
+          }
+        ],
+        "timings": [
+          {
+            "frame": 0,
+            "compute_record_s": 0.43374264397425577,
+            "transfer_write_hash_s": 0.028517377970274538,
+            "cudss_info": [
+              0,
+              0,
+              0
+            ],
+            "failure_code": 0,
+            "warning_steps": 0
+          },
+          {
+            "frame": 1,
+            "compute_record_s": 16.634030330984388,
+            "transfer_write_hash_s": 0.02588810701854527,
+            "cudss_info": [
+              0,
+              0,
+              0
+            ],
+            "failure_code": 0,
+            "warning_steps": 61
+          }
+        ],
+        "error": null,
+        "gpu_array_dtypes": {
+          "state": "<class 'warp._src.types.float32'>",
+          "force": "<class 'warp._src.types.vec3f'>",
+          "mass": "<class 'warp._src.types.float32'>",
+          "current": "<class 'warp._src.types.float32'>",
+          "cudss_rhs": "<class 'warp._src.types.float32'>",
+          "gmres_basis": "<class 'warp._src.types.float32'>",
+          "reduction": "<class 'warp._src.types.float32'>"
+        }
+      },
+      "fp64": {
+        "status": "complete",
+        "advanced_steps": 128,
+        "warning_steps": 0,
+        "warning_counts": {
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "7": 0,
+          "8": 0
+        },
+        "samples": [
+          {
+            "file": "frame_0000.npz",
+            "independent_update_error_m": 0.0,
+            "kinetic_energy_j": 0.0,
+            "independent_energy_balance_residual_j": 0.0,
+            "energy_ledger_difference_j": 0.0,
+            "pinned_state_max": 0.0,
+            "warning_mask": 0,
+            "candidate_failed": false,
+            "internal_force_residual_n": 0.0,
+            "independent_force_residual_n": 0.0,
+            "independent_force_ratio_official": 0.0,
+            "internal_linear_residual_n": 0.0,
+            "independent_linear_relative_residual": null,
+            "aero_force_difference_n": 0.0,
+            "elastic_energy_j": 0.0,
+            "max_strain_component": 0.0,
+            "linear_solve_in_sample_step": false,
+            "assembly_relative_error": null,
+            "assembly_relative_tolerance": 1e-10,
+            "newton_iterations_last_attempt": 0,
+            "linear_iterations_cumulative": 0,
+            "failure_code": 0
+          },
+          {
+            "file": "frame_0001.npz",
+            "independent_update_error_m": 1.9190590211230242e-22,
+            "kinetic_energy_j": 2.676386284225823e-10,
+            "independent_energy_balance_residual_j": 1.0229897731808147e-23,
+            "energy_ledger_difference_j": 0.0,
+            "pinned_state_max": 0.0,
+            "warning_mask": 0,
+            "candidate_failed": false,
+            "internal_force_residual_n": 8.286986693497344e-12,
+            "independent_force_residual_n": 8.286986693499624e-12,
+            "independent_force_ratio_official": 0.08285995964154398,
+            "internal_linear_residual_n": 9.242781767752036e-21,
+            "independent_linear_relative_residual": 1.1153368492991235e-09,
+            "aero_force_difference_n": 2.949243077532298e-21,
+            "elastic_energy_j": 1.7577160141252294e-12,
+            "max_strain_component": 6.512212991083288e-11,
+            "linear_solve_in_sample_step": true,
+            "assembly_relative_error": 3.4190049370422803e-16,
+            "assembly_relative_tolerance": 1e-10,
+            "newton_iterations_last_attempt": 1,
+            "linear_iterations_cumulative": 191,
+            "failure_code": 0
+          }
+        ],
+        "timings": [
+          {
+            "frame": 0,
+            "compute_record_s": 0.40858336800010875,
+            "transfer_write_hash_s": 0.06618804601021111,
+            "cudss_info": [
+              0,
+              0,
+              0
+            ],
+            "failure_code": 0,
+            "warning_steps": 0
+          },
+          {
+            "frame": 1,
+            "compute_record_s": 2.549408471037168,
+            "transfer_write_hash_s": 0.06104876002063975,
+            "cudss_info": [
+              0,
+              0,
+              0
+            ],
+            "failure_code": 0,
+            "warning_steps": 0
+          }
+        ],
+        "error": null,
+        "gpu_array_dtypes": {
+          "state": "<class 'warp._src.types.float64'>",
+          "force": "<class 'warp._src.types.vec3d'>",
+          "mass": "<class 'warp._src.types.float64'>",
+          "current": "<class 'warp._src.types.float64'>",
+          "cudss_rhs": "<class 'warp._src.types.float64'>",
+          "gmres_basis": "<class 'warp._src.types.float64'>",
+          "reduction": "<class 'warp._src.types.float64'>"
+        }
+      },
+      "fp32": {
+        "status": "complete",
+        "advanced_steps": 128,
+        "warning_steps": 61,
+        "warning_counts": {
+          "1": 32,
+          "2": 2,
+          "3": 27,
+          "7": 14,
+          "8": 40
+        },
+        "samples": [
+          {
+            "file": "frame_0000.npz",
+            "independent_update_error_m": 0.0,
+            "kinetic_energy_j": 0.0,
+            "independent_energy_balance_residual_j": 0.0,
+            "energy_ledger_difference_j": 0.0,
+            "pinned_state_max": 0.0,
+            "warning_mask": 0,
+            "candidate_failed": false,
+            "internal_force_residual_n": 0.0,
+            "independent_force_residual_n": 0.0,
+            "independent_force_ratio_official": 0.0,
+            "internal_linear_residual_n": 0.0,
+            "independent_linear_relative_residual": null,
+            "aero_force_difference_n": 0.0,
+            "elastic_energy_j": 0.0,
+            "max_strain_component": 0.0,
+            "linear_solve_in_sample_step": false,
+            "assembly_relative_error": null,
+            "assembly_relative_tolerance": 1e-10,
+            "newton_iterations_last_attempt": 0,
+            "linear_iterations_cumulative": 0,
+            "failure_code": 0
+          },
+          {
+            "file": "frame_0001.npz",
+            "independent_update_error_m": 1.1747639897941014e-13,
+            "kinetic_energy_j": 2.6734596951609857e-10,
+            "independent_energy_balance_residual_j": -1.4423547587819642e-14,
+            "energy_ledger_difference_j": 1.2401727376568674e-14,
+            "pinned_state_max": 0.0,
+            "warning_mask": 264,
+            "candidate_failed": false,
+            "internal_force_residual_n": 1.3107053746352904e-05,
+            "independent_force_residual_n": 0.0001688596986877874,
+            "independent_force_ratio_official": 1685577.9438751366,
+            "internal_linear_residual_n": 4.53696628877065e-12,
+            "independent_linear_relative_residual": 3.2349510406909844e-07,
+            "aero_force_difference_n": 1.876614699160497e-12,
+            "elastic_energy_j": 2.0960288384670647e-12,
+            "max_strain_component": 4.907990192037914e-08,
+            "linear_solve_in_sample_step": true,
+            "assembly_relative_error": 1.6461642360354745e-07,
+            "assembly_relative_tolerance": 1e-10,
+            "newton_iterations_last_attempt": 12,
+            "linear_iterations_cumulative": 1442,
+            "failure_code": 0
+          }
+        ],
+        "timings": [
+          {
+            "frame": 0,
+            "compute_record_s": 0.32306593598332256,
+            "transfer_write_hash_s": 0.02877000899752602,
+            "cudss_info": [
+              0,
+              0,
+              0
+            ],
+            "failure_code": 0,
+            "warning_steps": 0
+          },
+          {
+            "frame": 1,
+            "compute_record_s": 13.992941311036702,
+            "transfer_write_hash_s": 0.025613218022044748,
+            "cudss_info": [
+              0,
+              0,
+              0
+            ],
+            "failure_code": 0,
+            "warning_steps": 61
+          }
+        ],
+        "error": null,
+        "gpu_array_dtypes": {
+          "state": "<class 'warp._src.types.float32'>",
+          "force": "<class 'warp._src.types.vec3f'>",
+          "mass": "<class 'warp._src.types.float32'>",
+          "current": "<class 'warp._src.types.float32'>",
+          "cudss_rhs": "<class 'warp._src.types.float32'>",
+          "gmres_basis": "<class 'warp._src.types.float32'>",
+          "reduction": "<class 'warp._src.types.float32'>"
+        }
+      }
+    },
+    "trajectory": {
+      "fp32_hilo_vs_reference_hilo": {
+        "common_advanced_steps": 128,
+        "moving_common_steps": 64,
+        "common_warning_steps": 61,
+        "interpretation": "경고 포함 진단 궤적 비교이며 엄격 검산 통과를 뜻하지 않습니다.",
+        "time_s": 0.03333333333333333,
+        "max_position_component_difference_m": 2.2450233129197443e-08,
+        "max_velocity_component_difference_m_s": 6.755290992884938e-06,
+        "max_area_weighted_position_rms_m": 1.779650378891994e-09,
+        "max_area_weighted_velocity_rms_m_s": 1.4281276644135108e-06
+      },
+      "fp32_vs_fp64": {
+        "common_advanced_steps": 128,
+        "moving_common_steps": 64,
+        "common_warning_steps": 61,
+        "interpretation": "경고 포함 진단 궤적 비교이며 엄격 검산 통과를 뜻하지 않습니다.",
+        "time_s": 0.03333333333333333,
+        "max_position_component_difference_m": 2.2450097098680636e-08,
+        "max_velocity_component_difference_m_s": 6.135492747600756e-06,
+        "max_area_weighted_position_rms_m": 1.7633141562998773e-09,
+        "max_area_weighted_velocity_rms_m_s": 1.4993461686781259e-06
+      }
+    },
+    "independent_analysis_errors": 0
+  }
+}

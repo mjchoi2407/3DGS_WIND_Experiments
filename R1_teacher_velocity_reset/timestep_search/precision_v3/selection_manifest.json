@@ -1,0 +1,112 @@
+{
+  "schema": 1,
+  "selection_scope": "지정 사례와 기존 입력 범위의 실험 후보 동결; 생산 runtime 자동 선택 아님",
+  "block_order": [
+    "volume",
+    "interior_edge",
+    "boundary_edge"
+  ],
+  "selections": [
+    {
+      "gpu": "RTX5070",
+      "cases": [
+        "general_wind",
+        "HL00"
+      ],
+      "method": "M2",
+      "blocks": [
+        32,
+        32,
+        256
+      ],
+      "verified_driver_api": 13000,
+      "current_driver_api": 13040,
+      "current_driver_version": "616.92",
+      "status": "frozen_historical_candidate_environment_mismatch",
+      "graph_infrastructure": "unresolved; no recovery attempted",
+      "frozen_runtime": "experiments/artifacts/runs/sub_pc/20260916T040335Z-09f0ce8dbdca478799f61759294da79d/rtx5070_v3/cases/W1/variants/M2/code",
+      "core_source_sha256": {
+        "p3_shell_resident_stepper.py": "a68df64ce37c04ebd1aa54a12f068a2318c4b11a117a1e2dcbb2d799f0c65cf2",
+        "resident_precision_v3.py": "731adba00d3c79e429bc5ff7fce7c4f22833c9932482a0a20464f34a09f7ab1c",
+        "resident_gmres.py": "870f09448893ca81eef512111147ca2a93c758bde40a5f46629dd76c7346865d",
+        "resident_newmark_gauss_retry.py": "bcc1ce5b4b61c0a753ed0de31088c8d4e0f7e9f8a2162ec88c75eb5bb317d64e"
+      }
+    },
+    {
+      "gpu": "GTX1080Ti",
+      "cases": [
+        "general_wind",
+        "HL00"
+      ],
+      "method": "M1",
+      "blocks": [
+        256,
+        256,
+        256
+      ],
+      "status": "frozen_candidate",
+      "frozen_runtime": "experiments/artifacts/runs/teacher_precision_v3/gtx1080ti_v3/cases/W1/variants/M1/code",
+      "core_source_sha256": {
+        "p3_shell_resident_stepper.py": "edf526d7b935c922313c8e54d526430a7344bd155fbc2fc4f54f44b37a0d6124",
+        "resident_precision_v3.py": "731adba00d3c79e429bc5ff7fce7c4f22833c9932482a0a20464f34a09f7ab1c",
+        "resident_gmres.py": "870f09448893ca81eef512111147ca2a93c758bde40a5f46629dd76c7346865d",
+        "resident_newmark_gauss_retry.py": "bcc1ce5b4b61c0a753ed0de31088c8d4e0f7e9f8a2162ec88c75eb5bb317d64e"
+      }
+    },
+    {
+      "gpu": "GTX1080Ti",
+      "cases": [
+        "C0",
+        "known_HL01"
+      ],
+      "method": "R64",
+      "blocks": [
+        256,
+        256,
+        256
+      ],
+      "status": "frozen_reference",
+      "frozen_runtime": "experiments/artifacts/runs/teacher_precision_v3/gtx1080ti_v3/cases/W1/variants/R64/code",
+      "core_source_sha256": {
+        "p3_shell_resident_stepper.py": "b7d71bc654d4bb5373ec8075b46cca1cc25ad3a5414202f0e7b32b74361c486c",
+        "resident_precision_v3.py": "731adba00d3c79e429bc5ff7fce7c4f22833c9932482a0a20464f34a09f7ab1c",
+        "resident_gmres.py": "870f09448893ca81eef512111147ca2a93c758bde40a5f46629dd76c7346865d",
+        "resident_newmark_gauss_retry.py": "bcc1ce5b4b61c0a753ed0de31088c8d4e0f7e9f8a2162ec88c75eb5bb317d64e"
+      }
+    }
+  ],
+  "production_enabled": false,
+  "training_eligible": false,
+  "regression_status": "budget_not_defined",
+  "cross_device_status": "budget_not_defined",
+  "new_full_fp32_development": "closed",
+  "new_solver_development": "closed",
+  "attachments_status": "중간 결산 보고서/codex_bounded_closeout 파일 미발견; 사용자 메시지의 명시 지시 적용",
+  "evidence": [
+    "experiments/artifacts/runs/teacher_precision_v3/gtx1080ti_v3",
+    "experiments/artifacts/runs/sub_pc/20260916T040335Z-09f0ce8dbdca478799f61759294da79d/rtx5070_v3"
+  ],
+  "prohibited_expansion": [
+    "new_checkpoint_replay",
+    "global_P_update_policy",
+    "full_HL01_replay",
+    "infrastructure_repair"
+  ],
+  "recording": {
+    "default": "full",
+    "explicit_summary": "W30 기존 검산/필수 저장 통과; 비영 수치 차이, 회귀 예산 미정; 전역 자동 변경 없음"
+  },
+  "bounded_linear_observation": {
+    "status": "promising_frozen_candidate",
+    "original_frame": 225,
+    "worst_frame_236_tested": false,
+    "production_enabled": false,
+    "original_criteria_passed": true,
+    "R64_total_median_s": 2.8269874706268308,
+    "F64_fresh_total_median_s": 0.24208685016632078,
+    "total_reduction_pct": 91.43657859535392,
+    "old_factor_resident_median_s": 2.816754638671875,
+    "reduction_vs_resident_old_factor_pct": 91.40546901591446,
+    "interpretation": "R64 조립0: 저장된 P 복원 후 factor+solve. fresh는 assembly+factor+solve. 상주 old factor는 R64 solve만."
+  }
+}

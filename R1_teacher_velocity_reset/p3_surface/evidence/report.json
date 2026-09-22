@@ -1,0 +1,88 @@
+{
+  "schema": "wind3dgs.p3_surface_static_equation_audit.v1",
+  "law": "flat_p3_surface_differential_geometry_v1",
+  "status": "passed",
+  "threshold_relative": 1e-10,
+  "cases": [
+    {
+      "resolution": 4,
+      "diagonal": "forward",
+      "element_count": 24,
+      "status": "passed",
+      "moving_mass_kg": 0.075,
+      "minimum_element_mass_eigenvalue_kg": 2.7893118120765385e-05,
+      "errors": {
+        "mass_relative": 1.3987486290969327e-15,
+        "normal_force_relative": 1.405123035755104e-15,
+        "total_force_relative": 5.880801414687513e-16,
+        "power_relative": 3.4859701426671023e-16,
+        "adjoint_power_relative": 3.4859701426671033e-16
+      }
+    },
+    {
+      "resolution": 4,
+      "diagonal": "backward",
+      "element_count": 24,
+      "status": "passed",
+      "moving_mass_kg": 0.075,
+      "minimum_element_mass_eigenvalue_kg": 2.7893118120765385e-05,
+      "errors": {
+        "mass_relative": 1.3951754434702147e-15,
+        "normal_force_relative": 1.3478849265576497e-15,
+        "total_force_relative": 5.327950795692861e-20,
+        "power_relative": 1.7429850713335514e-16,
+        "adjoint_power_relative": 3.4859701426671033e-16
+      }
+    },
+    {
+      "resolution": 8,
+      "diagonal": "forward",
+      "element_count": 96,
+      "status": "passed",
+      "moving_mass_kg": 0.07500000000000004,
+      "minimum_element_mass_eigenvalue_kg": 6.973279530191349e-06,
+      "errors": {
+        "mass_relative": 1.364839656125269e-15,
+        "normal_force_relative": 1.370974924577106e-15,
+        "total_force_relative": 2.0065111848325604e-20,
+        "power_relative": 1.7429850713335504e-16,
+        "adjoint_power_relative": 1.7429850713335507e-16
+      }
+    },
+    {
+      "resolution": 8,
+      "diagonal": "backward",
+      "element_count": 96,
+      "status": "passed",
+      "moving_mass_kg": 0.07500000000000004,
+      "minimum_element_mass_eigenvalue_kg": 6.973279530191349e-06,
+      "errors": {
+        "mass_relative": 1.3652824277380634e-15,
+        "normal_force_relative": 1.3369890124777074e-15,
+        "total_force_relative": 1.7642404243972456e-15,
+        "power_relative": 3.485970142667101e-16,
+        "adjoint_power_relative": 3.4859701426671e-16
+      }
+    }
+  ],
+  "environment": {
+    "python": "3.12.3",
+    "numpy": "2.4.4",
+    "scipy": "1.18.1",
+    "device": "cpu",
+    "git_fetched": false
+  },
+  "source_sha256": {
+    "wind3dgs/teacher/p3_surface.py": "5a40e7345bcc68070264d035c275dccb2fe7cf69115ceb605a2fc764ecb1042a",
+    "wind3dgs/evaluation/teacher_p3_surface.py": "2ee232c4173f20fbed3100c8a7be154bab75374dee948d2c561c426d6ab463b2",
+    "wind3dgs/teacher/p3_wind_reset.py": "a0958c452d5fc139049024cf823e12f81407215c1d49e22d96d39d71357223b6",
+    "wind3dgs/evaluation/teacher_plate_cubic.py": "b20120b72f9cce4d4f95643f0c62cfe33d6315829a406f2b47721cff8bf57a19",
+    "wind3dgs/evaluation/teacher_plate_c0ip.py": "6575a8e54b1325c8e3a2b2889d18e7ace1caf3f092a98107cab9e1382da7ae2f",
+    "wind3dgs/evaluation/teacher_plate_galerkin.py": "b9fefd812ba1c9c90212d27b40b3ea5dd0986dbed7470224689c87e53a16ec27",
+    "wind3dgs/teacher/velocity_reset.py": "0ed136d8b34999c72481549c3fcab056a3c873ecd0ca59fd72f42c1ba4efe2d8"
+  },
+  "training_eligible": false,
+  "r1_complete": false,
+  "generated_training_samples": 0,
+  "scope": "요소 내부 기하/질량/공력의 정적 대조; 비선형 구조·시간·공간 수렴 판정 아님"
+}

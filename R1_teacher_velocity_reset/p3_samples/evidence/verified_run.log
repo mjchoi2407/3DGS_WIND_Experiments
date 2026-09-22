@@ -1,0 +1,45 @@
+모델 조립·전체 모드 검산 시작: p3_4
+자연 연속·세 reset 완료: p3_4 (0.8초)
+모델 조립·전체 모드 검산 시작: p3_8
+자연 연속·세 reset 완료: p3_8 (2.2초)
+모델 조립·전체 모드 검산 시작: p3_16
+자연 연속·세 reset 완료: p3_16 (11.5초)
+모델 조립·전체 모드 검산 시작: p3_16_back
+자연 연속·세 reset 완료: p3_16_back (20.5초)
+모델 조립·전체 모드 검산 시작: p3_16_q6
+자연 연속·세 reset 완료: p3_16_q6 (30.6초)
+모델 조립·전체 모드 검산 시작: spline_16
+자연 연속·세 reset 완료: spline_16 (32.0초)
+모델 조립·전체 모드 검산 시작: spline_32
+자연 연속·세 reset 완료: spline_32 (38.3초)
+전체 면적·연속 시간 상한 비교: spatial_coarse
+spatial_coarse/natural: 변위 상한 0.4894%, 속도 상한 1.0642% / failed
+spatial_coarse/reset18: 변위 상한 0.4081%, 속도 상한 1.4235% / failed
+spatial_coarse/reset42: 변위 상한 0.3491%, 속도 상한 1.1768% / failed
+spatial_coarse/reset66: 변위 상한 0.2202%, 속도 상한 0.7505% / passed
+전체 면적·연속 시간 상한 비교: spatial
+spatial/natural: 변위 상한 0.2236%, 속도 상한 0.6460% / passed
+spatial/reset18: 변위 상한 0.2503%, 속도 상한 0.8823% / passed
+spatial/reset42: 변위 상한 0.2007%, 속도 상한 0.7516% / passed
+spatial/reset66: 변위 상한 0.1488%, 속도 상한 0.5093% / passed
+전체 면적·연속 시간 상한 비교: direction
+direction/natural: 변위 상한 0.2009%, 속도 상한 0.1839% / passed
+direction/reset18: 변위 상한 0.2242%, 속도 상한 0.2243% / passed
+direction/reset42: 변위 상한 0.1865%, 속도 상한 0.1845% / passed
+direction/reset66: 변위 상한 0.1391%, 속도 상한 0.1433% / passed
+전체 면적·연속 시간 상한 비교: quadrature
+quadrature/natural: 변위 상한 0.1836%, 속도 상한 0.1617% / passed
+quadrature/reset18: 변위 상한 0.2095%, 속도 상한 0.1971% / passed
+quadrature/reset42: 변위 상한 0.1763%, 속도 상한 0.1625% / passed
+quadrature/reset66: 변위 상한 0.1147%, 속도 상한 0.1204% / passed
+전체 면적·연속 시간 상한 비교: reference_self
+reference_self/natural: 변위 상한 0.2007%, 속도 상한 0.3788% / passed
+reference_self/reset18: 변위 상한 0.2276%, 속도 상한 0.5056% / passed
+reference_self/reset42: 변위 상한 0.1867%, 속도 상한 0.4071% / passed
+reference_self/reset66: 변위 상한 0.1257%, 속도 상한 0.3113% / passed
+전체 면적·연속 시간 상한 비교: independent_reference
+independent_reference/natural: 변위 상한 0.1959%, 속도 상한 0.2891% / passed
+independent_reference/reset18: 변위 상한 0.2212%, 속도 상한 0.3866% / passed
+independent_reference/reset42: 변위 상한 0.1834%, 속도 상한 0.3127% / passed
+independent_reference/reset66: 변위 상한 0.1278%, 속도 상한 0.2916% / passed
+검증 완료: 작은 굽힘 sample 적격성 True

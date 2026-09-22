@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "existing_tests_passed": 10,
+  "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 PYTHONPATH=code .venv/bin/python -m unittest discover -s code/tests -p test_teacher_timestep_search.py -v",
+  "frozen_controller_matches_working_source": true,
+  "all_frozen_files_hash_verified": true,
+  "physics_plan_wind_unchanged": true,
+  "simulation_started_here": false,
+  "scope": "제어 로직 변경과 동결 묶음 반영 검사. 실제 GPU 부하 중 속도 측정은 수행하지 않음."
+}

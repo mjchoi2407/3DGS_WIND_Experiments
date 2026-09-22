@@ -1,0 +1,51 @@
+{
+  "status": "prefix_passed",
+  "substeps": 64,
+  "completed_frames": 2,
+  "frames": [
+    {
+      "frame": 0,
+      "array_identity": {
+        "size_bytes": 45453,
+        "sha256": "9d787aa8f9eb94b48d4ee928611b3def1326f302ef43fe1ddf3008e4016ee836"
+      },
+      "metadata_identity": {
+        "size_bytes": 23215,
+        "sha256": "9970185a986ff2158edb576484f1ea1d5d4578ff670db9608b154bdb16e35bb4"
+      }
+    },
+    {
+      "frame": 1,
+      "array_identity": {
+        "size_bytes": 26646381,
+        "sha256": "4f14c5529ab14b9765d0642102dc90afea30ca4c5893481357e48aa90d5d26f4"
+      },
+      "metadata_identity": {
+        "size_bytes": 33683,
+        "sha256": "baab4030275db1d675af9e3052bd8d92347ed9223fd11d50bb5bbcaae514ea24"
+      }
+    }
+  ],
+  "compute_s": 95.58728174999123,
+  "audit_s": 6.813516875990899,
+  "write_s": 2.02622190801776,
+  "setup_s": 27.151814354001544,
+  "hvp_calls": 9344,
+  "geometry_certified": true,
+  "state_encoding": "hi_lo_v1",
+  "training_eligible": false,
+  "r1_complete": false,
+  "generated_training_samples": 0,
+  "environment": {
+    "device": "cuda:0",
+    "numpy": "2.4.4",
+    "scipy": "1.18.1",
+    "compute_backend": "precision_hvp_graph",
+    "linear_solver_device": "cpu",
+    "cuda_graph": true,
+    "state_encoding": "hi_lo_v1",
+    "state_mantissa_bits": 64,
+    "warp": "1.17.0",
+    "gpu_name": "NVIDIA GeForce GTX 1080 Ti"
+  }
+}

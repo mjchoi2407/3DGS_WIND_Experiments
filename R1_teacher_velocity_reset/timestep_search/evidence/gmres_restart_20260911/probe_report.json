@@ -1,0 +1,201 @@
+{
+  "input_time_s": 3.262500000000057,
+  "target_time_s": 3.266666666666724,
+  "frame": 195,
+  "environment": {
+    "device": "cuda:0",
+    "numpy": "2.4.4",
+    "scipy": "1.18.1",
+    "compute_backend": "precision_hvp_graph",
+    "linear_solver_device": "cpu",
+    "cuda_graph": true,
+    "state_encoding": "hi_lo_v1",
+    "state_mantissa_bits": 64,
+    "warp": "1.17.0",
+    "gpu_name": "NVIDIA GeForce GTX 1080 Ti"
+  },
+  "policy": {
+    "force_atol_n": 1e-10,
+    "force_rtol": 1e-09,
+    "displacement_atol_m": 1e-12,
+    "displacement_rtol": 1e-09,
+    "linear_rtol": 1e-10,
+    "max_newton": 15,
+    "linear_cycles": 12,
+    "line_search_steps": 12
+  },
+  "input_sha256": "52a264a94033511f6305d25eca4ab99426d36daa10c690f7cb50e747895e449c",
+  "runtime_manifest_sha256": "72255e977b82b0d9fd517c0fb5f5ee39e45d3c2d4ab2e34fa26f82986602c44f",
+  "trials": [
+    {
+      "substeps": 4,
+      "restart": 120,
+      "max_cycles": 6,
+      "max_iterations": 720,
+      "dt_s": 0.004166666666666667,
+      "rows": [
+        {
+          "index": 0,
+          "solve_s": 34.22790273700957,
+          "attempts": [
+            {
+              "iteration": 0,
+              "force_residual_n": 38.09842464616728,
+              "force_limit_n": 3.8197387847019284e-08,
+              "linear_info": 0,
+              "linear_iterations": 466,
+              "linear_residual_n": 3.695062061055353e-09,
+              "linear_limit_n": 3.809842464616728e-09,
+              "correction_m": 0.0026640331375242846,
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "residual_n": 0.18201834679109458
+                }
+              ]
+            },
+            {
+              "iteration": 1,
+              "force_residual_n": 0.18201834679109458,
+              "force_limit_n": 2.819062540929817e-10,
+              "linear_info": 0,
+              "linear_iterations": 527,
+              "linear_residual_n": 7.126270555395784e-12,
+              "linear_limit_n": 1.820183467910946e-11,
+              "correction_m": 0.0005461444800604813,
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "residual_n": 7.71301701973118e-05
+                }
+              ]
+            },
+            {
+              "iteration": 2,
+              "force_residual_n": 7.71301701973118e-05,
+              "force_limit_n": 1.0936981706330695e-10,
+              "linear_info": 0,
+              "linear_iterations": 520,
+              "linear_residual_n": 4.864604158384897e-15,
+              "linear_limit_n": 7.71301701973118e-15,
+              "correction_m": 4.1758979677496307e-07,
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "residual_n": 5.416964720643122e-11
+                }
+              ]
+            },
+            {
+              "iteration": 3,
+              "force_residual_n": 5.416964720643122e-11,
+              "force_limit_n": 1.093715721616573e-10,
+              "linear_info": 0,
+              "linear_iterations": 550,
+              "linear_residual_n": 4.1528680519603606e-21,
+              "linear_limit_n": 5.416964720643122e-21,
+              "correction_m": 6.969861867850342e-13
+            }
+          ],
+          "hvp_calls": 2086,
+          "audit": {
+            "residual_ratio": 0.49525975459162985,
+            "position_update_error_m": 5.421010862427522e-20,
+            "energy_ledger_error_j": 5.204170427930421e-18,
+            "projected_gradient_upper": 0.17542684529517721
+          },
+          "audit_passed": true
+        }
+      ],
+      "status": "passed",
+      "end_time_s": 3.266666666666724,
+      "completed_solve_s": 34.22790273700957
+    },
+    {
+      "substeps": 4,
+      "restart": 240,
+      "max_cycles": 3,
+      "max_iterations": 720,
+      "dt_s": 0.004166666666666667,
+      "rows": [
+        {
+          "index": 0,
+          "solve_s": 29.99052808599663,
+          "attempts": [
+            {
+              "iteration": 0,
+              "force_residual_n": 38.09842464616728,
+              "force_limit_n": 3.8197387847019284e-08,
+              "linear_info": 0,
+              "linear_iterations": 387,
+              "linear_residual_n": 2.6657229109395437e-09,
+              "linear_limit_n": 3.809842464616728e-09,
+              "correction_m": 0.0026640331348179273,
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "residual_n": 0.18201834676727027
+                }
+              ]
+            },
+            {
+              "iteration": 1,
+              "force_residual_n": 0.18201834676727027,
+              "force_limit_n": 2.8190625407365194e-10,
+              "linear_info": 0,
+              "linear_iterations": 440,
+              "linear_residual_n": 1.4590932077097947e-11,
+              "linear_limit_n": 1.820183467672703e-11,
+              "correction_m": 0.00054614447698339,
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "residual_n": 7.713017313332899e-05
+                }
+              ]
+            },
+            {
+              "iteration": 2,
+              "force_residual_n": 7.713017313332899e-05,
+              "force_limit_n": 1.0936981706321424e-10,
+              "linear_info": 0,
+              "linear_iterations": 442,
+              "linear_residual_n": 5.8513950567140674e-15,
+              "linear_limit_n": 7.7130173133329e-15,
+              "correction_m": 4.175897759188845e-07,
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "residual_n": 5.416583031769305e-11
+                }
+              ]
+            },
+            {
+              "iteration": 3,
+              "force_residual_n": 5.416583031769305e-11,
+              "force_limit_n": 1.0937157216164745e-10,
+              "linear_info": 0,
+              "linear_iterations": 445,
+              "linear_residual_n": 3.40083922110033e-21,
+              "linear_limit_n": 5.416583031769305e-21,
+              "correction_m": 6.969869856749205e-13
+            }
+          ],
+          "hvp_calls": 1726,
+          "audit": {
+            "residual_ratio": 0.49523332468491843,
+            "position_update_error_m": 5.421010862427522e-20,
+            "energy_ledger_error_j": 8.673617379884035e-18,
+            "projected_gradient_upper": 0.17542684529517114
+          },
+          "audit_passed": true
+        }
+      ],
+      "status": "passed",
+      "end_time_s": 3.266666666666724,
+      "completed_solve_s": 29.99052808599663
+    }
+  ],
+  "training_eligible": false,
+  "r1_complete": false
+}

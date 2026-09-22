@@ -1,0 +1,40 @@
+{
+  "cpu": "20260909_strong_reset_m16_s128_v4",
+  "gpu": "20260909_strong_reset_m16_s128_v2",
+  "passed": true,
+  "cpu_gpu_errors_with_reset_left_limits": {
+    "u_m": {
+      "relative": 7.336269595523581e-16,
+      "absolute_rms_peak": 3.48273700436972e-17,
+      "reference_peak": 0.04747286013718476
+    },
+    "v_m_s": {
+      "relative": 7.175236080239128e-13,
+      "absolute_rms_peak": 1.3864536785688723e-12,
+      "reference_peak": 1.932276043693138
+    },
+    "delta_u_m": {
+      "relative": 7.336269595523581e-16,
+      "absolute_rms_peak": 3.48273700436972e-17,
+      "reference_peak": 0.04747286013718476
+    }
+  },
+  "parity_policy": {
+    "relative": 1e-06,
+    "displacement_absolute_m": 1e-09,
+    "velocity_absolute_m_s": 1e-07
+  },
+  "kinematic_defect_rms_m_s": [
+    3.667063208556173e-14,
+    3.657050207993043e-14
+  ],
+  "manifest_sha256": {
+    "20260909_strong_reset_m16_s128_v4": "09fa0759696cb1e4d4321692ad0b027e57e6f4bc1bef2a5b2e2488d131f31792",
+    "20260909_strong_reset_m16_s128_v2": "26cd80019223793a334356671676533fd813742fd2a7d6f2082503b901476f44"
+  },
+  "wrapper_sha256": "bf84f9ad5c417325d67a7e94e41df73ba72666dddf62a34da4238be4a2dbb67d",
+  "scope": "동일 grid의 모든 step 끝점과 reset 좌극한의 CPU/CUDA 구현 일치. Raw 수식 검산 및 물리 수렴은 별도",
+  "generated_training_samples": 0,
+  "training_eligible": false,
+  "r1_complete": false
+}

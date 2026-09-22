@@ -1,0 +1,172 @@
+{
+  "input_time_s": 2.695833333333362,
+  "frame": 161,
+  "substep": 3,
+  "dt_s": 0.004166666666666667,
+  "environment": {
+    "device": "cuda:0",
+    "numpy": "2.4.4",
+    "scipy": "1.18.1",
+    "compute_backend": "precision_hvp_graph",
+    "linear_solver_device": "cpu",
+    "cuda_graph": true,
+    "state_encoding": "hi_lo_v1",
+    "state_mantissa_bits": 64,
+    "warp": "1.17.0",
+    "gpu_name": "NVIDIA GeForce GTX 1080 Ti"
+  },
+  "base_policy": {
+    "force_atol_n": 1e-10,
+    "force_rtol": 1e-09,
+    "displacement_atol_m": 1e-12,
+    "displacement_rtol": 1e-09,
+    "linear_rtol": 1e-10,
+    "max_newton": 15,
+    "linear_cycles": 8,
+    "line_search_steps": 12
+  },
+  "input_sha256": "4381b7e38ad7039d213f6cd428f16227a0f69272cf6fd0cb98c03c597e6d2fce",
+  "runtime_manifest_sha256": "aad9cf3d6ede92716e152495d70aa0c3b46e93bcd1880bce2450ed41cc1320c7",
+  "trials": [
+    {
+      "linear_cycles": 8,
+      "status": "numerical_failure",
+      "reason": "linear_solve",
+      "attempts": [
+        {
+          "iteration": 0,
+          "force_residual_n": 19.698301571904786,
+          "force_limit_n": 1.9797012698853396e-08,
+          "linear_info": 0,
+          "linear_iterations": 421,
+          "linear_residual_n": 4.261833154693653e-10,
+          "linear_limit_n": 1.969830157190479e-09,
+          "correction_m": 0.0020387244175133564,
+          "line_search": [
+            {
+              "alpha": 1.0,
+              "residual_n": 0.3031192484285199
+            }
+          ]
+        },
+        {
+          "iteration": 1,
+          "force_residual_n": 0.3031192484285199,
+          "force_limit_n": 4.0309609443391394e-10,
+          "linear_info": 0,
+          "linear_iterations": 420,
+          "linear_residual_n": 1.7736043556242826e-11,
+          "linear_limit_n": 3.031192484285199e-11,
+          "correction_m": 8.249942863022494e-05,
+          "line_search": [
+            {
+              "alpha": 1.0,
+              "residual_n": 4.91072667142486e-05
+            }
+          ]
+        },
+        {
+          "iteration": 2,
+          "force_residual_n": 4.91072667142486e-05,
+          "force_limit_n": 1.0618337313205331e-10,
+          "linear_info": 0,
+          "linear_iterations": 416,
+          "linear_residual_n": 4.739368115937406e-15,
+          "linear_limit_n": 4.91072667142486e-15,
+          "correction_m": 2.85137425402641e-08,
+          "line_search": [
+            {
+              "alpha": 1.0,
+              "residual_n": 2.72126622952679e-12
+            }
+          ]
+        },
+        {
+          "iteration": 3,
+          "force_residual_n": 2.72126622952679e-12,
+          "force_limit_n": 1.061846955161569e-10,
+          "linear_info": 8,
+          "linear_iterations": 471,
+          "linear_residual_n": 2.993855998822536e-22,
+          "linear_limit_n": 2.72126622952679e-22
+        }
+      ],
+      "solve_s": 29.841472883999813
+    },
+    {
+      "linear_cycles": 12,
+      "status": "passed",
+      "attempts": [
+        {
+          "iteration": 0,
+          "force_residual_n": 19.698301571904786,
+          "force_limit_n": 1.9797012698853396e-08,
+          "linear_info": 0,
+          "linear_iterations": 421,
+          "linear_residual_n": 4.261833154693653e-10,
+          "linear_limit_n": 1.969830157190479e-09,
+          "correction_m": 0.0020387244175133564,
+          "line_search": [
+            {
+              "alpha": 1.0,
+              "residual_n": 0.3031192484285199
+            }
+          ]
+        },
+        {
+          "iteration": 1,
+          "force_residual_n": 0.3031192484285199,
+          "force_limit_n": 4.0309609443391394e-10,
+          "linear_info": 0,
+          "linear_iterations": 420,
+          "linear_residual_n": 1.7736043556242826e-11,
+          "linear_limit_n": 3.031192484285199e-11,
+          "correction_m": 8.249942863022494e-05,
+          "line_search": [
+            {
+              "alpha": 1.0,
+              "residual_n": 4.91072667142486e-05
+            }
+          ]
+        },
+        {
+          "iteration": 2,
+          "force_residual_n": 4.91072667142486e-05,
+          "force_limit_n": 1.0618337313205331e-10,
+          "linear_info": 0,
+          "linear_iterations": 416,
+          "linear_residual_n": 4.739368115937406e-15,
+          "linear_limit_n": 4.91072667142486e-15,
+          "correction_m": 2.85137425402641e-08,
+          "line_search": [
+            {
+              "alpha": 1.0,
+              "residual_n": 2.72126622952679e-12
+            }
+          ]
+        },
+        {
+          "iteration": 3,
+          "force_residual_n": 2.72126622952679e-12,
+          "force_limit_n": 1.061846955161569e-10,
+          "linear_info": 0,
+          "linear_iterations": 506,
+          "linear_residual_n": 4.184869146196818e-23,
+          "linear_limit_n": 2.72126622952679e-22,
+          "correction_m": 2.582886869194086e-15
+        }
+      ],
+      "solve_s": 28.59427362999122,
+      "hvp_calls": 1798,
+      "audit": {
+        "residual_ratio": 0.025614447756752427,
+        "position_update_error_m": 5.421010862427522e-20,
+        "energy_ledger_error_j": 7.37257477290143e-18,
+        "projected_gradient_upper": 0.1252515183478838
+      },
+      "audit_passed": true
+    }
+  ],
+  "training_eligible": false,
+  "r1_complete": false
+}

@@ -1,0 +1,144 @@
+{
+  "source_run": "experiments/artifacts/runs/teacher_precision_compare/20260913_smoke_v2",
+  "manifest_sha256": "5b0c727ba53c479f717296c4b2de29bb769cecc5444063147e6d865301453793",
+  "comparison_sha256": "2e6d7316f87ac26cf2484402e27415589cfdde7f533919013d760c1c122c148d",
+  "analysis_script_sha256": "60d4ceea57cea3e9860b77dc1ba2fd3226ba25a5e529dd834cceeeb3a10d7aee",
+  "trajectory": {
+    "fp64_vs_reference_hilo": {
+      "common_successful_steps": 128,
+      "moving_common_steps": 64,
+      "time_s": 0.03333333333333333,
+      "max_position_component_difference_m": 1.720241413176068e-17,
+      "max_velocity_component_difference_m_s": 4.888188831328372e-13,
+      "max_area_weighted_position_rms_m": 4.1385570139998235e-18,
+      "max_area_weighted_velocity_rms_m_s": 1.0671849641557726e-13
+    },
+    "fp32_vs_reference_hilo": {
+      "common_successful_steps": 64,
+      "moving_common_steps": 0,
+      "time_s": 0.016666666666666666,
+      "max_position_component_difference_m": 0.0,
+      "max_velocity_component_difference_m_s": 0.0,
+      "max_area_weighted_position_rms_m": 0.0,
+      "max_area_weighted_velocity_rms_m_s": 0.0,
+      "interpretation": "공통 성공 구간은 무운동뿐이거나 없습니다. 동적 궤적 일치의 근거가 아닙니다."
+    },
+    "fp32_vs_fp64": {
+      "common_successful_steps": 64,
+      "moving_common_steps": 0,
+      "time_s": 0.016666666666666666,
+      "max_position_component_difference_m": 0.0,
+      "max_velocity_component_difference_m_s": 0.0,
+      "max_area_weighted_position_rms_m": 0.0,
+      "max_area_weighted_velocity_rms_m_s": 0.0,
+      "interpretation": "공통 성공 구간은 무운동뿐이거나 없습니다. 동적 궤적 일치의 근거가 아닙니다."
+    }
+  },
+  "independent_analysis_errors": 0,
+  "lanes": {
+    "reference_hilo": {
+      "status": "complete",
+      "completed_steps": 128,
+      "last_sample": {
+        "file": "frame_0001.npz",
+        "independent_update_error_m": 5.816113682013476e-26,
+        "kinetic_energy_j": 2.676386284225825e-10,
+        "independent_energy_balance_residual_j": 1.0541706048649425e-23,
+        "energy_ledger_difference_j": 0.0,
+        "pinned_state_max": 0.0,
+        "candidate_failed": false,
+        "internal_force_residual_n": 8.256296995346938e-12,
+        "independent_force_residual_n": 8.256296995325385e-12,
+        "independent_force_ratio_official": 0.08255309935007964,
+        "internal_linear_residual_n": 9.235565279479402e-21,
+        "independent_linear_relative_residual": 1.1186086599881649e-09,
+        "aero_force_difference_n": 2.949243077532298e-21,
+        "elastic_energy_j": 1.7577160141251975e-12,
+        "max_strain_component": 6.512168582162303e-11,
+        "linear_solve_in_sample_step": true,
+        "assembly_relative_error": 3.5080630609175943e-16,
+        "assembly_relative_tolerance": 1e-10,
+        "newton_iterations_last_attempt": 1,
+        "linear_iterations_cumulative": 191,
+        "failure_code": 0
+      },
+      "gpu_array_dtypes": {
+        "state": "<class 'warp._src.types.float64'>",
+        "force": "<class 'warp._src.types.vec3d'>",
+        "mass": "<class 'warp._src.types.float64'>",
+        "current": "<class 'warp._src.types.float64'>",
+        "cudss_rhs": "<class 'warp._src.types.float64'>",
+        "gmres_basis": "<class 'warp._src.types.float64'>",
+        "reduction": "<class 'warp._src.types.float64'>"
+      }
+    },
+    "fp64": {
+      "status": "complete",
+      "completed_steps": 128,
+      "last_sample": {
+        "file": "frame_0001.npz",
+        "independent_update_error_m": 1.8924664568991515e-22,
+        "kinetic_energy_j": 2.676386284225823e-10,
+        "independent_energy_balance_residual_j": 1.0132962503774589e-23,
+        "energy_ledger_difference_j": 0.0,
+        "pinned_state_max": 0.0,
+        "candidate_failed": false,
+        "internal_force_residual_n": 8.240711599701093e-12,
+        "independent_force_residual_n": 8.240711599700298e-12,
+        "independent_force_ratio_official": 0.08239726402654698,
+        "internal_linear_residual_n": 9.224409400079628e-21,
+        "independent_linear_relative_residual": 1.1193705153618962e-09,
+        "aero_force_difference_n": 2.949243077532298e-21,
+        "elastic_energy_j": 1.7577160141252455e-12,
+        "max_strain_component": 6.512190786622796e-11,
+        "linear_solve_in_sample_step": true,
+        "assembly_relative_error": 3.5612641625156893e-16,
+        "assembly_relative_tolerance": 1e-10,
+        "newton_iterations_last_attempt": 1,
+        "linear_iterations_cumulative": 191,
+        "failure_code": 0
+      },
+      "gpu_array_dtypes": {
+        "state": "<class 'warp._src.types.float64'>",
+        "force": "<class 'warp._src.types.vec3d'>",
+        "mass": "<class 'warp._src.types.float64'>",
+        "current": "<class 'warp._src.types.float64'>",
+        "cudss_rhs": "<class 'warp._src.types.float64'>",
+        "gmres_basis": "<class 'warp._src.types.float64'>",
+        "reduction": "<class 'warp._src.types.float64'>"
+      }
+    },
+    "fp32": {
+      "status": "solver_failure",
+      "completed_steps": 64,
+      "last_sample": {
+        "file": "frame_0001.npz",
+        "candidate_failed": true,
+        "internal_force_residual_n": 1.0466679606357943e-12,
+        "independent_force_residual_n": 8.5828861443795e-13,
+        "independent_force_ratio_official": 0.008581859919104205,
+        "internal_linear_residual_n": 4.603342446812819e-13,
+        "independent_linear_relative_residual": 4.519967265123561e-06,
+        "aero_force_difference_n": 1.876614699160497e-12,
+        "elastic_energy_j": 6.321582509893589e-18,
+        "max_strain_component": 2.220446049250313e-16,
+        "linear_solve_in_sample_step": true,
+        "assembly_relative_error": 1.6397461877204478e-07,
+        "assembly_relative_tolerance": 1e-10,
+        "newton_iterations_last_attempt": 1,
+        "linear_iterations_cumulative": 5,
+        "failure_code": 7
+      },
+      "gpu_array_dtypes": {
+        "state": "<class 'warp._src.types.float32'>",
+        "force": "<class 'warp._src.types.vec3f'>",
+        "mass": "<class 'warp._src.types.float32'>",
+        "current": "<class 'warp._src.types.float32'>",
+        "cudss_rhs": "<class 'warp._src.types.float32'>",
+        "gmres_basis": "<class 'warp._src.types.float32'>",
+        "reduction": "<class 'warp._src.types.float32'>"
+      }
+    }
+  },
+  "scope": "각 lane 2프레임 요청·프레임 마지막 후보 표본 검산. 장기 비교·성능 채택 아님."
+}

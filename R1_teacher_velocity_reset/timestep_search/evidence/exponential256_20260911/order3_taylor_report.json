@@ -1,0 +1,110 @@
+{
+  "input_sha256": "b1998e0cc033748c54ccce582798ac9c418fb958651ef4fe17e130a8c179e1df",
+  "source_sha256": "1e3c809b13e0837a3636b089d37be465fe790f582e0a5d7d0a1fc2d12de7be89",
+  "wind_sha256": "db9c01a01eecfa78fc1dc581bb8505b8bc518c368001a98faf7894432a60bc59",
+  "runtime_manifest_sha256": "dec67d896537efadf38bbd81f52cb7d726abe4a73e58fcc1b5180ffef52a9df6",
+  "environment": {
+    "device": "cuda:0",
+    "numpy": "2.4.4",
+    "scipy": "1.18.1",
+    "compute_backend": "precision_hvp_graph",
+    "linear_solver_device": "cpu",
+    "cuda_graph": true,
+    "state_encoding": "hi_lo_v1",
+    "state_mantissa_bits": 64,
+    "warp": "1.17.0",
+    "gpu_name": "NVIDIA GeForce GTX 1080 Ti"
+  },
+  "policy": {
+    "force_atol_n": 1e-10,
+    "force_rtol": 1e-09,
+    "displacement_atol_m": 1e-12,
+    "displacement_rtol": 1e-09,
+    "linear_rtol": 1e-10,
+    "max_newton": 15,
+    "linear_cycles": 3,
+    "line_search_steps": 12,
+    "linear_restart": 240,
+    "linear_preconditioner": "current"
+  },
+  "input_time_s": 3.266666666666723,
+  "dt_s": 0.016666666666666666,
+  "substeps": 1,
+  "multiplier": 256.0,
+  "training_eligible": false,
+  "continuous_geometry_verified": false,
+  "status": "development_complete",
+  "rows": [
+    {
+      "index": 0,
+      "solve_s": 218.7062352750072,
+      "diagnostics": {
+        "integrator": "p3_shell_exprb3_trial_v1",
+        "order": 3,
+        "dt_s": 0.016666666666666666,
+        "actions": [
+          {
+            "seconds": 120.07949910699972,
+            "matvec_columns": 25129
+          },
+          {
+            "seconds": 96.7253783710039,
+            "matvec_columns": 20273
+          }
+        ],
+        "training_eligible": false,
+        "assembly": {
+          "colors": 276,
+          "nnz": 2478006,
+          "relative_action_error": 3.943764429780607e-16,
+          "assembly_s": 0.9759870929992758
+        },
+        "max_mass_solve_relative_residual": 9.712201120922926e-16,
+        "coordinate_scale_s_inv": 166433.4093388499,
+        "external_work_j": 0.00020501453363489433,
+        "energy_balance_residual_j": 0.0006790848341088988,
+        "embedded_position_correction_m": 0.004062485691415555,
+        "embedded_velocity_correction_m_s": 0.841191911204544
+      },
+      "audit": {
+        "force_evaluation_ratios": [
+          0.010134188398334461,
+          0.0007215135513970903,
+          0.0007110862580886742
+        ],
+        "energy_ledger_error_j": 6.966104837337773e-18,
+        "sampled_geometry": [
+          {
+            "projected_gradient_upper": 0.17592677679617033,
+            "roundoff_margin": 2.6900238788024614e-09,
+            "injectivity_sufficient_condition": true,
+            "area_ratio_lower": 0.6790966772015489,
+            "time_degree": 0
+          },
+          {
+            "projected_gradient_upper": 0.20589434034440254,
+            "roundoff_margin": 3.138369000758948e-09,
+            "injectivity_sufficient_condition": true,
+            "area_ratio_lower": 0.6306037986970515,
+            "time_degree": 0
+          },
+          {
+            "projected_gradient_upper": 0.1983863305432133,
+            "roundoff_margin": 2.9920501246971963e-09,
+            "injectivity_sufficient_condition": true,
+            "area_ratio_lower": 0.6425844750599745,
+            "time_degree": 0
+          }
+        ],
+        "scope": "힘 평가·질량 풀이·표본 기하·에너지 장부 검산. Newton 단계 방정식 잔차나 전체 시간 곡선 기하/정확도 인증 아님.",
+        "passed": true
+      },
+      "end_time_s": 3.2833333333333896
+    }
+  ],
+  "end_time_s": 3.2833333333333896,
+  "endpoint_relative_mass_l2": {
+    "u": 0.005803395039806316,
+    "v": 0.5803091112058767
+  }
+}

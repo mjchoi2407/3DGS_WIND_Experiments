@@ -1,0 +1,43 @@
+{
+  "schema": "wind3dgs.p3_shell_gpu_validation.v1",
+  "phase": "wind",
+  "status": "completed",
+  "training_eligible": false,
+  "r1_complete": false,
+  "generated_training_samples": 0,
+  "result": {
+    "passed": true,
+    "cpu_gpu_parity_assessed": true,
+    "execution_completed": true,
+    "cpu_gpu_errors": {
+      "u_m": {
+        "relative": 9.979357416442918e-16,
+        "absolute_rms_peak": 4.737487532361462e-17,
+        "reference_peak": 0.047472871595475044
+      },
+      "v_m_s": {
+        "relative": 1.0066063211819944e-12,
+        "absolute_rms_peak": 1.945041008902622e-12,
+        "reference_peak": 1.9322757745239298
+      },
+      "delta_u_m": {
+        "relative": 9.979357416442918e-16,
+        "absolute_rms_peak": 4.737487532361462e-17,
+        "reference_peak": 0.047472871595475044
+      }
+    },
+    "parity_policy": {
+      "relative": 1e-06,
+      "displacement_absolute_m": 1e-09,
+      "velocity_absolute_m_s": 1e-07
+    },
+    "integration_elapsed_s": 115.06301868199807,
+    "removed_kinetic_j": 0.1794065982074598,
+    "hvp_calls": 15159,
+    "max_force_residual_limit_ratio": 0.06240508943571655,
+    "total_energy_balance_j": -2.495142365858341e-08,
+    "scope": "같은 입력/물리식/60Hz force clock의 CPU/CUDA 구현 대조. mesh/time 수렴 판정 아님",
+    "reference_cpu_report_elapsed_s": 2347.778029956
+  },
+  "elapsed_s": 122.58974909500103
+}

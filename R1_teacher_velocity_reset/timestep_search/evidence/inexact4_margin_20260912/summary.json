@@ -1,0 +1,138 @@
+{
+  "input_time_s": 2.116666666666666,
+  "frame": 127,
+  "dt_s": 0.00026041666666666666,
+  "steps": 256,
+  "frame_count": 4,
+  "policy": {
+    "force_atol_n": 1e-10,
+    "force_rtol": 1e-09,
+    "displacement_atol_m": 1e-12,
+    "displacement_rtol": 1e-09,
+    "linear_rtol": 1e-10,
+    "max_newton": 15,
+    "linear_cycles": 3,
+    "line_search_steps": 12,
+    "linear_restart": 240,
+    "linear_preconditioner": "current"
+  },
+  "environment": {
+    "device": "cuda:0",
+    "numpy": "2.4.4",
+    "scipy": "1.18.1",
+    "compute_backend": "precision_hvp_graph",
+    "linear_solver_device": "cpu",
+    "cuda_graph": true,
+    "state_encoding": "hi_lo_v1",
+    "state_mantissa_bits": 64,
+    "warp": "1.17.0",
+    "gpu_name": "NVIDIA GeForce GTX 1080 Ti"
+  },
+  "gpu_shared_with_main": false,
+  "timing_is_controlled_benchmark": false,
+  "main_modified": false,
+  "training_eligible": false,
+  "r1_complete": false,
+  "source_frame_sha256": "fce44d201c03243f66d3537331bceb32a929d946719c21e4d482da00c063227a",
+  "same_dt_curve_comparisons": {
+    "ew": {
+      "u_relative_upper": 0.0,
+      "v_relative_upper": 0.0,
+      "max_u_difference_m": 0.0,
+      "max_v_difference_m_s": 0.0
+    },
+    "margin30": {
+      "u_relative_upper": 4.478590007856062e-14,
+      "v_relative_upper": 1.55249094238478e-10,
+      "max_u_difference_m": 7.348193776547662e-15,
+      "max_v_difference_m_s": 1.5720698480243146e-10
+    },
+    "margin30_cap4": {
+      "u_relative_upper": 4.550127881979054e-14,
+      "v_relative_upper": 1.5908534943817754e-10,
+      "max_u_difference_m": 7.257391844602001e-15,
+      "max_v_difference_m_s": 1.5385111949348367e-10
+    }
+  },
+  "trials": [
+    {
+      "mode": "ew",
+      "status": "passed",
+      "internal_force_fraction": 1.0,
+      "linear_cap": 0.001,
+      "solve_s": 146.29366207733983,
+      "audit_s": 273.3966679427831,
+      "completed_steps": 256,
+      "hvp_calls": 9277,
+      "newton_corrections": 613,
+      "linear_iterations": 8006,
+      "max_force_ratio": 0.9923746162173991,
+      "all_internal_targets_met": true,
+      "all_audits_passed": true,
+      "max_linear_residual_ratio": 0.9945480627553329,
+      "max_update_error_m": 2.710505431213761e-20,
+      "max_energy_ledger_error_j": 4.689174395999807e-18,
+      "max_projected_gradient_upper": 0.03504747726476378,
+      "fallback_count": 0,
+      "newton_histogram": {
+        "3": 101,
+        "2": 155
+      }
+    },
+    {
+      "mode": "margin30",
+      "status": "passed",
+      "internal_force_fraction": 0.3,
+      "linear_cap": 0.001,
+      "solve_s": 189.15984112981823,
+      "audit_s": 273.9632071645465,
+      "completed_steps": 256,
+      "hvp_calls": 12289,
+      "newton_corrections": 731,
+      "linear_iterations": 10769,
+      "max_force_ratio": 0.2975193611739592,
+      "all_internal_targets_met": true,
+      "all_audits_passed": true,
+      "max_linear_residual_ratio": 0.9947125311209007,
+      "max_update_error_m": 2.710505431213761e-20,
+      "max_energy_ledger_error_j": 3.7947076036992655e-18,
+      "max_projected_gradient_upper": 0.03504747726349715,
+      "fallback_count": 0,
+      "newton_histogram": {
+        "3": 219,
+        "2": 37
+      }
+    },
+    {
+      "mode": "margin30_cap4",
+      "status": "passed",
+      "internal_force_fraction": 0.3,
+      "linear_cap": 0.0001,
+      "solve_s": 121.32827172617544,
+      "audit_s": 273.6845494778536,
+      "completed_steps": 256,
+      "hvp_calls": 8325,
+      "newton_corrections": 512,
+      "linear_iterations": 7279,
+      "max_force_ratio": 0.020742917039061313,
+      "all_internal_targets_met": true,
+      "all_audits_passed": true,
+      "max_linear_residual_ratio": 0.9959622599948165,
+      "max_update_error_m": 2.710505431213761e-20,
+      "max_energy_ledger_error_j": 3.774378812965162e-18,
+      "max_projected_gradient_upper": 0.035047477263619294,
+      "fallback_count": 0,
+      "newton_histogram": {
+        "2": 256
+      }
+    }
+  ],
+  "prior_ew_repeat_exact": {
+    "u": true,
+    "v": true
+  },
+  "selected_vs_prior_strict_max_component_difference": {
+    "u": 1.8489712799024671e-16,
+    "v": 2.7238682280718426e-12
+  }
+}

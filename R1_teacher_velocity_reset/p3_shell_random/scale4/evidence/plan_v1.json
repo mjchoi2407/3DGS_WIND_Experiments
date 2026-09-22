@@ -1,0 +1,38 @@
+{
+  "conditions": [
+    "scale4_natural_m8_s128_v1",
+    "scale4_natural_m16_s128_v1",
+    "scale4_natural_m16_s256_v1",
+    "scale4_natural_m16_s256_backward_v1",
+    "scale4_natural_m32_s256_v1",
+    "scale4_natural_m32_s128_v1",
+    "scale4_natural_m32_s256_backward_v1"
+  ],
+  "required_conditions": [
+    "scale4_natural_m8_s128_v1",
+    "scale4_natural_m16_s128_v1",
+    "scale4_natural_m16_s256_v1",
+    "scale4_natural_m16_s256_backward_v1",
+    "scale4_natural_m32_s256_v1",
+    "scale4_natural_m32_s128_v1",
+    "scale4_natural_m32_s256_backward_v1"
+  ],
+  "comparisons": [
+    "scale4_space8_16_s128_v1",
+    "scale4_time16_s128_256_v1",
+    "scale4_direction16_s256_v1",
+    "scale4_space16_32_s256_v1",
+    "scale4_time32_s128_256_v1",
+    "scale4_direction32_s256_v1"
+  ],
+  "required_comparisons": [
+    "scale4_time16_s128_256_v1",
+    "scale4_direction16_s256_v1",
+    "scale4_space16_32_s256_v1",
+    "scale4_time32_s128_256_v1",
+    "scale4_direction32_s256_v1"
+  ],
+  "quadrature_report": "scale4_natural_m32_s256_quadrature_v1.json",
+  "coarse_failure": "n8→16/sub128 natural의 속도1.087961809% 실패를 보존한다. 기존1% 기준을 유지하고 n16→32와 n32의 시간·방향을 보완 판정으로 사용한다. 모든 coarse 분기 결과도 표시한다.",
+  "scope": "승인1–3단계의 수치 세분 보완. 새 물리식·후속 풍속·학습 적격성 채택·학습데이터0."
+}

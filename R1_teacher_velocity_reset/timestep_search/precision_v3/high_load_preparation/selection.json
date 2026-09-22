@@ -1,0 +1,177 @@
+{
+  "scope": "limited_observed_existing_3_shape_4s_wind_runs; not global generation maximum",
+  "missing_shapes": [],
+  "force_selection": "free DOF full field L2 and local node max; never resultant sum",
+  "provenance": {
+    "reference_rectangle": {
+      "source": "experiments/artifacts/runs/teacher_timestep_search/newmark_dt_gauss_retry_bend500_v1/reference_rectangle",
+      "config_sha256": "02d2922f55072ef79cf81057d7d9a2b27992d20b89ca230e83ea337ead32a111",
+      "forcing_sha256": "6f02739a8fc103b80dcb5f747a30c967afeb4b2adbf5fc65e94891a6285d9472",
+      "report_sha256": "bf9f3b6bc726dcbef7ac864820e254f340db186a0c58027e9e240f90bcca98c0",
+      "timings_sha256": "0966c34e54a49fd067edeb1cea77c26deacb4bada0f8191fa0b532e7c15a352c",
+      "chunks": {
+        "chunks/0000.npz": "c17d7df4c6309a271e9f1e909893b58ad61a819cb51cc0a95caccd481cef7db0",
+        "chunks/0000.audit.npz": "a05e69055bb806cec669f89da0ac41fae233d02178f65d543a15df33188f4f0b",
+        "chunks/0001.npz": "933c249533986fde283ec0a27b131aef83d9155a4520b28f52971dd2113d1af8",
+        "chunks/0001.audit.npz": "c8cf059723ac42284eab6008bb0af115d6f83f0076620db725bdbaba4d51d4f9"
+      },
+      "frames": 240,
+      "start_s": 2.0,
+      "end_s": 6.0,
+      "reconstruction": "stored held minus original consistent mass-row-sum gravity; same model source, current CPU preprocessing",
+      "current_cpu_mass_values_sha256": "2587896ad90f9a74de4dad547155211d521f68974a3c870ad4a0070d8412fa9f"
+    },
+    "triangular_flag": {
+      "source": "experiments/artifacts/runs/teacher_timestep_search/newmark_dt_gauss_retry_bend500_v1/triangular_flag",
+      "config_sha256": "56e60cfcbd6c96d733a9b0ca69ac4ed1d01199d023558b605cd7e70bd308f9ce",
+      "forcing_sha256": "6f02739a8fc103b80dcb5f747a30c967afeb4b2adbf5fc65e94891a6285d9472",
+      "report_sha256": "200564830a0b21d9b584b16d27d620c54a87e0c4284c30766b3fa1832503f4e2",
+      "timings_sha256": "380c9e32976836c4a77adbc78ddb22c78b65026b7c2283552a98fe633e03d676",
+      "chunks": {
+        "chunks/0000.npz": "824dc0ba1fa49d55cc5a0784f27f614b948d0ff350a02d81166973ee3f555aa6",
+        "chunks/0000.audit.npz": "98812847377aa356d06d5bd3d592fe0de8839c3d46aff92e1df066b304f69b0d",
+        "chunks/0001.npz": "c1d15f98d75cf6b0a4e72b2f01d4b29fbed1373f77adc2f1dc38bfd6d3cc7024",
+        "chunks/0001.audit.npz": "ccdba000a15340a05ee1e4362b8c263064d0d0eab14d6e41758f5027c1d53709"
+      },
+      "frames": 240,
+      "start_s": 2.0,
+      "end_s": 6.0,
+      "reconstruction": "stored held minus original consistent mass-row-sum gravity; same model source, current CPU preprocessing",
+      "current_cpu_mass_values_sha256": "886504d9df3c34a8c22680f2efddd295a85ede6926bf562a00ad63e5564b2287"
+    },
+    "handkerchief": {
+      "source": "experiments/artifacts/runs/teacher_timestep_search/newmark_dt_gauss_retry_bend500_v1/handkerchief",
+      "config_sha256": "da55f68bd7a4ae46f480fd0e21a135a6f5e40873686baa6d9f657f0c3ed093ef",
+      "forcing_sha256": "6f02739a8fc103b80dcb5f747a30c967afeb4b2adbf5fc65e94891a6285d9472",
+      "report_sha256": "f2e5c669241dd51653f5f4b5995a4f9a5eccf1d87ab5dbd2ef56fa0fcc90804b",
+      "timings_sha256": "4313d5ab3c563c61c25ec0b6348ae4f05b99f1c7eeb2bfd43bc35f8c598f87c7",
+      "chunks": {
+        "chunks/0000.npz": "c9b417adbeeab698872d0515d6c55b9211d9fde184569995eed8b61c858f82d4",
+        "chunks/0000.audit.npz": "638f3d66102eb438a2c7ed56810c3ac286c48fe0d7e0c604260a9a3aa564b3cc",
+        "chunks/0001.npz": "501103e056925c17242c964369a037b1c07b5b40a284ee43c6a67f6ffb5ec1ff",
+        "chunks/0001.audit.npz": "0c88356cc78f9288e67f7c52e3d5b38f6d77127d64939ee62f92014dfc95cc9d"
+      },
+      "frames": 240,
+      "start_s": 2.0,
+      "end_s": 6.0,
+      "reconstruction": "stored held minus original consistent mass-row-sum gravity; same model source, current CPU preprocessing",
+      "current_cpu_mass_values_sha256": "49ea7a1ab5ca596e2b5cd51aaff8cd673411a82f4b6a5e3c2c6d55bcdf9f20b6"
+    }
+  },
+  "windows": [
+    {
+      "shape": "reference_rectangle",
+      "begin": 41,
+      "end": 80,
+      "events": [
+        {
+          "criterion": "wind_free_l2_n",
+          "value": 0.03631288124693051,
+          "begin": 41,
+          "end": 72,
+          "peak": 56,
+          "rise_observed": true,
+          "decline_observed": true,
+          "left_censored": false,
+          "right_censored": false,
+          "post_minimum_response_frames": 6
+        },
+        {
+          "criterion": "wind_local_node_max_n",
+          "value": 0.024634705204652385,
+          "begin": 41,
+          "end": 72,
+          "peak": 56,
+          "rise_observed": true,
+          "decline_observed": true,
+          "left_censored": false,
+          "right_censored": false,
+          "post_minimum_response_frames": 6
+        },
+        {
+          "criterion": "direction_change_weighted_n_s",
+          "value": 1.4955916813076393,
+          "begin": 41,
+          "end": 72,
+          "peak": 56,
+          "rise_observed": true,
+          "decline_observed": true,
+          "left_censored": false,
+          "right_censored": false,
+          "post_minimum_response_frames": 6
+        },
+        {
+          "criterion": "drop_n_s",
+          "value": 1.1881365262206927,
+          "begin": 42,
+          "end": 73,
+          "peak": 57,
+          "rise_observed": true,
+          "decline_observed": true,
+          "left_censored": false,
+          "right_censored": false,
+          "post_minimum_response_frames": 6
+        },
+        {
+          "criterion": "rise_n_s",
+          "value": 0.9901890533623787,
+          "begin": 49,
+          "end": 80,
+          "peak": 64,
+          "rise_observed": true,
+          "decline_observed": true,
+          "left_censored": false,
+          "right_censored": false,
+          "post_minimum_response_frames": 6
+        }
+      ],
+      "id": "HL00_reference_rectangle",
+      "frames": 39,
+      "historical_compute_audit_s": 457.8617239649975,
+      "physical_start_s": 2.683333333333333,
+      "physical_end_s": 3.3333333333333335,
+      "historical_time_share": 0.015892018978943462
+    },
+    {
+      "shape": "reference_rectangle",
+      "begin": 215,
+      "end": 240,
+      "events": [
+        {
+          "criterion": "gmres_iterations",
+          "value": 91317,
+          "begin": 215,
+          "end": 240,
+          "peak": 236,
+          "rise_observed": true,
+          "decline_observed": true,
+          "left_censored": false,
+          "right_censored": true,
+          "post_minimum_response_frames": 0
+        },
+        {
+          "criterion": "compute_audit_s",
+          "value": 300.13468204499804,
+          "begin": 215,
+          "end": 240,
+          "peak": 236,
+          "rise_observed": true,
+          "decline_observed": true,
+          "left_censored": false,
+          "right_censored": true,
+          "post_minimum_response_frames": 0
+        }
+      ],
+      "id": "HL01_reference_rectangle",
+      "frames": 25,
+      "historical_compute_audit_s": 6818.4107685920535,
+      "physical_start_s": 5.583333333333333,
+      "physical_end_s": 6.0,
+      "historical_time_share": 0.23666165496939667
+    }
+  ],
+  "historical_total_compute_audit_s": 28810.796448937872,
+  "selected_unique_time_share": 0.25255367394834016,
+  "historical_cost_note": "과거 장치/환경/궤적 실측 합계; 새 실행 예상 시간/속도는 아님",
+  "training_eligible": false
+}

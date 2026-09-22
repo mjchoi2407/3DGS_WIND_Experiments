@@ -1,0 +1,23 @@
+{
+  "resolution": 4,
+  "substeps": 8,
+  "frames": 2,
+  "fps": 60,
+  "wind_scale": 4.0,
+  "seed": 20260909,
+  "device": "cuda:0",
+  "smoke": true,
+  "order": [
+    "baseline",
+    "fast",
+    "audit_baseline",
+    "audit_fast",
+    "compare"
+  ],
+  "threshold_relative": 0.01,
+  "scope": "CPU 반복 풀이 유지. 새로운 GPU 보조 풀이 선택을 대신하지 않음.",
+  "other_gpu_load_accepted": true,
+  "training_eligible": false,
+  "r1_complete": false,
+  "generated_training_samples": 0
+}

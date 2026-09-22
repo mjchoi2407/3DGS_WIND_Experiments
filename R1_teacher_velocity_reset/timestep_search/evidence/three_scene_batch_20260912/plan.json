@@ -1,0 +1,48 @@
+{
+  "schema": "three_scene_diagnostic_v1",
+  "runtime_versions": {
+    "python": "3.12.3 (main, Jun 19 2026, 12:46:00) [GCC 13.3.0]",
+    "numpy": "2.4.4",
+    "scipy": "1.18.1",
+    "warp-lang": "1.17.0"
+  },
+  "shapes": [
+    "reference_rectangle",
+    "triangular_flag",
+    "handkerchief"
+  ],
+  "frames": 600,
+  "fps": 60,
+  "substeps": 64,
+  "per_scene_budget_s": 14400,
+  "scene_budget_s": {
+    "reference_rectangle": 14400,
+    "triangular_flag": null,
+    "handkerchief": null
+  },
+  "official_policy": {
+    "force_atol_n": 1e-10,
+    "force_rtol": 1e-09,
+    "displacement_atol_m": 1e-12,
+    "displacement_rtol": 1e-09,
+    "linear_rtol": 1e-10,
+    "max_newton": 15,
+    "linear_cycles": 3,
+    "line_search_steps": 12,
+    "linear_restart": 240,
+    "linear_preconditioner": "current"
+  },
+  "internal_force_fraction": 0.3,
+  "linear_cap": 0.0001,
+  "material": {
+    "E_pa": 1000000.0,
+    "nu": 0.3,
+    "h_m": 0.01,
+    "area_density_kg_m2": 0.1
+  },
+  "training_eligible": false,
+  "r1_complete": false,
+  "audit_backend": "GPU 고정밀 힘 재평가·독립 운동방정식 재구성",
+  "geometry_scope": "수치 보간 진단; 비정규 샘플의 엄밀한 roundoff 인증 미완료",
+  "temporal_accuracy": "더 작은 dt와의 비교 미실행"
+}

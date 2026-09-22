@@ -1,0 +1,241 @@
+{
+  "date": "2026-09-13",
+  "scope": "각 조건 첫1프레임과 baseline 직사각형 저장 재개1프레임. 전체4초 검증 아님",
+  "run": "experiments/artifacts/runs/teacher_timestep_search/20260913_cloth_gpu_smoke_v2",
+  "sweep_manifest_sha256": "5dac59c959e43fc3631a6aa0d118c307c4d7a2f7d5459fe2d65b668acc6458ae",
+  "prepared_run": "experiments/artifacts/runs/teacher_timestep_search/20260913_cloth_coarse_4s_gpu_v2",
+  "prepared_manifest_sha256": "db4468f74912bacd7afbcb17e54bbd98602b3ab3b70a223252678754a900012c",
+  "rows": [
+    {
+      "case": "baseline",
+      "shape": "reference_rectangle",
+      "completed_frames": 2,
+      "audited_substeps": 128,
+      "flags_nonzero": 0,
+      "maxima": [
+        0.29967896582406717,
+        2.9395337962939586e-26,
+        5.169878828456423e-26,
+        1.685829631249443e-11,
+        2.210343019726224e-12,
+        0.00011155840826480147
+      ],
+      "report_sha256": "e70dab860776a2e863788644e1f4fb7f66c67e44c1551f4720695cf1570992ba",
+      "graph_inventory": {
+        "kernels": 163,
+        "device_copies": 8,
+        "memsets": 8,
+        "children": 1,
+        "host_copies": 0,
+        "host_callbacks": 0
+      }
+    },
+    {
+      "case": "baseline",
+      "shape": "triangular_flag",
+      "completed_frames": 1,
+      "audited_substeps": 64,
+      "flags_nonzero": 0,
+      "maxima": [
+        0.0,
+        0.0,
+        0.0,
+        2.2737367544323206e-13,
+        2.274291865944633e-13,
+        2.2737367544323206e-13
+      ],
+      "report_sha256": "93b4d86b9e27f4f94153a31f95f80d5a3f83ebe0493b2206becd5257dc7e71e1",
+      "graph_inventory": {
+        "kernels": 151,
+        "device_copies": 8,
+        "memsets": 8,
+        "children": 1,
+        "host_copies": 0,
+        "host_callbacks": 0
+      }
+    },
+    {
+      "case": "baseline",
+      "shape": "handkerchief",
+      "completed_frames": 1,
+      "audited_substeps": 64,
+      "flags_nonzero": 0,
+      "maxima": [
+        0.0,
+        0.0,
+        0.0,
+        2.2737367544323206e-13,
+        2.274291865944633e-13,
+        2.2737367544323206e-13
+      ],
+      "report_sha256": "704c15199306404659b76d3a84db4f6ab906e53f5c141da4bc091f2e9b2ed060",
+      "graph_inventory": {
+        "kernels": 152,
+        "device_copies": 8,
+        "memsets": 8,
+        "children": 1,
+        "host_copies": 0,
+        "host_callbacks": 0
+      }
+    },
+    {
+      "case": "bend_010",
+      "shape": "reference_rectangle",
+      "completed_frames": 1,
+      "audited_substeps": 64,
+      "flags_nonzero": 0,
+      "maxima": [
+        0.0,
+        0.0,
+        0.0,
+        2.2737367544323206e-13,
+        2.274291865944633e-13,
+        2.2737367544323206e-13
+      ],
+      "report_sha256": "da2fd040e1f90a185255f52876330452c56f7ac184d76c0679fe044ce54f734c",
+      "graph_inventory": {
+        "kernels": 163,
+        "device_copies": 8,
+        "memsets": 8,
+        "children": 1,
+        "host_copies": 0,
+        "host_callbacks": 0
+      }
+    },
+    {
+      "case": "bend_010",
+      "shape": "triangular_flag",
+      "completed_frames": 1,
+      "audited_substeps": 64,
+      "flags_nonzero": 0,
+      "maxima": [
+        0.0,
+        0.0,
+        0.0,
+        2.2737367544323206e-13,
+        2.274291865944633e-13,
+        2.2737367544323206e-13
+      ],
+      "report_sha256": "d9e03d08faedc458ee82de4fe0af2f473d69bdd1468f3e0d76496c982cc6a342",
+      "graph_inventory": {
+        "kernels": 151,
+        "device_copies": 8,
+        "memsets": 8,
+        "children": 1,
+        "host_copies": 0,
+        "host_callbacks": 0
+      }
+    },
+    {
+      "case": "bend_010",
+      "shape": "handkerchief",
+      "completed_frames": 1,
+      "audited_substeps": 64,
+      "flags_nonzero": 0,
+      "maxima": [
+        0.0,
+        0.0,
+        0.0,
+        2.2737367544323206e-13,
+        2.274291865944633e-13,
+        2.2737367544323206e-13
+      ],
+      "report_sha256": "dd604444c027e4c5469a03eb9ae4ca4bec33643a77d6d0fb375ef87390c8c4a1",
+      "graph_inventory": {
+        "kernels": 152,
+        "device_copies": 8,
+        "memsets": 8,
+        "children": 1,
+        "host_copies": 0,
+        "host_callbacks": 0
+      }
+    },
+    {
+      "case": "bend_001",
+      "shape": "reference_rectangle",
+      "completed_frames": 1,
+      "audited_substeps": 64,
+      "flags_nonzero": 0,
+      "maxima": [
+        0.0,
+        0.0,
+        0.0,
+        2.2737367544323206e-13,
+        2.274291865944633e-13,
+        2.2737367544323206e-13
+      ],
+      "report_sha256": "5a5b3bfa172e46caf889e472fb22ee2b239ec7bf7f292d5cf999b3be2708f700",
+      "graph_inventory": {
+        "kernels": 163,
+        "device_copies": 8,
+        "memsets": 8,
+        "children": 1,
+        "host_copies": 0,
+        "host_callbacks": 0
+      }
+    },
+    {
+      "case": "bend_001",
+      "shape": "triangular_flag",
+      "completed_frames": 1,
+      "audited_substeps": 64,
+      "flags_nonzero": 0,
+      "maxima": [
+        0.0,
+        0.0,
+        0.0,
+        2.2737367544323206e-13,
+        2.274291865944633e-13,
+        2.2737367544323206e-13
+      ],
+      "report_sha256": "48c27b6aecb9ab97656c61818e94cb4ebdbc102049d40c64df85f7bdeb2a599a",
+      "graph_inventory": {
+        "kernels": 151,
+        "device_copies": 8,
+        "memsets": 8,
+        "children": 1,
+        "host_copies": 0,
+        "host_callbacks": 0
+      }
+    },
+    {
+      "case": "bend_001",
+      "shape": "handkerchief",
+      "completed_frames": 1,
+      "audited_substeps": 64,
+      "flags_nonzero": 0,
+      "maxima": [
+        0.0,
+        0.0,
+        0.0,
+        2.2737367544323206e-13,
+        2.274291865944633e-13,
+        2.2737367544323206e-13
+      ],
+      "report_sha256": "a630210fa40b08c430abbc8801cb4d71fe8ddc2488ff76fa1546ddaddcace7f0",
+      "graph_inventory": {
+        "kernels": 152,
+        "device_copies": 8,
+        "memsets": 8,
+        "children": 1,
+        "host_copies": 0,
+        "host_callbacks": 0
+      }
+    }
+  ],
+  "raw_pair_resume_boundary_exact": true,
+  "source_sha256": {
+    "code/wind3dgs/evaluation/teacher_cloth_gpu_sweep.py": "63412b9cafdabf805652d2711af1689165569ecd571cc44d41442f2a56e91ea4",
+    "code/wind3dgs/teacher/resident_cloth_recording.py": "5a466b766d8d655b8961bb0cc8c0c2466baf62d7b59a74dc0bad3fd429b03a64",
+    "code/wind3dgs/teacher/resident_audit.py": "4b1f7b431fc4a16ac7f9f27dd57700d8f237289581614a2b4a8d9e6d4b5c5e78",
+    "code/wind3dgs/teacher/resident_audit_kernels.py": "7c2e1c426c647c9afd680f436cacb46f3b20533156a5004d478e009e8222164a"
+  },
+  "tests": {
+    "resident_audit": 8,
+    "teacher_cloth_sweep": 6,
+    "teacher_three_scene_run": 8,
+    "shell_recording_viewer": 4
+  },
+  "training_eligible": false,
+  "r1_complete": false
+}

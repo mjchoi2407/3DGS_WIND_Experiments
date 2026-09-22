@@ -1,0 +1,666 @@
+{
+  "schema": "wind3dgs.p3_shell_gpu_validation.v1",
+  "phase": "operators",
+  "status": "completed",
+  "training_eligible": false,
+  "r1_complete": false,
+  "generated_training_samples": 0,
+  "result": {
+    "passed": true,
+    "cases": [
+      {
+        "resolution": 4,
+        "family": "rest",
+        "errors": {
+          "energy_j": {
+            "absolute_max": 0.0,
+            "reference_max": 0.0
+          },
+          "membrane_energy_j": {
+            "absolute_max": 0.0,
+            "reference_max": 0.0
+          },
+          "bending_volume_energy_j": {
+            "absolute_max": 0.0,
+            "reference_max": 0.0
+          },
+          "edge_energy_j": {
+            "absolute_max": 0.0,
+            "reference_max": 0.0
+          },
+          "force_n": {
+            "absolute_max": 0.0,
+            "reference_max": 0.0
+          },
+          "hvp_n": {
+            "absolute_max": 7.958078640513122e-13,
+            "reference_max": 1679.2064673990735
+          },
+          "max_normal_jump": {
+            "absolute_max": 0.0,
+            "reference_max": 0.0
+          },
+          "max_boundary_normal_jump": {
+            "absolute_max": 0.0,
+            "reference_max": 0.0
+          },
+          "fixed_normal_torque_on_shell_n_m": {
+            "absolute_max": 0.0,
+            "reference_max": 0.0
+          },
+          "min_area_ratio": {
+            "absolute_max": 0.0,
+            "reference_max": 1.0
+          },
+          "max_strain_component": {
+            "absolute_max": 0.0,
+            "reference_max": 0.0
+          }
+        },
+        "exact_repeat": true
+      },
+      {
+        "resolution": 4,
+        "family": "cylinder",
+        "errors": {
+          "energy_j": {
+            "absolute_max": 0.0,
+            "reference_max": 0.04947938952656622
+          },
+          "membrane_energy_j": {
+            "absolute_max": 0.0,
+            "reference_max": 2.690746336342681e-07
+          },
+          "bending_volume_energy_j": {
+            "absolute_max": 0.0,
+            "reference_max": 0.04961482036450582
+          },
+          "edge_energy_j": {
+            "absolute_max": 0.0,
+            "reference_max": 0.00013569991257323855
+          },
+          "force_n": {
+            "absolute_max": 8.881784197001252e-16,
+            "reference_max": 0.4803003635777799
+          },
+          "hvp_n": {
+            "absolute_max": 6.821210263296962e-13,
+            "reference_max": 1398.1443191192154
+          },
+          "max_normal_jump": {
+            "absolute_max": 0.0,
+            "reference_max": 0.0004958274446567062
+          },
+          "max_boundary_normal_jump": {
+            "absolute_max": 0.0,
+            "reference_max": 0.00024791372423384737
+          },
+          "fixed_normal_torque_on_shell_n_m": {
+            "absolute_max": 0.0,
+            "reference_max": 0.10931572651512836
+          },
+          "min_area_ratio": {
+            "absolute_max": 0.0,
+            "reference_max": 0.9999953139689959
+          },
+          "max_strain_component": {
+            "absolute_max": 0.0,
+            "reference_max": 2.9499525189158327e-05
+          }
+        },
+        "exact_repeat": true
+      },
+      {
+        "resolution": 4,
+        "family": "smooth",
+        "errors": {
+          "energy_j": {
+            "absolute_max": 0.0,
+            "reference_max": 1.0432803290484223
+          },
+          "membrane_energy_j": {
+            "absolute_max": 0.0,
+            "reference_max": 1.0293372621641057
+          },
+          "bending_volume_energy_j": {
+            "absolute_max": 0.0,
+            "reference_max": 0.013943066884316544
+          },
+          "edge_energy_j": {
+            "absolute_max": 0.0,
+            "reference_max": 2.6197021426770718e-17
+          },
+          "force_n": {
+            "absolute_max": 6.394884621840902e-14,
+            "reference_max": 38.23932796521813
+          },
+          "hvp_n": {
+            "absolute_max": 9.094947017729282e-13,
+            "reference_max": 1504.422341023762
+          },
+          "max_normal_jump": {
+            "absolute_max": 0.0,
+            "reference_max": 3.1569527117876946e-15
+          },
+          "max_boundary_normal_jump": {
+            "absolute_max": 0.0,
+            "reference_max": 1.9949319973733282e-16
+          },
+          "fixed_normal_torque_on_shell_n_m": {
+            "absolute_max": 0.0,
+            "reference_max": 0.05494505494505423
+          },
+          "min_area_ratio": {
+            "absolute_max": 0.0,
+            "reference_max": 0.9459560519733201
+          },
+          "max_strain_component": {
+            "absolute_max": 0.0,
+            "reference_max": 0.04269500005136523
+          }
+        },
+        "exact_repeat": true
+      },
+      {
+        "resolution": 8,
+        "family": "rest",
+        "errors": {
+          "energy_j": {
+            "absolute_max": 0.0,
+            "reference_max": 0.0
+          },
+          "membrane_energy_j": {
+            "absolute_max": 0.0,
+            "reference_max": 0.0
+          },
+          "bending_volume_energy_j": {
+            "absolute_max": 0.0,
+            "reference_max": 0.0
+          },
+          "edge_energy_j": {
+            "absolute_max": 0.0,
+            "reference_max": 0.0
+          },
+          "force_n": {
+            "absolute_max": 0.0,
+            "reference_max": 0.0
+          },
+          "hvp_n": {
+            "absolute_max": 1.1368683772161603e-12,
+            "reference_max": 2134.219044887966
+          },
+          "max_normal_jump": {
+            "absolute_max": 0.0,
+            "reference_max": 0.0
+          },
+          "max_boundary_normal_jump": {
+            "absolute_max": 0.0,
+            "reference_max": 0.0
+          },
+          "fixed_normal_torque_on_shell_n_m": {
+            "absolute_max": 0.0,
+            "reference_max": 0.0
+          },
+          "min_area_ratio": {
+            "absolute_max": 0.0,
+            "reference_max": 1.0
+          },
+          "max_strain_component": {
+            "absolute_max": 0.0,
+            "reference_max": 0.0
+          }
+        },
+        "exact_repeat": true
+      },
+      {
+        "resolution": 8,
+        "family": "cylinder",
+        "errors": {
+          "energy_j": {
+            "absolute_max": 0.0,
+            "reference_max": 0.04945407206940735
+          },
+          "membrane_energy_j": {
+            "absolute_max": 0.0,
+            "reference_max": 1.0550490519453231e-09
+          },
+          "bending_volume_energy_j": {
+            "absolute_max": 0.0,
+            "reference_max": 0.049491723347397806
+          },
+          "edge_energy_j": {
+            "absolute_max": 0.0,
+            "reference_max": 3.765233303950922e-05
+          },
+          "force_n": {
+            "absolute_max": 1.3322676295501878e-15,
+            "reference_max": 0.4967941268900896
+          },
+          "hvp_n": {
+            "absolute_max": 6.821210263296962e-13,
+            "reference_max": 2032.7371510358998
+          },
+          "max_normal_jump": {
+            "absolute_max": 0.0,
+            "reference_max": 6.236974477578741e-05
+          },
+          "max_boundary_normal_jump": {
+            "absolute_max": 0.0,
+            "reference_max": 3.118487238662297e-05
+          },
+          "fixed_normal_torque_on_shell_n_m": {
+            "absolute_max": 0.0,
+            "reference_max": 0.10974477288445698
+          },
+          "min_area_ratio": {
+            "absolute_max": 0.0,
+            "reference_max": 0.9999997066158651
+          },
+          "max_strain_component": {
+            "absolute_max": 0.0,
+            "reference_max": 1.8472227791832552e-06
+          }
+        },
+        "exact_repeat": true
+      },
+      {
+        "resolution": 8,
+        "family": "smooth",
+        "errors": {
+          "energy_j": {
+            "absolute_max": 0.0,
+            "reference_max": 1.0432803290484243
+          },
+          "membrane_energy_j": {
+            "absolute_max": 0.0,
+            "reference_max": 1.029337262164108
+          },
+          "bending_volume_energy_j": {
+            "absolute_max": 0.0,
+            "reference_max": 0.013943066884316718
+          },
+          "edge_energy_j": {
+            "absolute_max": 0.0,
+            "reference_max": 3.850026362539237e-16
+          },
+          "force_n": {
+            "absolute_max": 1.509903313490213e-14,
+            "reference_max": 20.05235405308793
+          },
+          "hvp_n": {
+            "absolute_max": 1.3642420526593924e-12,
+            "reference_max": 2055.2629952857856
+          },
+          "max_normal_jump": {
+            "absolute_max": 0.0,
+            "reference_max": 3.298261819722054e-15
+          },
+          "max_boundary_normal_jump": {
+            "absolute_max": 0.0,
+            "reference_max": 4.7704895589362195e-17
+          },
+          "fixed_normal_torque_on_shell_n_m": {
+            "absolute_max": 0.0,
+            "reference_max": 0.05494505494505502
+          },
+          "min_area_ratio": {
+            "absolute_max": 0.0,
+            "reference_max": 0.9452847943032063
+          },
+          "max_strain_component": {
+            "absolute_max": 0.0,
+            "reference_max": 0.04322722149028241
+          }
+        },
+        "exact_repeat": true
+      },
+      {
+        "resolution": 16,
+        "family": "rest",
+        "errors": {
+          "energy_j": {
+            "absolute_max": 0.0,
+            "reference_max": 0.0
+          },
+          "membrane_energy_j": {
+            "absolute_max": 0.0,
+            "reference_max": 0.0
+          },
+          "bending_volume_energy_j": {
+            "absolute_max": 0.0,
+            "reference_max": 0.0
+          },
+          "edge_energy_j": {
+            "absolute_max": 0.0,
+            "reference_max": 0.0
+          },
+          "force_n": {
+            "absolute_max": 0.0,
+            "reference_max": 0.0
+          },
+          "hvp_n": {
+            "absolute_max": 1.3642420526593924e-12,
+            "reference_max": 2425.3743856981373
+          },
+          "max_normal_jump": {
+            "absolute_max": 0.0,
+            "reference_max": 0.0
+          },
+          "max_boundary_normal_jump": {
+            "absolute_max": 0.0,
+            "reference_max": 0.0
+          },
+          "fixed_normal_torque_on_shell_n_m": {
+            "absolute_max": 0.0,
+            "reference_max": 0.0
+          },
+          "min_area_ratio": {
+            "absolute_max": 0.0,
+            "reference_max": 1.0
+          },
+          "max_strain_component": {
+            "absolute_max": 0.0,
+            "reference_max": 0.0
+          }
+        },
+        "exact_repeat": true
+      },
+      {
+        "resolution": 16,
+        "family": "cylinder",
+        "errors": {
+          "energy_j": {
+            "absolute_max": 0.0,
+            "reference_max": 0.049450984758916953
+          },
+          "membrane_energy_j": {
+            "absolute_max": 0.0,
+            "reference_max": 4.1251775147962346e-12
+          },
+          "bending_volume_energy_j": {
+            "absolute_max": 0.0,
+            "reference_max": 0.049460849473287466
+          },
+          "edge_energy_j": {
+            "absolute_max": 0.0,
+            "reference_max": 9.86471849569388e-06
+          },
+          "force_n": {
+            "absolute_max": 1.2212453270876722e-15,
+            "reference_max": 0.5002225536151119
+          },
+          "hvp_n": {
+            "absolute_max": 1.1368683772161603e-12,
+            "reference_max": 2572.9089872500163
+          },
+          "max_normal_jump": {
+            "absolute_max": 0.0,
+            "reference_max": 7.808430629495281e-06
+          },
+          "max_boundary_normal_jump": {
+            "absolute_max": 0.0,
+            "reference_max": 3.904215314025457e-06
+          },
+          "fixed_normal_torque_on_shell_n_m": {
+            "absolute_max": 0.0,
+            "reference_max": 0.10985366704954691
+          },
+          "min_area_ratio": {
+            "absolute_max": 0.0,
+            "reference_max": 0.9999999816555479
+          },
+          "max_strain_component": {
+            "absolute_max": 0.0,
+            "reference_max": 1.1550622336375937e-07
+          }
+        },
+        "exact_repeat": true
+      },
+      {
+        "resolution": 16,
+        "family": "smooth",
+        "errors": {
+          "energy_j": {
+            "absolute_max": 0.0,
+            "reference_max": 1.043280329048425
+          },
+          "membrane_energy_j": {
+            "absolute_max": 0.0,
+            "reference_max": 1.0293372621641086
+          },
+          "bending_volume_energy_j": {
+            "absolute_max": 0.0,
+            "reference_max": 0.01394306688431687
+          },
+          "edge_energy_j": {
+            "absolute_max": 0.0,
+            "reference_max": 4.4024912887010473e-16
+          },
+          "force_n": {
+            "absolute_max": 9.71445146547012e-15,
+            "reference_max": 10.272184784403763
+          },
+          "hvp_n": {
+            "absolute_max": 1.3642420526593924e-12,
+            "reference_max": 2423.433678493547
+          },
+          "max_normal_jump": {
+            "absolute_max": 0.0,
+            "reference_max": 8.018012007080077e-15
+          },
+          "max_boundary_normal_jump": {
+            "absolute_max": 0.0,
+            "reference_max": 1.0061396160665481e-16
+          },
+          "fixed_normal_torque_on_shell_n_m": {
+            "absolute_max": 0.0,
+            "reference_max": 0.05494505494505346
+          },
+          "min_area_ratio": {
+            "absolute_max": 0.0,
+            "reference_max": 0.9449476126844253
+          },
+          "max_strain_component": {
+            "absolute_max": 0.0,
+            "reference_max": 0.043494479604556435
+          }
+        },
+        "exact_repeat": true
+      },
+      {
+        "resolution": 32,
+        "family": "rest",
+        "errors": {
+          "energy_j": {
+            "absolute_max": 0.0,
+            "reference_max": 0.0
+          },
+          "membrane_energy_j": {
+            "absolute_max": 0.0,
+            "reference_max": 0.0
+          },
+          "bending_volume_energy_j": {
+            "absolute_max": 0.0,
+            "reference_max": 0.0
+          },
+          "edge_energy_j": {
+            "absolute_max": 0.0,
+            "reference_max": 0.0
+          },
+          "force_n": {
+            "absolute_max": 0.0,
+            "reference_max": 0.0
+          },
+          "hvp_n": {
+            "absolute_max": 3.637978807091713e-12,
+            "reference_max": 11163.593083302085
+          },
+          "max_normal_jump": {
+            "absolute_max": 0.0,
+            "reference_max": 0.0
+          },
+          "max_boundary_normal_jump": {
+            "absolute_max": 0.0,
+            "reference_max": 0.0
+          },
+          "fixed_normal_torque_on_shell_n_m": {
+            "absolute_max": 0.0,
+            "reference_max": 0.0
+          },
+          "min_area_ratio": {
+            "absolute_max": 0.0,
+            "reference_max": 1.0
+          },
+          "max_strain_component": {
+            "absolute_max": 0.0,
+            "reference_max": 0.0
+          }
+        },
+        "exact_repeat": true
+      },
+      {
+        "resolution": 32,
+        "family": "cylinder",
+        "errors": {
+          "energy_j": {
+            "absolute_max": 0.0,
+            "reference_max": 0.04945060350351635
+          },
+          "membrane_energy_j": {
+            "absolute_max": 0.0,
+            "reference_max": 1.6117754533828964e-14
+          },
+          "bending_volume_energy_j": {
+            "absolute_max": 0.0,
+            "reference_max": 0.049453124864163325
+          },
+          "edge_energy_j": {
+            "absolute_max": 0.0,
+            "reference_max": 2.5213606630962977e-06
+          },
+          "force_n": {
+            "absolute_max": 1.2212453270876722e-15,
+            "reference_max": 0.5018690640583536
+          },
+          "hvp_n": {
+            "absolute_max": 3.637978807091713e-12,
+            "reference_max": 9960.02370513185
+          },
+          "max_normal_jump": {
+            "absolute_max": 0.0,
+            "reference_max": 9.764353709662391e-07
+          },
+          "max_boundary_normal_jump": {
+            "absolute_max": 0.0,
+            "reference_max": 4.882176790327044e-07
+          },
+          "fixed_normal_torque_on_shell_n_m": {
+            "absolute_max": 0.0,
+            "reference_max": 0.10988099239654897
+          },
+          "min_area_ratio": {
+            "absolute_max": 0.0,
+            "reference_max": 0.9999999988533459
+          },
+          "max_strain_component": {
+            "absolute_max": 0.0,
+            "reference_max": 7.220025688425835e-09
+          }
+        },
+        "exact_repeat": true
+      },
+      {
+        "resolution": 32,
+        "family": "smooth",
+        "errors": {
+          "energy_j": {
+            "absolute_max": 0.0,
+            "reference_max": 1.0432803290484238
+          },
+          "membrane_energy_j": {
+            "absolute_max": 0.0,
+            "reference_max": 1.0293372621641084
+          },
+          "bending_volume_energy_j": {
+            "absolute_max": 0.0,
+            "reference_max": 0.013943066884316534
+          },
+          "edge_energy_j": {
+            "absolute_max": 0.0,
+            "reference_max": 1.142503795041356e-15
+          },
+          "force_n": {
+            "absolute_max": 6.827871601444713e-15,
+            "reference_max": 5.212146963625366
+          },
+          "hvp_n": {
+            "absolute_max": 2.7284841053187847e-12,
+            "reference_max": 11524.871950442806
+          },
+          "max_normal_jump": {
+            "absolute_max": 0.0,
+            "reference_max": 1.50524058176e-14
+          },
+          "max_boundary_normal_jump": {
+            "absolute_max": 0.0,
+            "reference_max": 6.591949208711867e-17
+          },
+          "fixed_normal_torque_on_shell_n_m": {
+            "absolute_max": 0.0,
+            "reference_max": 0.054945054945056686
+          },
+          "min_area_ratio": {
+            "absolute_max": 0.0,
+            "reference_max": 0.9447786341809535
+          },
+          "max_strain_component": {
+            "absolute_max": 0.0,
+            "reference_max": 0.043628394642236945
+          }
+        },
+        "exact_repeat": true
+      }
+    ],
+    "benchmarks": [
+      {
+        "resolution": 4,
+        "position_dofs": 390,
+        "cpu_numpy_seconds": 0.010612520200083964,
+        "cuda_seconds": 0.003250184399803402,
+        "ratio": 3.2652055682520342,
+        "repeats": 5,
+        "scope": "warm 후 geometry/energy/force/HVP/조립/host 결과 복사 포함. 전체 rollout 아님"
+      },
+      {
+        "resolution": 8,
+        "position_dofs": 1425,
+        "cpu_numpy_seconds": 0.033451122399856106,
+        "cuda_seconds": 0.0019246711999585386,
+        "ratio": 17.380175066045936,
+        "repeats": 5,
+        "scope": "warm 후 geometry/energy/force/HVP/조립/host 결과 복사 포함. 전체 rollout 아님"
+      },
+      {
+        "resolution": 16,
+        "position_dofs": 5439,
+        "cpu_numpy_seconds": 0.12441710499988404,
+        "cuda_seconds": 0.004510114999720827,
+        "ratio": 27.586237824885924,
+        "repeats": 5,
+        "scope": "warm 후 geometry/energy/force/HVP/조립/host 결과 복사 포함. 전체 rollout 아님"
+      },
+      {
+        "resolution": 32,
+        "position_dofs": 21243,
+        "cpu_numpy_seconds": 0.4972487075996469,
+        "cuda_seconds": 0.008459576799941715,
+        "ratio": 58.77938333783705,
+        "repeats": 5,
+        "scope": "warm 후 geometry/energy/force/HVP/조립/host 결과 복사 포함. 전체 rollout 아님"
+      }
+    ],
+    "operator_rtol": 2e-10,
+    "operator_atol": 2e-10
+  },
+  "elapsed_s": 12.917968944999302
+}

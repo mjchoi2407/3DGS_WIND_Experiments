@@ -1,0 +1,156 @@
+{
+  "schema": "wind3dgs.p3_shell_equation_validation.v1",
+  "phase": "temporal",
+  "status": "completed",
+  "training_eligible": false,
+  "r1_complete": false,
+  "generated_training_samples": 0,
+  "result": {
+    "cases": [
+      {
+        "family": "rest",
+        "duration_s": 0.0005,
+        "reference_self_error": {
+          "displacement": {
+            "absolute_rms_peak": 1.3410415680586863e-18,
+            "reference_peak": 1.604473720750007e-07,
+            "relative": 8.358139810677733e-12
+          },
+          "velocity": {
+            "absolute_rms_peak": 1.5790646658050237e-14,
+            "reference_peak": 0.0006409082670843889,
+            "relative": 2.4637920072220053e-11
+          }
+        },
+        "ladder": [
+          {
+            "steps": 32,
+            "displacement": {
+              "absolute_rms_peak": 2.445983547131943e-12,
+              "reference_peak": 1.604473720750007e-07,
+              "relative": 1.5244771637572068e-05
+            },
+            "velocity": {
+              "absolute_rms_peak": 4.1784065763725635e-09,
+              "reference_peak": 0.0006409082670843889,
+              "relative": 6.519508002886144e-06
+            },
+            "force_residual_limit_ratio": 0.004775120680724483,
+            "work_j": 2.0624784102451704e-08,
+            "energy_balance_residual_j": -3.350081480839762e-23,
+            "hvp_calls": 233
+          },
+          {
+            "steps": 64,
+            "displacement": {
+              "absolute_rms_peak": 6.116024976635869e-13,
+              "reference_peak": 1.604473720750007e-07,
+              "relative": 3.8118573695161236e-06
+            },
+            "velocity": {
+              "absolute_rms_peak": 1.0452857232244875e-09,
+              "reference_peak": 0.0006409082670843889,
+              "relative": 1.6309443596034218e-06
+            },
+            "force_residual_limit_ratio": 0.00414276759369578,
+            "work_j": 2.0624825957811905e-08,
+            "energy_balance_residual_j": -8.56261180963095e-24,
+            "hvp_calls": 246
+          },
+          {
+            "steps": 128,
+            "displacement": {
+              "absolute_rms_peak": 1.52907289383471e-13,
+              "reference_peak": 1.604473720750007e-07,
+              "relative": 9.530058822776784e-07
+            },
+            "velocity": {
+              "absolute_rms_peak": 2.6136424089435464e-10,
+              "reference_peak": 0.0006409082670843889,
+              "relative": 4.07802885869064e-07
+            },
+            "force_residual_limit_ratio": 0.00145093250526386,
+            "work_j": 2.0624836422710547e-08,
+            "energy_balance_residual_j": -4.81525745256699e-24,
+            "hvp_calls": 471
+          }
+        ],
+        "passed": true
+      },
+      {
+        "family": "bent_preloaded",
+        "duration_s": 0.0005,
+        "reference_self_error": {
+          "displacement": {
+            "absolute_rms_peak": 1.7647929634197224e-17,
+            "reference_peak": 1.0080949832428498e-07,
+            "relative": 1.7506217100126014e-10
+          },
+          "velocity": {
+            "absolute_rms_peak": 2.7741441650472607e-13,
+            "reference_peak": 0.00040054744414936075,
+            "relative": 6.925881579243846e-10
+          }
+        },
+        "ladder": [
+          {
+            "steps": 32,
+            "displacement": {
+              "absolute_rms_peak": 3.3902804553541295e-12,
+              "reference_peak": 1.0080949832428498e-07,
+              "relative": 3.363056568785058e-05
+            },
+            "velocity": {
+              "absolute_rms_peak": 1.8988425167015334e-08,
+              "reference_peak": 0.00040054744414936075,
+              "relative": 4.7406182324645446e-05
+            },
+            "force_residual_limit_ratio": 0.0032525920599187357,
+            "work_j": -2.900599688831391e-08,
+            "energy_balance_residual_j": -1.3374203520840533e-17,
+            "hvp_calls": 224
+          },
+          {
+            "steps": 64,
+            "displacement": {
+              "absolute_rms_peak": 8.48372713790558e-13,
+              "reference_peak": 1.0080949832428498e-07,
+              "relative": 8.415602972861787e-06
+            },
+            "velocity": {
+              "absolute_rms_peak": 4.7879684983397454e-09,
+              "reference_peak": 0.00040054744414936075,
+              "relative": 1.1953561477612006e-05
+            },
+            "force_residual_limit_ratio": 0.0036177194321658245,
+            "work_j": -2.9007622277251687e-08,
+            "energy_balance_residual_j": -2.1499802539195826e-17,
+            "hvp_calls": 384
+          },
+          {
+            "steps": 128,
+            "displacement": {
+              "absolute_rms_peak": 2.1214457049443307e-13,
+              "reference_peak": 1.0080949832428498e-07,
+              "relative": 2.104410536911952e-06
+            },
+            "velocity": {
+              "absolute_rms_peak": 1.1996458483517514e-09,
+              "reference_peak": 0.00040054744414936075,
+              "relative": 2.9950156114450545e-06
+            },
+            "force_residual_limit_ratio": 0.0037326841911666706,
+            "work_j": -2.900803048331821e-08,
+            "energy_balance_residual_j": -2.938861911155381e-18,
+            "hvp_calls": 640
+          }
+        ],
+        "passed": true
+      }
+    ],
+    "passed": true,
+    "threshold_relative": 0.01,
+    "scope": "mesh4 동일 ODE의 독립 시간 적분. Bent는 초기 형상을 지지하는 manufactured preload 포함"
+  },
+  "elapsed_s": 88.76899190199947
+}

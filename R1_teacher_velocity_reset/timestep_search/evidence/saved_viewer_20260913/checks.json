@@ -1,0 +1,37 @@
+{
+  "source_trace_hashes_checked": 1200,
+  "unit_tests_passed": 2,
+  "opengl_two_mesh_smoke_frames": 3,
+  "snapshot_time_s": 5.0,
+  "simulation_reexecuted": false,
+  "cache": {
+    "reference_rectangle": {
+      "source_run": "experiments/artifacts/runs/teacher_timestep_search/20260912_three_scenes_10s_v4",
+      "shape": "reference_rectangle",
+      "source_report_sha256": "bc464566168fcd390102a41706269066766fae537aeac94678948ba0e70a4e83",
+      "source_manifest_sha256": "7b743761f2915fa7f6442290e74ccfeb535bc9b28611782aa1208ac5b0f0e854",
+      "frames": 600,
+      "fps": 60,
+      "max_display_rounding_error_m": 5.949397904674806e-08,
+      "scope": "60Hz 저장 경계·P3 계산점을 잇는 표시용 삼각형. 물리 재계산·텍스처·GS 아님",
+      "files": {
+        "positions.npy": "23d610006636c88b9ecfaf1c214d481367cb9479c651dfae75b2d5eb739651e3",
+        "geometry.npz": "b341a624089a1fa20eb17acf077d395800fc3d1267df01adbe3f27e0a0f98643"
+      }
+    },
+    "handkerchief": {
+      "source_run": "experiments/artifacts/runs/teacher_timestep_search/20260912_three_scenes_10s_v4",
+      "shape": "handkerchief",
+      "source_report_sha256": "d783abd8359c10da16ca3d580624c2ed00872e89edeecb2fecb7c41d84d26870",
+      "source_manifest_sha256": "7b743761f2915fa7f6442290e74ccfeb535bc9b28611782aa1208ac5b0f0e854",
+      "frames": 600,
+      "fps": 60,
+      "max_display_rounding_error_m": 2.980231608804701e-08,
+      "scope": "60Hz 저장 경계·P3 계산점을 잇는 표시용 삼각형. 물리 재계산·텍스처·GS 아님",
+      "files": {
+        "positions.npy": "8b3ad6cbdbf8535ab5c32145b8c2ef06e427acccdb8f37d679aa79ee11a40405",
+        "geometry.npz": "dc7ef0a2e42f61293abf135a7a4ad9d6e4b2249bf895acb883c03761099d0d3e"
+      }
+    }
+  }
+}

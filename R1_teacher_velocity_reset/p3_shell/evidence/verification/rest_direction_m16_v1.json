@@ -1,0 +1,94 @@
+{
+  "training_eligible": false,
+  "r1_complete": false,
+  "generated_training_samples": 0,
+  "validator_sha256": "f912f1e5f01c0848153127f5a4065b7bc3c886c0caa8c093faea33f7da922199",
+  "runs": [
+    {
+      "run": "20260909_wind_m16_s128_v1",
+      "verified": true,
+      "intervals": 384,
+      "states": 385,
+      "max_force_residual_limit_ratio": 0.9975963688442618,
+      "max_newmark_update_error_m": 2.168404344971009e-19,
+      "energy_ledger_error_j": -3.273567274178607e-21,
+      "energy_balance_j": 2.9077183036925705e-15,
+      "removed_kinetic_j": 0.0,
+      "sampled_max_normal_rotation_rad": 0.004572602563339184,
+      "sampled_max_nodal_displacement_m": 0.0015581516805299406,
+      "sampled_max_strain_component": 7.103715324863202e-07,
+      "sampled_min_area_ratio": 0.9999997996378018,
+      "bernstein_geometry": {
+        "law": "p3_space_newmark_quadratic_bernstein_bounds_v1",
+        "projected_gradient_upper": 1.0402764207360245e-05,
+        "strain_component_upper": 7.227827578670798e-07,
+        "roundoff_margin_max": 2.2737367544323206e-13,
+        "engineering_curvature_component_upper_inv_m": 0.04250130353875479,
+        "linearized_fibre_strain_component_upper": 0.00021292859556331801,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.9999791945798028,
+        "scope": "전체 P3 공간과 quadratic Newmark 보간. 정확한 연속 ODE의 상한 아님",
+        "source_sha256": "117872569a0f38801842106e7bbff228ba3bf81f8ffd02d501dfa4604ab78dea"
+      },
+      "manifest_sha256": "12df3d7e20380b12c1669b380b6722a2524d7945cf47b29e8c5eecfb5dc47849"
+    },
+    {
+      "run": "20260909_wind_m16_s128_backward_v1",
+      "verified": true,
+      "intervals": 384,
+      "states": 385,
+      "max_force_residual_limit_ratio": 0.9973399984346086,
+      "max_newmark_update_error_m": 2.168404344971009e-19,
+      "energy_ledger_error_j": 2.4869185116406777e-21,
+      "energy_balance_j": 2.9077057669432066e-15,
+      "removed_kinetic_j": 0.0,
+      "sampled_max_normal_rotation_rad": 0.0045750413617181105,
+      "sampled_max_nodal_displacement_m": 0.001558159307659883,
+      "sampled_max_strain_component": 6.889097737827754e-07,
+      "sampled_min_area_ratio": 0.9999997990027195,
+      "bernstein_geometry": {
+        "law": "p3_space_newmark_quadratic_bernstein_bounds_v1",
+        "projected_gradient_upper": 1.0402428550072968e-05,
+        "strain_component_upper": 7.227259485320658e-07,
+        "roundoff_margin_max": 2.2737367544323206e-13,
+        "engineering_curvature_component_upper_inv_m": 0.04249993692802963,
+        "linearized_fibre_strain_component_upper": 0.00021292171031411103,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.9999791952511103,
+        "scope": "전체 P3 공간과 quadratic Newmark 보간. 정확한 연속 ODE의 상한 아님",
+        "source_sha256": "117872569a0f38801842106e7bbff228ba3bf81f8ffd02d501dfa4604ab78dea"
+      },
+      "manifest_sha256": "fc57bb2ccb96dad9e3a4d57f060556130faa50a93dbdca00629d06cbb5231526"
+    }
+  ],
+  "comparison": {
+    "first": "20260909_wind_m16_s128_v1",
+    "second": "20260909_wind_m16_s128_backward_v1",
+    "errors": {
+      "u_m": {
+        "relative": 8.85627930899207e-05,
+        "absolute_rms_peak": 8.306498717826233e-08,
+        "reference_peak": 0.0009379219453244178
+      },
+      "v_m_s": {
+        "relative": 0.0015377404312457842,
+        "absolute_rms_peak": 3.9680795237931156e-05,
+        "reference_peak": 0.02580461203441479
+      },
+      "delta_u_m": {
+        "relative": 8.85627930899207e-05,
+        "absolute_rms_peak": 8.306498717826233e-08,
+        "reference_peak": 0.0009379219453244178
+      }
+    },
+    "producer_source_differences": [],
+    "physics_sources_equal": true,
+    "comparison_axes": [
+      "direction"
+    ],
+    "isolated_axis": true,
+    "threshold_relative": 0.01,
+    "sampled_response_threshold_passed": true,
+    "scope": "동일 입력/초기 계열의 공통 저장 시각. 연속 시간 상한과 R1 채택 판정은 아님"
+  }
+}

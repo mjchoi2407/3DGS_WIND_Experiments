@@ -1,0 +1,58 @@
+{
+  "input_time_s": 3.2500000000000564,
+  "target_time_s": 3.266666666666723,
+  "frame": 195,
+  "environment": {
+    "device": "cuda:0",
+    "numpy": "2.4.4",
+    "scipy": "1.18.1",
+    "compute_backend": "precision_hvp_graph",
+    "linear_solver_device": "cpu",
+    "cuda_graph": true,
+    "state_encoding": "hi_lo_v1",
+    "state_mantissa_bits": 64,
+    "warp": "1.17.0",
+    "gpu_name": "NVIDIA GeForce GTX 1080 Ti"
+  },
+  "policy": {
+    "force_atol_n": 1e-10,
+    "force_rtol": 1e-09,
+    "displacement_atol_m": 1e-12,
+    "displacement_rtol": 1e-09,
+    "linear_rtol": 1e-10,
+    "max_newton": 15,
+    "linear_cycles": 3,
+    "line_search_steps": 12,
+    "linear_restart": 240
+  },
+  "input_sha256": "52a264a94033511f6305d25eca4ab99426d36daa10c690f7cb50e747895e449c",
+  "runtime_manifest_sha256": "2a232765fe8bdddbcf625e02d37112b4dc35d18dd74dca5ec48413ba1262e26d",
+  "trials": [
+    {
+      "substeps": 1,
+      "restart": 240,
+      "max_cycles": 3,
+      "max_iterations": 720,
+      "dt_s": 0.016666666666666666,
+      "rows": [],
+      "status": "numerical_failure",
+      "reason": "linear_solve",
+      "attempts": [
+        {
+          "iteration": 0,
+          "force_residual_n": 608.7973938601335,
+          "force_limit_n": 6.088964799189515e-07,
+          "linear_info": 3,
+          "linear_iterations": 720,
+          "linear_residual_n": 6.996261542131716e-06,
+          "linear_limit_n": 6.087973938601335e-08
+        }
+      ],
+      "failed_s": 13.177989392992458,
+      "end_time_s": 3.2500000000000564,
+      "completed_solve_s": 0
+    }
+  ],
+  "training_eligible": false,
+  "r1_complete": false
+}

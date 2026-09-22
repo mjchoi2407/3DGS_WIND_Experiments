@@ -1,0 +1,37 @@
+{
+  "scope": "CPU 회귀 검사. CUDA 단기 검증은 별도 summary.json 참조.",
+  "tests": [
+    {
+      "pattern": "test_teacher_p3_shell_dynamics.py",
+      "count": 5,
+      "passed": true
+    },
+    {
+      "pattern": "test_teacher_p3_shell_execution.py",
+      "count": 2,
+      "passed": true
+    },
+    {
+      "pattern": "test_teacher_p3_shell_random*.py",
+      "count": 10,
+      "passed": true
+    },
+    {
+      "pattern": "test_teacher_timestep_search.py",
+      "count": 10,
+      "passed": true
+    },
+    {
+      "pattern": "test_teacher_p3_shell_warp_fast.py",
+      "device": "cuda:0",
+      "count": 3,
+      "passed": true,
+      "extra_environment": "WIND3DGS_P3_SHELL_DEVICE=cuda:0"
+    }
+  ],
+  "command_template": "PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 WARP_CACHE_PATH=code/outputs/warp-cache PYTHONPATH=code .venv/bin/python -m unittest discover -s code/tests -p PATTERN -v",
+  "modified_files_sha256": {
+    "code/wind3dgs/teacher/p3_shell_dynamics.py": "e09adb700d6fd5f388f8290beb1b9b3676c8900b5fee146c1204fcde7a8fc660",
+    "code/tests/test_teacher_p3_shell_dynamics.py": "fc3bff82ca7ebaa82ddb02641b51425da0f8519c775620aaf48d10bba1d3d462"
+  }
+}

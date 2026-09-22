@@ -1,0 +1,48 @@
+{
+  "scope": "주어진 한 구간의 Gauss collocation 곡선 대32분할 Newmark 수치 곡선. Bernstein convex-hull L2 상한+명시적 부동소수 여유. 엄밀한 interval arithmetic 또는 독립 ODE 참해 인증 아님.",
+  "results": {
+    "gauss2": {
+      "relative_upper": {
+        "u": 0.0001228891931552398,
+        "v": 0.016727870308879258
+      },
+      "relative_sampled_lower": {
+        "u": 0.0001227522291893866,
+        "v": 0.016727870302154467
+      },
+      "velocity_consistency_relative_upper": 0.012304609427809513,
+      "passed_local_one_percent": false
+    },
+    "gauss3": {
+      "relative_upper": {
+        "u": 8.953995928666423e-05,
+        "v": 0.01513353043971414
+      },
+      "relative_sampled_lower": {
+        "u": 8.942675930995543e-05,
+        "v": 0.015133530432999894
+      },
+      "velocity_consistency_relative_upper": 0.006701687037271229,
+      "passed_local_one_percent": false
+    },
+    "gauss4": {
+      "relative_upper": {
+        "u": 3.8316648557279676e-05,
+        "v": 0.007977120995762255
+      },
+      "relative_sampled_lower": {
+        "u": 3.825187186529396e-05,
+        "v": 0.007968177124109167
+      },
+      "velocity_consistency_relative_upper": 0.003953274560606097,
+      "passed_local_one_percent": true
+    },
+    "reference16_to32": {
+      "relative_upper": {
+        "u": 7.398948524520199e-06,
+        "v": 0.002000945781896213
+      }
+    }
+  },
+  "training_eligible": false
+}

@@ -1,0 +1,26 @@
+{
+  "status": "local_acceleration_validated_long_trajectory_pending",
+  "dt_multipliers_tested": [
+    0.5,
+    1,
+    4,
+    32,
+    64
+  ],
+  "horizon_s": 0.004166666666666667,
+  "compute_speedup_4_vs_1": 2.724363042968287,
+  "compute_speedup_64_vs_1": 8.657072104173155,
+  "velocity_curve_relative_upper_4": 0.005826142151981033,
+  "velocity_curve_relative_upper_64": 0.006472082010369384,
+  "reference_1_to_half_velocity_relative_upper": 0.0026803746671128312,
+  "failure_32": "두 번째 단계 line_search. 재사용/매번 재구축 모두 실패.",
+  "unit_tests_passed": 3,
+  "main_budget_remaining_s": 7998,
+  "quasi_newton_implemented": false,
+  "full_10s_validated": false,
+  "spatial_convergence_validated": false,
+  "checkpoint_replay_validated_this_turn": false,
+  "training_eligible": false,
+  "r1_complete": false,
+  "pending_user_branch": "4배 긴 구간 검증 우선 여부"
+}

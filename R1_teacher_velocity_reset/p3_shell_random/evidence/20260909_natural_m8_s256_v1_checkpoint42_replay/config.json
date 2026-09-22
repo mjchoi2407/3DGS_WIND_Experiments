@@ -1,0 +1,127 @@
+{
+  "schema": "wind3dgs.p3_shell_random_chunked.v1",
+  "law": "flat_p3_koiter_stvk_normal_jump_v1",
+  "material": {
+    "E_pa": 1000000.0,
+    "nu": 0.3,
+    "h_m": 0.01,
+    "area_density_kg_m2": 0.1
+  },
+  "policy": {
+    "force_atol_n": 1e-10,
+    "force_rtol": 1e-09,
+    "displacement_atol_m": 1e-12,
+    "displacement_rtol": 1e-09,
+    "linear_rtol": 1e-10,
+    "max_newton": 15,
+    "linear_cycles": 8,
+    "line_search_steps": 12
+  },
+  "resolution": 8,
+  "substeps": 256,
+  "diagonal": "forward",
+  "start_frame": 42,
+  "end_frame": 43,
+  "reset_velocity": false,
+  "wind_program": {
+    "program_id": "pcg64_unit_directions_linear_vector_v1",
+    "seed": 20260909,
+    "bit_generator": "PCG64",
+    "knot_frame": [
+      0,
+      12,
+      24,
+      36,
+      48,
+      60,
+      72
+    ],
+    "knot_velocity_m_s": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        -0.25492562068073515,
+        0.13188243472813596,
+        -0.2573136639288707
+      ],
+      [
+        -0.28692261432953897,
+        0.1737509342912989,
+        -0.05878418474073633
+      ],
+      [
+        0.23753097393655168,
+        0.053212783785485315,
+        0.1422716798243386
+      ],
+      [
+        0.21998371775243,
+        -0.15083003188791375,
+        -0.17241763337310326
+      ],
+      [
+        0.12518253304009772,
+        0.24414485415247372,
+        0.09533206389349415
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "sampling": "frame_start_v1",
+    "recovery": "zero_ambient_with_air_drag",
+    "frame_vector_sha256": "6e1a301cc0692703fd90938103aef81b85b088b3db8345fad9e224203df9b7d5"
+  },
+  "source_sha256": {
+    "wind3dgs/teacher/p3_shell.py": "5c154b6a97fc1ee0e8fbac4cf163acc500b65b8f791a4eb96fd6cbaecc69b922",
+    "wind3dgs/teacher/p3_shell_kernels.py": "53b6d3e27dec960403eac4774927a655b3349a39434f01c6ab42d55a75b6038d",
+    "wind3dgs/teacher/p3_shell_dynamics.py": "97f33708d8f231d8a38cb1b8dc151cde8e21cee1230a162dcdbe96440d216782",
+    "wind3dgs/teacher/p3_shell_bounds.py": "117872569a0f38801842106e7bbff228ba3bf81f8ffd02d501dfa4604ab78dea",
+    "wind3dgs/teacher/p3_surface.py": "5a40e7345bcc68070264d035c275dccb2fe7cf69115ceb605a2fc764ecb1042a",
+    "wind3dgs/teacher/p3_wind_reset.py": "a0958c452d5fc139049024cf823e12f81407215c1d49e22d96d39d71357223b6",
+    "wind3dgs/teacher/shell_structure.py": "2056257d6a7ec35670051db0366197d3ebd1fe917da64c014ae6bdc4bf037879",
+    "wind3dgs/teacher/physics_registry.py": "462ca765801e2d5d4f3ebb4589efce633a03aae8a2a5432c8e68b5e4221047e5",
+    "wind3dgs/teacher/velocity_reset.py": "0ed136d8b34999c72481549c3fcab056a3c873ecd0ca59fd72f42c1ba4efe2d8",
+    "wind3dgs/evaluation/teacher_p3_shell.py": "a4c97bda0038223c00f3ec04a46ad00f0f4c4704e238e4e4de6e8576665ab939",
+    "wind3dgs/evaluation/teacher_p3_shell_validation.py": "b4bc4b9f0e86193e23d6d7a9b75d5cb108c17a9cab098ea41f6cf1bf7bb4329a",
+    "wind3dgs/evaluation/teacher_plate_cubic.py": "b20120b72f9cce4d4f95643f0c62cfe33d6315829a406f2b47721cff8bf57a19",
+    "wind3dgs/evaluation/teacher_plate_c0ip.py": "6575a8e54b1325c8e3a2b2889d18e7ace1caf3f092a98107cab9e1382da7ae2f",
+    "wind3dgs/evaluation/teacher_plate_galerkin.py": "b9fefd812ba1c9c90212d27b40b3ea5dd0986dbed7470224689c87e53a16ec27",
+    "wind3dgs/evaluation/teacher_plate_reference.py": "9c0dcbeffb8c9b7f9ac9533ef15b0053bc918f401a62df152a35b9814b212b6f",
+    "wind3dgs/evaluation/teacher_p3_wind_reset.py": "ffdf5820cdaee581af25d1c48a105db0b327243fa947af245853f0de1a12a0af",
+    "wind3dgs/teacher/p3_shell_warp.py": "67fc5c3648810d51384cd0951df334ea947d8f6ae7049748c8ce184d0a35d8cd",
+    "wind3dgs/teacher/p3_shell_warp_kernels.py": "4ff7e5c03f839a81c4bc26c83db89d78d9d48b8216871cddea0e3f31957a347d",
+    "wind3dgs/evaluation/teacher_p3_shell_gpu.py": "469010a6e976fd23333bdaa995c80f7f6d8575fe6c2ff4473654970b73d962bc",
+    "tests/test_teacher_p3_shell_warp.py": "405687032e6f9ace702bb4030ddc4ed811ee44c85381baa84b97df3deb744499",
+    "scripts/check_teacher_p3_shell_gpu.sh": "04c9826c441e9e4871dd7ff77834ec43fb7526346903ce578d0d5e829f3efc49",
+    "pyproject.toml": "0b91786093f1a1d36e9bc6de16f37175781aa9dc7d562aaf440021b5764dfb60",
+    "wind3dgs/evaluation/teacher_p3_shell_random.py": "66b8d075b918f7402db3d983ceda7e35a951c1ba27f8f768b30c7ca731bf0efa",
+    "wind3dgs/evaluation/teacher_p3_shell_random_validation.py": "68da838dd55b20e53a3bd3d7f990c902c7eaf1d92ed546aeff73e54ac3c04a74",
+    "tests/test_teacher_p3_shell_random.py": "eb9ddeaa4f7a019d60652a8e235e2ec5de98e0917a9b685c318459f3227bc6be",
+    "scripts/check_teacher_p3_shell_random.sh": "000a6106abea6a8a94064dee20433d1e595d60bf388ab11651d549218a043ea3"
+  },
+  "environment": {
+    "device": "cuda:0",
+    "gpu_name": "NVIDIA GeForce GTX 1080 Ti",
+    "warp": "1.17.0",
+    "numpy": "2.4.4",
+    "scipy": "1.18.1"
+  },
+  "parent_name": "20260909_natural_m8_s256_v1",
+  "parent_manifest_sha256": "e2ae292732804a858c5cce43ea352050fe60889ffdcafc40ec2fc87b1173e4b9",
+  "fps": 60,
+  "program_frames": 90,
+  "checkpoint_frames": [
+    18,
+    42,
+    66
+  ],
+  "training_eligible": false,
+  "r1_complete": false,
+  "generated_training_samples": 0
+}

@@ -1,0 +1,56 @@
+{
+  "scope": "증분형 후보 대 이전 절대 속도형 후보/참조의 끝 상태 차이. 전체 시간 곡선·참해 인증 아님.",
+  "results": {
+    "absolute": {
+      "relative_mass_l2": {
+        "u": 1.0194081503255451e-14,
+        "v": 8.688939689999825e-11
+      },
+      "max_absolute_difference": {
+        "u": 1.26478688633469e-14,
+        "v": 2.626059821190358e-10
+      }
+    },
+    "reference2": {
+      "relative_mass_l2": {
+        "u": 1.837693123889797e-06,
+        "v": 0.0005831845647926593
+      },
+      "max_absolute_difference": {
+        "u": 6.437546854710582e-07,
+        "v": 0.0006284421769842785
+      }
+    },
+    "reference4": {
+      "relative_mass_l2": {
+        "u": 1.7968720866188845e-06,
+        "v": 0.0005726634928118942
+      },
+      "max_absolute_difference": {
+        "u": 6.205589089299923e-07,
+        "v": 0.0005742553718896643
+      }
+    }
+  },
+  "state_encoding_check": {
+    "increment": {
+      "velocity_nonzero_low_components": 20930
+    },
+    "absolute": {
+      "velocity_nonzero_low_components": 0
+    },
+    "reference2": {
+      "velocity_nonzero_low_components": 0
+    },
+    "reference4": {
+      "velocity_nonzero_low_components": 0
+    }
+  },
+  "inputs": {
+    "experiments/artifacts/runs/teacher_timestep_search/20260911_exponential256_gauss_path20_increment_v1/endpoint.npz": "d243334cc65118af8f1b9520ed958358da2a54f1214bda166f6dee1f5a109377",
+    "experiments/artifacts/runs/teacher_timestep_search/20260911_exponential256_gauss_path20_v1/endpoint.npz": "83298fcb79af71d90e09b108c96ccbae71f6baa92ffaf9066f6e2bef775e4660",
+    "experiments/artifacts/runs/teacher_timestep_search/20260911_exponential256_hybrid_ref2_v1/endpoint.npz": "6b38c716af12ff18b22c8369b75afb275bb32722fc09db390b09c9bf3d9f8d71",
+    "experiments/artifacts/runs/teacher_timestep_search/20260911_exponential256_hybrid_ref4_v1/endpoint.npz": "4931a41143dfe636921d0d627cd3e96159c140dad042b4d2fdfa02bf7179c81c"
+  },
+  "training_eligible": false
+}

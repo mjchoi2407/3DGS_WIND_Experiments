@@ -1,0 +1,1772 @@
+{
+  "checked_at": "2026-09-15",
+  "artifact_root": "experiments/artifacts/runs/teacher_timestep_search/gauss_scaling_trial_v1",
+  "training_eligible": false,
+  "main_lane_count": 10,
+  "main_completed": 9,
+  "main_failed": 1,
+  "separate_smoke_count": 1,
+  "unique_replay_audited_steps": 4232,
+  "lanes": [
+    {
+      "lane": "preload_fp32_medium_baseline",
+      "config": {
+        "input": "experiments/artifacts/runs/teacher_timestep_search/gauss_scaling_trial_v1/inputs/preload",
+        "mode": "baseline",
+        "precision": "fp32",
+        "tolerance": "medium",
+        "policy": {
+          "force_atol_n": 1e-06,
+          "force_rtol": 1e-05,
+          "displacement_atol_m": 1e-10,
+          "displacement_rtol": 1e-06,
+          "linear_rtol": 1e-05,
+          "max_newton": 15,
+          "linear_cycles": 3,
+          "line_search_steps": 12,
+          "linear_restart": 240,
+          "linear_preconditioner": "current"
+        },
+        "steps": 512,
+        "dt": 3.255208333333333e-05,
+        "duration_s": 0.016666666666666666,
+        "repeats": 2,
+        "training_eligible": false
+      },
+      "report": {
+        "gpu": "NVIDIA GeForce GTX 1080 Ti",
+        "setup_s": 3.273168732999693,
+        "graph": {
+          "kernels": 5988,
+          "device_copies": 603,
+          "memsets": 1417,
+          "children": 4,
+          "host_copies": 0,
+          "host_callbacks": 0,
+          "conditionals": 12,
+          "conditional_bodies": 12
+        },
+        "training_eligible": false,
+        "warmup_s": 0.3552447699998993,
+        "warmup_steps": 8,
+        "warmup_counts": {
+          "c": [
+            2,
+            0,
+            0,
+            0,
+            1,
+            0,
+            8,
+            16,
+            1,
+            16
+          ],
+          "failure": 0
+        },
+        "solve_s": [
+          11.756787192000047,
+          11.702948433000074
+        ],
+        "solve_median_s": 11.72986781250006,
+        "counts": [
+          {
+            "c": [
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              512,
+              738,
+              12,
+              738
+            ],
+            "failure": 0
+          },
+          {
+            "c": [
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              512,
+              738,
+              12,
+              738
+            ],
+            "failure": 0
+          }
+        ],
+        "status": "solver_complete",
+        "factor_info": 0
+      },
+      "audit": {
+        "audit_total_repeats": 2,
+        "gpu_audit_s": [
+          15.833620261999386
+        ],
+        "gpu_audit_median_s": 15.833620261999386,
+        "steps": 512,
+        "flag_counts": {
+          "0": 95,
+          "1": 417
+        },
+        "max_abs_checks": [
+          4.528357587268737,
+          6.053968459593073e-17,
+          3.04257252013473e-14,
+          1.0902052745510043e-16,
+          7.939768304463427e-14,
+          1.4016376321084888e-17,
+          6.990707972498456e-07,
+          3.250248228523289e-05,
+          6.749133018246234e-20,
+          9.044762630521743e-07,
+          0.9999999983010074
+        ],
+        "all_original_criteria_passed": false,
+        "training_eligible": false
+      },
+      "endpoint_difference": {
+        "u": {
+          "mass_relative": 5.422690646218345e-07,
+          "max_node_norm": 3.5491276470833915e-14,
+          "fixed_max": 0.0
+        },
+        "v": {
+          "mass_relative": 1.340120358467747e-06,
+          "max_node_norm": 1.484038612857346e-10,
+          "fixed_max": 0.0
+        }
+      },
+      "trajectory_difference": {
+        "u": {
+          "mass_time_relative": 1.125186436582279e-07,
+          "max_node_norm": 3.8655457460278225e-14,
+          "finite": true
+        },
+        "v": {
+          "mass_time_relative": 9.695956175479144e-07,
+          "max_node_norm": 2.272453847590803e-10,
+          "finite": true
+        }
+      },
+      "replay_endpoint_difference": {
+        "u": 6.180183120236163e-15,
+        "v": 1.6030061571756585e-10
+      }
+    },
+    {
+      "lane": "preload_fp32_medium_scaled",
+      "config": {
+        "input": "experiments/artifacts/runs/teacher_timestep_search/gauss_scaling_trial_v1/inputs/preload",
+        "mode": "scaled",
+        "precision": "fp32",
+        "tolerance": "medium",
+        "policy": {
+          "force_atol_n": 1e-06,
+          "force_rtol": 1e-05,
+          "displacement_atol_m": 1e-10,
+          "displacement_rtol": 1e-06,
+          "linear_rtol": 1e-05,
+          "max_newton": 15,
+          "linear_cycles": 3,
+          "line_search_steps": 12,
+          "linear_restart": 240,
+          "linear_preconditioner": "current"
+        },
+        "steps": 512,
+        "dt": 3.255208333333333e-05,
+        "duration_s": 0.016666666666666666,
+        "repeats": 2,
+        "training_eligible": false
+      },
+      "report": {
+        "gpu": "NVIDIA GeForce GTX 1080 Ti",
+        "setup_s": 3.4319835149999562,
+        "graph": {
+          "kernels": 5998,
+          "device_copies": 603,
+          "memsets": 1418,
+          "children": 4,
+          "host_copies": 0,
+          "host_callbacks": 0,
+          "conditionals": 12,
+          "conditional_bodies": 12
+        },
+        "training_eligible": false,
+        "warmup_s": 0.3789604660000805,
+        "warmup_steps": 8,
+        "warmup_counts": {
+          "c": [
+            2,
+            0,
+            0,
+            0,
+            1,
+            0,
+            8,
+            16,
+            1,
+            16
+          ],
+          "failure": 0
+        },
+        "solve_s": [
+          11.971695143000034,
+          11.40584562999993
+        ],
+        "solve_median_s": 11.688770386499982,
+        "counts": [
+          {
+            "c": [
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              512,
+              738,
+              12,
+              738
+            ],
+            "failure": 0
+          },
+          {
+            "c": [
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              512,
+              738,
+              12,
+              738
+            ],
+            "failure": 0
+          }
+        ],
+        "status": "solver_complete",
+        "factor_info": 0
+      },
+      "audit": {
+        "audit_total_repeats": 2,
+        "gpu_audit_s": [
+          21.64568732099997
+        ],
+        "gpu_audit_median_s": 21.64568732099997,
+        "steps": 512,
+        "flag_counts": {
+          "0": 95,
+          "1": 417
+        },
+        "max_abs_checks": [
+          4.529117586962216,
+          6.05346466000573e-17,
+          3.0425848856260316e-14,
+          1.0902053921944694e-16,
+          7.939801106598616e-14,
+          1.2391012198020501e-17,
+          6.990707035470223e-07,
+          3.2502471854474115e-05,
+          4.812696726764931e-20,
+          9.044764637559894e-07,
+          0.9999999983010075
+        ],
+        "all_original_criteria_passed": false,
+        "training_eligible": false
+      },
+      "endpoint_difference": {
+        "u": {
+          "mass_relative": 5.768721420435608e-07,
+          "max_node_norm": 3.770668638197523e-14,
+          "fixed_max": 0.0
+        },
+        "v": {
+          "mass_relative": 1.2690593633088097e-06,
+          "max_node_norm": 1.1793176744173096e-10,
+          "fixed_max": 0.0
+        }
+      },
+      "trajectory_difference": {
+        "u": {
+          "mass_time_relative": 1.2238604320531718e-07,
+          "max_node_norm": 3.985060215799029e-14,
+          "finite": true
+        },
+        "v": {
+          "mass_time_relative": 9.616358846183935e-07,
+          "max_node_norm": 2.2468757768971242e-10,
+          "finite": true
+        }
+      },
+      "replay_endpoint_difference": {
+        "u": 6.258241203262367e-15,
+        "v": 1.537598760879659e-10
+      },
+      "scales": {
+        "row": {
+          "min": 9.5367431640625e-07,
+          "max": 3.0517578125e-05,
+          "unique": 6
+        },
+        "col": {
+          "min": 1.0,
+          "max": 1.0,
+          "unique": 1
+        }
+      }
+    },
+    {
+      "lane": "preload_fp64_strict",
+      "config": {
+        "input": "experiments/artifacts/runs/teacher_timestep_search/gauss_scaling_trial_v1/inputs/preload",
+        "mode": "baseline",
+        "precision": "fp64",
+        "tolerance": "strict",
+        "policy": {
+          "force_atol_n": 1e-10,
+          "force_rtol": 1e-09,
+          "displacement_atol_m": 1e-12,
+          "displacement_rtol": 1e-09,
+          "linear_rtol": 1e-10,
+          "max_newton": 15,
+          "linear_cycles": 3,
+          "line_search_steps": 12,
+          "linear_restart": 240,
+          "linear_preconditioner": "current"
+        },
+        "steps": 512,
+        "dt": 3.255208333333333e-05,
+        "duration_s": 0.016666666666666666,
+        "repeats": 2,
+        "training_eligible": false
+      },
+      "report": {
+        "gpu": "NVIDIA GeForce GTX 1080 Ti",
+        "setup_s": 3.495454222999797,
+        "graph": {
+          "kernels": 5988,
+          "device_copies": 603,
+          "memsets": 1417,
+          "children": 4,
+          "host_copies": 0,
+          "host_callbacks": 0,
+          "conditionals": 12,
+          "conditional_bodies": 12
+        },
+        "training_eligible": false,
+        "warmup_s": 0.6907705079997868,
+        "warmup_steps": 8,
+        "warmup_counts": {
+          "c": [
+            2,
+            0,
+            0,
+            0,
+            1,
+            0,
+            8,
+            21,
+            1,
+            16
+          ],
+          "failure": 0
+        },
+        "solve_s": [
+          35.535630250999475,
+          34.63741338999989
+        ],
+        "solve_median_s": 35.086521820499684,
+        "counts": [
+          {
+            "c": [
+              2,
+              0,
+              0,
+              0,
+              1,
+              0,
+              512,
+              1946,
+              16,
+              1024
+            ],
+            "failure": 0
+          },
+          {
+            "c": [
+              2,
+              0,
+              0,
+              0,
+              1,
+              0,
+              512,
+              1946,
+              16,
+              1024
+            ],
+            "failure": 0
+          }
+        ],
+        "status": "solver_complete",
+        "factor_info": 0
+      },
+      "audit": {
+        "audit_total_repeats": 2,
+        "gpu_audit_s": [
+          22.05051426600039
+        ],
+        "gpu_audit_median_s": 22.05051426600039,
+        "steps": 512,
+        "flag_counts": {
+          "0": 512
+        },
+        "max_abs_checks": [
+          0.004445692922607211,
+          2.658213549062035e-26,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          6.990706223897192e-07,
+          3.2502461090500865e-05,
+          1.4580564200160743e-21,
+          9.044762672825827e-07,
+          0.9999999983010074
+        ],
+        "all_original_criteria_passed": true,
+        "training_eligible": false
+      },
+      "endpoint_difference": {
+        "u": {
+          "mass_relative": 0.0,
+          "max_node_norm": 0.0,
+          "fixed_max": 0.0
+        },
+        "v": {
+          "mass_relative": 0.0,
+          "max_node_norm": 0.0,
+          "fixed_max": 0.0
+        }
+      },
+      "trajectory_difference": {
+        "u": {
+          "mass_time_relative": 0.0,
+          "max_node_norm": 0.0,
+          "finite": true
+        },
+        "v": {
+          "mass_time_relative": 0.0,
+          "max_node_norm": 0.0,
+          "finite": true
+        }
+      },
+      "replay_endpoint_difference": {
+        "u": 1.6427007870057312e-17,
+        "v": 9.102113199218203e-13
+      }
+    },
+    {
+      "lane": "preload_mixed_strict",
+      "config": {
+        "input": "experiments/artifacts/runs/teacher_timestep_search/gauss_scaling_trial_v1/inputs/preload",
+        "mode": "mixed",
+        "precision": "fp64",
+        "tolerance": "strict",
+        "policy": {
+          "force_atol_n": 1e-10,
+          "force_rtol": 1e-09,
+          "displacement_atol_m": 1e-12,
+          "displacement_rtol": 1e-09,
+          "linear_rtol": 1e-10,
+          "max_newton": 15,
+          "linear_cycles": 3,
+          "line_search_steps": 12,
+          "linear_restart": 240,
+          "linear_preconditioner": "current"
+        },
+        "steps": 512,
+        "dt": 3.255208333333333e-05,
+        "duration_s": 0.016666666666666666,
+        "repeats": 2,
+        "training_eligible": false
+      },
+      "report": {
+        "gpu": "NVIDIA GeForce GTX 1080 Ti",
+        "setup_s": 6.059468315000231,
+        "graph": {
+          "kernels": 6066,
+          "device_copies": 610,
+          "memsets": 1428,
+          "children": 4,
+          "host_copies": 0,
+          "host_callbacks": 0,
+          "conditionals": 13,
+          "conditional_bodies": 13
+        },
+        "training_eligible": false,
+        "warmup_s": 0.6531636970003092,
+        "warmup_steps": 8,
+        "warmup_counts": {
+          "c": [
+            2,
+            0,
+            0,
+            0,
+            1,
+            0,
+            8,
+            32,
+            1,
+            16
+          ],
+          "failure": 0,
+          "mixed_counts": [
+            16,
+            32,
+            32,
+            0
+          ]
+        },
+        "solve_s": [
+          34.3710198130002,
+          34.24569938900004
+        ],
+        "solve_median_s": 34.30835960100012,
+        "counts": [
+          {
+            "c": [
+              2,
+              0,
+              0,
+              0,
+              1,
+              0,
+              512,
+              2048,
+              16,
+              1024
+            ],
+            "failure": 0,
+            "mixed_counts": [
+              1024,
+              2048,
+              2048,
+              0
+            ]
+          },
+          {
+            "c": [
+              2,
+              0,
+              0,
+              0,
+              1,
+              0,
+              512,
+              2048,
+              16,
+              1024
+            ],
+            "failure": 0,
+            "mixed_counts": [
+              1024,
+              2048,
+              2048,
+              0
+            ]
+          }
+        ],
+        "status": "solver_complete",
+        "factor_info": 0
+      },
+      "audit": {
+        "audit_total_repeats": 2,
+        "gpu_audit_s": [
+          13.159329824000451
+        ],
+        "gpu_audit_median_s": 13.159329824000451,
+        "steps": 512,
+        "flag_counts": {
+          "0": 512
+        },
+        "max_abs_checks": [
+          0.004378435217071529,
+          2.6568264707250546e-26,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          6.99070623055853e-07,
+          3.2502460956427605e-05,
+          1.5594703206420468e-21,
+          9.044762675756747e-07,
+          0.9999999983010074
+        ],
+        "all_original_criteria_passed": true,
+        "training_eligible": false
+      },
+      "endpoint_difference": {
+        "u": {
+          "mass_relative": 8.654529714059462e-11,
+          "max_node_norm": 1.8284588993486816e-17,
+          "fixed_max": 0.0
+        },
+        "v": {
+          "mass_relative": 8.13888224027176e-09,
+          "max_node_norm": 7.867274928458334e-13,
+          "fixed_max": 0.0
+        }
+      },
+      "trajectory_difference": {
+        "u": {
+          "mass_time_relative": 2.471040422668553e-11,
+          "max_node_norm": 3.045475027610202e-17,
+          "finite": true
+        },
+        "v": {
+          "mass_time_relative": 6.771091070594171e-09,
+          "max_node_norm": 2.448099532015041e-12,
+          "finite": true
+        }
+      },
+      "replay_endpoint_difference": {
+        "u": 2.6310399491401805e-17,
+        "v": 7.812018744136447e-13
+      },
+      "scales": {
+        "row": {
+          "min": 9.5367431640625e-07,
+          "max": 3.0517578125e-05,
+          "unique": 6
+        },
+        "col": {
+          "min": 1.0,
+          "max": 1.0,
+          "unique": 1
+        }
+      }
+    },
+    {
+      "lane": "wind_fp32_loose_baseline",
+      "config": {
+        "input": "experiments/artifacts/runs/teacher_timestep_search/gauss_scaling_trial_v1/inputs/wind",
+        "mode": "baseline",
+        "precision": "fp32",
+        "tolerance": "loose",
+        "policy": {
+          "force_atol_n": 0.0001,
+          "force_rtol": 0.001,
+          "displacement_atol_m": 1e-08,
+          "displacement_rtol": 0.0001,
+          "linear_rtol": 0.001,
+          "max_newton": 15,
+          "linear_cycles": 3,
+          "line_search_steps": 12,
+          "linear_restart": 240,
+          "linear_preconditioner": "current"
+        },
+        "steps": 512,
+        "dt": 3.255208333333333e-05,
+        "duration_s": 0.016666666666666666,
+        "repeats": 2,
+        "training_eligible": false
+      },
+      "report": {
+        "gpu": "NVIDIA GeForce GTX 1080 Ti",
+        "setup_s": 3.28295118799997,
+        "graph": {
+          "kernels": 5988,
+          "device_copies": 603,
+          "memsets": 1417,
+          "children": 4,
+          "host_copies": 0,
+          "host_callbacks": 0,
+          "conditionals": 12,
+          "conditional_bodies": 12
+        },
+        "training_eligible": false,
+        "warmup_s": 0.3342579720001595,
+        "warmup_steps": 8,
+        "warmup_counts": {
+          "c": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            8,
+            15,
+            1,
+            9
+          ],
+          "failure": 0
+        },
+        "solve_s": [
+          10.619299657000283,
+          10.8781131249998
+        ],
+        "solve_median_s": 10.748706391000042,
+        "counts": [
+          {
+            "c": [
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              512,
+              1015,
+              9,
+              521
+            ],
+            "failure": 0
+          },
+          {
+            "c": [
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              512,
+              1015,
+              9,
+              521
+            ],
+            "failure": 0
+          }
+        ],
+        "status": "solver_complete",
+        "factor_info": 0
+      },
+      "audit": {
+        "audit_total_repeats": 2,
+        "gpu_audit_s": [
+          16.50885029999972
+        ],
+        "gpu_audit_median_s": 16.50885029999972,
+        "steps": 512,
+        "flag_counts": {
+          "7": 512
+        },
+        "max_abs_checks": [
+          988035.1376406016,
+          6.056921433475127e-12,
+          1.989090073937771e-08,
+          1.087027174787494e-11,
+          5.116319503356408e-08,
+          1.627368677689841e-08,
+          0.1608426925060097,
+          42.338228973275974,
+          7.057796744275283e-08,
+          2.0451397812145826,
+          0.5697156327821602
+        ],
+        "all_original_criteria_passed": false,
+        "training_eligible": false
+      },
+      "endpoint_difference": {
+        "u": {
+          "mass_relative": 6.757954502988135e-07,
+          "max_node_norm": 2.7459424639240628e-06,
+          "fixed_max": 0.0
+        },
+        "v": {
+          "mass_relative": 0.0010637271810217898,
+          "max_node_norm": 0.010949086876360365,
+          "fixed_max": 0.0
+        }
+      },
+      "trajectory_difference": {
+        "u": {
+          "mass_time_relative": 3.918060524466433e-07,
+          "max_node_norm": 7.470335274180507e-06,
+          "finite": true
+        },
+        "v": {
+          "mass_time_relative": 0.0006902079316388025,
+          "max_node_norm": 0.025317838137980022,
+          "finite": true
+        }
+      },
+      "replay_endpoint_difference": {
+        "u": 3.014354144070808e-08,
+        "v": 0.0008453947558269004
+      }
+    },
+    {
+      "lane": "wind_fp32_loose_scaled",
+      "config": {
+        "input": "experiments/artifacts/runs/teacher_timestep_search/gauss_scaling_trial_v1/inputs/wind",
+        "mode": "scaled",
+        "precision": "fp32",
+        "tolerance": "loose",
+        "policy": {
+          "force_atol_n": 0.0001,
+          "force_rtol": 0.001,
+          "displacement_atol_m": 1e-08,
+          "displacement_rtol": 0.0001,
+          "linear_rtol": 0.001,
+          "max_newton": 15,
+          "linear_cycles": 3,
+          "line_search_steps": 12,
+          "linear_restart": 240,
+          "linear_preconditioner": "current"
+        },
+        "steps": 512,
+        "dt": 3.255208333333333e-05,
+        "duration_s": 0.016666666666666666,
+        "repeats": 2,
+        "training_eligible": false
+      },
+      "report": {
+        "gpu": "NVIDIA GeForce GTX 1080 Ti",
+        "setup_s": 3.249008920000051,
+        "graph": {
+          "kernels": 5998,
+          "device_copies": 603,
+          "memsets": 1418,
+          "children": 4,
+          "host_copies": 0,
+          "host_callbacks": 0,
+          "conditionals": 12,
+          "conditional_bodies": 12
+        },
+        "training_eligible": false,
+        "warmup_s": 0.31357573200011757,
+        "warmup_steps": 8,
+        "warmup_counts": {
+          "c": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            8,
+            15,
+            1,
+            9
+          ],
+          "failure": 0
+        },
+        "solve_s": [
+          10.660789586999726,
+          11.309682530000373
+        ],
+        "solve_median_s": 10.98523605850005,
+        "counts": [
+          {
+            "c": [
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              512,
+              1014,
+              9,
+              521
+            ],
+            "failure": 0
+          },
+          {
+            "c": [
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              512,
+              1015,
+              9,
+              521
+            ],
+            "failure": 0
+          }
+        ],
+        "status": "solver_complete",
+        "factor_info": 0
+      },
+      "audit": {
+        "audit_total_repeats": 2,
+        "gpu_audit_s": [
+          22.367499974000566
+        ],
+        "gpu_audit_median_s": 22.367499974000566,
+        "steps": 512,
+        "flag_counts": {
+          "7": 512
+        },
+        "max_abs_checks": [
+          982643.7574092731,
+          6.043007818260268e-12,
+          1.987266667742875e-08,
+          1.0871792145763894e-11,
+          5.1203358514374654e-08,
+          1.2973628304658873e-08,
+          0.16084301813067634,
+          42.33826768395273,
+          6.993291788643442e-08,
+          2.045136303048616,
+          0.5697161882268849
+        ],
+        "all_original_criteria_passed": false,
+        "training_eligible": false
+      },
+      "endpoint_difference": {
+        "u": {
+          "mass_relative": 6.753717187788036e-07,
+          "max_node_norm": 2.760270545028091e-06,
+          "fixed_max": 0.0
+        },
+        "v": {
+          "mass_relative": 0.0010647312495673535,
+          "max_node_norm": 0.010919839863089252,
+          "fixed_max": 0.0
+        }
+      },
+      "trajectory_difference": {
+        "u": {
+          "mass_time_relative": 3.9199409848371123e-07,
+          "max_node_norm": 7.406788546530678e-06,
+          "finite": true
+        },
+        "v": {
+          "mass_time_relative": 0.0006899511200169678,
+          "max_node_norm": 0.025282724052324256,
+          "finite": true
+        }
+      },
+      "replay_endpoint_difference": {
+        "u": 3.703181183922766e-08,
+        "v": 0.0008471759162942405
+      },
+      "scales": {
+        "row": {
+          "min": 9.5367431640625e-07,
+          "max": 3.0517578125e-05,
+          "unique": 6
+        },
+        "col": {
+          "min": 1.0,
+          "max": 1.0,
+          "unique": 1
+        }
+      }
+    },
+    {
+      "lane": "wind_fp32_medium_baseline",
+      "config": {
+        "input": "experiments/artifacts/runs/teacher_timestep_search/gauss_scaling_trial_v1/inputs/wind",
+        "mode": "baseline",
+        "precision": "fp32",
+        "tolerance": "medium",
+        "policy": {
+          "force_atol_n": 1e-06,
+          "force_rtol": 1e-05,
+          "displacement_atol_m": 1e-10,
+          "displacement_rtol": 1e-06,
+          "linear_rtol": 1e-05,
+          "max_newton": 15,
+          "linear_cycles": 3,
+          "line_search_steps": 12,
+          "linear_restart": 240,
+          "linear_preconditioner": "current"
+        },
+        "steps": 128,
+        "dt": 3.255208333333333e-05,
+        "duration_s": 0.004166666666666667,
+        "repeats": 2,
+        "training_eligible": false
+      },
+      "report": {
+        "gpu": "NVIDIA GeForce GTX 1080 Ti",
+        "setup_s": 12.842237510999894,
+        "graph": {
+          "kernels": 5988,
+          "device_copies": 603,
+          "memsets": 1417,
+          "children": 4,
+          "host_copies": 0,
+          "host_callbacks": 0,
+          "conditionals": 12,
+          "conditional_bodies": 12
+        },
+        "training_eligible": false,
+        "warmup_s": 1.5777732500000639,
+        "warmup_steps": 8,
+        "warmup_counts": {
+          "c": [
+            9,
+            0,
+            0,
+            2,
+            1,
+            0,
+            8,
+            165,
+            2,
+            75
+          ],
+          "failure": 0
+        },
+        "solve_s": [
+          25.417542070999843,
+          25.344646928000202
+        ],
+        "solve_median_s": 25.381094499500023,
+        "counts": [
+          {
+            "c": [
+              10,
+              0,
+              0,
+              2,
+              1,
+              0,
+              128,
+              2868,
+              20,
+              1253
+            ],
+            "failure": 0
+          },
+          {
+            "c": [
+              9,
+              0,
+              0,
+              2,
+              1,
+              0,
+              128,
+              2839,
+              20,
+              1226
+            ],
+            "failure": 0
+          }
+        ],
+        "status": "solver_complete",
+        "factor_info": 0
+      },
+      "audit": {
+        "audit_total_repeats": 2,
+        "gpu_audit_s": [
+          5.540700161999666
+        ],
+        "gpu_audit_median_s": 5.540700161999666,
+        "steps": 128,
+        "flag_counts": {
+          "7": 128
+        },
+        "max_abs_checks": [
+          166853.30712554092,
+          4.4531224336012786e-12,
+          1.8517330559339893e-08,
+          7.957274968951935e-12,
+          4.870880851006853e-08,
+          1.138145735436214e-08,
+          0.15676492049714888,
+          41.86748597316352,
+          3.1166043819747025e-09,
+          2.025898229520108,
+          0.562921887466469
+        ],
+        "all_original_criteria_passed": false,
+        "training_eligible": false
+      },
+      "endpoint_difference": {
+        "u": {
+          "mass_relative": 1.389597677600327e-08,
+          "max_node_norm": 5.282471477913707e-08,
+          "fixed_max": 0.0
+        },
+        "v": {
+          "mass_relative": 8.625025846202366e-05,
+          "max_node_norm": 0.0004106048039725968,
+          "fixed_max": 0.0
+        }
+      },
+      "trajectory_difference": {
+        "u": {
+          "mass_time_relative": 1.0865675204095719e-08,
+          "max_node_norm": 5.7125500305803866e-08,
+          "finite": true
+        },
+        "v": {
+          "mass_time_relative": 6.365382304125876e-05,
+          "max_node_norm": 0.0006523773981731907,
+          "finite": true
+        }
+      },
+      "replay_endpoint_difference": {
+        "u": 9.337920214846918e-09,
+        "v": 0.00030074503207444536
+      }
+    },
+    {
+      "lane": "wind_fp32_medium_scaled",
+      "config": {
+        "input": "experiments/artifacts/runs/teacher_timestep_search/gauss_scaling_trial_v1/inputs/wind",
+        "mode": "scaled",
+        "precision": "fp32",
+        "tolerance": "medium",
+        "policy": {
+          "force_atol_n": 1e-06,
+          "force_rtol": 1e-05,
+          "displacement_atol_m": 1e-10,
+          "displacement_rtol": 1e-06,
+          "linear_rtol": 1e-05,
+          "max_newton": 15,
+          "linear_cycles": 3,
+          "line_search_steps": 12,
+          "linear_restart": 240,
+          "linear_preconditioner": "current"
+        },
+        "steps": 128,
+        "dt": 3.255208333333333e-05,
+        "duration_s": 0.004166666666666667,
+        "repeats": 2,
+        "training_eligible": false
+      },
+      "report": {
+        "gpu": "NVIDIA GeForce GTX 1080 Ti",
+        "setup_s": 4.731216407000375,
+        "graph": {
+          "kernels": 5998,
+          "device_copies": 603,
+          "memsets": 1418,
+          "children": 4,
+          "host_copies": 0,
+          "host_callbacks": 0,
+          "conditionals": 12,
+          "conditional_bodies": 12
+        },
+        "training_eligible": false,
+        "warmup_s": 1.4946532190001562,
+        "warmup_steps": 8,
+        "warmup_counts": {
+          "c": [
+            9,
+            0,
+            0,
+            2,
+            1,
+            0,
+            8,
+            158,
+            2,
+            74
+          ],
+          "failure": 0
+        },
+        "solve_s": [
+          24.81547696100006,
+          10.2135523500001
+        ],
+        "solve_median_s": 17.51451465550008,
+        "counts": [
+          {
+            "c": [
+              8,
+              0,
+              0,
+              2,
+              1,
+              0,
+              128,
+              2838,
+              20,
+              1241
+            ],
+            "failure": 0
+          },
+          {
+            "c": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              53,
+              1185,
+              9,
+              515
+            ],
+            "failure": 1
+          }
+        ],
+        "status": "error",
+        "reason": "측정 반복 중 실패"
+      }
+    },
+    {
+      "lane": "wind_fp64_strict",
+      "config": {
+        "input": "experiments/artifacts/runs/teacher_timestep_search/gauss_scaling_trial_v1/inputs/wind",
+        "mode": "baseline",
+        "precision": "fp64",
+        "tolerance": "strict",
+        "policy": {
+          "force_atol_n": 1e-10,
+          "force_rtol": 1e-09,
+          "displacement_atol_m": 1e-12,
+          "displacement_rtol": 1e-09,
+          "linear_rtol": 1e-10,
+          "max_newton": 15,
+          "linear_cycles": 3,
+          "line_search_steps": 12,
+          "linear_restart": 240,
+          "linear_preconditioner": "current"
+        },
+        "steps": 512,
+        "dt": 3.255208333333333e-05,
+        "duration_s": 0.016666666666666666,
+        "repeats": 2,
+        "training_eligible": false
+      },
+      "report": {
+        "gpu": "NVIDIA GeForce GTX 1080 Ti",
+        "setup_s": 3.44354486300017,
+        "graph": {
+          "kernels": 5988,
+          "device_copies": 603,
+          "memsets": 1417,
+          "children": 4,
+          "host_copies": 0,
+          "host_callbacks": 0,
+          "conditionals": 12,
+          "conditional_bodies": 12
+        },
+        "training_eligible": false,
+        "warmup_s": 0.8743840430006458,
+        "warmup_steps": 8,
+        "warmup_counts": {
+          "c": [
+            2,
+            0,
+            0,
+            0,
+            1,
+            0,
+            8,
+            61,
+            1,
+            16
+          ],
+          "failure": 0
+        },
+        "solve_s": [
+          51.82723504600017,
+          52.27153569300026
+        ],
+        "solve_median_s": 52.049385369500214,
+        "counts": [
+          {
+            "c": [
+              2,
+              0,
+              0,
+              0,
+              1,
+              0,
+              512,
+              5163,
+              16,
+              1024
+            ],
+            "failure": 0
+          },
+          {
+            "c": [
+              2,
+              0,
+              0,
+              0,
+              1,
+              0,
+              512,
+              5163,
+              16,
+              1024
+            ],
+            "failure": 0
+          }
+        ],
+        "status": "solver_complete",
+        "factor_info": 0
+      },
+      "audit": {
+        "audit_total_repeats": 2,
+        "gpu_audit_s": [
+          22.306280879999576
+        ],
+        "gpu_audit_median_s": 22.306280879999576,
+        "steps": 512,
+        "flag_counts": {
+          "0": 512
+        },
+        "max_abs_checks": [
+          0.00033588602329110784,
+          2.657563915543494e-21,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.16084219388133658,
+          42.33814039336956,
+          1.0248502265878872e-12,
+          2.045106385221099,
+          0.5696953375607596
+        ],
+        "all_original_criteria_passed": true,
+        "training_eligible": false
+      },
+      "endpoint_difference": {
+        "u": {
+          "mass_relative": 0.0,
+          "max_node_norm": 0.0,
+          "fixed_max": 0.0
+        },
+        "v": {
+          "mass_relative": 0.0,
+          "max_node_norm": 0.0,
+          "fixed_max": 0.0
+        }
+      },
+      "trajectory_difference": {
+        "u": {
+          "mass_time_relative": 0.0,
+          "max_node_norm": 0.0,
+          "finite": true
+        },
+        "v": {
+          "mass_time_relative": 0.0,
+          "max_node_norm": 0.0,
+          "finite": true
+        }
+      },
+      "replay_endpoint_difference": {
+        "u": 1.6750923564901044e-17,
+        "v": 7.656531658684074e-13
+      }
+    },
+    {
+      "lane": "wind_mixed_strict",
+      "config": {
+        "input": "experiments/artifacts/runs/teacher_timestep_search/gauss_scaling_trial_v1/inputs/wind",
+        "mode": "mixed",
+        "precision": "fp64",
+        "tolerance": "strict",
+        "policy": {
+          "force_atol_n": 1e-10,
+          "force_rtol": 1e-09,
+          "displacement_atol_m": 1e-12,
+          "displacement_rtol": 1e-09,
+          "linear_rtol": 1e-10,
+          "max_newton": 15,
+          "linear_cycles": 3,
+          "line_search_steps": 12,
+          "linear_restart": 240,
+          "linear_preconditioner": "current"
+        },
+        "steps": 512,
+        "dt": 3.255208333333333e-05,
+        "duration_s": 0.016666666666666666,
+        "repeats": 2,
+        "training_eligible": false
+      },
+      "report": {
+        "gpu": "NVIDIA GeForce GTX 1080 Ti",
+        "setup_s": 5.977055051999741,
+        "graph": {
+          "kernels": 6066,
+          "device_copies": 610,
+          "memsets": 1428,
+          "children": 4,
+          "host_copies": 0,
+          "host_callbacks": 0,
+          "conditionals": 13,
+          "conditional_bodies": 13
+        },
+        "training_eligible": false,
+        "warmup_s": 0.7813063020003028,
+        "warmup_steps": 8,
+        "warmup_counts": {
+          "c": [
+            2,
+            0,
+            0,
+            0,
+            1,
+            0,
+            8,
+            68,
+            1,
+            16
+          ],
+          "failure": 0,
+          "mixed_counts": [
+            16,
+            32,
+            68,
+            0
+          ]
+        },
+        "solve_s": [
+          45.954979531999925,
+          46.82726225500028
+        ],
+        "solve_median_s": 46.3911208935001,
+        "counts": [
+          {
+            "c": [
+              2,
+              0,
+              0,
+              0,
+              1,
+              0,
+              512,
+              5627,
+              16,
+              1024
+            ],
+            "failure": 0,
+            "mixed_counts": [
+              1024,
+              2048,
+              5627,
+              0
+            ]
+          },
+          {
+            "c": [
+              2,
+              0,
+              0,
+              0,
+              1,
+              0,
+              512,
+              5627,
+              16,
+              1024
+            ],
+            "failure": 0,
+            "mixed_counts": [
+              1024,
+              2048,
+              5627,
+              0
+            ]
+          }
+        ],
+        "status": "solver_complete",
+        "factor_info": 0
+      },
+      "audit": {
+        "audit_total_repeats": 2,
+        "gpu_audit_s": [
+          22.68855686400002
+        ],
+        "gpu_audit_median_s": 22.68855686400002,
+        "steps": 512,
+        "flag_counts": {
+          "0": 512
+        },
+        "max_abs_checks": [
+          0.0003374919831531196,
+          2.653305197445808e-21,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.16084219388133691,
+          42.338140393369585,
+          1.0248536968818721e-12,
+          2.0451063852210996,
+          0.56969533756076
+        ],
+        "all_original_criteria_passed": true,
+        "training_eligible": false
+      },
+      "endpoint_difference": {
+        "u": {
+          "mass_relative": 1.1368413755198354e-17,
+          "max_node_norm": 3.524713422200962e-17,
+          "fixed_max": 0.0
+        },
+        "v": {
+          "mass_relative": 2.6223770752930837e-13,
+          "max_node_norm": 9.848792404987368e-13,
+          "fixed_max": 0.0
+        }
+      },
+      "trajectory_difference": {
+        "u": {
+          "mass_time_relative": 7.46561816013441e-18,
+          "max_node_norm": 7.350277042207095e-17,
+          "finite": true
+        },
+        "v": {
+          "mass_time_relative": 1.8479149358255522e-13,
+          "max_node_norm": 2.1747715390411305e-12,
+          "finite": true
+        }
+      },
+      "replay_endpoint_difference": {
+        "u": 1.771315299298193e-17,
+        "v": 7.696035106939669e-13
+      },
+      "scales": {
+        "row": {
+          "min": 9.5367431640625e-07,
+          "max": 3.0517578125e-05,
+          "unique": 6
+        },
+        "col": {
+          "min": 1.0,
+          "max": 1.0,
+          "unique": 1
+        }
+      }
+    },
+    {
+      "lane": "wind_smoke_strict",
+      "config": {
+        "input": "experiments/artifacts/runs/teacher_timestep_search/gauss_scaling_trial_v1/inputs/wind",
+        "mode": "mixed",
+        "precision": "fp64",
+        "tolerance": "strict",
+        "policy": {
+          "force_atol_n": 1e-10,
+          "force_rtol": 1e-09,
+          "displacement_atol_m": 1e-12,
+          "displacement_rtol": 1e-09,
+          "linear_rtol": 1e-10,
+          "max_newton": 15,
+          "linear_cycles": 3,
+          "line_search_steps": 12,
+          "linear_restart": 240,
+          "linear_preconditioner": "current"
+        },
+        "steps": 8,
+        "dt": 3.255208333333333e-05,
+        "duration_s": 0.00026041666666666666,
+        "repeats": 2,
+        "training_eligible": false
+      },
+      "report": {
+        "gpu": "NVIDIA GeForce GTX 1080 Ti",
+        "setup_s": 6.3377047710000625,
+        "graph": {
+          "kernels": 6066,
+          "device_copies": 610,
+          "memsets": 1428,
+          "children": 4,
+          "host_copies": 0,
+          "host_callbacks": 0,
+          "conditionals": 13,
+          "conditional_bodies": 13
+        },
+        "training_eligible": false,
+        "warmup_s": 0.8276029829999061,
+        "warmup_steps": 8,
+        "warmup_counts": {
+          "c": [
+            2,
+            0,
+            0,
+            0,
+            1,
+            0,
+            8,
+            68,
+            1,
+            16
+          ],
+          "failure": 0,
+          "mixed_counts": [
+            16,
+            32,
+            68,
+            0
+          ]
+        },
+        "solve_s": [
+          0.7312131100002262,
+          0.7208594789999552
+        ],
+        "solve_median_s": 0.7260362945000907,
+        "counts": [
+          {
+            "c": [
+              2,
+              0,
+              0,
+              0,
+              1,
+              0,
+              8,
+              68,
+              1,
+              16
+            ],
+            "failure": 0,
+            "mixed_counts": [
+              16,
+              32,
+              68,
+              0
+            ]
+          },
+          {
+            "c": [
+              2,
+              0,
+              0,
+              0,
+              1,
+              0,
+              8,
+              68,
+              1,
+              16
+            ],
+            "failure": 0,
+            "mixed_counts": [
+              16,
+              32,
+              68,
+              0
+            ]
+          }
+        ],
+        "status": "solver_complete",
+        "factor_info": 0
+      },
+      "audit": {
+        "audit_total_repeats": 2,
+        "gpu_audit_s": [
+          0.3652667169999404
+        ],
+        "gpu_audit_median_s": 0.3652667169999404,
+        "steps": 8,
+        "flag_counts": {
+          "0": 8
+        },
+        "max_abs_checks": [
+          0.00013413214304417616,
+          1.652461705953604e-21,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.14977112169332915,
+          41.14447862083339,
+          3.357703536461783e-13,
+          2.0248008488302665,
+          0.5610345509459204
+        ],
+        "all_original_criteria_passed": true,
+        "training_eligible": false
+      },
+      "endpoint_difference": {
+        "u": {
+          "mass_relative": 8.16636145233622e-19,
+          "max_node_norm": 1.6821792838803428e-18,
+          "fixed_max": 0.0
+        },
+        "v": {
+          "mass_relative": 2.8606177546411566e-14,
+          "max_node_norm": 1.2856516841539147e-13,
+          "fixed_max": 0.0
+        }
+      },
+      "trajectory_difference": {
+        "u": {
+          "mass_time_relative": 5.430081651272727e-19,
+          "max_node_norm": 2.4141764492618915e-18,
+          "finite": true
+        },
+        "v": {
+          "mass_time_relative": 1.9112491034914075e-14,
+          "max_node_norm": 1.392514300798012e-13,
+          "finite": true
+        }
+      },
+      "replay_endpoint_difference": {
+        "u": 1.4094628242311558e-18,
+        "v": 8.988771573316227e-14
+      },
+      "scales": {
+        "row": {
+          "min": 9.5367431640625e-07,
+          "max": 3.0517578125e-05,
+          "unique": 6
+        },
+        "col": {
+          "min": 1.0,
+          "max": 1.0,
+          "unique": 1
+        }
+      }
+    }
+  ],
+  "wind_paired_audit": {
+    "timings_s": {
+      "fp64": [
+        22.283430792000217,
+        22.371571859999676,
+        22.22663145700062
+      ],
+      "mixed": [
+        23.071980402999543,
+        22.228610391000075,
+        22.857355981000183
+      ]
+    },
+    "median_s": {
+      "fp64": 22.283430792000217,
+      "mixed": 22.857355981000183
+    },
+    "order": [
+      "fp64",
+      "mixed",
+      "fp64",
+      "mixed",
+      "mixed",
+      "fp64",
+      "fp64",
+      "mixed"
+    ],
+    "warmup_passes": 2,
+    "all_original_criteria_passed": true,
+    "training_eligible": false
+  },
+  "timing_scope": "같은 상태에서512단계 풀이와 독립 검산을 각각 측정. 초기화·업로드·외력 갱신·파일 저장·기록 replay 제외. 바람 medium은128단계, smoke는8단계로 별도 구분.",
+  "evidence_manifest": {
+    "path": "experiments/artifacts/runs/teacher_timestep_search/gauss_scaling_trial_v1/evidence_manifest.json",
+    "file_count": 1610,
+    "sha256": "256c57dd420242763e7a2e09f798925d8134a3ce3601fe9b7bfa21739d92c752"
+  }
+}

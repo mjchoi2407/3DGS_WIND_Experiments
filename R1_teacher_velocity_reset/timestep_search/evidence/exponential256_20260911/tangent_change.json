@@ -1,0 +1,26 @@
+{
+  "scope": "CPU float64 현재 접선의 방향별 변화 진단. 단일 모드/발생 원인 확정 및 최종 물리 검산 아님.",
+  "inputs": {
+    "experiments/artifacts/runs/teacher_timestep_search/20260911_gauss256_stage4_v1/endpoint.npz": "b1998e0cc033748c54ccce582798ac9c418fb958651ef4fe17e130a8c179e1df",
+    "experiments/artifacts/runs/teacher_timestep_search/20260911_exponential256_order4_v1/step0/details.npz": "1e44462d1ffe0cad97a862d6d4346513a6b96901ee7f504a1fe5036a28f28922",
+    "experiments/artifacts/runs/teacher_timestep_search/20260911_gauss256_followup_gaussref4_v1/step3/endpoint.npz": "544e1ffb6d602f20c26ffc28101f9245e56e463ef02b0b8bf61fcaf2e655002f",
+    "experiments/artifacts/runs/teacher_timestep_search/20260911_gauss256_stage6_followup_v1/endpoint.npz": "d18cfbdb785e1272e0b39333b76f71b46e84527e8e0798ce96e5cec22fd984ba"
+  },
+  "rows": {
+    "frame_displacement": {
+      "relative_hvp_change": 1.0195633199838947,
+      "initial_rayleigh_hz": 5.816915983752096,
+      "middle_rayleigh_hz": 4.420547389235876
+    },
+    "initial_velocity": {
+      "relative_hvp_change": 0.9061406919208268,
+      "initial_rayleigh_hz": 2.2903796945288875,
+      "middle_rayleigh_hz": 6.726241258566848
+    },
+    "gauss6_velocity_difference": {
+      "relative_hvp_change": 0.018574998425456145,
+      "initial_rayleigh_hz": 1688.4660231322475,
+      "middle_rayleigh_hz": 1691.4740586286778
+    }
+  }
+}

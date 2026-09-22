@@ -1,0 +1,18 @@
+test_constant_field_rms_is_its_vector_magnitude (test_teacher_p3_shell_random_comparison.P3ShellRandomComparisonTests.test_constant_field_rms_is_its_vector_magnitude) ... ERROR
+test_cross_grid_polynomial_norm_and_direct_difference (test_teacher_p3_shell_random_comparison.P3ShellRandomComparisonTests.test_cross_grid_polynomial_norm_and_direct_difference) ... ok
+test_exact_quadratic_on_common_clock (test_teacher_p3_shell_random_comparison.P3ShellRandomComparisonTests.test_exact_quadratic_on_common_clock) ... ok
+test_vectorized_overlay_matches_direct_mapping (test_teacher_p3_shell_random_comparison.P3ShellRandomComparisonTests.test_vectorized_overlay_matches_direct_mapping) ... ok
+
+======================================================================
+ERROR: test_constant_field_rms_is_its_vector_magnitude (test_teacher_p3_shell_random_comparison.P3ShellRandomComparisonTests.test_constant_field_rms_is_its_vector_magnitude)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<workspace>/code/tests/test_teacher_p3_shell_random_comparison.py", line 60, in test_constant_field_rms_is_its_vector_magnitude
+    error, peak = identical_grid.peaks(A, 1.01*A)
+                                       ^
+NameError: name 'A' is not defined
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.307s
+
+FAILED (errors=1)

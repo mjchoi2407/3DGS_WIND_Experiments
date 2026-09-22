@@ -1,0 +1,666 @@
+{
+  "scope": "작은 GPU fixture, 실제 실패1프레임, 6씬 각3phase×1프레임 smoke. 본6회 미실행",
+  "actual": {
+    "rows": [
+      {
+        "status": "failed",
+        "attempts": [
+          {
+            "method": "base",
+            "requested": 64,
+            "completed": 56,
+            "failure": 2,
+            "finite_solver_stats": true,
+            "counts": [
+              0,
+              1,
+              520,
+              0,
+              0,
+              0,
+              0,
+              0,
+              720,
+              21788,
+              0,
+              0,
+              64,
+              56,
+              64,
+              9,
+              0
+            ],
+            "audit_passed": true,
+            "flags": [
+              0
+            ],
+            "time_failed": false,
+            "mass_info": 0,
+            "retryable": true,
+            "base_begin": 0
+          }
+        ],
+        "completed_base_steps": 56,
+        "retries": 0,
+        "force_failure": 0,
+        "compute_audit_s": 71.5799576599984,
+        "mode": "fixed"
+      },
+      {
+        "status": "passed",
+        "attempts": [
+          {
+            "method": "base",
+            "requested": 64,
+            "completed": 56,
+            "failure": 2,
+            "finite_solver_stats": true,
+            "counts": [
+              0,
+              1,
+              520,
+              0,
+              0,
+              0,
+              0,
+              0,
+              720,
+              21788,
+              0,
+              0,
+              64,
+              56,
+              64,
+              9,
+              0
+            ],
+            "audit_passed": true,
+            "flags": [
+              0
+            ],
+            "time_failed": false,
+            "mass_info": 0,
+            "retryable": true,
+            "base_begin": 0
+          },
+          {
+            "method": "half",
+            "requested": 2,
+            "completed": 2,
+            "failure": 0,
+            "finite_solver_stats": true,
+            "counts": [
+              3,
+              1,
+              6,
+              0,
+              0,
+              0,
+              0,
+              0,
+              6,
+              25,
+              0,
+              0,
+              2,
+              2,
+              2,
+              1,
+              0
+            ],
+            "audit_passed": true,
+            "flags": [
+              0
+            ],
+            "time_failed": false,
+            "mass_info": 0,
+            "retryable": false,
+            "base_begin": 56
+          },
+          {
+            "method": "base",
+            "requested": 7,
+            "completed": 5,
+            "failure": 2,
+            "finite_solver_stats": true,
+            "counts": [
+              0,
+              1,
+              42,
+              0,
+              0,
+              0,
+              0,
+              0,
+              720,
+              4983,
+              0,
+              0,
+              7,
+              5,
+              7,
+              1,
+              0
+            ],
+            "audit_passed": true,
+            "flags": [
+              0
+            ],
+            "time_failed": false,
+            "mass_info": 0,
+            "retryable": true,
+            "base_begin": 57
+          },
+          {
+            "method": "half",
+            "requested": 2,
+            "completed": 2,
+            "failure": 0,
+            "finite_solver_stats": true,
+            "counts": [
+              3,
+              1,
+              6,
+              0,
+              0,
+              0,
+              0,
+              0,
+              6,
+              26,
+              0,
+              0,
+              2,
+              2,
+              2,
+              1,
+              0
+            ],
+            "audit_passed": true,
+            "flags": [
+              0
+            ],
+            "time_failed": false,
+            "mass_info": 0,
+            "retryable": false,
+            "base_begin": 62
+          },
+          {
+            "method": "base",
+            "requested": 1,
+            "completed": 1,
+            "failure": 0,
+            "finite_solver_stats": true,
+            "counts": [
+              9,
+              1,
+              9,
+              0,
+              0,
+              0,
+              0,
+              0,
+              139,
+              866,
+              0,
+              0,
+              1,
+              1,
+              1,
+              1,
+              0
+            ],
+            "audit_passed": true,
+            "flags": [
+              0
+            ],
+            "time_failed": false,
+            "mass_info": 0,
+            "retryable": false,
+            "base_begin": 63
+          }
+        ],
+        "completed_base_steps": 64,
+        "retries": 2,
+        "force_failure": 0,
+        "compute_audit_s": 92.4102059779998,
+        "mode": "retry"
+      }
+    ],
+    "source": "experiments/artifacts/runs/teacher_timestep_search/gravity_wrinkles_flag_bend500_v1",
+    "source_chunk_sha256": "3c27cf394658561148f75fd668ef0aabbe7d313f19fa6a3fa92b6815030df222",
+    "frame": 120,
+    "training_eligible": false
+  },
+  "smoke": [
+    {
+      "shape": "reference_rectangle",
+      "mode": "fixed",
+      "phase": "preload",
+      "status": "complete",
+      "graph": {
+        "base": {
+          "kernels": 5853,
+          "device_copies": 607,
+          "memsets": 1135,
+          "children": 8,
+          "host_copies": 0,
+          "host_callbacks": 0,
+          "conditionals": 21,
+          "conditional_bodies": 21
+        }
+      }
+    },
+    {
+      "shape": "reference_rectangle",
+      "mode": "retry",
+      "phase": "preload",
+      "status": "complete",
+      "graph": {
+        "base": {
+          "kernels": 11700,
+          "device_copies": 1214,
+          "memsets": 2270,
+          "children": 16,
+          "host_copies": 0,
+          "host_callbacks": 0,
+          "conditionals": 39,
+          "conditional_bodies": 42
+        },
+        "half": {
+          "kernels": 11700,
+          "device_copies": 1214,
+          "memsets": 2270,
+          "children": 16,
+          "host_copies": 0,
+          "host_callbacks": 0,
+          "conditionals": 39,
+          "conditional_bodies": 42
+        }
+      }
+    },
+    {
+      "shape": "reference_rectangle",
+      "mode": "fixed",
+      "phase": "calm",
+      "status": "complete",
+      "graph": {
+        "base": {
+          "kernels": 5853,
+          "device_copies": 607,
+          "memsets": 1135,
+          "children": 8,
+          "host_copies": 0,
+          "host_callbacks": 0,
+          "conditionals": 21,
+          "conditional_bodies": 21
+        }
+      }
+    },
+    {
+      "shape": "reference_rectangle",
+      "mode": "retry",
+      "phase": "calm",
+      "status": "complete",
+      "graph": {
+        "base": {
+          "kernels": 11700,
+          "device_copies": 1214,
+          "memsets": 2270,
+          "children": 16,
+          "host_copies": 0,
+          "host_callbacks": 0,
+          "conditionals": 39,
+          "conditional_bodies": 42
+        },
+        "half": {
+          "kernels": 11700,
+          "device_copies": 1214,
+          "memsets": 2270,
+          "children": 16,
+          "host_copies": 0,
+          "host_callbacks": 0,
+          "conditionals": 39,
+          "conditional_bodies": 42
+        }
+      }
+    },
+    {
+      "shape": "reference_rectangle",
+      "mode": "fixed",
+      "phase": "wind",
+      "status": "complete",
+      "graph": {
+        "base": {
+          "kernels": 5853,
+          "device_copies": 607,
+          "memsets": 1135,
+          "children": 8,
+          "host_copies": 0,
+          "host_callbacks": 0,
+          "conditionals": 21,
+          "conditional_bodies": 21
+        }
+      }
+    },
+    {
+      "shape": "reference_rectangle",
+      "mode": "retry",
+      "phase": "wind",
+      "status": "complete",
+      "graph": {
+        "base": {
+          "kernels": 11700,
+          "device_copies": 1214,
+          "memsets": 2270,
+          "children": 16,
+          "host_copies": 0,
+          "host_callbacks": 0,
+          "conditionals": 39,
+          "conditional_bodies": 42
+        },
+        "half": {
+          "kernels": 11700,
+          "device_copies": 1214,
+          "memsets": 2270,
+          "children": 16,
+          "host_copies": 0,
+          "host_callbacks": 0,
+          "conditionals": 39,
+          "conditional_bodies": 42
+        }
+      }
+    },
+    {
+      "shape": "handkerchief",
+      "mode": "fixed",
+      "phase": "preload",
+      "status": "complete",
+      "graph": {
+        "base": {
+          "kernels": 5749,
+          "device_copies": 601,
+          "memsets": 1123,
+          "children": 8,
+          "host_copies": 0,
+          "host_callbacks": 0,
+          "conditionals": 21,
+          "conditional_bodies": 21
+        }
+      }
+    },
+    {
+      "shape": "handkerchief",
+      "mode": "retry",
+      "phase": "preload",
+      "status": "complete",
+      "graph": {
+        "base": {
+          "kernels": 11492,
+          "device_copies": 1202,
+          "memsets": 2246,
+          "children": 16,
+          "host_copies": 0,
+          "host_callbacks": 0,
+          "conditionals": 39,
+          "conditional_bodies": 42
+        },
+        "half": {
+          "kernels": 11492,
+          "device_copies": 1202,
+          "memsets": 2246,
+          "children": 16,
+          "host_copies": 0,
+          "host_callbacks": 0,
+          "conditionals": 39,
+          "conditional_bodies": 42
+        }
+      }
+    },
+    {
+      "shape": "handkerchief",
+      "mode": "fixed",
+      "phase": "calm",
+      "status": "complete",
+      "graph": {
+        "base": {
+          "kernels": 5749,
+          "device_copies": 601,
+          "memsets": 1123,
+          "children": 8,
+          "host_copies": 0,
+          "host_callbacks": 0,
+          "conditionals": 21,
+          "conditional_bodies": 21
+        }
+      }
+    },
+    {
+      "shape": "handkerchief",
+      "mode": "retry",
+      "phase": "calm",
+      "status": "complete",
+      "graph": {
+        "base": {
+          "kernels": 11492,
+          "device_copies": 1202,
+          "memsets": 2246,
+          "children": 16,
+          "host_copies": 0,
+          "host_callbacks": 0,
+          "conditionals": 39,
+          "conditional_bodies": 42
+        },
+        "half": {
+          "kernels": 11492,
+          "device_copies": 1202,
+          "memsets": 2246,
+          "children": 16,
+          "host_copies": 0,
+          "host_callbacks": 0,
+          "conditionals": 39,
+          "conditional_bodies": 42
+        }
+      }
+    },
+    {
+      "shape": "handkerchief",
+      "mode": "fixed",
+      "phase": "wind",
+      "status": "complete",
+      "graph": {
+        "base": {
+          "kernels": 5749,
+          "device_copies": 601,
+          "memsets": 1123,
+          "children": 8,
+          "host_copies": 0,
+          "host_callbacks": 0,
+          "conditionals": 21,
+          "conditional_bodies": 21
+        }
+      }
+    },
+    {
+      "shape": "handkerchief",
+      "mode": "retry",
+      "phase": "wind",
+      "status": "complete",
+      "graph": {
+        "base": {
+          "kernels": 11492,
+          "device_copies": 1202,
+          "memsets": 2246,
+          "children": 16,
+          "host_copies": 0,
+          "host_callbacks": 0,
+          "conditionals": 39,
+          "conditional_bodies": 42
+        },
+        "half": {
+          "kernels": 11492,
+          "device_copies": 1202,
+          "memsets": 2246,
+          "children": 16,
+          "host_copies": 0,
+          "host_callbacks": 0,
+          "conditionals": 39,
+          "conditional_bodies": 42
+        }
+      }
+    },
+    {
+      "shape": "triangular_flag",
+      "mode": "fixed",
+      "phase": "preload",
+      "status": "complete",
+      "graph": {
+        "base": {
+          "kernels": 5513,
+          "device_copies": 577,
+          "memsets": 1075,
+          "children": 8,
+          "host_copies": 0,
+          "host_callbacks": 0,
+          "conditionals": 21,
+          "conditional_bodies": 21
+        }
+      }
+    },
+    {
+      "shape": "triangular_flag",
+      "mode": "retry",
+      "phase": "preload",
+      "status": "complete",
+      "graph": {
+        "base": {
+          "kernels": 11020,
+          "device_copies": 1154,
+          "memsets": 2150,
+          "children": 16,
+          "host_copies": 0,
+          "host_callbacks": 0,
+          "conditionals": 39,
+          "conditional_bodies": 42
+        },
+        "half": {
+          "kernels": 11020,
+          "device_copies": 1154,
+          "memsets": 2150,
+          "children": 16,
+          "host_copies": 0,
+          "host_callbacks": 0,
+          "conditionals": 39,
+          "conditional_bodies": 42
+        }
+      }
+    },
+    {
+      "shape": "triangular_flag",
+      "mode": "fixed",
+      "phase": "calm",
+      "status": "complete",
+      "graph": {
+        "base": {
+          "kernels": 5513,
+          "device_copies": 577,
+          "memsets": 1075,
+          "children": 8,
+          "host_copies": 0,
+          "host_callbacks": 0,
+          "conditionals": 21,
+          "conditional_bodies": 21
+        }
+      }
+    },
+    {
+      "shape": "triangular_flag",
+      "mode": "retry",
+      "phase": "calm",
+      "status": "complete",
+      "graph": {
+        "base": {
+          "kernels": 11020,
+          "device_copies": 1154,
+          "memsets": 2150,
+          "children": 16,
+          "host_copies": 0,
+          "host_callbacks": 0,
+          "conditionals": 39,
+          "conditional_bodies": 42
+        },
+        "half": {
+          "kernels": 11020,
+          "device_copies": 1154,
+          "memsets": 2150,
+          "children": 16,
+          "host_copies": 0,
+          "host_callbacks": 0,
+          "conditionals": 39,
+          "conditional_bodies": 42
+        }
+      }
+    },
+    {
+      "shape": "triangular_flag",
+      "mode": "fixed",
+      "phase": "wind",
+      "status": "complete",
+      "graph": {
+        "base": {
+          "kernels": 5513,
+          "device_copies": 577,
+          "memsets": 1075,
+          "children": 8,
+          "host_copies": 0,
+          "host_callbacks": 0,
+          "conditionals": 21,
+          "conditional_bodies": 21
+        }
+      }
+    },
+    {
+      "shape": "triangular_flag",
+      "mode": "retry",
+      "phase": "wind",
+      "status": "complete",
+      "graph": {
+        "base": {
+          "kernels": 11020,
+          "device_copies": 1154,
+          "memsets": 2150,
+          "children": 16,
+          "host_copies": 0,
+          "host_callbacks": 0,
+          "conditionals": 39,
+          "conditional_bodies": 42
+        },
+        "half": {
+          "kernels": 11020,
+          "device_copies": 1154,
+          "memsets": 2150,
+          "children": 16,
+          "host_copies": 0,
+          "host_callbacks": 0,
+          "conditionals": 39,
+          "conditional_bodies": 42
+        }
+      }
+    }
+  ],
+  "training_eligible": false,
+  "implementation_hashes": {
+    "teacher_newmark_retry_sequence.py": "53ea3dad1f2e5d96d5c8054a9a3d58ae12445af5196a7fa5b9c1ee5e666004cc",
+    "summarize_newmark_dt_suite.py": "98a527267cf9567162ec4c8c43790fdb1e835537636c876589da097c85e61d64",
+    "finish_newmark_dt_validation.py": "2a5b5d185f33d2a8a8c2c2d0cbed877815248f6adf380e33f9426e778bf70c67",
+    "teacher_gravity_wrinkles.py": "e53392a91ac431f13298ae10bcc4b0aaa9edeb920ffe66e0048e52e051316391",
+    "run_newmark_actual_and_smoke.py": "9f961ebf8429b56a7d64a90c4a91f9d6ea696583767c52fc2e38b09d615fdb85",
+    "run_newmark_dt_retry.sh": "89220bac559213c2d54a37b266cdc0ca3a5bb643542a3b46819f0a98a00a67fa",
+    "run_newmark_dt_fixed.sh": "04853730a60f98a8869537fe70deaf2ab1385ec2625878daf4e760ec3be01e82",
+    "resident_newmark_retry.py": "3246f197e14a15468306ea852251b3818674bf11bf9c540cabc0c45ebeac577e",
+    "teacher_newmark_dt_suite.py": "2eb9c2f7abc0cf696de8fef81341146b24520ff45683835df6270b489657fc78",
+    "check_newmark_retry_actual.py": "adb852c9e29f0532c615e4f5fa8e6b99e21de76c503273573a482f842a74c9b7",
+    "run_newmark_retry_checks.py": "a4b484ff4ad46fc02ccb6122043f62df24e0cefe8c98bd8c5c7231ac95f91164",
+    "check_newmark_retry.py": "e9ca812a166fdc832ec778587ed77fa2988fca9f8310e5067970d266feaa6a40"
+  }
+}

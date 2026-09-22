@@ -1,0 +1,230 @@
+{
+  "checked_date": "2026-09-13",
+  "run": "experiments/artifacts/runs/teacher_timestep_search/20260913_cloth_coarse_4s_v1",
+  "run_manifest_sha256": "8155ab1cd75cdc3abeb76a6ada567a0b3803a87b68ae763c08467f78bdf7f34d",
+  "source_run": "experiments/artifacts/runs/teacher_timestep_search/20260912_three_scenes_10s_v4",
+  "source_manifest_sha256": "7b743761f2915fa7f6442290e74ccfeb535bc9b28611782aa1208ac5b0f0e854",
+  "source_wind_sha256": "db9c01a01eecfa78fc1dc581bb8505b8bc518c368001a98faf7894432a60bc59",
+  "source_scope": "로컬 동결 snapshot. 외부 조회·fetch·다운로드 없음",
+  "config_sha256": "a54b67d50841666292461ab8681496cb787973675a58bc2ef078083e277b0475",
+  "cases": {
+    "baseline": {
+      "plan_sha256": "1f50478d8106f4b242b79a2042164c3725a5da3a243fdd550fe27e64859f5a8f",
+      "manifest_sha256": "7c58099ef27bf4d3bec8b47132f9b30489e958ccf2deb9846de2f8deea02a642",
+      "bending_ratio": 1.0,
+      "effective_material": {
+        "E_pa": 1000000.0,
+        "nu": 0.3,
+        "h_m": 0.01,
+        "area_density_kg_m2": 0.1,
+        "membrane_scale_n_per_m": 10989.010989010989,
+        "bending_rigidity_n_m": 0.09157509157509158
+      }
+    },
+    "bend_010": {
+      "plan_sha256": "731703a88a9296fcf35ab40bf9f60fed5ad9d096f84ffbb83486364ca9ecfba6",
+      "manifest_sha256": "6dbb3c023a8f447a88d74ca2e46a26811bdc6afbcafefbccf303c836bbb11912",
+      "bending_ratio": 0.1,
+      "effective_material": {
+        "E_pa": 3162277.660168379,
+        "nu": 0.3,
+        "h_m": 0.0031622776601683794,
+        "area_density_kg_m2": 0.1,
+        "membrane_scale_n_per_m": 10989.010989010989,
+        "bending_rigidity_n_m": 0.009157509157509158
+      }
+    },
+    "bend_001": {
+      "plan_sha256": "44402fe7d12d2c1e615dad73ef30e50fafa2b54e3fed4afe80642e77443e8c2a",
+      "manifest_sha256": "b152630b52f1737d7c1305103678c6981637d25ca9d1a922c521c27589f0c470",
+      "bending_ratio": 0.01,
+      "effective_material": {
+        "E_pa": 10000000.0,
+        "nu": 0.3,
+        "h_m": 0.001,
+        "area_density_kg_m2": 0.1,
+        "membrane_scale_n_per_m": 10989.010989010989,
+        "bending_rigidity_n_m": 0.0009157509157509159
+      }
+    }
+  },
+  "geometry": {
+    "reference_rectangle": {
+      "triangles": 384,
+      "p3_nodes": 1813,
+      "fixed_p3_nodes": 49,
+      "bounds_m": [
+        [
+          0.25,
+          0.0,
+          -0.5
+        ],
+        [
+          1.0,
+          0.0,
+          0.5
+        ]
+      ],
+      "fixed_bounds_m": [
+        [
+          0.25,
+          0.0,
+          -0.5
+        ],
+        [
+          0.25,
+          0.0,
+          0.5
+        ]
+      ],
+      "fixed_normal_edges": 16,
+      "minimum_triangle_quality": 0.8660254037844386,
+      "area_m2": 0.7500000000000001,
+      "mass_kg": 0.07500000000000004
+    },
+    "triangular_flag": {
+      "triangles": 144,
+      "p3_nodes": 703,
+      "fixed_p3_nodes": 37,
+      "bounds_m": [
+        [
+          0.0,
+          0.0,
+          -0.375
+        ],
+        [
+          1.2000000476837158,
+          0.0,
+          0.375
+        ]
+      ],
+      "fixed_bounds_m": [
+        [
+          0.0,
+          0.0,
+          -0.375
+        ],
+        [
+          0.0,
+          0.0,
+          0.375
+        ]
+      ],
+      "fixed_normal_edges": 12,
+      "minimum_triangle_quality": 0.8372449942016461,
+      "area_m2": 0.4500000043772162,
+      "mass_kg": 0.04500000043772162
+    },
+    "handkerchief": {
+      "triangles": 192,
+      "p3_nodes": 925,
+      "fixed_p3_nodes": 8,
+      "bounds_m": [
+        [
+          -0.3499999940395355,
+          0.0,
+          -0.699999988079071
+        ],
+        [
+          0.3499999940395355,
+          0.0,
+          0.0
+        ]
+      ],
+      "fixed_bounds_m": [
+        [
+          -0.3499999940395355,
+          0.0,
+          0.0
+        ],
+        [
+          0.3499999940395355,
+          0.0,
+          0.0
+        ]
+      ],
+      "fixed_normal_edges": 2,
+      "minimum_triangle_quality": 0.799407881768503,
+      "area_m2": 0.4899999833106996,
+      "mass_kg": 0.048999998331069966,
+      "clip_widths_m": [
+        0.05833333730697632,
+        0.05833333730697632
+      ]
+    }
+  },
+  "preserved_plan_values": {
+    "fps": 60,
+    "substeps": 64,
+    "official_policy": {
+      "force_atol_n": 1e-10,
+      "force_rtol": 1e-09,
+      "displacement_atol_m": 1e-12,
+      "displacement_rtol": 1e-09,
+      "linear_rtol": 1e-10,
+      "max_newton": 15,
+      "linear_cycles": 3,
+      "line_search_steps": 12,
+      "linear_restart": 240,
+      "linear_preconditioner": "current"
+    },
+    "internal_force_fraction": 0.3,
+    "linear_cap": 0.0001,
+    "preconditioner_rebuild_every": 64,
+    "scene_budget_s": {
+      "reference_rectangle": null,
+      "triangular_flag": null,
+      "handkerchief": null
+    },
+    "per_scene_budget_s": 14400
+  },
+  "runtime_versions": {
+    "python": "3.12.3",
+    "implementation": "cpython",
+    "cache_tag": "cpython-312",
+    "machine": "x86_64",
+    "byteorder": "little",
+    "numpy": "2.4.4",
+    "scipy": "1.18.1",
+    "warp-lang": "1.17.0"
+  },
+  "input_sha256": {
+    "handkerchief.npz": "53585c0a8e0e1448d3554c151a449bb395aa58ac442e5d09b9ed5b7659e94e67",
+    "triangular_flag.npz": "d4953a0d5ba19016c7961ae89e38e736d84badd690ddb53dacb7a317fb105024",
+    "wind.npz": "db9c01a01eecfa78fc1dc581bb8505b8bc518c368001a98faf7894432a60bc59"
+  },
+  "changed_existing_runtime_files": [
+    "evaluation/teacher_three_scene_run.py"
+  ],
+  "implementation_sha256": {
+    "code/wind3dgs/evaluation/teacher_scene_model.py": "7db27d6594bebff022c1cc4714a2c510f4c70eb15b5d58e7b780b595661541e5",
+    "code/wind3dgs/evaluation/teacher_cloth_sweep.py": "f15157c0fe4698d5e89d16e75014958064a97e937b84c234fb859d6fcf23245b",
+    "code/wind3dgs/evaluation/teacher_three_scene_run.py": "d2ae46bb5b93a37be9ac1fbccf1e0a8f8e537a4a672969ad677e1e300aa9d7ac",
+    "code/wind3dgs/evaluation/view_shell_recording.py": "2c5b1326afda800accd051c2a2fb2ab898f5f11c6657426bd6b96cd301c52b84",
+    "experiments/R1_teacher_velocity_reset/timestep_search/run_cloth_coarse.sh": "33de7851fb0c60000aa77bc092d89892f310e444b8a0c4721e0426acbc67dbc8",
+    "experiments/R1_teacher_velocity_reset/timestep_search/view_cloth_coarse.sh": "3819978342ccc9e315097e0f10bebf48aa6efe52b2fb9d1b7a84cb3006de4b36"
+  },
+  "validation": {
+    "cpu_unit_tests": {
+      "test_teacher_cloth_sweep.py": 6,
+      "test_teacher_three_scene_run.py": 8,
+      "test_shell_recording_viewer.py": 3
+    },
+    "unit_tests_passed": true,
+    "bash_syntax_two_wrappers_passed": true,
+    "actual_models_checked": 9,
+    "geometry_fixed_points_mass_and_membrane_preserved": true,
+    "bending_matrix_and_boundary_penalty_scaled": true,
+    "same_wind_all_cases": true,
+    "reprepare_and_status_preserved_plan_and_report_hashes": true,
+    "frozen_runtime_matches_current_python": true,
+    "prepared_scenes": 9,
+    "completed_simulation_frames": 0,
+    "gpu_time_integration_executed": false,
+    "new_opengl_render_executed": false,
+    "wrapper_help_and_rejected_conflicting_modes": true
+  },
+  "training_eligible": false,
+  "r1_complete": false,
+  "remaining": "4초동적 비교·천다운 움직임·시간/공간 수렴·10초 안정성 미검증"
+}

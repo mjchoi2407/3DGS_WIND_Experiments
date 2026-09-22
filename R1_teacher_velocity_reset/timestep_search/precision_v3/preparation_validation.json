@@ -1,0 +1,48 @@
+{
+  "status": "prepared_gpu_not_run",
+  "cpu_tests": {
+    "contract_selection_gate": 5,
+    "warp_kernel_numerical": 3,
+    "high_load_selection_classification_trace": 4
+  },
+  "cpu_w1_hvp": {
+    "fp64": {
+      "dtype": "float64",
+      "shape": [
+        1813,
+        3
+      ],
+      "finite": true,
+      "kernel_status": 0
+    },
+    "fp32": {
+      "dtype": "float32",
+      "shape": [
+        1813,
+        3
+      ],
+      "finite": true,
+      "kernel_status": 0
+    },
+    "scope": "one seeded direction at saved W1 state; no linear-target or GPU-speed claim"
+  },
+  "source_hashes": {
+    "code/wind3dgs/teacher/resident_precision_v3.py": "731adba00d3c79e429bc5ff7fce7c4f22833c9932482a0a20464f34a09f7ab1c",
+    "code/wind3dgs/teacher/resident_inner32_v3.py": "a590821f616099e5c935fbba31cb3a5be29b9c65eb3fbd653a42346782df329c",
+    "code/wind3dgs/teacher/resident_linear_trace_v3.py": "ef200035cfa9695fea40c8f6f12aeae484561caa3e259d27345d30d564d86baa",
+    "code/wind3dgs/evaluation/teacher_precision_v3.py": "d4af03ba9d93c97f3c9bdd31c9da9dd1fcae51363a6c84d01d44356327fbe441",
+    "code/wind3dgs/evaluation/teacher_precision_v3_worker.py": "e17adef4b20aa6298196a0e5fb536e96e849a4a5ab532e85e7e5e32f9673cdd8",
+    "code/wind3dgs/evaluation/teacher_high_load_v3.py": "02f554c3835091ca36dd30d674c1972b0a177c11b770f2d4993cb9ad763c4748"
+  },
+  "gpu_measurements": null,
+  "production_enabled": false,
+  "training_eligible": false,
+  "high_load": {
+    "scope": "existing three-shape 4s FP64 wind runs only",
+    "selection": "high_load_preparation/selection.json",
+    "prepare_only_zip": "/tmp/wind_v3_highload_final.zip",
+    "gpu_executed": false,
+    "post_peak_end_of_record": "incomplete",
+    "prepare_validation_scope": "input/checkpoint/forcing/selection and runtime packaging; later scalar reporting changes compile checked"
+  }
+}

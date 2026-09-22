@@ -1,0 +1,281 @@
+{
+  "actual": {
+    "rows": [
+      {
+        "status": "passed",
+        "attempts": [
+          {
+            "method": "base",
+            "requested": 64,
+            "completed": 37,
+            "failure": 3,
+            "finite_solver_stats": true,
+            "counts": [
+              0,
+              1,
+              291,
+              0,
+              0,
+              0,
+              12,
+              0,
+              128,
+              11745,
+              0,
+              0,
+              64,
+              37,
+              64,
+              5,
+              0
+            ],
+            "audit_passed": true,
+            "flags": [
+              0
+            ],
+            "time_failed": false,
+            "mass_info": 0,
+            "retryable": true,
+            "base_begin": 0
+          },
+          {
+            "method": "gauss",
+            "requested": 8,
+            "completed": 8,
+            "failure": 0,
+            "counts": [
+              2,
+              0,
+              0,
+              0,
+              1,
+              0,
+              8,
+              64,
+              1,
+              16
+            ],
+            "gmres_iterations": 64,
+            "matrix_rebuilds": 1,
+            "audit_passed": true,
+            "audit_kind": "gauss6_native_11",
+            "flags": [
+              0
+            ],
+            "factor_info": 0,
+            "retryable": false,
+            "base_begin": 37
+          },
+          {
+            "method": "base",
+            "requested": 26,
+            "completed": 26,
+            "failure": 0,
+            "finite_solver_stats": true,
+            "counts": [
+              8,
+              1,
+              223,
+              0,
+              0,
+              0,
+              0,
+              0,
+              67,
+              10740,
+              0,
+              0,
+              26,
+              26,
+              26,
+              4,
+              0
+            ],
+            "audit_passed": true,
+            "flags": [
+              0
+            ],
+            "time_failed": false,
+            "mass_info": 0,
+            "retryable": false,
+            "base_begin": 38
+          }
+        ],
+        "completed_base_steps": 64,
+        "retries": 1,
+        "force_failure": 0,
+        "compute_audit_s": 78.72144612600096,
+        "shape": "reference_rectangle",
+        "frame": 103,
+        "input_sha256": "c56ebc030c15a750d9fcf40a26a42f05cd2f354006b5d20ba129df33c7908a8b"
+      },
+      {
+        "status": "passed",
+        "attempts": [
+          {
+            "method": "base",
+            "requested": 64,
+            "completed": 60,
+            "failure": 3,
+            "finite_solver_stats": true,
+            "counts": [
+              0,
+              1,
+              379,
+              0,
+              0,
+              0,
+              12,
+              0,
+              63,
+              7354,
+              0,
+              0,
+              64,
+              60,
+              64,
+              6,
+              0
+            ],
+            "audit_passed": true,
+            "flags": [
+              0
+            ],
+            "time_failed": false,
+            "mass_info": 0,
+            "retryable": true,
+            "base_begin": 0
+          },
+          {
+            "method": "gauss",
+            "requested": 8,
+            "completed": 8,
+            "failure": 0,
+            "counts": [
+              2,
+              0,
+              0,
+              0,
+              1,
+              0,
+              8,
+              60,
+              1,
+              16
+            ],
+            "gmres_iterations": 60,
+            "matrix_rebuilds": 1,
+            "audit_passed": true,
+            "audit_kind": "gauss6_native_11",
+            "flags": [
+              0
+            ],
+            "factor_info": 0,
+            "retryable": false,
+            "base_begin": 60
+          },
+          {
+            "method": "base",
+            "requested": 3,
+            "completed": 3,
+            "failure": 0,
+            "finite_solver_stats": true,
+            "counts": [
+              7,
+              1,
+              18,
+              0,
+              0,
+              0,
+              0,
+              0,
+              44,
+              578,
+              0,
+              0,
+              3,
+              3,
+              3,
+              1,
+              0
+            ],
+            "audit_passed": true,
+            "flags": [
+              0
+            ],
+            "time_failed": false,
+            "mass_info": 0,
+            "retryable": false,
+            "base_begin": 61
+          }
+        ],
+        "completed_base_steps": 64,
+        "retries": 1,
+        "force_failure": 0,
+        "compute_audit_s": 17.585058117998415,
+        "shape": "triangular_flag",
+        "frame": 120,
+        "input_sha256": "148f987becc07817475f377ae88fd79af145c61cd224c3b94d170c47899b250c"
+      }
+    ],
+    "training_eligible": false
+  },
+  "smoke": [
+    {
+      "shape": "reference_rectangle",
+      "phase": "preload",
+      "status": "complete",
+      "gpu": "NVIDIA GeForce GTX 1080 Ti"
+    },
+    {
+      "shape": "reference_rectangle",
+      "phase": "calm",
+      "status": "complete",
+      "gpu": "NVIDIA GeForce GTX 1080 Ti"
+    },
+    {
+      "shape": "reference_rectangle",
+      "phase": "wind",
+      "status": "complete",
+      "gpu": "NVIDIA GeForce GTX 1080 Ti"
+    },
+    {
+      "shape": "handkerchief",
+      "phase": "preload",
+      "status": "complete",
+      "gpu": "NVIDIA GeForce GTX 1080 Ti"
+    },
+    {
+      "shape": "handkerchief",
+      "phase": "calm",
+      "status": "complete",
+      "gpu": "NVIDIA GeForce GTX 1080 Ti"
+    },
+    {
+      "shape": "handkerchief",
+      "phase": "wind",
+      "status": "complete",
+      "gpu": "NVIDIA GeForce GTX 1080 Ti"
+    },
+    {
+      "shape": "triangular_flag",
+      "phase": "preload",
+      "status": "complete",
+      "gpu": "NVIDIA GeForce GTX 1080 Ti"
+    },
+    {
+      "shape": "triangular_flag",
+      "phase": "calm",
+      "status": "complete",
+      "gpu": "NVIDIA GeForce GTX 1080 Ti"
+    },
+    {
+      "shape": "triangular_flag",
+      "phase": "wind",
+      "status": "complete",
+      "gpu": "NVIDIA GeForce GTX 1080 Ti"
+    }
+  ],
+  "scope": "실제 실패2프레임 복구+세 씬 각3phase1프레임; 장기 검증 아님",
+  "training_eligible": false
+}

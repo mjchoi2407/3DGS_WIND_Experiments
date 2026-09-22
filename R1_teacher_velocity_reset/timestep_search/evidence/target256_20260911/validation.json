@@ -1,0 +1,30 @@
+{
+  "timestep_tests": 18,
+  "dynamics_tests": 5,
+  "colored_preconditioner_tests": 2,
+  "total_passed": 25,
+  "current_checkpoint_replay": {
+    "resolution": 4,
+    "device": "cpu",
+    "frames": 6,
+    "position_atol_m": 1e-16,
+    "velocity_atol_m_s": 1e-12,
+    "passed": true
+  },
+  "current_cuda_followup": {
+    "resolution": 32,
+    "frames": 4,
+    "passed": true,
+    "end_time_s": 3.3333333333333894
+  },
+  "target256_runtime_verified": true,
+  "original_wind_exact": true,
+  "main_budget_remaining_s": 7998,
+  "main_long_run_started": false,
+  "commit": false,
+  "push": false,
+  "fetch": false,
+  "reference_intervals_passed": 56,
+  "whole_trajectory_accuracy_verified": false,
+  "next_branch": "256배 유지·시간 적분법 별도 비교 시험"
+}

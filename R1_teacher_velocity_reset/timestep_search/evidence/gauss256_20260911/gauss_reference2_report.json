@@ -1,0 +1,454 @@
+{
+  "status": "passed",
+  "substeps": 2,
+  "rows": [
+    {
+      "input_sha256": "b1998e0cc033748c54ccce582798ac9c418fb958651ef4fe17e130a8c179e1df",
+      "source_sha256": "f28e1a3cd788cb0257608caeabedd2278a42b15730c787e7c4023c7661d620d0",
+      "environment": {
+        "device": "cuda:0",
+        "numpy": "2.4.4",
+        "scipy": "1.18.1",
+        "compute_backend": "precision_hvp_graph",
+        "linear_solver_device": "cpu",
+        "cuda_graph": true,
+        "state_encoding": "hi_lo_v1",
+        "state_mantissa_bits": 64,
+        "warp": "1.17.0",
+        "gpu_name": "NVIDIA GeForce GTX 1080 Ti"
+      },
+      "input_time_s": 3.266666666666723,
+      "dt_s": 0.008333333333333333,
+      "stages": 6,
+      "substeps": 2,
+      "multiplier": 128.0,
+      "training_eligible": false,
+      "status": "passed",
+      "solve_s": 43.275255102998926,
+      "diagnostics": {
+        "integrator": "p3_shell_gauss6_collocation_trial_v1",
+        "stages": 6,
+        "preconditioner_kind": "coupled",
+        "attempts": [
+          {
+            "iteration": 0,
+            "force_residual_n": [
+              0.04503625457702832,
+              0.1692523610160801,
+              0.3685487778559867,
+              0.5998123705938029,
+              0.8166324354344503,
+              0.9646122100100959
+            ],
+            "force_limit_n": [
+              1.4530603823689723e-10,
+              2.6913294684575145e-10,
+              4.683554425921123e-10,
+              6.995957966099243e-10,
+              9.164084486721413e-10,
+              1.0643866736477508e-09
+            ],
+            "linear_iterations": 9,
+            "linear_info": 0,
+            "linear_residual_n": 1.4144061167178029e-10,
+            "linear_limit_n": 1.457272437746802e-10,
+            "preconditioner": [
+              {
+                "colors": 276,
+                "nnz": 2478006,
+                "relative_action_error": 3.895307151413794e-16,
+                "assembly_s": 0.8746589479997056,
+                "factor_s": 9.147746664006263,
+                "factors": 3,
+                "factor_nnz": 64649118,
+                "stage_transform_condition": 602.6538662275997
+              }
+            ],
+            "line_search": [
+              {
+                "alpha": 1.0,
+                "norm_n": 0.0050509592799399365
+              }
+            ]
+          },
+          {
+            "iteration": 1,
+            "force_residual_n": [
+              1.241580703819556e-06,
+              4.854972681242871e-05,
+              0.0006352723445747935,
+              0.0019286012969351994,
+              0.0029368511101365686,
+              0.0035723469418133336
+            ],
+            "force_limit_n": [
+              1.0936234825087735e-10,
+              1.0875438991990093e-10,
+              1.0844477882057319e-10,
+              1.0881430028108521e-10,
+              1.0910550572283835e-10,
+              1.1008593118324005e-10
+            ],
+            "linear_iterations": 10,
+            "linear_info": 0,
+            "linear_residual_n": 7.759172297682048e-14,
+            "linear_limit_n": 5.050959279939937e-13,
+            "preconditioner": [
+              {
+                "colors": 276,
+                "nnz": 2478006,
+                "relative_action_error": 3.92490134385559e-16,
+                "assembly_s": 0.7936391340044793,
+                "factor_s": 9.214199551002821,
+                "factors": 3,
+                "factor_nnz": 64680546,
+                "stage_transform_condition": 602.6538662275997
+              }
+            ],
+            "line_search": [
+              {
+                "alpha": 1.0,
+                "norm_n": 5.1840855714480825e-06
+              }
+            ]
+          },
+          {
+            "iteration": 2,
+            "force_residual_n": [
+              4.637660515637605e-12,
+              1.1101300088128488e-10,
+              2.519557980994521e-08,
+              9.133586235574015e-08,
+              1.0975375248222558e-06,
+              5.065686283650381e-06
+            ],
+            "force_limit_n": [
+              1.0936241327379245e-10,
+              1.0875425098239195e-10,
+              1.0845024197401961e-10,
+              1.0868983695139703e-10,
+              1.0872409303127314e-10,
+              1.0953000695687311e-10
+            ],
+            "linear_iterations": 9,
+            "linear_info": 0,
+            "linear_residual_n": 6.055364963224419e-17,
+            "linear_limit_n": 5.184085571448083e-16,
+            "preconditioner": [
+              {
+                "colors": 276,
+                "nnz": 2478006,
+                "relative_action_error": 3.964710571815256e-16,
+                "assembly_s": 0.8036495019914582,
+                "factor_s": 9.667534374006209,
+                "factors": 3,
+                "factor_nnz": 64680546,
+                "stage_transform_condition": 602.6538662275997
+              }
+            ],
+            "line_search": [
+              {
+                "alpha": 1.0,
+                "norm_n": 4.437008121704395e-12
+              }
+            ]
+          },
+          {
+            "iteration": 3,
+            "force_residual_n": [
+              1.7024023428879934e-12,
+              1.7272687330208063e-12,
+              1.7442597411420338e-12,
+              1.8202365276255e-12,
+              1.847771457437096e-12,
+              2.0088423628893116e-12
+            ],
+            "force_limit_n": [
+              1.0936241325337797e-10,
+              1.0875425100847619e-10,
+              1.0845024277982222e-10,
+              1.0868984025565055e-10,
+              1.0872411771767404e-10,
+              1.0953018041071148e-10
+            ]
+          }
+        ],
+        "hvp_calls": 1041,
+        "stage_update_error_m": 2.710505431213761e-20,
+        "external_work_j": 0.00010398316726601008,
+        "energy_balance_residual_j": -6.977370779943665e-10
+      },
+      "audit": {
+        "force_ratios": [
+          0.011468017760556337,
+          0.011768865913598348,
+          0.011875704448004454,
+          0.011777108821841206,
+          0.011733938344824143,
+          0.01432453586629706
+        ],
+        "stage_position_defect_m": 4.1689902872672595e-19,
+        "stage_velocity_defect_m_s": 1.1354900174417523e-17,
+        "end_position_defect_m": 2.659683454378503e-19,
+        "end_velocity_defect_m_s": 4.824699667560495e-18,
+        "energy_ledger_error_j": 0.0,
+        "geometry": {
+          "projected_gradient_upper": 0.19102985294597793,
+          "roundoff_margin": 2.0363818099327373e-08,
+          "injectivity_sufficient_condition": true,
+          "area_ratio_lower": 0.6544326988246061,
+          "time_degree": 6
+        },
+        "control_reconstruction_error_m": 4.607859233063394e-19,
+        "passed": true
+      },
+      "audit_s": 4.233136633003596,
+      "end_time_s": 3.2750000000000563
+    },
+    {
+      "input_sha256": "b1998e0cc033748c54ccce582798ac9c418fb958651ef4fe17e130a8c179e1df",
+      "source_sha256": "f28e1a3cd788cb0257608caeabedd2278a42b15730c787e7c4023c7661d620d0",
+      "environment": {
+        "device": "cuda:0",
+        "numpy": "2.4.4",
+        "scipy": "1.18.1",
+        "compute_backend": "precision_hvp_graph",
+        "linear_solver_device": "cpu",
+        "cuda_graph": true,
+        "state_encoding": "hi_lo_v1",
+        "state_mantissa_bits": 64,
+        "warp": "1.17.0",
+        "gpu_name": "NVIDIA GeForce GTX 1080 Ti"
+      },
+      "input_time_s": 3.2750000000000563,
+      "dt_s": 0.008333333333333333,
+      "stages": 6,
+      "substeps": 2,
+      "multiplier": 128.0,
+      "training_eligible": false,
+      "status": "passed",
+      "solve_s": 54.72288798500085,
+      "diagnostics": {
+        "integrator": "p3_shell_gauss6_collocation_trial_v1",
+        "stages": 6,
+        "preconditioner_kind": "coupled",
+        "attempts": [
+          {
+            "iteration": 0,
+            "force_residual_n": [
+              0.090516902638962,
+              0.3774138013522898,
+              0.8026357587895286,
+              1.250862676452507,
+              1.620894306802818,
+              1.8458571298126192
+            ],
+            "force_limit_n": [
+              1.9061975998326104e-10,
+              4.773635151935048e-10,
+              9.02556259905662e-10,
+              1.3507701723280562e-09,
+              1.7207937621709566e-09,
+              1.9457520121387713e-09
+            ],
+            "linear_iterations": 11,
+            "linear_info": 0,
+            "linear_residual_n": 7.651188294585676e-12,
+            "linear_limit_n": 2.8972405804920614e-10,
+            "preconditioner": [
+              {
+                "colors": 276,
+                "nnz": 2478006,
+                "relative_action_error": 3.948111744360615e-16,
+                "assembly_s": 0.8531352299905848,
+                "factor_s": 9.256669173992123,
+                "factors": 3,
+                "factor_nnz": 64288458,
+                "stage_transform_condition": 602.6538662275997
+              }
+            ],
+            "line_search": [
+              {
+                "alpha": 1.0,
+                "norm_n": 0.006768194181807063
+              }
+            ]
+          },
+          {
+            "iteration": 1,
+            "force_residual_n": [
+              9.823867454942345e-06,
+              0.00016729924523582593,
+              0.0007284250890967822,
+              0.0018498756317384018,
+              0.003616969014868038,
+              0.005361460539720316
+            ],
+            "force_limit_n": [
+              1.094371294095075e-10,
+              1.0812464111838619e-10,
+              1.0812667921933738e-10,
+              1.0811461857563948e-10,
+              1.0877098041297165e-10,
+              1.1038899075249105e-10
+            ],
+            "linear_iterations": 11,
+            "linear_info": 0,
+            "linear_residual_n": 1.2800175867172653e-14,
+            "linear_limit_n": 6.768194181807064e-13,
+            "preconditioner": [
+              {
+                "colors": 276,
+                "nnz": 2478006,
+                "relative_action_error": 3.9114957172873314e-16,
+                "assembly_s": 0.8144462720083538,
+                "factor_s": 9.084915664003347,
+                "factors": 3,
+                "factor_nnz": 64316799,
+                "stage_transform_condition": 602.6538662275997
+              }
+            ],
+            "line_search": [
+              {
+                "alpha": 1.0,
+                "norm_n": 5.491152207580267e-05
+              }
+            ]
+          },
+          {
+            "iteration": 2,
+            "force_residual_n": [
+              1.2173987807135795e-11,
+              1.1322467611154596e-09,
+              4.0710676388137816e-08,
+              1.1323457223726627e-06,
+              1.461283548016193e-05,
+              5.2919338907764204e-05
+            ],
+            "force_limit_n": [
+              1.0943685062467664e-10,
+              1.0813321322938586e-10,
+              1.0812758796106303e-10,
+              1.0794763106958293e-10,
+              1.0802382962372834e-10,
+              1.0874581834166829e-10
+            ],
+            "linear_iterations": 9,
+            "linear_info": 0,
+            "linear_residual_n": 1.0860594282591321e-15,
+            "linear_limit_n": 5.4911522075802675e-15,
+            "preconditioner": [
+              {
+                "colors": 276,
+                "nnz": 2478006,
+                "relative_action_error": 3.979984031517062e-16,
+                "assembly_s": 0.8052224359998945,
+                "factor_s": 8.914819298996008,
+                "factors": 3,
+                "factor_nnz": 64316799,
+                "stage_transform_condition": 602.6538662275997
+              }
+            ],
+            "line_search": [
+              {
+                "alpha": 1.0,
+                "norm_n": 1.572953757871608e-11
+              }
+            ]
+          },
+          {
+            "iteration": 3,
+            "force_residual_n": [
+              1.7251763223619175e-12,
+              1.7373673412896393e-12,
+              1.7460574337318172e-12,
+              1.805221838229281e-12,
+              2.206400535841446e-12,
+              1.5173922632159157e-11
+            ],
+            "force_limit_n": [
+              1.0943685061973516e-10,
+              1.0813321330647085e-10,
+              1.0812758919707103e-10,
+              1.0794765678349433e-10,
+              1.0802418665461809e-10,
+              1.0874444591356713e-10
+            ],
+            "linear_iterations": 10,
+            "linear_info": 0,
+            "linear_residual_n": 4.1870531727964736e-23,
+            "linear_limit_n": 1.5729537578716083e-21,
+            "preconditioner": [
+              {
+                "colors": 276,
+                "nnz": 2478006,
+                "relative_action_error": 3.923621360187477e-16,
+                "assembly_s": 0.8192419039987726,
+                "factor_s": 8.867102215997875,
+                "factors": 3,
+                "factor_nnz": 64316799,
+                "stage_transform_condition": 602.6538662275997
+              }
+            ],
+            "line_search": [
+              {
+                "alpha": 1.0,
+                "norm_n": 2.9426857036162016e-12
+              }
+            ]
+          },
+          {
+            "iteration": 4,
+            "force_residual_n": [
+              1.141059735119682e-12,
+              1.1870049362620185e-12,
+              1.1790866740714882e-12,
+              1.1936333273114778e-12,
+              1.2147775303181037e-12,
+              1.2875211684620951e-12
+            ],
+            "force_limit_n": [
+              1.0943685061969767e-10,
+              1.0813321330643394e-10,
+              1.0812758919707476e-10,
+              1.0794765678348086e-10,
+              1.0802418665456834e-10,
+              1.0874444591312264e-10
+            ]
+          }
+        ],
+        "hvp_calls": 1420,
+        "stage_update_error_m": 5.421010862427522e-20,
+        "external_work_j": 6.246328817631303e-05,
+        "energy_balance_residual_j": -1.0045627080965689e-09
+      },
+      "audit": {
+        "force_ratios": [
+          0.011282099402743622,
+          0.01181853839280537,
+          0.011322667505635034,
+          0.011823268997285712,
+          0.01174285262942775,
+          0.011757354693598912
+        ],
+        "stage_position_defect_m": 4.0580819107361495e-19,
+        "stage_velocity_defect_m_s": 1.5992829077108445e-17,
+        "end_position_defect_m": 2.473336205982557e-19,
+        "end_velocity_defect_m_s": 3.774378812965162e-18,
+        "energy_ledger_error_j": 1.3877787807814457e-17,
+        "geometry": {
+          "projected_gradient_upper": 0.20664223900554865,
+          "roundoff_margin": 2.1872036628006295e-08,
+          "injectivity_sufficient_condition": true,
+          "area_ratio_lower": 0.629416536930129,
+          "time_degree": 6
+        },
+        "control_reconstruction_error_m": 4.607859233063394e-19,
+        "passed": true
+      },
+      "audit_s": 4.284752974010189,
+      "end_time_s": 3.2833333333333896
+    }
+  ],
+  "training_eligible": false
+}

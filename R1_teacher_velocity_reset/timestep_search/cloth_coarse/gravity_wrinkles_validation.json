@@ -1,0 +1,93 @@
+{
+  "schema": "gravity_wrinkles_validation_v1",
+  "run": "experiments/artifacts/runs/teacher_timestep_search/gravity_wrinkles_smoke_v5",
+  "manifest_sha256": "e4fc7963d92ce3961dc490acade032ec49ccdcb60f3d623fbdf181362cec6580",
+  "comparison_sha256": "7d05e0f97e0ed99400f1f32fb0120cbb0691f48f41f1da1ce145aa10247c112f",
+  "scenes": [
+    {
+      "phase": "preload",
+      "frames": 2,
+      "steps": 128,
+      "flags": 0,
+      "maxima": [
+        0.006854482213980283,
+        3.009959819967335e-23,
+        8.893845946170154e-21,
+        0.002756166616358766,
+        0.0023067576165557873,
+        0.1225607029330278
+      ],
+      "graph_inventory": {
+        "kernels": 152,
+        "device_copies": 8,
+        "memsets": 8,
+        "children": 1,
+        "host_copies": 0,
+        "host_callbacks": 0,
+        "conditionals": 0,
+        "conditional_bodies": 0
+      }
+    },
+    {
+      "phase": "calm",
+      "frames": 2,
+      "steps": 128,
+      "flags": 0,
+      "maxima": [
+        0.006765097623739955,
+        3.0115635594621794e-23,
+        1.1858461261560205e-20,
+        0.002764950832988406,
+        0.002311631131802775,
+        0.12280412816740098
+      ],
+      "graph_inventory": {
+        "kernels": 152,
+        "device_copies": 8,
+        "memsets": 8,
+        "children": 1,
+        "host_copies": 0,
+        "host_callbacks": 0,
+        "conditionals": 0,
+        "conditional_bodies": 0
+      }
+    },
+    {
+      "phase": "wind",
+      "frames": 2,
+      "steps": 128,
+      "flags": 0,
+      "maxima": [
+        0.006818973955029041,
+        3.887007863033855e-23,
+        6.3527471044072525e-21,
+        0.0027649508329886355,
+        0.0023116311320599005,
+        0.12280413563744058
+      ],
+      "graph_inventory": {
+        "kernels": 152,
+        "device_copies": 8,
+        "memsets": 8,
+        "children": 1,
+        "host_copies": 0,
+        "host_callbacks": 0,
+        "conditionals": 0,
+        "conditional_bodies": 0
+      }
+    }
+  ],
+  "checkpoint_pairs_equal": true,
+  "preload_velocity_reset": false,
+  "consistent_gravity_load_verified": true,
+  "force_and_energy_records_verified": true,
+  "viewer_cache_prepared": true,
+  "viewer_initial_max_error_m": 2.9760966469005723e-08,
+  "unit_tests": 5,
+  "production_run": "experiments/artifacts/runs/teacher_timestep_search/gravity_wrinkles_hilo_v3",
+  "production_status": "ready; 전체0frame",
+  "production_manifest_sha256": "37f54054818acc62593b856f8eb8a65181b61953b06275c1584e76df1556ac95",
+  "smoke_only": true,
+  "training_eligible": false,
+  "self_collision_checked": false
+}

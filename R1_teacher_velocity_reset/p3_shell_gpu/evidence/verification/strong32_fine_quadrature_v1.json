@@ -1,0 +1,117 @@
+{
+  "reference_orders": [
+    10,
+    8
+  ],
+  "cases": [
+    {
+      "state_index": 0,
+      "volume_order": 4,
+      "edge_order": 3,
+      "energy_relative": 0.0,
+      "force_relative_mass_dual": 0.0
+    },
+    {
+      "state_index": 256,
+      "volume_order": 4,
+      "edge_order": 3,
+      "energy_relative": 1.0881035218824415e-07,
+      "force_relative_mass_dual": 0.00435341712000751
+    },
+    {
+      "state_index": 512,
+      "volume_order": 4,
+      "edge_order": 3,
+      "energy_relative": 2.737859825590592e-08,
+      "force_relative_mass_dual": 0.005801329782833019
+    },
+    {
+      "state_index": 768,
+      "volume_order": 4,
+      "edge_order": 3,
+      "energy_relative": 1.92742012677937e-08,
+      "force_relative_mass_dual": 0.004924748885796342
+    },
+    {
+      "state_index": 0,
+      "volume_order": 6,
+      "edge_order": 4,
+      "energy_relative": 0.0,
+      "force_relative_mass_dual": 0.0
+    },
+    {
+      "state_index": 256,
+      "volume_order": 6,
+      "edge_order": 4,
+      "energy_relative": 3.356880011219531e-11,
+      "force_relative_mass_dual": 6.777829518613553e-06
+    },
+    {
+      "state_index": 512,
+      "volume_order": 6,
+      "edge_order": 4,
+      "energy_relative": 1.692182043060207e-11,
+      "force_relative_mass_dual": 9.598858957458824e-06
+    },
+    {
+      "state_index": 768,
+      "volume_order": 6,
+      "edge_order": 4,
+      "energy_relative": 1.0829160414320037e-11,
+      "force_relative_mass_dual": 6.4489772729367695e-06
+    },
+    {
+      "state_index": 0,
+      "volume_order": 8,
+      "edge_order": 6,
+      "energy_relative": 0.0,
+      "force_relative_mass_dual": 0.0
+    },
+    {
+      "state_index": 256,
+      "volume_order": 8,
+      "edge_order": 6,
+      "energy_relative": 1.2679529255063421e-16,
+      "force_relative_mass_dual": 3.636596398776463e-11
+    },
+    {
+      "state_index": 512,
+      "volume_order": 8,
+      "edge_order": 6,
+      "energy_relative": 1.156652114190162e-15,
+      "force_relative_mass_dual": 9.691730293267679e-11
+    },
+    {
+      "state_index": 768,
+      "volume_order": 8,
+      "edge_order": 6,
+      "energy_relative": 1.203474054879564e-15,
+      "force_relative_mass_dual": 1.1212482405087903e-10
+    }
+  ],
+  "default_passed": true,
+  "scope": "선택한 4개 실제 상태의 구적 자체 대조. 시간/공간 수렴과 구분",
+  "run": "20260909_strong_reset_m32_s256_v3",
+  "manifest_sha256": "c30cedd8391061bcd46a1d3a6abb51b52277c621f7635234f4828d084066bf34",
+  "validation_source_sha256": {
+    "wind3dgs/teacher/p3_shell.py": "5c154b6a97fc1ee0e8fbac4cf163acc500b65b8f791a4eb96fd6cbaecc69b922",
+    "wind3dgs/teacher/p3_shell_kernels.py": "53b6d3e27dec960403eac4774927a655b3349a39434f01c6ab42d55a75b6038d",
+    "wind3dgs/teacher/p3_shell_dynamics.py": "97f33708d8f231d8a38cb1b8dc151cde8e21cee1230a162dcdbe96440d216782",
+    "wind3dgs/teacher/p3_shell_bounds.py": "117872569a0f38801842106e7bbff228ba3bf81f8ffd02d501dfa4604ab78dea",
+    "wind3dgs/teacher/p3_surface.py": "5a40e7345bcc68070264d035c275dccb2fe7cf69115ceb605a2fc764ecb1042a",
+    "wind3dgs/teacher/p3_wind_reset.py": "a0958c452d5fc139049024cf823e12f81407215c1d49e22d96d39d71357223b6",
+    "wind3dgs/teacher/shell_structure.py": "2056257d6a7ec35670051db0366197d3ebd1fe917da64c014ae6bdc4bf037879",
+    "wind3dgs/teacher/physics_registry.py": "462ca765801e2d5d4f3ebb4589efce633a03aae8a2a5432c8e68b5e4221047e5",
+    "wind3dgs/teacher/velocity_reset.py": "0ed136d8b34999c72481549c3fcab056a3c873ecd0ca59fd72f42c1ba4efe2d8",
+    "wind3dgs/evaluation/teacher_p3_shell.py": "a4c97bda0038223c00f3ec04a46ad00f0f4c4704e238e4e4de6e8576665ab939",
+    "wind3dgs/evaluation/teacher_p3_shell_validation.py": "b4bc4b9f0e86193e23d6d7a9b75d5cb108c17a9cab098ea41f6cf1bf7bb4329a",
+    "wind3dgs/evaluation/teacher_plate_cubic.py": "b20120b72f9cce4d4f95643f0c62cfe33d6315829a406f2b47721cff8bf57a19",
+    "wind3dgs/evaluation/teacher_plate_c0ip.py": "6575a8e54b1325c8e3a2b2889d18e7ace1caf3f092a98107cab9e1382da7ae2f",
+    "wind3dgs/evaluation/teacher_plate_galerkin.py": "b9fefd812ba1c9c90212d27b40b3ea5dd0986dbed7470224689c87e53a16ec27",
+    "wind3dgs/evaluation/teacher_plate_reference.py": "9c0dcbeffb8c9b7f9ac9533ef15b0053bc918f401a62df152a35b9814b212b6f",
+    "wind3dgs/evaluation/teacher_p3_wind_reset.py": "ffdf5820cdaee581af25d1c48a105db0b327243fa947af245853f0de1a12a0af"
+  },
+  "training_eligible": false,
+  "r1_complete": false,
+  "generated_training_samples": 0
+}

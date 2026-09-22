@@ -1,0 +1,167 @@
+{
+  "status": "accuracy_unresolved",
+  "max_tested_stable_substeps": 1,
+  "boundary_bracket": [
+    0,
+    1
+  ],
+  "boundary_search_substeps": 1,
+  "eligible": [],
+  "accuracy_checks": [
+    {
+      "substeps": [
+        1,
+        2,
+        4
+      ],
+      "passed": [
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "substeps": [
+        2,
+        4,
+        8
+      ],
+      "passed": [
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "substeps": [
+        4,
+        8,
+        16
+      ],
+      "passed": [
+        false,
+        false,
+        false
+      ]
+    }
+  ],
+  "observations": {
+    "1": "stable",
+    "2": "stable",
+    "4": "stable",
+    "8": "stable",
+    "16": "stable"
+  },
+  "maximum_is_proven": false,
+  "trials": [
+    {
+      "substeps": 1,
+      "dt_s": 0.016666666666666666,
+      "multiplier": 256.0,
+      "status": "stable",
+      "completed_frames": 6,
+      "compute_s": 0.13261661799333524,
+      "audit_s": 0.024808182010019664,
+      "write_s": 0.0072541310073575005,
+      "active_wall_s": 5.026632966000761,
+      "hvp_calls": 45,
+      "reason": null,
+      "report_identity": {
+        "size_bytes": 2548,
+        "sha256": "934c8ce93e4ee8b65191869165210b3f6908a6b9e3ee3a02ef8e1626554de019"
+      }
+    },
+    {
+      "substeps": 2,
+      "dt_s": 0.008333333333333333,
+      "multiplier": 128.0,
+      "status": "stable",
+      "completed_frames": 6,
+      "compute_s": 0.25813597900560126,
+      "audit_s": 0.036508168996078894,
+      "write_s": 0.008375589008210227,
+      "active_wall_s": 4.509397469002579,
+      "hvp_calls": 84,
+      "reason": null,
+      "report_identity": {
+        "size_bytes": 2548,
+        "sha256": "06573560283b47ea058bbb8f97f1616685d75ab014b825da5dd6f35016003423"
+      }
+    },
+    {
+      "substeps": 4,
+      "dt_s": 0.004166666666666667,
+      "multiplier": 64.0,
+      "status": "stable",
+      "completed_frames": 6,
+      "compute_s": 0.4251232159876963,
+      "audit_s": 0.05838052399485605,
+      "write_s": 0.009705175994895399,
+      "active_wall_s": 4.509386827005073,
+      "hvp_calls": 163,
+      "reason": null,
+      "report_identity": {
+        "size_bytes": 2547,
+        "sha256": "4dee7eaa3b970da0f398b09d3e4589959867a381003d4556a93208bd45a10a07"
+      }
+    },
+    {
+      "substeps": 8,
+      "dt_s": 0.0020833333333333333,
+      "multiplier": 32.0,
+      "status": "stable",
+      "completed_frames": 6,
+      "compute_s": 0.625776049993874,
+      "audit_s": 0.09223494100297103,
+      "write_s": 0.012537217000499368,
+      "active_wall_s": 4.510174736002227,
+      "hvp_calls": 320,
+      "reason": null,
+      "report_identity": {
+        "size_bytes": 2545,
+        "sha256": "d4c411ad688634d7b2dc309bb534009b049f6f21a372e01b3fdda6f0994734d8"
+      }
+    },
+    {
+      "substeps": 16,
+      "dt_s": 0.0010416666666666667,
+      "multiplier": 16.0,
+      "status": "stable",
+      "completed_frames": 6,
+      "compute_s": 1.1960400310053956,
+      "audit_s": 0.1680556020073709,
+      "write_s": 0.01841874600359006,
+      "active_wall_s": 5.512123115993745,
+      "hvp_calls": 640,
+      "reason": null,
+      "report_identity": {
+        "size_bytes": 2546,
+        "sha256": "619b68937f23f9ecb390019ec4123382e975217caa24a7533d97cefe0b85d830"
+      }
+    }
+  ],
+  "recommended": null,
+  "largest_tested_stable": {
+    "substeps": 1,
+    "dt_s": 0.016666666666666666,
+    "multiplier": 256.0,
+    "status": "stable",
+    "completed_frames": 6,
+    "compute_s": 0.13261661799333524,
+    "audit_s": 0.024808182010019664,
+    "write_s": 0.0072541310073575005,
+    "active_wall_s": 5.026632966000761,
+    "hvp_calls": 45,
+    "reason": null,
+    "report_identity": {
+      "size_bytes": 2548,
+      "sha256": "934c8ce93e4ee8b65191869165210b3f6908a6b9e3ee3a02ef8e1626554de019"
+    }
+  },
+  "largest_accuracy_checked": null,
+  "active_wall_s": 31.082241543001146,
+  "training_eligible": false,
+  "r1_complete": false,
+  "generated_training_samples": 0,
+  "scope": "단일 rest/바람/재료/해상도의 시간 세분 개발 비교. 순차 탐색 속도는 잠정값. R1 채택 아님."
+}

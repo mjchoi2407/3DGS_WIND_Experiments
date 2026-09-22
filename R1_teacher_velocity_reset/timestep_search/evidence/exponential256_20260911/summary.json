@@ -1,0 +1,56 @@
+{
+  "date": "2026-09-11",
+  "status": "local_endpoint_comparison_passed_not_adopted",
+  "candidate": {
+    "method": "Gauss6 coupled + exponential Picard correction",
+    "force_polynomial_degree": 20,
+    "action_backend": "taylor",
+    "state_update": "longdouble displacement/velocity increments",
+    "dt_s": 0.016666666666666666,
+    "baseline_multiplier": 256,
+    "wind_refresh_hz": 60,
+    "physics_and_solve_tolerances_unchanged": true
+  },
+  "scope": "기존 실패 인근 공통 상태3.2666667초에서 시작한1/60초의 끝 상태 비교. rest부터256배 궤적을 전진한 결과가 아니다.",
+  "endpoint_relative_mass_l2": {
+    "u": 1.7968720866188845e-06,
+    "v": 0.0005726634928118942
+  },
+  "reference2_to4_relative_mass_l2": {
+    "u": 2.6776501551519624e-07,
+    "v": 0.00019665135677291037
+  },
+  "gauss6_to_same_reference4": {
+    "u": 4.592385754078836e-06,
+    "v": 0.008278834652453512
+  },
+  "velocity_form_difference": {
+    "relative_mass_l2": {
+      "u": 1.0194081503255451e-14,
+      "v": 8.688939689999825e-11
+    },
+    "max_absolute_difference": {
+      "u": 1.26478688633469e-14,
+      "v": 2.626059821190358e-10
+    }
+  },
+  "strict_n32_form_equivalence_passed": false,
+  "unit_tests_passed": 12,
+  "cpu_n4_checkpoint_replay_passed": true,
+  "n32_checkpoint_replay_complete": false,
+  "continuous_geometry_verified": false,
+  "full_curve_accuracy_verified": false,
+  "true_solution_error_certified": false,
+  "main_budget_remaining_s": 7998,
+  "long_run_started": false,
+  "cost": {
+    "saved_gauss_preparation_s": 53.48335203200986,
+    "new_correction_s": 115.9146498869959,
+    "combined_development_estimate_s": 169.39800191900576,
+    "segment_2_5_s_extrapolated_hours": 7.058250079958573,
+    "scope": "별도 시점의 개발 측정 합. 준비/검산 추가 비용·변형에 따른 변화가 있어 시간 보장/정식 benchmark 아님."
+  },
+  "next": "지수 작용 정밀도·계산 비용 보완, n=32 재개와 전체 시간 곡선 검증 후2.5초 구간 실행 연결. 10초/해상도 수렴 미완료.",
+  "training_eligible": false,
+  "r1_complete": false
+}

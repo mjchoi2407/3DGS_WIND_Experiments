@@ -1,0 +1,56 @@
+{
+  "scope": "CPU 정적 진단. 후보 메시를 메모리에만 생성. GPU·시간 진행·수렴 검증 미실행",
+  "source_hashes": {
+    "experiments/artifacts/runs/teacher_timestep_search/20260912_three_scenes_10s_v4/manifest.json": "7b743761f2915fa7f6442290e74ccfeb535bc9b28611782aa1208ac5b0f0e854",
+    "experiments/artifacts/runs/teacher_timestep_search/20260912_three_scenes_10s_v4/inputs/triangular_flag.npz": "d85217b88d4a5651849897d4545e3937990b485e8b997127411674a264b506af",
+    "experiments/artifacts/runs/teacher_timestep_search/20260912_three_scenes_10s_v4/triangular_flag/failure.json": "b1957c64c402f89b820bf1e2f6e6b94dbdd293276cab017d062e038621cd0cce",
+    "experiments/artifacts/runs/teacher_timestep_search/20260912_three_scenes_10s_v4/triangular_flag/last_valid_state.npz": "b05d4ae36b242415069f679f23a0884e24cef26787b76261348a44bce96ed455"
+  },
+  "diagnostic_script_sha256": "4e780e6c58026d884a854af76db1f5978b3615bdf91e891cd50929119b8d803a",
+  "state_time_s": 0.06145833333333319,
+  "old_mesh": {
+    "faces": 752,
+    "quality_min_median_max": [
+      0.06087722346622499,
+      0.6517523919321448,
+      0.9644830455972278
+    ]
+  },
+  "max_displacement_m": 1.80931372921456e-05,
+  "max_velocity_m_s": 0.09340935905707295,
+  "kinetic_energy_j": 2.3624100672865358e-07,
+  "linear_energy_j": -2.1238994238530802e-07,
+  "nonlinear_energy": [
+    {
+      "displacement_scale": 1.0,
+      "energy_j": -2.1252814831201826e-07,
+      "membrane_energy_j": 7.216898542792276e-11,
+      "bending_volume_energy_j": 2.6787040362333528e-05,
+      "edge_energy_j": -2.6999640679630974e-05,
+      "max_strain_component": 1.676418432827731e-05,
+      "min_area_ratio": 0.9999962207105004
+    },
+    {
+      "displacement_scale": 0.01,
+      "energy_j": -2.1239135075917183e-11,
+      "membrane_energy_j": 6.984678767852268e-15,
+      "bending_volume_energy_j": 2.6787048031644147e-09,
+      "edge_energy_j": -2.6999509229190996e-09,
+      "max_strain_component": 1.6761618926164346e-07,
+      "min_area_ratio": 0.9999999619007445
+    }
+  ],
+  "old_rest_bending_eigenvalue": -209263031.68232635,
+  "eigenpair_relative_residual": 1.065412554020574e-07,
+  "candidate_mesh": {
+    "faces": 576,
+    "quality_min_median_max": [
+      0.8372444484271957,
+      0.8372450624234646,
+      0.837245539976269
+    ]
+  },
+  "candidate_rest_bending_cholesky": "passed",
+  "candidate_cholesky_relative_reconstruction": 1.8315381195912376e-16,
+  "candidate_adopted": false
+}

@@ -1,0 +1,107 @@
+{
+  "status": "no_stable_candidate",
+  "observations": {
+    "1": "numerical_failure",
+    "4": "numerical_failure",
+    "16": "numerical_failure",
+    "64": "numerical_failure",
+    "256": "resource_limit"
+  },
+  "eligible": [],
+  "trials": [
+    {
+      "substeps": 1,
+      "dt_s": 0.016666666666666666,
+      "multiplier": 256.0,
+      "status": "numerical_failure",
+      "completed_frames": 80,
+      "compute_s": 317.41026044600585,
+      "audit_s": 4.051626350017614,
+      "write_s": 1.7615153950027889,
+      "active_wall_s": 358.8535505100008,
+      "hvp_calls": 28108,
+      "reason": "linear_solve: P3 shell step 실패. 입력 상태는 보존됩니다.",
+      "report_identity": {
+        "size_bytes": 27347,
+        "sha256": "79b92408bcc3009ad0ebbaa87cfc013d55e009a4e5e3d06bd3f5cf3af7c24c80"
+      }
+    },
+    {
+      "substeps": 4,
+      "dt_s": 0.004166666666666667,
+      "multiplier": 64.0,
+      "status": "numerical_failure",
+      "completed_frames": 157,
+      "compute_s": 1135.7526078000083,
+      "audit_s": 27.507692127037444,
+      "write_s": 7.439131018938497,
+      "active_wall_s": 1282.5897058580013,
+      "hvp_calls": 114964,
+      "reason": "line_search: P3 shell step 실패. 입력 상태는 보존됩니다.",
+      "report_identity": {
+        "size_bytes": 53125,
+        "sha256": "2748f0471b95c4da1f3d0911133a94cfff92c57cf1c938036cb128714e8235f9"
+      }
+    },
+    {
+      "substeps": 16,
+      "dt_s": 0.0010416666666666667,
+      "multiplier": 16.0,
+      "status": "numerical_failure",
+      "completed_frames": 158,
+      "compute_s": 2141.298258367009,
+      "audit_s": 106.03458715500892,
+      "write_s": 23.23950119496294,
+      "active_wall_s": 2339.3281263480094,
+      "hvp_calls": 207996,
+      "reason": "line_search: P3 shell step 실패. 입력 상태는 보존됩니다.",
+      "report_identity": {
+        "size_bytes": 53459,
+        "sha256": "7ce2abddc61544a6c3269020615106d2abaa487f8f11feddcbcf86579f8d1e47"
+      }
+    },
+    {
+      "substeps": 64,
+      "dt_s": 0.00026041666666666666,
+      "multiplier": 4.0,
+      "status": "numerical_failure",
+      "completed_frames": 158,
+      "compute_s": 4060.705092474993,
+      "audit_s": 438.15658917098335,
+      "write_s": 90.00634961298783,
+      "active_wall_s": 4843.992386822996,
+      "hvp_calls": 366696,
+      "reason": "line_search: P3 shell step 실패. 입력 상태는 보존됩니다.",
+      "report_identity": {
+        "size_bytes": 53777,
+        "sha256": "86f89e1f3d87205454db6a90af8a15352ad8fdaa79dd4225cc89ee438928c35f"
+      }
+    },
+    {
+      "substeps": 256,
+      "dt_s": 6.510416666666667e-05,
+      "multiplier": 1.0,
+      "status": "resource_limit",
+      "completed_frames": 82,
+      "compute_s": 5964.473955178946,
+      "audit_s": 900.3527940289932,
+      "write_s": 192.73609971198312,
+      "active_wall_s": 7200.156573613,
+      "hvp_calls": 553120,
+      "reason": "후보 실행 시간 제한 도달",
+      "report_identity": {
+        "size_bytes": 28211,
+        "sha256": "6adbec242ac874bd6331ee9fc51c3217a54459f1996b6e150704942542c31409"
+      }
+    }
+  ],
+  "recommended": null,
+  "gpu_admission": "start_without_waiting",
+  "largest_tested_stable": null,
+  "largest_accuracy_checked": null,
+  "active_wall_s": 16024.920343152007,
+  "training_eligible": false,
+  "r1_complete": false,
+  "generated_training_samples": 0,
+  "scope": "단일 rest/바람/재료/해상도의 시간 세분 개발 비교. 순차 탐색 속도는 잠정값. R1 채택 아님."
+}

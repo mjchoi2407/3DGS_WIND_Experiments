@@ -1,0 +1,34 @@
+{
+  "baseline": {
+    "frame_0_all_arrays_exact": true,
+    "frame_1_all_arrays_exact": true,
+    "first_frame_hash_preserved": true,
+    "orphan_preserved": true,
+    "resume_events": [
+      {
+        "utc": "2026-09-10T01:31:51.059922+00:00",
+        "completed_frames": 1,
+        "setup_s": 0.19853338599932613,
+        "warmup_s": 0.05060302699985186
+      }
+    ]
+  },
+  "fast": {
+    "frame_0_all_arrays_exact": true,
+    "frame_1_all_arrays_exact": true,
+    "first_frame_hash_preserved": true,
+    "orphan_preserved": true,
+    "resume_events": [
+      {
+        "utc": "2026-09-10T01:31:52.392061+00:00",
+        "completed_frames": 1,
+        "setup_s": 0.19620962099997996,
+        "warmup_s": 0.10176949299966509
+      }
+    ]
+  },
+  "audit_and_compare_passed": true,
+  "scope": "CPU n4/sub8/2 frame. 양 backend 각각 첫 frame 이후 이어하기. 실제 n32 CUDA 재시작 검증은 아님.",
+  "fixture_schema_added": true,
+  "source_hash_mismatch_rejected": true
+}

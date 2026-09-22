@@ -1,0 +1,87 @@
+--- a/wind3dgs/teacher/p3_shell_dynamics.py
++++ b/wind3dgs/teacher/p3_shell_dynamics.py
+@@ -112,8 +112,8 @@
+             self.preconditioners[dt]=splu(self.M+c*self.K)
+         preconditioner=LinearOperator(self.M.shape,matvec=self.preconditioners[dt].solve)
+ 
+-        def evaluate(acceleration):
+-            u=u0+(dt*v0+c*(a0+acceleration)); u[~free]=0.
++        def evaluate(acceleration, displacement):
++            u=displacement; u[~free]=0.
+             elastic=m.evaluate_displacement(u)
+             residual=m.mass@acceleration-elastic['force_n']-force
+             norm=float(np.linalg.norm(residual[free]))
+@@ -122,10 +122,13 @@
+             limit=p.force_atol_n+p.force_rtol*scale
+             return u,elastic,residual,norm,limit
+ 
++        # Newton의 위치·가속도 수정은 같은 양을 함께 누적한다. 매번 큰 u0에서
++        # 위치를 재구성하면 극소 수정이 다른 반올림 경계를 넘어 잔차가 정체한다.
++        u=u0+(dt*v0+c*(a0+a)); u[~free]=0.
+         last_correction=0.
+         try:
+             for iteration in range(p.max_newton+1):
+-                u,elastic,residual,norm,limit=evaluate(a)
++                u,elastic,residual,norm,limit=evaluate(a,u)
+                 entry={'iteration':iteration,'force_residual_n':norm,'force_limit_n':float(limit)}
+                 attempts.append(entry)
+                 correction_limit=p.displacement_atol_m+p.displacement_rtol*np.linalg.norm(u[free])
+@@ -157,14 +160,23 @@
+                 for step in range(p.line_search_steps):
+                     alpha=2.**-step
+                     try:
+-                        _,_,_,new_norm,_=evaluate(a+alpha*delta)
++                        trial_u=u+alpha*(c*delta)
++                        _,_,_,new_norm,_=evaluate(a+alpha*delta,trial_u)
+                         searches.append({'alpha':alpha,'residual_n':new_norm})
+                     except ValueError as error:
+                         searches.append({'alpha':alpha,'geometry_error':str(error)}); continue
+                     if new_norm <= (1-1e-4*alpha)*norm:
+-                        a+=alpha*delta; last_correction*=alpha; break
++                        a+=alpha*delta; u=trial_u; last_correction*=alpha; break
+                 else: raise ShellStepFailed('line_search',attempts)
+-            u,elastic,residual,norm,limit=evaluate(a)
++            u,elastic,residual,norm,limit=evaluate(a,u)
++            # 누적 상태도 원래 Newmark 갱신식을 반올림 범위 안에서 만족해야 한다.
++            predictor=u0+(dt*v0+c*(a0+a))
++            update_error=np.abs(u-predictor)
++            roundoff=8*np.finfo(float).eps*(iteration+1)*(np.abs(u0)+np.abs(dt*v0)
++                +c*(np.abs(a0)+np.abs(a))+np.abs(u))+np.finfo(float).tiny
++            if (np.any(update_error[free] > roundoff[free]) or
++                    np.linalg.norm(update_error[free]) > correction_limit):
++                raise ShellStepFailed('position_update_roundoff',attempts)
+             v=v0+.5*dt*(a0+a); v[~free]=0.
+             if not np.isfinite(v).all() or norm > limit: raise ShellStepFailed('final_residual',attempts)
+         except ShellStepFailed: raise
+--- a/tests/test_teacher_p3_shell_dynamics.py
++++ b/tests/test_teacher_p3_shell_dynamics.py
+@@ -52,6 +52,29 @@
+         self.assertAlmostEqual(removed,.5*np.sum(v*(m.mass@v)),places=16)
+         self.assertGreater(removed,0)
+ 
++    def test_manufactured_bent_endpoint_preserves_newmark_coupling(self):
++        # 알려진 끝 형상에서 고정 외력을 역산한다. 큰 기존 변위 위의 작은
++        # 수정에서도 위치·속도가 같은 Newmark 해를 나타내는지 검사한다.
++        s=self.stepper; m=self.model; t=m.xy[:,0]-.25
++        u0=np.zeros_like(m.rest_positions); v0=np.zeros_like(u0)
++        u0[:,0]=np.sin(t)-t; u0[:,1]=1-np.cos(t)
++        v0[:,1]=.02*t*t
++        dt=1/6000; c=dt*dt/4
++        u1=u0+dt*v0; u1[:,1]+=2e-8*t*t
++        e0=m.evaluate_displacement(u0); e1=m.evaluate_displacement(u1)
++        force=(m.mass@((u1-u0-dt*v0)/c)-e0['force_n']-e1['force_n'])/2
++        original=s.state(displacement=u0,velocity=v0)
++        end,diagnostic=s.step(original,force,dt)
++        self.assertGreater(diagnostic['newton_corrections'],0)
++        np.testing.assert_allclose(end.displacement_m,u1,rtol=0,atol=2e-14)
++        np.testing.assert_allclose(end.velocity_m_s,2*(u1-u0)/dt-v0,rtol=0,atol=3e-10)
++        a0=np.zeros_like(u0); a0[m.free]=s.mass_factor.solve((force+e0['force_n'])[m.free])
++        a1=2*(end.velocity_m_s-v0)/dt-a0
++        residual=m.mass@a1-m.evaluate_displacement(end.displacement_m)['force_n']-force
++        self.assertLessEqual(np.linalg.norm(residual[m.free]),diagnostic['force_limit_n']*1.001)
++        np.testing.assert_array_equal(original.displacement_m,u0)
++        np.testing.assert_array_equal(original.velocity_m_s,v0)
++
+     def test_bent_equilibrium_and_failure_preserves_input(self):
+         s=self.stepper; m=self.model; u=np.zeros_like(m.rest_positions)
+         t=m.xy[:,0]-.25; curvature=1.2

@@ -1,0 +1,43 @@
+test_free_shell_force_torque_and_rigid_nullspace (test_teacher_p3_shell.P3ShellAssemblyTests.test_free_shell_force_torque_and_rigid_nullspace) ... ok
+test_full_mass_and_linear_plate_limit (test_teacher_p3_shell.P3ShellAssemblyTests.test_full_mass_and_linear_plate_limit) ... FAIL
+test_global_rotation_and_translation (test_teacher_p3_shell.P3ShellAssemblyTests.test_global_rotation_and_translation) ... ok
+test_nonlinear_force_hvp_and_symmetry (test_teacher_p3_shell.P3ShellAssemblyTests.test_nonlinear_force_hvp_and_symmetry) ... ok
+test_relative_wind_full_dof_power (test_teacher_p3_shell.P3ShellAssemblyTests.test_relative_wind_full_dof_power) ... ok
+test_edge_energy_gradient_tangent_and_side_orientation (test_teacher_p3_shell.P3ShellKernelTests.test_edge_energy_gradient_tangent_and_side_orientation) ... ok
+test_rigid_rotation_rest_and_deformed_energy (test_teacher_p3_shell.P3ShellKernelTests.test_rigid_rotation_rest_and_deformed_energy) ... ok
+test_volume_energy_gradient_and_exact_tangent (test_teacher_p3_shell.P3ShellKernelTests.test_volume_energy_gradient_and_exact_tangent) ... ok
+test_volume_matches_existing_element_virtual_force (test_teacher_p3_shell.P3ShellKernelTests.test_volume_matches_existing_element_virtual_force) ... ok
+
+======================================================================
+FAIL: test_full_mass_and_linear_plate_limit (test_teacher_p3_shell.P3ShellAssemblyTests.test_full_mass_and_linear_plate_limit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<workspace>/code/tests/test_teacher_p3_shell.py", line 109, in test_full_mass_and_linear_plate_limit
+    np.testing.assert_allclose(r['hvp_n'].ravel(),K@d.ravel(),rtol=1e-10,atol=2e-9)
+  File "<workspace>/.venv/lib/python3.12/site-packages/numpy/testing/_private/utils.py", line 1768, in assert_allclose
+    assert_array_compare(compare, actual, desired, err_msg=str(err_msg),
+  File "<workspace>/.venv/lib/python3.12/site-packages/numpy/testing/_private/utils.py", line 983, in assert_array_compare
+    raise AssertionError(msg)
+AssertionError: 
+Not equal to tolerance rtol=1e-10, atol=2e-09
+
+Mismatched elements: 33 / 390 (8.46%)
+First 5 mismatches are at indices:
+ [1]: -96.52273864473716 (ACTUAL), -209.17749598435898 (DESIRED)
+ [13]: 1469.2931728559035 (ACTUAL), 1223.1804487766994 (DESIRED)
+ [25]: -1243.801720413351 (ACTUAL), -880.7441423225781 (DESIRED)
+ [37]: -1628.1316482830464 (ACTUAL), -1809.9045960953401 (DESIRED)
+ [49]: 81.11263933000426 (ACTUAL), -53.79851698047891 (DESIRED)
+Max absolute difference among violations: 677.64032797
+Max relative difference among violations: 2.50771144
+ ACTUAL: array([ 2.395920e+04, -9.652274e+01,  2.271989e+04, -3.825816e+04,
+        4.780432e+02, -3.525174e+04,  7.681260e+03,  1.022292e+03,
+       -1.346001e+04, -1.057664e+04,  7.894985e+02,  3.826373e+03,...
+ DESIRED: array([ 2.395920e+04, -2.091775e+02,  2.271989e+04, -3.825816e+04,
+        4.780432e+02, -3.525174e+04,  7.681260e+03,  1.022292e+03,
+       -1.346001e+04, -1.057664e+04,  7.894985e+02,  3.826373e+03,...
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.819s
+
+FAILED (failures=1)

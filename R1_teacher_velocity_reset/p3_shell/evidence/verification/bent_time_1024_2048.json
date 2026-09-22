@@ -1,0 +1,62 @@
+{
+  "training_eligible": false,
+  "r1_complete": false,
+  "generated_training_samples": 0,
+  "validator_sha256": "a3a86f0825058960503d94884602a6438c9b5f9e475711e1e4affd999951a090",
+  "runs": [
+    {
+      "run": "20260909_bent_m4_s1024_v3",
+      "verified": true,
+      "intervals": 3072,
+      "states": 3073,
+      "max_force_residual_limit_ratio": 0.05948680116601907,
+      "max_newmark_update_error_m": 5.551115123125783e-17,
+      "energy_ledger_error_j": -6.551270451419979e-22,
+      "energy_balance_j": 3.117807746092698e-08,
+      "removed_kinetic_j": 0.0,
+      "manifest_sha256": "0eb47f0ada8c83f56a7fc89d8a6450a07487eef71c396d36b21c2a1dace90585"
+    },
+    {
+      "run": "20260909_bent_m4_s2048_v3",
+      "verified": true,
+      "intervals": 6144,
+      "states": 6145,
+      "max_force_residual_limit_ratio": 0.0068315332528333375,
+      "max_newmark_update_error_m": 5.551115123125783e-17,
+      "energy_ledger_error_j": -7.90106377498401e-20,
+      "energy_balance_j": 7.782916396507818e-09,
+      "removed_kinetic_j": 0.0,
+      "manifest_sha256": "a52ae595018ed9e0c0cb941339854dea7e5aeb6f849d1c1e96097e37ec393275"
+    }
+  ],
+  "comparison": {
+    "first": "20260909_bent_m4_s1024_v3",
+    "second": "20260909_bent_m4_s2048_v3",
+    "errors": {
+      "u_m": {
+        "relative": 5.4239887955588336e-06,
+        "absolute_rms_peak": 6.976766390916803e-07,
+        "reference_peak": 0.1286279646563685
+      },
+      "v_m_s": {
+        "relative": 0.007621844933762718,
+        "absolute_rms_peak": 0.004350348672227253,
+        "reference_peak": 0.5707737050587819
+      },
+      "delta_u_m": {
+        "relative": 4.550780848199497e-05,
+        "absolute_rms_peak": 6.97676639091512e-07,
+        "reference_peak": 0.015330921491584146
+      }
+    },
+    "producer_source_differences": [],
+    "physics_sources_equal": true,
+    "comparison_axes": [
+      "time"
+    ],
+    "isolated_axis": true,
+    "threshold_relative": 0.01,
+    "sampled_response_threshold_passed": true,
+    "scope": "동일 입력/초기 계열의 공통 저장 시각. 연속 시간 상한과 R1 채택 판정은 아님"
+  }
+}

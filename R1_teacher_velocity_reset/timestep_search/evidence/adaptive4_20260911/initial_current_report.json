@@ -1,0 +1,251 @@
+{
+  "input_time_s": 0.016666666666666684,
+  "target_time_s": 0.01770833333333335,
+  "frame": 1,
+  "environment": {
+    "device": "cuda:0",
+    "numpy": "2.4.4",
+    "scipy": "1.18.1",
+    "compute_backend": "precision_hvp_graph",
+    "linear_solver_device": "cpu",
+    "cuda_graph": true,
+    "state_encoding": "hi_lo_v1",
+    "state_mantissa_bits": 64,
+    "warp": "1.17.0",
+    "gpu_name": "NVIDIA GeForce GTX 1080 Ti"
+  },
+  "policy": {
+    "force_atol_n": 1e-10,
+    "force_rtol": 1e-09,
+    "displacement_atol_m": 1e-12,
+    "displacement_rtol": 1e-09,
+    "linear_rtol": 1e-10,
+    "max_newton": 15,
+    "linear_cycles": 3,
+    "line_search_steps": 12,
+    "linear_restart": 240,
+    "linear_preconditioner": "current"
+  },
+  "input_sha256": "9d787aa8f9eb94b48d4ee928611b3def1326f302ef43fe1ddf3008e4016ee836",
+  "runtime_manifest_sha256": "dec67d896537efadf38bbd81f52cb7d726abe4a73e58fcc1b5180ffef52a9df6",
+  "trials": [
+    {
+      "substeps": 64,
+      "restart": 240,
+      "max_cycles": 3,
+      "max_iterations": 720,
+      "dt_s": 0.00026041666666666666,
+      "rows": [
+        {
+          "index": 0,
+          "solve_s": 2.407353635993786,
+          "attempts": [
+            {
+              "iteration": 0,
+              "force_residual_n": 0.00013634612221088114,
+              "force_limit_n": 1.0013634612221088e-10,
+              "preconditioner": {
+                "colors": 276,
+                "nnz": 2478006,
+                "relative_action_error": 3.223241484900358e-16,
+                "assembly_s": 0.9737410380039364,
+                "build_s": 2.1534902510029497,
+                "factor_nnz": 20743962,
+                "rebuilt": true,
+                "reuse_age": 0
+              },
+              "linear_info": 0,
+              "linear_iterations": 1,
+              "linear_residual_n": 5.573341145132802e-19,
+              "linear_limit_n": 1.3634612221088116e-14,
+              "correction_m": 1.9749862541489755e-09,
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "residual_n": 3.2425501762295723e-12
+                }
+              ]
+            },
+            {
+              "iteration": 1,
+              "force_residual_n": 3.2425501762295723e-12,
+              "force_limit_n": 1.000065002212356e-10,
+              "preconditioner": {
+                "rebuilt": false,
+                "reuse_age": 1
+              },
+              "linear_info": 0,
+              "linear_iterations": 2,
+              "linear_residual_n": 6.684612384321427e-27,
+              "linear_limit_n": 3.2425501762295727e-22,
+              "correction_m": 1.290737990478138e-16
+            }
+          ],
+          "hvp_calls": 284,
+          "audit": {
+            "residual_ratio": 0.03310918482549232,
+            "position_update_error_m": 2.524354896707238e-29,
+            "energy_ledger_error_j": 1.262177448353619e-29,
+            "projected_gradient_upper": 2.3311198039754033e-13
+          },
+          "audit_passed": true
+        },
+        {
+          "index": 1,
+          "solve_s": 0.22471529500035103,
+          "attempts": [
+            {
+              "iteration": 0,
+              "force_residual_n": 0.00013237520428343355,
+              "force_limit_n": 1.0013140867274716e-10,
+              "preconditioner": {
+                "rebuilt": false,
+                "reuse_age": 2
+              },
+              "linear_info": 0,
+              "linear_iterations": 2,
+              "linear_residual_n": 3.385811012841826e-18,
+              "linear_limit_n": 1.3237520428343355e-14,
+              "correction_m": 1.6606961136643436e-09,
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "residual_n": 3.10169782427309e-12
+                }
+              ]
+            },
+            {
+              "iteration": 1,
+              "force_residual_n": 3.10169782427309e-12,
+              "force_limit_n": 1.000065002212356e-10,
+              "preconditioner": {
+                "rebuilt": false,
+                "reuse_age": 3
+              },
+              "linear_info": 0,
+              "linear_iterations": 2,
+              "linear_residual_n": 8.660764527589385e-27,
+              "linear_limit_n": 3.10169782427309e-22,
+              "correction_m": 1.0724752847700065e-16
+            }
+          ],
+          "hvp_calls": 8,
+          "audit": {
+            "residual_ratio": 0.03110612268711575,
+            "position_update_error_m": 1.0097419586828951e-28,
+            "energy_ledger_error_j": 0.0,
+            "projected_gradient_upper": 2.3885028535184865e-13
+          },
+          "audit_passed": true
+        },
+        {
+          "index": 2,
+          "solve_s": 2.5396852980047697,
+          "attempts": [
+            {
+              "iteration": 0,
+              "force_residual_n": 0.00012532923385386946,
+              "force_limit_n": 1.0012546136290353e-10,
+              "preconditioner": {
+                "colors": 276,
+                "nnz": 2478006,
+                "relative_action_error": 3.2811883250745603e-16,
+                "assembly_s": 1.006656233992544,
+                "build_s": 2.2132413710060064,
+                "factor_nnz": 20691795,
+                "rebuilt": true,
+                "reuse_age": 0
+              },
+              "linear_info": 0,
+              "linear_iterations": 1,
+              "linear_residual_n": 3.5164289061694624e-19,
+              "linear_limit_n": 1.2532923385386945e-14,
+              "correction_m": 1.583622962075785e-09,
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "residual_n": 2.513192352469107e-12
+                }
+              ]
+            },
+            {
+              "iteration": 1,
+              "force_residual_n": 2.513192352469107e-12,
+              "force_limit_n": 1.000065002212356e-10,
+              "preconditioner": {
+                "rebuilt": false,
+                "reuse_age": 1
+              },
+              "linear_info": 0,
+              "linear_iterations": 2,
+              "linear_residual_n": 4.635148451505431e-27,
+              "linear_limit_n": 2.513192352469107e-22,
+              "correction_m": 8.33493128299195e-17
+            }
+          ],
+          "hvp_calls": 284,
+          "audit": {
+            "residual_ratio": 0.024705079195394837,
+            "position_update_error_m": 4.0389678347315804e-28,
+            "energy_ledger_error_j": 0.0,
+            "projected_gradient_upper": 2.4006959449186814e-13
+          },
+          "audit_passed": true
+        },
+        {
+          "index": 3,
+          "solve_s": 0.23706995199609082,
+          "attempts": [
+            {
+              "iteration": 0,
+              "force_residual_n": 0.00011679762243279602,
+              "force_limit_n": 1.0011622058424637e-10,
+              "preconditioner": {
+                "rebuilt": false,
+                "reuse_age": 2
+              },
+              "linear_info": 0,
+              "linear_iterations": 2,
+              "linear_residual_n": 6.634048502802007e-19,
+              "linear_limit_n": 1.1679762243279602e-14,
+              "correction_m": 1.6688374771147478e-09,
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "residual_n": 1.9548628714399476e-12
+                }
+              ]
+            },
+            {
+              "iteration": 1,
+              "force_residual_n": 1.9548628714399476e-12,
+              "force_limit_n": 1.000065002212356e-10,
+              "preconditioner": {
+                "rebuilt": false,
+                "reuse_age": 3
+              },
+              "linear_info": 0,
+              "linear_iterations": 2,
+              "linear_residual_n": 5.736947160991935e-27,
+              "linear_limit_n": 1.9548628714399476e-22,
+              "correction_m": 5.858858901577387e-17
+            }
+          ],
+          "hvp_calls": 8,
+          "audit": {
+            "residual_ratio": 0.01987940200439884,
+            "position_update_error_m": 4.0389678347315804e-28,
+            "energy_ledger_error_j": 1.0097419586828951e-28,
+            "projected_gradient_upper": 2.471261874665625e-13
+          },
+          "audit_passed": true
+        }
+      ],
+      "status": "passed",
+      "end_time_s": 0.017708333333333347,
+      "completed_solve_s": 5.408824180994998
+    }
+  ],
+  "training_eligible": false,
+  "r1_complete": false
+}

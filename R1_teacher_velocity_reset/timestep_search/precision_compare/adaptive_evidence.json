@@ -1,0 +1,1826 @@
+{
+  "date": "2026-09-13",
+  "scope": "굽힘1/100 손수건, 같은 입력/물성/바람/dt, 각10프레임=640단계=1/6초. FP64 상태에서 보조 풀이의 FP32/FP64와 알고리즘을 분리.",
+  "training_eligible": false,
+  "r1_complete": false,
+  "runs": {
+    "budget2_smoke": {
+      "run": "experiments/artifacts/runs/teacher_precision_compare/20260913_adaptive_smoke_v3",
+      "manifest_sha256": "e1742f78a4c30ea1470813dace46a961c3b478a7d486f750f87da52829dc51ef",
+      "verified_input_files": 678,
+      "comparison_sha256": "9b2897c4ead2a833b6611597dc61863c520cbfe96ee96939fa4d61af5f30a77b",
+      "config": {
+        "case": "bend_001",
+        "shape": "handkerchief",
+        "frames": 2,
+        "first_frame": 0,
+        "source": "experiments/artifacts/runs/sub_pc/20260912T223433Z-aca6fc4223714a02a9fe8afe7f4edeef/bend_001",
+        "dt_s": 0.00026041666666666666,
+        "official_policy": {
+          "force_atol_n": 1e-10,
+          "force_rtol": 1e-09,
+          "displacement_atol_m": 1e-12,
+          "displacement_rtol": 1e-09,
+          "linear_rtol": 1e-10,
+          "max_newton": 15,
+          "linear_cycles": 3,
+          "line_search_steps": 12,
+          "linear_restart": 240,
+          "linear_preconditioner": "current"
+        },
+        "scope": "FP64 상태·힘·HVP·질량·검산 유지. adaptive32의 보조 행렬 분해·풀이만 FP32. refine64는 같은 알고리즘의 FP64 대조.",
+        "precision_lanes": [
+          "reference_hilo",
+          "fp64",
+          "refine64",
+          "adaptive32"
+        ],
+        "suite": "adaptive",
+        "profile": false,
+        "mode": "diagnostic",
+        "tolerance_policy": "기준값 유지; 진단 모드에서는 유한한 미수렴/정확도 초과를 경고로 기록하고 마지막 채택 후보로 진행. 비유한/계산 불능은 종료.",
+        "geometry_policy": "원본 visual 예외 미승계; 본 실험은 솔버 진단이며 기하 인증·학습 적격성 없음",
+        "training_eligible": false,
+        "r1_complete": false,
+        "strain_formula_fp32": "legacy",
+        "adaptive_policy": {
+          "correction_budget": 2,
+          "required_contraction": 0.5,
+          "fallback": "같은 RHS의 FP64 GMRES; 실패 후 다음 행렬 재구축까지 보정 생략"
+        },
+        "comparison_pairs": [
+          [
+            "fp64",
+            "reference_hilo"
+          ],
+          [
+            "refine64",
+            "fp64"
+          ],
+          [
+            "adaptive32",
+            "fp64"
+          ],
+          [
+            "adaptive32",
+            "refine64"
+          ]
+        ]
+      },
+      "lanes": {
+        "reference_hilo": {
+          "status": "complete",
+          "advanced_steps": 128,
+          "warning_steps": 0,
+          "report_sha256": "a7e5e72be087e99a86a871f114b501e48d8900fb3288ab688fc17a5145e1bfc7",
+          "verified_raw_files": 2,
+          "compute_record_s": 1.373051875969395,
+          "transfer_write_hash_s": 0.08742836094461381,
+          "setup_excluding_model_s": 1.9476677940110676,
+          "adaptive_counts": null,
+          "gpu_array_dtypes": {
+            "state": "<class 'warp._src.types.float64'>",
+            "force": "<class 'warp._src.types.vec3d'>",
+            "mass": "<class 'warp._src.types.float64'>",
+            "current": "<class 'warp._src.types.float64'>",
+            "cudss_rhs": "<class 'warp._src.types.float64'>",
+            "gmres_basis": "<class 'warp._src.types.float64'>",
+            "reduction": "<class 'warp._src.types.float64'>"
+          },
+          "graph_inventory": {
+            "step": {
+              "kernels": 5803,
+              "device_copies": 606,
+              "memsets": 1126,
+              "children": 8,
+              "host_copies": 0,
+              "host_callbacks": 0,
+              "conditionals": 22,
+              "conditional_bodies": 22
+            },
+            "frame": {
+              "kernels": 5,
+              "device_copies": 1,
+              "memsets": 2,
+              "children": 0,
+              "host_copies": 0,
+              "host_callbacks": 0,
+              "conditionals": 0,
+              "conditional_bodies": 0
+            }
+          },
+          "sample_max_independent_force_residual_n": 8.242195243663083e-12,
+          "sample_max_independent_force_ratio_official": 0.08241209869244252,
+          "sample_max_independent_update_error_m": 5.977672395402739e-26,
+          "sample_max_independent_energy_balance_residual_j": 1.0236360080343717e-23,
+          "sample_max_energy_ledger_difference_j": 0.0,
+          "sample_max_assembly_relative_error": 3.6355197272825616e-16,
+          "sample_max_pinned_state_max": 0.0,
+          "sample_max_independent_linear_relative_residual": 1.1209894571097943e-09,
+          "final_state_metrics": {
+            "kinetic_energy_j": 2.676386284225822e-10,
+            "elastic_energy_j": 1.7577160141251888e-12,
+            "max_strain_component": 6.512235195543781e-11
+          }
+        },
+        "fp64": {
+          "status": "complete",
+          "advanced_steps": 128,
+          "warning_steps": 0,
+          "report_sha256": "98cd04775b8332401f6adf0de9667c234950e220de232c24e2b61c236002e918",
+          "verified_raw_files": 2,
+          "compute_record_s": 0.9245035070343874,
+          "transfer_write_hash_s": 0.2172957769362256,
+          "setup_excluding_model_s": 1.86075605195947,
+          "adaptive_counts": null,
+          "gpu_array_dtypes": {
+            "state": "<class 'warp._src.types.float64'>",
+            "force": "<class 'warp._src.types.vec3d'>",
+            "mass": "<class 'warp._src.types.float64'>",
+            "current": "<class 'warp._src.types.float64'>",
+            "cudss_rhs": "<class 'warp._src.types.float64'>",
+            "gmres_basis": "<class 'warp._src.types.float64'>",
+            "reduction": "<class 'warp._src.types.float64'>"
+          },
+          "graph_inventory": {
+            "step": {
+              "kernels": 5803,
+              "device_copies": 606,
+              "memsets": 1126,
+              "children": 8,
+              "host_copies": 0,
+              "host_callbacks": 0,
+              "conditionals": 22,
+              "conditional_bodies": 22
+            },
+            "frame": {
+              "kernels": 5,
+              "device_copies": 1,
+              "memsets": 2,
+              "children": 0,
+              "host_copies": 0,
+              "host_callbacks": 0,
+              "conditionals": 0,
+              "conditional_bodies": 0
+            }
+          },
+          "sample_max_independent_force_residual_n": 8.251092826303479e-12,
+          "sample_max_independent_force_ratio_official": 0.08250106388157076,
+          "sample_max_independent_update_error_m": 1.5571675031310746e-22,
+          "sample_max_independent_energy_balance_residual_j": 1.038499409666184e-23,
+          "sample_max_energy_ledger_difference_j": 0.0,
+          "sample_max_assembly_relative_error": 3.486125669750077e-16,
+          "sample_max_pinned_state_max": 0.0,
+          "sample_max_independent_linear_relative_residual": 1.1179792780670495e-09,
+          "final_state_metrics": {
+            "kinetic_energy_j": 2.676386284225824e-10,
+            "elastic_energy_j": 1.7577160141251938e-12,
+            "max_strain_component": 6.512168582162303e-11
+          }
+        },
+        "refine64": {
+          "status": "complete",
+          "advanced_steps": 128,
+          "warning_steps": 0,
+          "report_sha256": "a644224548884a329dfe19782912bdc869da7f1c1d052c45472a5dd7ee5de1d1",
+          "verified_raw_files": 2,
+          "compute_record_s": 0.6812390059931204,
+          "transfer_write_hash_s": 0.09054437599843368,
+          "setup_excluding_model_s": 1.7168363370001316,
+          "adaptive_counts": {
+            "linear_calls": 128,
+            "correction_solves": 191,
+            "accepted_without_gmres": 128,
+            "fallback_calls": 0,
+            "fallback_iterations": 0,
+            "fp64_refactorizations": 0,
+            "matrix_builds": 2,
+            "stagnations": 0,
+            "budget_exhaustions": 0,
+            "skipped_after_failure": 0
+          },
+          "gpu_array_dtypes": {
+            "state": "<class 'warp._src.types.float64'>",
+            "force": "<class 'warp._src.types.vec3d'>",
+            "mass": "<class 'warp._src.types.float64'>",
+            "current": "<class 'warp._src.types.float64'>",
+            "cudss_rhs": "<class 'warp._src.types.float64'>",
+            "gmres_basis": "<class 'warp._src.types.float64'>",
+            "reduction": "<class 'warp._src.types.float64'>"
+          },
+          "graph_inventory": {
+            "step": {
+              "kernels": 5847,
+              "device_copies": 616,
+              "memsets": 1138,
+              "children": 10,
+              "host_copies": 0,
+              "host_callbacks": 0,
+              "conditionals": 25,
+              "conditional_bodies": 25
+            },
+            "frame": {
+              "kernels": 5,
+              "device_copies": 1,
+              "memsets": 2,
+              "children": 0,
+              "host_copies": 0,
+              "host_callbacks": 0,
+              "conditionals": 0,
+              "conditional_bodies": 0
+            }
+          },
+          "sample_max_independent_force_residual_n": 8.255774327523475e-12,
+          "sample_max_independent_force_ratio_official": 0.08254787329692255,
+          "sample_max_independent_update_error_m": 1.42572333391757e-22,
+          "sample_max_independent_energy_balance_residual_j": 5.121411214439644e-24,
+          "sample_max_energy_ledger_difference_j": 0.0,
+          "sample_max_assembly_relative_error": 3.578335777824614e-16,
+          "sample_max_pinned_state_max": 0.0,
+          "sample_max_independent_linear_relative_residual": 2.1412706012096447e-09,
+          "final_state_metrics": {
+            "kinetic_energy_j": 2.6763862842246376e-10,
+            "elastic_energy_j": 1.757716014096687e-12,
+            "max_strain_component": 6.512190786622796e-11
+          }
+        },
+        "adaptive32": {
+          "status": "complete",
+          "advanced_steps": 128,
+          "warning_steps": 0,
+          "report_sha256": "4fb89c3aa5d790e3671bfb615a5d3a5a7fb855d86374a3d2a191d80b011b9fcb",
+          "verified_raw_files": 2,
+          "compute_record_s": 0.940553313062992,
+          "transfer_write_hash_s": 0.1539542290265672,
+          "setup_excluding_model_s": 1.8319141379906796,
+          "adaptive_counts": {
+            "linear_calls": 128,
+            "correction_solves": 4,
+            "accepted_without_gmres": 0,
+            "fallback_calls": 128,
+            "fallback_iterations": 191,
+            "fp64_refactorizations": 2,
+            "matrix_builds": 2,
+            "stagnations": 0,
+            "budget_exhaustions": 2,
+            "skipped_after_failure": 126
+          },
+          "gpu_array_dtypes": {
+            "state": "<class 'warp._src.types.float64'>",
+            "force": "<class 'warp._src.types.vec3d'>",
+            "mass": "<class 'warp._src.types.float64'>",
+            "current": "<class 'warp._src.types.float64'>",
+            "cudss_rhs": "<class 'warp._src.types.float64'>",
+            "gmres_basis": "<class 'warp._src.types.float64'>",
+            "reduction": "<class 'warp._src.types.float64'>",
+            "preconditioner_values": "<class 'warp._src.types.float32'>",
+            "preconditioner_rhs": "<class 'warp._src.types.float32'>"
+          },
+          "graph_inventory": {
+            "step": {
+              "kernels": 5849,
+              "device_copies": 616,
+              "memsets": 1138,
+              "children": 10,
+              "host_copies": 0,
+              "host_callbacks": 0,
+              "conditionals": 25,
+              "conditional_bodies": 25
+            },
+            "frame": {
+              "kernels": 5,
+              "device_copies": 1,
+              "memsets": 2,
+              "children": 0,
+              "host_copies": 0,
+              "host_callbacks": 0,
+              "conditionals": 0,
+              "conditional_bodies": 0
+            }
+          },
+          "sample_max_independent_force_residual_n": 8.267309604528105e-12,
+          "sample_max_independent_force_ratio_official": 0.0826632122762656,
+          "sample_max_independent_update_error_m": 1.4155289791027075e-22,
+          "sample_max_independent_energy_balance_residual_j": 1.023151331894204e-23,
+          "sample_max_energy_ledger_difference_j": 1.6155871338926322e-27,
+          "sample_max_assembly_relative_error": 3.473096171285726e-16,
+          "sample_max_pinned_state_max": 0.0,
+          "sample_max_independent_linear_relative_residual": 1.1204405004439795e-09,
+          "final_state_metrics": {
+            "kinetic_energy_j": 2.6763862842258246e-10,
+            "elastic_energy_j": 1.7577160141252207e-12,
+            "max_strain_component": 6.512190786622796e-11
+          }
+        }
+      },
+      "trajectory": {
+        "fp64_vs_reference_hilo": {
+          "common_advanced_steps": 128,
+          "moving_common_steps": 64,
+          "common_warning_steps": 0,
+          "interpretation": "경고 포함 진단 궤적 비교이며 엄격 검산 통과를 뜻하지 않습니다.",
+          "time_s": 0.03333333333333333,
+          "max_position_component_difference_m": 1.7827397362122064e-17,
+          "max_velocity_component_difference_m_s": 6.284011212103573e-13,
+          "max_area_weighted_position_rms_m": 4.275946771863038e-18,
+          "max_area_weighted_velocity_rms_m_s": 1.0543240123767482e-13
+        },
+        "refine64_vs_fp64": {
+          "common_advanced_steps": 128,
+          "moving_common_steps": 64,
+          "common_warning_steps": 0,
+          "interpretation": "경고 포함 진단 궤적 비교이며 엄격 검산 통과를 뜻하지 않습니다.",
+          "time_s": 0.03333333333333333,
+          "max_position_component_difference_m": 1.6378740441287126e-17,
+          "max_velocity_component_difference_m_s": 4.39816759289503e-13,
+          "max_area_weighted_position_rms_m": 4.370293779727067e-18,
+          "max_area_weighted_velocity_rms_m_s": 1.0614363741036507e-13
+        },
+        "adaptive32_vs_fp64": {
+          "common_advanced_steps": 128,
+          "moving_common_steps": 64,
+          "common_warning_steps": 0,
+          "interpretation": "경고 포함 진단 궤적 비교이며 엄격 검산 통과를 뜻하지 않습니다.",
+          "time_s": 0.03333333333333333,
+          "max_position_component_difference_m": 2.04049081501409e-17,
+          "max_velocity_component_difference_m_s": 4.4977510268151126e-13,
+          "max_area_weighted_position_rms_m": 4.4843725221598256e-18,
+          "max_area_weighted_velocity_rms_m_s": 1.0614337400788468e-13
+        },
+        "adaptive32_vs_refine64": {
+          "common_advanced_steps": 128,
+          "moving_common_steps": 64,
+          "common_warning_steps": 0,
+          "interpretation": "경고 포함 진단 궤적 비교이며 엄격 검산 통과를 뜻하지 않습니다.",
+          "time_s": 0.03333333333333333,
+          "max_position_component_difference_m": 2.15425110680651e-17,
+          "max_velocity_component_difference_m_s": 5.676801656397473e-13,
+          "max_area_weighted_position_rms_m": 4.448752392417755e-18,
+          "max_area_weighted_velocity_rms_m_s": 1.074391821194227e-13
+        }
+      },
+      "independent_analysis_errors": 0
+    },
+    "forward": {
+      "run": "experiments/artifacts/runs/teacher_precision_compare/20260913_adaptive_budget4_v1",
+      "manifest_sha256": "7046a72b8da241bb0eb614be85b9a19cc3031870e19c65b246af673b8dda1b45",
+      "verified_input_files": 678,
+      "comparison_sha256": "5e3a39135656f7f23e3e9f458387ec9d2e9699c3aa29a79333fc6f3ea9f2d6bd",
+      "config": {
+        "case": "bend_001",
+        "shape": "handkerchief",
+        "frames": 10,
+        "first_frame": 0,
+        "source": "experiments/artifacts/runs/sub_pc/20260912T223433Z-aca6fc4223714a02a9fe8afe7f4edeef/bend_001",
+        "dt_s": 0.00026041666666666666,
+        "official_policy": {
+          "force_atol_n": 1e-10,
+          "force_rtol": 1e-09,
+          "displacement_atol_m": 1e-12,
+          "displacement_rtol": 1e-09,
+          "linear_rtol": 1e-10,
+          "max_newton": 15,
+          "linear_cycles": 3,
+          "line_search_steps": 12,
+          "linear_restart": 240,
+          "linear_preconditioner": "current"
+        },
+        "scope": "FP64 상태·힘·HVP·질량·검산 유지. adaptive32의 보조 행렬 분해·풀이만 FP32. refine64는 같은 알고리즘의 FP64 대조.",
+        "precision_lanes": [
+          "reference_hilo",
+          "fp64",
+          "refine64",
+          "adaptive32"
+        ],
+        "suite": "adaptive",
+        "profile": false,
+        "mode": "diagnostic",
+        "tolerance_policy": "기준값 유지; 진단 모드에서는 유한한 미수렴/정확도 초과를 경고로 기록하고 마지막 채택 후보로 진행. 비유한/계산 불능은 종료.",
+        "geometry_policy": "원본 visual 예외 미승계; 본 실험은 솔버 진단이며 기하 인증·학습 적격성 없음",
+        "training_eligible": false,
+        "r1_complete": false,
+        "strain_formula_fp32": "legacy",
+        "adaptive_policy": {
+          "correction_budget": 4,
+          "required_contraction": 0.5,
+          "fallback": "같은 RHS의 FP64 GMRES; 실패 후 다음 행렬 재구축까지 보정 생략"
+        },
+        "comparison_pairs": [
+          [
+            "fp64",
+            "reference_hilo"
+          ],
+          [
+            "refine64",
+            "fp64"
+          ],
+          [
+            "adaptive32",
+            "fp64"
+          ],
+          [
+            "adaptive32",
+            "refine64"
+          ]
+        ]
+      },
+      "lanes": {
+        "reference_hilo": {
+          "status": "complete",
+          "advanced_steps": 640,
+          "warning_steps": 0,
+          "report_sha256": "ca4b3af544daf8a109f95f10fa00404406031c59d6230c567f4445d74561df29",
+          "verified_raw_files": 10,
+          "compute_record_s": 14.456198125088122,
+          "transfer_write_hash_s": 0.3929844559170306,
+          "setup_excluding_model_s": 1.9558517799596302,
+          "adaptive_counts": null,
+          "gpu_array_dtypes": {
+            "state": "<class 'warp._src.types.float64'>",
+            "force": "<class 'warp._src.types.vec3d'>",
+            "mass": "<class 'warp._src.types.float64'>",
+            "current": "<class 'warp._src.types.float64'>",
+            "cudss_rhs": "<class 'warp._src.types.float64'>",
+            "gmres_basis": "<class 'warp._src.types.float64'>",
+            "reduction": "<class 'warp._src.types.float64'>"
+          },
+          "graph_inventory": {
+            "step": {
+              "kernels": 5803,
+              "device_copies": 606,
+              "memsets": 1126,
+              "children": 8,
+              "host_copies": 0,
+              "host_callbacks": 0,
+              "conditionals": 22,
+              "conditional_bodies": 22
+            },
+            "frame": {
+              "kernels": 5,
+              "device_copies": 1,
+              "memsets": 2,
+              "children": 0,
+              "host_copies": 0,
+              "host_callbacks": 0,
+              "conditionals": 0,
+              "conditional_bodies": 0
+            }
+          },
+          "sample_max_independent_force_residual_n": 1.0979441677354779e-11,
+          "sample_max_independent_force_ratio_official": 0.10934999979597237,
+          "sample_max_independent_update_error_m": 1.0298398626285195e-22,
+          "sample_max_independent_energy_balance_residual_j": 8.122025660044213e-15,
+          "sample_max_energy_ledger_difference_j": 1.6940658945086007e-21,
+          "sample_max_assembly_relative_error": 4.2432886310477025e-16,
+          "sample_max_pinned_state_max": 0.0,
+          "sample_max_independent_linear_relative_residual": 7.884009776543131e-07,
+          "final_state_metrics": {
+            "kinetic_energy_j": 1.7355954529417827e-05,
+            "elastic_energy_j": 3.8572071325805487e-07,
+            "max_strain_component": 3.448195346917469e-05
+          }
+        },
+        "fp64": {
+          "status": "complete",
+          "advanced_steps": 640,
+          "warning_steps": 0,
+          "report_sha256": "681bafffd2cf39ee39a1dc3888ad66265ee2f7491cec47327678cb5bfe0a888b",
+          "verified_raw_files": 10,
+          "compute_record_s": 9.948159898049198,
+          "transfer_write_hash_s": 0.544399198028259,
+          "setup_excluding_model_s": 1.7918593200156465,
+          "adaptive_counts": null,
+          "gpu_array_dtypes": {
+            "state": "<class 'warp._src.types.float64'>",
+            "force": "<class 'warp._src.types.vec3d'>",
+            "mass": "<class 'warp._src.types.float64'>",
+            "current": "<class 'warp._src.types.float64'>",
+            "cudss_rhs": "<class 'warp._src.types.float64'>",
+            "gmres_basis": "<class 'warp._src.types.float64'>",
+            "reduction": "<class 'warp._src.types.float64'>"
+          },
+          "graph_inventory": {
+            "step": {
+              "kernels": 5803,
+              "device_copies": 606,
+              "memsets": 1126,
+              "children": 8,
+              "host_copies": 0,
+              "host_callbacks": 0,
+              "conditionals": 22,
+              "conditional_bodies": 22
+            },
+            "frame": {
+              "kernels": 5,
+              "device_copies": 1,
+              "memsets": 2,
+              "children": 0,
+              "host_copies": 0,
+              "host_callbacks": 0,
+              "conditionals": 0,
+              "conditional_bodies": 0
+            }
+          },
+          "sample_max_independent_force_residual_n": 1.1015141300846393e-11,
+          "sample_max_independent_force_ratio_official": 0.10970555101034567,
+          "sample_max_independent_update_error_m": 3.520124999362288e-19,
+          "sample_max_independent_energy_balance_residual_j": 8.122022298382204e-15,
+          "sample_max_energy_ledger_difference_j": 3.3881317890172014e-21,
+          "sample_max_assembly_relative_error": 4.3666588638219347e-16,
+          "sample_max_pinned_state_max": 0.0,
+          "sample_max_independent_linear_relative_residual": 7.881915421085432e-07,
+          "final_state_metrics": {
+            "kinetic_energy_j": 1.7355954529417827e-05,
+            "elastic_energy_j": 3.8572071325805217e-07,
+            "max_strain_component": 3.448195346892182e-05
+          }
+        },
+        "refine64": {
+          "status": "complete",
+          "advanced_steps": 640,
+          "warning_steps": 0,
+          "report_sha256": "62b1a476877bcceb528aa56f326701727c96e68924de8e22bd31005e0ebd56b7",
+          "verified_raw_files": 10,
+          "compute_record_s": 7.121840520063415,
+          "transfer_write_hash_s": 0.5040259020752273,
+          "setup_excluding_model_s": 2.602061241050251,
+          "adaptive_counts": {
+            "linear_calls": 1152,
+            "correction_solves": 2911,
+            "accepted_without_gmres": 1152,
+            "fallback_calls": 0,
+            "fallback_iterations": 0,
+            "fp64_refactorizations": 0,
+            "matrix_builds": 18,
+            "stagnations": 0,
+            "budget_exhaustions": 0,
+            "skipped_after_failure": 0
+          },
+          "gpu_array_dtypes": {
+            "state": "<class 'warp._src.types.float64'>",
+            "force": "<class 'warp._src.types.vec3d'>",
+            "mass": "<class 'warp._src.types.float64'>",
+            "current": "<class 'warp._src.types.float64'>",
+            "cudss_rhs": "<class 'warp._src.types.float64'>",
+            "gmres_basis": "<class 'warp._src.types.float64'>",
+            "reduction": "<class 'warp._src.types.float64'>"
+          },
+          "graph_inventory": {
+            "step": {
+              "kernels": 5847,
+              "device_copies": 616,
+              "memsets": 1138,
+              "children": 10,
+              "host_copies": 0,
+              "host_callbacks": 0,
+              "conditionals": 25,
+              "conditional_bodies": 25
+            },
+            "frame": {
+              "kernels": 5,
+              "device_copies": 1,
+              "memsets": 2,
+              "children": 0,
+              "host_copies": 0,
+              "host_callbacks": 0,
+              "conditionals": 0,
+              "conditional_bodies": 0
+            }
+          },
+          "sample_max_independent_force_residual_n": 1.9556930961779048e-11,
+          "sample_max_independent_force_ratio_official": 0.1945180390584881,
+          "sample_max_independent_update_error_m": 3.5588081007083303e-19,
+          "sample_max_independent_energy_balance_residual_j": 8.122038444947761e-15,
+          "sample_max_energy_ledger_difference_j": 3.414601568618898e-21,
+          "sample_max_assembly_relative_error": 4.2453294687086285e-16,
+          "sample_max_pinned_state_max": 0.0,
+          "sample_max_independent_linear_relative_residual": 1.0015902189039162e-08,
+          "final_state_metrics": {
+            "kinetic_energy_j": 1.7355954530075965e-05,
+            "elastic_energy_j": 3.8572071364638337e-07,
+            "max_strain_component": 3.448195345621993e-05
+          }
+        },
+        "adaptive32": {
+          "status": "complete",
+          "advanced_steps": 640,
+          "warning_steps": 0,
+          "report_sha256": "c37c7769b47ef4404e2717a584f299df3fb32b19cadb9dd2979a044341f3be1a",
+          "verified_raw_files": 10,
+          "compute_record_s": 9.73348794109188,
+          "transfer_write_hash_s": 0.42742433305829763,
+          "setup_excluding_model_s": 1.980554084002506,
+          "adaptive_counts": {
+            "linear_calls": 1152,
+            "correction_solves": 56,
+            "accepted_without_gmres": 1,
+            "fallback_calls": 1151,
+            "fallback_iterations": 2884,
+            "fp64_refactorizations": 18,
+            "matrix_builds": 18,
+            "stagnations": 16,
+            "budget_exhaustions": 2,
+            "skipped_after_failure": 1133
+          },
+          "gpu_array_dtypes": {
+            "state": "<class 'warp._src.types.float64'>",
+            "force": "<class 'warp._src.types.vec3d'>",
+            "mass": "<class 'warp._src.types.float64'>",
+            "current": "<class 'warp._src.types.float64'>",
+            "cudss_rhs": "<class 'warp._src.types.float64'>",
+            "gmres_basis": "<class 'warp._src.types.float64'>",
+            "reduction": "<class 'warp._src.types.float64'>",
+            "preconditioner_values": "<class 'warp._src.types.float32'>",
+            "preconditioner_rhs": "<class 'warp._src.types.float32'>"
+          },
+          "graph_inventory": {
+            "step": {
+              "kernels": 5849,
+              "device_copies": 616,
+              "memsets": 1138,
+              "children": 10,
+              "host_copies": 0,
+              "host_callbacks": 0,
+              "conditionals": 25,
+              "conditional_bodies": 25
+            },
+            "frame": {
+              "kernels": 5,
+              "device_copies": 1,
+              "memsets": 2,
+              "children": 0,
+              "host_copies": 0,
+              "host_callbacks": 0,
+              "conditionals": 0,
+              "conditional_bodies": 0
+            }
+          },
+          "sample_max_independent_force_residual_n": 1.0989395192737909e-11,
+          "sample_max_independent_force_ratio_official": 0.10944913205944251,
+          "sample_max_independent_update_error_m": 3.441323638307424e-19,
+          "sample_max_independent_energy_balance_residual_j": 8.122051706307341e-15,
+          "sample_max_energy_ledger_difference_j": 1.6940658945086007e-21,
+          "sample_max_assembly_relative_error": 4.260655578853148e-16,
+          "sample_max_pinned_state_max": 0.0,
+          "sample_max_independent_linear_relative_residual": 7.884238676666371e-07,
+          "final_state_metrics": {
+            "kinetic_energy_j": 1.7355954529417705e-05,
+            "elastic_energy_j": 3.857207132580761e-07,
+            "max_strain_component": 3.4481953468826364e-05
+          }
+        }
+      },
+      "trajectory": {
+        "fp64_vs_reference_hilo": {
+          "common_advanced_steps": 640,
+          "moving_common_steps": 576,
+          "common_warning_steps": 0,
+          "interpretation": "경고 포함 진단 궤적 비교이며 엄격 검산 통과를 뜻하지 않습니다.",
+          "time_s": 0.16666666666666666,
+          "max_position_component_difference_m": 7.314700313617152e-17,
+          "max_velocity_component_difference_m_s": 2.5282726586808465e-12,
+          "max_area_weighted_position_rms_m": 1.3717364025488713e-17,
+          "max_area_weighted_velocity_rms_m_s": 3.4279644977367955e-13
+        },
+        "refine64_vs_fp64": {
+          "common_advanced_steps": 640,
+          "moving_common_steps": 576,
+          "common_warning_steps": 0,
+          "interpretation": "경고 포함 진단 궤적 비교이며 엄격 검산 통과를 뜻하지 않습니다.",
+          "time_s": 0.16666666666666666,
+          "max_position_component_difference_m": 5.258707965610787e-13,
+          "max_velocity_component_difference_m_s": 9.216283586993557e-10,
+          "max_area_weighted_position_rms_m": 1.0268255759945972e-13,
+          "max_area_weighted_velocity_rms_m_s": 7.293513978611176e-11
+        },
+        "adaptive32_vs_fp64": {
+          "common_advanced_steps": 640,
+          "moving_common_steps": 576,
+          "common_warning_steps": 0,
+          "interpretation": "경고 포함 진단 궤적 비교이며 엄격 검산 통과를 뜻하지 않습니다.",
+          "time_s": 0.16666666666666666,
+          "max_position_component_difference_m": 1.0378994022974678e-14,
+          "max_velocity_component_difference_m_s": 2.0693472511395828e-11,
+          "max_area_weighted_position_rms_m": 7.056924222728831e-16,
+          "max_area_weighted_velocity_rms_m_s": 4.92683628424542e-13
+        },
+        "adaptive32_vs_refine64": {
+          "common_advanced_steps": 640,
+          "moving_common_steps": 576,
+          "common_warning_steps": 0,
+          "interpretation": "경고 포함 진단 궤적 비교이며 엄격 검산 통과를 뜻하지 않습니다.",
+          "time_s": 0.16666666666666666,
+          "max_position_component_difference_m": 5.252046627463036e-13,
+          "max_velocity_component_difference_m_s": 9.222075616176217e-10,
+          "max_area_weighted_position_rms_m": 1.0267184373012718e-13,
+          "max_area_weighted_velocity_rms_m_s": 7.297134588045067e-11
+        }
+      },
+      "independent_analysis_errors": 0
+    },
+    "reverse": {
+      "run": "experiments/artifacts/runs/teacher_precision_compare/20260913_adaptive_budget4_reverse_v1",
+      "manifest_sha256": "416c492923577e80c093bd9ef6154ecfa937a7cf343bed056b190084e2532b46",
+      "verified_input_files": 678,
+      "comparison_sha256": "d6671cd755e3215251b3dee176f2a55367b25218ee7203edcd6ae8d0f04f675f",
+      "config": {
+        "case": "bend_001",
+        "shape": "handkerchief",
+        "frames": 10,
+        "first_frame": 0,
+        "source": "experiments/artifacts/runs/sub_pc/20260912T223433Z-aca6fc4223714a02a9fe8afe7f4edeef/bend_001",
+        "dt_s": 0.00026041666666666666,
+        "official_policy": {
+          "force_atol_n": 1e-10,
+          "force_rtol": 1e-09,
+          "displacement_atol_m": 1e-12,
+          "displacement_rtol": 1e-09,
+          "linear_rtol": 1e-10,
+          "max_newton": 15,
+          "linear_cycles": 3,
+          "line_search_steps": 12,
+          "linear_restart": 240,
+          "linear_preconditioner": "current"
+        },
+        "scope": "FP64 상태·힘·HVP·질량·검산 유지. adaptive32의 보조 행렬 분해·풀이만 FP32. refine64는 같은 알고리즘의 FP64 대조.",
+        "precision_lanes": [
+          "adaptive32",
+          "refine64",
+          "fp64",
+          "reference_hilo"
+        ],
+        "suite": "adaptive",
+        "profile": false,
+        "mode": "diagnostic",
+        "tolerance_policy": "기준값 유지; 진단 모드에서는 유한한 미수렴/정확도 초과를 경고로 기록하고 마지막 채택 후보로 진행. 비유한/계산 불능은 종료.",
+        "geometry_policy": "원본 visual 예외 미승계; 본 실험은 솔버 진단이며 기하 인증·학습 적격성 없음",
+        "training_eligible": false,
+        "r1_complete": false,
+        "strain_formula_fp32": "legacy",
+        "adaptive_policy": {
+          "correction_budget": 4,
+          "required_contraction": 0.5,
+          "fallback": "같은 RHS의 FP64 GMRES; 실패 후 다음 행렬 재구축까지 보정 생략"
+        },
+        "comparison_pairs": [
+          [
+            "fp64",
+            "reference_hilo"
+          ],
+          [
+            "refine64",
+            "fp64"
+          ],
+          [
+            "adaptive32",
+            "fp64"
+          ],
+          [
+            "adaptive32",
+            "refine64"
+          ]
+        ]
+      },
+      "lanes": {
+        "adaptive32": {
+          "status": "complete",
+          "advanced_steps": 640,
+          "warning_steps": 0,
+          "report_sha256": "65052161ef8810d5ab49087ff6fa33176feea71afc7326319262a7b51d67af7f",
+          "verified_raw_files": 10,
+          "compute_record_s": 10.130569813889451,
+          "transfer_write_hash_s": 0.39912983996327966,
+          "setup_excluding_model_s": 2.15121254499536,
+          "adaptive_counts": {
+            "linear_calls": 1152,
+            "correction_solves": 56,
+            "accepted_without_gmres": 1,
+            "fallback_calls": 1151,
+            "fallback_iterations": 2884,
+            "fp64_refactorizations": 18,
+            "matrix_builds": 18,
+            "stagnations": 16,
+            "budget_exhaustions": 2,
+            "skipped_after_failure": 1133
+          },
+          "gpu_array_dtypes": {
+            "state": "<class 'warp._src.types.float64'>",
+            "force": "<class 'warp._src.types.vec3d'>",
+            "mass": "<class 'warp._src.types.float64'>",
+            "current": "<class 'warp._src.types.float64'>",
+            "cudss_rhs": "<class 'warp._src.types.float64'>",
+            "gmres_basis": "<class 'warp._src.types.float64'>",
+            "reduction": "<class 'warp._src.types.float64'>",
+            "preconditioner_values": "<class 'warp._src.types.float32'>",
+            "preconditioner_rhs": "<class 'warp._src.types.float32'>"
+          },
+          "graph_inventory": {
+            "step": {
+              "kernels": 5849,
+              "device_copies": 616,
+              "memsets": 1138,
+              "children": 10,
+              "host_copies": 0,
+              "host_callbacks": 0,
+              "conditionals": 25,
+              "conditional_bodies": 25
+            },
+            "frame": {
+              "kernels": 5,
+              "device_copies": 1,
+              "memsets": 2,
+              "children": 0,
+              "host_copies": 0,
+              "host_callbacks": 0,
+              "conditionals": 0,
+              "conditional_bodies": 0
+            }
+          },
+          "sample_max_independent_force_residual_n": 1.0967633093169717e-11,
+          "sample_max_independent_force_ratio_official": 0.10923239193246048,
+          "sample_max_independent_update_error_m": 3.46127109877914e-19,
+          "sample_max_independent_energy_balance_residual_j": 8.122028148203496e-15,
+          "sample_max_energy_ledger_difference_j": 1.6940658945086007e-21,
+          "sample_max_assembly_relative_error": 4.499002055865218e-16,
+          "sample_max_pinned_state_max": 0.0,
+          "sample_max_independent_linear_relative_residual": 7.879765074929863e-07,
+          "final_state_metrics": {
+            "kinetic_energy_j": 1.7355954529417705e-05,
+            "elastic_energy_j": 3.8572071325807885e-07,
+            "max_strain_component": 3.448195346986645e-05
+          }
+        },
+        "refine64": {
+          "status": "complete",
+          "advanced_steps": 640,
+          "warning_steps": 0,
+          "report_sha256": "c45f6e9f9c9d6a9921872082b9b6c0c9b5168e2b83b5d192fade385e91365caa",
+          "verified_raw_files": 10,
+          "compute_record_s": 6.840676700056065,
+          "transfer_write_hash_s": 0.3951539840782061,
+          "setup_excluding_model_s": 1.9463676169980317,
+          "adaptive_counts": {
+            "linear_calls": 1152,
+            "correction_solves": 2916,
+            "accepted_without_gmres": 1152,
+            "fallback_calls": 0,
+            "fallback_iterations": 0,
+            "fp64_refactorizations": 0,
+            "matrix_builds": 18,
+            "stagnations": 0,
+            "budget_exhaustions": 0,
+            "skipped_after_failure": 0
+          },
+          "gpu_array_dtypes": {
+            "state": "<class 'warp._src.types.float64'>",
+            "force": "<class 'warp._src.types.vec3d'>",
+            "mass": "<class 'warp._src.types.float64'>",
+            "current": "<class 'warp._src.types.float64'>",
+            "cudss_rhs": "<class 'warp._src.types.float64'>",
+            "gmres_basis": "<class 'warp._src.types.float64'>",
+            "reduction": "<class 'warp._src.types.float64'>"
+          },
+          "graph_inventory": {
+            "step": {
+              "kernels": 5847,
+              "device_copies": 616,
+              "memsets": 1138,
+              "children": 10,
+              "host_copies": 0,
+              "host_callbacks": 0,
+              "conditionals": 25,
+              "conditional_bodies": 25
+            },
+            "frame": {
+              "kernels": 5,
+              "device_copies": 1,
+              "memsets": 2,
+              "children": 0,
+              "host_copies": 0,
+              "host_callbacks": 0,
+              "conditionals": 0,
+              "conditional_bodies": 0
+            }
+          },
+          "sample_max_independent_force_residual_n": 1.9557553456394694e-11,
+          "sample_max_independent_force_ratio_official": 0.1945242305428369,
+          "sample_max_independent_update_error_m": 3.416226978522565e-19,
+          "sample_max_independent_energy_balance_residual_j": 8.122062029521386e-15,
+          "sample_max_energy_ledger_difference_j": 1.6940658945086007e-21,
+          "sample_max_assembly_relative_error": 4.3265857464085276e-16,
+          "sample_max_pinned_state_max": 0.0,
+          "sample_max_independent_linear_relative_residual": 1.0016118870935277e-08,
+          "final_state_metrics": {
+            "kinetic_energy_j": 1.7355954530075965e-05,
+            "elastic_energy_j": 3.8572071364636675e-07,
+            "max_strain_component": 3.448195345604052e-05
+          }
+        },
+        "fp64": {
+          "status": "complete",
+          "advanced_steps": 640,
+          "warning_steps": 0,
+          "report_sha256": "97ef13e14062c7aa4c5cce61f2c2b97a47649ef58358ae90845aa7453dd82559",
+          "verified_raw_files": 10,
+          "compute_record_s": 9.735720766009763,
+          "transfer_write_hash_s": 0.3836968430550769,
+          "setup_excluding_model_s": 1.8215517309727147,
+          "adaptive_counts": null,
+          "gpu_array_dtypes": {
+            "state": "<class 'warp._src.types.float64'>",
+            "force": "<class 'warp._src.types.vec3d'>",
+            "mass": "<class 'warp._src.types.float64'>",
+            "current": "<class 'warp._src.types.float64'>",
+            "cudss_rhs": "<class 'warp._src.types.float64'>",
+            "gmres_basis": "<class 'warp._src.types.float64'>",
+            "reduction": "<class 'warp._src.types.float64'>"
+          },
+          "graph_inventory": {
+            "step": {
+              "kernels": 5803,
+              "device_copies": 606,
+              "memsets": 1126,
+              "children": 8,
+              "host_copies": 0,
+              "host_callbacks": 0,
+              "conditionals": 22,
+              "conditional_bodies": 22
+            },
+            "frame": {
+              "kernels": 5,
+              "device_copies": 1,
+              "memsets": 2,
+              "children": 0,
+              "host_copies": 0,
+              "host_callbacks": 0,
+              "conditionals": 0,
+              "conditional_bodies": 0
+            }
+          },
+          "sample_max_independent_force_residual_n": 1.1020375419065699e-11,
+          "sample_max_independent_force_ratio_official": 0.10975768033012645,
+          "sample_max_independent_update_error_m": 3.70337032046116e-19,
+          "sample_max_independent_energy_balance_residual_j": 8.122005198904581e-15,
+          "sample_max_energy_ledger_difference_j": 1.6940658945086007e-21,
+          "sample_max_assembly_relative_error": 4.337676765129988e-16,
+          "sample_max_pinned_state_max": 0.0,
+          "sample_max_independent_linear_relative_residual": 7.883888215729326e-07,
+          "final_state_metrics": {
+            "kinetic_energy_j": 1.7355954529417827e-05,
+            "elastic_energy_j": 3.8572071325806313e-07,
+            "max_strain_component": 3.448195346761755e-05
+          }
+        },
+        "reference_hilo": {
+          "status": "complete",
+          "advanced_steps": 640,
+          "warning_steps": 0,
+          "report_sha256": "eca777ded1da5cde734596d8891673ce5f250e57af30de5080ff6b3002b11520",
+          "verified_raw_files": 10,
+          "compute_record_s": 12.029549221915659,
+          "transfer_write_hash_s": 0.38941042812075466,
+          "setup_excluding_model_s": 1.8760506359976716,
+          "adaptive_counts": null,
+          "gpu_array_dtypes": {
+            "state": "<class 'warp._src.types.float64'>",
+            "force": "<class 'warp._src.types.vec3d'>",
+            "mass": "<class 'warp._src.types.float64'>",
+            "current": "<class 'warp._src.types.float64'>",
+            "cudss_rhs": "<class 'warp._src.types.float64'>",
+            "gmres_basis": "<class 'warp._src.types.float64'>",
+            "reduction": "<class 'warp._src.types.float64'>"
+          },
+          "graph_inventory": {
+            "step": {
+              "kernels": 5803,
+              "device_copies": 606,
+              "memsets": 1126,
+              "children": 8,
+              "host_copies": 0,
+              "host_callbacks": 0,
+              "conditionals": 22,
+              "conditional_bodies": 22
+            },
+            "frame": {
+              "kernels": 5,
+              "device_copies": 1,
+              "memsets": 2,
+              "children": 0,
+              "host_copies": 0,
+              "host_callbacks": 0,
+              "conditionals": 0,
+              "conditional_bodies": 0
+            }
+          },
+          "sample_max_independent_force_residual_n": 1.0995709582042488e-11,
+          "sample_max_independent_force_ratio_official": 0.10951202036373502,
+          "sample_max_independent_update_error_m": 1.04638347487958e-22,
+          "sample_max_independent_energy_balance_residual_j": 8.122012133986837e-15,
+          "sample_max_energy_ledger_difference_j": 1.707300784309449e-21,
+          "sample_max_assembly_relative_error": 4.397568621491628e-16,
+          "sample_max_pinned_state_max": 0.0,
+          "sample_max_independent_linear_relative_residual": 7.881476877745758e-07,
+          "final_state_metrics": {
+            "kinetic_energy_j": 1.7355954529417827e-05,
+            "elastic_energy_j": 3.857207132580518e-07,
+            "max_strain_component": 3.448195346830553e-05
+          }
+        }
+      },
+      "trajectory": {
+        "fp64_vs_reference_hilo": {
+          "common_advanced_steps": 640,
+          "moving_common_steps": 576,
+          "common_warning_steps": 0,
+          "interpretation": "경고 포함 진단 궤적 비교이며 엄격 검산 통과를 뜻하지 않습니다.",
+          "time_s": 0.16666666666666666,
+          "max_position_component_difference_m": 9.1641927653854e-17,
+          "max_velocity_component_difference_m_s": 1.8343899718205377e-12,
+          "max_area_weighted_position_rms_m": 1.3721029845877164e-17,
+          "max_area_weighted_velocity_rms_m_s": 3.408234502109704e-13
+        },
+        "refine64_vs_fp64": {
+          "common_advanced_steps": 640,
+          "moving_common_steps": 576,
+          "common_warning_steps": 0,
+          "interpretation": "경고 포함 진단 궤적 비교이며 엄격 검산 통과를 뜻하지 않습니다.",
+          "time_s": 0.16666666666666666,
+          "max_position_component_difference_m": 5.25868736576951e-13,
+          "max_velocity_component_difference_m_s": 9.216234234110665e-10,
+          "max_area_weighted_position_rms_m": 1.0268259212271868e-13,
+          "max_area_weighted_velocity_rms_m_s": 7.293573368983158e-11
+        },
+        "adaptive32_vs_fp64": {
+          "common_advanced_steps": 640,
+          "moving_common_steps": 576,
+          "common_warning_steps": 0,
+          "interpretation": "경고 포함 진단 궤적 비교이며 엄격 검산 통과를 뜻하지 않습니다.",
+          "time_s": 0.16666666666666666,
+          "max_position_component_difference_m": 1.0378999316930598e-14,
+          "max_velocity_component_difference_m_s": 2.0693472512666377e-11,
+          "max_area_weighted_position_rms_m": 7.05699442460747e-16,
+          "max_area_weighted_velocity_rms_m_s": 4.926837731868262e-13
+        },
+        "adaptive32_vs_refine64": {
+          "common_advanced_steps": 640,
+          "moving_common_steps": 576,
+          "common_warning_steps": 0,
+          "interpretation": "경고 포함 진단 궤적 비교이며 엄격 검산 통과를 뜻하지 않습니다.",
+          "time_s": 0.16666666666666666,
+          "max_position_component_difference_m": 5.252034701239139e-13,
+          "max_velocity_component_difference_m_s": 9.222074362838506e-10,
+          "max_area_weighted_position_rms_m": 1.026718573083416e-13,
+          "max_area_weighted_velocity_rms_m_s": 7.297148175091953e-11
+        }
+      },
+      "independent_analysis_errors": 0
+    },
+    "profile": {
+      "run": "experiments/artifacts/runs/teacher_precision_compare/20260913_adaptive_profile_v1",
+      "manifest_sha256": "d173850f4467aaeededd220b37c062f8438118987f37204c29a03fafa02b2f0b",
+      "verified_input_files": 678,
+      "comparison_sha256": "4164ac7997b3ce6a14a806732eaa7b30f93bf3a5edde3764682e96b1b4fb0187",
+      "config": {
+        "case": "bend_001",
+        "shape": "handkerchief",
+        "frames": 10,
+        "first_frame": 0,
+        "source": "experiments/artifacts/runs/sub_pc/20260912T223433Z-aca6fc4223714a02a9fe8afe7f4edeef/bend_001",
+        "dt_s": 0.00026041666666666666,
+        "official_policy": {
+          "force_atol_n": 1e-10,
+          "force_rtol": 1e-09,
+          "displacement_atol_m": 1e-12,
+          "displacement_rtol": 1e-09,
+          "linear_rtol": 1e-10,
+          "max_newton": 15,
+          "linear_cycles": 3,
+          "line_search_steps": 12,
+          "linear_restart": 240,
+          "linear_preconditioner": "current"
+        },
+        "scope": "FP64 상태·힘·HVP·질량·검산 유지. adaptive32의 보조 행렬 분해·풀이만 FP32. refine64는 같은 알고리즘의 FP64 대조.",
+        "precision_lanes": [
+          "reference_hilo",
+          "fp64",
+          "refine64",
+          "adaptive32"
+        ],
+        "suite": "adaptive",
+        "profile": true,
+        "mode": "diagnostic",
+        "tolerance_policy": "기준값 유지; 진단 모드에서는 유한한 미수렴/정확도 초과를 경고로 기록하고 마지막 채택 후보로 진행. 비유한/계산 불능은 종료.",
+        "geometry_policy": "원본 visual 예외 미승계; 본 실험은 솔버 진단이며 기하 인증·학습 적격성 없음",
+        "training_eligible": false,
+        "r1_complete": false,
+        "strain_formula_fp32": "legacy",
+        "adaptive_policy": {
+          "correction_budget": 4,
+          "required_contraction": 0.5,
+          "fallback": "같은 RHS의 FP64 GMRES; 실패 후 다음 행렬 재구축까지 보정 생략"
+        },
+        "comparison_pairs": [
+          [
+            "fp64",
+            "reference_hilo"
+          ],
+          [
+            "refine64",
+            "fp64"
+          ],
+          [
+            "adaptive32",
+            "fp64"
+          ],
+          [
+            "adaptive32",
+            "refine64"
+          ]
+        ]
+      },
+      "lanes": {
+        "reference_hilo": {
+          "status": "complete",
+          "advanced_steps": 640,
+          "warning_steps": 0,
+          "report_sha256": "dfea6dd4014467cba9b9062209697b6ba460d8836e632aa95bfbd4faa32c411d",
+          "verified_raw_files": 10,
+          "compute_record_s": 12.530830496980343,
+          "transfer_write_hash_s": 0.387415437027812,
+          "setup_excluding_model_s": 2.014767544984352,
+          "adaptive_counts": null,
+          "gpu_array_dtypes": {
+            "state": "<class 'warp._src.types.float64'>",
+            "force": "<class 'warp._src.types.vec3d'>",
+            "mass": "<class 'warp._src.types.float64'>",
+            "current": "<class 'warp._src.types.float64'>",
+            "cudss_rhs": "<class 'warp._src.types.float64'>",
+            "gmres_basis": "<class 'warp._src.types.float64'>",
+            "reduction": "<class 'warp._src.types.float64'>"
+          },
+          "graph_inventory": {
+            "step": {
+              "kernels": 7007,
+              "device_copies": 606,
+              "memsets": 1126,
+              "children": 8,
+              "host_copies": 0,
+              "host_callbacks": 0,
+              "conditionals": 22,
+              "conditional_bodies": 22
+            },
+            "frame": {
+              "kernels": 7,
+              "device_copies": 1,
+              "memsets": 2,
+              "children": 0,
+              "host_copies": 0,
+              "host_callbacks": 0,
+              "conditionals": 0,
+              "conditional_bodies": 0
+            }
+          },
+          "sample_max_independent_force_residual_n": 1.1012170217565284e-11,
+          "sample_max_independent_force_ratio_official": 0.10967596043864537,
+          "sample_max_independent_update_error_m": 1.0422475718168149e-22,
+          "sample_max_independent_energy_balance_residual_j": 8.122015495648846e-15,
+          "sample_max_energy_ledger_difference_j": 1.6874484496081765e-21,
+          "sample_max_assembly_relative_error": 4.511394211511836e-16,
+          "sample_max_pinned_state_max": 0.0,
+          "sample_max_independent_linear_relative_residual": 7.878544296786271e-07,
+          "final_state_metrics": {
+            "kinetic_energy_j": 1.7355954529417827e-05,
+            "elastic_energy_j": 3.857207132580493e-07,
+            "max_strain_component": 3.44819534693369e-05
+          },
+          "profile_sha256": "14a6335b0ee9d88725bf8ad4820e34c3f4e707e218b038e4b991b94e382d2852",
+          "profile_by_operation": {
+            "CuDSSFactor.matvec": {
+              "calls": 5190,
+              "exclusive_s": 5.0339328000000005
+            },
+            "CuDSSFactor.factor": {
+              "calls": 18,
+              "exclusive_s": 0.103962624
+            },
+            "ResidentGMRES._orth": {
+              "calls": 4557,
+              "exclusive_s": 0.04647424
+            },
+            "ResidentShellOperators.hvp": {
+              "calls": 9374,
+              "exclusive_s": 2.66479104
+            },
+            "ResidentShellOperators.evaluate": {
+              "calls": 1940,
+              "exclusive_s": 3.3147381760000005
+            }
+          }
+        },
+        "fp64": {
+          "status": "complete",
+          "advanced_steps": 640,
+          "warning_steps": 0,
+          "report_sha256": "3d902c3d0b3c0d494f3eee37015ab733e2712b3a762bbcfbc81e219ce9557274",
+          "verified_raw_files": 10,
+          "compute_record_s": 10.204934754932765,
+          "transfer_write_hash_s": 0.3955854760715738,
+          "setup_excluding_model_s": 1.9340446409769356,
+          "adaptive_counts": null,
+          "gpu_array_dtypes": {
+            "state": "<class 'warp._src.types.float64'>",
+            "force": "<class 'warp._src.types.vec3d'>",
+            "mass": "<class 'warp._src.types.float64'>",
+            "current": "<class 'warp._src.types.float64'>",
+            "cudss_rhs": "<class 'warp._src.types.float64'>",
+            "gmres_basis": "<class 'warp._src.types.float64'>",
+            "reduction": "<class 'warp._src.types.float64'>"
+          },
+          "graph_inventory": {
+            "step": {
+              "kernels": 7007,
+              "device_copies": 606,
+              "memsets": 1126,
+              "children": 8,
+              "host_copies": 0,
+              "host_callbacks": 0,
+              "conditionals": 22,
+              "conditional_bodies": 22
+            },
+            "frame": {
+              "kernels": 7,
+              "device_copies": 1,
+              "memsets": 2,
+              "children": 0,
+              "host_copies": 0,
+              "host_callbacks": 0,
+              "conditionals": 0,
+              "conditional_bodies": 0
+            }
+          },
+          "sample_max_independent_force_residual_n": 1.1030728655811274e-11,
+          "sample_max_independent_force_ratio_official": 0.10986079362762237,
+          "sample_max_independent_update_error_m": 3.784682174675123e-19,
+          "sample_max_independent_energy_balance_residual_j": 8.12200858703637e-15,
+          "sample_max_energy_ledger_difference_j": 8.470329472543003e-22,
+          "sample_max_assembly_relative_error": 4.404914147950313e-16,
+          "sample_max_pinned_state_max": 0.0,
+          "sample_max_independent_linear_relative_residual": 7.884673627548202e-07,
+          "final_state_metrics": {
+            "kinetic_energy_j": 1.7355954529417827e-05,
+            "elastic_energy_j": 3.8572071325805614e-07,
+            "max_strain_component": 3.448195346877168e-05
+          },
+          "profile_sha256": "4f984e018393ec15b74148e754cd49bb9b43250cd4fe8bafde553af6b12e6228",
+          "profile_by_operation": {
+            "CuDSSFactor.matvec": {
+              "calls": 5194,
+              "exclusive_s": 5.0623016960000005
+            },
+            "CuDSSFactor.factor": {
+              "calls": 18,
+              "exclusive_s": 0.09932595200000001
+            },
+            "ResidentGMRES._orth": {
+              "calls": 4559,
+              "exclusive_s": 0.0476672
+            },
+            "ResidentShellOperators.hvp": {
+              "calls": 9378,
+              "exclusive_s": 2.658392064
+            },
+            "ResidentShellOperators.evaluate": {
+              "calls": 1940,
+              "exclusive_s": 0.8664872960000001
+            }
+          }
+        },
+        "refine64": {
+          "status": "complete",
+          "advanced_steps": 640,
+          "warning_steps": 0,
+          "report_sha256": "1b96c7322ee29dcf7561893613280862f47350c96a63a134073610ded7d2e19a",
+          "verified_raw_files": 10,
+          "compute_record_s": 8.242939498915803,
+          "transfer_write_hash_s": 0.4206883719889447,
+          "setup_excluding_model_s": 1.9766806179541163,
+          "adaptive_counts": {
+            "linear_calls": 1152,
+            "correction_solves": 2917,
+            "accepted_without_gmres": 1152,
+            "fallback_calls": 0,
+            "fallback_iterations": 0,
+            "fp64_refactorizations": 0,
+            "matrix_builds": 18,
+            "stagnations": 0,
+            "budget_exhaustions": 0,
+            "skipped_after_failure": 0
+          },
+          "gpu_array_dtypes": {
+            "state": "<class 'warp._src.types.float64'>",
+            "force": "<class 'warp._src.types.vec3d'>",
+            "mass": "<class 'warp._src.types.float64'>",
+            "current": "<class 'warp._src.types.float64'>",
+            "cudss_rhs": "<class 'warp._src.types.float64'>",
+            "gmres_basis": "<class 'warp._src.types.float64'>",
+            "reduction": "<class 'warp._src.types.float64'>"
+          },
+          "graph_inventory": {
+            "step": {
+              "kernels": 7071,
+              "device_copies": 616,
+              "memsets": 1138,
+              "children": 10,
+              "host_copies": 0,
+              "host_callbacks": 0,
+              "conditionals": 25,
+              "conditional_bodies": 25
+            },
+            "frame": {
+              "kernels": 7,
+              "device_copies": 1,
+              "memsets": 2,
+              "children": 0,
+              "host_copies": 0,
+              "host_callbacks": 0,
+              "conditionals": 0,
+              "conditional_bodies": 0
+            }
+          },
+          "sample_max_independent_force_residual_n": 1.955347556388681e-11,
+          "sample_max_independent_force_ratio_official": 0.19448367082231247,
+          "sample_max_independent_update_error_m": 3.7460032092321432e-19,
+          "sample_max_independent_energy_balance_residual_j": 8.122031615744624e-15,
+          "sample_max_energy_ledger_difference_j": 2.6469779601696886e-23,
+          "sample_max_assembly_relative_error": 4.26386724591996e-16,
+          "sample_max_pinned_state_max": 0.0,
+          "sample_max_independent_linear_relative_residual": 1.001715138595995e-08,
+          "final_state_metrics": {
+            "kinetic_energy_j": 1.7355954530075965e-05,
+            "elastic_energy_j": 3.85720713646381e-07,
+            "max_strain_component": 3.44819534553266e-05
+          },
+          "profile_sha256": "773bd1b75d1abd8df71f918ab394c23ac9a9c67a9684f59604d0522dbf5c0df5",
+          "profile_by_operation": {
+            "CuDSSFactor.matvec": {
+              "calls": 3557,
+              "exclusive_s": 3.819045888
+            },
+            "CuDSSFactor.factor": {
+              "calls": 18,
+              "exclusive_s": 0.12464128000000001
+            },
+            "ResidentGMRES._orth": {
+              "calls": 0,
+              "exclusive_s": 0.0
+            },
+            "ResidentShellOperators.hvp": {
+              "calls": 7741,
+              "exclusive_s": 2.5455636480000003
+            },
+            "ResidentShellOperators.evaluate": {
+              "calls": 1910,
+              "exclusive_s": 0.9776281600000001
+            }
+          }
+        },
+        "adaptive32": {
+          "status": "complete",
+          "advanced_steps": 640,
+          "warning_steps": 0,
+          "report_sha256": "f8f44a845f278a27fa64cbf566c61eb7033b8d33a2831f90a5cea9b156d57fc8",
+          "verified_raw_files": 10,
+          "compute_record_s": 11.797307676111814,
+          "transfer_write_hash_s": 0.3742042939993553,
+          "setup_excluding_model_s": 1.9745762860402465,
+          "adaptive_counts": {
+            "linear_calls": 1152,
+            "correction_solves": 56,
+            "accepted_without_gmres": 1,
+            "fallback_calls": 1151,
+            "fallback_iterations": 2883,
+            "fp64_refactorizations": 18,
+            "matrix_builds": 18,
+            "stagnations": 16,
+            "budget_exhaustions": 2,
+            "skipped_after_failure": 1133
+          },
+          "gpu_array_dtypes": {
+            "state": "<class 'warp._src.types.float64'>",
+            "force": "<class 'warp._src.types.vec3d'>",
+            "mass": "<class 'warp._src.types.float64'>",
+            "current": "<class 'warp._src.types.float64'>",
+            "cudss_rhs": "<class 'warp._src.types.float64'>",
+            "gmres_basis": "<class 'warp._src.types.float64'>",
+            "reduction": "<class 'warp._src.types.float64'>",
+            "preconditioner_values": "<class 'warp._src.types.float32'>",
+            "preconditioner_rhs": "<class 'warp._src.types.float32'>"
+          },
+          "graph_inventory": {
+            "step": {
+              "kernels": 7073,
+              "device_copies": 616,
+              "memsets": 1138,
+              "children": 10,
+              "host_copies": 0,
+              "host_callbacks": 0,
+              "conditionals": 25,
+              "conditional_bodies": 25
+            },
+            "frame": {
+              "kernels": 7,
+              "device_copies": 1,
+              "memsets": 2,
+              "children": 0,
+              "host_copies": 0,
+              "host_callbacks": 0,
+              "conditionals": 0,
+              "conditional_bodies": 0
+            }
+          },
+          "sample_max_independent_force_residual_n": 1.1008709909102928e-11,
+          "sample_max_independent_force_ratio_official": 0.10964149741759459,
+          "sample_max_independent_update_error_m": 3.843411998166388e-19,
+          "sample_max_independent_energy_balance_residual_j": 8.122038074370846e-15,
+          "sample_max_energy_ledger_difference_j": 8.503416697045124e-22,
+          "sample_max_assembly_relative_error": 4.4012035487215866e-16,
+          "sample_max_pinned_state_max": 0.0,
+          "sample_max_independent_linear_relative_residual": 7.881929113324648e-07,
+          "final_state_metrics": {
+            "kinetic_energy_j": 1.7355954529417705e-05,
+            "elastic_energy_j": 3.857207132580737e-07,
+            "max_strain_component": 3.448195346985642e-05
+          },
+          "profile_sha256": "518550d7e41db27e584be1b42b3eedf9bc175113a263a23913f12d0062ffa95c",
+          "profile_by_operation": {
+            "CuDSSFactor.matvec": {
+              "calls": 5242,
+              "exclusive_s": 5.753020416
+            },
+            "CuDSSFactor.factor": {
+              "calls": 36,
+              "exclusive_s": 0.213843968
+            },
+            "ResidentGMRES._orth": {
+              "calls": 4551,
+              "exclusive_s": 0.055597056000000006
+            },
+            "ResidentShellOperators.hvp": {
+              "calls": 9426,
+              "exclusive_s": 3.040003072
+            },
+            "ResidentShellOperators.evaluate": {
+              "calls": 1940,
+              "exclusive_s": 0.9763246080000001
+            }
+          }
+        }
+      },
+      "trajectory": {
+        "fp64_vs_reference_hilo": {
+          "common_advanced_steps": 640,
+          "moving_common_steps": 576,
+          "common_warning_steps": 0,
+          "interpretation": "경고 포함 진단 궤적 비교이며 엄격 검산 통과를 뜻하지 않습니다.",
+          "time_s": 0.16666666666666666,
+          "max_position_component_difference_m": 7.500163363937857e-17,
+          "max_velocity_component_difference_m_s": 2.4733592744751477e-12,
+          "max_area_weighted_position_rms_m": 1.3368834314676989e-17,
+          "max_area_weighted_velocity_rms_m_s": 3.344157613659675e-13
+        },
+        "refine64_vs_fp64": {
+          "common_advanced_steps": 640,
+          "moving_common_steps": 576,
+          "common_warning_steps": 0,
+          "interpretation": "경고 포함 진단 궤적 비교이며 엄격 검산 통과를 뜻하지 않습니다.",
+          "time_s": 0.16666666666666666,
+          "max_position_component_difference_m": 5.258672186939095e-13,
+          "max_velocity_component_difference_m_s": 9.216220963476074e-10,
+          "max_area_weighted_position_rms_m": 1.0268258107909378e-13,
+          "max_area_weighted_velocity_rms_m_s": 7.293531939647479e-11
+        },
+        "adaptive32_vs_fp64": {
+          "common_advanced_steps": 640,
+          "moving_common_steps": 576,
+          "common_warning_steps": 0,
+          "interpretation": "경고 포함 진단 궤적 비교이며 엄격 검산 통과를 뜻하지 않습니다.",
+          "time_s": 0.16666666666666666,
+          "max_position_component_difference_m": 1.0378999528688835e-14,
+          "max_velocity_component_difference_m_s": 2.0693472511819344e-11,
+          "max_area_weighted_position_rms_m": 7.056945597037058e-16,
+          "max_area_weighted_velocity_rms_m_s": 4.926837324720777e-13
+        },
+        "adaptive32_vs_refine64": {
+          "common_advanced_steps": 640,
+          "moving_common_steps": 576,
+          "common_warning_steps": 0,
+          "interpretation": "경고 포함 진단 궤적 비교이며 엄격 검산 통과를 뜻하지 않습니다.",
+          "time_s": 0.16666666666666666,
+          "max_position_component_difference_m": 5.252036869643484e-13,
+          "max_velocity_component_difference_m_s": 9.222045314893901e-10,
+          "max_area_weighted_position_rms_m": 1.0267188850265497e-13,
+          "max_area_weighted_velocity_rms_m_s": 7.297122596245729e-11
+        }
+      },
+      "independent_analysis_errors": 0
+    }
+  },
+  "source_repositories": {
+    "code": "7b7cd9fbe6e15b90935467f976cf725d25cc02eb",
+    "experiments": "8e269c40c25b1e1a615fc526193e3bd09e8d34b4"
+  },
+  "functional": {
+    "run": "experiments/artifacts/runs/teacher_precision_compare/20260913_adaptive_validation_v1",
+    "report_sha256": "f61cb067f732dc0d7ac56d7682f8aee0ced453cb6089a9267ed8e698c3051459",
+    "result": {
+      "passed": true,
+      "device": "NVIDIA GeForce GTX 1080 Ti",
+      "checks": [
+        {
+          "case": "zero_rhs",
+          "residual": 0.0,
+          "limit": 0.0,
+          "counts": {
+            "linear_calls": 1,
+            "correction_solves": 0,
+            "accepted_without_gmres": 0,
+            "fallback_calls": 0,
+            "fallback_iterations": 0,
+            "fp64_refactorizations": 0,
+            "matrix_builds": 0,
+            "stagnations": 0,
+            "budget_exhaustions": 0,
+            "skipped_after_failure": 0
+          }
+        },
+        {
+          "case": "fp32_accept",
+          "residual": 4.440892098500626e-15,
+          "limit": 2.449489742783178e-11,
+          "counts": {
+            "linear_calls": 1,
+            "correction_solves": 2,
+            "accepted_without_gmres": 1,
+            "fallback_calls": 0,
+            "fallback_iterations": 0,
+            "fp64_refactorizations": 0,
+            "matrix_builds": 0,
+            "stagnations": 0,
+            "budget_exhaustions": 0,
+            "skipped_after_failure": 0
+          }
+        },
+        {
+          "case": "new_rhs",
+          "residual": 5.7395013843344475e-15,
+          "limit": 1.479864858694874e-11,
+          "counts": {
+            "linear_calls": 1,
+            "correction_solves": 2,
+            "accepted_without_gmres": 1,
+            "fallback_calls": 0,
+            "fallback_iterations": 0,
+            "fp64_refactorizations": 0,
+            "matrix_builds": 0,
+            "stagnations": 0,
+            "budget_exhaustions": 0,
+            "skipped_after_failure": 0
+          }
+        },
+        {
+          "case": "stale_preconditioner_fallback",
+          "residual": 7.364386412590295e-16,
+          "limit": 2.449489742783178e-11,
+          "counts": {
+            "linear_calls": 1,
+            "correction_solves": 1,
+            "accepted_without_gmres": 0,
+            "fallback_calls": 1,
+            "fallback_iterations": 3,
+            "fp64_refactorizations": 0,
+            "matrix_builds": 0,
+            "stagnations": 1,
+            "budget_exhaustions": 0,
+            "skipped_after_failure": 0
+          }
+        },
+        {
+          "case": "skip_failed_generation",
+          "residual": 6.080941944488118e-16,
+          "limit": 2.1748563170931545e-11,
+          "counts": {
+            "linear_calls": 1,
+            "correction_solves": 0,
+            "accepted_without_gmres": 0,
+            "fallback_calls": 1,
+            "fallback_iterations": 3,
+            "fp64_refactorizations": 0,
+            "matrix_builds": 0,
+            "stagnations": 0,
+            "budget_exhaustions": 0,
+            "skipped_after_failure": 1
+          }
+        },
+        {
+          "case": "new_generation_fp32_accept",
+          "residual": 2.434909185329438e-15,
+          "limit": 2.449489742783178e-11,
+          "counts": {
+            "linear_calls": 1,
+            "correction_solves": 2,
+            "accepted_without_gmres": 1,
+            "fallback_calls": 0,
+            "fallback_iterations": 0,
+            "fp64_refactorizations": 0,
+            "matrix_builds": 0,
+            "stagnations": 0,
+            "budget_exhaustions": 0,
+            "skipped_after_failure": 0
+          }
+        }
+      ],
+      "graph_inventory": {
+        "kernels": 68,
+        "device_copies": 32,
+        "memsets": 21,
+        "children": 5,
+        "host_copies": 0,
+        "host_callbacks": 0,
+        "conditionals": 8,
+        "conditional_bodies": 8
+      },
+      "host_copy_rejected": true,
+      "source_sha256": "bbeeded70615be19b6b7d6fcff3b61a759e8d464702af4d1739636a821df19e1",
+      "training_eligible": false
+    }
+  },
+  "all_steps_audit": {
+    "run": "experiments/artifacts/runs/teacher_precision_compare/20260913_adaptive_all_steps_audit_v1",
+    "report_sha256": "a755e89b932dc573736499c14d5461851711b6a5e960354351605046df68fe29",
+    "result": {
+      "source_manifest_sha256": "7046a72b8da241bb0eb614be85b9a19cc3031870e19c65b246af673b8dda1b45",
+      "script_sha256": "3f2d7050cc6ddbb6e84d87ac468e3870aeee89798ad27bbce7bdc1c6ae68a2c2",
+      "scope": "모든 저장 substep의 독립 FP64/hi-lo 물리·기하 검산과 FP64 기준 궤적 대조",
+      "steps_per_lane": 640,
+      "lanes": {
+        "fp64": {
+          "passed": true,
+          "failed_steps": 0,
+          "flag_counts": {
+            "nonfinite": 0,
+            "force_residual": 0,
+            "position_update": 0,
+            "energy_ledger": 0,
+            "geometry_bound_unresolved": 0,
+            "pin_drift": 0
+          },
+          "maxima": {
+            "force_ratio": 0.29786497262212097,
+            "update_error_m": 4.089326284709912e-19,
+            "energy_ledger_error_j": 5.108667463127499e-21,
+            "projected_gradient_upper": 8.982054923666327e-05,
+            "strain_component_upper": 3.5688898826616544e-05,
+            "curvature_upper": 0.29036489350513334
+          },
+          "comparison": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "time_failed": false,
+          "mass_info": 0,
+          "graph_inventory": {
+            "kernels": 208,
+            "device_copies": 8,
+            "memsets": 8,
+            "children": 1,
+            "host_copies": 0,
+            "host_callbacks": 0,
+            "conditionals": 0,
+            "conditional_bodies": 0
+          },
+          "setup_read_s": 1.944827658997383,
+          "compute_s": 1.9369736440712586,
+          "wall_s": 4.096291997993831,
+          "trajectory_equivalent": true,
+          "raw_sha256": "3d53054df45125a8378539184e186719b4f613a24f02da69a99d43e8b1942229"
+        },
+        "refine64": {
+          "passed": true,
+          "failed_steps": 0,
+          "flag_counts": {
+            "nonfinite": 0,
+            "force_residual": 0,
+            "position_update": 0,
+            "energy_ledger": 0,
+            "geometry_bound_unresolved": 0,
+            "pin_drift": 0
+          },
+          "maxima": {
+            "force_ratio": 0.29789714661333827,
+            "update_error_m": 4.2338381405449125e-19,
+            "energy_ledger_error_j": 3.414601568618898e-21,
+            "projected_gradient_upper": 8.982054933174755e-05,
+            "strain_component_upper": 3.5688898811184444e-05,
+            "curvature_upper": 0.2903648938522346
+          },
+          "comparison": [
+            [
+              5.258707965610787e-13,
+              0.0,
+              9.303910170336093e-11
+            ],
+            [
+              9.216283586993557e-10,
+              0.0,
+              2.282196579172918e-09
+            ]
+          ],
+          "time_failed": false,
+          "mass_info": 0,
+          "graph_inventory": {
+            "kernels": 208,
+            "device_copies": 8,
+            "memsets": 8,
+            "children": 1,
+            "host_copies": 0,
+            "host_callbacks": 0,
+            "conditionals": 0,
+            "conditional_bodies": 0
+          },
+          "setup_read_s": 0.22694059199420735,
+          "compute_s": 1.9104291190160438,
+          "wall_s": 2.318431180960033,
+          "trajectory_equivalent": true,
+          "raw_sha256": "2519689e1536f8138178a288352dd90bcdc39c869631c704a9ffad14b7d463e9"
+        },
+        "adaptive32": {
+          "passed": true,
+          "failed_steps": 0,
+          "flag_counts": {
+            "nonfinite": 0,
+            "force_residual": 0,
+            "position_update": 0,
+            "energy_ledger": 0,
+            "geometry_bound_unresolved": 0,
+            "pin_drift": 0
+          },
+          "maxima": {
+            "force_ratio": 0.29780542142141936,
+            "update_error_m": 4.245442347944917e-19,
+            "energy_ledger_error_j": 6.776263578034403e-21,
+            "projected_gradient_upper": 8.982054923688197e-05,
+            "strain_component_upper": 3.568889882683859e-05,
+            "curvature_upper": 0.29036489350616157
+          },
+          "comparison": [
+            [
+              1.0378994022974678e-14,
+              0.0,
+              1.8396875684567473e-12
+            ],
+            [
+              2.0693472511395828e-11,
+              0.0,
+              3.814515698130337e-11
+            ]
+          ],
+          "time_failed": false,
+          "mass_info": 0,
+          "graph_inventory": {
+            "kernels": 208,
+            "device_copies": 8,
+            "memsets": 8,
+            "children": 1,
+            "host_copies": 0,
+            "host_callbacks": 0,
+            "conditionals": 0,
+            "conditional_bodies": 0
+          },
+          "setup_read_s": 0.2347921670298092,
+          "compute_s": 1.90170886303531,
+          "wall_s": 2.317025927011855,
+          "trajectory_equivalent": true,
+          "raw_sha256": "8021b6a50473b2a5d78ab906ed97c1921f5aed26f9e00a7b46e523b88d20f38a"
+        }
+      },
+      "training_eligible": false,
+      "r1_complete": false,
+      "passed": true
+    }
+  },
+  "tests": {
+    "actual_warp_cpu_policy": 5,
+    "existing_precision_policy": 9,
+    "existing_stable_strain": 4,
+    "actual_gpu_linear_cases": 6,
+    "host_copy_rejection": true
+  }
+}

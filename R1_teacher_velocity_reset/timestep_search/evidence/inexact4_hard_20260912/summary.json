@@ -1,0 +1,94 @@
+{
+  "input_time_s": 2.116666666666666,
+  "frame": 127,
+  "dt_s": 0.00026041666666666666,
+  "steps": 256,
+  "frame_count": 4,
+  "policy": {
+    "force_atol_n": 1e-10,
+    "force_rtol": 1e-09,
+    "displacement_atol_m": 1e-12,
+    "displacement_rtol": 1e-09,
+    "linear_rtol": 1e-10,
+    "max_newton": 15,
+    "linear_cycles": 3,
+    "line_search_steps": 12,
+    "linear_restart": 240,
+    "linear_preconditioner": "current"
+  },
+  "environment": {
+    "device": "cuda:0",
+    "numpy": "2.4.4",
+    "scipy": "1.18.1",
+    "compute_backend": "precision_hvp_graph",
+    "linear_solver_device": "cpu",
+    "cuda_graph": true,
+    "state_encoding": "hi_lo_v1",
+    "state_mantissa_bits": 64,
+    "warp": "1.17.0",
+    "gpu_name": "NVIDIA GeForce GTX 1080 Ti"
+  },
+  "gpu_shared_with_main": false,
+  "timing_is_controlled_benchmark": false,
+  "main_modified": false,
+  "training_eligible": false,
+  "r1_complete": false,
+  "source_frame_sha256": "fce44d201c03243f66d3537331bceb32a929d946719c21e4d482da00c063227a",
+  "same_dt_curve_comparisons": {
+    "strict": {
+      "u_relative_upper": 0.0,
+      "v_relative_upper": 0.0,
+      "max_u_difference_m": 0.0,
+      "max_v_difference_m_s": 0.0
+    },
+    "ew": {
+      "u_relative_upper": 4.57761908072867e-14,
+      "v_relative_upper": 1.5973467075519594e-10,
+      "max_u_difference_m": 7.289267388473075e-15,
+      "max_v_difference_m_s": 1.5511105419562573e-10
+    }
+  },
+  "trials": [
+    {
+      "mode": "strict",
+      "status": "passed",
+      "solve_s": 226.92748025406036,
+      "audit_s": 278.1758993943513,
+      "completed_steps": 256,
+      "hvp_calls": 14713,
+      "linear_iterations": 13568,
+      "newton_corrections": 512,
+      "newton_histogram": {
+        "2": 256
+      },
+      "max_force_ratio": 0.010277357531919731,
+      "max_linear_residual_ratio": 0.9994560666443562,
+      "all_audits_passed": true,
+      "max_update_error_m": 2.710505431213761e-20,
+      "max_energy_ledger_error_j": 3.903127820947816e-18,
+      "max_projected_gradient_upper": 0.035047477263616254,
+      "fallback_count": 0
+    },
+    {
+      "mode": "ew",
+      "status": "passed",
+      "solve_s": 161.51908052669023,
+      "audit_s": 274.67654330062214,
+      "completed_steps": 256,
+      "hvp_calls": 9277,
+      "linear_iterations": 8006,
+      "newton_corrections": 613,
+      "newton_histogram": {
+        "3": 101,
+        "2": 155
+      },
+      "max_force_ratio": 0.9923746162173991,
+      "max_linear_residual_ratio": 0.9945480627553329,
+      "all_audits_passed": true,
+      "max_update_error_m": 2.710505431213761e-20,
+      "max_energy_ledger_error_j": 4.689174395999807e-18,
+      "max_projected_gradient_upper": 0.03504747726476378,
+      "fallback_count": 0
+    }
+  ]
+}

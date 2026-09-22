@@ -1,0 +1,378 @@
+{
+  "full_frame": {
+    "source": "experiments/artifacts/runs/teacher_timestep_search/gravity_wrinkles_flag_bend500_v1/wind",
+    "scope": "동일2초 checkpoint 이후1/60초;같은시각의 consistent-mass/time RMS 상대오차,최대노드 성분,끝에너지. 전체0초부터의 시간수렴/공간수렴/학습 적격 판정 아님",
+    "pairs": {
+      "2:4": {
+        "u": {
+          "mass_time_rms": 3.488101556483025e-05,
+          "relative_mass_time_rms": 7.705067683706398e-05,
+          "max_component": 0.00036396299102135884,
+          "max_time_s": 2.0092447916666667,
+          "max_node": 90,
+          "max_component_axis": 1,
+          "max_node_rest_xyz": [
+            1.0,
+            0.0,
+            0.125
+          ],
+          "final_mass_rms": 5.298927988241709e-05,
+          "final_max_component": 0.0003407622533357032
+        },
+        "v": {
+          "mass_time_rms": 0.2390716165414132,
+          "relative_mass_time_rms": 0.4350429474246872,
+          "max_component": 1.6047982031616246,
+          "max_time_s": 2.0067708333333334,
+          "max_node": 135,
+          "max_component_axis": 0,
+          "max_node_rest_xyz": [
+            0.5625,
+            0.0,
+            -0.125
+          ],
+          "final_mass_rms": 0.27313303306082964,
+          "final_max_component": 1.1299080498587344
+        },
+        "frame_average_velocity_relative_mass_error": 0.006651031753932506
+      },
+      "4:8": {
+        "u": {
+          "mass_time_rms": 1.839117832357369e-05,
+          "relative_mass_time_rms": 4.062532832882431e-05,
+          "max_component": 0.0001691608719228401,
+          "max_time_s": 2.0160807291666667,
+          "max_node": 214,
+          "max_component_axis": 1,
+          "max_node_rest_xyz": [
+            0.625,
+            0.0,
+            -0.5
+          ],
+          "final_mass_rms": 2.648621536706703e-05,
+          "final_max_component": 0.00014056975818352362
+        },
+        "v": {
+          "mass_time_rms": 0.19654108831786668,
+          "relative_mass_time_rms": 0.3576482088962836,
+          "max_component": 1.4227396860088433,
+          "max_time_s": 2.005729166666667,
+          "max_node": 134,
+          "max_component_axis": 1,
+          "max_node_rest_xyz": [
+            0.5,
+            0.0,
+            -0.125
+          ],
+          "final_mass_rms": 0.22651621450901233,
+          "final_max_component": 0.8427690845747365
+        },
+        "frame_average_velocity_relative_mass_error": 0.003324470614433919
+      },
+      "8:16": {
+        "u": {
+          "mass_time_rms": 9.844426396817783e-06,
+          "relative_mass_time_rms": 2.1745917598568166e-05,
+          "max_component": 8.360399424834825e-05,
+          "max_time_s": 2.015983072916667,
+          "max_node": 1,
+          "max_component_axis": 0,
+          "max_node_rest_xyz": [
+            0.3125,
+            0.0,
+            0.5
+          ],
+          "final_mass_rms": 1.3471512861083715e-05,
+          "final_max_component": 5.934812095235764e-05
+        },
+        "v": {
+          "mass_time_rms": 0.1571315890924729,
+          "relative_mass_time_rms": 0.2859355876282484,
+          "max_component": 1.2862392367129993,
+          "max_time_s": 2.01162109375,
+          "max_node": 12,
+          "max_component_axis": 2,
+          "max_node_rest_xyz": [
+            1.0,
+            0.0,
+            0.5
+          ],
+          "final_mass_rms": 0.1859839028698841,
+          "final_max_component": 0.7754362354968288
+        },
+        "frame_average_velocity_relative_mass_error": 0.0016909032778365785
+      },
+      "16:32": {
+        "u": {
+          "mass_time_rms": 4.879437746960377e-06,
+          "relative_mass_time_rms": 1.0778469611363086e-05,
+          "max_component": 4.6202511412477487e-05,
+          "max_time_s": 2.0126139322916665,
+          "max_node": 12,
+          "max_component_axis": 2,
+          "max_node_rest_xyz": [
+            1.0,
+            0.0,
+            0.5
+          ],
+          "final_mass_rms": 7.0563675401620724e-06,
+          "final_max_component": 2.431027847166643e-05
+        },
+        "v": {
+          "mass_time_rms": 0.11087225688293031,
+          "relative_mass_time_rms": 0.2017567857178351,
+          "max_component": 1.0400302706401954,
+          "max_time_s": 2.014501953125,
+          "max_node": 220,
+          "max_component_axis": 0,
+          "max_node_rest_xyz": [
+            1.0,
+            0.0,
+            -0.5
+          ],
+          "final_mass_rms": 0.1422218351584395,
+          "final_max_component": 0.7704732927412405
+        },
+        "frame_average_velocity_relative_mass_error": 0.0008856936876073697
+      }
+    },
+    "lanes": {
+      "2": {
+        "solve_diagnostic_s": 9.636761790025048,
+        "elastic_initial_j": 0.01495231561307255,
+        "elastic_final_j": 0.014465476720105829,
+        "kinetic_final_j": 0.011099699271385507,
+        "velocity_mass_time_rms_m_s": 0.5494976768583538,
+        "velocity_component_max_m_s": 3.5314561850524484,
+        "audit_max": [
+          0.1973245095817921,
+          1.1436337086870685e-20,
+          5.20586449382493e-18,
+          2.062968266555415,
+          0.1611294456014772,
+          42.40828202061972
+        ]
+      },
+      "4": {
+        "solve_diagnostic_s": 16.479806411953177,
+        "elastic_initial_j": 0.01495231561307255,
+        "elastic_final_j": 0.01447057340796979,
+        "kinetic_final_j": 0.011094122204832956,
+        "velocity_mass_time_rms_m_s": 0.5495345499682485,
+        "velocity_component_max_m_s": 3.535593669716707,
+        "audit_max": [
+          0.0001480246560813676,
+          5.19594202581051e-21,
+          6.938893903907228e-18,
+          2.0629475293428574,
+          0.1637508094839183,
+          42.45337369548713
+        ]
+      },
+      "8": {
+        "solve_diagnostic_s": 29.19988375203684,
+        "elastic_initial_j": 0.01495231561307255,
+        "elastic_final_j": 0.014515035509541918,
+        "kinetic_final_j": 0.0110496594412485,
+        "velocity_mass_time_rms_m_s": 0.5495377464953639,
+        "velocity_component_max_m_s": 3.4892493076823703,
+        "audit_max": [
+          0.29283882453562055,
+          8.136222032158802e-22,
+          6.939317420380856e-18,
+          2.0632661899774103,
+          0.16311011857430052,
+          42.386680109735764
+        ]
+      },
+      "16": {
+        "solve_diagnostic_s": 49.118838169029914,
+        "elastic_initial_j": 0.01495231561307255,
+        "elastic_final_j": 0.014511979481017144,
+        "kinetic_final_j": 0.011052922280928568,
+        "velocity_mass_time_rms_m_s": 0.5495349807667466,
+        "velocity_component_max_m_s": 3.5004328933539184,
+        "audit_max": [
+          0.00032620152099240506,
+          2.3150211894533136e-22,
+          6.939105662144042e-18,
+          2.063146461574987,
+          0.16383331033698956,
+          42.48407425995364
+        ]
+      },
+      "32": {
+        "solve_diagnostic_s": 141.1424234129954,
+        "elastic_initial_j": 0.01495231561307255,
+        "elastic_final_j": 0.01450025783863615,
+        "kinetic_final_j": 0.011064721357390112,
+        "velocity_mass_time_rms_m_s": 0.5495341982883803,
+        "velocity_component_max_m_s": 3.5066387784978503,
+        "audit_max": [
+          0.0015058716797171365,
+          5.98316898159139e-23,
+          8.673511500765629e-18,
+          2.0631411832338453,
+          0.16333319493857543,
+          42.478140081407325
+        ]
+      }
+    }
+  },
+  "short_interval": {
+    "short128": {
+      "u_relative_mass": 1.9697356508593176e-08,
+      "u_max": 4.6070531592576e-08,
+      "v_relative_mass": 0.001056067330727095,
+      "v_max": 0.004260123966109305
+    },
+    "short256": {
+      "u_relative_mass": 0.0,
+      "u_max": 0.0,
+      "v_relative_mass": 0.0,
+      "v_max": 0.0
+    },
+    "gauss2_probe": {
+      "u_relative_mass": 1.1003125449740754e-05,
+      "u_max": 1.7621260214203754e-05,
+      "v_relative_mass": 0.21237808381392206,
+      "v_max": 0.6052074172230235
+    },
+    "gauss2_split4": {
+      "u_relative_mass": 1.4703573344254432e-06,
+      "u_max": 4.587735314181711e-06,
+      "v_relative_mass": 0.06906861675788163,
+      "v_max": 0.20865276110331374
+    },
+    "gauss2_split8": {
+      "u_relative_mass": 3.727212485922477e-07,
+      "u_max": 1.1653455059146972e-06,
+      "v_relative_mass": 0.024585225998844214,
+      "v_max": 0.11861837075726803
+    },
+    "gauss3_split8": {
+      "u_relative_mass": 2.1542910967501868e-08,
+      "u_max": 7.23162340926014e-08,
+      "v_relative_mass": 0.0014988902049316948,
+      "v_max": 0.007626332867083024
+    },
+    "dt32": {
+      "u_relative_mass": 3.8845618379377024e-07,
+      "u_max": 9.408319870326002e-07,
+      "v_relative_mass": 0.020732528827427123,
+      "v_max": 0.08906921742011273
+    }
+  },
+  "rest_spectrum": {
+    "scope": "rest形状の線形化、変形状態の固有値ではない",
+    "largest_four_rest_frequencies_hz": [
+      15548.757484672768,
+      15561.720535553159,
+      15569.30760272388,
+      15921.942613589981
+    ]
+  },
+  "costs": {
+    "short128": {
+      "setup_s": 3.6323012899956666,
+      "solve_diagnostic_s": 8.048603746981826,
+      "steps_attempted": 128,
+      "solver_failure": 0,
+      "gpu": "NVIDIA GeForce GTX 1080 Ti",
+      "flags": [
+        0
+      ],
+      "max_checks": [
+        0.04706645488517938,
+        1.8815138984092566e-24,
+        5.204170427930421e-18,
+        2.056210858122885,
+        0.15555848469041186,
+        41.619705007191946
+      ],
+      "mass_info": 0,
+      "time_failed": false,
+      "factor_status": [
+        0,
+        0
+      ]
+    },
+    "short256": {
+      "setup_s": 3.4910810029832646,
+      "solve_diagnostic_s": 13.685739513020962,
+      "steps_attempted": 256,
+      "solver_failure": 0,
+      "gpu": "NVIDIA GeForce GTX 1080 Ti",
+      "flags": [
+        0
+      ],
+      "max_checks": [
+        0.0007434330893427888,
+        7.074082946475589e-25,
+        6.938907138797029e-18,
+        2.0562121689620954,
+        0.15555848469038638,
+        41.619705007191946
+      ],
+      "mass_info": 0,
+      "time_failed": false,
+      "factor_status": [
+        0,
+        0
+      ]
+    },
+    "gauss2_probe": {
+      "status": "step_solved_not_independently_audited",
+      "seconds": 3.2968243850045837,
+      "hvp_calls": 867,
+      "stage_update_error_m": 5.421010862427522e-20,
+      "energy_balance_residual_j": 6.044006864373678e-07,
+      "u_difference_max": 1.7568400224013956e-05,
+      "u_relative_mass": 1.0942304396356623e-05,
+      "v_difference_max": 0.5826794313671463,
+      "v_relative_mass": 0.21261230746541987
+    },
+    "gauss2_split4": {
+      "status": "step_solved_not_independently_audited",
+      "seconds": 9.885952889046166,
+      "hvp_calls": 3396,
+      "subdivisions": 4,
+      "stages": 2,
+      "ledger_sum_j": -3.8062732682604816e-09,
+      "stage_update_error_m": 5.421010862427522e-20,
+      "energy_balance_residual_j": 2.399185816160373e-09,
+      "u_difference_max": 4.876178595584839e-06,
+      "u_relative_mass": 1.2993332637465825e-06,
+      "v_difference_max": 0.18220222941906394,
+      "v_relative_mass": 0.06464065382316134
+    },
+    "gauss2_split8": {
+      "status": "step_solved_not_independently_audited",
+      "seconds": 14.343101608974393,
+      "hvp_calls": 4496,
+      "subdivisions": 8,
+      "stages": 2,
+      "ledger_sum_j": -3.3419107882770466e-10,
+      "stage_update_error_m": 5.421010862427522e-20,
+      "energy_balance_residual_j": -1.6016638905169835e-11,
+      "u_difference_max": 3.4733231973778107e-07,
+      "u_relative_mass": 1.803452035341104e-07,
+      "v_difference_max": 0.0367119374069021,
+      "v_relative_mass": 0.008225295607800144
+    },
+    "gauss3_split8": {
+      "status": "step_solved_not_independently_audited",
+      "seconds": 16.892930137983058,
+      "hvp_calls": 4576,
+      "subdivisions": 8,
+      "stages": 3,
+      "ledger_sum_j": -2.2100062066885724e-11,
+      "stage_update_error_m": 5.421010862427522e-20,
+      "energy_balance_residual_j": 9.447898358131638e-13,
+      "u_difference_max": 8.71014087048611e-07,
+      "u_relative_mass": 3.775812336227901e-07,
+      "v_difference_max": 0.08741880616819876,
+      "v_relative_mass": 0.019648763708675167
+    }
+  }
+}

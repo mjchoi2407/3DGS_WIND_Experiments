@@ -1,0 +1,36 @@
+{
+  "scope": "한 구간의 수치 곡선 비교. 독립 ODE 참해 인증과 누적 오차 판정은 아님.",
+  "results": {
+    "gauss6_one_to_reference": {
+      "relative_upper": {
+        "u": 1.4913370934000922e-05,
+        "v": 0.0068683908699113515
+      },
+      "relative_sampled_lower": {
+        "u": 1.483776973637065e-05,
+        "v": 0.006868390862365347
+      }
+    },
+    "newmark128_to_reference": {
+      "relative_upper": {
+        "u": 1.9984641674322584e-06,
+        "v": 0.006071989354773298
+      },
+      "relative_sampled_lower": {
+        "u": 1.998223256341447e-06,
+        "v": 0.006071989347233263
+      }
+    },
+    "gauss6_reference2_to4": {
+      "relative_upper": {
+        "u": 2.1907453949467645e-06,
+        "v": 0.007166413798756487
+      },
+      "relative_sampled_lower": {
+        "u": 2.190725005723721e-06,
+        "v": 0.00716641379120825
+      }
+    }
+  },
+  "training_eligible": false
+}

@@ -1,0 +1,307 @@
+{
+  "clock": "PTX globaltimer, ns",
+  "scope": "적분·공력, 초기 준비 제외",
+  "interpretation": "중첩 inclusive 시간은 합산 금지. exclusive에도 marker·scheduling 비용 포함.",
+  "regions": [
+    {
+      "path": "ResidentShellStepper._aero",
+      "calls": 1,
+      "inclusive_s": 0.000193536,
+      "exclusive_s": 0.000193536
+    },
+    {
+      "path": "ResidentShellStepper._step",
+      "calls": 2,
+      "inclusive_s": 0.93889632,
+      "exclusive_s": 0.000296896
+    },
+    {
+      "path": "ResidentShellStepper._step/ResidentShellOperators.evaluate",
+      "calls": 2,
+      "inclusive_s": 0.015322112,
+      "exclusive_s": 0.012533760000000001
+    },
+    {
+      "path": "ResidentShellStepper._step/ResidentShellOperators.evaluate/kernel.reduce_volume",
+      "calls": 2,
+      "inclusive_s": 0.002049024,
+      "exclusive_s": 0.002049024
+    },
+    {
+      "path": "ResidentShellStepper._step/ResidentShellOperators.evaluate/kernel.reduce_edge",
+      "calls": 4,
+      "inclusive_s": 0.000739328,
+      "exclusive_s": 0.000739328
+    },
+    {
+      "path": "ResidentShellStepper._step/ResidentShellStepper._kinetic",
+      "calls": 2,
+      "inclusive_s": 0.00014848000000000001,
+      "exclusive_s": 0.00014848000000000001
+    },
+    {
+      "path": "ResidentShellStepper._step/CuDSSFactor.matvec",
+      "calls": 2,
+      "inclusive_s": 0.0014223360000000002,
+      "exclusive_s": 0.0014223360000000002
+    },
+    {
+      "path": "ResidentShellStepper._step/ResidentShellStepper._evaluate",
+      "calls": 2,
+      "inclusive_s": 0.0416768,
+      "exclusive_s": 0.000136192
+    },
+    {
+      "path": "ResidentShellStepper._step/ResidentShellStepper._evaluate/ResidentShellOperators.evaluate",
+      "calls": 2,
+      "inclusive_s": 0.016028672,
+      "exclusive_s": 0.01360384
+    },
+    {
+      "path": "ResidentShellStepper._step/ResidentShellStepper._evaluate/ResidentShellOperators.evaluate/kernel.reduce_volume",
+      "calls": 2,
+      "inclusive_s": 0.0016732160000000002,
+      "exclusive_s": 0.0016732160000000002
+    },
+    {
+      "path": "ResidentShellStepper._step/ResidentShellStepper._evaluate/ResidentShellOperators.evaluate/kernel.reduce_edge",
+      "calls": 4,
+      "inclusive_s": 0.0007516160000000001,
+      "exclusive_s": 0.0007516160000000001
+    },
+    {
+      "path": "ResidentShellStepper._step/ResidentShellStepper._evaluate/kernel.norms",
+      "calls": 2,
+      "inclusive_s": 0.025511936000000002,
+      "exclusive_s": 0.025511936000000002
+    },
+    {
+      "path": "ResidentShellStepper._step/ResidentShellStepper._newton",
+      "calls": 4,
+      "inclusive_s": 0.852353024,
+      "exclusive_s": 0.00019968
+    },
+    {
+      "path": "ResidentShellStepper._step/ResidentShellStepper._newton/ResidentShellStepper._build",
+      "calls": 1,
+      "inclusive_s": 0.36557414400000005,
+      "exclusive_s": 6.144000000000001e-06
+    },
+    {
+      "path": "ResidentShellStepper._step/ResidentShellStepper._newton/ResidentShellStepper._build/ResidentColoring.assemble",
+      "calls": 1,
+      "inclusive_s": 0.292013056,
+      "exclusive_s": 0.0038533120000000002
+    },
+    {
+      "path": "ResidentShellStepper._step/ResidentShellStepper._newton/ResidentShellStepper._build/ResidentColoring.assemble/ResidentShellStepper.action",
+      "calls": 277,
+      "inclusive_s": 0.288159744,
+      "exclusive_s": 0.021826560000000002
+    },
+    {
+      "path": "ResidentShellStepper._step/ResidentShellStepper._newton/ResidentShellStepper._build/ResidentColoring.assemble/ResidentShellStepper.action/ResidentShellOperators.hvp",
+      "calls": 277,
+      "inclusive_s": 0.266333184,
+      "exclusive_s": 0.266333184
+    },
+    {
+      "path": "ResidentShellStepper._step/ResidentShellStepper._newton/ResidentShellStepper._build/CuDSSFactor.factor",
+      "calls": 1,
+      "inclusive_s": 0.07355494400000001,
+      "exclusive_s": 0.07355494400000001
+    },
+    {
+      "path": "ResidentShellStepper._step/ResidentShellStepper._newton/ResidentGMRES.__call__",
+      "calls": 4,
+      "inclusive_s": 0.314355712,
+      "exclusive_s": 0.002117632
+    },
+    {
+      "path": "ResidentShellStepper._step/ResidentShellStepper._newton/ResidentGMRES.__call__/ResidentShellStepper.precondition",
+      "calls": 8,
+      "inclusive_s": 0.029039616,
+      "exclusive_s": 0.00011776000000000001
+    },
+    {
+      "path": "ResidentShellStepper._step/ResidentShellStepper._newton/ResidentGMRES.__call__/ResidentShellStepper.precondition/CuDSSFactor.matvec",
+      "calls": 8,
+      "inclusive_s": 0.028921856000000003,
+      "exclusive_s": 0.028921856000000003
+    },
+    {
+      "path": "ResidentShellStepper._step/ResidentShellStepper._newton/ResidentGMRES.__call__/ResidentGMRES.inner_product",
+      "calls": 16,
+      "inclusive_s": 0.00020992000000000002,
+      "exclusive_s": 0.00020992000000000002
+    },
+    {
+      "path": "ResidentShellStepper._step/ResidentShellStepper._newton/ResidentGMRES.__call__/ResidentGMRES._inner",
+      "calls": 57,
+      "inclusive_s": 0.27723673600000004,
+      "exclusive_s": 0.007041024000000001
+    },
+    {
+      "path": "ResidentShellStepper._step/ResidentShellStepper._newton/ResidentGMRES.__call__/ResidentGMRES._inner/ResidentShellStepper.action",
+      "calls": 57,
+      "inclusive_s": 0.056940544,
+      "exclusive_s": 0.00423936
+    },
+    {
+      "path": "ResidentShellStepper._step/ResidentShellStepper._newton/ResidentGMRES.__call__/ResidentGMRES._inner/ResidentShellStepper.action/ResidentShellOperators.hvp",
+      "calls": 57,
+      "inclusive_s": 0.052701184000000005,
+      "exclusive_s": 0.052701184000000005
+    },
+    {
+      "path": "ResidentShellStepper._step/ResidentShellStepper._newton/ResidentGMRES.__call__/ResidentGMRES._inner/ResidentShellStepper.precondition",
+      "calls": 57,
+      "inclusive_s": 0.19573452800000002,
+      "exclusive_s": 0.0009287680000000001
+    },
+    {
+      "path": "ResidentShellStepper._step/ResidentShellStepper._newton/ResidentGMRES.__call__/ResidentGMRES._inner/ResidentShellStepper.precondition/CuDSSFactor.matvec",
+      "calls": 57,
+      "inclusive_s": 0.19480576000000002,
+      "exclusive_s": 0.19480576000000002
+    },
+    {
+      "path": "ResidentShellStepper._step/ResidentShellStepper._newton/ResidentGMRES.__call__/ResidentGMRES._inner/ResidentGMRES.inner_product",
+      "calls": 114,
+      "inclusive_s": 0.001431552,
+      "exclusive_s": 0.001431552
+    },
+    {
+      "path": "ResidentShellStepper._step/ResidentShellStepper._newton/ResidentGMRES.__call__/ResidentGMRES._inner/ResidentGMRES._orth",
+      "calls": 824,
+      "inclusive_s": 0.016089088,
+      "exclusive_s": 0.007317504000000001
+    },
+    {
+      "path": "ResidentShellStepper._step/ResidentShellStepper._newton/ResidentGMRES.__call__/ResidentGMRES._inner/ResidentGMRES._orth/ResidentGMRES.inner_product",
+      "calls": 824,
+      "inclusive_s": 0.008771584,
+      "exclusive_s": 0.008771584
+    },
+    {
+      "path": "ResidentShellStepper._step/ResidentShellStepper._newton/ResidentGMRES.__call__/kernel.backsolve",
+      "calls": 4,
+      "inclusive_s": 0.000248832,
+      "exclusive_s": 0.000248832
+    },
+    {
+      "path": "ResidentShellStepper._step/ResidentShellStepper._newton/ResidentGMRES.__call__/kernel.add_solution",
+      "calls": 4,
+      "inclusive_s": 5.3248e-05,
+      "exclusive_s": 5.3248e-05
+    },
+    {
+      "path": "ResidentShellStepper._step/ResidentShellStepper._newton/ResidentGMRES.__call__/ResidentShellStepper.action",
+      "calls": 4,
+      "inclusive_s": 0.005449728,
+      "exclusive_s": 0.00039526400000000004
+    },
+    {
+      "path": "ResidentShellStepper._step/ResidentShellStepper._newton/ResidentGMRES.__call__/ResidentShellStepper.action/ResidentShellOperators.hvp",
+      "calls": 4,
+      "inclusive_s": 0.005054464000000001,
+      "exclusive_s": 0.005054464000000001
+    },
+    {
+      "path": "ResidentShellStepper._step/ResidentShellStepper._newton/kernel.after_linear",
+      "calls": 4,
+      "inclusive_s": 0.00549888,
+      "exclusive_s": 0.00549888
+    },
+    {
+      "path": "ResidentShellStepper._step/ResidentShellStepper._newton/ResidentShellStepper._line_search",
+      "calls": 4,
+      "inclusive_s": 0.082285568,
+      "exclusive_s": 0.000140288
+    },
+    {
+      "path": "ResidentShellStepper._step/ResidentShellStepper._newton/ResidentShellStepper._line_search/ResidentShellStepper._evaluate",
+      "calls": 4,
+      "inclusive_s": 0.08214528,
+      "exclusive_s": 0.00027136
+    },
+    {
+      "path": "ResidentShellStepper._step/ResidentShellStepper._newton/ResidentShellStepper._line_search/ResidentShellStepper._evaluate/ResidentShellOperators.evaluate",
+      "calls": 4,
+      "inclusive_s": 0.032059392,
+      "exclusive_s": 0.026998784
+    },
+    {
+      "path": "ResidentShellStepper._step/ResidentShellStepper._newton/ResidentShellStepper._line_search/ResidentShellStepper._evaluate/ResidentShellOperators.evaluate/kernel.reduce_volume",
+      "calls": 4,
+      "inclusive_s": 0.0033812480000000003,
+      "exclusive_s": 0.0033812480000000003
+    },
+    {
+      "path": "ResidentShellStepper._step/ResidentShellStepper._newton/ResidentShellStepper._line_search/ResidentShellStepper._evaluate/ResidentShellOperators.evaluate/kernel.reduce_edge",
+      "calls": 8,
+      "inclusive_s": 0.0016793600000000002,
+      "exclusive_s": 0.0016793600000000002
+    },
+    {
+      "path": "ResidentShellStepper._step/ResidentShellStepper._newton/ResidentShellStepper._line_search/ResidentShellStepper._evaluate/kernel.norms",
+      "calls": 4,
+      "inclusive_s": 0.049814528000000004,
+      "exclusive_s": 0.049814528000000004
+    },
+    {
+      "path": "ResidentShellStepper._step/ResidentShellStepper._newton/ResidentShellStepper._evaluate",
+      "calls": 4,
+      "inclusive_s": 0.08443904,
+      "exclusive_s": 0.00027136
+    },
+    {
+      "path": "ResidentShellStepper._step/ResidentShellStepper._newton/ResidentShellStepper._evaluate/ResidentShellOperators.evaluate",
+      "calls": 4,
+      "inclusive_s": 0.031616000000000005,
+      "exclusive_s": 0.026499072000000002
+    },
+    {
+      "path": "ResidentShellStepper._step/ResidentShellStepper._newton/ResidentShellStepper._evaluate/ResidentShellOperators.evaluate/kernel.reduce_volume",
+      "calls": 4,
+      "inclusive_s": 0.0037283840000000004,
+      "exclusive_s": 0.0037283840000000004
+    },
+    {
+      "path": "ResidentShellStepper._step/ResidentShellStepper._newton/ResidentShellStepper._evaluate/ResidentShellOperators.evaluate/kernel.reduce_edge",
+      "calls": 8,
+      "inclusive_s": 0.001388544,
+      "exclusive_s": 0.001388544
+    },
+    {
+      "path": "ResidentShellStepper._step/ResidentShellStepper._newton/ResidentShellStepper._evaluate/kernel.norms",
+      "calls": 4,
+      "inclusive_s": 0.05255168,
+      "exclusive_s": 0.05255168
+    },
+    {
+      "path": "ResidentShellStepper._step/ResidentShellStepper._finalize",
+      "calls": 2,
+      "inclusive_s": 0.027654144000000002,
+      "exclusive_s": 7.168e-05
+    },
+    {
+      "path": "ResidentShellStepper._step/ResidentShellStepper._finalize/ResidentShellStepper._kinetic",
+      "calls": 2,
+      "inclusive_s": 0.000146432,
+      "exclusive_s": 0.000146432
+    },
+    {
+      "path": "ResidentShellStepper._step/ResidentShellStepper._finalize/kernel.energy_balance",
+      "calls": 2,
+      "inclusive_s": 0.027436032000000003,
+      "exclusive_s": 0.027436032000000003
+    },
+    {
+      "path": "ResidentShellStepper._step/ResidentShellStepper._commit",
+      "calls": 2,
+      "inclusive_s": 2.2528000000000002e-05,
+      "exclusive_s": 2.2528000000000002e-05
+    }
+  ]
+}

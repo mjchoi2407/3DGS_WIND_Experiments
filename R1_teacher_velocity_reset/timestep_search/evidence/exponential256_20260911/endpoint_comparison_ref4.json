@@ -1,0 +1,49 @@
+{
+  "scope": "공통 끝 시각의 수치 차이. 전체 시간 곡선·독립 ODE 참해·누적 오차 인증 아님.",
+  "norm": "참조 끝 상태의 질량L2로 정규화",
+  "results": {
+    "one_to_two": {
+      "relative_mass_l2": {
+        "u": 1.8376931245740673e-06,
+        "v": 0.0005831845646748364
+      },
+      "below_one_percent": true
+    },
+    "one_to_four": {
+      "relative_mass_l2": {
+        "u": 1.7968720874281088e-06,
+        "v": 0.0005726634927247566
+      },
+      "below_one_percent": true
+    },
+    "two_to_four": {
+      "relative_mass_l2": {
+        "u": 2.6776501551519624e-07,
+        "v": 0.00019665135677291037
+      },
+      "below_one_percent": true
+    },
+    "gauss6_one_to_four": {
+      "relative_mass_l2": {
+        "u": 4.592385754078836e-06,
+        "v": 0.008278834652453512
+      },
+      "below_one_percent": true
+    },
+    "legacy_gauss6_ref4_to_four": {
+      "relative_mass_l2": {
+        "u": 1.8384226653680066e-06,
+        "v": 0.003701158597135029
+      },
+      "below_one_percent": true
+    }
+  },
+  "inputs": {
+    "experiments/artifacts/runs/teacher_timestep_search/20260911_exponential256_gauss_path20_v1/endpoint.npz": "83298fcb79af71d90e09b108c96ccbae71f6baa92ffaf9066f6e2bef775e4660",
+    "experiments/artifacts/runs/teacher_timestep_search/20260911_exponential256_hybrid_ref2_v1/endpoint.npz": "6b38c716af12ff18b22c8369b75afb275bb32722fc09db390b09c9bf3d9f8d71",
+    "experiments/artifacts/runs/teacher_timestep_search/20260911_exponential256_hybrid_ref4_v1/endpoint.npz": "4931a41143dfe636921d0d627cd3e96159c140dad042b4d2fdfa02bf7179c81c",
+    "experiments/artifacts/runs/teacher_timestep_search/20260911_gauss256_stage6_followup_v1/endpoint.npz": "d18cfbdb785e1272e0b39333b76f71b46e84527e8e0798ce96e5cec22fd984ba",
+    "experiments/artifacts/runs/teacher_timestep_search/20260911_gauss256_followup_gaussref4_v1/step3/endpoint.npz": "544e1ffb6d602f20c26ffc28101f9245e56e463ef02b0b8bf61fcaf2e655002f"
+  },
+  "training_eligible": false
+}

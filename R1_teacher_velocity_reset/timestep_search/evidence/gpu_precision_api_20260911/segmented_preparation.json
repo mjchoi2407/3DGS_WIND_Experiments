@@ -1,0 +1,12 @@
+{
+  "status": "prepared_not_started",
+  "output": "experiments/artifacts/runs/teacher_timestep_search/20260911_precision_segments_v1",
+  "command": "bash experiments/R1_teacher_velocity_reset/timestep_search/run_precision_segments.sh",
+  "prepare_command": "bash experiments/R1_teacher_velocity_reset/timestep_search/run_precision_segments.sh --prepare-only",
+  "first_candidate_only": true,
+  "runtime_manifest_sha256": "e9d1ce20114ff54de55d6b93741f5fbb9fa094e1753d70b515450f8468611d7f",
+  "wrapper_sha256": "e4913610cf49c1c7905b07ae620701d5f5765b7e53f1dd09f832de8907665fcc",
+  "wind_matches_ten_second_v1": true,
+  "validation": "기존 탐색10개·고정밀 탐색4개 통과; shell 문법·동결 hash·예산·구간·바람 대조 완료",
+  "long_run_started": false
+}

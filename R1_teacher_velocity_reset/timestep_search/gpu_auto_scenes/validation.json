@@ -1,0 +1,191 @@
+{
+  "date": "2026-09-17",
+  "cpu_policy_tests": 4,
+  "smoke": [
+    {
+      "shape": "handkerchief",
+      "phase": "preload",
+      "run": "experiments/artifacts/runs/teacher_timestep_search/gpu_auto_smoke_20260917_v1/handkerchief/preload/handkerchief",
+      "status": "complete",
+      "frames": 1,
+      "method": "R64",
+      "mixed_counts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "audit_flags": [
+        0
+      ],
+      "gpu": "NVIDIA GeForce GTX 1080 Ti"
+    },
+    {
+      "shape": "handkerchief",
+      "phase": "calm",
+      "run": "experiments/artifacts/runs/teacher_timestep_search/gpu_auto_smoke_20260917_v1/handkerchief/calm/handkerchief",
+      "status": "complete",
+      "frames": 1,
+      "method": "R64",
+      "mixed_counts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "audit_flags": [
+        0
+      ],
+      "gpu": "NVIDIA GeForce GTX 1080 Ti"
+    },
+    {
+      "shape": "handkerchief",
+      "phase": "wind",
+      "run": "experiments/artifacts/runs/teacher_timestep_search/gpu_auto_smoke_20260917_v1/handkerchief/wind/handkerchief",
+      "status": "complete",
+      "frames": 1,
+      "method": "M1",
+      "mixed_counts": [
+        160,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "audit_flags": [
+        0
+      ],
+      "gpu": "NVIDIA GeForce GTX 1080 Ti"
+    },
+    {
+      "shape": "reference_rectangle",
+      "phase": "preload",
+      "run": "experiments/artifacts/runs/teacher_timestep_search/gpu_auto_smoke_20260917_v2/reference_rectangle/preload/reference_rectangle",
+      "status": "complete",
+      "frames": 1,
+      "method": "R64",
+      "mixed_counts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "audit_flags": [
+        0
+      ],
+      "gpu": "NVIDIA GeForce GTX 1080 Ti"
+    },
+    {
+      "shape": "reference_rectangle",
+      "phase": "calm",
+      "run": "experiments/artifacts/runs/teacher_timestep_search/gpu_auto_smoke_20260917_v2/reference_rectangle/calm/reference_rectangle",
+      "status": "complete",
+      "frames": 1,
+      "method": "R64",
+      "mixed_counts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "audit_flags": [
+        0
+      ],
+      "gpu": "NVIDIA GeForce GTX 1080 Ti"
+    },
+    {
+      "shape": "reference_rectangle",
+      "phase": "wind",
+      "run": "experiments/artifacts/runs/teacher_timestep_search/gpu_auto_smoke_20260917_v2/reference_rectangle/wind/reference_rectangle",
+      "status": "complete",
+      "frames": 1,
+      "method": "M1",
+      "mixed_counts": [
+        156,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "audit_flags": [
+        0
+      ],
+      "gpu": "NVIDIA GeForce GTX 1080 Ti"
+    },
+    {
+      "shape": "triangular_flag",
+      "phase": "preload",
+      "run": "experiments/artifacts/runs/teacher_timestep_search/gpu_auto_smoke_20260917_v2/triangular_flag/preload/triangular_flag",
+      "status": "complete",
+      "frames": 1,
+      "method": "R64",
+      "mixed_counts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "audit_flags": [
+        0
+      ],
+      "gpu": "NVIDIA GeForce GTX 1080 Ti"
+    },
+    {
+      "shape": "triangular_flag",
+      "phase": "calm",
+      "run": "experiments/artifacts/runs/teacher_timestep_search/gpu_auto_smoke_20260917_v2/triangular_flag/calm/triangular_flag",
+      "status": "complete",
+      "frames": 1,
+      "method": "R64",
+      "mixed_counts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "audit_flags": [
+        0
+      ],
+      "gpu": "NVIDIA GeForce GTX 1080 Ti"
+    },
+    {
+      "shape": "triangular_flag",
+      "phase": "wind",
+      "run": "experiments/artifacts/runs/teacher_timestep_search/gpu_auto_smoke_20260917_v2/triangular_flag/wind/triangular_flag",
+      "status": "complete",
+      "frames": 1,
+      "method": "M1",
+      "mixed_counts": [
+        186,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "audit_flags": [
+        0
+      ],
+      "gpu": "NVIDIA GeForce GTX 1080 Ti"
+    }
+  ],
+  "performance_status": "not_benchmarked_concurrent_gpu_load",
+  "rtx5070": "not_run_graph_environment_unresolved",
+  "full_scenes": "prepared_not_run",
+  "production_enabled": false,
+  "training_eligible": false
+}

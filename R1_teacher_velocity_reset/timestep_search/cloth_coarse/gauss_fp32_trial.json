@@ -1,0 +1,1002 @@
+[
+  {
+    "lane": "preload_fp32_loose",
+    "status": "solver_complete",
+    "report": {
+      "gpu": "NVIDIA GeForce GTX 1080 Ti",
+      "setup_s": 3.198744069999975,
+      "graph": {
+        "kernels": 5988,
+        "device_copies": 603,
+        "memsets": 1417,
+        "children": 4,
+        "host_copies": 0,
+        "host_callbacks": 0,
+        "conditionals": 12,
+        "conditional_bodies": 12
+      },
+      "training_eligible": false,
+      "warmup_s": 0.07883151200007887,
+      "warmup_steps": 8,
+      "warmup_counts": {
+        "c": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          8,
+          0,
+          0,
+          0
+        ],
+        "failure": 0
+      },
+      "solve_s": [
+        2.2713757490000717,
+        2.258477135000021
+      ],
+      "solve_median_s": 2.2649264420000463,
+      "counts": [
+        {
+          "c": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            512,
+            0,
+            0,
+            0
+          ],
+          "failure": 0
+        },
+        {
+          "c": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            512,
+            0,
+            0,
+            0
+          ],
+          "failure": 0
+        }
+      ],
+      "status": "solver_complete",
+      "factor_info": 0
+    },
+    "endpoint_difference": {
+      "u": {
+        "mass_relative": 1.0,
+        "component_rms": 2.2258509990639945e-08,
+        "max_node_norm": 6.84081920404226e-08,
+        "finite": true,
+        "fixed_max": 0.0
+      },
+      "v": {
+        "mass_relative": 1.0,
+        "component_rms": 1.1193654558394927e-05,
+        "max_node_norm": 3.212920533018435e-05,
+        "finite": true,
+        "fixed_max": 0.0
+      }
+    },
+    "trajectory_difference": {
+      "u": {
+        "mass_time_relative": 1.0,
+        "max_node_norm": 2.4604687862831667e-07
+      },
+      "v": {
+        "mass_time_relative": 1.0,
+        "max_node_norm": 4.683495053022168e-05
+      }
+    },
+    "replay_endpoint_max_difference": {
+      "u": 0.0,
+      "v": 0.0
+    },
+    "audit": {
+      "gpu_audit_s": [
+        22.163817483999992,
+        22.159768012999848,
+        22.155841739999687
+      ],
+      "gpu_audit_median_s": 22.159768012999848,
+      "steps": 512,
+      "flag_counts": {
+        "1": 512
+      },
+      "max_abs_checks": [
+        165456.8224132252,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        4.548583731889266e-13,
+        4.547473508864641e-13,
+        0.0,
+        4.547473508864641e-13,
+        0.9999999999986319
+      ],
+      "all_original_criteria_passed": false,
+      "training_eligible": false
+    }
+  },
+  {
+    "lane": "preload_fp32_medium",
+    "status": "solver_complete",
+    "report": {
+      "gpu": "NVIDIA GeForce GTX 1080 Ti",
+      "setup_s": 4.546250650000047,
+      "graph": {
+        "kernels": 5988,
+        "device_copies": 603,
+        "memsets": 1417,
+        "children": 4,
+        "host_copies": 0,
+        "host_callbacks": 0,
+        "conditionals": 12,
+        "conditional_bodies": 12
+      },
+      "training_eligible": false,
+      "warmup_s": 1.1499176970000917,
+      "warmup_steps": 8,
+      "warmup_counts": {
+        "c": [
+          2,
+          0,
+          0,
+          0,
+          1,
+          0,
+          8,
+          16,
+          1,
+          16
+        ],
+        "failure": 0
+      },
+      "solve_s": [
+        39.57875426800001,
+        26.202991914999984
+      ],
+      "solve_median_s": 32.8908730915,
+      "counts": [
+        {
+          "c": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            512,
+            738,
+            12,
+            738
+          ],
+          "failure": 0
+        },
+        {
+          "c": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            512,
+            738,
+            12,
+            738
+          ],
+          "failure": 0
+        }
+      ],
+      "status": "solver_complete",
+      "factor_info": 0
+    },
+    "endpoint_difference": {
+      "u": {
+        "mass_relative": 5.403739024873094e-07,
+        "component_rms": 1.2005605243227998e-14,
+        "max_node_norm": 3.72380279371732e-14,
+        "finite": true,
+        "fixed_max": 0.0
+      },
+      "v": {
+        "mass_relative": 1.2974277536412171e-06,
+        "component_rms": 2.155854555623744e-11,
+        "max_node_norm": 1.3373881300374834e-10,
+        "finite": true,
+        "fixed_max": 0.0
+      }
+    },
+    "trajectory_difference": {
+      "u": {
+        "mass_time_relative": 1.20104894134488e-07,
+        "max_node_norm": 3.996501046591979e-14
+      },
+      "v": {
+        "mass_time_relative": 9.601135123896479e-07,
+        "max_node_norm": 2.024364125735533e-10
+      }
+    },
+    "replay_endpoint_max_difference": {
+      "u": 5.447773397791614e-15,
+      "v": 1.2681995191954516e-10
+    },
+    "audit": {
+      "gpu_audit_s": [
+        22.68313032700007,
+        22.336853420999887,
+        21.858473985000046
+      ],
+      "gpu_audit_median_s": 22.336853420999887,
+      "steps": 512,
+      "flag_counts": {
+        "0": 97,
+        "1": 415
+      },
+      "max_abs_checks": [
+        4.518672416881331,
+        6.053832329915619e-17,
+        3.042601217961631e-14,
+        1.0902055505229657e-16,
+        7.939795294070303e-14,
+        1.4806328714449203e-17,
+        6.990706922227474e-07,
+        3.250248325508623e-05,
+        4.588497095771319e-20,
+        9.044764844763792e-07,
+        0.9999999983010074
+      ],
+      "all_original_criteria_passed": false,
+      "training_eligible": false
+    }
+  },
+  {
+    "lane": "preload_fp64_medium",
+    "status": "solver_complete",
+    "report": {
+      "gpu": "NVIDIA GeForce GTX 1080 Ti",
+      "setup_s": 4.144566470999962,
+      "graph": {
+        "kernels": 5988,
+        "device_copies": 603,
+        "memsets": 1417,
+        "children": 4,
+        "host_copies": 0,
+        "host_callbacks": 0,
+        "conditionals": 12,
+        "conditional_bodies": 12
+      },
+      "training_eligible": false,
+      "warmup_s": 1.4962753739996515,
+      "warmup_steps": 8,
+      "warmup_counts": {
+        "c": [
+          2,
+          0,
+          0,
+          0,
+          1,
+          0,
+          8,
+          16,
+          1,
+          16
+        ],
+        "failure": 0
+      },
+      "solve_s": [
+        55.3928757220001,
+        58.40155337200031
+      ],
+      "solve_median_s": 56.8972145470002,
+      "counts": [
+        {
+          "c": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            512,
+            738,
+            12,
+            738
+          ],
+          "failure": 0
+        },
+        {
+          "c": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            512,
+            738,
+            12,
+            738
+          ],
+          "failure": 0
+        }
+      ],
+      "status": "solver_complete",
+      "factor_info": 0
+    },
+    "endpoint_difference": {
+      "u": {
+        "mass_relative": 8.784209235948456e-11,
+        "component_rms": 2.7666581667252082e-18,
+        "max_node_norm": 1.9389374286511803e-17,
+        "finite": true,
+        "fixed_max": 0.0
+      },
+      "v": {
+        "mass_relative": 8.204028836538943e-09,
+        "component_rms": 1.5120046345025068e-13,
+        "max_node_norm": 1.351397468765193e-12,
+        "finite": true,
+        "fixed_max": 0.0
+      }
+    },
+    "trajectory_difference": {
+      "u": {
+        "mass_time_relative": 2.41248249865107e-11,
+        "max_node_norm": 3.19029737825915e-17
+      },
+      "v": {
+        "mass_time_relative": 6.666237843316063e-09,
+        "max_node_norm": 2.4699325586996278e-12
+      }
+    },
+    "replay_endpoint_max_difference": {
+      "u": 1.997785439614391e-17,
+      "v": 1.3220020696501139e-12
+    },
+    "audit": {
+      "gpu_audit_s": [
+        21.644360185000096,
+        21.60665271400012,
+        22.090276114000062
+      ],
+      "gpu_audit_median_s": 21.644360185000096,
+      "steps": 512,
+      "flag_counts": {
+        "0": 512
+      },
+      "max_abs_checks": [
+        0.0076583537702406,
+        2.656265635952372e-26,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        6.990706227227861e-07,
+        3.250246107102306e-05,
+        1.6147277172680482e-21,
+        9.044762675138216e-07,
+        0.9999999983010074
+      ],
+      "all_original_criteria_passed": true,
+      "training_eligible": false
+    }
+  },
+  {
+    "lane": "preload_fp64_strict",
+    "status": "solver_complete",
+    "report": {
+      "gpu": "NVIDIA GeForce GTX 1080 Ti",
+      "setup_s": 9.352736603999915,
+      "graph": {
+        "kernels": 5988,
+        "device_copies": 603,
+        "memsets": 1417,
+        "children": 4,
+        "host_copies": 0,
+        "host_callbacks": 0,
+        "conditionals": 12,
+        "conditional_bodies": 12
+      },
+      "training_eligible": false,
+      "warmup_s": 2.2267998780000653,
+      "warmup_steps": 8,
+      "warmup_counts": {
+        "c": [
+          2,
+          0,
+          0,
+          0,
+          1,
+          0,
+          8,
+          21,
+          1,
+          16
+        ],
+        "failure": 0
+      },
+      "solve_s": [
+        116.64214685900004,
+        116.00165162099995
+      ],
+      "solve_median_s": 116.32189924,
+      "counts": [
+        {
+          "c": [
+            2,
+            0,
+            0,
+            0,
+            1,
+            0,
+            512,
+            1946,
+            16,
+            1024
+          ],
+          "failure": 0
+        },
+        {
+          "c": [
+            2,
+            0,
+            0,
+            0,
+            1,
+            0,
+            512,
+            1946,
+            16,
+            1024
+          ],
+          "failure": 0
+        }
+      ],
+      "status": "solver_complete",
+      "factor_info": 0
+    },
+    "endpoint_difference": {
+      "u": {
+        "mass_relative": 0.0,
+        "component_rms": 0.0,
+        "max_node_norm": 0.0,
+        "finite": true,
+        "fixed_max": 0.0
+      },
+      "v": {
+        "mass_relative": 0.0,
+        "component_rms": 0.0,
+        "max_node_norm": 0.0,
+        "finite": true,
+        "fixed_max": 0.0
+      }
+    },
+    "trajectory_difference": {
+      "u": {
+        "mass_time_relative": 0.0,
+        "max_node_norm": 0.0
+      },
+      "v": {
+        "mass_time_relative": 0.0,
+        "max_node_norm": 0.0
+      }
+    },
+    "replay_endpoint_max_difference": {
+      "u": 2.3354319629801664e-17,
+      "v": 1.1940447443997432e-12
+    },
+    "audit": {
+      "gpu_audit_s": [
+        21.704629781999984,
+        22.467730738,
+        21.982302001000107
+      ],
+      "gpu_audit_median_s": 21.982302001000107,
+      "steps": 512,
+      "flag_counts": {
+        "0": 512
+      },
+      "max_abs_checks": [
+        0.004393923832149547,
+        2.6568563192742665e-26,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        6.99070623055853e-07,
+        3.250246109056192e-05,
+        2.1213501571457037e-21,
+        9.044762683070251e-07,
+        0.9999999983010074
+      ],
+      "all_original_criteria_passed": true,
+      "training_eligible": false
+    }
+  },
+  {
+    "lane": "wind_fp32_loose",
+    "status": "solver_complete",
+    "report": {
+      "gpu": "NVIDIA GeForce GTX 1080 Ti",
+      "setup_s": 4.384728434999943,
+      "graph": {
+        "kernels": 5988,
+        "device_copies": 603,
+        "memsets": 1417,
+        "children": 4,
+        "host_copies": 0,
+        "host_callbacks": 0,
+        "conditionals": 12,
+        "conditional_bodies": 12
+      },
+      "training_eligible": false,
+      "warmup_s": 0.8301350959998217,
+      "warmup_steps": 8,
+      "warmup_counts": {
+        "c": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          8,
+          15,
+          1,
+          9
+        ],
+        "failure": 0
+      },
+      "solve_s": [
+        31.698685411000042,
+        31.837251543000093
+      ],
+      "solve_median_s": 31.767968477000068,
+      "counts": [
+        {
+          "c": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            512,
+            1015,
+            9,
+            521
+          ],
+          "failure": 0
+        },
+        {
+          "c": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            512,
+            1015,
+            9,
+            521
+          ],
+          "failure": 0
+        }
+      ],
+      "status": "solver_complete",
+      "factor_info": 0
+    },
+    "endpoint_difference": {
+      "u": {
+        "mass_relative": 6.7558223680989e-07,
+        "component_rms": 2.2832979917613e-07,
+        "max_node_norm": 2.752517670916778e-06,
+        "finite": true,
+        "fixed_max": 0.0
+      },
+      "v": {
+        "mass_relative": 0.0010650644518991799,
+        "component_rms": 0.0005620553879567478,
+        "max_node_norm": 0.010926589694214962,
+        "finite": true,
+        "fixed_max": 0.0
+      }
+    },
+    "trajectory_difference": {
+      "u": {
+        "mass_time_relative": 3.9170130531566426e-07,
+        "max_node_norm": 7.442114031235133e-06
+      },
+      "v": {
+        "mass_time_relative": 0.000690544381196151,
+        "max_node_norm": 0.025372747074466608
+      }
+    },
+    "replay_endpoint_max_difference": {
+      "u": 4.362604499874578e-08,
+      "v": 0.0007950866125021605
+    },
+    "audit": {
+      "gpu_audit_s": [
+        21.399073776000023,
+        21.083188581000286,
+        21.092211602000134
+      ],
+      "gpu_audit_median_s": 21.092211602000134,
+      "steps": 512,
+      "flag_counts": {
+        "7": 512
+      },
+      "max_abs_checks": [
+        982634.7321185735,
+        6.041867432673224e-12,
+        1.9904069025330656e-08,
+        1.087227114467736e-11,
+        5.1121616283205747e-08,
+        1.4806472114906397e-08,
+        0.16084302190432428,
+        42.33825434656574,
+        6.984661099489064e-08,
+        2.045139961647259,
+        0.5697144521695899
+      ],
+      "all_original_criteria_passed": false,
+      "training_eligible": false
+    }
+  },
+  {
+    "lane": "wind_fp32_medium",
+    "status": "error",
+    "report": {
+      "gpu": "NVIDIA GeForce GTX 1080 Ti",
+      "setup_s": 3.9561724280001727,
+      "graph": {
+        "kernels": 5988,
+        "device_copies": 603,
+        "memsets": 1417,
+        "children": 4,
+        "host_copies": 0,
+        "host_callbacks": 0,
+        "conditionals": 12,
+        "conditional_bodies": 12
+      },
+      "training_eligible": false,
+      "warmup_s": 4.9793772790001185,
+      "warmup_steps": 8,
+      "warmup_counts": {
+        "c": [
+          10,
+          0,
+          0,
+          2,
+          1,
+          0,
+          8,
+          173,
+          2,
+          79
+        ],
+        "failure": 0
+      },
+      "solve_s": [
+        18.89647211899978,
+        5.839287567999918
+      ],
+      "solve_median_s": 12.36787984349985,
+      "counts": [
+        {
+          "c": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            92,
+            2038,
+            14,
+            891
+          ],
+          "failure": 1
+        },
+        {
+          "c": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            26,
+            600,
+            5,
+            266
+          ],
+          "failure": 1
+        }
+      ],
+      "status": "error",
+      "reason": "측정 반복 중 실패"
+    }
+  },
+  {
+    "lane": "wind_fp64_loose",
+    "status": "solver_complete",
+    "report": {
+      "gpu": "NVIDIA GeForce GTX 1080 Ti",
+      "setup_s": 4.889153235999856,
+      "graph": {
+        "kernels": 5988,
+        "device_copies": 603,
+        "memsets": 1417,
+        "children": 4,
+        "host_copies": 0,
+        "host_callbacks": 0,
+        "conditionals": 12,
+        "conditional_bodies": 12
+      },
+      "training_eligible": false,
+      "warmup_s": 1.675904760999856,
+      "warmup_steps": 8,
+      "warmup_counts": {
+        "c": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          8,
+          15,
+          1,
+          9
+        ],
+        "failure": 0
+      },
+      "solve_s": [
+        62.68914140100014,
+        62.58326450599998
+      ],
+      "solve_median_s": 62.63620295350006,
+      "counts": [
+        {
+          "c": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            512,
+            1014,
+            9,
+            521
+          ],
+          "failure": 0
+        },
+        {
+          "c": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            512,
+            1014,
+            9,
+            521
+          ],
+          "failure": 0
+        }
+      ],
+      "status": "solver_complete",
+      "factor_info": 0
+    },
+    "endpoint_difference": {
+      "u": {
+        "mass_relative": 6.681078403156087e-07,
+        "component_rms": 2.2520188832397766e-07,
+        "max_node_norm": 2.70818328386341e-06,
+        "finite": true,
+        "fixed_max": 0.0
+      },
+      "v": {
+        "mass_relative": 0.0010272386810866658,
+        "component_rms": 0.0005436732301583709,
+        "max_node_norm": 0.011176598717474832,
+        "finite": true,
+        "fixed_max": 0.0
+      }
+    },
+    "trajectory_difference": {
+      "u": {
+        "mass_time_relative": 3.867117353125914e-07,
+        "max_node_norm": 7.3851856653347915e-06
+      },
+      "v": {
+        "mass_time_relative": 0.0006655174799076834,
+        "max_node_norm": 0.025307848009297505
+      }
+    },
+    "replay_endpoint_max_difference": {
+      "u": 1.1102230246251565e-16,
+      "v": 7.967793091978592e-13
+    },
+    "audit": {
+      "gpu_audit_s": [
+        22.232000491000235,
+        21.425759280999955,
+        21.58397271900003
+      ],
+      "gpu_audit_median_s": 21.58397271900003,
+      "steps": 512,
+      "flag_counts": {
+        "1": 512
+      },
+      "max_abs_checks": [
+        971859.7202293315,
+        2.6359745400947967e-21,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.16084313016586593,
+        42.33825035171636,
+        7.104134152807356e-08,
+        2.045137555205194,
+        0.5697145449984189
+      ],
+      "all_original_criteria_passed": false,
+      "training_eligible": false
+    }
+  },
+  {
+    "lane": "wind_fp64_strict",
+    "status": "solver_complete",
+    "report": {
+      "gpu": "NVIDIA GeForce GTX 1080 Ti",
+      "setup_s": 3.5855911709998054,
+      "graph": {
+        "kernels": 5988,
+        "device_copies": 603,
+        "memsets": 1417,
+        "children": 4,
+        "host_copies": 0,
+        "host_callbacks": 0,
+        "conditionals": 12,
+        "conditional_bodies": 12
+      },
+      "training_eligible": false,
+      "warmup_s": 2.3900481959999524,
+      "warmup_steps": 8,
+      "warmup_counts": {
+        "c": [
+          2,
+          0,
+          0,
+          0,
+          1,
+          0,
+          8,
+          61,
+          1,
+          16
+        ],
+        "failure": 0
+      },
+      "solve_s": [
+        123.45147061099988,
+        160.24132621600006
+      ],
+      "solve_median_s": 141.84639841349997,
+      "counts": [
+        {
+          "c": [
+            2,
+            0,
+            0,
+            0,
+            1,
+            0,
+            512,
+            5163,
+            16,
+            1024
+          ],
+          "failure": 0
+        },
+        {
+          "c": [
+            2,
+            0,
+            0,
+            0,
+            1,
+            0,
+            512,
+            5163,
+            16,
+            1024
+          ],
+          "failure": 0
+        }
+      ],
+      "status": "solver_complete",
+      "factor_info": 0
+    },
+    "endpoint_difference": {
+      "u": {
+        "mass_relative": 0.0,
+        "component_rms": 0.0,
+        "max_node_norm": 0.0,
+        "finite": true,
+        "fixed_max": 0.0
+      },
+      "v": {
+        "mass_relative": 0.0,
+        "component_rms": 0.0,
+        "max_node_norm": 0.0,
+        "finite": true,
+        "fixed_max": 0.0
+      }
+    },
+    "trajectory_difference": {
+      "u": {
+        "mass_time_relative": 0.0,
+        "max_node_norm": 0.0
+      },
+      "v": {
+        "mass_time_relative": 0.0,
+        "max_node_norm": 0.0
+      }
+    },
+    "replay_endpoint_max_difference": {
+      "u": 1.1102230246251565e-16,
+      "v": 7.612244168342386e-13
+    },
+    "audit": {
+      "gpu_audit_s": [
+        17.19693219599958,
+        8.043506821999927,
+        10.439713882999968
+      ],
+      "gpu_audit_median_s": 10.439713882999968,
+      "steps": 512,
+      "flag_counts": {
+        "0": 512
+      },
+      "max_abs_checks": [
+        0.0003261647639961523,
+        2.6455778796661922e-21,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.16084219388133647,
+        42.33814039336958,
+        1.0248571650582747e-12,
+        2.045106385221101,
+        0.5696953375607596
+      ],
+      "all_original_criteria_passed": true,
+      "training_eligible": false
+    }
+  }
+]

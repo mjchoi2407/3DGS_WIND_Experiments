@@ -1,0 +1,1385 @@
+{
+  "input_time_s": 3.266666666666723,
+  "target_time_s": 3.2677083333333896,
+  "frame": 196,
+  "environment": {
+    "device": "cuda:0",
+    "numpy": "2.4.4",
+    "scipy": "1.18.1",
+    "compute_backend": "precision_hvp_graph",
+    "linear_solver_device": "cpu",
+    "cuda_graph": true,
+    "state_encoding": "hi_lo_v1",
+    "state_mantissa_bits": 64,
+    "warp": "1.17.0",
+    "gpu_name": "NVIDIA GeForce GTX 1080 Ti"
+  },
+  "policy": {
+    "force_atol_n": 1e-10,
+    "force_rtol": 1e-09,
+    "displacement_atol_m": 1e-12,
+    "displacement_rtol": 1e-09,
+    "linear_rtol": 1e-10,
+    "max_newton": 15,
+    "linear_cycles": 3,
+    "line_search_steps": 12,
+    "linear_restart": 240,
+    "linear_preconditioner": "current"
+  },
+  "input_sha256": "b1998e0cc033748c54ccce582798ac9c418fb958651ef4fe17e130a8c179e1df",
+  "runtime_manifest_sha256": "dec67d896537efadf38bbd81f52cb7d726abe4a73e58fcc1b5180ffef52a9df6",
+  "trials": [
+    {
+      "substeps": 256,
+      "restart": 240,
+      "max_cycles": 3,
+      "max_iterations": 720,
+      "dt_s": 6.510416666666667e-05,
+      "rows": [
+        {
+          "index": 0,
+          "solve_s": 3.4920700840011705,
+          "attempts": [
+            {
+              "iteration": 0,
+              "force_residual_n": 0.7221388840980935,
+              "force_limit_n": 8.135598502687521e-10,
+              "preconditioner": {
+                "colors": 276,
+                "nnz": 2478006,
+                "relative_action_error": 3.9346856032629666e-16,
+                "assembly_s": 1.9326565289957216,
+                "build_s": 3.0766334960062522,
+                "factor_nnz": 19638099,
+                "rebuilt": true,
+                "reuse_age": 0
+              },
+              "linear_info": 0,
+              "linear_iterations": 1,
+              "linear_residual_n": 6.540346761592208e-16,
+              "linear_limit_n": 7.221388840980935e-11,
+              "correction_m": 1.672730491961894e-05,
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "residual_n": 0.0002998348565636235
+                }
+              ]
+            },
+            {
+              "iteration": 1,
+              "force_residual_n": 0.0002998348565636235,
+              "force_limit_n": 1.3003514960939405e-10,
+              "preconditioner": {
+                "rebuilt": false,
+                "reuse_age": 1
+              },
+              "linear_info": 0,
+              "linear_iterations": 3,
+              "linear_residual_n": 6.406834780962786e-15,
+              "linear_limit_n": 2.998348565636235e-14,
+              "correction_m": 8.457834468784504e-09,
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "residual_n": 8.558805371944095e-11
+                }
+              ]
+            },
+            {
+              "iteration": 2,
+              "force_residual_n": 8.558805371944095e-11,
+              "force_limit_n": 1.2982515411162788e-10
+            }
+          ],
+          "hvp_calls": 285,
+          "audit": {
+            "residual_ratio": 0.6591472642864494,
+            "position_update_error_m": 5.421010862427522e-20,
+            "energy_ledger_error_j": 6.938893903907228e-18,
+            "projected_gradient_upper": 0.17605652132752636
+          },
+          "audit_passed": true
+        },
+        {
+          "index": 1,
+          "solve_s": 0.36798573900887277,
+          "attempts": [
+            {
+              "iteration": 0,
+              "force_residual_n": 0.6024482293911035,
+              "force_limit_n": 6.818047246812011e-10,
+              "preconditioner": {
+                "rebuilt": false,
+                "reuse_age": 2
+              },
+              "linear_info": 0,
+              "linear_iterations": 4,
+              "linear_residual_n": 3.2131940713812e-13,
+              "linear_limit_n": 6.024482293911036e-11,
+              "correction_m": 1.0343842086611158e-05,
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "residual_n": 0.0001544388179081451
+                }
+              ]
+            },
+            {
+              "iteration": 1,
+              "force_residual_n": 0.0001544388179081451,
+              "force_limit_n": 1.2715321130533265e-10,
+              "preconditioner": {
+                "rebuilt": false,
+                "reuse_age": 3
+              },
+              "linear_info": 0,
+              "linear_iterations": 4,
+              "linear_residual_n": 1.6717672987410252e-17,
+              "linear_limit_n": 1.544388179081451e-14,
+              "correction_m": 4.4956158727452245e-09,
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "residual_n": 2.3646080869456078e-11
+                }
+              ]
+            },
+            {
+              "iteration": 2,
+              "force_residual_n": 2.3646080869456078e-11,
+              "force_limit_n": 1.2724411581168568e-10
+            }
+          ],
+          "hvp_calls": 13,
+          "audit": {
+            "residual_ratio": 0.18581307474073516,
+            "position_update_error_m": 5.421010862427522e-20,
+            "energy_ledger_error_j": 5.204170427930421e-18,
+            "projected_gradient_upper": 0.17618177256368986
+          },
+          "audit_passed": true
+        },
+        {
+          "index": 2,
+          "solve_s": 2.5625528730015503,
+          "attempts": [
+            {
+              "iteration": 0,
+              "force_residual_n": 0.3519292618094094,
+              "force_limit_n": 4.3424731706851433e-10,
+              "preconditioner": {
+                "colors": 276,
+                "nnz": 2478006,
+                "relative_action_error": 3.910785319582629e-16,
+                "assembly_s": 1.0713534909882583,
+                "build_s": 2.1554362030001357,
+                "factor_nnz": 19638099,
+                "rebuilt": true,
+                "reuse_age": 0
+              },
+              "linear_info": 0,
+              "linear_iterations": 1,
+              "linear_residual_n": 3.625818627416124e-16,
+              "linear_limit_n": 3.5192926180940944e-11,
+              "correction_m": 5.640873495782808e-06,
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "residual_n": 3.154857780495454e-05
+                }
+              ]
+            },
+            {
+              "iteration": 1,
+              "force_residual_n": 3.154857780495454e-05,
+              "force_limit_n": 1.2006439599141761e-10,
+              "preconditioner": {
+                "rebuilt": false,
+                "reuse_age": 1
+              },
+              "linear_info": 0,
+              "linear_iterations": 3,
+              "linear_residual_n": 2.4268453293450853e-16,
+              "linear_limit_n": 3.1548577804954545e-15,
+              "correction_m": 1.0192538090867349e-09,
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "residual_n": 1.9088310846159696e-12
+                }
+              ]
+            },
+            {
+              "iteration": 2,
+              "force_residual_n": 1.9088310846159696e-12,
+              "force_limit_n": 1.2005803894908229e-10
+            }
+          ],
+          "hvp_calls": 285,
+          "audit": {
+            "residual_ratio": 0.01676638808318929,
+            "position_update_error_m": 5.421010862427522e-20,
+            "energy_ledger_error_j": 1.3877787807814457e-17,
+            "projected_gradient_upper": 0.17629865556724192
+          },
+          "audit_passed": true
+        },
+        {
+          "index": 3,
+          "solve_s": 0.32889710100425873,
+          "attempts": [
+            {
+              "iteration": 0,
+              "force_residual_n": 0.19911325069370134,
+              "force_limit_n": 2.934981255011936e-10,
+              "preconditioner": {
+                "rebuilt": false,
+                "reuse_age": 2
+              },
+              "linear_info": 0,
+              "linear_iterations": 4,
+              "linear_residual_n": 8.65493777242275e-15,
+              "linear_limit_n": 1.9911325069370133e-11,
+              "correction_m": 6.302229915384916e-06,
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "residual_n": 1.7717241730107834e-05
+                }
+              ]
+            },
+            {
+              "iteration": 1,
+              "force_residual_n": 1.7717241730107834e-05,
+              "force_limit_n": 1.2223560956343862e-10,
+              "preconditioner": {
+                "rebuilt": false,
+                "reuse_age": 3
+              },
+              "linear_info": 0,
+              "linear_iterations": 3,
+              "linear_residual_n": 7.383486363727284e-16,
+              "linear_limit_n": 1.7717241730107835e-15,
+              "correction_m": 6.59959288468626e-10,
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "residual_n": 1.7080329181548922e-12
+                }
+              ]
+            },
+            {
+              "iteration": 2,
+              "force_residual_n": 1.7080329181548922e-12,
+              "force_limit_n": 1.2222978512464976e-10
+            }
+          ],
+          "hvp_calls": 12,
+          "audit": {
+            "residual_ratio": 0.014633838829385083,
+            "position_update_error_m": 5.421010862427522e-20,
+            "energy_ledger_error_j": 1.734723475976807e-18,
+            "projected_gradient_upper": 0.17641663731231347
+          },
+          "audit_passed": true
+        },
+        {
+          "index": 4,
+          "solve_s": 2.5625120449985843,
+          "attempts": [
+            {
+              "iteration": 0,
+              "force_residual_n": 0.4296931062430602,
+              "force_limit_n": 5.180791070586474e-10,
+              "preconditioner": {
+                "colors": 276,
+                "nnz": 2478006,
+                "relative_action_error": 3.972391423487211e-16,
+                "assembly_s": 1.0981444110075245,
+                "build_s": 2.1771389350033132,
+                "factor_nnz": 19638099,
+                "rebuilt": true,
+                "reuse_age": 0
+              },
+              "linear_info": 0,
+              "linear_iterations": 1,
+              "linear_residual_n": 4.517043095240551e-16,
+              "linear_limit_n": 4.296931062430602e-11,
+              "correction_m": 9.521683868584753e-06,
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "residual_n": 9.60536700276804e-05
+                }
+              ]
+            },
+            {
+              "iteration": 1,
+              "force_residual_n": 9.60536700276804e-05,
+              "force_limit_n": 1.309605739746505e-10,
+              "preconditioner": {
+                "rebuilt": false,
+                "reuse_age": 1
+              },
+              "linear_info": 0,
+              "linear_iterations": 3,
+              "linear_residual_n": 6.100373776593117e-16,
+              "linear_limit_n": 9.605367002768041e-15,
+              "correction_m": 2.812583151563483e-09,
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "residual_n": 9.054407315006628e-12
+                }
+              ]
+            },
+            {
+              "iteration": 2,
+              "force_residual_n": 9.054407315006628e-12,
+              "force_limit_n": 1.3101900684302005e-10
+            }
+          ],
+          "hvp_calls": 285,
+          "audit": {
+            "residual_ratio": 0.06931549606477719,
+            "position_update_error_m": 5.421010862427522e-20,
+            "energy_ledger_error_j": 8.673617379884035e-18,
+            "projected_gradient_upper": 0.1765494378736372
+          },
+          "audit_passed": true
+        },
+        {
+          "index": 5,
+          "solve_s": 0.32150201800686773,
+          "attempts": [
+            {
+              "iteration": 0,
+              "force_residual_n": 0.6289671314490555,
+              "force_limit_n": 7.07930297095376e-10,
+              "preconditioner": {
+                "rebuilt": false,
+                "reuse_age": 2
+              },
+              "linear_info": 0,
+              "linear_iterations": 4,
+              "linear_residual_n": 1.1539060756096118e-13,
+              "linear_limit_n": 6.289671314490554e-11,
+              "correction_m": 1.2311125542254014e-05,
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "residual_n": 0.000194070451808531
+                }
+              ]
+            },
+            {
+              "iteration": 1,
+              "force_residual_n": 0.000194070451808531,
+              "force_limit_n": 1.3158435075662975e-10,
+              "preconditioner": {
+                "rebuilt": false,
+                "reuse_age": 3
+              },
+              "linear_info": 0,
+              "linear_iterations": 3,
+              "linear_residual_n": 9.239921726697238e-15,
+              "linear_limit_n": 1.94070451808531e-14,
+              "correction_m": 5.28303871597885e-09,
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "residual_n": 3.497174952069526e-11
+                }
+              ]
+            },
+            {
+              "iteration": 2,
+              "force_residual_n": 3.497174952069526e-11,
+              "force_limit_n": 1.314817824907885e-10
+            }
+          ],
+          "hvp_calls": 11,
+          "audit": {
+            "residual_ratio": 0.2660978247643237,
+            "position_update_error_m": 5.421010862427522e-20,
+            "energy_ledger_error_j": 0.0,
+            "projected_gradient_upper": 0.17667181337136545
+          },
+          "audit_passed": true
+        },
+        {
+          "index": 6,
+          "solve_s": 2.5926219660032075,
+          "attempts": [
+            {
+              "iteration": 0,
+              "force_residual_n": 0.7037859232420839,
+              "force_limit_n": 7.857102113541233e-10,
+              "preconditioner": {
+                "colors": 276,
+                "nnz": 2478006,
+                "relative_action_error": 3.949232963185229e-16,
+                "assembly_s": 1.0833773330086842,
+                "build_s": 2.195414339992567,
+                "factor_nnz": 19638099,
+                "rebuilt": true,
+                "reuse_age": 0
+              },
+              "linear_info": 0,
+              "linear_iterations": 1,
+              "linear_residual_n": 6.990653442180658e-16,
+              "linear_limit_n": 7.03785923242084e-11,
+              "correction_m": 1.3476807148521161e-05,
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "residual_n": 0.00022235201546715933
+                }
+              ]
+            },
+            {
+              "iteration": 1,
+              "force_residual_n": 0.00022235201546715933,
+              "force_limit_n": 1.2977616510947143e-10,
+              "preconditioner": {
+                "rebuilt": false,
+                "reuse_age": 1
+              },
+              "linear_info": 0,
+              "linear_iterations": 3,
+              "linear_residual_n": 5.8989281818979356e-15,
+              "linear_limit_n": 2.2235201546715934e-14,
+              "correction_m": 6.116124585857912e-09,
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "residual_n": 4.543239880158371e-11
+                }
+              ]
+            },
+            {
+              "iteration": 2,
+              "force_residual_n": 4.543239880158371e-11,
+              "force_limit_n": 1.2990641243292533e-10
+            }
+          ],
+          "hvp_calls": 285,
+          "audit": {
+            "residual_ratio": 0.3497864675986347,
+            "position_update_error_m": 5.421010862427522e-20,
+            "energy_ledger_error_j": 5.204170427930421e-18,
+            "projected_gradient_upper": 0.17680131365712093
+          },
+          "audit_passed": true
+        },
+        {
+          "index": 7,
+          "solve_s": 0.3542474179994315,
+          "attempts": [
+            {
+              "iteration": 0,
+              "force_residual_n": 0.6773371337109891,
+              "force_limit_n": 7.584902917013677e-10,
+              "preconditioner": {
+                "rebuilt": false,
+                "reuse_age": 2
+              },
+              "linear_info": 0,
+              "linear_iterations": 4,
+              "linear_residual_n": 2.2431030937485415e-13,
+              "linear_limit_n": 6.773371337109892e-11,
+              "correction_m": 1.2593575934775316e-05,
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "residual_n": 0.0001626355790225247
+                }
+              ]
+            },
+            {
+              "iteration": 1,
+              "force_residual_n": 0.0001626355790225247,
+              "force_limit_n": 1.266456447947079e-10,
+              "preconditioner": {
+                "rebuilt": false,
+                "reuse_age": 3
+              },
+              "linear_info": 0,
+              "linear_iterations": 4,
+              "linear_residual_n": 1.3266209465300756e-17,
+              "linear_limit_n": 1.626355790225247e-14,
+              "correction_m": 4.795139471440032e-09,
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "residual_n": 2.4675908040969696e-11
+                }
+              ]
+            },
+            {
+              "iteration": 2,
+              "force_residual_n": 2.4675908040969696e-11,
+              "force_limit_n": 1.2659347280926154e-10
+            }
+          ],
+          "hvp_calls": 13,
+          "audit": {
+            "residual_ratio": 0.19497749238983547,
+            "position_update_error_m": 5.421010862427522e-20,
+            "energy_ledger_error_j": 8.673617379884035e-18,
+            "projected_gradient_upper": 0.17693164353142485
+          },
+          "audit_passed": true
+        },
+        {
+          "index": 8,
+          "solve_s": 2.527434778006864,
+          "attempts": [
+            {
+              "iteration": 0,
+              "force_residual_n": 0.5859567800826576,
+              "force_limit_n": 6.691315579334147e-10,
+              "preconditioner": {
+                "colors": 276,
+                "nnz": 2478006,
+                "relative_action_error": 3.967228591513373e-16,
+                "assembly_s": 1.0826432600006228,
+                "build_s": 2.1337252570083365,
+                "factor_nnz": 19638099,
+                "rebuilt": true,
+                "reuse_age": 0
+              },
+              "linear_info": 0,
+              "linear_iterations": 1,
+              "linear_residual_n": 6.864552712077805e-16,
+              "linear_limit_n": 5.859567800826577e-11,
+              "correction_m": 1.0285273135260852e-05,
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "residual_n": 8.211745316279295e-05
+                }
+              ]
+            },
+            {
+              "iteration": 1,
+              "force_residual_n": 8.211745316279295e-05,
+              "force_limit_n": 1.2683600327788693e-10,
+              "preconditioner": {
+                "rebuilt": false,
+                "reuse_age": 1
+              },
+              "linear_info": 0,
+              "linear_iterations": 3,
+              "linear_residual_n": 3.906097300254973e-15,
+              "linear_limit_n": 8.211745316279295e-15,
+              "correction_m": 2.5818513223795867e-09,
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "residual_n": 6.132829485866357e-12
+                }
+              ]
+            },
+            {
+              "iteration": 2,
+              "force_residual_n": 6.132829485866357e-12,
+              "force_limit_n": 1.2682656501315601e-10
+            }
+          ],
+          "hvp_calls": 285,
+          "audit": {
+            "residual_ratio": 0.04862070730783875,
+            "position_update_error_m": 5.421010862427522e-20,
+            "energy_ledger_error_j": 3.469446951953614e-18,
+            "projected_gradient_upper": 0.17706477216722893
+          },
+          "audit_passed": true
+        },
+        {
+          "index": 9,
+          "solve_s": 0.3635533289925661,
+          "attempts": [
+            {
+              "iteration": 0,
+              "force_residual_n": 0.4715056606882186,
+              "force_limit_n": 5.542894582956712e-10,
+              "preconditioner": {
+                "rebuilt": false,
+                "reuse_age": 2
+              },
+              "linear_info": 0,
+              "linear_iterations": 4,
+              "linear_residual_n": 9.556340954049821e-14,
+              "linear_limit_n": 4.715056606882186e-11,
+              "correction_m": 7.452674320121912e-06,
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "residual_n": 5.06342121321069e-05
+                }
+              ]
+            },
+            {
+              "iteration": 1,
+              "force_residual_n": 5.06342121321069e-05,
+              "force_limit_n": 1.2590641949652627e-10,
+              "preconditioner": {
+                "rebuilt": false,
+                "reuse_age": 3
+              },
+              "linear_info": 0,
+              "linear_iterations": 4,
+              "linear_residual_n": 4.04238779360691e-18,
+              "linear_limit_n": 5.06342121321069e-15,
+              "correction_m": 1.1796837773483903e-09,
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "residual_n": 2.1583247205888453e-12
+                }
+              ]
+            },
+            {
+              "iteration": 2,
+              "force_residual_n": 2.1583247205888453e-12,
+              "force_limit_n": 1.2592350776867222e-10
+            }
+          ],
+          "hvp_calls": 13,
+          "audit": {
+            "residual_ratio": 0.01734818784506165,
+            "position_update_error_m": 5.421010862427522e-20,
+            "energy_ledger_error_j": 3.469446951953614e-18,
+            "projected_gradient_upper": 0.17718793413422945
+          },
+          "audit_passed": true
+        },
+        {
+          "index": 10,
+          "solve_s": 2.6321523660008097,
+          "attempts": [
+            {
+              "iteration": 0,
+              "force_residual_n": 0.40922517377407014,
+              "force_limit_n": 4.963676201558126e-10,
+              "preconditioner": {
+                "colors": 276,
+                "nnz": 2478006,
+                "relative_action_error": 3.9601353795947505e-16,
+                "assembly_s": 1.0948803549981676,
+                "build_s": 2.215038979004021,
+                "factor_nnz": 19638099,
+                "rebuilt": true,
+                "reuse_age": 0
+              },
+              "linear_info": 0,
+              "linear_iterations": 1,
+              "linear_residual_n": 8.010702758706957e-16,
+              "linear_limit_n": 4.0922517377407014e-11,
+              "correction_m": 6.8490708580424916e-06,
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "residual_n": 4.096859248265749e-05
+                }
+              ]
+            },
+            {
+              "iteration": 1,
+              "force_residual_n": 4.096859248265749e-05,
+              "force_limit_n": 1.2565093371144601e-10,
+              "preconditioner": {
+                "rebuilt": false,
+                "reuse_age": 1
+              },
+              "linear_info": 0,
+              "linear_iterations": 3,
+              "linear_residual_n": 5.704508235777557e-16,
+              "linear_limit_n": 4.0968592482657495e-15,
+              "correction_m": 1.0173360649437733e-09,
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "residual_n": 2.0808081874449917e-12
+                }
+              ]
+            },
+            {
+              "iteration": 2,
+              "force_residual_n": 2.0808081874449917e-12,
+              "force_limit_n": 1.25637061460908e-10
+            }
+          ],
+          "hvp_calls": 285,
+          "audit": {
+            "residual_ratio": 0.016893606802738662,
+            "position_update_error_m": 5.421010862427522e-20,
+            "energy_ledger_error_j": 8.673617379884035e-18,
+            "projected_gradient_upper": 0.17731511981188097
+          },
+          "audit_passed": true
+        },
+        {
+          "index": 11,
+          "solve_s": 0.31351604900555685,
+          "attempts": [
+            {
+              "iteration": 0,
+              "force_residual_n": 0.4905783081688374,
+              "force_limit_n": 5.79007313783247e-10,
+              "preconditioner": {
+                "rebuilt": false,
+                "reuse_age": 2
+              },
+              "linear_info": 0,
+              "linear_iterations": 4,
+              "linear_residual_n": 5.798442805846818e-14,
+              "linear_limit_n": 4.905783081688374e-11,
+              "correction_m": 8.960858319972177e-06,
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "residual_n": 7.757091162870955e-05
+                }
+              ]
+            },
+            {
+              "iteration": 1,
+              "force_residual_n": 7.757091162870955e-05,
+              "force_limit_n": 1.2752667932333841e-10,
+              "preconditioner": {
+                "rebuilt": false,
+                "reuse_age": 3
+              },
+              "linear_info": 0,
+              "linear_iterations": 3,
+              "linear_residual_n": 2.9925927600157846e-15,
+              "linear_limit_n": 7.757091162870956e-15,
+              "correction_m": 2.00359618624539e-09,
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "residual_n": 5.915394980307011e-12
+                }
+              ]
+            },
+            {
+              "iteration": 2,
+              "force_residual_n": 5.915394980307011e-12,
+              "force_limit_n": 1.2755414169795183e-10
+            }
+          ],
+          "hvp_calls": 11,
+          "audit": {
+            "residual_ratio": 0.04658171298012805,
+            "position_update_error_m": 5.421010862427522e-20,
+            "energy_ledger_error_j": 1.0408340855860843e-17,
+            "projected_gradient_upper": 0.17743924458082322
+          },
+          "audit_passed": true
+        },
+        {
+          "index": 12,
+          "solve_s": 2.5349498400028097,
+          "attempts": [
+            {
+              "iteration": 0,
+              "force_residual_n": 0.6270900456493019,
+              "force_limit_n": 7.107017852192055e-10,
+              "preconditioner": {
+                "colors": 276,
+                "nnz": 2478006,
+                "relative_action_error": 3.930494355842979e-16,
+                "assembly_s": 1.0806394230021397,
+                "build_s": 2.159354940013145,
+                "factor_nnz": 19638099,
+                "rebuilt": true,
+                "reuse_age": 0
+              },
+              "linear_info": 0,
+              "linear_iterations": 1,
+              "linear_residual_n": 6.503529642069513e-16,
+              "linear_limit_n": 6.27090045649302e-11,
+              "correction_m": 1.1204275784014257e-05,
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "residual_n": 0.0001238758583733835
+                }
+              ]
+            },
+            {
+              "iteration": 1,
+              "force_residual_n": 0.0001238758583733835,
+              "force_limit_n": 1.3130600859507694e-10,
+              "preconditioner": {
+                "rebuilt": false,
+                "reuse_age": 1
+              },
+              "linear_info": 0,
+              "linear_iterations": 3,
+              "linear_residual_n": 2.3317342427953946e-15,
+              "linear_limit_n": 1.238758583733835e-14,
+              "correction_m": 3.3227488730471577e-09,
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "residual_n": 1.3214499704590817e-11
+                }
+              ]
+            },
+            {
+              "iteration": 2,
+              "force_residual_n": 1.3214499704590817e-11,
+              "force_limit_n": 1.3126204759745283e-10
+            }
+          ],
+          "hvp_calls": 285,
+          "audit": {
+            "residual_ratio": 0.1008081771414394,
+            "position_update_error_m": 5.421010862427522e-20,
+            "energy_ledger_error_j": 5.204170427930421e-18,
+            "projected_gradient_upper": 0.1775636108207354
+          },
+          "audit_passed": true
+        },
+        {
+          "index": 13,
+          "solve_s": 0.3527450219989987,
+          "attempts": [
+            {
+              "iteration": 0,
+              "force_residual_n": 0.691569842866081,
+              "force_limit_n": 7.698242206801648e-10,
+              "preconditioner": {
+                "rebuilt": false,
+                "reuse_age": 2
+              },
+              "linear_info": 0,
+              "linear_iterations": 4,
+              "linear_residual_n": 2.693311624599863e-13,
+              "linear_limit_n": 6.91569842866081e-11,
+              "correction_m": 1.213912901996572e-05,
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "residual_n": 0.0001358473258165235
+                }
+              ]
+            },
+            {
+              "iteration": 1,
+              "force_residual_n": 0.0001358473258165235,
+              "force_limit_n": 1.301235382684578e-10,
+              "preconditioner": {
+                "rebuilt": false,
+                "reuse_age": 3
+              },
+              "linear_info": 0,
+              "linear_iterations": 4,
+              "linear_residual_n": 1.0877118582563022e-17,
+              "linear_limit_n": 1.358473258165235e-14,
+              "correction_m": 3.813423617804053e-09,
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "residual_n": 1.4494322001903336e-11
+                }
+              ]
+            },
+            {
+              "iteration": 2,
+              "force_residual_n": 1.4494322001903336e-11,
+              "force_limit_n": 1.3015286837300729e-10
+            }
+          ],
+          "hvp_calls": 13,
+          "audit": {
+            "residual_ratio": 0.11140413176449866,
+            "position_update_error_m": 5.421010862427522e-20,
+            "energy_ledger_error_j": 3.469446951953614e-18,
+            "projected_gradient_upper": 0.17768778080308326
+          },
+          "audit_passed": true
+        },
+        {
+          "index": 14,
+          "solve_s": 2.5268008559942245,
+          "attempts": [
+            {
+              "iteration": 0,
+              "force_residual_n": 0.644843938429778,
+              "force_limit_n": 7.247431559417172e-10,
+              "preconditioner": {
+                "colors": 276,
+                "nnz": 2478006,
+                "relative_action_error": 3.91775994171291e-16,
+                "assembly_s": 1.0600976450077724,
+                "build_s": 2.1426860649953596,
+                "factor_nnz": 19638099,
+                "rebuilt": true,
+                "reuse_age": 0
+              },
+              "linear_info": 0,
+              "linear_iterations": 1,
+              "linear_residual_n": 7.576400324655747e-16,
+              "linear_limit_n": 6.44843938429778e-11,
+              "correction_m": 1.1525058706307606e-05,
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "residual_n": 0.00010848774521936138
+                }
+              ]
+            },
+            {
+              "iteration": 1,
+              "force_residual_n": 0.00010848774521936138,
+              "force_limit_n": 1.2644887606722136e-10,
+              "preconditioner": {
+                "rebuilt": false,
+                "reuse_age": 1
+              },
+              "linear_info": 0,
+              "linear_iterations": 3,
+              "linear_residual_n": 5.2822728397394424e-15,
+              "linear_limit_n": 1.0848774521936138e-14,
+              "correction_m": 3.11771098532231e-09,
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "residual_n": 8.96244628446846e-12
+                }
+              ]
+            },
+            {
+              "iteration": 2,
+              "force_residual_n": 8.96244628446846e-12,
+              "force_limit_n": 1.2643993472855913e-10
+            }
+          ],
+          "hvp_calls": 285,
+          "audit": {
+            "residual_ratio": 0.07099193713140864,
+            "position_update_error_m": 5.421010862427522e-20,
+            "energy_ledger_error_j": 5.204170427930421e-18,
+            "projected_gradient_upper": 0.1778132854322598
+          },
+          "audit_passed": true
+        },
+        {
+          "index": 15,
+          "solve_s": 0.32957886399526615,
+          "attempts": [
+            {
+              "iteration": 0,
+              "force_residual_n": 0.5355181957033598,
+              "force_limit_n": 6.199576013513775e-10,
+              "preconditioner": {
+                "rebuilt": false,
+                "reuse_age": 2
+              },
+              "linear_info": 0,
+              "linear_iterations": 4,
+              "linear_residual_n": 1.738702399080629e-13,
+              "linear_limit_n": 5.355181957033598e-11,
+              "correction_m": 9.289613497641596e-06,
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "residual_n": 6.342822754256758e-05
+                }
+              ]
+            },
+            {
+              "iteration": 1,
+              "force_residual_n": 6.342822754256758e-05,
+              "force_limit_n": 1.2541588383784876e-10,
+              "preconditioner": {
+                "rebuilt": false,
+                "reuse_age": 3
+              },
+              "linear_info": 0,
+              "linear_iterations": 4,
+              "linear_residual_n": 4.1275017083104685e-18,
+              "linear_limit_n": 6.342822754256758e-15,
+              "correction_m": 1.8733411232948085e-09,
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "residual_n": 4.776853992609718e-12
+                }
+              ]
+            },
+            {
+              "iteration": 2,
+              "force_residual_n": 4.776853992609718e-12,
+              "force_limit_n": 1.2541570226665357e-10
+            }
+          ],
+          "hvp_calls": 12,
+          "audit": {
+            "residual_ratio": 0.03833089180199182,
+            "position_update_error_m": 5.421010862427522e-20,
+            "energy_ledger_error_j": 6.938893903907228e-18,
+            "projected_gradient_upper": 0.17792862104752236
+          },
+          "audit_passed": true
+        }
+      ],
+      "status": "passed",
+      "end_time_s": 3.2677083333333887,
+      "completed_solve_s": 24.16312034802104
+    },
+    {
+      "substeps": 64,
+      "restart": 240,
+      "max_cycles": 3,
+      "max_iterations": 720,
+      "dt_s": 0.00026041666666666666,
+      "rows": [
+        {
+          "index": 0,
+          "solve_s": 2.9236877349903807,
+          "attempts": [
+            {
+              "iteration": 0,
+              "force_residual_n": 11.641543119595227,
+              "force_limit_n": 1.1732550132640913e-08,
+              "preconditioner": {
+                "colors": 276,
+                "nnz": 2478006,
+                "relative_action_error": 3.993064267695408e-16,
+                "assembly_s": 1.074583800000255,
+                "build_s": 2.197682507990976,
+                "factor_nnz": 19992495,
+                "rebuilt": true,
+                "reuse_age": 0
+              },
+              "linear_info": 0,
+              "linear_iterations": 1,
+              "linear_residual_n": 1.6704881122137566e-14,
+              "linear_limit_n": 1.1641543119595228e-09,
+              "correction_m": 0.00030712017361401826,
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "residual_n": 0.08799933574469561
+                }
+              ]
+            },
+            {
+              "iteration": 1,
+              "force_residual_n": 0.08799933574469561,
+              "force_limit_n": 2.0340186632523544e-10,
+              "preconditioner": {
+                "rebuilt": false,
+                "reuse_age": 1
+              },
+              "linear_info": 0,
+              "linear_iterations": 5,
+              "linear_residual_n": 1.4470120245676413e-12,
+              "linear_limit_n": 8.799933574469562e-12,
+              "correction_m": 3.1045083355723143e-06,
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "residual_n": 8.659182662244432e-06
+                }
+              ]
+            },
+            {
+              "iteration": 2,
+              "force_residual_n": 8.659182662244432e-06,
+              "force_limit_n": 1.2189218944573475e-10,
+              "preconditioner": {
+                "rebuilt": false,
+                "reuse_age": 2
+              },
+              "linear_info": 0,
+              "linear_iterations": 5,
+              "linear_residual_n": 7.430190533350142e-17,
+              "linear_limit_n": 8.659182662244432e-16,
+              "correction_m": 3.176288084891303e-10,
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "residual_n": 1.6692815247309316e-12
+                }
+              ]
+            },
+            {
+              "iteration": 3,
+              "force_residual_n": 1.6692815247309316e-12,
+              "force_limit_n": 1.2188713776317333e-10
+            }
+          ],
+          "hvp_calls": 294,
+          "audit": {
+            "residual_ratio": 0.014603959995097669,
+            "position_update_error_m": 5.421010862427522e-20,
+            "energy_ledger_error_j": 0.0,
+            "projected_gradient_upper": 0.1764262934441315
+          },
+          "audit_passed": true
+        },
+        {
+          "index": 1,
+          "solve_s": 3.040898141989601,
+          "attempts": [
+            {
+              "iteration": 0,
+              "force_residual_n": 11.38411872723027,
+              "force_limit_n": 1.1471085843180767e-08,
+              "preconditioner": {
+                "rebuilt": false,
+                "reuse_age": 3
+              },
+              "linear_info": 0,
+              "linear_iterations": 7,
+              "linear_residual_n": 2.111018566813548e-11,
+              "linear_limit_n": 1.1384118727230271e-09,
+              "correction_m": 0.0002854569860104509,
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "residual_n": 0.0858693515917255
+                }
+              ]
+            },
+            {
+              "iteration": 1,
+              "force_residual_n": 0.0858693515917255,
+              "force_limit_n": 1.694821708734888e-10,
+              "preconditioner": {
+                "colors": 276,
+                "nnz": 2478006,
+                "relative_action_error": 3.9767404677663493e-16,
+                "assembly_s": 1.319622506009182,
+                "build_s": 2.4162413840094814,
+                "factor_nnz": 19992495,
+                "rebuilt": true,
+                "reuse_age": 0
+              },
+              "linear_info": 0,
+              "linear_iterations": 1,
+              "linear_residual_n": 1.3641081728738397e-16,
+              "linear_limit_n": 8.58693515917255e-12,
+              "correction_m": 3.056205575921661e-06,
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "residual_n": 8.360565642417985e-06
+                }
+              ]
+            },
+            {
+              "iteration": 2,
+              "force_residual_n": 8.360565642417985e-06,
+              "force_limit_n": 1.3018745482447065e-10,
+              "preconditioner": {
+                "rebuilt": false,
+                "reuse_age": 1
+              },
+              "linear_info": 0,
+              "linear_iterations": 3,
+              "linear_residual_n": 5.631224967607926e-18,
+              "linear_limit_n": 8.360565642417985e-16,
+              "correction_m": 3.086807252100861e-10,
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "residual_n": 1.6664907924618134e-12
+                }
+              ]
+            },
+            {
+              "iteration": 3,
+              "force_residual_n": 1.6664907924618134e-12,
+              "force_limit_n": 1.3019241034724197e-10
+            }
+          ],
+          "hvp_calls": 294,
+          "audit": {
+            "residual_ratio": 0.013980145952129906,
+            "position_update_error_m": 5.421010862427522e-20,
+            "energy_ledger_error_j": 8.673617379884035e-18,
+            "projected_gradient_upper": 0.176922606012348
+          },
+          "audit_passed": true
+        },
+        {
+          "index": 2,
+          "solve_s": 2.754742132005049,
+          "attempts": [
+            {
+              "iteration": 0,
+              "force_residual_n": 11.316102467587177,
+              "force_limit_n": 1.139667157392712e-08,
+              "preconditioner": {
+                "rebuilt": false,
+                "reuse_age": 2
+              },
+              "linear_info": 0,
+              "linear_iterations": 6,
+              "linear_residual_n": 1.488549014856916e-11,
+              "linear_limit_n": 1.1316102467587176e-09,
+              "correction_m": 0.00025255897789839746,
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "residual_n": 0.0760904911225346
+                }
+              ]
+            },
+            {
+              "iteration": 1,
+              "force_residual_n": 0.0760904911225346,
+              "force_limit_n": 1.9793205002039e-10,
+              "preconditioner": {
+                "rebuilt": false,
+                "reuse_age": 3
+              },
+              "linear_info": 0,
+              "linear_iterations": 4,
+              "linear_residual_n": 3.062251995615606e-13,
+              "linear_limit_n": 7.609049112253461e-12,
+              "correction_m": 2.737272148241321e-06,
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "residual_n": 6.587537920786278e-06
+                }
+              ]
+            },
+            {
+              "iteration": 2,
+              "force_residual_n": 6.587537920786278e-06,
+              "force_limit_n": 1.2624958412101867e-10,
+              "preconditioner": {
+                "colors": 276,
+                "nnz": 2478006,
+                "relative_action_error": 4.003974351292068e-16,
+                "assembly_s": 1.085838667000644,
+                "build_s": 2.1998860639869235,
+                "factor_nnz": 19992495,
+                "rebuilt": true,
+                "reuse_age": 0
+              },
+              "linear_info": 0,
+              "linear_iterations": 1,
+              "linear_residual_n": 1.110491307989896e-20,
+              "linear_limit_n": 6.587537920786278e-16,
+              "correction_m": 2.4144544854290664e-10,
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "residual_n": 1.6508820878453545e-12
+                }
+              ]
+            },
+            {
+              "iteration": 3,
+              "force_residual_n": 1.6508820878453545e-12,
+              "force_limit_n": 1.2624502811530727e-10
+            }
+          ],
+          "hvp_calls": 294,
+          "audit": {
+            "residual_ratio": 0.014173110567930185,
+            "position_update_error_m": 5.421010862427522e-20,
+            "energy_ledger_error_j": 5.204170427930421e-18,
+            "projected_gradient_upper": 0.17743809389547194
+          },
+          "audit_passed": true
+        },
+        {
+          "index": 3,
+          "solve_s": 0.5448207199951867,
+          "attempts": [
+            {
+              "iteration": 0,
+              "force_residual_n": 10.807901426078732,
+              "force_limit_n": 1.0887605374849222e-08,
+              "preconditioner": {
+                "rebuilt": false,
+                "reuse_age": 1
+              },
+              "linear_info": 0,
+              "linear_iterations": 6,
+              "linear_residual_n": 1.2221172994139462e-11,
+              "linear_limit_n": 1.0807901426078734e-09,
+              "correction_m": 0.00023631787980487988,
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "residual_n": 0.06821533865327052
+                }
+              ]
+            },
+            {
+              "iteration": 1,
+              "force_residual_n": 0.06821533865327052,
+              "force_limit_n": 1.5336719829578258e-10,
+              "preconditioner": {
+                "rebuilt": false,
+                "reuse_age": 2
+              },
+              "linear_info": 0,
+              "linear_iterations": 4,
+              "linear_residual_n": 2.695348420396464e-13,
+              "linear_limit_n": 6.821533865327053e-12,
+              "correction_m": 2.495261358307611e-06,
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "residual_n": 5.382156208586751e-06
+                }
+              ]
+            },
+            {
+              "iteration": 2,
+              "force_residual_n": 5.382156208586751e-06,
+              "force_limit_n": 1.2915504617450812e-10,
+              "preconditioner": {
+                "rebuilt": false,
+                "reuse_age": 3
+              },
+              "linear_info": 0,
+              "linear_iterations": 4,
+              "linear_residual_n": 1.7753264773865213e-17,
+              "linear_limit_n": 5.382156208586751e-16,
+              "correction_m": 1.9662115188466598e-10,
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "residual_n": 1.6247242529321626e-12
+                }
+              ]
+            },
+            {
+              "iteration": 3,
+              "force_residual_n": 1.6247242529321626e-12,
+              "force_limit_n": 1.2915820503305139e-10
+            }
+          ],
+          "hvp_calls": 20,
+          "audit": {
+            "residual_ratio": 0.013660138143351715,
+            "position_update_error_m": 5.421010862427522e-20,
+            "energy_ledger_error_j": 1.9081958235744878e-17,
+            "projected_gradient_upper": 0.1779362352644889
+          },
+          "audit_passed": true
+        }
+      ],
+      "status": "passed",
+      "end_time_s": 3.2677083333333905,
+      "completed_solve_s": 9.264148728980217
+    }
+  ],
+  "training_eligible": false,
+  "r1_complete": false
+}

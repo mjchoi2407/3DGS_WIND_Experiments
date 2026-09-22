@@ -1,0 +1,73 @@
+{
+  "status": "통과",
+  "interpolant_bounds": {
+    "u_m": {
+      "absolute_rms_upper": 1.0147850325076398e-22,
+      "reference_peak_lower": 1.463827668227891e-06,
+      "relative_upper": 6.932407786335518e-17,
+      "max_nodal_component_difference": 0.0
+    },
+    "v_m_s": {
+      "absolute_rms_upper": 0.0,
+      "reference_peak_lower": 0.00017245848009304264,
+      "relative_upper": 0.0,
+      "max_nodal_component_difference": 0.0
+    }
+  },
+  "threshold_relative": 0.01,
+  "position_increment_equals_displacement": true,
+  "scope": "rest natural 전체 보간 수치 비교. R1 전체/ODE 인증 아님.",
+  "timing_s": {
+    "baseline": {
+      "setup_s": 8.410839096000018,
+      "warmup_s": 0.5151020979992609,
+      "simulation_s": 0.1778710990001855,
+      "write_s": 0.003783111999837274,
+      "audit_s": 0.19811646499965718,
+      "audit_read_s": 0.025831662999735272
+    },
+    "fast": {
+      "setup_s": 0.22446564700021554,
+      "warmup_s": 0.16070672400019248,
+      "simulation_s": 0.16073150599913788,
+      "write_s": 0.0035679309994520736,
+      "audit_s": 0.1726314679990537,
+      "audit_read_s": 0.004145396000239998
+    }
+  },
+  "simulation_speedup": 1.1066349306845886,
+  "simulation_time_reduction_fraction": 0.09635962839038703,
+  "timing_is_provisional_due_to_other_gpu_load": true,
+  "frame_results": [
+    {
+      "frame": 0,
+      "rms_peaks": {
+        "u_m": [
+          0.0,
+          0.0
+        ],
+        "v_m_s": [
+          0.0,
+          0.0
+        ]
+      },
+      "position_padding_m": 0.0
+    },
+    {
+      "frame": 1,
+      "rms_peaks": {
+        "u_m": [
+          0.0,
+          1.463827668227891e-06
+        ],
+        "v_m_s": [
+          0.0,
+          0.00017245848009304264
+        ]
+      },
+      "position_padding_m": 1.0147850325076398e-22
+    }
+  ],
+  "training_eligible": false,
+  "r1_complete": false
+}

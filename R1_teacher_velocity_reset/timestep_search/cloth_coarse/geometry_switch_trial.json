@@ -1,0 +1,631 @@
+{
+  "summary": {
+    "preload": {
+      "geometry": [
+        1.8715652259998024,
+        1.8713662419995671
+      ],
+      "gauss": [
+        42.06362619000174,
+        42.25191446200006
+      ]
+    },
+    "wind": {
+      "geometry": [
+        10.271653408999555,
+        10.644706164001036
+      ],
+      "gauss": [
+        57.76225267299924,
+        52.199206459999914
+      ]
+    },
+    "verified_input_manifest_files": 194,
+    "computed_and_audited_steps": 2304,
+    "training_eligible": false,
+    "scope": "두 국소 입력 각1/60초, 두 번 반복; 자연 발생한 기하 경고는 없음"
+  },
+  "analysis": {
+    "rows": [
+      {
+        "seed": "preload",
+        "repeat": 0,
+        "selected": "newmark",
+        "reason": "Newmark 기존 검산 통과",
+        "total_s": 1.8715652259998024,
+        "estimate": null,
+        "attempts": [
+          {
+            "method": "newmark",
+            "steps": 64,
+            "completed": 64,
+            "solver_failure": 0,
+            "counts": [
+              1,
+              1,
+              128,
+              0,
+              0,
+              0,
+              0,
+              0,
+              2,
+              192,
+              0,
+              0,
+              64,
+              64,
+              64,
+              2,
+              0
+            ],
+            "audit": {
+              "passed": true,
+              "flags": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "max_checks": [
+                0.10494831589806058,
+                2.941086622410798e-26,
+                9.693522803355793e-27,
+                9.046829817947607e-07,
+                6.983747993238865e-07,
+                3.260411364377041e-05
+              ],
+              "mass_info": 0,
+              "time_failed": false
+            },
+            "solve_record_s": 1.6236338069993508,
+            "audit_post_s": 0.2471039430001838,
+            "total_s": 1.8713371739995637,
+            "timing": "Gauss는 solve_record_s 안에 단계별 검산 포함; Newmark는 audit_post_s에서 독립 검산"
+          }
+        ],
+        "gauss_total_s": 42.06362619000174,
+        "selected_end_difference": {
+          "u": {
+            "mass_time_relative": 0.00914946291618122,
+            "max_node_norm": 9.239742847297981e-10,
+            "end_mass_relative": 0.00914946291618122,
+            "end_max_node_norm": 9.239742847297981e-10
+          },
+          "v": {
+            "mass_time_relative": 0.03951447747799419,
+            "max_node_norm": 2.16186159076515e-06,
+            "end_mass_relative": 0.039514477477994185,
+            "end_max_node_norm": 2.16186159076515e-06
+          }
+        },
+        "candidate_difference": {
+          "newmark": {
+            "u": {
+              "mass_time_relative": 0.002492789485827343,
+              "max_node_norm": 1.7763462343220228e-09,
+              "end_mass_relative": 0.00914946291618122,
+              "end_max_node_norm": 9.239742847297981e-10
+            },
+            "v": {
+              "mass_time_relative": 0.031477547783618894,
+              "max_node_norm": 4.599209098929359e-06,
+              "end_mass_relative": 0.039514477477994185,
+              "end_max_node_norm": 2.16186159076515e-06
+            }
+          }
+        }
+      },
+      {
+        "seed": "preload",
+        "repeat": 1,
+        "selected": "newmark",
+        "reason": "Newmark 기존 검산 통과",
+        "total_s": 1.8713662419995671,
+        "estimate": null,
+        "attempts": [
+          {
+            "method": "newmark",
+            "steps": 64,
+            "completed": 64,
+            "solver_failure": 0,
+            "counts": [
+              1,
+              1,
+              128,
+              0,
+              0,
+              0,
+              0,
+              0,
+              2,
+              192,
+              0,
+              0,
+              64,
+              64,
+              64,
+              2,
+              0
+            ],
+            "audit": {
+              "passed": true,
+              "flags": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "max_checks": [
+                0.10507180317314614,
+                2.941086622410931e-26,
+                9.693522803355793e-27,
+                9.046829835729946e-07,
+                6.983747997679757e-07,
+                3.260411348553593e-05
+              ],
+              "mass_info": 0,
+              "time_failed": false
+            },
+            "solve_record_s": 1.6204312129993923,
+            "audit_post_s": 0.25020994000078645,
+            "total_s": 1.8710763809995115,
+            "timing": "Gauss는 solve_record_s 안에 단계별 검산 포함; Newmark는 audit_post_s에서 독립 검산"
+          }
+        ],
+        "gauss_total_s": 42.25191446200006,
+        "selected_end_difference": {
+          "u": {
+            "mass_time_relative": 0.009149462923491768,
+            "max_node_norm": 9.239742849919792e-10,
+            "end_mass_relative": 0.009149462923491768,
+            "end_max_node_norm": 9.239742849919792e-10
+          },
+          "v": {
+            "mass_time_relative": 0.03951447750252583,
+            "max_node_norm": 2.161861658799953e-06,
+            "end_mass_relative": 0.03951447750252583,
+            "end_max_node_norm": 2.161861658799953e-06
+          }
+        },
+        "candidate_difference": {
+          "newmark": {
+            "u": {
+              "mass_time_relative": 0.0024927894877979128,
+              "max_node_norm": 1.7763462488790609e-09,
+              "end_mass_relative": 0.009149462923491768,
+              "end_max_node_norm": 9.239742849919792e-10
+            },
+            "v": {
+              "mass_time_relative": 0.031477547799551295,
+              "max_node_norm": 4.599209044916658e-06,
+              "end_mass_relative": 0.03951447750252583,
+              "end_max_node_norm": 2.161861658799953e-06
+            }
+          }
+        }
+      },
+      {
+        "seed": "wind",
+        "repeat": 0,
+        "selected": "newmark",
+        "reason": "Newmark 기존 검산 통과",
+        "total_s": 10.271653408999555,
+        "estimate": null,
+        "attempts": [
+          {
+            "method": "newmark",
+            "steps": 64,
+            "completed": 64,
+            "solver_failure": 0,
+            "counts": [
+              5,
+              1,
+              286,
+              0,
+              0,
+              0,
+              0,
+              0,
+              16,
+              3067,
+              0,
+              0,
+              64,
+              64,
+              64,
+              5,
+              0
+            ],
+            "audit": {
+              "passed": true,
+              "flags": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "max_checks": [
+                0.2745127326655928,
+                7.776570978888757e-20,
+                5.2075585597194385e-18,
+                2.040548360331234,
+                0.1578638036897137,
+                42.03327347067732
+              ],
+              "mass_info": 0,
+              "time_failed": false
+            },
+            "solve_record_s": 10.022958782999922,
+            "audit_post_s": 0.24813301699941803,
+            "total_s": 10.271467460999702,
+            "timing": "Gauss는 solve_record_s 안에 단계별 검산 포함; Newmark는 audit_post_s에서 독립 검산"
+          }
+        ],
+        "gauss_total_s": 57.76225267299924,
+        "selected_end_difference": {
+          "u": {
+            "mass_time_relative": 0.00027590300941946524,
+            "max_node_norm": 0.0008314302565332378,
+            "end_mass_relative": 0.00027590300941946524,
+            "end_max_node_norm": 0.0008314302565332378
+          },
+          "v": {
+            "mass_time_relative": 0.7369718789187902,
+            "max_node_norm": 2.1287628677323607,
+            "end_mass_relative": 0.7369718789187902,
+            "end_max_node_norm": 2.1287628677323607
+          }
+        },
+        "candidate_difference": {
+          "newmark": {
+            "u": {
+              "mass_time_relative": 0.00019214517024654395,
+              "max_node_norm": 0.0013061234381718597,
+              "end_mass_relative": 0.00027590300941946524,
+              "end_max_node_norm": 0.0008314302565332378
+            },
+            "v": {
+              "mass_time_relative": 0.6567070937106431,
+              "max_node_norm": 3.450179719990965,
+              "end_mass_relative": 0.7369718789187902,
+              "end_max_node_norm": 2.1287628677323607
+            }
+          }
+        }
+      },
+      {
+        "seed": "wind",
+        "repeat": 1,
+        "selected": "newmark",
+        "reason": "Newmark 기존 검산 통과",
+        "total_s": 10.644706164001036,
+        "estimate": null,
+        "attempts": [
+          {
+            "method": "newmark",
+            "steps": 64,
+            "completed": 64,
+            "solver_failure": 0,
+            "counts": [
+              5,
+              1,
+              286,
+              0,
+              0,
+              0,
+              0,
+              0,
+              16,
+              3067,
+              0,
+              0,
+              64,
+              64,
+              64,
+              5,
+              0
+            ],
+            "audit": {
+              "passed": true,
+              "flags": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "max_checks": [
+                0.2745150547945663,
+                7.412793491237483e-20,
+                5.2075585597194385e-18,
+                2.040548360331236,
+                0.15786380368971414,
+                42.03327347067732
+              ],
+              "mass_info": 0,
+              "time_failed": false
+            },
+            "solve_record_s": 10.411327298999822,
+            "audit_post_s": 0.23255343900018488,
+            "total_s": 10.644549010001356,
+            "timing": "Gauss는 solve_record_s 안에 단계별 검산 포함; Newmark는 audit_post_s에서 독립 검산"
+          }
+        ],
+        "gauss_total_s": 52.199206459999914,
+        "selected_end_difference": {
+          "u": {
+            "mass_time_relative": 0.0002759030094194651,
+            "max_node_norm": 0.0008314302565332535,
+            "end_mass_relative": 0.0002759030094194651,
+            "end_max_node_norm": 0.0008314302565332535
+          },
+          "v": {
+            "mass_time_relative": 0.7369718789187877,
+            "max_node_norm": 2.1287628677322736,
+            "end_mass_relative": 0.7369718789187877,
+            "end_max_node_norm": 2.1287628677322736
+          }
+        },
+        "candidate_difference": {
+          "newmark": {
+            "u": {
+              "mass_time_relative": 0.0001921451702465435,
+              "max_node_norm": 0.0013061234381718566,
+              "end_mass_relative": 0.0002759030094194651,
+              "end_max_node_norm": 0.0008314302565332535
+            },
+            "v": {
+              "mass_time_relative": 0.6567070937106424,
+              "max_node_norm": 3.4501797199909814,
+              "end_mass_relative": 0.7369718789187877,
+              "end_max_node_norm": 2.1287628677322736
+            }
+          }
+        }
+      }
+    ],
+    "training_eligible": false,
+    "scope": "두 저장 seed의 각1/60초; 같은 시간 간격 Gauss 참조와 비교하며 연속시간 정답/장기 안정성 아님"
+  },
+  "evidence_manifest_sha256": "0e1ef9eaf418ec6641fa41e785d0eb513d3866b2be230bce6bd84727acb29e2c"
+}

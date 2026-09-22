@@ -1,0 +1,183 @@
+{
+  "source": "experiments/artifacts/runs/sub_pc/20260912T223433Z-aca6fc4223714a02a9fe8afe7f4edeef",
+  "training_eligible": false,
+  "self_collision_checked": false,
+  "stored": [
+    {
+      "scene": "baseline/handkerchief",
+      "steps": 38400,
+      "old_geometry_warnings": 0,
+      "local_unresolved": 0,
+      "area_ratio_lower": 0.9655242274911461,
+      "max_strain_bound": 0.01149192416961674,
+      "other_flags": 0
+    },
+    {
+      "scene": "baseline/reference_rectangle",
+      "steps": 38400,
+      "old_geometry_warnings": 0,
+      "local_unresolved": 0,
+      "area_ratio_lower": 0.9954133176665889,
+      "max_strain_bound": 0.0015288941111358569,
+      "other_flags": 0
+    },
+    {
+      "scene": "baseline/triangular_flag",
+      "steps": 38400,
+      "old_geometry_warnings": 0,
+      "local_unresolved": 0,
+      "area_ratio_lower": 0.9970460733587584,
+      "max_strain_bound": 0.0009846422137460068,
+      "other_flags": 0
+    },
+    {
+      "scene": "bend_001/handkerchief",
+      "steps": 38400,
+      "old_geometry_warnings": 17794,
+      "local_unresolved": 0,
+      "area_ratio_lower": 0.8973071093280908,
+      "max_strain_bound": 0.0342309635573018,
+      "other_flags": 0
+    },
+    {
+      "scene": "bend_001/reference_rectangle",
+      "steps": 38400,
+      "old_geometry_warnings": 16515,
+      "local_unresolved": 0,
+      "area_ratio_lower": 0.9876376410376357,
+      "max_strain_bound": 0.004120786320786885,
+      "other_flags": 0
+    },
+    {
+      "scene": "bend_001/triangular_flag",
+      "steps": 38400,
+      "old_geometry_warnings": 12780,
+      "local_unresolved": 0,
+      "area_ratio_lower": 0.9822356810069514,
+      "max_strain_bound": 0.005921439664348317,
+      "other_flags": 0
+    },
+    {
+      "scene": "bend_010/handkerchief",
+      "steps": 38400,
+      "old_geometry_warnings": 3963,
+      "local_unresolved": 0,
+      "area_ratio_lower": 0.8874952980152029,
+      "max_strain_bound": 0.03750156732826435,
+      "other_flags": 0
+    },
+    {
+      "scene": "bend_010/reference_rectangle",
+      "steps": 38400,
+      "old_geometry_warnings": 0,
+      "local_unresolved": 0,
+      "area_ratio_lower": 0.9941916385539892,
+      "max_strain_bound": 0.0019361204820024082,
+      "other_flags": 0
+    },
+    {
+      "scene": "bend_010/triangular_flag",
+      "steps": 38400,
+      "old_geometry_warnings": 352,
+      "local_unresolved": 0,
+      "area_ratio_lower": 0.9921158630842516,
+      "max_strain_bound": 0.002628045638581624,
+      "other_flags": 0
+    }
+  ],
+  "synthetic": [
+    {
+      "case": "rotation_180",
+      "projected_local_unresolved": [
+        1,
+        0
+      ]
+    },
+    {
+      "case": "collapsed",
+      "projected_local_unresolved": [
+        1,
+        1
+      ]
+    },
+    {
+      "case": "temporal_collapse",
+      "projected_local_unresolved": [
+        1,
+        1
+      ]
+    }
+  ],
+  "generated": [
+    {
+      "shape": "reference_rectangle",
+      "start_time_s": 2.9,
+      "steps": 128,
+      "old_geometry_warnings": 101,
+      "local_flags": 0,
+      "min_area_ratio_lower": 0.9953726323125602,
+      "nonforce_checks_identical": true,
+      "force_ratio_comparison_difference": 1.1500224383897972e-10,
+      "force_ratio_comparison_limit": 0.001,
+      "graph_inventory": {
+        "kernels": 163,
+        "device_copies": 8,
+        "memsets": 8,
+        "children": 1,
+        "host_copies": 0,
+        "host_callbacks": 0,
+        "conditionals": 0,
+        "conditional_bodies": 0
+      },
+      "max_force_ratio": 0.007688083932055496
+    },
+    {
+      "shape": "triangular_flag",
+      "start_time_s": 3.05,
+      "steps": 128,
+      "old_geometry_warnings": 9,
+      "local_flags": 0,
+      "min_area_ratio_lower": 0.9881677220216802,
+      "nonforce_checks_identical": true,
+      "force_ratio_comparison_difference": 3.2026819651170824e-10,
+      "force_ratio_comparison_limit": 0.001,
+      "graph_inventory": {
+        "kernels": 151,
+        "device_copies": 8,
+        "memsets": 8,
+        "children": 1,
+        "host_copies": 0,
+        "host_callbacks": 0,
+        "conditionals": 0,
+        "conditional_bodies": 0
+      },
+      "max_force_ratio": 0.0077714962529584425
+    },
+    {
+      "shape": "handkerchief",
+      "start_time_s": 1.6333333333333333,
+      "steps": 128,
+      "old_geometry_warnings": 101,
+      "local_flags": 0,
+      "min_area_ratio_lower": 0.9222531228686395,
+      "nonforce_checks_identical": true,
+      "force_ratio_comparison_difference": 1.2452580216981701e-09,
+      "force_ratio_comparison_limit": 0.001,
+      "graph_inventory": {
+        "kernels": 152,
+        "device_copies": 8,
+        "memsets": 8,
+        "children": 1,
+        "host_copies": 0,
+        "host_callbacks": 0,
+        "conditionals": 0,
+        "conditional_bodies": 0
+      },
+      "max_force_ratio": 0.04708227358866262
+    }
+  ],
+  "passed": true,
+  "run": "experiments/artifacts/runs/teacher_timestep_search/20260913_local_geometry_validation_v2",
+  "validation_sha256": "377755d0b1da9fd1eadc1db2b2811d4df37f4da96bc72fd78adde80e77b5bc3e",
+  "provenance_sha256": "93223cdff47bc7f8dfa1001e8f6a77f0993d35ffef24c7ba5ef4ebbe4f303417"
+}

@@ -1,0 +1,235 @@
+{
+  "input_time_s": 0.016666666666666684,
+  "target_time_s": 0.01770833333333335,
+  "frame": 1,
+  "environment": {
+    "device": "cuda:0",
+    "numpy": "2.4.4",
+    "scipy": "1.18.1",
+    "compute_backend": "precision_hvp_graph",
+    "linear_solver_device": "cpu",
+    "cuda_graph": true,
+    "state_encoding": "hi_lo_v1",
+    "state_mantissa_bits": 64,
+    "warp": "1.17.0",
+    "gpu_name": "NVIDIA GeForce GTX 1080 Ti"
+  },
+  "policy": {
+    "force_atol_n": 1e-10,
+    "force_rtol": 1e-09,
+    "displacement_atol_m": 1e-12,
+    "displacement_rtol": 1e-09,
+    "linear_rtol": 1e-10,
+    "max_newton": 15,
+    "linear_cycles": 3,
+    "line_search_steps": 12,
+    "linear_restart": 240,
+    "linear_preconditioner": "rest"
+  },
+  "input_sha256": "9d787aa8f9eb94b48d4ee928611b3def1326f302ef43fe1ddf3008e4016ee836",
+  "runtime_manifest_sha256": "dec67d896537efadf38bbd81f52cb7d726abe4a73e58fcc1b5180ffef52a9df6",
+  "trials": [
+    {
+      "substeps": 64,
+      "restart": 240,
+      "max_cycles": 3,
+      "max_iterations": 720,
+      "dt_s": 0.00026041666666666666,
+      "rows": [
+        {
+          "index": 0,
+          "solve_s": 0.5253824099927442,
+          "attempts": [
+            {
+              "iteration": 0,
+              "force_residual_n": 0.00013634612221088114,
+              "force_limit_n": 1.0013634612221088e-10,
+              "linear_info": 0,
+              "linear_iterations": 2,
+              "linear_residual_n": 3.8884817552606075e-19,
+              "linear_limit_n": 1.3634612221088116e-14,
+              "correction_m": 1.974986254148976e-09,
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "residual_n": 3.2425501762294156e-12
+                }
+              ]
+            },
+            {
+              "iteration": 1,
+              "force_residual_n": 3.2425501762294156e-12,
+              "force_limit_n": 1.000065002212356e-10,
+              "linear_info": 0,
+              "linear_iterations": 2,
+              "linear_residual_n": 2.6576290166932274e-27,
+              "linear_limit_n": 3.2425501762294156e-22,
+              "correction_m": 1.2907379904781126e-16
+            }
+          ],
+          "hvp_calls": 8,
+          "adaptive": {
+            "used": "rest",
+            "next": "rest",
+            "peak_linear_iterations": 2,
+            "fallback": null,
+            "total_s": 0.525348879993544
+          },
+          "audit": {
+            "residual_ratio": 0.03310918482549079,
+            "position_update_error_m": 2.524354896707238e-29,
+            "energy_ledger_error_j": 0.0,
+            "projected_gradient_upper": 2.331119803975403e-13
+          },
+          "audit_passed": true
+        },
+        {
+          "index": 1,
+          "solve_s": 0.3281196410098346,
+          "attempts": [
+            {
+              "iteration": 0,
+              "force_residual_n": 0.00013237520428367578,
+              "force_limit_n": 1.0013140867274741e-10,
+              "linear_info": 0,
+              "linear_iterations": 2,
+              "linear_residual_n": 1.1730469522173615e-18,
+              "linear_limit_n": 1.3237520428367579e-14,
+              "correction_m": 1.6606961136650455e-09,
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "residual_n": 3.101697824256174e-12
+                }
+              ]
+            },
+            {
+              "iteration": 1,
+              "force_residual_n": 3.101697824256174e-12,
+              "force_limit_n": 1.000065002212356e-10,
+              "linear_info": 0,
+              "linear_iterations": 2,
+              "linear_residual_n": 2.7268764573655503e-27,
+              "linear_limit_n": 3.1016978242561743e-22,
+              "correction_m": 1.0724752847715089e-16
+            }
+          ],
+          "hvp_calls": 8,
+          "adaptive": {
+            "used": "rest",
+            "next": "rest",
+            "peak_linear_iterations": 2,
+            "fallback": null,
+            "total_s": 0.3280938570096623
+          },
+          "audit": {
+            "residual_ratio": 0.031106122686946843,
+            "position_update_error_m": 1.0097419586828951e-28,
+            "energy_ledger_error_j": 0.0,
+            "projected_gradient_upper": 2.3885028535184845e-13
+          },
+          "audit_passed": true
+        },
+        {
+          "index": 2,
+          "solve_s": 0.32794135400035884,
+          "attempts": [
+            {
+              "iteration": 0,
+              "force_residual_n": 0.00012532923385883053,
+              "force_limit_n": 1.001254613629085e-10,
+              "linear_info": 0,
+              "linear_iterations": 2,
+              "linear_residual_n": 5.501722827586456e-19,
+              "linear_limit_n": 1.2532923385883054e-14,
+              "correction_m": 1.5836229620798386e-09,
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "residual_n": 2.5131923524575333e-12
+                }
+              ]
+            },
+            {
+              "iteration": 1,
+              "force_residual_n": 2.5131923524575333e-12,
+              "force_limit_n": 1.000065002212356e-10,
+              "linear_info": 0,
+              "linear_iterations": 2,
+              "linear_residual_n": 7.114506247712374e-27,
+              "linear_limit_n": 2.5131923524575334e-22,
+              "correction_m": 8.334931282990388e-17
+            }
+          ],
+          "hvp_calls": 8,
+          "adaptive": {
+            "used": "rest",
+            "next": "rest",
+            "peak_linear_iterations": 2,
+            "fallback": null,
+            "total_s": 0.3279142910032533
+          },
+          "audit": {
+            "residual_ratio": 0.02470507919533901,
+            "position_update_error_m": 4.0389678347315804e-28,
+            "energy_ledger_error_j": 0.0,
+            "projected_gradient_upper": 2.400695944917505e-13
+          },
+          "audit_passed": true
+        },
+        {
+          "index": 3,
+          "solve_s": 0.1579325369966682,
+          "attempts": [
+            {
+              "iteration": 0,
+              "force_residual_n": 0.00011679762243785247,
+              "force_limit_n": 1.0011622058425142e-10,
+              "linear_info": 0,
+              "linear_iterations": 2,
+              "linear_residual_n": 1.5003919077967497e-18,
+              "linear_limit_n": 1.1679762243785247e-14,
+              "correction_m": 1.6688374771224274e-09,
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "residual_n": 1.954862875004695e-12
+                }
+              ]
+            },
+            {
+              "iteration": 1,
+              "force_residual_n": 1.954862875004695e-12,
+              "force_limit_n": 1.000065002212356e-10,
+              "linear_info": 0,
+              "linear_iterations": 2,
+              "linear_residual_n": 1.3586853392259426e-26,
+              "linear_limit_n": 1.954862875004695e-22,
+              "correction_m": 5.858858912100215e-17
+            }
+          ],
+          "hvp_calls": 8,
+          "adaptive": {
+            "used": "rest",
+            "next": "rest",
+            "peak_linear_iterations": 2,
+            "fallback": null,
+            "total_s": 0.15791076999448705
+          },
+          "audit": {
+            "residual_ratio": 0.019879402565522678,
+            "position_update_error_m": 4.0389678347315804e-28,
+            "energy_ledger_error_j": 0.0,
+            "projected_gradient_upper": 2.4712618746121803e-13
+          },
+          "audit_passed": true
+        }
+      ],
+      "status": "passed",
+      "end_time_s": 0.017708333333333347,
+      "completed_solve_s": 1.3393759419996059
+    }
+  ],
+  "training_eligible": false,
+  "r1_complete": false
+}

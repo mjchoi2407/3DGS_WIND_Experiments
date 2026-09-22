@@ -1,0 +1,133 @@
+{
+  "training_eligible": false,
+  "full_run_started": false,
+  "remote_gpu_tested": false,
+  "cpu_tests_passed": 11,
+  "gpu_forcing_no_host_test_passed": 1,
+  "smoke": [
+    {
+      "shape": "reference_rectangle",
+      "run": "experiments/artifacts/runs/teacher_timestep_search/gauss6_sequence_smoke_v2/reference_rectangle",
+      "phases": {
+        "preload": {
+          "report_sha256": "ab97ff4363796a3da94d9daa12fd9bb8735eee5d23a248fe676977aa290d4269",
+          "checkpoint_sha256": "4d3155e1dff219fe7d67f49bb1a24788cc27f22fb789f12ac78dd45527c91b6c",
+          "gpu": "NVIDIA GeForce GTX 1080 Ti",
+          "completed_frames": 1,
+          "steps": 512
+        },
+        "calm": {
+          "report_sha256": "ae511f4cb7372e3a5ba2e7cafc797218fd6d0c697dfc15a6cccf7389548338fa",
+          "checkpoint_sha256": "188179d43f548441dfc9f2b494392069d2a8ea535f9ebaf972c79dbe0e83ebaf",
+          "gpu": "NVIDIA GeForce GTX 1080 Ti",
+          "completed_frames": 1,
+          "steps": 512
+        },
+        "wind": {
+          "report_sha256": "d506c26007789b0eb8798891992dca418e98f2a1ed65cbbe79b2378d87399046",
+          "checkpoint_sha256": "8482118f890660f888a10bcde2d3615137bfffb1025a60f67989279a748139fe",
+          "gpu": "NVIDIA GeForce GTX 1080 Ti",
+          "completed_frames": 1,
+          "steps": 512
+        }
+      },
+      "manifest_sha256": "fde574576fb5cb94dc1c0f80a73c4d183558ad963840e70750d61873acdf3467"
+    },
+    {
+      "shape": "triangular_flag",
+      "run": "experiments/artifacts/runs/teacher_timestep_search/gauss6_sequence_smoke_v2/triangular_flag",
+      "phases": {
+        "preload": {
+          "report_sha256": "6b483a87780f5034d94bf74ba57d6b2b110df1fdd45fd7ba4c05b97617006bde",
+          "checkpoint_sha256": "528cd584db979b162ee6a83c9840aafb01251ca2aa12ca4e0c8b3dc5288fb559",
+          "gpu": "NVIDIA GeForce GTX 1080 Ti",
+          "completed_frames": 1,
+          "steps": 512
+        },
+        "calm": {
+          "report_sha256": "0f16c97dd3bc0a209cf42b2605935c4d0370210f977e8e188deb265b381e853a",
+          "checkpoint_sha256": "46a7dabb36188b7183a35df96db2a16a457f468b9960efbe5ef153075a771ec5",
+          "gpu": "NVIDIA GeForce GTX 1080 Ti",
+          "completed_frames": 1,
+          "steps": 512
+        },
+        "wind": {
+          "report_sha256": "4662aea810c159d22c96893ddb631c7ad14d12059489dd662320cc50676fe355",
+          "checkpoint_sha256": "9c61f88b36de8d121df4db9894127a19239a7b5a8a7dcc8072e89b2b027de0c9",
+          "gpu": "NVIDIA GeForce GTX 1080 Ti",
+          "completed_frames": 1,
+          "steps": 512
+        }
+      },
+      "manifest_sha256": "2068eb2366cab369d482c0b2cd4fe558fe821cfbce2b9adf210ab96ddd3e36e6"
+    },
+    {
+      "shape": "handkerchief",
+      "run": "experiments/artifacts/runs/teacher_timestep_search/gauss6_sequence_smoke_v2/handkerchief",
+      "phases": {
+        "preload": {
+          "report_sha256": "d0d6ff246e6aefe0ef9247bce2330e0d17bf5804ee3dd1f9684092625832022a",
+          "checkpoint_sha256": "e650ab047e1b0981d06ee1d6982d2ab732c063692d3307b998725c5a7010e120",
+          "gpu": "NVIDIA GeForce GTX 1080 Ti",
+          "completed_frames": 1,
+          "steps": 512
+        },
+        "calm": {
+          "report_sha256": "b94f8b78fcc59a65a35e86f22361ba3dfae3771ada11bf2c155eb53f8a226c13",
+          "checkpoint_sha256": "e6a8e6cc43ad03baa2035ca1ccf2d9fd1c31b10fb8e31cb9822dbd0396e69108",
+          "gpu": "NVIDIA GeForce GTX 1080 Ti",
+          "completed_frames": 1,
+          "steps": 512
+        },
+        "wind": {
+          "report_sha256": "3c58a27afc6e9d480a06a3257c7e1d79f086b3b63a3c4526e83f4f3ae11fe717",
+          "checkpoint_sha256": "ef96fbdb22bad647e6f91a37246e56087d601eaaea268f86f811f59f1408bd08",
+          "gpu": "NVIDIA GeForce GTX 1080 Ti",
+          "completed_frames": 1,
+          "steps": 512
+        }
+      },
+      "manifest_sha256": "b91f658186fa29af73f257092f843d417c1736cdfd414590979134b5e4ca929c"
+    }
+  ],
+  "prepared": [
+    {
+      "shape": "reference_rectangle",
+      "run": "experiments/artifacts/runs/teacher_timestep_search/gauss6_split8_bend500_reference_rectangle_v1",
+      "status": "ready",
+      "manifest_sha256": "757ac8a41c95e18e3478d2c0aa3a51029be024d56492548a219c4d926d9b562d"
+    },
+    {
+      "shape": "reference_rectangle",
+      "run": "experiments/artifacts/runs/sub_pc/gauss6_split8_bend500_reference_rectangle_v1",
+      "status": "ready",
+      "manifest_sha256": "757ac8a41c95e18e3478d2c0aa3a51029be024d56492548a219c4d926d9b562d"
+    },
+    {
+      "shape": "triangular_flag",
+      "run": "experiments/artifacts/runs/teacher_timestep_search/gauss6_split8_bend500_triangular_flag_v1",
+      "status": "ready",
+      "manifest_sha256": "2ab16067393eaca8a81a3a604246bbe0ad44074d133fb9d4ce12bfb764fef8cc"
+    },
+    {
+      "shape": "triangular_flag",
+      "run": "experiments/artifacts/runs/sub_pc/gauss6_split8_bend500_triangular_flag_v1",
+      "status": "ready",
+      "manifest_sha256": "2ab16067393eaca8a81a3a604246bbe0ad44074d133fb9d4ce12bfb764fef8cc"
+    },
+    {
+      "shape": "handkerchief",
+      "run": "experiments/artifacts/runs/teacher_timestep_search/gauss6_split8_bend500_handkerchief_v1",
+      "status": "ready",
+      "manifest_sha256": "d1373066d4352df4346a3aefedc68ef4c4361c62096b2ede7701cbe130db556e"
+    },
+    {
+      "shape": "handkerchief",
+      "run": "experiments/artifacts/runs/sub_pc/gauss6_split8_bend500_handkerchief_v1",
+      "status": "ready",
+      "manifest_sha256": "d1373066d4352df4346a3aefedc68ef4c4361c62096b2ede7701cbe130db556e"
+    }
+  ],
+  "smoke_evidence_manifest_sha256": "36f1aced2e176743d67093bede71c590fd79b62ef404b9e1af922ad3881eaed4",
+  "smoke_evidence_files": 662
+}

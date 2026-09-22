@@ -1,0 +1,70 @@
+{
+  "scope": "계측 연결·재개 보존 검증. 두 컴퓨터 성능 비교 아님",
+  "run": "experiments/artifacts/runs/teacher_timestep_search/20260913_cloth_timing_smoke_v1",
+  "report_sha256": "7e6366e389a585b6bb53468ba3b2242444287d45146543cb316525e833156482",
+  "interval_timings": [
+    {
+      "schema": "cloth_window_timing_v1",
+      "launch_id": "1789248335886696866",
+      "begin_frame": 0,
+      "submitted_end_frame": 1,
+      "verified_end_frame": 1,
+      "begin_time_s": 0.0,
+      "submitted_end_time_s": 0.016666666666666666,
+      "verified_end_time_s": 0.016666666666666666,
+      "dt_s": 0.00026041666666666666,
+      "submitted_substeps": 64,
+      "verified_substeps": 64,
+      "compute_audit_s": 1.2364376420155168,
+      "boundary_check_s": 0.00436764900223352,
+      "transfer_write_hash_s": 0.014645702991401777,
+      "window_s": 1.2554608150094282,
+      "failed": false,
+      "seconds_per_verified_frame": 1.2364376420155168,
+      "seconds_per_verified_substep": 0.01931933815649245
+    },
+    {
+      "schema": "cloth_window_timing_v1",
+      "launch_id": "1789248397475976266",
+      "begin_frame": 1,
+      "submitted_end_frame": 2,
+      "verified_end_frame": 2,
+      "begin_time_s": 0.016666666666666666,
+      "submitted_end_time_s": 0.03333333333333333,
+      "verified_end_time_s": 0.03333333333333333,
+      "dt_s": 0.00026041666666666666,
+      "submitted_substeps": 64,
+      "verified_substeps": 64,
+      "compute_audit_s": 1.2781631620018743,
+      "boundary_check_s": 0.0015779649838805199,
+      "transfer_write_hash_s": 0.013198528991779312,
+      "window_s": 1.2929496330034453,
+      "failed": false,
+      "seconds_per_verified_frame": 1.2781631620018743,
+      "seconds_per_verified_substep": 0.019971299406279286
+    }
+  ],
+  "timing_launches": [
+    {
+      "launch_id": "1789248335886696866",
+      "first_frame": 0,
+      "setup_s": 3.8127322689979337,
+      "cpu": "AMD Ryzen 7 5800X 8-Core Processor",
+      "gpu": "NVIDIA GeForce GTX 1080 Ti",
+      "platform": "Linux",
+      "plan_sha256": "254fec78e28d601a5723d4aa5694322fb40c25d350502264390a17449aaea5d3",
+      "manifest_sha256": "c8544c3161d16c02b755ec4d648ccd540ed448ec32ea5842d51fabc7f36e0e14"
+    },
+    {
+      "launch_id": "1789248397475976266",
+      "first_frame": 1,
+      "setup_s": 1.757469759992091,
+      "cpu": "AMD Ryzen 7 5800X 8-Core Processor",
+      "gpu": "NVIDIA GeForce GTX 1080 Ti",
+      "platform": "Linux",
+      "plan_sha256": "254fec78e28d601a5723d4aa5694322fb40c25d350502264390a17449aaea5d3",
+      "manifest_sha256": "c8544c3161d16c02b755ec4d648ccd540ed448ec32ea5842d51fabc7f36e0e14"
+    }
+  ],
+  "passed": true
+}

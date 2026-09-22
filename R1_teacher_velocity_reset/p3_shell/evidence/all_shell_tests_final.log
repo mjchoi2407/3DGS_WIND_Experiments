@@ -1,0 +1,33 @@
+test_clamp_normal_frame_couple_completes_torque_balance (test_teacher_p3_shell.P3ShellAssemblyTests.test_clamp_normal_frame_couple_completes_torque_balance) ... ok
+test_free_shell_force_torque_and_rigid_nullspace (test_teacher_p3_shell.P3ShellAssemblyTests.test_free_shell_force_torque_and_rigid_nullspace) ... ok
+test_full_mass_and_linear_plate_limit (test_teacher_p3_shell.P3ShellAssemblyTests.test_full_mass_and_linear_plate_limit) ... ok
+test_global_rotation_and_translation (test_teacher_p3_shell.P3ShellAssemblyTests.test_global_rotation_and_translation) ... ok
+test_nonlinear_force_hvp_and_symmetry (test_teacher_p3_shell.P3ShellAssemblyTests.test_nonlinear_force_hvp_and_symmetry) ... ok
+test_relative_wind_full_dof_power (test_teacher_p3_shell.P3ShellAssemblyTests.test_relative_wind_full_dof_power) ... ok
+test_signed_surface_map_cubic_reproduction_and_work (test_teacher_p3_shell.P3ShellAssemblyTests.test_signed_surface_map_cubic_reproduction_and_work) ... ok
+test_edge_energy_gradient_tangent_and_side_orientation (test_teacher_p3_shell.P3ShellKernelTests.test_edge_energy_gradient_tangent_and_side_orientation) ... ok
+test_rigid_rotation_rest_and_deformed_energy (test_teacher_p3_shell.P3ShellKernelTests.test_rigid_rotation_rest_and_deformed_energy) ... ok
+test_volume_energy_gradient_and_exact_tangent (test_teacher_p3_shell.P3ShellKernelTests.test_volume_energy_gradient_and_exact_tangent) ... ok
+test_volume_matches_existing_element_virtual_force (test_teacher_p3_shell.P3ShellKernelTests.test_volume_matches_existing_element_virtual_force) ... ok
+test_bounds_cover_analytic_cubic_field_at_dense_space_time_points (test_teacher_p3_shell_bounds.ShellPolynomialBoundsTests.test_bounds_cover_analytic_cubic_field_at_dense_space_time_points) ... ok
+test_quadratic_time_overshoot_is_not_hidden_by_valid_endpoints (test_teacher_p3_shell_bounds.ShellPolynomialBoundsTests.test_quadratic_time_overshoot_is_not_hidden_by_valid_endpoints) ... ok
+test_rigid_rotation_has_zero_strain_with_injective_projection (test_teacher_p3_shell_bounds.ShellPolynomialBoundsTests.test_rigid_rotation_has_zero_strain_with_injective_projection) ... ok
+test_bent_equilibrium_and_failure_preserves_input (test_teacher_p3_shell_dynamics.P3ShellDynamicsTests.test_bent_equilibrium_and_failure_preserves_input) ... ok
+test_linear_limit_newmark_and_actual_residual (test_teacher_p3_shell_dynamics.P3ShellDynamicsTests.test_linear_limit_newmark_and_actual_residual) ... ok
+test_reset_preserves_shape_removes_consistent_kinetic_energy (test_teacher_p3_shell_dynamics.P3ShellDynamicsTests.test_reset_preserves_shape_removes_consistent_kinetic_energy) ... ok
+test_zero_state_and_prescribed_rigid_acceleration (test_teacher_p3_shell_dynamics.P3ShellDynamicsTests.test_zero_state_and_prescribed_rigid_acceleration) ... ok
+변화 바람 진행: mesh4 / sub4 / forward / reset1 / 1/3
+변화 바람 진행: mesh4 / sub4 / forward / reset1 / 2/3
+변화 바람 진행: mesh4 / sub4 / forward / reset1 / 3/3
+P3 shell 검사 종료: wind / completed
+test_actual_reset_trace_satisfies_mass_work_and_newmark (test_teacher_p3_shell_validation.ShellTraceValidationTests.test_actual_reset_trace_satisfies_mass_work_and_newmark) ... ok
+test_failed_run_preserves_completed_prefix_and_is_rejected (test_teacher_p3_shell_validation.ShellTraceValidationTests.test_failed_run_preserves_completed_prefix_and_is_rejected) ... P3 shell 검사 종료: wind / failed
+ok
+test_modified_raw_bytes_are_rejected (test_teacher_p3_shell_validation.ShellTraceValidationTests.test_modified_raw_bytes_are_rejected) ... ok
+test_resealed_material_or_initial_family_cannot_bypass_comparison (test_teacher_p3_shell_validation.ShellTraceValidationTests.test_resealed_material_or_initial_family_cannot_bypass_comparison) ... ok
+test_resealed_support_torque_is_recomputed_from_equation (test_teacher_p3_shell_validation.ShellTraceValidationTests.test_resealed_support_torque_is_recomputed_from_equation) ... ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 13.329s
+
+OK

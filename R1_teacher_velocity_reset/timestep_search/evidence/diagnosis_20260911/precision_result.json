@@ -1,0 +1,106 @@
+{
+  "status": "line_search",
+  "last": {
+    "iteration": 7,
+    "force_residual_n": 1.1034347416980793e-10,
+    "force_limit_n": 1.0739994371314222e-10,
+    "linear_info": 0,
+    "linear_iterations": 37,
+    "linear_residual_n": 7.9679227136085e-21,
+    "linear_limit_n": 1.1034347416980794e-20,
+    "correction_m": 4.416856156242705e-16,
+    "line_search": [
+      {
+        "alpha": 1.0,
+        "residual_n": 1.8574308799651912e-10
+      },
+      {
+        "alpha": 0.5,
+        "residual_n": 1.5926785233134408e-10
+      },
+      {
+        "alpha": 0.25,
+        "residual_n": 1.4119523946682125e-10
+      },
+      {
+        "alpha": 0.125,
+        "residual_n": 1.2468923447228582e-10
+      },
+      {
+        "alpha": 0.0625,
+        "residual_n": 1.1528118030520568e-10
+      },
+      {
+        "alpha": 0.03125,
+        "residual_n": 1.1054829267390767e-10
+      },
+      {
+        "alpha": 0.015625,
+        "residual_n": 1.1182351636317897e-10
+      },
+      {
+        "alpha": 0.0078125,
+        "residual_n": 1.1163415403811933e-10
+      },
+      {
+        "alpha": 0.00390625,
+        "residual_n": 1.1140491801912892e-10
+      },
+      {
+        "alpha": 0.001953125,
+        "residual_n": 1.1159139109114063e-10
+      },
+      {
+        "alpha": 0.0009765625,
+        "residual_n": 1.1125361111236736e-10
+      },
+      {
+        "alpha": 0.00048828125,
+        "residual_n": 1.107212891810412e-10
+      }
+    ]
+  },
+  "substeps": 64,
+  "elapsed_s": 5.753635806002421,
+  "evaluations": 48,
+  "best_residual": 1.1034347416980793e-10,
+  "force_limit": 1.0739994371314222e-10,
+  "cpu_residual_n": 1.1034344451618293e-10,
+  "cpu_gpu_force_difference_n": 1.2794592274842978e-14,
+  "repeat_force_difference_n": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "force_norms": [
+    0.004624053043901252,
+    0.00739994371314238,
+    0.005047710680973736
+  ],
+  "finite_difference_hvp": [
+    {
+      "epsilon_m": 1e-05,
+      "relative_hvp_error": 4.3071854279477856e-09
+    },
+    {
+      "epsilon_m": 1e-07,
+      "relative_hvp_error": 6.4378330383648635e-09
+    },
+    {
+      "epsilon_m": 1e-09,
+      "relative_hvp_error": 6.469912200478992e-07
+    },
+    {
+      "epsilon_m": 1e-11,
+      "relative_hvp_error": 6.407287208525803e-05
+    },
+    {
+      "epsilon_m": 1e-13,
+      "relative_hvp_error": 0.00667057709115246
+    },
+    {
+      "epsilon_m": 1e-15,
+      "relative_hvp_error": 0.5556830483124445
+    }
+  ]
+}

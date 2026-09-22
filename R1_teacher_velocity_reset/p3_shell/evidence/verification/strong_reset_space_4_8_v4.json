@@ -1,0 +1,70 @@
+{
+  "training_eligible": false,
+  "r1_complete": false,
+  "generated_training_samples": 0,
+  "validator_sha256": "7c830e635568183133a60a05437ce71707e61a5c2c40b53b14adcfcb734bdc66",
+  "runs": [
+    {
+      "run": "20260909_strong_reset_m4_s128_v4",
+      "verified": true,
+      "intervals": 384,
+      "states": 385,
+      "max_force_residual_limit_ratio": 0.2244583222958154,
+      "max_newmark_update_error_m": 1.3877787807814457e-17,
+      "energy_ledger_error_j": -2.593106664724315e-17,
+      "energy_balance_j": -3.2902438812559095e-07,
+      "removed_kinetic_j": 0.17755340071901454,
+      "sampled_max_normal_rotation_rad": 0.2540368050078525,
+      "sampled_max_nodal_displacement_m": 0.07273561806970873,
+      "sampled_max_strain_component": 0.006224545654787916,
+      "sampled_min_area_ratio": 0.9958726270526115,
+      "manifest_sha256": "99ddf2adf786b8fe7a2bcc14c6ce6574a447b95d514835b2bbe888837c54613b"
+    },
+    {
+      "run": "20260909_strong_reset_m8_s128_v4",
+      "verified": true,
+      "intervals": 384,
+      "states": 385,
+      "max_force_residual_limit_ratio": 0.006937658992532035,
+      "max_newmark_update_error_m": 1.3877787807814457e-17,
+      "energy_ledger_error_j": -1.3012120135720562e-17,
+      "energy_balance_j": -1.7646043085939005e-08,
+      "removed_kinetic_j": 0.17937998467341812,
+      "sampled_max_normal_rotation_rad": 0.26257012201081575,
+      "sampled_max_nodal_displacement_m": 0.07303039168249408,
+      "sampled_max_strain_component": 0.002605927890409143,
+      "sampled_min_area_ratio": 0.998675201172953,
+      "manifest_sha256": "c5f6d4a623834da54981853eac6563d2cc4801a9f16a45ce8945a0a3efb10e7b"
+    }
+  ],
+  "comparison": {
+    "first": "20260909_strong_reset_m4_s128_v4",
+    "second": "20260909_strong_reset_m8_s128_v4",
+    "errors": {
+      "u_m": {
+        "relative": 0.024415642750442678,
+        "absolute_rms_peak": 0.0011583167632542724,
+        "reference_peak": 0.04744158386873805
+      },
+      "v_m_s": {
+        "relative": 0.07312009395872432,
+        "absolute_rms_peak": 0.14123849148630033,
+        "reference_peak": 1.9315961432712092
+      },
+      "delta_u_m": {
+        "relative": 0.024415642750442678,
+        "absolute_rms_peak": 0.0011583167632542724,
+        "reference_peak": 0.04744158386873805
+      }
+    },
+    "producer_source_differences": [],
+    "physics_sources_equal": true,
+    "comparison_axes": [
+      "space"
+    ],
+    "isolated_axis": true,
+    "threshold_relative": 0.01,
+    "sampled_response_threshold_passed": false,
+    "scope": "동일 입력/초기 계열의 공통 저장 시각. 연속 시간 상한과 R1 채택 판정은 아님"
+  }
+}

@@ -1,0 +1,320 @@
+{
+  "schema": "cloth_refine64_preparation_validation_v1",
+  "checked_on": "2026-09-13",
+  "prepared_run": "experiments/artifacts/runs/teacher_timestep_search/20260913_cloth_bend001_refine64_4s_v1",
+  "manifest_sha256": "d5c7f9cee6144b6ebd711a2c88707128db525159cd7d5bb179cd70bbef5b6e8f",
+  "frozen_files": 184,
+  "main_simulation_started": false,
+  "main_status": {
+    "reference_rectangle": "ready",
+    "triangular_flag": "ready",
+    "handkerchief": "ready"
+  },
+  "tests": {
+    "comparison_stream_and_diagnostic_cpu": 5,
+    "owned_worker_interrupt": 3,
+    "bash_syntax": true,
+    "python_compile": true
+  },
+  "smoke_runs": [
+    {
+      "path": "experiments/artifacts/runs/teacher_timestep_search/20260913_cloth_refine64_smoke_v2",
+      "manifest_sha256": "2331f7b451195ca16f9281a88299f1a229cb2603bf9b57b3280eb67bde347ee6",
+      "comparison_sha256": "3fd3bb62d66e5361028e54b090e31d53b737f937db0772be898095362a15becd",
+      "scenes": {
+        "reference_rectangle": {
+          "completed_frames": 2,
+          "audit": {
+            "substeps": 128,
+            "maxima": {
+              "force_ratio": 0.2629861231514798,
+              "update_error_m": 2.343143966103447e-22,
+              "energy_ledger_error_j": 5.331437541845686e-26,
+              "projected_gradient_upper": 2.564467041716458e-10,
+              "strain_component_upper": 1.242808078671942e-10,
+              "engineering_curvature_component_upper_inv_m": 0.0009418552550983579
+            },
+            "warning_counts": {
+              "nonfinite": 0,
+              "force_residual": 0,
+              "position_update": 0,
+              "energy_ledger": 0,
+              "geometry_bound_unresolved": 0,
+              "pin_drift": 0
+            }
+          },
+          "trajectory": {
+            "frames": 2,
+            "substeps": 128,
+            "position_max_m": 1.4599914688648525e-17,
+            "position_rms_m": 1.6895373024242128e-18,
+            "velocity_max_m_s": 4.899016716939061e-13,
+            "velocity_rms_m_s": 5.0581755937042927e-14,
+            "new_max_displacement_m": 9.864182781346473e-07
+          },
+          "adaptive_counts": {
+            "linear_calls": 128,
+            "correction_solves": 191,
+            "accepted_without_gmres": 128,
+            "fallback_calls": 0,
+            "fallback_iterations": 0,
+            "fp64_refactorizations": 0,
+            "matrix_builds": 2,
+            "stagnations": 0,
+            "budget_exhaustions": 0,
+            "skipped_after_failure": 0
+          },
+          "solver_warning_counts": {},
+          "solver_graph_inventory": {
+            "step": {
+              "kernels": 5961,
+              "device_copies": 622,
+              "memsets": 1150,
+              "children": 10,
+              "host_copies": 0,
+              "host_callbacks": 0,
+              "conditionals": 25,
+              "conditional_bodies": 25
+            },
+            "frame": {
+              "kernels": 5,
+              "device_copies": 1,
+              "memsets": 2,
+              "children": 0,
+              "host_copies": 0,
+              "host_callbacks": 0,
+              "conditionals": 0,
+              "conditional_bodies": 0
+            }
+          },
+          "report_sha256": "072959079560a2e98c5aa7515cff1a14724c2689e1ff776721415ae2f9b52b8d"
+        },
+        "triangular_flag": {
+          "completed_frames": 2,
+          "audit": {
+            "substeps": 128,
+            "maxima": {
+              "force_ratio": 0.1450116763279708,
+              "update_error_m": 2.457012848137226e-22,
+              "energy_ledger_error_j": 5.169878828456423e-26,
+              "projected_gradient_upper": 2.7680572273767455e-10,
+              "strain_component_upper": 1.9338197709828364e-10,
+              "engineering_curvature_component_upper_inv_m": 0.0006418698096784501
+            },
+            "warning_counts": {
+              "nonfinite": 0,
+              "force_residual": 0,
+              "position_update": 0,
+              "energy_ledger": 0,
+              "geometry_bound_unresolved": 0,
+              "pin_drift": 0
+            }
+          },
+          "trajectory": {
+            "frames": 2,
+            "substeps": 128,
+            "position_max_m": 4.055567698175808e-17,
+            "position_rms_m": 1.9360298109352625e-18,
+            "velocity_max_m_s": 7.387767779229918e-13,
+            "velocity_rms_m_s": 4.391604992077799e-14,
+            "new_max_displacement_m": 1.0766514342588656e-06
+          },
+          "adaptive_counts": {
+            "linear_calls": 128,
+            "correction_solves": 190,
+            "accepted_without_gmres": 128,
+            "fallback_calls": 0,
+            "fallback_iterations": 0,
+            "fp64_refactorizations": 0,
+            "matrix_builds": 2,
+            "stagnations": 0,
+            "budget_exhaustions": 0,
+            "skipped_after_failure": 0
+          },
+          "solver_warning_counts": {},
+          "solver_graph_inventory": {
+            "step": {
+              "kernels": 5612,
+              "device_copies": 592,
+              "memsets": 1090,
+              "children": 10,
+              "host_copies": 0,
+              "host_callbacks": 0,
+              "conditionals": 25,
+              "conditional_bodies": 25
+            },
+            "frame": {
+              "kernels": 5,
+              "device_copies": 1,
+              "memsets": 2,
+              "children": 0,
+              "host_copies": 0,
+              "host_callbacks": 0,
+              "conditionals": 0,
+              "conditional_bodies": 0
+            }
+          },
+          "report_sha256": "f9af924dea3180117b31892797cfc382eb2ff95ceee6f130b7fdb2ff0ea48584"
+        },
+        "handkerchief": {
+          "completed_frames": 2,
+          "audit": {
+            "substeps": 128,
+            "maxima": {
+              "force_ratio": 0.10579561300805022,
+              "update_error_m": 1.8570598835136355e-22,
+              "energy_ledger_error_j": 2.5849394142282115e-26,
+              "projected_gradient_upper": 2.601005696229884e-10,
+              "strain_component_upper": 1.454111275833725e-10,
+              "engineering_curvature_component_upper_inv_m": 0.0006855997928520741
+            },
+            "warning_counts": {
+              "nonfinite": 0,
+              "force_residual": 0,
+              "position_update": 0,
+              "energy_ledger": 0,
+              "geometry_bound_unresolved": 0,
+              "pin_drift": 0
+            }
+          },
+          "trajectory": {
+            "frames": 2,
+            "substeps": 128,
+            "position_max_m": 2.0826800616009032e-17,
+            "position_rms_m": 2.1546905041589897e-18,
+            "velocity_max_m_s": 4.271995894557235e-13,
+            "velocity_rms_m_s": 5.454274884968195e-14,
+            "new_max_displacement_m": 9.905889971064904e-07
+          },
+          "adaptive_counts": {
+            "linear_calls": 128,
+            "correction_solves": 191,
+            "accepted_without_gmres": 128,
+            "fallback_calls": 0,
+            "fallback_iterations": 0,
+            "fp64_refactorizations": 0,
+            "matrix_builds": 2,
+            "stagnations": 0,
+            "budget_exhaustions": 0,
+            "skipped_after_failure": 0
+          },
+          "solver_warning_counts": {},
+          "solver_graph_inventory": {
+            "step": {
+              "kernels": 5847,
+              "device_copies": 616,
+              "memsets": 1138,
+              "children": 10,
+              "host_copies": 0,
+              "host_callbacks": 0,
+              "conditionals": 25,
+              "conditional_bodies": 25
+            },
+            "frame": {
+              "kernels": 5,
+              "device_copies": 1,
+              "memsets": 2,
+              "children": 0,
+              "host_copies": 0,
+              "host_callbacks": 0,
+              "conditionals": 0,
+              "conditional_bodies": 0
+            }
+          },
+          "report_sha256": "04465b7e454f30d5d520e6bf21f6a4ffb2acca511f6cc72c3ebc1af7a8a33b19"
+        }
+      }
+    },
+    {
+      "path": "experiments/artifacts/runs/teacher_timestep_search/20260913_cloth_refine64_smoke_v3",
+      "manifest_sha256": "752654b62fb5f21378dccd117f29d8fba4bbac3410ddc249b33147b84a737243",
+      "comparison_sha256": "c914818187327692ac40375bc18a3cc33b3d9170d1c46f416c69023dd1f7915f",
+      "scenes": {
+        "handkerchief": {
+          "completed_frames": 2,
+          "audit": {
+            "substeps": 128,
+            "maxima": {
+              "force_ratio": 0.10572681988494531,
+              "update_error_m": 1.7160859241226912e-22,
+              "energy_ledger_error_j": 1.0339757656912846e-25,
+              "projected_gradient_upper": 2.6010126842645503e-10,
+              "strain_component_upper": 1.4541068349416264e-10,
+              "engineering_curvature_component_upper_inv_m": 0.0006855997928523042
+            },
+            "warning_counts": {
+              "nonfinite": 0,
+              "force_residual": 0,
+              "position_update": 0,
+              "energy_ledger": 0,
+              "geometry_bound_unresolved": 0,
+              "pin_drift": 0
+            }
+          },
+          "trajectory": {
+            "frames": 2,
+            "substeps": 128,
+            "position_max_m": 1.8681480604915932e-17,
+            "position_rms_m": 2.1085534641920725e-18,
+            "velocity_max_m_s": 5.064889110817643e-13,
+            "velocity_rms_m_s": 5.497757729779053e-14,
+            "new_max_displacement_m": 9.905889971065e-07
+          },
+          "adaptive_counts": {
+            "linear_calls": 128,
+            "correction_solves": 191,
+            "accepted_without_gmres": 128,
+            "fallback_calls": 0,
+            "fallback_iterations": 0,
+            "fp64_refactorizations": 0,
+            "matrix_builds": 2,
+            "stagnations": 0,
+            "budget_exhaustions": 0,
+            "skipped_after_failure": 0
+          },
+          "solver_warning_counts": {},
+          "solver_graph_inventory": {
+            "step": {
+              "kernels": 5847,
+              "device_copies": 616,
+              "memsets": 1138,
+              "children": 10,
+              "host_copies": 0,
+              "host_callbacks": 0,
+              "conditionals": 25,
+              "conditional_bodies": 25
+            },
+            "frame": {
+              "kernels": 5,
+              "device_copies": 1,
+              "memsets": 2,
+              "children": 0,
+              "host_copies": 0,
+              "host_callbacks": 0,
+              "conditionals": 0,
+              "conditional_bodies": 0
+            }
+          },
+          "report_sha256": "7b54e585d3fe30476f48f5b70847889ad5a5b36d7fbd14588371aa43b1851075"
+        }
+      }
+    }
+  ],
+  "scope": "기능 연결·독립 검산·자동 비교 확인. 본4초 성능/장기 안정성 미측정. 짧은 검증 시간은 속도 채택 근거가 아님",
+  "preserved_incomplete_run": {
+    "path": "experiments/artifacts/runs/teacher_timestep_search/20260913_cloth_refine64_smoke_v1",
+    "condition": "이전 동결 코드에서 새 masked 기록 커널 누락",
+    "result": "세 worker가 첫 프레임 처리 중 예외, 확정0프레임",
+    "resolution": "원본을 보존하고 명시적 overlay에 resident_cloth_recording을 포함한 새 run으로 검증"
+  },
+  "git_fetch": false,
+  "commit": false,
+  "push": false,
+  "source_files_sha256": {
+    "code/wind3dgs/evaluation/teacher_cloth_refine_compare.py": "0ef7a6055c1d4b34d8751465bb4576930cfbb8ee64e7dcd1eda20843b2fabbf9",
+    "code/wind3dgs/evaluation/teacher_cloth_gpu_sweep.py": "8497b861bdd8657cc1f21d2daddb06ee094f0a119a2dc91369ea9aa641271bea",
+    "code/wind3dgs/teacher/resident_cloth_diagnostics.py": "2877c48c2ad811165218dccdd4a4513c4eb6ad8463a7b32864dae48db7be31cf",
+    "code/tests/test_cloth_refine_compare.py": "0077002821d4e33aad4c57ee67f5b339e0c81ab1cbcaf7dba807deccfc93331b",
+    "experiments/R1_teacher_velocity_reset/timestep_search/run_cloth_refine64_4s.sh": "71f238f432a0ae6cc17bc4933ed2872add70db2b7db8a4862e695313c9ea256a"
+  }
+}

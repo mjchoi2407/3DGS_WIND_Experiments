@@ -1,0 +1,17 @@
+{
+  "date": "2026-09-11",
+  "unit_tests": {
+    "module": "test_teacher_p3_shell_exponential",
+    "passed": 12,
+    "command": "PYTHONPATH=code OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python -m unittest discover -s code/tests -p test_teacher_p3_shell_exponential.py"
+  },
+  "scope": "해석적3kHz 진동, 비선형2/3/4차 수렴, 비대각 질량, 지수 작용의 독립 dense 비교, Gauss 경로 보정과 독립 ODE 비교, P3 n=4 CPU의 exprb32/결합 후보 hi/lo 저장·재시작 등",
+  "restart_limits": {
+    "u_m": 1e-16,
+    "v_m_s": 1e-12
+  },
+  "restart_n32_complete": false,
+  "continuous_geometry_verified": false,
+  "full_curve_accuracy_verified": false,
+  "training_eligible": false
+}

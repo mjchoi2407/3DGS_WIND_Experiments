@@ -1,0 +1,1474 @@
+{
+  "date": "2026-09-13",
+  "scope": "굽힘1/100 손수건; 각10프레임/640단계; 기준·stable·최종metric은 전체 실행, 중간normal·geometry는 동일 상태 GPU 대조만 수행",
+  "runs": {
+    "legacy": {
+      "run": "experiments/artifacts/runs/teacher_precision_compare/20260913_four_precision_diagnostic_v2",
+      "manifest_sha256": "ca95c5e44df4bc08256aff2f5ac4ec4492898f980cdb73ff5dd86de1efb4f326",
+      "verified_input_files": 660,
+      "config": {
+        "case": "bend_001",
+        "shape": "handkerchief",
+        "frames": 10,
+        "first_frame": 0,
+        "source": "experiments/artifacts/runs/sub_pc/20260912T223433Z-aca6fc4223714a02a9fe8afe7f4edeef/bend_001",
+        "dt_s": 0.00026041666666666666,
+        "official_policy": {
+          "force_atol_n": 1e-10,
+          "force_rtol": 1e-09,
+          "displacement_atol_m": 1e-12,
+          "displacement_rtol": 1e-09,
+          "linear_rtol": 1e-10,
+          "max_newton": 15,
+          "linear_cycles": 3,
+          "line_search_steps": 12,
+          "linear_restart": 240,
+          "linear_preconditioner": "current"
+        },
+        "scope": "GPU 반복 계산 FP32/FP64 비교; CPU 모델·구적/초기 행렬 준비는 공통 FP64. 독립 진단은 FP64/longdouble.",
+        "precision_lanes": [
+          "reference_hilo",
+          "fp32_hilo",
+          "fp64",
+          "fp32"
+        ],
+        "mode": "diagnostic",
+        "tolerance_policy": "기준값 유지; 진단 모드에서는 유한한 미수렴/정확도 초과를 경고로 기록하고 마지막 채택 후보로 진행. 비유한/계산 불능은 종료.",
+        "geometry_policy": "원본 visual 예외 미승계; 본 실험은 솔버 진단이며 기하 인증·학습 적격성 없음",
+        "training_eligible": false,
+        "r1_complete": false
+      },
+      "probes": {},
+      "comparison_sha256": "340880a7b9530aba14d43382d1d0334454e7631af8208b49f19cbd70c93754ce",
+      "trajectory": {
+        "fp32_hilo_vs_reference_hilo": {
+          "common_advanced_steps": 640,
+          "moving_common_steps": 576,
+          "common_warning_steps": 573,
+          "interpretation": "경고 포함 진단 궤적 비교이며 엄격 검산 통과를 뜻하지 않습니다.",
+          "time_s": 0.16666666666666666,
+          "max_position_component_difference_m": 8.492514640946798e-06,
+          "max_velocity_component_difference_m_s": 0.00017349385050283942,
+          "max_area_weighted_position_rms_m": 1.262383074045051e-06,
+          "max_area_weighted_velocity_rms_m_s": 4.8482263116535335e-05
+        },
+        "fp32_vs_fp64": {
+          "common_advanced_steps": 640,
+          "moving_common_steps": 576,
+          "common_warning_steps": 573,
+          "interpretation": "경고 포함 진단 궤적 비교이며 엄격 검산 통과를 뜻하지 않습니다.",
+          "time_s": 0.16666666666666666,
+          "max_position_component_difference_m": 8.49337090603748e-06,
+          "max_velocity_component_difference_m_s": 0.000175049673245279,
+          "max_area_weighted_position_rms_m": 1.2623633576313861e-06,
+          "max_area_weighted_velocity_rms_m_s": 4.8355326631704736e-05
+        }
+      },
+      "independent_analysis_errors": 0,
+      "lanes": {
+        "reference_hilo": {
+          "status": "complete",
+          "advanced_steps": 640,
+          "warning_steps": 0,
+          "warning_counts": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "7": 0,
+            "8": 0
+          },
+          "report_sha256": "c30c2cc4cea1b25dcbca8da3b13af9b9a77bfb6ab621916684025dade2078d03",
+          "verified_raw_files": 10,
+          "compute_record_s": 42.921004350995645,
+          "linear_iterations": 2887,
+          "max_abs_independent_force_residual_n": 1.1003430599042673e-11,
+          "max_abs_independent_force_ratio_official": 0.10958891800864316,
+          "max_abs_independent_update_error_m": 1.0505193779423451e-22,
+          "max_abs_independent_energy_balance_residual_j": 8.122008745855048e-15,
+          "max_abs_energy_ledger_difference_j": 3.40136667881805e-21,
+          "max_abs_assembly_relative_error": 4.2839047067147935e-16,
+          "max_abs_pinned_state_max": 0.0,
+          "final_state_metrics": {
+            "kinetic_energy_j": 1.7355954529417827e-05,
+            "elastic_energy_j": 3.857207132580575e-07,
+            "max_strain_component": 3.448195346923717e-05
+          }
+        },
+        "fp32_hilo": {
+          "status": "complete",
+          "advanced_steps": 640,
+          "warning_steps": 573,
+          "warning_counts": {
+            "1": 229,
+            "2": 2,
+            "3": 342,
+            "7": 130,
+            "8": 201
+          },
+          "report_sha256": "e4dcddcdc0a2a1a18deaeba0754cd2d1f44c61f9f7b7488880da87ee197c8e10",
+          "verified_raw_files": 10,
+          "compute_record_s": 116.49761481001042,
+          "linear_iterations": 13270,
+          "max_abs_independent_force_residual_n": 0.0002524775035257298,
+          "max_abs_independent_force_ratio_official": 2503679.176868401,
+          "max_abs_independent_update_error_m": 3.9312763124746556e-13,
+          "max_abs_independent_energy_balance_residual_j": 8.215166832212985e-11,
+          "max_abs_energy_ledger_difference_j": 3.796547558948719e-12,
+          "max_abs_assembly_relative_error": 1.8251893152410048e-07,
+          "max_abs_pinned_state_max": 0.0,
+          "final_state_metrics": {
+            "kinetic_energy_j": 1.7338813579090273e-05,
+            "elastic_energy_j": 3.851400158113985e-07,
+            "max_strain_component": 3.453196635983952e-05
+          }
+        },
+        "fp64": {
+          "status": "complete",
+          "advanced_steps": 640,
+          "warning_steps": 0,
+          "warning_counts": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "7": 0,
+            "8": 0
+          },
+          "report_sha256": "c5f165b086dfc7060d4acc7c350469f83e5986dddc685a96610451f382422084",
+          "verified_raw_files": 10,
+          "compute_record_s": 9.732218389981426,
+          "linear_iterations": 2887,
+          "max_abs_independent_force_residual_n": 1.1013473326608582e-11,
+          "max_abs_independent_force_ratio_official": 0.10968893878288237,
+          "max_abs_independent_update_error_m": 3.5201291352653507e-19,
+          "max_abs_independent_energy_balance_residual_j": 8.122022457200881e-15,
+          "max_abs_energy_ledger_difference_j": 8.470329472543003e-22,
+          "max_abs_assembly_relative_error": 4.2312590182052864e-16,
+          "max_abs_pinned_state_max": 0.0,
+          "final_state_metrics": {
+            "kinetic_energy_j": 1.7355954529417827e-05,
+            "elastic_energy_j": 3.8572071325804746e-07,
+            "max_strain_component": 3.4481953468531705e-05
+          }
+        },
+        "fp32": {
+          "status": "complete",
+          "advanced_steps": 640,
+          "warning_steps": 573,
+          "warning_counts": {
+            "1": 269,
+            "2": 2,
+            "3": 302,
+            "7": 129,
+            "8": 553
+          },
+          "report_sha256": "8a83e21e471209421c36f8cb39a28a246cbdf32edde0fb3a4201aa20737edcb1",
+          "verified_raw_files": 10,
+          "compute_record_s": 45.64758150599664,
+          "linear_iterations": 15382,
+          "max_abs_independent_force_residual_n": 0.0002525961553605518,
+          "max_abs_independent_force_ratio_official": 2493406.2971367687,
+          "max_abs_independent_update_error_m": 1.782609615475932e-10,
+          "max_abs_independent_energy_balance_residual_j": 8.281012221389779e-11,
+          "max_abs_energy_ledger_difference_j": 3.748193856397611e-12,
+          "max_abs_assembly_relative_error": 1.9618960322986823e-07,
+          "max_abs_pinned_state_max": 0.0,
+          "final_state_metrics": {
+            "kinetic_energy_j": 1.7338812832852742e-05,
+            "elastic_energy_j": 3.8513850115346626e-07,
+            "max_strain_component": 3.455590179997299e-05
+          }
+        }
+      }
+    },
+    "stable": {
+      "run": "experiments/artifacts/runs/teacher_precision_compare/20260913_stable_strain_v1",
+      "manifest_sha256": "233f230204f2ff19c3b69ae3ab53e4872eee271624a619312bbbb968a27c309f",
+      "verified_input_files": 664,
+      "config": {
+        "case": "bend_001",
+        "shape": "handkerchief",
+        "frames": 10,
+        "first_frame": 0,
+        "source": "experiments/artifacts/runs/sub_pc/20260912T223433Z-aca6fc4223714a02a9fe8afe7f4edeef/bend_001",
+        "dt_s": 0.00026041666666666666,
+        "official_policy": {
+          "force_atol_n": 1e-10,
+          "force_rtol": 1e-09,
+          "displacement_atol_m": 1e-12,
+          "displacement_rtol": 1e-09,
+          "linear_rtol": 1e-10,
+          "max_newton": 15,
+          "linear_cycles": 3,
+          "line_search_steps": 12,
+          "linear_restart": 240,
+          "linear_preconditioner": "current"
+        },
+        "scope": "GPU 반복 계산 FP32/FP64 비교; CPU 모델·구적/초기 행렬 준비는 공통 FP64. 독립 진단은 FP64/longdouble.",
+        "precision_lanes": [
+          "reference_hilo",
+          "fp32_hilo",
+          "fp64",
+          "fp32"
+        ],
+        "mode": "diagnostic",
+        "tolerance_policy": "기준값 유지; 진단 모드에서는 유한한 미수렴/정확도 초과를 경고로 기록하고 마지막 채택 후보로 진행. 비유한/계산 불능은 종료.",
+        "geometry_policy": "원본 visual 예외 미승계; 본 실험은 솔버 진단이며 기하 인증·학습 적격성 없음",
+        "training_eligible": false,
+        "r1_complete": false,
+        "strain_formula_fp32": "stable"
+      },
+      "probes": {
+        "probe_components_fp32.json": {
+          "sha256": "5f62fedd23f4bb249d93403e7bd9e5d4828b1334bb036f542fdbcae27a154d1d",
+          "data": {
+            "run": "experiments/artifacts/runs/teacher_precision_compare/20260913_stable_strain_v1",
+            "lane": "fp32",
+            "strain_formula": "stable",
+            "gpu": "NVIDIA GeForce GTX 1080 Ti",
+            "script_sha256": "84a8db690d0e2ef6744ca4a442d0017cb60ea6e025215b14f0f3d4ae5486392d",
+            "samples": [
+              {
+                "frame": 0,
+                "source_sha256": "3a64e1c8f9dae7fdeddaf757b8f8bd89b7a834e6ba01cb38ea7dd83c704a7dd9",
+                "force_error_n": 0.0,
+                "reference_force_n": 0.0,
+                "energy_error_j": 0.0,
+                "reference_energy_j": 0.0,
+                "hvp_relative_error": 9.680302033660245e-08,
+                "max_strain_component": 0.0,
+                "rounded_input_force_error_n": 0.0,
+                "arithmetic_force_error_n": 0.0,
+                "volume_force_error_n": 0.0,
+                "edge_force_error_n": 0.0
+              },
+              {
+                "frame": 1,
+                "source_sha256": "263c12468fc261d043fc63ea05935524fe181452710439f137cd56b320c1e890",
+                "force_error_n": 2.601363500722738e-10,
+                "reference_force_n": 1.8945078396909843e-06,
+                "energy_error_j": 2.963573227357464e-19,
+                "reference_energy_j": 1.757716014125161e-12,
+                "hvp_relative_error": 9.950054777736778e-08,
+                "max_strain_component": 6.512222705534754e-11,
+                "rounded_input_force_error_n": 2.5823341561669836e-10,
+                "arithmetic_force_error_n": 4.106517708916837e-11,
+                "volume_force_error_n": 7.913265754208204e-11,
+                "edge_force_error_n": 2.0516814284682706e-10
+              },
+              {
+                "frame": 5,
+                "source_sha256": "b52a4afc45bd8ea023aa8720b6b369c4bb76773c87dcdbcce23f15fd11a5fe3e",
+                "force_error_n": 6.390700732778309e-08,
+                "reference_force_n": 5.3530963540007395e-05,
+                "energy_error_j": 1.2450046078756002e-15,
+                "reference_energy_j": 9.826841919525162e-09,
+                "hvp_relative_error": 9.747342133035678e-08,
+                "max_strain_component": 6.577886892955576e-07,
+                "rounded_input_force_error_n": 6.356323946747737e-08,
+                "arithmetic_force_error_n": 5.664089886872591e-09,
+                "volume_force_error_n": 1.9163600291733728e-08,
+                "edge_force_error_n": 5.0815398410010934e-08
+              },
+              {
+                "frame": 9,
+                "source_sha256": "ed2e8c4714899a1ce619f9159854aeca2424f7b1e57ace2854c095a154d3d6a4",
+                "force_error_n": 5.396575997180889e-07,
+                "reference_force_n": 0.0001980184355539374,
+                "energy_error_j": 8.248999932832044e-14,
+                "reference_energy_j": 3.857207132580575e-07,
+                "hvp_relative_error": 1.0420220913692621e-07,
+                "max_strain_component": 3.448195639066398e-05,
+                "rounded_input_force_error_n": 5.363423196143153e-07,
+                "arithmetic_force_error_n": 4.4789117828404495e-08,
+                "volume_force_error_n": 2.678306450548589e-07,
+                "edge_force_error_n": 3.8942063487819553e-07
+              }
+            ],
+            "rotation": {
+              "angle_rad": 1.7,
+              "force_relative_error": 0.006230284711470456,
+              "hvp_relative_error": 1.4265806328757734e-07,
+              "note": "고정 경계 모델의 같은 회전 입력 대조; 무응력 강체 회전 판정은 아님"
+            },
+            "hvp_relative_test_tolerance": 1e-05
+          }
+        },
+        "probe_components_fp32_hilo.json": {
+          "sha256": "8944a3bcb6336a4ed5ffac68003c057dc30202b0ae2fb17fca22d76a19ef3368",
+          "data": {
+            "run": "experiments/artifacts/runs/teacher_precision_compare/20260913_stable_strain_v1",
+            "lane": "fp32_hilo",
+            "strain_formula": "stable",
+            "gpu": "NVIDIA GeForce GTX 1080 Ti",
+            "script_sha256": "84a8db690d0e2ef6744ca4a442d0017cb60ea6e025215b14f0f3d4ae5486392d",
+            "samples": [
+              {
+                "frame": 0,
+                "source_sha256": "3a64e1c8f9dae7fdeddaf757b8f8bd89b7a834e6ba01cb38ea7dd83c704a7dd9",
+                "force_error_n": 0.0,
+                "reference_force_n": 0.0,
+                "energy_error_j": 0.0,
+                "reference_energy_j": 0.0,
+                "hvp_relative_error": 9.680302033660245e-08,
+                "max_strain_component": 0.0,
+                "rounded_input_force_error_n": 0.0,
+                "arithmetic_force_error_n": 0.0,
+                "volume_force_error_n": 0.0,
+                "edge_force_error_n": 0.0
+              },
+              {
+                "frame": 1,
+                "source_sha256": "263c12468fc261d043fc63ea05935524fe181452710439f137cd56b320c1e890",
+                "force_error_n": 2.4006164559455085e-11,
+                "reference_force_n": 1.8945078396909843e-06,
+                "energy_error_j": 2.8903329009904946e-20,
+                "reference_energy_j": 1.757716014125161e-12,
+                "hvp_relative_error": 9.950054777736778e-08,
+                "max_strain_component": 6.512222705534754e-11,
+                "rounded_input_force_error_n": 5.657196825857881e-18,
+                "arithmetic_force_error_n": 2.4006164027794702e-11,
+                "volume_force_error_n": 2.757265014104098e-12,
+                "edge_force_error_n": 2.2562063267970002e-11
+              },
+              {
+                "frame": 5,
+                "source_sha256": "b52a4afc45bd8ea023aa8720b6b369c4bb76773c87dcdbcce23f15fd11a5fe3e",
+                "force_error_n": 3.0311256799714737e-09,
+                "reference_force_n": 5.3530963540007395e-05,
+                "energy_error_j": 3.56826188175475e-16,
+                "reference_energy_j": 9.826841919525162e-09,
+                "hvp_relative_error": 9.747342133035678e-08,
+                "max_strain_component": 6.577888598258141e-07,
+                "rounded_input_force_error_n": 1.5598794615278073e-15,
+                "arithmetic_force_error_n": 3.031125724678492e-09,
+                "volume_force_error_n": 3.94153879555511e-10,
+                "edge_force_error_n": 2.8513859601799654e-09
+              },
+              {
+                "frame": 9,
+                "source_sha256": "ed2e8c4714899a1ce619f9159854aeca2424f7b1e57ace2854c095a154d3d6a4",
+                "force_error_n": 2.801546711977759e-08,
+                "reference_force_n": 0.0001980184355539374,
+                "energy_error_j": 2.5646580467512427e-14,
+                "reference_energy_j": 3.857207132580575e-07,
+                "hvp_relative_error": 1.0420220913692621e-07,
+                "max_strain_component": 3.448195639066398e-05,
+                "rounded_input_force_error_n": 3.823560214451902e-14,
+                "arithmetic_force_error_n": 2.801546737800188e-08,
+                "volume_force_error_n": 1.135957541573104e-08,
+                "edge_force_error_n": 2.43036318892542e-08
+              }
+            ],
+            "rotation": {
+              "angle_rad": 1.7,
+              "force_relative_error": 0.004196591140073018,
+              "hvp_relative_error": 1.4265806328757734e-07,
+              "note": "고정 경계 모델의 같은 회전 입력 대조; 무응력 강체 회전 판정은 아님"
+            },
+            "hvp_relative_test_tolerance": 1e-05
+          }
+        },
+        "probe_fp32.json": {
+          "sha256": "072861864b8079a0a85ed0cf91d3e986ae8a6cc7a82e5fb07407e969de7ebb62",
+          "data": {
+            "run": "experiments/artifacts/runs/teacher_precision_compare/20260913_stable_strain_v1",
+            "lane": "fp32",
+            "strain_formula": "stable",
+            "gpu": "NVIDIA GeForce GTX 1080 Ti",
+            "script_sha256": "3a08c7eb70ffd8c362f35a8fd52a7e9ca6137ee5760999838b4ad681b24c2d0e",
+            "samples": [
+              {
+                "frame": 0,
+                "source_sha256": "3a64e1c8f9dae7fdeddaf757b8f8bd89b7a834e6ba01cb38ea7dd83c704a7dd9",
+                "force_error_n": 0.0,
+                "reference_force_n": 0.0,
+                "energy_error_j": 0.0,
+                "reference_energy_j": 0.0,
+                "hvp_relative_error": 9.680302033660245e-08,
+                "max_strain_component": 0.0
+              },
+              {
+                "frame": 1,
+                "source_sha256": "263c12468fc261d043fc63ea05935524fe181452710439f137cd56b320c1e890",
+                "force_error_n": 2.601363500722738e-10,
+                "reference_force_n": 1.8945078396909843e-06,
+                "energy_error_j": 2.963573227357464e-19,
+                "reference_energy_j": 1.757716014125161e-12,
+                "hvp_relative_error": 9.950054777736778e-08,
+                "max_strain_component": 6.512222705534754e-11
+              },
+              {
+                "frame": 5,
+                "source_sha256": "b52a4afc45bd8ea023aa8720b6b369c4bb76773c87dcdbcce23f15fd11a5fe3e",
+                "force_error_n": 6.390700732778309e-08,
+                "reference_force_n": 5.3530963540007395e-05,
+                "energy_error_j": 1.2450046078756002e-15,
+                "reference_energy_j": 9.826841919525162e-09,
+                "hvp_relative_error": 9.747342133035678e-08,
+                "max_strain_component": 6.577886892955576e-07
+              },
+              {
+                "frame": 9,
+                "source_sha256": "ed2e8c4714899a1ce619f9159854aeca2424f7b1e57ace2854c095a154d3d6a4",
+                "force_error_n": 5.396575997180889e-07,
+                "reference_force_n": 0.0001980184355539374,
+                "energy_error_j": 8.248999932832044e-14,
+                "reference_energy_j": 3.857207132580575e-07,
+                "hvp_relative_error": 1.0420220913692621e-07,
+                "max_strain_component": 3.448195639066398e-05
+              }
+            ],
+            "rotation": {
+              "angle_rad": 1.7,
+              "force_relative_error": 0.006230284711470456,
+              "hvp_relative_error": 1.4265806328757734e-07,
+              "note": "고정 경계 모델의 같은 회전 입력 대조; 무응력 강체 회전 판정은 아님"
+            },
+            "hvp_relative_test_tolerance": 1e-05
+          }
+        },
+        "probe_fp32_hilo.json": {
+          "sha256": "53ce466331229c85b70ee7843c292b6aa004b88dba5637be10ade0dce89152cb",
+          "data": {
+            "run": "experiments/artifacts/runs/teacher_precision_compare/20260913_stable_strain_v1",
+            "lane": "fp32_hilo",
+            "strain_formula": "stable",
+            "gpu": "NVIDIA GeForce GTX 1080 Ti",
+            "script_sha256": "3a08c7eb70ffd8c362f35a8fd52a7e9ca6137ee5760999838b4ad681b24c2d0e",
+            "samples": [
+              {
+                "frame": 0,
+                "source_sha256": "3a64e1c8f9dae7fdeddaf757b8f8bd89b7a834e6ba01cb38ea7dd83c704a7dd9",
+                "force_error_n": 0.0,
+                "reference_force_n": 0.0,
+                "energy_error_j": 0.0,
+                "reference_energy_j": 0.0,
+                "hvp_relative_error": 9.680302033660245e-08,
+                "max_strain_component": 0.0
+              },
+              {
+                "frame": 1,
+                "source_sha256": "263c12468fc261d043fc63ea05935524fe181452710439f137cd56b320c1e890",
+                "force_error_n": 2.4006164559455085e-11,
+                "reference_force_n": 1.8945078396909843e-06,
+                "energy_error_j": 2.8903329009904946e-20,
+                "reference_energy_j": 1.757716014125161e-12,
+                "hvp_relative_error": 9.950054777736778e-08,
+                "max_strain_component": 6.512222705534754e-11
+              },
+              {
+                "frame": 5,
+                "source_sha256": "b52a4afc45bd8ea023aa8720b6b369c4bb76773c87dcdbcce23f15fd11a5fe3e",
+                "force_error_n": 3.0311256799714737e-09,
+                "reference_force_n": 5.3530963540007395e-05,
+                "energy_error_j": 3.56826188175475e-16,
+                "reference_energy_j": 9.826841919525162e-09,
+                "hvp_relative_error": 9.747342133035678e-08,
+                "max_strain_component": 6.577888598258141e-07
+              },
+              {
+                "frame": 9,
+                "source_sha256": "ed2e8c4714899a1ce619f9159854aeca2424f7b1e57ace2854c095a154d3d6a4",
+                "force_error_n": 2.801546711977759e-08,
+                "reference_force_n": 0.0001980184355539374,
+                "energy_error_j": 2.5646580467512427e-14,
+                "reference_energy_j": 3.857207132580575e-07,
+                "hvp_relative_error": 1.0420220913692621e-07,
+                "max_strain_component": 3.448195639066398e-05
+              }
+            ],
+            "rotation": {
+              "angle_rad": 1.7,
+              "force_relative_error": 0.004196591140073018,
+              "hvp_relative_error": 1.4265806328757734e-07,
+              "note": "고정 경계 모델의 같은 회전 입력 대조; 무응력 강체 회전 판정은 아님"
+            },
+            "hvp_relative_test_tolerance": 1e-05
+          }
+        },
+        "probe_legacy_fp32.json": {
+          "sha256": "6cfa210db56b427a294bf463fac1ef6a1b5df58b6b9f140b27ee9b65d55c4c05",
+          "data": {
+            "run": "experiments/artifacts/runs/teacher_precision_compare/20260913_four_precision_diagnostic_v2",
+            "lane": "fp32",
+            "strain_formula": "legacy",
+            "gpu": "NVIDIA GeForce GTX 1080 Ti",
+            "script_sha256": "3a08c7eb70ffd8c362f35a8fd52a7e9ca6137ee5760999838b4ad681b24c2d0e",
+            "samples": [
+              {
+                "frame": 0,
+                "source_sha256": "3a64e1c8f9dae7fdeddaf757b8f8bd89b7a834e6ba01cb38ea7dd83c704a7dd9",
+                "force_error_n": 0.0,
+                "reference_force_n": 0.0,
+                "energy_error_j": 0.0,
+                "reference_energy_j": 0.0,
+                "hvp_relative_error": 9.680302033660245e-08,
+                "max_strain_component": 0.0
+              },
+              {
+                "frame": 1,
+                "source_sha256": "263c12468fc261d043fc63ea05935524fe181452710439f137cd56b320c1e890",
+                "force_error_n": 7.160979314321156e-09,
+                "reference_force_n": 1.8945078396909843e-06,
+                "energy_error_j": 2.963573227357464e-19,
+                "reference_energy_j": 1.757716014125161e-12,
+                "hvp_relative_error": 9.876617477018536e-08,
+                "max_strain_component": 3.980708124240451e-11
+              },
+              {
+                "frame": 5,
+                "source_sha256": "b52a4afc45bd8ea023aa8720b6b369c4bb76773c87dcdbcce23f15fd11a5fe3e",
+                "force_error_n": 0.00011610250571171549,
+                "reference_force_n": 5.3530963540007395e-05,
+                "energy_error_j": 7.217322290280263e-13,
+                "reference_energy_j": 9.826841919525162e-09,
+                "hvp_relative_error": 1.0045097166356699e-07,
+                "max_strain_component": 6.556510925292969e-07
+              },
+              {
+                "frame": 9,
+                "source_sha256": "ed2e8c4714899a1ce619f9159854aeca2424f7b1e57ace2854c095a154d3d6a4",
+                "force_error_n": 0.0002913920870908256,
+                "reference_force_n": 0.0001980184355539374,
+                "energy_error_j": 7.847166931754398e-12,
+                "reference_energy_j": 3.857207132580575e-07,
+                "hvp_relative_error": 1.0800034997302021e-07,
+                "max_strain_component": 3.4481952752685174e-05
+              }
+            ],
+            "rotation": {
+              "angle_rad": 1.7,
+              "force_relative_error": 0.00586284811677979,
+              "hvp_relative_error": 1.4329380290146832e-07,
+              "note": "고정 경계 모델의 같은 회전 입력 대조; 무응력 강체 회전 판정은 아님"
+            },
+            "hvp_relative_test_tolerance": 1e-05
+          }
+        },
+        "probe_legacy_fp32_hilo.json": {
+          "sha256": "d976809f37901aa92d8b819e5fc7ae5c6e5c059f7c2c1f333e69312ffaf50699",
+          "data": {
+            "run": "experiments/artifacts/runs/teacher_precision_compare/20260913_four_precision_diagnostic_v2",
+            "lane": "fp32_hilo",
+            "strain_formula": "legacy",
+            "gpu": "NVIDIA GeForce GTX 1080 Ti",
+            "script_sha256": "3a08c7eb70ffd8c362f35a8fd52a7e9ca6137ee5760999838b4ad681b24c2d0e",
+            "samples": [
+              {
+                "frame": 0,
+                "source_sha256": "3a64e1c8f9dae7fdeddaf757b8f8bd89b7a834e6ba01cb38ea7dd83c704a7dd9",
+                "force_error_n": 0.0,
+                "reference_force_n": 0.0,
+                "energy_error_j": 0.0,
+                "reference_energy_j": 0.0,
+                "hvp_relative_error": 9.680302033660245e-08,
+                "max_strain_component": 0.0
+              },
+              {
+                "frame": 1,
+                "source_sha256": "263c12468fc261d043fc63ea05935524fe181452710439f137cd56b320c1e890",
+                "force_error_n": 7.156293354909747e-09,
+                "reference_force_n": 1.8945078396909843e-06,
+                "energy_error_j": 2.8903329009904946e-20,
+                "reference_energy_j": 1.757716014125161e-12,
+                "hvp_relative_error": 9.876617477018536e-08,
+                "max_strain_component": 3.980708124240451e-11
+              },
+              {
+                "frame": 5,
+                "source_sha256": "b52a4afc45bd8ea023aa8720b6b369c4bb76773c87dcdbcce23f15fd11a5fe3e",
+                "force_error_n": 0.0001161024767453493,
+                "reference_force_n": 5.3530963540007395e-05,
+                "energy_error_j": 7.226204074477265e-13,
+                "reference_energy_j": 9.826841919525162e-09,
+                "hvp_relative_error": 1.0045097166356699e-07,
+                "max_strain_component": 6.556510925292969e-07
+              },
+              {
+                "frame": 9,
+                "source_sha256": "ed2e8c4714899a1ce619f9159854aeca2424f7b1e57ace2854c095a154d3d6a4",
+                "force_error_n": 0.0002913599498252301,
+                "reference_force_n": 0.0001980184355539374,
+                "energy_error_j": 8.245070863780054e-12,
+                "reference_energy_j": 3.857207132580575e-07,
+                "hvp_relative_error": 1.0800034997302021e-07,
+                "max_strain_component": 3.4481952752685174e-05
+              }
+            ],
+            "rotation": {
+              "angle_rad": 1.7,
+              "force_relative_error": 0.003580617424136649,
+              "hvp_relative_error": 1.4329380290146832e-07,
+              "note": "고정 경계 모델의 같은 회전 입력 대조; 무응력 강체 회전 판정은 아님"
+            },
+            "hvp_relative_test_tolerance": 1e-05
+          }
+        }
+      },
+      "comparison_sha256": "3bc09d856efec44afc6a8f8b0d7dd4ff58fc2c64ff656d79b8a674ee8c360e56",
+      "trajectory": {
+        "fp32_hilo_vs_reference_hilo": {
+          "common_advanced_steps": 640,
+          "moving_common_steps": 576,
+          "common_warning_steps": 437,
+          "interpretation": "경고 포함 진단 궤적 비교이며 엄격 검산 통과를 뜻하지 않습니다.",
+          "time_s": 0.16666666666666666,
+          "max_position_component_difference_m": 8.489705580771601e-06,
+          "max_velocity_component_difference_m_s": 0.00017321331278442883,
+          "max_area_weighted_position_rms_m": 1.2623801870397133e-06,
+          "max_area_weighted_velocity_rms_m_s": 2.7100052685497446e-05
+        },
+        "fp32_vs_fp64": {
+          "common_advanced_steps": 640,
+          "moving_common_steps": 576,
+          "common_warning_steps": 553,
+          "interpretation": "경고 포함 진단 궤적 비교이며 엄격 검산 통과를 뜻하지 않습니다.",
+          "time_s": 0.16666666666666666,
+          "max_position_component_difference_m": 8.491042599599206e-06,
+          "max_velocity_component_difference_m_s": 0.00017441637389415537,
+          "max_area_weighted_position_rms_m": 1.2623398173345984e-06,
+          "max_area_weighted_velocity_rms_m_s": 2.712252242849067e-05
+        }
+      },
+      "independent_analysis_errors": 0,
+      "lanes": {
+        "reference_hilo": {
+          "status": "complete",
+          "advanced_steps": 640,
+          "warning_steps": 0,
+          "warning_counts": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "7": 0,
+            "8": 0
+          },
+          "report_sha256": "441dc68826f011d6e94784c3072fc19202a6ca03af2209b9c65082e7f3618741",
+          "verified_raw_files": 10,
+          "compute_record_s": 11.975421793933492,
+          "linear_iterations": 2884,
+          "max_abs_independent_force_residual_n": 1.102263308019755e-11,
+          "max_abs_independent_force_ratio_official": 0.10978016555766007,
+          "max_abs_independent_update_error_m": 1.04638347487958e-22,
+          "max_abs_independent_energy_balance_residual_j": 8.122042600703158e-15,
+          "max_abs_energy_ledger_difference_j": 2.6469779601696886e-23,
+          "max_abs_assembly_relative_error": 4.342450227299057e-16,
+          "max_abs_pinned_state_max": 0.0,
+          "final_state_metrics": {
+            "kinetic_energy_j": 1.7355954529417827e-05,
+            "elastic_energy_j": 3.857207132580428e-07,
+            "max_strain_component": 3.448195346868353e-05
+          }
+        },
+        "fp32_hilo": {
+          "status": "complete",
+          "advanced_steps": 640,
+          "warning_steps": 437,
+          "warning_counts": {
+            "1": 30,
+            "2": 102,
+            "3": 297,
+            "7": 75,
+            "8": 0
+          },
+          "report_sha256": "ba9dcbbd692f12f91facf27f6c75f8ba52292e600f1730ad5ab42b68894cfd52",
+          "verified_raw_files": 10,
+          "compute_record_s": 52.32200257893419,
+          "linear_iterations": 23700,
+          "max_abs_independent_force_residual_n": 2.845032732770691e-08,
+          "max_abs_independent_force_ratio_official": 282.12234434504023,
+          "max_abs_independent_update_error_m": 3.926444457070275e-13,
+          "max_abs_independent_energy_balance_residual_j": 8.273223981532514e-11,
+          "max_abs_energy_ledger_difference_j": 1.8440547763953333e-12,
+          "max_abs_assembly_relative_error": 1.848563329076569e-07,
+          "max_abs_pinned_state_max": 0.0,
+          "final_state_metrics": {
+            "kinetic_energy_j": 1.7338772627694908e-05,
+            "elastic_energy_j": 3.851047347800339e-07,
+            "max_strain_component": 3.4413453086009247e-05
+          }
+        },
+        "fp64": {
+          "status": "complete",
+          "advanced_steps": 640,
+          "warning_steps": 0,
+          "warning_counts": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "7": 0,
+            "8": 0
+          },
+          "report_sha256": "db42a9a4ce3e3a337e9d13bab8b478273bc81bc45ac18de203631413b51ecde7",
+          "verified_raw_files": 10,
+          "compute_record_s": 9.907800012035295,
+          "linear_iterations": 2886,
+          "max_abs_independent_force_residual_n": 1.1005251107561128e-11,
+          "max_abs_independent_force_ratio_official": 0.10960704940475342,
+          "max_abs_independent_update_error_m": 3.5834043162225946e-19,
+          "max_abs_independent_energy_balance_residual_j": 8.12202915405512e-15,
+          "max_abs_energy_ledger_difference_j": 3.3881317890172014e-21,
+          "max_abs_assembly_relative_error": 4.3348040872627547e-16,
+          "max_abs_pinned_state_max": 0.0,
+          "final_state_metrics": {
+            "kinetic_energy_j": 1.7355954529417827e-05,
+            "elastic_energy_j": 3.857207132580406e-07,
+            "max_strain_component": 3.448195346988454e-05
+          }
+        },
+        "fp32": {
+          "status": "complete",
+          "advanced_steps": 640,
+          "warning_steps": 553,
+          "warning_counts": {
+            "1": 413,
+            "2": 5,
+            "3": 0,
+            "7": 112,
+            "8": 548
+          },
+          "report_sha256": "bcab5b967c228daf7ed07d6832c798b439cc2b32783551a09bc1affb317402fd",
+          "verified_raw_files": 10,
+          "compute_record_s": 48.94539351685671,
+          "linear_iterations": 31567,
+          "max_abs_independent_force_residual_n": 1.4075837130617834e-07,
+          "max_abs_independent_force_ratio_official": 1395.804035427296,
+          "max_abs_independent_update_error_m": 2.0445440895865618e-10,
+          "max_abs_independent_energy_balance_residual_j": 8.267527158803891e-11,
+          "max_abs_energy_ledger_difference_j": 1.8439299679699097e-12,
+          "max_abs_assembly_relative_error": 1.8830903059097182e-07,
+          "max_abs_pinned_state_max": 0.0,
+          "final_state_metrics": {
+            "kinetic_energy_j": 1.733877336792665e-05,
+            "elastic_energy_j": 3.851047019018196e-07,
+            "max_strain_component": 3.441350136769789e-05
+          }
+        }
+      }
+    },
+    "normal": {
+      "run": "experiments/artifacts/runs/teacher_precision_compare/20260913_stable_normal_pair_v1",
+      "manifest_sha256": "d745fb0907822b659a407ff3eb3be296421a2dc31de2155dc627f5beb6f54825",
+      "verified_input_files": 668,
+      "config": {
+        "case": "bend_001",
+        "shape": "handkerchief",
+        "frames": 10,
+        "first_frame": 0,
+        "source": "experiments/artifacts/runs/sub_pc/20260912T223433Z-aca6fc4223714a02a9fe8afe7f4edeef/bend_001",
+        "dt_s": 0.00026041666666666666,
+        "official_policy": {
+          "force_atol_n": 1e-10,
+          "force_rtol": 1e-09,
+          "displacement_atol_m": 1e-12,
+          "displacement_rtol": 1e-09,
+          "linear_rtol": 1e-10,
+          "max_newton": 15,
+          "linear_cycles": 3,
+          "line_search_steps": 12,
+          "linear_restart": 240,
+          "linear_preconditioner": "current"
+        },
+        "scope": "GPU 반복 계산 FP32/FP64 비교; CPU 모델·구적/초기 행렬 준비는 공통 FP64. 독립 진단은 FP64/longdouble.",
+        "precision_lanes": [
+          "reference_hilo",
+          "fp32_hilo",
+          "fp64",
+          "fp32"
+        ],
+        "mode": "diagnostic",
+        "tolerance_policy": "기준값 유지; 진단 모드에서는 유한한 미수렴/정확도 초과를 경고로 기록하고 마지막 채택 후보로 진행. 비유한/계산 불능은 종료.",
+        "geometry_policy": "원본 visual 예외 미승계; 본 실험은 솔버 진단이며 기하 인증·학습 적격성 없음",
+        "training_eligible": false,
+        "r1_complete": false,
+        "strain_formula_fp32": "stable_normal_pair"
+      },
+      "probes": {
+        "probe_components_fp32.json": {
+          "sha256": "e3728d8516431e298a8d2b90f76533c668d47ad7d3f2b5efba3f427266dd653e",
+          "data": {
+            "run": "experiments/artifacts/runs/teacher_precision_compare/20260913_stable_normal_pair_v1",
+            "lane": "fp32",
+            "strain_formula": "stable_normal_pair",
+            "gpu": "NVIDIA GeForce GTX 1080 Ti",
+            "script_sha256": "84a8db690d0e2ef6744ca4a442d0017cb60ea6e025215b14f0f3d4ae5486392d",
+            "samples": [
+              {
+                "frame": 0,
+                "source_sha256": "3a64e1c8f9dae7fdeddaf757b8f8bd89b7a834e6ba01cb38ea7dd83c704a7dd9",
+                "force_error_n": 0.0,
+                "reference_force_n": 0.0,
+                "energy_error_j": 0.0,
+                "reference_energy_j": 0.0,
+                "hvp_relative_error": 9.680302033660245e-08,
+                "max_strain_component": 0.0,
+                "rounded_input_force_error_n": 0.0,
+                "arithmetic_force_error_n": 0.0,
+                "volume_force_error_n": 0.0,
+                "edge_force_error_n": 0.0
+              },
+              {
+                "frame": 1,
+                "source_sha256": "263c12468fc261d043fc63ea05935524fe181452710439f137cd56b320c1e890",
+                "force_error_n": 2.601350309299563e-10,
+                "reference_force_n": 1.8945078396909843e-06,
+                "energy_error_j": 2.963573227357464e-19,
+                "reference_energy_j": 1.757716014125161e-12,
+                "hvp_relative_error": 9.950054777736778e-08,
+                "max_strain_component": 6.512222705534754e-11,
+                "rounded_input_force_error_n": 2.5823341561669836e-10,
+                "arithmetic_force_error_n": 4.106517922565442e-11,
+                "volume_force_error_n": 7.913265754208204e-11,
+                "edge_force_error_n": 2.0516683159913665e-10
+              },
+              {
+                "frame": 5,
+                "source_sha256": "b52a4afc45bd8ea023aa8720b6b369c4bb76773c87dcdbcce23f15fd11a5fe3e",
+                "force_error_n": 6.38985097355918e-08,
+                "reference_force_n": 5.3530963540007395e-05,
+                "energy_error_j": 1.2450046078756002e-15,
+                "reference_energy_j": 9.826841919525162e-09,
+                "hvp_relative_error": 9.747342133035678e-08,
+                "max_strain_component": 6.577886892955576e-07,
+                "rounded_input_force_error_n": 6.356323946747737e-08,
+                "arithmetic_force_error_n": 5.614919350010357e-09,
+                "volume_force_error_n": 1.9163196568302764e-08,
+                "edge_force_error_n": 5.080778563751721e-08
+              },
+              {
+                "frame": 9,
+                "source_sha256": "ed2e8c4714899a1ce619f9159854aeca2424f7b1e57ace2854c095a154d3d6a4",
+                "force_error_n": 5.394746564112577e-07,
+                "reference_force_n": 0.0001980184355539374,
+                "energy_error_j": 1.1091170875872445e-13,
+                "reference_energy_j": 3.857207132580575e-07,
+                "hvp_relative_error": 1.0420220913692621e-07,
+                "max_strain_component": 3.448195639066398e-05,
+                "rounded_input_force_error_n": 5.363423196143153e-07,
+                "arithmetic_force_error_n": 4.424363961123286e-08,
+                "volume_force_error_n": 2.6783196094365987e-07,
+                "edge_force_error_n": 3.892063580394538e-07
+              }
+            ],
+            "rotation": {
+              "angle_rad": 1.7,
+              "force_relative_error": 0.006230286033397765,
+              "hvp_relative_error": 1.4265806328757734e-07,
+              "note": "고정 경계 모델의 같은 회전 입력 대조; 무응력 강체 회전 판정은 아님"
+            },
+            "hvp_relative_test_tolerance": 1e-05
+          }
+        },
+        "probe_components_fp32_hilo.json": {
+          "sha256": "10964c2b76cbf65c79ae0c60787877b5dbdc3386cbbffbf7d6a4e400faf878cc",
+          "data": {
+            "run": "experiments/artifacts/runs/teacher_precision_compare/20260913_stable_normal_pair_v1",
+            "lane": "fp32_hilo",
+            "strain_formula": "stable_normal_pair",
+            "gpu": "NVIDIA GeForce GTX 1080 Ti",
+            "script_sha256": "84a8db690d0e2ef6744ca4a442d0017cb60ea6e025215b14f0f3d4ae5486392d",
+            "samples": [
+              {
+                "frame": 0,
+                "source_sha256": "3a64e1c8f9dae7fdeddaf757b8f8bd89b7a834e6ba01cb38ea7dd83c704a7dd9",
+                "force_error_n": 0.0,
+                "reference_force_n": 0.0,
+                "energy_error_j": 0.0,
+                "reference_energy_j": 0.0,
+                "hvp_relative_error": 9.680302033660245e-08,
+                "max_strain_component": 0.0,
+                "rounded_input_force_error_n": 0.0,
+                "arithmetic_force_error_n": 0.0,
+                "volume_force_error_n": 0.0,
+                "edge_force_error_n": 0.0
+              },
+              {
+                "frame": 1,
+                "source_sha256": "263c12468fc261d043fc63ea05935524fe181452710439f137cd56b320c1e890",
+                "force_error_n": 2.427792089602583e-11,
+                "reference_force_n": 1.8945078396909843e-06,
+                "energy_error_j": 2.8903329009904946e-20,
+                "reference_energy_j": 1.757716014125161e-12,
+                "hvp_relative_error": 9.950054777736778e-08,
+                "max_strain_component": 6.512222705534754e-11,
+                "rounded_input_force_error_n": 5.657196825857881e-18,
+                "arithmetic_force_error_n": 2.4277920333599415e-11,
+                "volume_force_error_n": 2.757265014104098e-12,
+                "edge_force_error_n": 2.2800739072285813e-11
+              },
+              {
+                "frame": 5,
+                "source_sha256": "b52a4afc45bd8ea023aa8720b6b369c4bb76773c87dcdbcce23f15fd11a5fe3e",
+                "force_error_n": 2.9769173579909598e-09,
+                "reference_force_n": 5.3530963540007395e-05,
+                "energy_error_j": 2.1331830275757255e-15,
+                "reference_energy_j": 9.826841919525162e-09,
+                "hvp_relative_error": 9.747342133035678e-08,
+                "max_strain_component": 6.577888598258141e-07,
+                "rounded_input_force_error_n": 1.5598794615278073e-15,
+                "arithmetic_force_error_n": 2.9769174061052655e-09,
+                "volume_force_error_n": 3.900124436943513e-10,
+                "edge_force_error_n": 2.7790802876356586e-09
+              },
+              {
+                "frame": 9,
+                "source_sha256": "ed2e8c4714899a1ce619f9159854aeca2424f7b1e57ace2854c095a154d3d6a4",
+                "force_error_n": 2.6880586582757236e-08,
+                "reference_force_n": 0.0001980184355539374,
+                "energy_error_j": 2.5646580467512427e-14,
+                "reference_energy_j": 3.857207132580575e-07,
+                "hvp_relative_error": 1.0420220913692621e-07,
+                "max_strain_component": 3.448195639066398e-05,
+                "rounded_input_force_error_n": 3.823560214451902e-14,
+                "arithmetic_force_error_n": 2.688058676488895e-08,
+                "volume_force_error_n": 1.1355863174036511e-08,
+                "edge_force_error_n": 2.304820907332645e-08
+              }
+            ],
+            "rotation": {
+              "angle_rad": 1.7,
+              "force_relative_error": 0.004196590702449837,
+              "hvp_relative_error": 1.4265806328757734e-07,
+              "note": "고정 경계 모델의 같은 회전 입력 대조; 무응력 강체 회전 판정은 아님"
+            },
+            "hvp_relative_test_tolerance": 1e-05
+          }
+        }
+      }
+    },
+    "geometry": {
+      "run": "experiments/artifacts/runs/teacher_precision_compare/20260913_stable_geometry_pair_v1",
+      "manifest_sha256": "38d1e8ad8fd1988b13a55153386e3b2404aa551e9438a60707ea84f6d52bfdc9",
+      "verified_input_files": 668,
+      "config": {
+        "case": "bend_001",
+        "shape": "handkerchief",
+        "frames": 10,
+        "first_frame": 0,
+        "source": "experiments/artifacts/runs/sub_pc/20260912T223433Z-aca6fc4223714a02a9fe8afe7f4edeef/bend_001",
+        "dt_s": 0.00026041666666666666,
+        "official_policy": {
+          "force_atol_n": 1e-10,
+          "force_rtol": 1e-09,
+          "displacement_atol_m": 1e-12,
+          "displacement_rtol": 1e-09,
+          "linear_rtol": 1e-10,
+          "max_newton": 15,
+          "linear_cycles": 3,
+          "line_search_steps": 12,
+          "linear_restart": 240,
+          "linear_preconditioner": "current"
+        },
+        "scope": "GPU 반복 계산 FP32/FP64 비교; CPU 모델·구적/초기 행렬 준비는 공통 FP64. 독립 진단은 FP64/longdouble.",
+        "precision_lanes": [
+          "reference_hilo",
+          "fp32_hilo",
+          "fp64",
+          "fp32"
+        ],
+        "mode": "diagnostic",
+        "tolerance_policy": "기준값 유지; 진단 모드에서는 유한한 미수렴/정확도 초과를 경고로 기록하고 마지막 채택 후보로 진행. 비유한/계산 불능은 종료.",
+        "geometry_policy": "원본 visual 예외 미승계; 본 실험은 솔버 진단이며 기하 인증·학습 적격성 없음",
+        "training_eligible": false,
+        "r1_complete": false,
+        "strain_formula_fp32": "stable_geometry_pair"
+      },
+      "probes": {
+        "probe_components_fp32.json": {
+          "sha256": "face14f1823d8076d3ec9b2987a338839f22c5cf3fe35a633a7b55d75bcfcc7f",
+          "data": {
+            "run": "experiments/artifacts/runs/teacher_precision_compare/20260913_stable_geometry_pair_v1",
+            "lane": "fp32",
+            "strain_formula": "stable_geometry_pair",
+            "gpu": "NVIDIA GeForce GTX 1080 Ti",
+            "script_sha256": "84a8db690d0e2ef6744ca4a442d0017cb60ea6e025215b14f0f3d4ae5486392d",
+            "samples": [
+              {
+                "frame": 0,
+                "source_sha256": "3a64e1c8f9dae7fdeddaf757b8f8bd89b7a834e6ba01cb38ea7dd83c704a7dd9",
+                "force_error_n": 0.0,
+                "reference_force_n": 0.0,
+                "energy_error_j": 0.0,
+                "reference_energy_j": 0.0,
+                "hvp_relative_error": 9.680302033660245e-08,
+                "max_strain_component": 0.0,
+                "rounded_input_force_error_n": 0.0,
+                "arithmetic_force_error_n": 0.0,
+                "volume_force_error_n": 0.0,
+                "edge_force_error_n": 0.0
+              },
+              {
+                "frame": 1,
+                "source_sha256": "263c12468fc261d043fc63ea05935524fe181452710439f137cd56b320c1e890",
+                "force_error_n": 2.5827099040847424e-10,
+                "reference_force_n": 1.8945078396909843e-06,
+                "energy_error_j": 7.95168882386455e-20,
+                "reference_energy_j": 1.757716014125161e-12,
+                "hvp_relative_error": 9.950054777736778e-08,
+                "max_strain_component": 6.512221317755973e-11,
+                "rounded_input_force_error_n": 2.5823341561669836e-10,
+                "arithmetic_force_error_n": 1.9703010248323327e-12,
+                "volume_force_error_n": 7.917776169903706e-11,
+                "edge_force_error_n": 2.0290254933908877e-10
+              },
+              {
+                "frame": 5,
+                "source_sha256": "b52a4afc45bd8ea023aa8720b6b369c4bb76773c87dcdbcce23f15fd11a5fe3e",
+                "force_error_n": 6.356484446393812e-08,
+                "reference_force_n": 5.3530963540007395e-05,
+                "energy_error_j": 3.56826188175475e-16,
+                "reference_energy_j": 9.826841919525162e-09,
+                "hvp_relative_error": 9.747342133035678e-08,
+                "max_strain_component": 6.577887461389764e-07,
+                "rounded_input_force_error_n": 6.356323946747737e-08,
+                "arithmetic_force_error_n": 1.4071772371074963e-10,
+                "volume_force_error_n": 1.9139122973403632e-08,
+                "edge_force_error_n": 5.046345859314409e-08
+              },
+              {
+                "frame": 9,
+                "source_sha256": "ed2e8c4714899a1ce619f9159854aeca2424f7b1e57ace2854c095a154d3d6a4",
+                "force_error_n": 5.363929369683774e-07,
+                "reference_force_n": 0.0001980184355539374,
+                "energy_error_j": 2.5646580467512427e-14,
+                "reference_energy_j": 3.857207132580575e-07,
+                "hvp_relative_error": 1.0420220913692621e-07,
+                "max_strain_component": 3.448195639066398e-05,
+                "rounded_input_force_error_n": 5.363423196143153e-07,
+                "arithmetic_force_error_n": 4.796462034748611e-09,
+                "volume_force_error_n": 2.6757017858298834e-07,
+                "edge_force_error_n": 3.8578161622423317e-07
+              }
+            ],
+            "rotation": {
+              "angle_rad": 1.7,
+              "force_relative_error": 0.002015464102508026,
+              "hvp_relative_error": 1.4265806328757734e-07,
+              "note": "고정 경계 모델의 같은 회전 입력 대조; 무응력 강체 회전 판정은 아님"
+            },
+            "hvp_relative_test_tolerance": 1e-05
+          }
+        },
+        "probe_components_fp32_hilo.json": {
+          "sha256": "e3d1ac6d7f59487ed91710e51a585edb2fd2963b26107d0f982ca9790014d58d",
+          "data": {
+            "run": "experiments/artifacts/runs/teacher_precision_compare/20260913_stable_geometry_pair_v1",
+            "lane": "fp32_hilo",
+            "strain_formula": "stable_geometry_pair",
+            "gpu": "NVIDIA GeForce GTX 1080 Ti",
+            "script_sha256": "84a8db690d0e2ef6744ca4a442d0017cb60ea6e025215b14f0f3d4ae5486392d",
+            "samples": [
+              {
+                "frame": 0,
+                "source_sha256": "3a64e1c8f9dae7fdeddaf757b8f8bd89b7a834e6ba01cb38ea7dd83c704a7dd9",
+                "force_error_n": 0.0,
+                "reference_force_n": 0.0,
+                "energy_error_j": 0.0,
+                "reference_energy_j": 0.0,
+                "hvp_relative_error": 9.680302033660245e-08,
+                "max_strain_component": 0.0,
+                "rounded_input_force_error_n": 0.0,
+                "arithmetic_force_error_n": 0.0,
+                "volume_force_error_n": 0.0,
+                "edge_force_error_n": 0.0
+              },
+              {
+                "frame": 1,
+                "source_sha256": "263c12468fc261d043fc63ea05935524fe181452710439f137cd56b320c1e890",
+                "force_error_n": 1.8762562804948673e-12,
+                "reference_force_n": 1.8945078396909843e-06,
+                "energy_error_j": 1.373235462584554e-19,
+                "reference_energy_j": 1.757716014125161e-12,
+                "hvp_relative_error": 9.950054777736778e-08,
+                "max_strain_component": 6.512222011645363e-11,
+                "rounded_input_force_error_n": 5.657196825857881e-18,
+                "arithmetic_force_error_n": 1.8762565734000307e-12,
+                "volume_force_error_n": 1.0885826018954608e-12,
+                "edge_force_error_n": 1.5188738838562678e-12
+              },
+              {
+                "frame": 5,
+                "source_sha256": "b52a4afc45bd8ea023aa8720b6b369c4bb76773c87dcdbcce23f15fd11a5fe3e",
+                "force_error_n": 1.6261173189535176e-10,
+                "reference_force_n": 5.3530963540007395e-05,
+                "energy_error_j": 2.1331830275757255e-15,
+                "reference_energy_j": 9.826841919525162e-09,
+                "hvp_relative_error": 9.747342133035678e-08,
+                "max_strain_component": 6.577887461389764e-07,
+                "rounded_input_force_error_n": 1.5598794615278073e-15,
+                "arithmetic_force_error_n": 1.6261171606356488e-10,
+                "volume_force_error_n": 1.2464359601296694e-10,
+                "edge_force_error_n": 1.3478627525837476e-10
+              },
+              {
+                "frame": 9,
+                "source_sha256": "ed2e8c4714899a1ce619f9159854aeca2424f7b1e57ace2854c095a154d3d6a4",
+                "force_error_n": 4.506895650559899e-09,
+                "reference_force_n": 0.0001980184355539374,
+                "energy_error_j": 3.119683839329559e-14,
+                "reference_energy_j": 3.857207132580575e-07,
+                "hvp_relative_error": 1.0420220913692621e-07,
+                "max_strain_component": 3.448195639066398e-05,
+                "rounded_input_force_error_n": 3.823560214451902e-14,
+                "arithmetic_force_error_n": 4.506895603324843e-09,
+                "volume_force_error_n": 4.460617642965817e-09,
+                "edge_force_error_n": 6.357072476804869e-10
+              }
+            ],
+            "rotation": {
+              "angle_rad": 1.7,
+              "force_relative_error": 0.002015464102508026,
+              "hvp_relative_error": 1.4265806328757734e-07,
+              "note": "고정 경계 모델의 같은 회전 입력 대조; 무응력 강체 회전 판정은 아님"
+            },
+            "hvp_relative_test_tolerance": 1e-05
+          }
+        }
+      }
+    },
+    "metric": {
+      "run": "experiments/artifacts/runs/teacher_precision_compare/20260913_stable_metric_pair_v2",
+      "manifest_sha256": "96b6c6db93a544113b48bb2341bcc59d2a67d94c6bd4b8eb2eae7c46c37e0d22",
+      "verified_input_files": 668,
+      "config": {
+        "case": "bend_001",
+        "shape": "handkerchief",
+        "frames": 10,
+        "first_frame": 0,
+        "source": "experiments/artifacts/runs/sub_pc/20260912T223433Z-aca6fc4223714a02a9fe8afe7f4edeef/bend_001",
+        "dt_s": 0.00026041666666666666,
+        "official_policy": {
+          "force_atol_n": 1e-10,
+          "force_rtol": 1e-09,
+          "displacement_atol_m": 1e-12,
+          "displacement_rtol": 1e-09,
+          "linear_rtol": 1e-10,
+          "max_newton": 15,
+          "linear_cycles": 3,
+          "line_search_steps": 12,
+          "linear_restart": 240,
+          "linear_preconditioner": "current"
+        },
+        "scope": "GPU 반복 계산 FP32/FP64 비교; CPU 모델·구적/초기 행렬 준비는 공통 FP64. 독립 진단은 FP64/longdouble.",
+        "precision_lanes": [
+          "reference_hilo",
+          "fp32_hilo",
+          "fp64",
+          "fp32"
+        ],
+        "mode": "diagnostic",
+        "tolerance_policy": "기준값 유지; 진단 모드에서는 유한한 미수렴/정확도 초과를 경고로 기록하고 마지막 채택 후보로 진행. 비유한/계산 불능은 종료.",
+        "geometry_policy": "원본 visual 예외 미승계; 본 실험은 솔버 진단이며 기하 인증·학습 적격성 없음",
+        "training_eligible": false,
+        "r1_complete": false,
+        "strain_formula_fp32": "stable_metric_pair"
+      },
+      "probes": {
+        "probe_components_fp32.json": {
+          "sha256": "032548d3207ebc0838564c3ea328b33747c9a2dc382928e357f9a541f73a9600",
+          "data": {
+            "run": "experiments/artifacts/runs/teacher_precision_compare/20260913_stable_metric_pair_v2",
+            "lane": "fp32",
+            "strain_formula": "stable_metric_pair",
+            "gpu": "NVIDIA GeForce GTX 1080 Ti",
+            "script_sha256": "84a8db690d0e2ef6744ca4a442d0017cb60ea6e025215b14f0f3d4ae5486392d",
+            "samples": [
+              {
+                "frame": 0,
+                "source_sha256": "3a64e1c8f9dae7fdeddaf757b8f8bd89b7a834e6ba01cb38ea7dd83c704a7dd9",
+                "force_error_n": 0.0,
+                "reference_force_n": 0.0,
+                "energy_error_j": 0.0,
+                "reference_energy_j": 0.0,
+                "hvp_relative_error": 9.680302033660245e-08,
+                "max_strain_component": 0.0,
+                "rounded_input_force_error_n": 0.0,
+                "arithmetic_force_error_n": 0.0,
+                "volume_force_error_n": 0.0,
+                "edge_force_error_n": 0.0
+              },
+              {
+                "frame": 1,
+                "source_sha256": "263c12468fc261d043fc63ea05935524fe181452710439f137cd56b320c1e890",
+                "force_error_n": 2.582709905317314e-10,
+                "reference_force_n": 1.8945078396909843e-06,
+                "energy_error_j": 7.95168882386455e-20,
+                "reference_energy_j": 1.757716014125161e-12,
+                "hvp_relative_error": 9.950054777736778e-08,
+                "max_strain_component": 6.512221317755973e-11,
+                "rounded_input_force_error_n": 2.5823341561669836e-10,
+                "arithmetic_force_error_n": 1.970322339249877e-12,
+                "volume_force_error_n": 7.917776211201073e-11,
+                "edge_force_error_n": 2.0290254933914173e-10
+              },
+              {
+                "frame": 5,
+                "source_sha256": "b52a4afc45bd8ea023aa8720b6b369c4bb76773c87dcdbcce23f15fd11a5fe3e",
+                "force_error_n": 6.356472476811686e-08,
+                "reference_force_n": 5.3530963540007395e-05,
+                "energy_error_j": 3.56826188175475e-16,
+                "reference_energy_j": 9.826841919525162e-09,
+                "hvp_relative_error": 9.675423942934433e-08,
+                "max_strain_component": 6.577888029823953e-07,
+                "rounded_input_force_error_n": 6.356323946747737e-08,
+                "arithmetic_force_error_n": 1.3338228892730264e-10,
+                "volume_force_error_n": 1.9138836936022296e-08,
+                "edge_force_error_n": 5.046343376186434e-08
+              },
+              {
+                "frame": 9,
+                "source_sha256": "ed2e8c4714899a1ce619f9159854aeca2424f7b1e57ace2854c095a154d3d6a4",
+                "force_error_n": 5.363889320200341e-07,
+                "reference_force_n": 0.0001980184355539374,
+                "energy_error_j": 2.5646580467512427e-14,
+                "reference_energy_j": 3.857207132580575e-07,
+                "hvp_relative_error": 1.04258806704954e-07,
+                "max_strain_component": 3.4481952752685174e-05,
+                "rounded_input_force_error_n": 5.363423196143153e-07,
+                "arithmetic_force_error_n": 3.3659415389431187e-09,
+                "volume_force_error_n": 2.6755833430046264e-07,
+                "edge_force_error_n": 3.8577980173493806e-07
+              }
+            ],
+            "rotation": {
+              "angle_rad": 1.7,
+              "force_relative_error": 7.142493761890593e-07,
+              "hvp_relative_error": 1.45883307969915e-07,
+              "note": "고정 경계 모델의 같은 회전 입력 대조; 무응력 강체 회전 판정은 아님"
+            },
+            "hvp_relative_test_tolerance": 1e-05
+          }
+        },
+        "probe_components_fp32_hilo.json": {
+          "sha256": "f2a88ab2e2f833d2b11017cd42d323aff16005389a6943c44de668407309ff40",
+          "data": {
+            "run": "experiments/artifacts/runs/teacher_precision_compare/20260913_stable_metric_pair_v2",
+            "lane": "fp32_hilo",
+            "strain_formula": "stable_metric_pair",
+            "gpu": "NVIDIA GeForce GTX 1080 Ti",
+            "script_sha256": "84a8db690d0e2ef6744ca4a442d0017cb60ea6e025215b14f0f3d4ae5486392d",
+            "samples": [
+              {
+                "frame": 0,
+                "source_sha256": "3a64e1c8f9dae7fdeddaf757b8f8bd89b7a834e6ba01cb38ea7dd83c704a7dd9",
+                "force_error_n": 0.0,
+                "reference_force_n": 0.0,
+                "energy_error_j": 0.0,
+                "reference_energy_j": 0.0,
+                "hvp_relative_error": 9.680302033660245e-08,
+                "max_strain_component": 0.0,
+                "rounded_input_force_error_n": 0.0,
+                "arithmetic_force_error_n": 0.0,
+                "volume_force_error_n": 0.0,
+                "edge_force_error_n": 0.0
+              },
+              {
+                "frame": 1,
+                "source_sha256": "263c12468fc261d043fc63ea05935524fe181452710439f137cd56b320c1e890",
+                "force_error_n": 1.8762566742116004e-12,
+                "reference_force_n": 1.8945078396909843e-06,
+                "energy_error_j": 1.373235462584554e-19,
+                "reference_energy_j": 1.757716014125161e-12,
+                "hvp_relative_error": 9.950054777736778e-08,
+                "max_strain_component": 6.512222011645363e-11,
+                "rounded_input_force_error_n": 5.657196825857881e-18,
+                "arithmetic_force_error_n": 1.876256967116829e-12,
+                "volume_force_error_n": 1.0885840038377298e-12,
+                "edge_force_error_n": 1.5188738959236893e-12
+              },
+              {
+                "frame": 5,
+                "source_sha256": "b52a4afc45bd8ea023aa8720b6b369c4bb76773c87dcdbcce23f15fd11a5fe3e",
+                "force_error_n": 1.440651181004444e-10,
+                "reference_force_n": 5.3530963540007395e-05,
+                "energy_error_j": 2.1331830275757255e-15,
+                "reference_energy_j": 9.826841919525162e-09,
+                "hvp_relative_error": 9.675423942934433e-08,
+                "max_strain_component": 6.577888029823953e-07,
+                "rounded_input_force_error_n": 1.5598794615278073e-15,
+                "arithmetic_force_error_n": 1.4406509964831797e-10,
+                "volume_force_error_n": 9.940200280558364e-11,
+                "edge_force_error_n": 1.3476045914142852e-10
+              },
+              {
+                "frame": 9,
+                "source_sha256": "ed2e8c4714899a1ce619f9159854aeca2424f7b1e57ace2854c095a154d3d6a4",
+                "force_error_n": 2.8561218420186733e-09,
+                "reference_force_n": 0.0001980184355539374,
+                "energy_error_j": 3.119683839329559e-14,
+                "reference_energy_j": 3.857207132580575e-07,
+                "hvp_relative_error": 1.04258806704954e-07,
+                "max_strain_component": 3.4481952752685174e-05,
+                "rounded_input_force_error_n": 3.823560214451902e-14,
+                "arithmetic_force_error_n": 2.8561219010752203e-09,
+                "volume_force_error_n": 2.7827617193710216e-09,
+                "edge_force_error_n": 6.366926829361515e-10
+              }
+            ],
+            "rotation": {
+              "angle_rad": 1.7,
+              "force_relative_error": 7.142493761890593e-07,
+              "hvp_relative_error": 1.45883307969915e-07,
+              "note": "고정 경계 모델의 같은 회전 입력 대조; 무응력 강체 회전 판정은 아님"
+            },
+            "hvp_relative_test_tolerance": 1e-05
+          }
+        }
+      },
+      "comparison_sha256": "2e0c9077b66d0047c0c70304f4d555222be7a9fe62ba864fdeb74001be3ce08b",
+      "trajectory": {
+        "fp32_hilo_vs_reference_hilo": {
+          "common_advanced_steps": 640,
+          "moving_common_steps": 576,
+          "common_warning_steps": 430,
+          "interpretation": "경고 포함 진단 궤적 비교이며 엄격 검산 통과를 뜻하지 않습니다.",
+          "time_s": 0.16666666666666666,
+          "max_position_component_difference_m": 8.489704887645479e-06,
+          "max_velocity_component_difference_m_s": 0.00017320487352257615,
+          "max_area_weighted_position_rms_m": 1.2623800066745307e-06,
+          "max_area_weighted_velocity_rms_m_s": 2.7100065054465935e-05
+        },
+        "fp32_vs_fp64": {
+          "common_advanced_steps": 640,
+          "moving_common_steps": 576,
+          "common_warning_steps": 551,
+          "interpretation": "경고 포함 진단 궤적 비교이며 엄격 검산 통과를 뜻하지 않습니다.",
+          "time_s": 0.16666666666666666,
+          "max_position_component_difference_m": 8.488365047203041e-06,
+          "max_velocity_component_difference_m_s": 0.00017508010554927872,
+          "max_area_weighted_position_rms_m": 1.2623491211525955e-06,
+          "max_area_weighted_velocity_rms_m_s": 2.7120897343052835e-05
+        }
+      },
+      "independent_analysis_errors": 0,
+      "lanes": {
+        "reference_hilo": {
+          "status": "complete",
+          "advanced_steps": 640,
+          "warning_steps": 0,
+          "warning_counts": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "7": 0,
+            "8": 0
+          },
+          "report_sha256": "a2e52ab0c3978fff47533ab5f05bd19f3bd66b73d18ce092da3c42d161b8f580",
+          "verified_raw_files": 10,
+          "compute_record_s": 11.982878475158941,
+          "linear_iterations": 2886,
+          "max_abs_independent_force_residual_n": 1.1004599624313716e-11,
+          "max_abs_independent_force_ratio_official": 0.10960056094249232,
+          "max_abs_independent_update_error_m": 1.0546552810051103e-22,
+          "max_abs_independent_energy_balance_residual_j": 8.122015548588405e-15,
+          "max_abs_energy_ledger_difference_j": 3.40136667881805e-21,
+          "max_abs_assembly_relative_error": 4.369305323756155e-16,
+          "max_abs_pinned_state_max": 0.0,
+          "final_state_metrics": {
+            "kinetic_energy_j": 1.7355954529417827e-05,
+            "elastic_energy_j": 3.8572071325805265e-07,
+            "max_strain_component": 3.448195346829529e-05
+          }
+        },
+        "fp32_hilo": {
+          "status": "complete",
+          "advanced_steps": 640,
+          "warning_steps": 430,
+          "warning_counts": {
+            "1": 65,
+            "2": 149,
+            "3": 206,
+            "7": 72,
+            "8": 0
+          },
+          "report_sha256": "6a9abf42e6898d0af3e91a9f7a5f1438b8178632db83e0bc2d7c052278f1db7a",
+          "verified_raw_files": 10,
+          "compute_record_s": 57.29817992198514,
+          "linear_iterations": 26722,
+          "max_abs_independent_force_residual_n": 2.5313405485515156e-09,
+          "max_abs_independent_force_ratio_official": 25.101564620818472,
+          "max_abs_independent_update_error_m": 3.9230909497299386e-13,
+          "max_abs_independent_energy_balance_residual_j": 8.273140903836951e-11,
+          "max_abs_energy_ledger_difference_j": 1.843223999439705e-12,
+          "max_abs_assembly_relative_error": 1.8473528484719282e-07,
+          "max_abs_pinned_state_max": 0.0,
+          "final_state_metrics": {
+            "kinetic_energy_j": 1.7338772653725894e-05,
+            "elastic_energy_j": 3.851047604328004e-07,
+            "max_strain_component": 3.441345904636435e-05
+          }
+        },
+        "fp64": {
+          "status": "complete",
+          "advanced_steps": 640,
+          "warning_steps": 0,
+          "warning_counts": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "7": 0,
+            "8": 0
+          },
+          "report_sha256": "a6a0576dd070fd81c0cfaf244d83f6ed77963db3b9fc31c8c6f4bbcc5df683be",
+          "verified_raw_files": 10,
+          "compute_record_s": 9.939556702040136,
+          "linear_iterations": 2886,
+          "max_abs_independent_force_residual_n": 1.1011073488240085e-11,
+          "max_abs_independent_force_ratio_official": 0.10966503753791772,
+          "max_abs_independent_update_error_m": 3.8138113399461777e-19,
+          "max_abs_independent_energy_balance_residual_j": 8.12199860792946e-15,
+          "max_abs_energy_ledger_difference_j": 3.3881317890172014e-21,
+          "max_abs_assembly_relative_error": 4.4216045615735996e-16,
+          "max_abs_pinned_state_max": 0.0,
+          "final_state_metrics": {
+            "kinetic_energy_j": 1.7355954529417827e-05,
+            "elastic_energy_j": 3.85720713258059e-07,
+            "max_strain_component": 3.4481953468853056e-05
+          }
+        },
+        "fp32": {
+          "status": "complete",
+          "advanced_steps": 640,
+          "warning_steps": 551,
+          "warning_counts": {
+            "1": 412,
+            "2": 5,
+            "3": 0,
+            "7": 111,
+            "8": 546
+          },
+          "report_sha256": "5541171e9a1a88843cef3c99badd99a910c45830d1b1682a8bba21249ff23e11",
+          "verified_raw_files": 10,
+          "compute_record_s": 53.82154668594012,
+          "linear_iterations": 31540,
+          "max_abs_independent_force_residual_n": 1.2905738969617879e-07,
+          "max_abs_independent_force_ratio_official": 1279.7734429453228,
+          "max_abs_independent_update_error_m": 1.8456679147988886e-10,
+          "max_abs_independent_energy_balance_residual_j": 8.253808310021186e-11,
+          "max_abs_energy_ledger_difference_j": 1.7067414801428663e-12,
+          "max_abs_assembly_relative_error": 1.8859184081065905e-07,
+          "max_abs_pinned_state_max": 0.0,
+          "final_state_metrics": {
+            "kinetic_energy_j": 1.7338772824472385e-05,
+            "elastic_energy_j": 3.8510472004842937e-07,
+            "max_strain_component": 3.44134488118698e-05
+          }
+        }
+      }
+    }
+  },
+  "checks": {
+    "precision_policy_unit_tests": 9,
+    "stable_strain_unit_tests": 4,
+    "actual_warp_cpu_pair_tests": 2,
+    "same_state_gpu_reference_frames": [
+      0,
+      1,
+      5,
+      9
+    ],
+    "rotation_input_rad": 1.7,
+    "hvp_relative_test_tolerance": 1e-05,
+    "teacher_eligible": false
+  }
+}

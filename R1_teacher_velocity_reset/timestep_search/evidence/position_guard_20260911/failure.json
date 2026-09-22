@@ -1,0 +1,49 @@
+{
+  "reason": "position_update_roundoff: P3 shell step 실패. 입력 상태는 보존됩니다.",
+  "attempts": [
+    {
+      "iteration": 0,
+      "force_residual_n": 0.03490460728264064,
+      "force_limit_n": 1.3490460728264066e-10,
+      "linear_info": 0,
+      "linear_iterations": 3,
+      "linear_residual_n": 1.2180885023641144e-16,
+      "linear_limit_n": 3.490460728264064e-12,
+      "correction_m": 1.1242167039126838e-06,
+      "line_search": [
+        {
+          "alpha": 1.0,
+          "residual_n": 2.2381026730218814e-07
+        }
+      ]
+    },
+    {
+      "iteration": 1,
+      "force_residual_n": 2.2381026730218814e-07,
+      "force_limit_n": 1.000065002212356e-10,
+      "linear_info": 0,
+      "linear_iterations": 2,
+      "linear_residual_n": 1.0237770972234725e-19,
+      "linear_limit_n": 2.2381026730218817e-17,
+      "correction_m": 4.402457146932933e-11,
+      "line_search": [
+        {
+          "alpha": 1.0,
+          "residual_n": 7.598539846970404e-13
+        }
+      ]
+    },
+    {
+      "iteration": 2,
+      "force_residual_n": 7.598539846970404e-13,
+      "force_limit_n": 1.000065002212356e-10,
+      "linear_info": 0,
+      "linear_iterations": 2,
+      "linear_residual_n": 7.0620062966908255e-25,
+      "linear_limit_n": 7.598539846970405e-23,
+      "correction_m": 4.356939953892075e-17
+    }
+  ],
+  "frame": 1,
+  "substep": 0
+}

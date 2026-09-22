@@ -1,0 +1,63 @@
+{
+  "date": "2026-09-11",
+  "status": "local_comparison_below_threshold_reference_unsettled",
+  "candidate": {
+    "integrator": "Gauss-Legendre",
+    "stages": 6,
+    "order": 12,
+    "dt_s": 0.016666666666666666,
+    "baseline_multiplier": 256,
+    "preconditioner": "coupled",
+    "force_refresh_hz": 60,
+    "physics_and_solve_tolerances_unchanged": true
+  },
+  "followup_time_s": [
+    3.266666666666723,
+    3.2833333333333896
+  ],
+  "local_curve_comparison": {
+    "gauss6_one_to_reference": {
+      "relative_upper": {
+        "u": 1.4913370934000922e-05,
+        "v": 0.0068683908699113515
+      },
+      "relative_sampled_lower": {
+        "u": 1.483776973637065e-05,
+        "v": 0.006868390862365347
+      }
+    },
+    "newmark128_to_reference": {
+      "relative_upper": {
+        "u": 1.9984641674322584e-06,
+        "v": 0.006071989354773298
+      },
+      "relative_sampled_lower": {
+        "u": 1.998223256341447e-06,
+        "v": 0.006071989347233263
+      }
+    },
+    "gauss6_reference2_to4": {
+      "relative_upper": {
+        "u": 2.1907453949467645e-06,
+        "v": 0.007166413798756487
+      },
+      "relative_sampled_lower": {
+        "u": 2.190725005723721e-06,
+        "v": 0.00716641379120825
+      }
+    }
+  },
+  "accuracy_certified": false,
+  "reason": "후보의 국소 차이는1% 미만이나 참조2→4 차이가0.716642%로 남아 참조 수렴을 확인하지 못했다.",
+  "long_run_started": false,
+  "main_remaining_budget_s": 7998,
+  "training_eligible": false,
+  "spatial_convergence_complete": false,
+  "next": "빠른 탄성 진동을 별도로 계산하는256배 적분 시험의 방향 확인. 신규 방식·장기 실행 연결은 미구현.",
+  "error_direction_frequency_hz": [
+    1688.4660231322475,
+    2246.994166415864,
+    2918.906915727159
+  ],
+  "frequency_scope": "초기 접선의 혼합 모드 Rayleigh 지표. 단일 고유 진동수 확정 아님"
+}

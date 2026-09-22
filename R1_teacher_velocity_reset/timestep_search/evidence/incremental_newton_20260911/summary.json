@@ -1,0 +1,38 @@
+{
+  "environment": {
+    "device": "cuda:0",
+    "numpy": "2.4.4",
+    "scipy": "1.18.1",
+    "compute_backend": "hvp_graph",
+    "linear_solver_device": "cpu",
+    "cuda_graph": true,
+    "warp": "1.17.0",
+    "gpu_name": "NVIDIA GeForce GTX 1080 Ti"
+  },
+  "results": [
+    {
+      "substeps": 64,
+      "status": "passed",
+      "completed_intervals": 137,
+      "max_force_ratio_cpu": 0.9989994467825676,
+      "max_update_error_m": 1.1102230246251565e-16
+    },
+    {
+      "substeps": 16,
+      "status": "numerical_failure",
+      "completed_intervals": 34,
+      "max_force_ratio_cpu": 0.9997222448165757,
+      "max_update_error_m": 8.326672684688674e-17
+    },
+    {
+      "substeps": 4,
+      "status": "passed",
+      "completed_intervals": 10,
+      "max_force_ratio_cpu": 0.9995003580447193,
+      "max_update_error_m": 8.326672684688674e-17
+    }
+  ],
+  "training_eligible": false,
+  "r1_complete": false,
+  "generated_training_samples": 0
+}

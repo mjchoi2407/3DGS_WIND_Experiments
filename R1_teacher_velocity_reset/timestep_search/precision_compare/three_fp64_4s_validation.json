@@ -1,0 +1,275 @@
+{
+  "schema": "cloth_three_fp64_validation_v1",
+  "checked_on": "2026-09-13",
+  "prepared_run": "experiments/artifacts/runs/teacher_timestep_search/20260913_cloth_three_fp64_4s_v2",
+  "manifest_sha256": "7673253dd87cdc5941122fd4074a0b489f00013e287153a2c7b1fe222731a4b1",
+  "main_simulation_started": false,
+  "smoke_run": "experiments/artifacts/runs/teacher_timestep_search/20260913_cloth_three_fp64_smoke_v1",
+  "smoke_manifest_sha256": "4439f960dc0d9919aa89ae8e630de7a78f9ecc9310a2e0aa3a2716b3ded4ec9e",
+  "comparison_sha256": "a23871c6196a1d2a97eca4ae7e3b66c8732c7f9e0df2d5b73d7128b46b44856e",
+  "validation_scope": "두 풀이×세 메시 각각2프레임·128단계, 독립 검산·세 쌍 자동 비교. 본4초 성능 검증 아님",
+  "tests": {
+    "comparison_diagnostic_cpu": 5,
+    "owned_worker_interrupt": 3,
+    "bash_syntax": true,
+    "python_compile": true
+  },
+  "lanes": {
+    "fp64": {
+      "manifest_sha256": "ef78fc6c098aed518ac407a66415269ca6c6cb1537662a2931651c337b0e5cad",
+      "smoke": {
+        "reference_rectangle": {
+          "frames": 2,
+          "report_sha256": "82167570f9bd62ae5cecc65541354e82af26feedeaa68f6e757523b3b99c7f2d",
+          "audit_warning_counts": {
+            "nonfinite": 0,
+            "force_residual": 0,
+            "position_update": 0,
+            "energy_ledger": 0,
+            "geometry_bound_unresolved": 0,
+            "pin_drift": 0
+          },
+          "solver_graph_inventory": {
+            "step": {
+              "kernels": 5913,
+              "device_copies": 612,
+              "memsets": 1138,
+              "children": 8,
+              "host_copies": 0,
+              "host_callbacks": 0,
+              "conditionals": 22,
+              "conditional_bodies": 22
+            },
+            "frame": {
+              "kernels": 5,
+              "device_copies": 1,
+              "memsets": 2,
+              "children": 0,
+              "host_copies": 0,
+              "host_callbacks": 0,
+              "conditionals": 0,
+              "conditional_bodies": 0
+            }
+          }
+        },
+        "triangular_flag": {
+          "frames": 2,
+          "report_sha256": "a466366a7148898f1c526cb376f233d935d82e12928e09e898145ef04f1e18e0",
+          "audit_warning_counts": {
+            "nonfinite": 0,
+            "force_residual": 0,
+            "position_update": 0,
+            "energy_ledger": 0,
+            "geometry_bound_unresolved": 0,
+            "pin_drift": 0
+          },
+          "solver_graph_inventory": {
+            "step": {
+              "kernels": 5568,
+              "device_copies": 582,
+              "memsets": 1078,
+              "children": 8,
+              "host_copies": 0,
+              "host_callbacks": 0,
+              "conditionals": 22,
+              "conditional_bodies": 22
+            },
+            "frame": {
+              "kernels": 5,
+              "device_copies": 1,
+              "memsets": 2,
+              "children": 0,
+              "host_copies": 0,
+              "host_callbacks": 0,
+              "conditionals": 0,
+              "conditional_bodies": 0
+            }
+          }
+        },
+        "handkerchief": {
+          "frames": 2,
+          "report_sha256": "c82f31738bd2afc18a5bc3b8b284b3b42ff9154cbdfa4f1b8a7a44302969f22b",
+          "audit_warning_counts": {
+            "nonfinite": 0,
+            "force_residual": 0,
+            "position_update": 0,
+            "energy_ledger": 0,
+            "geometry_bound_unresolved": 0,
+            "pin_drift": 0
+          },
+          "solver_graph_inventory": {
+            "step": {
+              "kernels": 5803,
+              "device_copies": 606,
+              "memsets": 1126,
+              "children": 8,
+              "host_copies": 0,
+              "host_callbacks": 0,
+              "conditionals": 22,
+              "conditional_bodies": 22
+            },
+            "frame": {
+              "kernels": 5,
+              "device_copies": 1,
+              "memsets": 2,
+              "children": 0,
+              "host_copies": 0,
+              "host_callbacks": 0,
+              "conditionals": 0,
+              "conditional_bodies": 0
+            }
+          }
+        }
+      },
+      "main_status": {
+        "reference_rectangle": "ready",
+        "triangular_flag": "ready",
+        "handkerchief": "ready"
+      }
+    },
+    "refine64": {
+      "manifest_sha256": "9120c32dc60a2b48ecd276970181f33c1e794de45beecec0a86ee51f692c9e52",
+      "smoke": {
+        "reference_rectangle": {
+          "frames": 2,
+          "report_sha256": "d9df15c8221bbaa440a70245099ce836407cecbcecac191a8b29c328023fc367",
+          "audit_warning_counts": {
+            "nonfinite": 0,
+            "force_residual": 0,
+            "position_update": 0,
+            "energy_ledger": 0,
+            "geometry_bound_unresolved": 0,
+            "pin_drift": 0
+          },
+          "solver_graph_inventory": {
+            "step": {
+              "kernels": 5961,
+              "device_copies": 622,
+              "memsets": 1150,
+              "children": 10,
+              "host_copies": 0,
+              "host_callbacks": 0,
+              "conditionals": 25,
+              "conditional_bodies": 25
+            },
+            "frame": {
+              "kernels": 5,
+              "device_copies": 1,
+              "memsets": 2,
+              "children": 0,
+              "host_copies": 0,
+              "host_callbacks": 0,
+              "conditionals": 0,
+              "conditional_bodies": 0
+            }
+          }
+        },
+        "triangular_flag": {
+          "frames": 2,
+          "report_sha256": "ca3b9d5688d69a0e08ac38dc14d9343aca3bdd7d64179468c75dfffe6860a321",
+          "audit_warning_counts": {
+            "nonfinite": 0,
+            "force_residual": 0,
+            "position_update": 0,
+            "energy_ledger": 0,
+            "geometry_bound_unresolved": 0,
+            "pin_drift": 0
+          },
+          "solver_graph_inventory": {
+            "step": {
+              "kernels": 5612,
+              "device_copies": 592,
+              "memsets": 1090,
+              "children": 10,
+              "host_copies": 0,
+              "host_callbacks": 0,
+              "conditionals": 25,
+              "conditional_bodies": 25
+            },
+            "frame": {
+              "kernels": 5,
+              "device_copies": 1,
+              "memsets": 2,
+              "children": 0,
+              "host_copies": 0,
+              "host_callbacks": 0,
+              "conditionals": 0,
+              "conditional_bodies": 0
+            }
+          }
+        },
+        "handkerchief": {
+          "frames": 2,
+          "report_sha256": "e9c1f1c4aa40d632f841fc1e9acbeed1d9f479c85cf8b711ba53b8a707a87a05",
+          "audit_warning_counts": {
+            "nonfinite": 0,
+            "force_residual": 0,
+            "position_update": 0,
+            "energy_ledger": 0,
+            "geometry_bound_unresolved": 0,
+            "pin_drift": 0
+          },
+          "solver_graph_inventory": {
+            "step": {
+              "kernels": 5847,
+              "device_copies": 616,
+              "memsets": 1138,
+              "children": 10,
+              "host_copies": 0,
+              "host_callbacks": 0,
+              "conditionals": 25,
+              "conditional_bodies": 25
+            },
+            "frame": {
+              "kernels": 5,
+              "device_copies": 1,
+              "memsets": 2,
+              "children": 0,
+              "host_copies": 0,
+              "host_callbacks": 0,
+              "conditionals": 0,
+              "conditional_bodies": 0
+            }
+          }
+        }
+      },
+      "main_status": {
+        "reference_rectangle": "ready",
+        "triangular_flag": "ready",
+        "handkerchief": "ready"
+      }
+    }
+  },
+  "new_pair_trajectory": {
+    "reference_rectangle": {
+      "frames": 2,
+      "substeps": 128,
+      "position_max_m": 3.703094606709416e-17,
+      "position_rms_m": 1.741628993302781e-18,
+      "velocity_max_m_s": 6.135614716324269e-13,
+      "velocity_rms_m_s": 5.167167702061758e-14,
+      "new_max_displacement_m": 9.864182781346647e-07
+    },
+    "triangular_flag": {
+      "frames": 2,
+      "substeps": 128,
+      "position_max_m": 2.981587462350309e-17,
+      "position_rms_m": 1.885442104933474e-18,
+      "velocity_max_m_s": 6.475001347968915e-13,
+      "velocity_rms_m_s": 4.416330261239032e-14,
+      "new_max_displacement_m": 1.0766514342588925e-06
+    },
+    "handkerchief": {
+      "frames": 2,
+      "substeps": 128,
+      "position_max_m": 1.873666950548813e-17,
+      "position_rms_m": 2.13110812950553e-18,
+      "velocity_max_m_s": 4.458443797324625e-13,
+      "velocity_rms_m_s": 5.70299910003417e-14,
+      "new_max_displacement_m": 9.905889971064908e-07
+    }
+  },
+  "commit": false,
+  "push": false,
+  "fetch": false
+}

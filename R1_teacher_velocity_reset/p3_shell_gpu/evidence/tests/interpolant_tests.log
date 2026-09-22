@@ -1,0 +1,29 @@
+test_exact_quadratic_and_linear_velocity_on_refined_clock (test_teacher_p3_shell_comparison.ShellTimeInterpolationTests.test_exact_quadratic_and_linear_velocity_on_refined_clock) ... ok
+test_missing_reset_limit_and_incompatible_clocks_are_rejected (test_teacher_p3_shell_comparison.ShellTimeInterpolationTests.test_missing_reset_limit_and_incompatible_clocks_are_rejected) ... ok
+test_reset_left_limit_is_retained_and_next_interval_uses_zero_velocity (test_teacher_p3_shell_comparison.ShellTimeInterpolationTests.test_reset_left_limit_is_retained_and_next_interval_uses_zero_velocity) ... FAIL
+
+======================================================================
+FAIL: test_reset_left_limit_is_retained_and_next_interval_uses_zero_velocity (test_teacher_p3_shell_comparison.ShellTimeInterpolationTests.test_reset_left_limit_is_retained_and_next_interval_uses_zero_velocity)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<workspace>/code/tests/test_teacher_p3_shell_comparison.py", line 29, in test_reset_left_limit_is_retained_and_next_interval_uses_zero_velocity
+    np.testing.assert_allclose(value['u_m'][16:],reset*self.field[None],rtol=0,atol=1e-18)
+  File "<workspace>/.venv/lib/python3.12/site-packages/numpy/testing/_private/utils.py", line 1768, in assert_allclose
+    assert_array_compare(compare, actual, desired, err_msg=str(err_msg),
+  File "<workspace>/.venv/lib/python3.12/site-packages/numpy/testing/_private/utils.py", line 842, in assert_array_compare
+    raise AssertionError(msg)
+AssertionError: 
+Not equal to tolerance rtol=0, atol=1e-18
+
+(shapes (33, 130, 3), (1, 130, 3) mismatch)
+ ACTUAL: array([[[0.      , 0.      , 0.      ],
+        [0.      , 0.001042, 0.      ],
+        [0.      , 0.004167, 0.      ],...
+ DESIRED: array([[[0.      , 0.      , 0.      ],
+        [0.      , 0.001042, 0.      ],
+        [0.      , 0.004167, 0.      ],...
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.059s
+
+FAILED (failures=1)

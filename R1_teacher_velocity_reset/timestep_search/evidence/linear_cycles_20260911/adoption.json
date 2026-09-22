@@ -1,0 +1,22 @@
+{
+  "status": "prepared_not_started",
+  "output": "experiments/artifacts/runs/teacher_timestep_search/20260911_precision_segments_v3",
+  "command": "bash experiments/R1_teacher_velocity_reset/timestep_search/run_precision_segments.sh",
+  "policy_change": {
+    "linear_cycles": [
+      8,
+      12
+    ]
+  },
+  "state_start": "rest",
+  "remaining_active_budget_s": 12072,
+  "previous_active_budget_debit_s": 2328,
+  "tests": {
+    "existing_search": 10,
+    "precision_search": 5,
+    "frozen_cuda_smoke_frames": 6
+  },
+  "runtime_manifest_sha256": "72255e977b82b0d9fd517c0fb5f5ee39e45d3c2d4ab2e34fa26f82986602c44f",
+  "wrapper_sha256": "5460fb443f3893cc95e4294838c155856b378bb286f34c9635c764e6b20e130d",
+  "long_run_started": false
+}

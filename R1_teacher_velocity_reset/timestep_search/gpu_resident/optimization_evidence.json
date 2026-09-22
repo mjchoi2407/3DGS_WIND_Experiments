@@ -1,0 +1,145 @@
+{
+  "date": "2026-09-13",
+  "source_sha256": {
+    "experiments/artifacts/runs/teacher_timestep_search/20260913_gpu_reuse_uncompressed_v1/summary.json": "ad02016d58116f162f04ba2525b953ef908acbfdfdc471d3766c96e85b0395da",
+    "experiments/artifacts/runs/teacher_timestep_search/20260913_gpu_audit_v1/results/comparison.json": "5908ca336fa02f76c2a9a116e65cbc3f6eb8985c2fc0df1841ba17d099ff6fe5"
+  },
+  "generation_passed": true,
+  "rows": [
+    {
+      "method": "hybrid",
+      "generation_s": 332.40109960900736,
+      "compute_and_buffer_s": 314.73788615802187,
+      "setup_s": 10.955373471020721,
+      "transfer_s": 0.00011474400525912642,
+      "write_s": 17.663098706980236,
+      "linear_iterations": 14156,
+      "current_rebuilds": 10,
+      "source": "experiments/artifacts/runs/teacher_timestep_search/20260913_gpu_resident_10frames_v1"
+    },
+    {
+      "method": "gpu",
+      "generation_s": 165.9327657299873,
+      "compute_and_buffer_s": 155.23751227898174,
+      "setup_s": 14.500050578004448,
+      "transfer_s": 0.43752883101115003,
+      "write_s": 10.257724619994406,
+      "linear_iterations": 14156,
+      "current_rebuilds": 10,
+      "source": "experiments/artifacts/runs/teacher_timestep_search/20260913_gpu_parallel_v1/reference"
+    },
+    {
+      "method": "parallel",
+      "generation_s": 110.46062537599937,
+      "compute_and_buffer_s": 99.94061035697814,
+      "setup_s": 14.14385752301314,
+      "transfer_s": 0.4389022230170667,
+      "write_s": 10.081112796004163,
+      "linear_iterations": 14156,
+      "current_rebuilds": 10,
+      "source": "experiments/artifacts/runs/teacher_timestep_search/20260913_gpu_parallel_v1/parallel"
+    },
+    {
+      "method": "preconditioner",
+      "generation_s": 100.62494433499523,
+      "compute_and_buffer_s": 89.78594430701924,
+      "setup_s": 13.625145557016367,
+      "transfer_s": 0.38414030699641444,
+      "write_s": 10.454859720979584,
+      "linear_iterations": 14156,
+      "current_rebuilds": 10,
+      "source": "experiments/artifacts/runs/teacher_timestep_search/20260913_gpu_preconditioner_v1/candidate"
+    },
+    {
+      "method": "current_first",
+      "generation_s": 67.88742913599708,
+      "compute_and_buffer_s": 57.16327714201179,
+      "setup_s": 13.197656429983908,
+      "transfer_s": 0.41250117897288874,
+      "write_s": 10.311650815012399,
+      "linear_iterations": 4211,
+      "current_rebuilds": 20,
+      "source": "experiments/artifacts/runs/teacher_timestep_search/20260913_gpu_current_first_v1/candidate"
+    },
+    {
+      "method": "reuse_uncompressed",
+      "generation_s": 45.05008108500624,
+      "compute_and_buffer_s": 44.01879171401379,
+      "setup_s": 13.164478569990024,
+      "transfer_s": 0.4179750939947553,
+      "write_s": 0.6133142769976985,
+      "linear_iterations": 4211,
+      "current_rebuilds": 20,
+      "source": "experiments/artifacts/runs/teacher_timestep_search/20260913_gpu_reuse_uncompressed_v1/candidate"
+    }
+  ],
+  "comparison_scope": "기준 실행·검산은 캐시 재사용. 새 GPU만 계산·검산. 서로 다른 시점의 시간 비교로 동일 부하를 보장하지 않음.",
+  "audit_status": "passed",
+  "trajectory_differences": {
+    "position_m": {
+      "max_abs": 8.763995974675654e-16,
+      "relative_l2": 8.734657059814723e-16,
+      "atol": 1e-10,
+      "rtol": 1e-06
+    },
+    "velocity_m_s": {
+      "max_abs": 7.580741999186182e-12,
+      "relative_l2": 1.5731500956761442e-12,
+      "atol": 1e-08,
+      "rtol": 1e-06
+    }
+  },
+  "audits": {
+    "hybrid": {
+      "passed": true,
+      "failures": [],
+      "maxima": {
+        "force_ratio": 0.06124839972807007,
+        "update_error_m": 5.421010862427522e-20,
+        "energy_ledger_error_j": 0.0,
+        "projected_gradient_upper": 0.12317405545359641
+      },
+      "audit_s": 35.541955583990784,
+      "reused": true
+    },
+    "gpu": {
+      "backend": "resident_gpu_audit_v1",
+      "passed": true,
+      "failures": [],
+      "maxima": {
+        "force_ratio": 0.05524291865705594,
+        "update_error_m": 6.009156957486528e-23,
+        "energy_ledger_error_j": 1.0409187888808097e-17,
+        "projected_gradient_upper": 0.12317405545359641,
+        "strain_component_upper": 0.001004324526466633,
+        "engineering_curvature_component_upper_inv_m": 1.8728000956348945
+      },
+      "time_axis_passed": true,
+      "mass_solver_info": 0,
+      "audit_s": 7.3324557739833836,
+      "timings": {
+        "prepare_and_hash_s": 3.3822120830009226,
+        "setup_s": 1.499057345004985,
+        "trace_read_s": 2.044301509973593,
+        "first_upload_and_capture_s": 0.05668218800565228,
+        "subsequent_upload_s": 0.11192411999218166,
+        "compute_s": 5.663635971985059,
+        "summary_readback_s": 0.0011561489955056459,
+        "total_before_write_s": 12.778080151998438
+      },
+      "steps": 640,
+      "chunk_steps": 64,
+      "graph_inventory": {
+        "kernels": 248,
+        "device_copies": 8,
+        "memsets": 8,
+        "children": 1,
+        "host_copies": 0,
+        "host_callbacks": 0
+      },
+      "per_step_sha256": "068b47f70f0bbd52d756e05a8ae396ab6c11bd417aaa692c02961a825f7ea039"
+    }
+  },
+  "training_eligible": false,
+  "r1_complete": false
+}

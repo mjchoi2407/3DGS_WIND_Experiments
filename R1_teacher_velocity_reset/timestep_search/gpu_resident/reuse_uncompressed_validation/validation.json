@@ -1,0 +1,32 @@
+{
+  "scope": "actual_mesh_two_substeps_functional_validation_not_benchmark",
+  "passed": true,
+  "p3_nodes": 7081,
+  "substeps": 2,
+  "gpu_current_rebuilds": 1,
+  "gpu_linear_iterations": 7,
+  "checks": [
+    {
+      "force_ratio": 0.012512964602624901,
+      "update_error_m": 2.710505431213761e-20,
+      "energy_ledger_error_j": 8.456776945386935e-18,
+      "projected_gradient_upper": 0.12317405545359641,
+      "flags": [],
+      "internal_target_met": true
+    },
+    {
+      "force_ratio": 0.01286654976143076,
+      "update_error_m": 2.710505431213761e-20,
+      "energy_ledger_error_j": 4.9873299934333204e-18,
+      "projected_gradient_upper": 0.12302417498660032,
+      "flags": [],
+      "internal_target_met": true
+    }
+  ],
+  "max_position_difference_from_saved_reference_m": 1.066583887182615e-16,
+  "max_velocity_difference_from_saved_reference_m_s": 6.478925740089486e-13,
+  "frozen_run_manifest_sha256": "76d3b15d57277a9298ab5aecc4f1ab647e7865248c1d8cd41207c657b1eb10f6",
+  "trace_sha256": "7b216c373f2176cb7d06a9ac370f28508f84126949135ce4dc894ea290e2a8e4",
+  "training_eligible": false,
+  "r1_complete": false
+}

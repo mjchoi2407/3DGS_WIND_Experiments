@@ -1,0 +1,126 @@
+{
+  "input_sha256": "b1998e0cc033748c54ccce582798ac9c418fb958651ef4fe17e130a8c179e1df",
+  "source_sha256": "25a1854cc6916059d65f12f5eae952ae79a049169910d49c2cd54508895198fe",
+  "wind_sha256": "db9c01a01eecfa78fc1dc581bb8505b8bc518c368001a98faf7894432a60bc59",
+  "runtime_manifest_sha256": "dec67d896537efadf38bbd81f52cb7d726abe4a73e58fcc1b5180ffef52a9df6",
+  "environment": {
+    "device": "cuda:0",
+    "numpy": "2.4.4",
+    "scipy": "1.18.1",
+    "compute_backend": "precision_hvp_graph",
+    "linear_solver_device": "cpu",
+    "cuda_graph": true,
+    "state_encoding": "hi_lo_v1",
+    "state_mantissa_bits": 64,
+    "warp": "1.17.0",
+    "gpu_name": "NVIDIA GeForce GTX 1080 Ti"
+  },
+  "policy": {
+    "force_atol_n": 1e-10,
+    "force_rtol": 1e-09,
+    "displacement_atol_m": 1e-12,
+    "displacement_rtol": 1e-09,
+    "linear_rtol": 1e-10,
+    "max_newton": 15,
+    "linear_cycles": 3,
+    "line_search_steps": 12,
+    "linear_restart": 240,
+    "linear_preconditioner": "current"
+  },
+  "input_time_s": 3.266666666666723,
+  "dt_s": 0.016666666666666666,
+  "order": 3,
+  "action_backend": "chebyshev",
+  "substeps": 1,
+  "multiplier": 256.0,
+  "training_eligible": false,
+  "continuous_geometry_verified": false,
+  "status": "development_complete",
+  "rows": [
+    {
+      "index": 0,
+      "solve_s": 90.79332825100573,
+      "diagnostics": {
+        "integrator": "p3_shell_exprb3_trial_v1",
+        "order": 3,
+        "dt_s": 0.016666666666666666,
+        "actions": [
+          {
+            "backend": "chebyshev",
+            "degree": 9034,
+            "imaginary_radius": 8661.09370324881,
+            "last32_relative_contribution": 7.812725231555757e-30,
+            "seconds": 44.17344033801055,
+            "matvec_columns": 9034
+          },
+          {
+            "backend": "chebyshev",
+            "degree": 9034,
+            "imaginary_radius": 8661.09370324881,
+            "last32_relative_contribution": 5.646880127654392e-30,
+            "seconds": 44.13774558099976,
+            "matvec_columns": 9034
+          }
+        ],
+        "training_eligible": false,
+        "assembly": {
+          "colors": 276,
+          "nnz": 2478006,
+          "relative_action_error": 3.943764429780607e-16,
+          "assembly_s": 0.6810167289950186
+        },
+        "max_mass_solve_relative_residual": 7.716612325885395e-16,
+        "coordinate_scale_s_inv": 166433.4093388499,
+        "spectral_indicator": {
+          "max_abs_eigenvalue": 187536360341.14038,
+          "relative_residual": 1.477844975415644e-10,
+          "radius_margin_factor": 1.2,
+          "scope": "Ritz 지표와 여유. 엄밀한 전 스펙트럼 포함 인증은 아님."
+        },
+        "external_work_j": 0.00020501453363504173,
+        "energy_balance_residual_j": 0.0006790848341187156,
+        "embedded_position_correction_m": 0.004062485691435067,
+        "embedded_velocity_correction_m_s": 0.8411919112082428
+      },
+      "audit": {
+        "force_evaluation_ratios": [
+          0.010134188398334461,
+          0.0007153397987493803,
+          0.0007497285210395818
+        ],
+        "energy_ledger_error_j": 1.3840941874608895e-17,
+        "sampled_geometry": [
+          {
+            "projected_gradient_upper": 0.17592677679617033,
+            "roundoff_margin": 2.6900238788024614e-09,
+            "injectivity_sufficient_condition": true,
+            "area_ratio_lower": 0.6790966772015489,
+            "time_degree": 0
+          },
+          {
+            "projected_gradient_upper": 0.2058943403443375,
+            "roundoff_margin": 3.138369000759456e-09,
+            "injectivity_sufficient_condition": true,
+            "area_ratio_lower": 0.6306037986971549,
+            "time_degree": 0
+          },
+          {
+            "projected_gradient_upper": 0.19838633054317065,
+            "roundoff_margin": 2.9920501246974697e-09,
+            "injectivity_sufficient_condition": true,
+            "area_ratio_lower": 0.6425844750600428,
+            "time_degree": 0
+          }
+        ],
+        "scope": "힘 평가·질량 풀이·표본 기하·에너지 장부 검산. Newton 단계 방정식 잔차나 전체 시간 곡선 기하/정확도 인증 아님.",
+        "passed": true
+      },
+      "end_time_s": 3.2833333333333896
+    }
+  ],
+  "end_time_s": 3.2833333333333896,
+  "endpoint_relative_mass_l2": {
+    "u": 0.005803395039805478,
+    "v": 0.5803091112065116
+  }
+}

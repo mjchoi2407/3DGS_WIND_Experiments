@@ -1,0 +1,5361 @@
+{
+  "status": "완료",
+  "scope": "시간 구간 3개 × 4 substep; 시뮬레이션 step만 측정, 전체 raw 검산/저장 비용 제외",
+  "caveat": "cProfile CPU wall-time; GPU kernel 실제 실행시간과 전송시간은 직접 분리 측정하지 않음. 다른 GPU 부하 영향 가능. inclusive 시간 합산 금지.",
+  "setup_s": 19.784028630000194,
+  "parent_name": "20260909_scale4_natural_m32_s256_v1",
+  "parent_manifest": {
+    "size_bytes": 25040,
+    "sha256": "6c20abd4b62b9ede85e081bec2bfa50f2eae6232ffa6daa3d318fa2306079c07"
+  },
+  "source_sha256": {
+    "wind3dgs/teacher/p3_shell.py": "5c154b6a97fc1ee0e8fbac4cf163acc500b65b8f791a4eb96fd6cbaecc69b922",
+    "wind3dgs/teacher/p3_shell_kernels.py": "53b6d3e27dec960403eac4774927a655b3349a39434f01c6ab42d55a75b6038d",
+    "wind3dgs/teacher/p3_shell_dynamics.py": "97f33708d8f231d8a38cb1b8dc151cde8e21cee1230a162dcdbe96440d216782",
+    "wind3dgs/teacher/p3_shell_bounds.py": "117872569a0f38801842106e7bbff228ba3bf81f8ffd02d501dfa4604ab78dea",
+    "wind3dgs/teacher/p3_surface.py": "5a40e7345bcc68070264d035c275dccb2fe7cf69115ceb605a2fc764ecb1042a",
+    "wind3dgs/teacher/p3_wind_reset.py": "a0958c452d5fc139049024cf823e12f81407215c1d49e22d96d39d71357223b6",
+    "wind3dgs/teacher/shell_structure.py": "2056257d6a7ec35670051db0366197d3ebd1fe917da64c014ae6bdc4bf037879",
+    "wind3dgs/teacher/physics_registry.py": "462ca765801e2d5d4f3ebb4589efce633a03aae8a2a5432c8e68b5e4221047e5",
+    "wind3dgs/teacher/velocity_reset.py": "0ed136d8b34999c72481549c3fcab056a3c873ecd0ca59fd72f42c1ba4efe2d8",
+    "wind3dgs/evaluation/teacher_p3_shell.py": "a4c97bda0038223c00f3ec04a46ad00f0f4c4704e238e4e4de6e8576665ab939",
+    "wind3dgs/evaluation/teacher_p3_shell_validation.py": "b4bc4b9f0e86193e23d6d7a9b75d5cb108c17a9cab098ea41f6cf1bf7bb4329a",
+    "wind3dgs/evaluation/teacher_plate_cubic.py": "b20120b72f9cce4d4f95643f0c62cfe33d6315829a406f2b47721cff8bf57a19",
+    "wind3dgs/evaluation/teacher_plate_c0ip.py": "6575a8e54b1325c8e3a2b2889d18e7ace1caf3f092a98107cab9e1382da7ae2f",
+    "wind3dgs/evaluation/teacher_plate_galerkin.py": "b9fefd812ba1c9c90212d27b40b3ea5dd0986dbed7470224689c87e53a16ec27",
+    "wind3dgs/evaluation/teacher_plate_reference.py": "9c0dcbeffb8c9b7f9ac9533ef15b0053bc918f401a62df152a35b9814b212b6f",
+    "wind3dgs/evaluation/teacher_p3_wind_reset.py": "ffdf5820cdaee581af25d1c48a105db0b327243fa947af245853f0de1a12a0af",
+    "wind3dgs/teacher/p3_shell_warp.py": "67fc5c3648810d51384cd0951df334ea947d8f6ae7049748c8ce184d0a35d8cd",
+    "wind3dgs/teacher/p3_shell_warp_kernels.py": "4ff7e5c03f839a81c4bc26c83db89d78d9d48b8216871cddea0e3f31957a347d",
+    "wind3dgs/evaluation/teacher_p3_shell_gpu.py": "469010a6e976fd23333bdaa995c80f7f6d8575fe6c2ff4473654970b73d962bc",
+    "tests/test_teacher_p3_shell_warp.py": "405687032e6f9ace702bb4030ddc4ed811ee44c85381baa84b97df3deb744499",
+    "scripts/check_teacher_p3_shell_gpu.sh": "04c9826c441e9e4871dd7ff77834ec43fb7526346903ce578d0d5e829f3efc49",
+    "pyproject.toml": "0b91786093f1a1d36e9bc6de16f37175781aa9dc7d562aaf440021b5764dfb60",
+    "wind3dgs/evaluation/teacher_p3_shell_random.py": "75397d270dcc52a5de5dd2f7e26454c9fe717ce72de6a7533b64b39d079f617f",
+    "wind3dgs/evaluation/teacher_p3_shell_random_validation.py": "1cad75e38ba45102c6fa4ae7659731d6409425bf3bce52c3aa74897823415c6e",
+    "tests/test_teacher_p3_shell_random.py": "97fca0c93410c9c81b613cf01141b26ad79eb73b6700859f3cb9b09afb1f6df1",
+    "scripts/check_teacher_p3_shell_random.sh": "000a6106abea6a8a94064dee20433d1e595d60bf388ab11651d549218a043ea3"
+  },
+  "profiler_sha256": "88112405ca8939c35894db35692c7846761754c5f80419578827c1329b93cc8b",
+  "device": "cuda:0",
+  "results": [
+    {
+      "label": "가벼운 구간",
+      "frame": 0,
+      "start_substep": 0,
+      "steps": 4,
+      "original_hvp": 0,
+      "replay_hvp": 0,
+      "baseline_s": 0.15088302499998463,
+      "profiled_s": 0.17124621199991452,
+      "max_displacement_difference_m": 0.0,
+      "max_velocity_difference_m_s": 0.0,
+      "repeat_exact": true,
+      "within_1e_10": true,
+      "exclusive_groups_s": {
+        "GPU 동기화 대기": 0.066369445,
+        "CPU 희소 직접 풀이": 0.034790794,
+        "CPU GMRES": 0.0,
+        "기타": 0.07005505300000002
+      },
+      "functions": [
+        {
+          "file": "context.py",
+          "line": 11915,
+          "name": "synchronize_device",
+          "calls": 13,
+          "self_s": 0.066369445,
+          "inclusive_s": 0.06645929
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<method 'solve' of 'SuperLU' objects>",
+          "calls": 8,
+          "self_s": 0.034790794,
+          "inclusive_s": 0.034790794
+        },
+        {
+          "file": "context.py",
+          "line": 13904,
+          "name": "copy",
+          "calls": 130,
+          "self_s": 0.013501795,
+          "inclusive_s": 0.014393399000000001
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<built-in method scipy.sparse._sparsetools.csr_matvecs>",
+          "calls": 28,
+          "self_s": 0.008570024,
+          "inclusive_s": 0.008570024
+        },
+        {
+          "file": "p3_shell_dynamics.py",
+          "line": 115,
+          "name": "evaluate",
+          "calls": 8,
+          "self_s": 0.004984036000000001,
+          "inclusive_s": 0.084218108
+        },
+        {
+          "file": "p3_shell_warp.py",
+          "line": 90,
+          "name": "evaluate_displacement",
+          "calls": 13,
+          "self_s": 0.004746059,
+          "inclusive_s": 0.116613165
+        },
+        {
+          "file": "context.py",
+          "line": 11188,
+          "name": "launch",
+          "calls": 143,
+          "self_s": 0.004137457000000001,
+          "inclusive_s": 0.014976258000000001
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<method 'reduce' of 'numpy.ufunc' objects>",
+          "calls": 368,
+          "self_s": 0.0037313830000000004,
+          "inclusive_s": 0.0037313830000000004
+        },
+        {
+          "file": "context.py",
+          "line": 10272,
+          "name": "pack_arg",
+          "calls": 1677,
+          "self_s": 0.003332886,
+          "inclusive_s": 0.0063479470000000005
+        },
+        {
+          "file": "p3_shell_dynamics.py",
+          "line": 98,
+          "name": "step",
+          "calls": 4,
+          "self_s": 0.0023076760000000003,
+          "inclusive_s": 0.162174427
+        },
+        {
+          "file": "config.py",
+          "line": 68,
+          "name": "__getattribute__",
+          "calls": 3523,
+          "self_s": 0.0015009650000000002,
+          "inclusive_s": 0.0015009650000000002
+        },
+        {
+          "file": "context.py",
+          "line": 11323,
+          "name": "pack_args",
+          "calls": 286,
+          "self_s": 0.001133595,
+          "inclusive_s": 0.007687557
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<built-in method builtins.isinstance>",
+          "calls": 7596,
+          "self_s": 0.001052088,
+          "inclusive_s": 0.001106594
+        },
+        {
+          "file": "context.py",
+          "line": 5701,
+          "name": "set_stream",
+          "calls": 208,
+          "self_s": 0.001008027,
+          "inclusive_s": 0.0010747530000000001
+        },
+        {
+          "file": "types.py",
+          "line": 3846,
+          "name": "_init_new",
+          "calls": 104,
+          "self_s": 0.0006619120000000001,
+          "inclusive_s": 0.0013707
+        },
+        {
+          "file": "types.py",
+          "line": 4492,
+          "name": "numpy",
+          "calls": 104,
+          "self_s": 0.0006240250000000001,
+          "inclusive_s": 0.020968422
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<built-in method numpy.asarray>",
+          "calls": 221,
+          "self_s": 0.000563693,
+          "inclusive_s": 0.0012098990000000002
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<built-in method numpy.array>",
+          "calls": 40,
+          "self_s": 0.000558987,
+          "inclusive_s": 0.0005666950000000001
+        },
+        {
+          "file": "p3_surface.py",
+          "line": 25,
+          "name": "_array",
+          "calls": 39,
+          "self_s": 0.0005346530000000001,
+          "inclusive_s": 0.001031992
+        },
+        {
+          "file": "types.py",
+          "line": 3315,
+          "name": "__init__",
+          "calls": 130,
+          "self_s": 0.000507016,
+          "inclusive_s": 0.002942974
+        },
+        {
+          "file": "types.py",
+          "line": 3442,
+          "name": "_init_from_data",
+          "calls": 26,
+          "self_s": 0.00045712600000000003,
+          "inclusive_s": 0.000796761
+        },
+        {
+          "file": "context.py",
+          "line": 8468,
+          "name": "get_device",
+          "calls": 2366,
+          "self_s": 0.00045627300000000004,
+          "inclusive_s": 0.0004956510000000001
+        },
+        {
+          "file": "p3_shell_warp.py",
+          "line": 123,
+          "name": "<genexpr>",
+          "calls": 156,
+          "self_s": 0.000432401,
+          "inclusive_s": 0.0008505170000000001
+        },
+        {
+          "file": "context.py",
+          "line": 5591,
+          "name": "<lambda>",
+          "calls": 26,
+          "self_s": 0.00041379300000000003,
+          "inclusive_s": 0.00041708200000000004
+        },
+        {
+          "file": "types.py",
+          "line": 2876,
+          "name": "is_array",
+          "calls": 1963,
+          "self_s": 0.00040552700000000004,
+          "inclusive_s": 0.000668851
+        },
+        {
+          "file": "context.py",
+          "line": 9837,
+          "name": "empty",
+          "calls": 104,
+          "self_s": 0.000378929,
+          "inclusive_s": 0.002536324
+        },
+        {
+          "file": "types.py",
+          "line": 3962,
+          "name": "__array_interface__",
+          "calls": 104,
+          "self_s": 0.000344536,
+          "inclusive_s": 0.0006462060000000001
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<method 'get' of 'dict' objects>",
+          "calls": 1747,
+          "self_s": 0.00030842500000000003,
+          "inclusive_s": 0.00030842500000000003
+        },
+        {
+          "file": "types.py",
+          "line": 2888,
+          "name": "concrete_array_type",
+          "calls": 1443,
+          "self_s": 0.000305997,
+          "inclusive_s": 0.000444342
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<method 'astype' of 'numpy.ndarray' objects>",
+          "calls": 39,
+          "self_s": 0.00030073400000000004,
+          "inclusive_s": 0.00030073400000000004
+        },
+        {
+          "file": "context.py",
+          "line": 4965,
+          "name": "allocate",
+          "calls": 104,
+          "self_s": 0.00029321400000000003,
+          "inclusive_s": 0.00036492400000000003
+        },
+        {
+          "file": "context.py",
+          "line": 5112,
+          "name": "__enter__",
+          "calls": 104,
+          "self_s": 0.000286166,
+          "inclusive_s": 0.000313891
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<built-in method numpy.zeros>",
+          "calls": 62,
+          "self_s": 0.000272073,
+          "inclusive_s": 0.000272073
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<built-in method builtins.hasattr>",
+          "calls": 468,
+          "self_s": 0.00026248300000000004,
+          "inclusive_s": 0.000298949
+        },
+        {
+          "file": "codegen.py",
+          "line": 1729,
+          "name": "locked_call",
+          "calls": 143,
+          "self_s": 0.00024707200000000004,
+          "inclusive_s": 0.00040675300000000004
+        },
+        {
+          "file": "types.py",
+          "line": 4211,
+          "name": "__ctype__",
+          "calls": 1443,
+          "self_s": 0.000246877,
+          "inclusive_s": 0.000246877
+        },
+        {
+          "file": "types.py",
+          "line": 2321,
+          "name": "__init__",
+          "calls": 143,
+          "self_s": 0.00024331100000000002,
+          "inclusive_s": 0.00025985
+        },
+        {
+          "file": "context.py",
+          "line": 5787,
+          "name": "__eq__",
+          "calls": 585,
+          "self_s": 0.000240219,
+          "inclusive_s": 0.00037300900000000005
+        },
+        {
+          "file": "types.py",
+          "line": 2582,
+          "name": "type_size_in_bytes",
+          "calls": 1118,
+          "self_s": 0.000238532,
+          "inclusive_s": 0.000373571
+        },
+        {
+          "file": "context.py",
+          "line": 5118,
+          "name": "__exit__",
+          "calls": 104,
+          "self_s": 0.00023214,
+          "inclusive_s": 0.00024294800000000002
+        },
+        {
+          "file": "fromnumeric.py",
+          "line": 66,
+          "name": "_wrapreduction",
+          "calls": 81,
+          "self_s": 0.000220382,
+          "inclusive_s": 0.0010884730000000002
+        },
+        {
+          "file": "p3_shell_dynamics.py",
+          "line": 87,
+          "name": "_validate_state",
+          "calls": 4,
+          "self_s": 0.000218506,
+          "inclusive_s": 0.000492831
+        },
+        {
+          "file": "context.py",
+          "line": 4648,
+          "name": "load",
+          "calls": 143,
+          "self_s": 0.00021511700000000002,
+          "inclusive_s": 0.000708987
+        },
+        {
+          "file": "numeric.py",
+          "line": 97,
+          "name": "zeros_like",
+          "calls": 17,
+          "self_s": 0.00021361100000000003,
+          "inclusive_s": 0.00023372300000000003
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<built-in method builtins.len>",
+          "calls": 1443,
+          "self_s": 0.00021343500000000002,
+          "inclusive_s": 0.000223023
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<method 'append' of 'list' objects>",
+          "calls": 1685,
+          "self_s": 0.00020836400000000003,
+          "inclusive_s": 0.00020836400000000003
+        },
+        {
+          "file": "p3_shell_dynamics.py",
+          "line": 94,
+          "name": "kinetic_energy",
+          "calls": 12,
+          "self_s": 0.000202715,
+          "inclusive_s": 0.0043490130000000005
+        },
+        {
+          "file": "types.py",
+          "line": 2351,
+          "name": "launch_bounds_t",
+          "calls": 143,
+          "self_s": 0.000200935,
+          "inclusive_s": 0.0005337170000000001
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<built-in method builtins.getattr>",
+          "calls": 593,
+          "self_s": 0.000200929,
+          "inclusive_s": 0.000200929
+        },
+        {
+          "file": "context.py",
+          "line": 5662,
+          "name": "context",
+          "calls": 1638,
+          "self_s": 0.00019924700000000003,
+          "inclusive_s": 0.00019924700000000003
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<built-in method builtins.issubclass>",
+          "calls": 622,
+          "self_s": 0.00019171500000000002,
+          "inclusive_s": 0.00019171500000000002
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<method 'dot' of 'numpy.ndarray' objects>",
+          "calls": 36,
+          "self_s": 0.000191623,
+          "inclusive_s": 0.000191623
+        },
+        {
+          "file": "_compressed.py",
+          "line": 399,
+          "name": "_matmul_multivector",
+          "calls": 28,
+          "self_s": 0.00018927,
+          "inclusive_s": 0.009123472
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<built-in method _ctypes.addressof>",
+          "calls": 1820,
+          "self_s": 0.00018758200000000002,
+          "inclusive_s": 0.00018758200000000002
+        },
+        {
+          "file": "context.py",
+          "line": 9810,
+          "name": "clone",
+          "calls": 104,
+          "self_s": 0.00018692400000000001,
+          "inclusive_s": 0.016019623
+        },
+        {
+          "file": "fromnumeric.py",
+          "line": 2304,
+          "name": "sum",
+          "calls": 81,
+          "self_s": 0.00017941000000000002,
+          "inclusive_s": 0.001294762
+        },
+        {
+          "file": "types.py",
+          "line": 4485,
+          "name": "assign",
+          "calls": 26,
+          "self_s": 0.000178569,
+          "inclusive_s": 0.002457201
+        },
+        {
+          "file": "_linalg.py",
+          "line": 2598,
+          "name": "norm",
+          "calls": 36,
+          "self_s": 0.000176403,
+          "inclusive_s": 0.00043371500000000004
+        },
+        {
+          "file": "context.py",
+          "line": 5636,
+          "name": "is_cuda",
+          "calls": 1170,
+          "self_s": 0.000168975,
+          "inclusive_s": 0.000168975
+        },
+        {
+          "file": "context.py",
+          "line": 15516,
+          "name": "init",
+          "calls": 351,
+          "self_s": 0.000165219,
+          "inclusive_s": 0.000488886
+        },
+        {
+          "file": "p3_shell_warp.py",
+          "line": 43,
+          "name": "assemble",
+          "calls": 52,
+          "self_s": 0.000164374,
+          "inclusive_s": 0.009039080000000001
+        },
+        {
+          "file": "context.py",
+          "line": 11132,
+          "name": "_build_launch_bounds_from_tuple",
+          "calls": 143,
+          "self_s": 0.00016437100000000002,
+          "inclusive_s": 0.000756452
+        },
+        {
+          "file": "types.py",
+          "line": 4611,
+          "name": "to",
+          "calls": 104,
+          "self_s": 0.000154782,
+          "inclusive_s": 0.016535010000000003
+        },
+        {
+          "file": "utils.py",
+          "line": 1523,
+          "name": "__enter__",
+          "calls": 104,
+          "self_s": 0.000145856,
+          "inclusive_s": 0.001247394
+        },
+        {
+          "file": "context.py",
+          "line": 11102,
+          "name": "_normalize_launch_dim",
+          "calls": 143,
+          "self_s": 0.000144169,
+          "inclusive_s": 0.000486913
+        },
+        {
+          "file": "context.py",
+          "line": 4972,
+          "name": "deallocate",
+          "calls": 104,
+          "self_s": 0.00014369600000000001,
+          "inclusive_s": 0.00014369600000000001
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<method 'all' of 'numpy.generic' objects>",
+          "calls": 104,
+          "self_s": 0.000142193,
+          "inclusive_s": 0.000328082
+        },
+        {
+          "file": "context.py",
+          "line": 8740,
+          "name": "get_device",
+          "calls": 208,
+          "self_s": 0.000138617,
+          "inclusive_s": 0.0005930110000000001
+        },
+        {
+          "file": "types.py",
+          "line": 3946,
+          "name": "__del__",
+          "calls": 130,
+          "self_s": 0.000133366,
+          "inclusive_s": 0.000348015
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<built-in method builtins.all>",
+          "calls": 104,
+          "self_s": 0.000132414,
+          "inclusive_s": 0.001046555
+        },
+        {
+          "file": "types.py",
+          "line": 3061,
+          "name": "types_equal",
+          "calls": 1599,
+          "self_s": 0.00013007600000000002,
+          "inclusive_s": 0.00013007600000000002
+        },
+        {
+          "file": "context.py",
+          "line": 11067,
+          "name": "_canonicalize_dim",
+          "calls": 143,
+          "self_s": 0.000127904,
+          "inclusive_s": 0.000271879
+        },
+        {
+          "file": "types.py",
+          "line": 3309,
+          "name": "__new__",
+          "calls": 130,
+          "self_s": 0.00012310900000000002,
+          "inclusive_s": 0.000174331
+        },
+        {
+          "file": "types.py",
+          "line": 3403,
+          "name": "<genexpr>",
+          "calls": 325,
+          "self_s": 0.00012207800000000002,
+          "inclusive_s": 0.00012207800000000002
+        },
+        {
+          "file": "types.py",
+          "line": 3106,
+          "name": "check_array_shape",
+          "calls": 130,
+          "self_s": 0.00012010300000000001,
+          "inclusive_s": 0.00012010300000000001
+        },
+        {
+          "file": "context.py",
+          "line": 5685,
+          "name": "stream",
+          "calls": 403,
+          "self_s": 0.00011635200000000001,
+          "inclusive_s": 0.00016315900000000001
+        },
+        {
+          "file": "types.py",
+          "line": 2796,
+          "name": "is_native_type",
+          "calls": 286,
+          "self_s": 0.00011560300000000001,
+          "inclusive_s": 0.00014567600000000002
+        },
+        {
+          "file": "utils.py",
+          "line": 1531,
+          "name": "__exit__",
+          "calls": 104,
+          "self_s": 0.00011493500000000001,
+          "inclusive_s": 0.0008037210000000001
+        },
+        {
+          "file": "utils.py",
+          "line": 1504,
+          "name": "__init__",
+          "calls": 104,
+          "self_s": 0.00011183800000000001,
+          "inclusive_s": 0.000521493
+        },
+        {
+          "file": "context.py",
+          "line": 9889,
+          "name": "empty_like",
+          "calls": 104,
+          "self_s": 0.00011127100000000001,
+          "inclusive_s": 0.002704267
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<method 'all' of 'numpy.ndarray' objects>",
+          "calls": 121,
+          "self_s": 0.00010356300000000001,
+          "inclusive_s": 0.001065449
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<built-in method builtins.max>",
+          "calls": 181,
+          "self_s": 0.00010235200000000001,
+          "inclusive_s": 0.00011240700000000001
+        },
+        {
+          "file": "p3_shell_warp.py",
+          "line": 48,
+          "name": "gather",
+          "calls": 52,
+          "self_s": 0.00010206000000000001,
+          "inclusive_s": 0.0036411580000000002
+        },
+        {
+          "file": "types.py",
+          "line": 4359,
+          "name": "zero_",
+          "calls": 26,
+          "self_s": 9.8022e-05,
+          "inclusive_s": 0.0005534460000000001
+        },
+        {
+          "file": "context.py",
+          "line": 4160,
+          "name": "get_module_hash",
+          "calls": 143,
+          "self_s": 9.671300000000001e-05,
+          "inclusive_s": 0.000126505
+        },
+        {
+          "file": "types.py",
+          "line": 3792,
+          "name": "_init_from_ptr",
+          "calls": 26,
+          "self_s": 9.172500000000001e-05,
+          "inclusive_s": 0.000142005
+        },
+        {
+          "file": "types.py",
+          "line": 2618,
+          "name": "type_typestr",
+          "calls": 130,
+          "self_s": 9.0964e-05,
+          "inclusive_s": 0.000115964
+        },
+        {
+          "file": "p3_shell_warp.py",
+          "line": 106,
+          "name": "<genexpr>",
+          "calls": 39,
+          "self_s": 8.900100000000001e-05,
+          "inclusive_s": 0.004137088000000001
+        },
+        {
+          "file": "_methods.py",
+          "line": 64,
+          "name": "_all",
+          "calls": 225,
+          "self_s": 8.4669e-05,
+          "inclusive_s": 0.001147775
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<method 'extend' of 'list' objects>",
+          "calls": 572,
+          "self_s": 8.1666e-05,
+          "inclusive_s": 8.1666e-05
+        },
+        {
+          "file": "_base.py",
+          "line": 875,
+          "name": "_matmul_dispatch",
+          "calls": 28,
+          "self_s": 7.4435e-05,
+          "inclusive_s": 0.009215009000000001
+        },
+        {
+          "file": "_interface.py",
+          "line": 312,
+          "name": "_shared_matvec",
+          "calls": 4,
+          "self_s": 7.3119e-05,
+          "inclusive_s": 0.026501484000000002
+        },
+        {
+          "file": "context.py",
+          "line": 4948,
+          "name": "_set_alloc_tag_if_tracking",
+          "calls": 104,
+          "self_s": 7.171e-05,
+          "inclusive_s": 7.171e-05
+        },
+        {
+          "file": "numeric.py",
+          "line": 1975,
+          "name": "isscalar",
+          "calls": 28,
+          "self_s": 6.8231e-05,
+          "inclusive_s": 0.000159106
+        },
+        {
+          "file": "context.py",
+          "line": 12671,
+          "name": "_get_apic_capture_for_device",
+          "calls": 507,
+          "self_s": 6.6165e-05,
+          "inclusive_s": 6.6165e-05
+        },
+        {
+          "file": "context.py",
+          "line": 5631,
+          "name": "is_cpu",
+          "calls": 429,
+          "self_s": 6.5784e-05,
+          "inclusive_s": 6.5784e-05
+        },
+        {
+          "file": "context.py",
+          "line": 3602,
+          "name": "get_kernel_hooks",
+          "calls": 143,
+          "self_s": 6.4372e-05,
+          "inclusive_s": 9.435400000000001e-05
+        },
+        {
+          "file": "utils.py",
+          "line": 1481,
+          "name": "__exit__",
+          "calls": 104,
+          "self_s": 6.174300000000001e-05,
+          "inclusive_s": 0.000304691
+        },
+        {
+          "file": "utils.py",
+          "line": 1460,
+          "name": "__init__",
+          "calls": 104,
+          "self_s": 6.1648e-05,
+          "inclusive_s": 0.00040965500000000003
+        },
+        {
+          "file": "utils.py",
+          "line": 1469,
+          "name": "__enter__",
+          "calls": 104,
+          "self_s": 6.0054000000000005e-05,
+          "inclusive_s": 0.00037394500000000004
+        },
+        {
+          "file": "_sputils.py",
+          "line": 344,
+          "name": "isscalarlike",
+          "calls": 28,
+          "self_s": 5.9397e-05,
+          "inclusive_s": 0.000235139
+        },
+        {
+          "file": "context.py",
+          "line": 8586,
+          "name": "verify_cuda_device",
+          "calls": 143,
+          "self_s": 5.7987000000000006e-05,
+          "inclusive_s": 0.00015028100000000002
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<method 'copy' of 'numpy.ndarray' objects>",
+          "calls": 8,
+          "self_s": 5.789e-05,
+          "inclusive_s": 5.789e-05
+        },
+        {
+          "file": "context.py",
+          "line": 5407,
+          "name": "is_capturing",
+          "calls": 13,
+          "self_s": 5.6481000000000004e-05,
+          "inclusive_s": 5.6481000000000004e-05
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<built-in method __new__ of type object at 0xa44b40>",
+          "calls": 134,
+          "self_s": 5.6109e-05,
+          "inclusive_s": 5.6109e-05
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<built-in method _operator.index>",
+          "calls": 398,
+          "self_s": 5.4040000000000004e-05,
+          "inclusive_s": 5.4040000000000004e-05
+        },
+        {
+          "file": "context.py",
+          "line": 11097,
+          "name": "_validate_launch_dim",
+          "calls": 143,
+          "self_s": 5.3948000000000006e-05,
+          "inclusive_s": 7.0865e-05
+        },
+        {
+          "file": "context.py",
+          "line": 11167,
+          "name": "_resolve_kernel_scalar_tid_extent_limit",
+          "calls": 143,
+          "self_s": 5.2432e-05,
+          "inclusive_s": 5.2432e-05
+        },
+        {
+          "file": "context.py",
+          "line": 11085,
+          "name": "<genexpr>",
+          "calls": 273,
+          "self_s": 5.1315000000000006e-05,
+          "inclusive_s": 6.3624e-05
+        },
+        {
+          "file": "profile_replay.py",
+          "line": 28,
+          "name": "replay",
+          "calls": 1,
+          "self_s": 5.0186000000000004e-05,
+          "inclusive_s": 0.17119800000000002
+        },
+        {
+          "file": "_internal.py",
+          "line": 263,
+          "name": "__init__",
+          "calls": 26,
+          "self_s": 4.9242e-05,
+          "inclusive_s": 4.9242e-05
+        },
+        {
+          "file": "_base.py",
+          "line": 1006,
+          "name": "__matmul__",
+          "calls": 28,
+          "self_s": 4.8212000000000005e-05,
+          "inclusive_s": 0.00949836
+        },
+        {
+          "file": "p3_shell_dynamics.py",
+          "line": 73,
+          "name": "state",
+          "calls": 1,
+          "self_s": 4.821e-05,
+          "inclusive_s": 0.008957976000000001
+        },
+        {
+          "file": "types.py",
+          "line": 4236,
+          "name": "grad",
+          "calls": 260,
+          "self_s": 4.8119000000000005e-05,
+          "inclusive_s": 4.8119000000000005e-05
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<method 'ravel' of 'numpy.ndarray' objects>",
+          "calls": 92,
+          "self_s": 4.746e-05,
+          "inclusive_s": 4.746e-05
+        },
+        {
+          "file": "fromnumeric.py",
+          "line": 3482,
+          "name": "ndim",
+          "calls": 12,
+          "self_s": 4.652e-05,
+          "inclusive_s": 5.7329000000000006e-05
+        },
+        {
+          "file": "p3_surface.py",
+          "line": 32,
+          "name": "_positive",
+          "calls": 4,
+          "self_s": 3.8342e-05,
+          "inclusive_s": 8.317100000000001e-05
+        },
+        {
+          "file": "types.py",
+          "line": 4318,
+          "name": "mark_init",
+          "calls": 156,
+          "self_s": 3.7399000000000006e-05,
+          "inclusive_s": 3.7399000000000006e-05
+        },
+        {
+          "file": "context.py",
+          "line": 5601,
+          "name": "get_allocator",
+          "calls": 104,
+          "self_s": 3.6369000000000004e-05,
+          "inclusive_s": 5.4316000000000006e-05
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<method 'max' of 'numpy.ndarray' objects>",
+          "calls": 39,
+          "self_s": 3.5992000000000004e-05,
+          "inclusive_s": 0.0009780470000000001
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<built-in method _abc._abc_instancecheck>",
+          "calls": 28,
+          "self_s": 3.5522e-05,
+          "inclusive_s": 3.5522e-05
+        },
+        {
+          "file": "p3_shell_dynamics.py",
+          "line": 54,
+          "name": "_state",
+          "calls": 5,
+          "self_s": 3.3739000000000003e-05,
+          "inclusive_s": 0.00017273400000000002
+        },
+        {
+          "file": "_aliases.py",
+          "line": 448,
+          "name": "reshape",
+          "calls": 4,
+          "self_s": 3.3457e-05,
+          "inclusive_s": 9.322800000000001e-05
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<method '__exit__' of '_thread.RLock' objects>",
+          "calls": 143,
+          "self_s": 3.3176e-05,
+          "inclusive_s": 3.3176e-05
+        },
+        {
+          "file": "p3_shell_warp.py",
+          "line": 82,
+          "name": "__getattr__",
+          "calls": 80,
+          "self_s": 3.0264e-05,
+          "inclusive_s": 5.9775e-05
+        },
+        {
+          "file": "_funcs.py",
+          "line": 223,
+          "name": "broadcast_shapes",
+          "calls": 4,
+          "self_s": 3.0166000000000002e-05,
+          "inclusive_s": 5.4413e-05
+        },
+        {
+          "file": "context.py",
+          "line": 3095,
+          "name": "get_hash",
+          "calls": 143,
+          "self_s": 2.9792000000000002e-05,
+          "inclusive_s": 2.9792000000000002e-05
+        },
+        {
+          "file": "types.py",
+          "line": 3092,
+          "name": "strides_from_shape",
+          "calls": 26,
+          "self_s": 2.9606e-05,
+          "inclusive_s": 4.5584e-05
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<method 'reshape' of 'numpy.ndarray' objects>",
+          "calls": 4,
+          "self_s": 2.9416e-05,
+          "inclusive_s": 2.9416e-05
+        },
+        {
+          "file": "_internal.py",
+          "line": 33,
+          "name": "wrapped_f",
+          "calls": 8,
+          "self_s": 2.9228000000000002e-05,
+          "inclusive_s": 0.00015619400000000002
+        },
+        {
+          "file": "_interface.py",
+          "line": 257,
+          "name": "_init_dtype",
+          "calls": 4,
+          "self_s": 2.7631e-05,
+          "inclusive_s": 0.026653919
+        },
+        {
+          "file": "_aliases.py",
+          "line": 70,
+          "name": "asarray",
+          "calls": 4,
+          "self_s": 2.7443e-05,
+          "inclusive_s": 7.1801e-05
+        },
+        {
+          "file": "p3_shell_warp.py",
+          "line": 41,
+          "name": "outputs",
+          "calls": 117,
+          "self_s": 2.6125e-05,
+          "inclusive_s": 2.6125e-05
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<method 'items' of 'dict' objects>",
+          "calls": 91,
+          "self_s": 2.4527e-05,
+          "inclusive_s": 2.4527e-05
+        },
+        {
+          "file": "_interface.py",
+          "line": 863,
+          "name": "__init__",
+          "calls": 4,
+          "self_s": 2.3590000000000003e-05,
+          "inclusive_s": 0.026758896
+        },
+        {
+          "file": "fromnumeric.py",
+          "line": 86,
+          "name": "_wrapreduction_any_all",
+          "calls": 10,
+          "self_s": 2.1899e-05,
+          "inclusive_s": 5.3851e-05
+        },
+        {
+          "file": "context.py",
+          "line": 1076,
+          "name": "_validate_cluster_launch",
+          "calls": 143,
+          "self_s": 2.0486e-05,
+          "inclusive_s": 2.0486e-05
+        },
+        {
+          "file": "_sputils.py",
+          "line": 349,
+          "name": "isintlike",
+          "calls": 8,
+          "self_s": 2.0017e-05,
+          "inclusive_s": 5.8737000000000004e-05
+        },
+        {
+          "file": "_base.py",
+          "line": 94,
+          "name": "ndim",
+          "calls": 28,
+          "self_s": 1.9926000000000002e-05,
+          "inclusive_s": 2.5095000000000003e-05
+        },
+        {
+          "file": "_methods.py",
+          "line": 39,
+          "name": "_amax",
+          "calls": 39,
+          "self_s": 1.9924e-05,
+          "inclusive_s": 0.000942055
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<built-in method builtins.any>",
+          "calls": 13,
+          "self_s": 1.9738e-05,
+          "inclusive_s": 0.004156826000000001
+        },
+        {
+          "file": "p3_shell_warp.py",
+          "line": 40,
+          "name": "geometry_inputs",
+          "calls": 65,
+          "self_s": 1.9455000000000003e-05,
+          "inclusive_s": 1.9455000000000003e-05
+        },
+        {
+          "file": "_base.py",
+          "line": 98,
+          "name": "_shape_as_2d",
+          "calls": 56,
+          "self_s": 1.9452000000000003e-05,
+          "inclusive_s": 2.5843000000000003e-05
+        },
+        {
+          "file": "_methods.py",
+          "line": 43,
+          "name": "_amin",
+          "calls": 13,
+          "self_s": 1.9358e-05,
+          "inclusive_s": 0.0008899880000000001
+        },
+        {
+          "file": "<frozen abc>",
+          "line": 117,
+          "name": "__instancecheck__",
+          "calls": 28,
+          "self_s": 1.8984e-05,
+          "inclusive_s": 5.4506e-05
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<method 'min' of 'numpy.ndarray' objects>",
+          "calls": 13,
+          "self_s": 1.8609e-05,
+          "inclusive_s": 0.000908597
+        },
+        {
+          "file": "context.py",
+          "line": 5641,
+          "name": "is_capturing",
+          "calls": 13,
+          "self_s": 1.8515e-05,
+          "inclusive_s": 8.3831e-05
+        },
+        {
+          "file": "_array_api.py",
+          "line": 76,
+          "name": "_asarray",
+          "calls": 4,
+          "self_s": 1.7294e-05,
+          "inclusive_s": 2.0300000000000002e-05
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<method 'disable' of '_lsprof.Profiler' objects>",
+          "calls": 1,
+          "self_s": 1.7292e-05,
+          "inclusive_s": 1.7292e-05
+        },
+        {
+          "file": "<string>",
+          "line": 2,
+          "name": "__init__",
+          "calls": 5,
+          "self_s": 1.6635000000000003e-05,
+          "inclusive_s": 1.6635000000000003e-05
+        },
+        {
+          "file": "_helpers.py",
+          "line": 683,
+          "name": "_check_device",
+          "calls": 8,
+          "self_s": 1.5597e-05,
+          "inclusive_s": 2.133e-05
+        },
+        {
+          "file": "_interface.py",
+          "line": 890,
+          "name": "_matvec",
+          "calls": 4,
+          "self_s": 1.5318e-05,
+          "inclusive_s": 0.02624144
+        },
+        {
+          "file": "fromnumeric.py",
+          "line": 2436,
+          "name": "any",
+          "calls": 10,
+          "self_s": 1.5316e-05,
+          "inclusive_s": 6.916700000000001e-05
+        },
+        {
+          "file": "_base.py",
+          "line": 392,
+          "name": "format",
+          "calls": 28,
+          "self_s": 1.5132e-05,
+          "inclusive_s": 1.5132e-05
+        },
+        {
+          "file": "_sputils.py",
+          "line": 401,
+          "name": "isdense",
+          "calls": 28,
+          "self_s": 1.4286e-05,
+          "inclusive_s": 1.6636e-05
+        },
+        {
+          "file": "profile_replay.py",
+          "line": 25,
+          "name": "state",
+          "calls": 1,
+          "self_s": 1.4284e-05,
+          "inclusive_s": 0.008972260000000001
+        },
+        {
+          "file": "_sputils.py",
+          "line": 58,
+          "name": "upcast_char",
+          "calls": 28,
+          "self_s": 1.391e-05,
+          "inclusive_s": 2.7535000000000003e-05
+        },
+        {
+          "file": "fromnumeric.py",
+          "line": 2299,
+          "name": "_sum_dispatcher",
+          "calls": 81,
+          "self_s": 1.3722e-05,
+          "inclusive_s": 1.3722e-05
+        },
+        {
+          "file": "_internal.py",
+          "line": 317,
+          "name": "data",
+          "calls": 26,
+          "self_s": 1.3345e-05,
+          "inclusive_s": 1.3345e-05
+        },
+        {
+          "file": "types.py",
+          "line": 4353,
+          "name": "_apic_ensure_tracked",
+          "calls": 26,
+          "self_s": 1.2968e-05,
+          "inclusive_s": 2.0110000000000002e-05
+        },
+        {
+          "file": "fromnumeric.py",
+          "line": 207,
+          "name": "reshape",
+          "calls": 4,
+          "self_s": 1.2217e-05,
+          "inclusive_s": 5.9019000000000005e-05
+        },
+        {
+          "file": "_aliases.py",
+          "line": 148,
+          "name": "zeros",
+          "calls": 4,
+          "self_s": 1.1656000000000002e-05,
+          "inclusive_s": 3.3738e-05
+        },
+        {
+          "file": "fromnumeric.py",
+          "line": 48,
+          "name": "_wrapfunc",
+          "calls": 4,
+          "self_s": 1.1560000000000001e-05,
+          "inclusive_s": 4.6802000000000004e-05
+        },
+        {
+          "file": "_interface.py",
+          "line": 227,
+          "name": "__init__",
+          "calls": 4,
+          "self_s": 1.1183000000000001e-05,
+          "inclusive_s": 8.1387e-05
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<method 'setflags' of 'numpy.ndarray' objects>",
+          "calls": 10,
+          "self_s": 1.1089e-05,
+          "inclusive_s": 1.1089e-05
+        },
+        {
+          "file": "_data.py",
+          "line": 24,
+          "name": "dtype",
+          "calls": 28,
+          "self_s": 1.0807e-05,
+          "inclusive_s": 1.0807e-05
+        },
+        {
+          "file": "_type_check_impl.py",
+          "line": 270,
+          "name": "iscomplexobj",
+          "calls": 4,
+          "self_s": 1.0526e-05,
+          "inclusive_s": 1.2687e-05
+        },
+        {
+          "file": "getlimits.py",
+          "line": 178,
+          "name": "__new__",
+          "calls": 4,
+          "self_s": 1.0432000000000001e-05,
+          "inclusive_s": 1.5131000000000001e-05
+        },
+        {
+          "file": "_linalg.py",
+          "line": 169,
+          "name": "isComplexType",
+          "calls": 36,
+          "self_s": 1.0339e-05,
+          "inclusive_s": 1.4755e-05
+        },
+        {
+          "file": "_interface.py",
+          "line": 207,
+          "name": "__new__",
+          "calls": 4,
+          "self_s": 9.679e-06,
+          "inclusive_s": 1.4566e-05
+        },
+        {
+          "file": "types.py",
+          "line": 4073,
+          "name": "__len__",
+          "calls": 52,
+          "self_s": 9.588e-06,
+          "inclusive_s": 9.588e-06
+        },
+        {
+          "file": "_sputils.py",
+          "line": 371,
+          "name": "isshape",
+          "calls": 4,
+          "self_s": 9.211e-06,
+          "inclusive_s": 6.823e-05
+        },
+        {
+          "file": "p3_surface.py",
+          "line": 20,
+          "name": "_require",
+          "calls": 47,
+          "self_s": 8.648000000000001e-06,
+          "inclusive_s": 8.648000000000001e-06
+        },
+        {
+          "file": "_linalg.py",
+          "line": 2594,
+          "name": "_norm_dispatcher",
+          "calls": 36,
+          "self_s": 7.896e-06,
+          "inclusive_s": 7.896e-06
+        },
+        {
+          "file": "_interface.py",
+          "line": 363,
+          "name": "matvec",
+          "calls": 4,
+          "self_s": 7.799000000000001e-06,
+          "inclusive_s": 0.026509283
+        },
+        {
+          "file": "_type_check_impl.py",
+          "line": 312,
+          "name": "isrealobj",
+          "calls": 4,
+          "self_s": 7.237e-06,
+          "inclusive_s": 2.0300000000000002e-05
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<method 'values' of 'dict' objects>",
+          "calls": 13,
+          "self_s": 6.579e-06,
+          "inclusive_s": 6.579e-06
+        },
+        {
+          "file": "_funcs.py",
+          "line": 266,
+          "name": "<genexpr>",
+          "calls": 12,
+          "self_s": 5.9210000000000006e-06,
+          "inclusive_s": 1.0055000000000001e-05
+        },
+        {
+          "file": "enum.py",
+          "line": 202,
+          "name": "__get__",
+          "calls": 4,
+          "self_s": 5.1700000000000005e-06,
+          "inclusive_s": 7.708e-06
+        },
+        {
+          "file": "_matrix.py",
+          "line": 75,
+          "name": "get_shape",
+          "calls": 4,
+          "self_s": 3.5720000000000003e-06,
+          "inclusive_s": 3.5720000000000003e-06
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<built-in method numpy.asanyarray>",
+          "calls": 4,
+          "self_s": 3.006e-06,
+          "inclusive_s": 3.006e-06
+        },
+        {
+          "file": "multiarray.py",
+          "line": 1085,
+          "name": "copyto",
+          "calls": 17,
+          "self_s": 2.538e-06,
+          "inclusive_s": 2.538e-06
+        },
+        {
+          "file": "enum.py",
+          "line": 1292,
+          "name": "value",
+          "calls": 4,
+          "self_s": 2.538e-06,
+          "inclusive_s": 2.538e-06
+        },
+        {
+          "file": "multiarray.py",
+          "line": 115,
+          "name": "empty_like",
+          "calls": 17,
+          "self_s": 2.068e-06,
+          "inclusive_s": 2.068e-06
+        },
+        {
+          "file": "numeric.py",
+          "line": 91,
+          "name": "_zeros_like_dispatcher",
+          "calls": 17,
+          "self_s": 1.8800000000000002e-06,
+          "inclusive_s": 1.8800000000000002e-06
+        },
+        {
+          "file": "fromnumeric.py",
+          "line": 3478,
+          "name": "_ndim_dispatcher",
+          "calls": 12,
+          "self_s": 1.8790000000000001e-06,
+          "inclusive_s": 1.8790000000000001e-06
+        },
+        {
+          "file": "fromnumeric.py",
+          "line": 2431,
+          "name": "_any_dispatcher",
+          "calls": 10,
+          "self_s": 1.5980000000000002e-06,
+          "inclusive_s": 1.5980000000000002e-06
+        },
+        {
+          "file": "_type_check_impl.py",
+          "line": 171,
+          "name": "_is_type_dispatcher",
+          "calls": 8,
+          "self_s": 7.520000000000001e-07,
+          "inclusive_s": 7.520000000000001e-07
+        },
+        {
+          "file": "fromnumeric.py",
+          "line": 203,
+          "name": "_reshape_dispatcher",
+          "calls": 4,
+          "self_s": 7.520000000000001e-07,
+          "inclusive_s": 7.520000000000001e-07
+        }
+      ],
+      "frame_identity": {
+        "size_bytes": 87938,
+        "sha256": "4a11bbc05ec9ef8174550276c9373908d24cd2d0d33820f2d41c482231abe300"
+      }
+    },
+    {
+      "label": "무거운 구간",
+      "frame": 39,
+      "start_substep": 236,
+      "steps": 4,
+      "original_hvp": 160,
+      "replay_hvp": 160,
+      "baseline_s": 2.786706225999751,
+      "profiled_s": 2.9585698650002996,
+      "max_displacement_difference_m": 0.0,
+      "max_velocity_difference_m_s": 0.0,
+      "repeat_exact": true,
+      "within_1e_10": true,
+      "exclusive_groups_s": {
+        "GPU 동기화 대기": 0.8372646530000001,
+        "CPU 희소 직접 풀이": 1.1588866800000002,
+        "CPU GMRES": 0.043391914000000004,
+        "기타": 0.9189912699999996
+      },
+      "functions": [
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<method 'solve' of 'SuperLU' objects>",
+          "calls": 168,
+          "self_s": 1.1588866800000002,
+          "inclusive_s": 1.1588866800000002
+        },
+        {
+          "file": "context.py",
+          "line": 11915,
+          "name": "synchronize_device",
+          "calls": 181,
+          "self_s": 0.8372646530000001,
+          "inclusive_s": 0.8386248220000001
+        },
+        {
+          "file": "context.py",
+          "line": 13904,
+          "name": "copy",
+          "calls": 1810,
+          "self_s": 0.201057436,
+          "inclusive_s": 0.214545869
+        },
+        {
+          "file": "p3_shell_warp.py",
+          "line": 90,
+          "name": "evaluate_displacement",
+          "calls": 181,
+          "self_s": 0.069403291,
+          "inclusive_s": 1.598068773
+        },
+        {
+          "file": "context.py",
+          "line": 11188,
+          "name": "launch",
+          "calls": 1991,
+          "self_s": 0.066062675,
+          "inclusive_s": 0.22881619800000003
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<built-in method scipy.sparse._sparsetools.csr_matvecs>",
+          "calls": 204,
+          "self_s": 0.058114692,
+          "inclusive_s": 0.058114692
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<method 'reduce' of 'numpy.ufunc' objects>",
+          "calls": 4576,
+          "self_s": 0.055425434,
+          "inclusive_s": 0.055425434
+        },
+        {
+          "file": "context.py",
+          "line": 10272,
+          "name": "pack_arg",
+          "calls": 23349,
+          "self_s": 0.049421531000000005,
+          "inclusive_s": 0.094741063
+        },
+        {
+          "file": "iterative.py",
+          "line": 592,
+          "name": "gmres",
+          "calls": 8,
+          "self_s": 0.043375269,
+          "inclusive_s": 2.631339348
+        },
+        {
+          "file": "p3_shell_dynamics.py",
+          "line": 134,
+          "name": "action",
+          "calls": 160,
+          "self_s": 0.040326588000000003,
+          "inclusive_s": 1.5156121980000001
+        },
+        {
+          "file": "config.py",
+          "line": 68,
+          "name": "__getattribute__",
+          "calls": 49051,
+          "self_s": 0.022966406,
+          "inclusive_s": 0.022966406
+        },
+        {
+          "file": "context.py",
+          "line": 11323,
+          "name": "pack_args",
+          "calls": 3982,
+          "self_s": 0.017830957,
+          "inclusive_s": 0.11534237800000001
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<built-in method builtins.isinstance>",
+          "calls": 105420,
+          "self_s": 0.015326202,
+          "inclusive_s": 0.015890185
+        },
+        {
+          "file": "context.py",
+          "line": 5701,
+          "name": "set_stream",
+          "calls": 2896,
+          "self_s": 0.01472937,
+          "inclusive_s": 0.015700376000000002
+        },
+        {
+          "file": "types.py",
+          "line": 3846,
+          "name": "_init_new",
+          "calls": 1448,
+          "self_s": 0.010002411000000001,
+          "inclusive_s": 0.020771149000000003
+        },
+        {
+          "file": "types.py",
+          "line": 4492,
+          "name": "numpy",
+          "calls": 1448,
+          "self_s": 0.009739392000000001,
+          "inclusive_s": 0.309263893
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<built-in method numpy.asarray>",
+          "calls": 2641,
+          "self_s": 0.008200828,
+          "inclusive_s": 0.017982622
+        },
+        {
+          "file": "types.py",
+          "line": 3315,
+          "name": "__init__",
+          "calls": 1810,
+          "self_s": 0.007802245,
+          "inclusive_s": 0.045153176
+        },
+        {
+          "file": "p3_shell_dynamics.py",
+          "line": 115,
+          "name": "evaluate",
+          "calls": 16,
+          "self_s": 0.007782673,
+          "inclusive_s": 0.15764181000000002
+        },
+        {
+          "file": "types.py",
+          "line": 3442,
+          "name": "_init_from_data",
+          "calls": 362,
+          "self_s": 0.007162336,
+          "inclusive_s": 0.013122219000000001
+        },
+        {
+          "file": "context.py",
+          "line": 8468,
+          "name": "get_device",
+          "calls": 32942,
+          "self_s": 0.006850705,
+          "inclusive_s": 0.0074729
+        },
+        {
+          "file": "types.py",
+          "line": 2876,
+          "name": "is_array",
+          "calls": 27331,
+          "self_s": 0.006407203,
+          "inclusive_s": 0.009917541
+        },
+        {
+          "file": "context.py",
+          "line": 5591,
+          "name": "<lambda>",
+          "calls": 362,
+          "self_s": 0.006184792000000001,
+          "inclusive_s": 0.006225705000000001
+        },
+        {
+          "file": "p3_surface.py",
+          "line": 25,
+          "name": "_array",
+          "calls": 367,
+          "self_s": 0.006125321,
+          "inclusive_s": 0.013461238
+        },
+        {
+          "file": "p3_shell_warp.py",
+          "line": 123,
+          "name": "<genexpr>",
+          "calls": 2172,
+          "self_s": 0.0059503870000000006,
+          "inclusive_s": 0.011400533000000001
+        },
+        {
+          "file": "p3_shell_dynamics.py",
+          "line": 98,
+          "name": "step",
+          "calls": 4,
+          "self_s": 0.0058920150000000004,
+          "inclusive_s": 2.950714482
+        },
+        {
+          "file": "context.py",
+          "line": 9837,
+          "name": "empty",
+          "calls": 1448,
+          "self_s": 0.005856494,
+          "inclusive_s": 0.037737295000000004
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<built-in method numpy.array>",
+          "calls": 384,
+          "self_s": 0.005792378,
+          "inclusive_s": 0.005810527
+        },
+        {
+          "file": "_interface.py",
+          "line": 312,
+          "name": "_shared_matvec",
+          "calls": 324,
+          "self_s": 0.005577295,
+          "inclusive_s": 2.682895595
+        },
+        {
+          "file": "types.py",
+          "line": 3962,
+          "name": "__array_interface__",
+          "calls": 1448,
+          "self_s": 0.005453493,
+          "inclusive_s": 0.009781794
+        },
+        {
+          "file": "context.py",
+          "line": 4965,
+          "name": "allocate",
+          "calls": 1448,
+          "self_s": 0.0046239770000000005,
+          "inclusive_s": 0.005699288
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<method 'get' of 'dict' objects>",
+          "calls": 24131,
+          "self_s": 0.004546164,
+          "inclusive_s": 0.004546164
+        },
+        {
+          "file": "types.py",
+          "line": 2888,
+          "name": "concrete_array_type",
+          "calls": 20091,
+          "self_s": 0.004516697,
+          "inclusive_s": 0.0065669000000000005
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<method 'astype' of 'numpy.ndarray' objects>",
+          "calls": 367,
+          "self_s": 0.004221087,
+          "inclusive_s": 0.004221087
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<built-in method builtins.hasattr>",
+          "calls": 6548,
+          "self_s": 0.004138983000000001,
+          "inclusive_s": 0.004715749
+        },
+        {
+          "file": "types.py",
+          "line": 2321,
+          "name": "__init__",
+          "calls": 1991,
+          "self_s": 0.00391517,
+          "inclusive_s": 0.004151696
+        },
+        {
+          "file": "types.py",
+          "line": 4211,
+          "name": "__ctype__",
+          "calls": 20091,
+          "self_s": 0.0037207110000000002,
+          "inclusive_s": 0.0037207110000000002
+        },
+        {
+          "file": "context.py",
+          "line": 5112,
+          "name": "__enter__",
+          "calls": 1448,
+          "self_s": 0.003717067,
+          "inclusive_s": 0.00411901
+        },
+        {
+          "file": "context.py",
+          "line": 5118,
+          "name": "__exit__",
+          "calls": 1448,
+          "self_s": 0.003693575,
+          "inclusive_s": 0.0038498820000000002
+        },
+        {
+          "file": "types.py",
+          "line": 2582,
+          "name": "type_size_in_bytes",
+          "calls": 15566,
+          "self_s": 0.003659386,
+          "inclusive_s": 0.0056775
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<method 'dot' of 'numpy.ndarray' objects>",
+          "calls": 424,
+          "self_s": 0.0036327560000000004,
+          "inclusive_s": 0.0036327560000000004
+        },
+        {
+          "file": "context.py",
+          "line": 5787,
+          "name": "__eq__",
+          "calls": 8145,
+          "self_s": 0.003612624,
+          "inclusive_s": 0.005598962000000001
+        },
+        {
+          "file": "types.py",
+          "line": 4485,
+          "name": "assign",
+          "calls": 362,
+          "self_s": 0.0035341810000000004,
+          "inclusive_s": 0.042576778
+        },
+        {
+          "file": "context.py",
+          "line": 4648,
+          "name": "load",
+          "calls": 1991,
+          "self_s": 0.0034257550000000004,
+          "inclusive_s": 0.010057121
+        },
+        {
+          "file": "_linalg.py",
+          "line": 2598,
+          "name": "norm",
+          "calls": 424,
+          "self_s": 0.003272576,
+          "inclusive_s": 0.007944055
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<built-in method builtins.len>",
+          "calls": 19971,
+          "self_s": 0.00326727,
+          "inclusive_s": 0.003440499
+        },
+        {
+          "file": "types.py",
+          "line": 2351,
+          "name": "launch_bounds_t",
+          "calls": 1991,
+          "self_s": 0.0031632030000000003,
+          "inclusive_s": 0.008434364
+        },
+        {
+          "file": "codegen.py",
+          "line": 1729,
+          "name": "locked_call",
+          "calls": 1991,
+          "self_s": 0.003030028,
+          "inclusive_s": 0.005273931
+        },
+        {
+          "file": "context.py",
+          "line": 5662,
+          "name": "context",
+          "calls": 22806,
+          "self_s": 0.0029737920000000003,
+          "inclusive_s": 0.0029737920000000003
+        },
+        {
+          "file": "numeric.py",
+          "line": 97,
+          "name": "zeros_like",
+          "calls": 193,
+          "self_s": 0.002927897,
+          "inclusive_s": 0.003178797
+        },
+        {
+          "file": "fromnumeric.py",
+          "line": 66,
+          "name": "_wrapreduction",
+          "calls": 921,
+          "self_s": 0.002902972,
+          "inclusive_s": 0.014784563
+        },
+        {
+          "file": "p3_shell_warp.py",
+          "line": 43,
+          "name": "assemble",
+          "calls": 724,
+          "self_s": 0.0028834950000000002,
+          "inclusive_s": 0.13966530500000002
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<built-in method _ctypes.addressof>",
+          "calls": 25340,
+          "self_s": 0.002874857,
+          "inclusive_s": 0.002874857
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<method 'append' of 'list' objects>",
+          "calls": 23581,
+          "self_s": 0.00284992,
+          "inclusive_s": 0.00284992
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<built-in method builtins.issubclass>",
+          "calls": 8462,
+          "self_s": 0.0028153260000000004,
+          "inclusive_s": 0.0028153260000000004
+        },
+        {
+          "file": "context.py",
+          "line": 11132,
+          "name": "_build_launch_bounds_from_tuple",
+          "calls": 1991,
+          "self_s": 0.002721737,
+          "inclusive_s": 0.012227924000000001
+        },
+        {
+          "file": "context.py",
+          "line": 15516,
+          "name": "init",
+          "calls": 4887,
+          "self_s": 0.002701984,
+          "inclusive_s": 0.007745117
+        },
+        {
+          "file": "context.py",
+          "line": 9810,
+          "name": "clone",
+          "calls": 1448,
+          "self_s": 0.0025934950000000003,
+          "inclusive_s": 0.235385948
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<built-in method numpy.zeros>",
+          "calls": 638,
+          "self_s": 0.0025896250000000003,
+          "inclusive_s": 0.0025896250000000003
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<built-in method builtins.getattr>",
+          "calls": 7689,
+          "self_s": 0.002572037,
+          "inclusive_s": 0.002572037
+        },
+        {
+          "file": "fromnumeric.py",
+          "line": 2304,
+          "name": "sum",
+          "calls": 921,
+          "self_s": 0.002520778,
+          "inclusive_s": 0.017668456000000003
+        },
+        {
+          "file": "types.py",
+          "line": 4611,
+          "name": "to",
+          "calls": 1448,
+          "self_s": 0.0024689200000000003,
+          "inclusive_s": 0.24315248
+        },
+        {
+          "file": "context.py",
+          "line": 5636,
+          "name": "is_cuda",
+          "calls": 16290,
+          "self_s": 0.002425655,
+          "inclusive_s": 0.002425655
+        },
+        {
+          "file": "context.py",
+          "line": 4972,
+          "name": "deallocate",
+          "calls": 1448,
+          "self_s": 0.002219089,
+          "inclusive_s": 0.002219089
+        },
+        {
+          "file": "types.py",
+          "line": 3946,
+          "name": "__del__",
+          "calls": 1810,
+          "self_s": 0.002132437,
+          "inclusive_s": 0.005403355
+        },
+        {
+          "file": "context.py",
+          "line": 8740,
+          "name": "get_device",
+          "calls": 2896,
+          "self_s": 0.002119475,
+          "inclusive_s": 0.00900891
+        },
+        {
+          "file": "context.py",
+          "line": 11102,
+          "name": "_normalize_launch_dim",
+          "calls": 1991,
+          "self_s": 0.002109248,
+          "inclusive_s": 0.006929676
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<built-in method builtins.max>",
+          "calls": 2709,
+          "self_s": 0.0020647390000000003,
+          "inclusive_s": 0.002573529
+        },
+        {
+          "file": "_aliases.py",
+          "line": 448,
+          "name": "reshape",
+          "calls": 324,
+          "self_s": 0.001989864,
+          "inclusive_s": 0.005340379
+        },
+        {
+          "file": "types.py",
+          "line": 3061,
+          "name": "types_equal",
+          "calls": 22263,
+          "self_s": 0.001957548,
+          "inclusive_s": 0.001957548
+        },
+        {
+          "file": "types.py",
+          "line": 3309,
+          "name": "__new__",
+          "calls": 1810,
+          "self_s": 0.0019514360000000002,
+          "inclusive_s": 0.0027150660000000004
+        },
+        {
+          "file": "types.py",
+          "line": 3106,
+          "name": "check_array_shape",
+          "calls": 1810,
+          "self_s": 0.001913984,
+          "inclusive_s": 0.001913984
+        },
+        {
+          "file": "_funcs.py",
+          "line": 223,
+          "name": "broadcast_shapes",
+          "calls": 324,
+          "self_s": 0.001889543,
+          "inclusive_s": 0.003262398
+        },
+        {
+          "file": "_compressed.py",
+          "line": 399,
+          "name": "_matmul_multivector",
+          "calls": 204,
+          "self_s": 0.0018735720000000002,
+          "inclusive_s": 0.063153942
+        },
+        {
+          "file": "utils.py",
+          "line": 1523,
+          "name": "__enter__",
+          "calls": 1448,
+          "self_s": 0.0018573630000000001,
+          "inclusive_s": 0.017202892
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<method 'reshape' of 'numpy.ndarray' objects>",
+          "calls": 492,
+          "self_s": 0.0018526710000000002,
+          "inclusive_s": 0.0018526710000000002
+        },
+        {
+          "file": "utils.py",
+          "line": 1531,
+          "name": "__exit__",
+          "calls": 1448,
+          "self_s": 0.0017977560000000002,
+          "inclusive_s": 0.012504163
+        },
+        {
+          "file": "context.py",
+          "line": 9889,
+          "name": "empty_like",
+          "calls": 1448,
+          "self_s": 0.001784748,
+          "inclusive_s": 0.040441994
+        },
+        {
+          "file": "types.py",
+          "line": 2796,
+          "name": "is_native_type",
+          "calls": 3982,
+          "self_s": 0.001770684,
+          "inclusive_s": 0.002237919
+        },
+        {
+          "file": "context.py",
+          "line": 11067,
+          "name": "_canonicalize_dim",
+          "calls": 1991,
+          "self_s": 0.001764872,
+          "inclusive_s": 0.003967173
+        },
+        {
+          "file": "context.py",
+          "line": 5685,
+          "name": "stream",
+          "calls": 5611,
+          "self_s": 0.001762784,
+          "inclusive_s": 0.002454654
+        },
+        {
+          "file": "p3_shell_warp.py",
+          "line": 48,
+          "name": "gather",
+          "calls": 724,
+          "self_s": 0.0017323570000000001,
+          "inclusive_s": 0.05419401200000001
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<method 'all' of 'numpy.generic' objects>",
+          "calls": 1448,
+          "self_s": 0.001683784,
+          "inclusive_s": 0.004150551000000001
+        },
+        {
+          "file": "utils.py",
+          "line": 1504,
+          "name": "__init__",
+          "calls": 1448,
+          "self_s": 0.0016670320000000001,
+          "inclusive_s": 0.008046809
+        },
+        {
+          "file": "types.py",
+          "line": 3792,
+          "name": "_init_from_ptr",
+          "calls": 362,
+          "self_s": 0.0016459740000000001,
+          "inclusive_s": 0.002551808
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<method 'all' of 'numpy.ndarray' objects>",
+          "calls": 1465,
+          "self_s": 0.0014881380000000002,
+          "inclusive_s": 0.015101654
+        },
+        {
+          "file": "context.py",
+          "line": 4160,
+          "name": "get_module_hash",
+          "calls": 1991,
+          "self_s": 0.0014280290000000001,
+          "inclusive_s": 0.00168694
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<built-in method builtins.all>",
+          "calls": 1448,
+          "self_s": 0.001410552,
+          "inclusive_s": 0.013728769
+        },
+        {
+          "file": "p3_shell_warp.py",
+          "line": 106,
+          "name": "<genexpr>",
+          "calls": 543,
+          "self_s": 0.001374646,
+          "inclusive_s": 0.062835414
+        },
+        {
+          "file": "types.py",
+          "line": 2618,
+          "name": "type_typestr",
+          "calls": 1810,
+          "self_s": 0.001343044,
+          "inclusive_s": 0.00171348
+        },
+        {
+          "file": "_array_api.py",
+          "line": 76,
+          "name": "_asarray",
+          "calls": 324,
+          "self_s": 0.001287469,
+          "inclusive_s": 0.0015436410000000001
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<method 'extend' of 'list' objects>",
+          "calls": 7964,
+          "self_s": 0.00124703,
+          "inclusive_s": 0.00124703
+        },
+        {
+          "file": "_internal.py",
+          "line": 33,
+          "name": "wrapped_f",
+          "calls": 344,
+          "self_s": 0.001214938,
+          "inclusive_s": 0.006684717000000001
+        },
+        {
+          "file": "_methods.py",
+          "line": 64,
+          "name": "_all",
+          "calls": 2913,
+          "self_s": 0.00117,
+          "inclusive_s": 0.016080283
+        },
+        {
+          "file": "context.py",
+          "line": 4948,
+          "name": "_set_alloc_tag_if_tracking",
+          "calls": 1448,
+          "self_s": 0.001075311,
+          "inclusive_s": 0.001075311
+        },
+        {
+          "file": "types.py",
+          "line": 3403,
+          "name": "<genexpr>",
+          "calls": 4525,
+          "self_s": 0.0010642170000000001,
+          "inclusive_s": 0.0010642170000000001
+        },
+        {
+          "file": "types.py",
+          "line": 4359,
+          "name": "zero_",
+          "calls": 362,
+          "self_s": 0.001036086,
+          "inclusive_s": 0.007828596
+        },
+        {
+          "file": "context.py",
+          "line": 8586,
+          "name": "verify_cuda_device",
+          "calls": 1991,
+          "self_s": 0.001013826,
+          "inclusive_s": 0.002435277
+        },
+        {
+          "file": "context.py",
+          "line": 3602,
+          "name": "get_kernel_hooks",
+          "calls": 1991,
+          "self_s": 0.0010130200000000001,
+          "inclusive_s": 0.0014566350000000002
+        },
+        {
+          "file": "context.py",
+          "line": 12671,
+          "name": "_get_apic_capture_for_device",
+          "calls": 7059,
+          "self_s": 0.0010113420000000001,
+          "inclusive_s": 0.0010113420000000001
+        },
+        {
+          "file": "utils.py",
+          "line": 1460,
+          "name": "__init__",
+          "calls": 1448,
+          "self_s": 0.0009915850000000001,
+          "inclusive_s": 0.0063797770000000005
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<method 'conj' of 'numpy.generic' objects>",
+          "calls": 848,
+          "self_s": 0.000982768,
+          "inclusive_s": 0.000982768
+        },
+        {
+          "file": "utils.py",
+          "line": 1481,
+          "name": "__exit__",
+          "calls": 1448,
+          "self_s": 0.0009437520000000001,
+          "inclusive_s": 0.004793634000000001
+        },
+        {
+          "file": "utils.py",
+          "line": 1469,
+          "name": "__enter__",
+          "calls": 1448,
+          "self_s": 0.000916123,
+          "inclusive_s": 0.005035133000000001
+        },
+        {
+          "file": "context.py",
+          "line": 5631,
+          "name": "is_cpu",
+          "calls": 5973,
+          "self_s": 0.000905011,
+          "inclusive_s": 0.000905011
+        },
+        {
+          "file": "_internal.py",
+          "line": 263,
+          "name": "__init__",
+          "calls": 362,
+          "self_s": 0.000895693,
+          "inclusive_s": 0.000895693
+        },
+        {
+          "file": "context.py",
+          "line": 5407,
+          "name": "is_capturing",
+          "calls": 181,
+          "self_s": 0.000895402,
+          "inclusive_s": 0.000895402
+        },
+        {
+          "file": "_base.py",
+          "line": 875,
+          "name": "_matmul_dispatch",
+          "calls": 204,
+          "self_s": 0.0007992930000000001,
+          "inclusive_s": 0.06411979400000001
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<built-in method _operator.index>",
+          "calls": 5454,
+          "self_s": 0.0007966290000000001,
+          "inclusive_s": 0.0007966290000000001
+        },
+        {
+          "file": "types.py",
+          "line": 4236,
+          "name": "grad",
+          "calls": 3620,
+          "self_s": 0.0007912710000000001,
+          "inclusive_s": 0.0007912710000000001
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<built-in method __new__ of type object at 0xa44b40>",
+          "calls": 1822,
+          "self_s": 0.000775573,
+          "inclusive_s": 0.000775573
+        },
+        {
+          "file": "fromnumeric.py",
+          "line": 207,
+          "name": "reshape",
+          "calls": 324,
+          "self_s": 0.000762898,
+          "inclusive_s": 0.003267939
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<method 'ravel' of 'numpy.ndarray' objects>",
+          "calls": 1008,
+          "self_s": 0.000758761,
+          "inclusive_s": 0.000758761
+        },
+        {
+          "file": "context.py",
+          "line": 11167,
+          "name": "_resolve_kernel_scalar_tid_extent_limit",
+          "calls": 1991,
+          "self_s": 0.0007553760000000001,
+          "inclusive_s": 0.0007553760000000001
+        },
+        {
+          "file": "context.py",
+          "line": 11085,
+          "name": "<genexpr>",
+          "calls": 3801,
+          "self_s": 0.0007299730000000001,
+          "inclusive_s": 0.0009176840000000001
+        },
+        {
+          "file": "_interface.py",
+          "line": 363,
+          "name": "matvec",
+          "calls": 324,
+          "self_s": 0.0006865430000000001,
+          "inclusive_s": 2.6835821380000002
+        },
+        {
+          "file": "context.py",
+          "line": 5601,
+          "name": "get_allocator",
+          "calls": 1448,
+          "self_s": 0.000680775,
+          "inclusive_s": 0.00093864
+        },
+        {
+          "file": "numeric.py",
+          "line": 1975,
+          "name": "isscalar",
+          "calls": 220,
+          "self_s": 0.00068004,
+          "inclusive_s": 0.0016135420000000001
+        },
+        {
+          "file": "_interface.py",
+          "line": 890,
+          "name": "_matvec",
+          "calls": 324,
+          "self_s": 0.000645306,
+          "inclusive_s": 2.665833642
+        },
+        {
+          "file": "_sputils.py",
+          "line": 344,
+          "name": "isscalarlike",
+          "calls": 204,
+          "self_s": 0.0006354710000000001,
+          "inclusive_s": 0.0023574340000000003
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<method 'max' of 'numpy.ndarray' objects>",
+          "calls": 543,
+          "self_s": 0.000576763,
+          "inclusive_s": 0.014881452000000002
+        },
+        {
+          "file": "_base.py",
+          "line": 1006,
+          "name": "__matmul__",
+          "calls": 204,
+          "self_s": 0.00056645,
+          "inclusive_s": 0.06704367800000001
+        },
+        {
+          "file": "context.py",
+          "line": 11097,
+          "name": "_validate_launch_dim",
+          "calls": 1991,
+          "self_s": 0.000564261,
+          "inclusive_s": 0.000853255
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<method '__exit__' of '_thread.RLock' objects>",
+          "calls": 1991,
+          "self_s": 0.0005569630000000001,
+          "inclusive_s": 0.0005569630000000001
+        },
+        {
+          "file": "types.py",
+          "line": 4318,
+          "name": "mark_init",
+          "calls": 2172,
+          "self_s": 0.0005538930000000001,
+          "inclusive_s": 0.0005538930000000001
+        },
+        {
+          "file": "fromnumeric.py",
+          "line": 48,
+          "name": "_wrapfunc",
+          "calls": 324,
+          "self_s": 0.000505566,
+          "inclusive_s": 0.002505041
+        },
+        {
+          "file": "types.py",
+          "line": 3092,
+          "name": "strides_from_shape",
+          "calls": 362,
+          "self_s": 0.00046816200000000005,
+          "inclusive_s": 0.0007263090000000001
+        },
+        {
+          "file": "p3_shell_warp.py",
+          "line": 41,
+          "name": "outputs",
+          "calls": 1629,
+          "self_s": 0.00040815400000000004,
+          "inclusive_s": 0.00040815400000000004
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<built-in method _abc._abc_instancecheck>",
+          "calls": 228,
+          "self_s": 0.000391706,
+          "inclusive_s": 0.000391706
+        },
+        {
+          "file": "context.py",
+          "line": 1076,
+          "name": "_validate_cluster_launch",
+          "calls": 1991,
+          "self_s": 0.000370811,
+          "inclusive_s": 0.000370811
+        },
+        {
+          "file": "_funcs.py",
+          "line": 266,
+          "name": "<genexpr>",
+          "calls": 972,
+          "self_s": 0.0003191,
+          "inclusive_s": 0.0005087900000000001
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<built-in method builtins.any>",
+          "calls": 181,
+          "self_s": 0.000295392,
+          "inclusive_s": 0.063130806
+        },
+        {
+          "file": "_methods.py",
+          "line": 39,
+          "name": "_amax",
+          "calls": 543,
+          "self_s": 0.000295209,
+          "inclusive_s": 0.014304689
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<method 'min' of 'numpy.ndarray' objects>",
+          "calls": 181,
+          "self_s": 0.000288917,
+          "inclusive_s": 0.015022110000000002
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<method 'items' of 'dict' objects>",
+          "calls": 931,
+          "self_s": 0.000282605,
+          "inclusive_s": 0.000282605
+        },
+        {
+          "file": "p3_shell_warp.py",
+          "line": 82,
+          "name": "__getattr__",
+          "calls": 424,
+          "self_s": 0.000269911,
+          "inclusive_s": 0.000608556
+        },
+        {
+          "file": "p3_shell_warp.py",
+          "line": 40,
+          "name": "geometry_inputs",
+          "calls": 905,
+          "self_s": 0.00026285800000000004,
+          "inclusive_s": 0.00026285800000000004
+        },
+        {
+          "file": "context.py",
+          "line": 3095,
+          "name": "get_hash",
+          "calls": 1991,
+          "self_s": 0.000258911,
+          "inclusive_s": 0.000258911
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<built-in method numpy.asanyarray>",
+          "calls": 332,
+          "self_s": 0.000258711,
+          "inclusive_s": 0.000258711
+        },
+        {
+          "file": "p3_shell_dynamics.py",
+          "line": 143,
+          "name": "<lambda>",
+          "calls": 136,
+          "self_s": 0.000256543,
+          "inclusive_s": 0.000319462
+        },
+        {
+          "file": "context.py",
+          "line": 5641,
+          "name": "is_capturing",
+          "calls": 181,
+          "self_s": 0.000249106,
+          "inclusive_s": 0.001274304
+        },
+        {
+          "file": "p3_shell_dynamics.py",
+          "line": 94,
+          "name": "kinetic_energy",
+          "calls": 12,
+          "self_s": 0.000244239,
+          "inclusive_s": 0.004252336000000001
+        },
+        {
+          "file": "p3_shell_dynamics.py",
+          "line": 87,
+          "name": "_validate_state",
+          "calls": 4,
+          "self_s": 0.000225936,
+          "inclusive_s": 0.000516487
+        },
+        {
+          "file": "types.py",
+          "line": 4353,
+          "name": "_apic_ensure_tracked",
+          "calls": 362,
+          "self_s": 0.000205779,
+          "inclusive_s": 0.000313265
+        },
+        {
+          "file": "_internal.py",
+          "line": 317,
+          "name": "data",
+          "calls": 362,
+          "self_s": 0.000203792,
+          "inclusive_s": 0.000203792
+        },
+        {
+          "file": "inspect.py",
+          "line": 2366,
+          "name": "_signature_from_function",
+          "calls": 8,
+          "self_s": 0.00019691400000000002,
+          "inclusive_s": 0.000592995
+        },
+        {
+          "file": "_base.py",
+          "line": 98,
+          "name": "_shape_as_2d",
+          "calls": 408,
+          "self_s": 0.00017943100000000002,
+          "inclusive_s": 0.00022495900000000003
+        },
+        {
+          "file": "types.py",
+          "line": 4073,
+          "name": "__len__",
+          "calls": 724,
+          "self_s": 0.000173229,
+          "inclusive_s": 0.000173229
+        },
+        {
+          "file": "<frozen abc>",
+          "line": 117,
+          "name": "__instancecheck__",
+          "calls": 228,
+          "self_s": 0.000172277,
+          "inclusive_s": 0.000563983
+        },
+        {
+          "file": "_linalg.py",
+          "line": 169,
+          "name": "isComplexType",
+          "calls": 424,
+          "self_s": 0.00016870400000000002,
+          "inclusive_s": 0.00022626000000000002
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<method 'copy' of 'numpy.ndarray' objects>",
+          "calls": 16,
+          "self_s": 0.000168519,
+          "inclusive_s": 0.000168519
+        },
+        {
+          "file": "fromnumeric.py",
+          "line": 2299,
+          "name": "_sum_dispatcher",
+          "calls": 921,
+          "self_s": 0.000160623,
+          "inclusive_s": 0.000160623
+        },
+        {
+          "file": "_base.py",
+          "line": 392,
+          "name": "format",
+          "calls": 204,
+          "self_s": 0.00015189900000000002,
+          "inclusive_s": 0.00015189900000000002
+        },
+        {
+          "file": "_sputils.py",
+          "line": 401,
+          "name": "isdense",
+          "calls": 204,
+          "self_s": 0.000147453,
+          "inclusive_s": 0.000164567
+        },
+        {
+          "file": "multiarray.py",
+          "line": 748,
+          "name": "dot",
+          "calls": 984,
+          "self_s": 0.000135993,
+          "inclusive_s": 0.000135993
+        },
+        {
+          "file": "inspect.py",
+          "line": 2712,
+          "name": "__init__",
+          "calls": 80,
+          "self_s": 0.000135028,
+          "inclusive_s": 0.000249667
+        },
+        {
+          "file": "_methods.py",
+          "line": 43,
+          "name": "_amin",
+          "calls": 181,
+          "self_s": 0.000132322,
+          "inclusive_s": 0.014733193
+        },
+        {
+          "file": "_sputils.py",
+          "line": 58,
+          "name": "upcast_char",
+          "calls": 204,
+          "self_s": 0.00013204200000000002,
+          "inclusive_s": 0.000254771
+        },
+        {
+          "file": "_data.py",
+          "line": 24,
+          "name": "dtype",
+          "calls": 204,
+          "self_s": 0.00012207,
+          "inclusive_s": 0.00012207
+        },
+        {
+          "file": "_base.py",
+          "line": 94,
+          "name": "ndim",
+          "calls": 204,
+          "self_s": 0.00012140100000000001,
+          "inclusive_s": 0.00016053400000000002
+        },
+        {
+          "file": "inspect.py",
+          "line": 2470,
+          "name": "_signature_from_callable",
+          "calls": 8,
+          "self_s": 0.000107392,
+          "inclusive_s": 0.000743831
+        },
+        {
+          "file": "fromnumeric.py",
+          "line": 3482,
+          "name": "ndim",
+          "calls": 28,
+          "self_s": 9.9017e-05,
+          "inclusive_s": 0.000121959
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<built-in method numpy.empty>",
+          "calls": 24,
+          "self_s": 9.827100000000001e-05,
+          "inclusive_s": 9.827100000000001e-05
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<method 'values' of 'dict' objects>",
+          "calls": 181,
+          "self_s": 8.3799e-05,
+          "inclusive_s": 8.3799e-05
+        },
+        {
+          "file": "fromnumeric.py",
+          "line": 203,
+          "name": "_reshape_dispatcher",
+          "calls": 324,
+          "self_s": 8.2576e-05,
+          "inclusive_s": 8.2576e-05
+        },
+        {
+          "file": "p3_surface.py",
+          "line": 20,
+          "name": "_require",
+          "calls": 375,
+          "self_s": 8.2475e-05,
+          "inclusive_s": 8.2475e-05
+        },
+        {
+          "file": "profile_replay.py",
+          "line": 28,
+          "name": "replay",
+          "calls": 1,
+          "self_s": 7.1375e-05,
+          "inclusive_s": 2.95850997
+        },
+        {
+          "file": "_interface.py",
+          "line": 227,
+          "name": "__init__",
+          "calls": 12,
+          "self_s": 6.196600000000001e-05,
+          "inclusive_s": 0.000347745
+        },
+        {
+          "file": "_interface.py",
+          "line": 569,
+          "name": "dot",
+          "calls": 8,
+          "self_s": 5.8775000000000006e-05,
+          "inclusive_s": 0.075112047
+        },
+        {
+          "file": "_linalg.py",
+          "line": 2594,
+          "name": "_norm_dispatcher",
+          "calls": 424,
+          "self_s": 5.8033000000000005e-05,
+          "inclusive_s": 5.8033000000000005e-05
+        },
+        {
+          "file": "utils.py",
+          "line": 31,
+          "name": "make_system",
+          "calls": 8,
+          "self_s": 5.5757e-05,
+          "inclusive_s": 0.000139554
+        },
+        {
+          "file": "_interface.py",
+          "line": 863,
+          "name": "__init__",
+          "calls": 12,
+          "self_s": 5.3226e-05,
+          "inclusive_s": 0.030590615
+        },
+        {
+          "file": "_aliases.py",
+          "line": 70,
+          "name": "asarray",
+          "calls": 12,
+          "self_s": 5.2381000000000006e-05,
+          "inclusive_s": 0.000146421
+        },
+        {
+          "file": "_sputils.py",
+          "line": 349,
+          "name": "isintlike",
+          "calls": 24,
+          "self_s": 5.2283e-05,
+          "inclusive_s": 0.000155627
+        },
+        {
+          "file": "p3_shell_dynamics.py",
+          "line": 73,
+          "name": "state",
+          "calls": 1,
+          "self_s": 5.1312000000000006e-05,
+          "inclusive_s": 0.007716595000000001
+        },
+        {
+          "file": "inspect.py",
+          "line": 2998,
+          "name": "__init__",
+          "calls": 8,
+          "self_s": 5.0872000000000004e-05,
+          "inclusive_s": 7.456800000000001e-05
+        },
+        {
+          "file": "_helpers.py",
+          "line": 683,
+          "name": "_check_device",
+          "calls": 32,
+          "self_s": 4.5886e-05,
+          "inclusive_s": 6.1405e-05
+        },
+        {
+          "file": "_sputils.py",
+          "line": 371,
+          "name": "isshape",
+          "calls": 12,
+          "self_s": 4.4486e-05,
+          "inclusive_s": 0.00020086500000000002
+        },
+        {
+          "file": "enum.py",
+          "line": 726,
+          "name": "__call__",
+          "calls": 80,
+          "self_s": 4.4201000000000006e-05,
+          "inclusive_s": 5.7554000000000005e-05
+        },
+        {
+          "file": "_aliases.py",
+          "line": 40,
+          "name": "empty",
+          "calls": 16,
+          "self_s": 4.2602e-05,
+          "inclusive_s": 9.3855e-05
+        },
+        {
+          "file": "p3_surface.py",
+          "line": 32,
+          "name": "_positive",
+          "calls": 4,
+          "self_s": 4.2127000000000005e-05,
+          "inclusive_s": 9.553300000000001e-05
+        },
+        {
+          "file": "getlimits.py",
+          "line": 178,
+          "name": "__new__",
+          "calls": 12,
+          "self_s": 3.8557000000000004e-05,
+          "inclusive_s": 5.7362000000000004e-05
+        },
+        {
+          "file": "p3_shell_dynamics.py",
+          "line": 54,
+          "name": "_state",
+          "calls": 5,
+          "self_s": 3.4509000000000005e-05,
+          "inclusive_s": 0.00021354000000000002
+        },
+        {
+          "file": "_interface.py",
+          "line": 257,
+          "name": "_init_dtype",
+          "calls": 12,
+          "self_s": 3.4037e-05,
+          "inclusive_s": 0.030189644
+        },
+        {
+          "file": "_array_api.py",
+          "line": 1192,
+          "name": "xp_isscalar",
+          "calls": 16,
+          "self_s": 3.0850000000000004e-05,
+          "inclusive_s": 9.9506e-05
+        },
+        {
+          "file": "_interface.py",
+          "line": 558,
+          "name": "_check_matching_namespace",
+          "calls": 8,
+          "self_s": 2.9909e-05,
+          "inclusive_s": 9.3391e-05
+        },
+        {
+          "file": "_interface.py",
+          "line": 207,
+          "name": "__new__",
+          "calls": 12,
+          "self_s": 2.8305e-05,
+          "inclusive_s": 4.0248000000000005e-05
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<method 'isidentifier' of 'str' objects>",
+          "calls": 80,
+          "self_s": 2.5766e-05,
+          "inclusive_s": 2.5766e-05
+        },
+        {
+          "file": "_type_check_impl.py",
+          "line": 270,
+          "name": "iscomplexobj",
+          "calls": 12,
+          "self_s": 2.4827e-05,
+          "inclusive_s": 2.8305e-05
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<method 'disable' of '_lsprof.Profiler' objects>",
+          "calls": 1,
+          "self_s": 2.4547e-05,
+          "inclusive_s": 2.4547e-05
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<method '__contains__' of 'frozenset' objects>",
+          "calls": 80,
+          "self_s": 2.2949e-05,
+          "inclusive_s": 2.2949e-05
+        },
+        {
+          "file": "multiarray.py",
+          "line": 1085,
+          "name": "copyto",
+          "calls": 193,
+          "self_s": 2.2849e-05,
+          "inclusive_s": 2.2849e-05
+        },
+        {
+          "file": "numeric.py",
+          "line": 91,
+          "name": "_zeros_like_dispatcher",
+          "calls": 193,
+          "self_s": 2.2381e-05,
+          "inclusive_s": 2.2381e-05
+        },
+        {
+          "file": "fromnumeric.py",
+          "line": 86,
+          "name": "_wrapreduction_any_all",
+          "calls": 10,
+          "self_s": 2.2281000000000002e-05,
+          "inclusive_s": 5.0017000000000006e-05
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<built-in method builtins.min>",
+          "calls": 32,
+          "self_s": 2.2202000000000002e-05,
+          "inclusive_s": 2.2202000000000002e-05
+        },
+        {
+          "file": "inspect.py",
+          "line": 3050,
+          "name": "from_callable",
+          "calls": 8,
+          "self_s": 2.1909e-05,
+          "inclusive_s": 0.00076574
+        },
+        {
+          "file": "multiarray.py",
+          "line": 115,
+          "name": "empty_like",
+          "calls": 193,
+          "self_s": 2.154e-05,
+          "inclusive_s": 2.154e-05
+        },
+        {
+          "file": "_interface.py",
+          "line": 647,
+          "name": "__matmul__",
+          "calls": 8,
+          "self_s": 2.0973e-05,
+          "inclusive_s": 0.07521973200000001
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<method 'any' of 'numpy.ndarray' objects>",
+          "calls": 8,
+          "self_s": 2.0593e-05,
+          "inclusive_s": 0.000308451
+        },
+        {
+          "file": "inspect.py",
+          "line": 747,
+          "name": "unwrap",
+          "calls": 8,
+          "self_s": 2.0123e-05,
+          "inclusive_s": 3.169e-05
+        },
+        {
+          "file": "inspect.py",
+          "line": 3045,
+          "name": "<genexpr>",
+          "calls": 88,
+          "self_s": 1.8619000000000002e-05,
+          "inclusive_s": 2.3696e-05
+        },
+        {
+          "file": "inspect.py",
+          "line": 3308,
+          "name": "signature",
+          "calls": 8,
+          "self_s": 1.8242000000000003e-05,
+          "inclusive_s": 0.000783982
+        },
+        {
+          "file": "<string>",
+          "line": 2,
+          "name": "__init__",
+          "calls": 5,
+          "self_s": 1.7771e-05,
+          "inclusive_s": 1.7771e-05
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<method 'update' of 'dict' objects>",
+          "calls": 8,
+          "self_s": 1.6928e-05,
+          "inclusive_s": 1.6928e-05
+        },
+        {
+          "file": "fromnumeric.py",
+          "line": 2436,
+          "name": "any",
+          "calls": 10,
+          "self_s": 1.6736e-05,
+          "inclusive_s": 6.6753e-05
+        },
+        {
+          "file": "iterative.py",
+          "line": 11,
+          "name": "_get_atol_rtol",
+          "calls": 8,
+          "self_s": 1.6645e-05,
+          "inclusive_s": 2.0312e-05
+        },
+        {
+          "file": "inspect.py",
+          "line": 175,
+          "name": "get_annotations",
+          "calls": 8,
+          "self_s": 1.4293e-05,
+          "inclusive_s": 3.1033e-05
+        },
+        {
+          "file": "enum.py",
+          "line": 202,
+          "name": "__get__",
+          "calls": 12,
+          "self_s": 1.4011e-05,
+          "inclusive_s": 1.8149000000000002e-05
+        },
+        {
+          "file": "enum.py",
+          "line": 1129,
+          "name": "__new__",
+          "calls": 80,
+          "self_s": 1.3353e-05,
+          "inclusive_s": 1.3353e-05
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<method 'setflags' of 'numpy.ndarray' objects>",
+          "calls": 10,
+          "self_s": 1.2412e-05,
+          "inclusive_s": 1.2412e-05
+        },
+        {
+          "file": "_aliases.py",
+          "line": 148,
+          "name": "zeros",
+          "calls": 4,
+          "self_s": 1.1378e-05,
+          "inclusive_s": 3.5545e-05
+        },
+        {
+          "file": "_interface.py",
+          "line": 541,
+          "name": "__mul__",
+          "calls": 8,
+          "self_s": 1.0908000000000001e-05,
+          "inclusive_s": 0.075122955
+        },
+        {
+          "file": "blas.py",
+          "line": 403,
+          "name": "getter",
+          "calls": 8,
+          "self_s": 1.0249000000000001e-05,
+          "inclusive_s": 2.4732000000000003e-05
+        },
+        {
+          "file": "_methods.py",
+          "line": 55,
+          "name": "_any",
+          "calls": 8,
+          "self_s": 9.780000000000001e-06,
+          "inclusive_s": 0.000287858
+        },
+        {
+          "file": "_sputils.py",
+          "line": 540,
+          "name": "is_pydata_spmatrix",
+          "calls": 8,
+          "self_s": 8.374e-06,
+          "inclusive_s": 1.251e-05
+        },
+        {
+          "file": "_type_check_impl.py",
+          "line": 312,
+          "name": "isrealobj",
+          "calls": 4,
+          "self_s": 8.368e-06,
+          "inclusive_s": 2.5481000000000002e-05
+        },
+        {
+          "file": "utils.py",
+          "line": 19,
+          "name": "coerce",
+          "calls": 8,
+          "self_s": 8.276e-06,
+          "inclusive_s": 8.276e-06
+        },
+        {
+          "file": "_helpers.py",
+          "line": 276,
+          "name": "is_array_api_obj",
+          "calls": 16,
+          "self_s": 7.714000000000001e-06,
+          "inclusive_s": 1.251e-05
+        },
+        {
+          "file": "_matrix.py",
+          "line": 75,
+          "name": "get_shape",
+          "calls": 12,
+          "self_s": 7.053e-06,
+          "inclusive_s": 7.053e-06
+        },
+        {
+          "file": "profile_replay.py",
+          "line": 25,
+          "name": "state",
+          "calls": 1,
+          "self_s": 6.484e-06,
+          "inclusive_s": 0.007723079000000001
+        },
+        {
+          "file": "_sparse.py",
+          "line": 10,
+          "name": "issparse",
+          "calls": 8,
+          "self_s": 6.3030000000000005e-06,
+          "inclusive_s": 1.7118e-05
+        },
+        {
+          "file": "_array_api_override.py",
+          "line": 73,
+          "name": "array_namespace",
+          "calls": 8,
+          "self_s": 5.361e-06,
+          "inclusive_s": 5.361e-06
+        },
+        {
+          "file": "_interface.py",
+          "line": 1165,
+          "name": "aslinearoperator",
+          "calls": 16,
+          "self_s": 5.268e-06,
+          "inclusive_s": 7.432e-06
+        },
+        {
+          "file": "inspect.py",
+          "line": 2765,
+          "name": "name",
+          "calls": 80,
+          "self_s": 5.077000000000001e-06,
+          "inclusive_s": 5.077000000000001e-06
+        },
+        {
+          "file": "inspect.py",
+          "line": 371,
+          "name": "isfunction",
+          "calls": 16,
+          "self_s": 4.325e-06,
+          "inclusive_s": 5.359000000000001e-06
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<built-in method sys.getrecursionlimit>",
+          "calls": 8,
+          "self_s": 4.23e-06,
+          "inclusive_s": 4.23e-06
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<built-in method builtins.id>",
+          "calls": 8,
+          "self_s": 4.1390000000000005e-06,
+          "inclusive_s": 4.1390000000000005e-06
+        },
+        {
+          "file": "enum.py",
+          "line": 1292,
+          "name": "value",
+          "calls": 12,
+          "self_s": 4.138e-06,
+          "inclusive_s": 4.138e-06
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<built-in method builtins.callable>",
+          "calls": 16,
+          "self_s": 3.858e-06,
+          "inclusive_s": 3.858e-06
+        },
+        {
+          "file": "fromnumeric.py",
+          "line": 3478,
+          "name": "_ndim_dispatcher",
+          "calls": 28,
+          "self_s": 2.729e-06,
+          "inclusive_s": 2.729e-06
+        },
+        {
+          "file": "_type_check_impl.py",
+          "line": 171,
+          "name": "_is_type_dispatcher",
+          "calls": 16,
+          "self_s": 1.8800000000000002e-06,
+          "inclusive_s": 1.8800000000000002e-06
+        },
+        {
+          "file": "fromnumeric.py",
+          "line": 2431,
+          "name": "_any_dispatcher",
+          "calls": 10,
+          "self_s": 1.692e-06,
+          "inclusive_s": 1.692e-06
+        },
+        {
+          "file": "inspect.py",
+          "line": 3058,
+          "name": "parameters",
+          "calls": 8,
+          "self_s": 6.58e-07,
+          "inclusive_s": 6.58e-07
+        }
+      ],
+      "frame_identity": {
+        "size_bytes": 83202493,
+        "sha256": "da91f75ad9e00f434d89b8e2bcf6464fee260e4a4f6e6967fe95937101967c63"
+      }
+    },
+    {
+      "label": "바람 종료 구간",
+      "frame": 79,
+      "start_substep": 144,
+      "steps": 4,
+      "original_hvp": 155,
+      "replay_hvp": 155,
+      "baseline_s": 2.7127036889996816,
+      "profiled_s": 2.9716699569999037,
+      "max_displacement_difference_m": 0.0,
+      "max_velocity_difference_m_s": 0.0,
+      "repeat_exact": true,
+      "within_1e_10": true,
+      "exclusive_groups_s": {
+        "GPU 동기화 대기": 0.85831787,
+        "CPU 희소 직접 풀이": 1.122111369,
+        "CPU GMRES": 0.043099106,
+        "기타": 0.948101731
+      },
+      "functions": [
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<method 'solve' of 'SuperLU' objects>",
+          "calls": 163,
+          "self_s": 1.122111369,
+          "inclusive_s": 1.122111369
+        },
+        {
+          "file": "context.py",
+          "line": 11915,
+          "name": "synchronize_device",
+          "calls": 184,
+          "self_s": 0.85831787,
+          "inclusive_s": 0.8597392210000001
+        },
+        {
+          "file": "context.py",
+          "line": 13904,
+          "name": "copy",
+          "calls": 1840,
+          "self_s": 0.20622061100000003,
+          "inclusive_s": 0.21995608900000002
+        },
+        {
+          "file": "context.py",
+          "line": 11188,
+          "name": "launch",
+          "calls": 2024,
+          "self_s": 0.07012676400000001,
+          "inclusive_s": 0.237808033
+        },
+        {
+          "file": "p3_shell_warp.py",
+          "line": 90,
+          "name": "evaluate_displacement",
+          "calls": 184,
+          "self_s": 0.070069807,
+          "inclusive_s": 1.639437583
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<built-in method scipy.sparse._sparsetools.csr_matvecs>",
+          "calls": 215,
+          "self_s": 0.061314003000000006,
+          "inclusive_s": 0.061314003000000006
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<method 'reduce' of 'numpy.ufunc' objects>",
+          "calls": 4643,
+          "self_s": 0.056275463000000005,
+          "inclusive_s": 0.056275463000000005
+        },
+        {
+          "file": "context.py",
+          "line": 10272,
+          "name": "pack_arg",
+          "calls": 23736,
+          "self_s": 0.050642078,
+          "inclusive_s": 0.097275358
+        },
+        {
+          "file": "iterative.py",
+          "line": 592,
+          "name": "gmres",
+          "calls": 8,
+          "self_s": 0.043084245,
+          "inclusive_s": 2.559555983
+        },
+        {
+          "file": "p3_shell_dynamics.py",
+          "line": 134,
+          "name": "action",
+          "calls": 155,
+          "self_s": 0.038140310000000004,
+          "inclusive_s": 1.4801117320000001
+        },
+        {
+          "file": "config.py",
+          "line": 68,
+          "name": "__getattribute__",
+          "calls": 49864,
+          "self_s": 0.024090644,
+          "inclusive_s": 0.024090644
+        },
+        {
+          "file": "context.py",
+          "line": 11323,
+          "name": "pack_args",
+          "calls": 4048,
+          "self_s": 0.018377174,
+          "inclusive_s": 0.11853184600000001
+        },
+        {
+          "file": "context.py",
+          "line": 5701,
+          "name": "set_stream",
+          "calls": 2944,
+          "self_s": 0.015548771000000001,
+          "inclusive_s": 0.016583726
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<built-in method builtins.isinstance>",
+          "calls": 107171,
+          "self_s": 0.015452152,
+          "inclusive_s": 0.016109353
+        },
+        {
+          "file": "p3_shell_dynamics.py",
+          "line": 115,
+          "name": "evaluate",
+          "calls": 24,
+          "self_s": 0.013076632000000001,
+          "inclusive_s": 0.23313313100000002
+        },
+        {
+          "file": "types.py",
+          "line": 3846,
+          "name": "_init_new",
+          "calls": 1472,
+          "self_s": 0.010014008000000001,
+          "inclusive_s": 0.020884898000000002
+        },
+        {
+          "file": "types.py",
+          "line": 4492,
+          "name": "numpy",
+          "calls": 1472,
+          "self_s": 0.009575605000000001,
+          "inclusive_s": 0.316723486
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<built-in method numpy.asarray>",
+          "calls": 2695,
+          "self_s": 0.008360158000000001,
+          "inclusive_s": 0.018218545000000003
+        },
+        {
+          "file": "types.py",
+          "line": 3315,
+          "name": "__init__",
+          "calls": 1840,
+          "self_s": 0.007860622000000001,
+          "inclusive_s": 0.04572086
+        },
+        {
+          "file": "p3_shell_dynamics.py",
+          "line": 98,
+          "name": "step",
+          "calls": 4,
+          "self_s": 0.007409346000000001,
+          "inclusive_s": 2.9596198
+        },
+        {
+          "file": "types.py",
+          "line": 3442,
+          "name": "_init_from_data",
+          "calls": 368,
+          "self_s": 0.007391886,
+          "inclusive_s": 0.013345418000000001
+        },
+        {
+          "file": "context.py",
+          "line": 8468,
+          "name": "get_device",
+          "calls": 33488,
+          "self_s": 0.0070602600000000005,
+          "inclusive_s": 0.007742644000000001
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<built-in method numpy.array>",
+          "calls": 390,
+          "self_s": 0.006674995,
+          "inclusive_s": 0.006693339
+        },
+        {
+          "file": "p3_surface.py",
+          "line": 25,
+          "name": "_array",
+          "calls": 365,
+          "self_s": 0.006618626000000001,
+          "inclusive_s": 0.013788571000000001
+        },
+        {
+          "file": "types.py",
+          "line": 2876,
+          "name": "is_array",
+          "calls": 27784,
+          "self_s": 0.0064844,
+          "inclusive_s": 0.009928949000000001
+        },
+        {
+          "file": "context.py",
+          "line": 5591,
+          "name": "<lambda>",
+          "calls": 368,
+          "self_s": 0.006154565000000001,
+          "inclusive_s": 0.006194261
+        },
+        {
+          "file": "p3_shell_warp.py",
+          "line": 123,
+          "name": "<genexpr>",
+          "calls": 2208,
+          "self_s": 0.006128754,
+          "inclusive_s": 0.01165003
+        },
+        {
+          "file": "context.py",
+          "line": 9837,
+          "name": "empty",
+          "calls": 1472,
+          "self_s": 0.005739147,
+          "inclusive_s": 0.038092392
+        },
+        {
+          "file": "_interface.py",
+          "line": 312,
+          "name": "_shared_matvec",
+          "calls": 314,
+          "self_s": 0.005553313000000001,
+          "inclusive_s": 2.609790573
+        },
+        {
+          "file": "types.py",
+          "line": 3962,
+          "name": "__array_interface__",
+          "calls": 1472,
+          "self_s": 0.005427919000000001,
+          "inclusive_s": 0.009858387000000001
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<method 'get' of 'dict' objects>",
+          "calls": 24535,
+          "self_s": 0.004778517,
+          "inclusive_s": 0.004778517
+        },
+        {
+          "file": "types.py",
+          "line": 2888,
+          "name": "concrete_array_type",
+          "calls": 20424,
+          "self_s": 0.004583452,
+          "inclusive_s": 0.0067807480000000005
+        },
+        {
+          "file": "context.py",
+          "line": 4965,
+          "name": "allocate",
+          "calls": 1472,
+          "self_s": 0.004526355,
+          "inclusive_s": 0.005656004
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<built-in method builtins.hasattr>",
+          "calls": 6656,
+          "self_s": 0.004203372,
+          "inclusive_s": 0.004760847
+        },
+        {
+          "file": "types.py",
+          "line": 2321,
+          "name": "__init__",
+          "calls": 2024,
+          "self_s": 0.0041887930000000006,
+          "inclusive_s": 0.004452442
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<method 'astype' of 'numpy.ndarray' objects>",
+          "calls": 365,
+          "self_s": 0.004078056,
+          "inclusive_s": 0.004078056
+        },
+        {
+          "file": "types.py",
+          "line": 4211,
+          "name": "__ctype__",
+          "calls": 20424,
+          "self_s": 0.004044934,
+          "inclusive_s": 0.004044934
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<method 'dot' of 'numpy.ndarray' objects>",
+          "calls": 450,
+          "self_s": 0.0039773610000000004,
+          "inclusive_s": 0.0039773610000000004
+        },
+        {
+          "file": "context.py",
+          "line": 5118,
+          "name": "__exit__",
+          "calls": 1472,
+          "self_s": 0.003815946,
+          "inclusive_s": 0.003977169
+        },
+        {
+          "file": "context.py",
+          "line": 5787,
+          "name": "__eq__",
+          "calls": 8280,
+          "self_s": 0.0036997270000000003,
+          "inclusive_s": 0.005692758
+        },
+        {
+          "file": "context.py",
+          "line": 5112,
+          "name": "__enter__",
+          "calls": 1472,
+          "self_s": 0.003665965,
+          "inclusive_s": 0.004064577000000001
+        },
+        {
+          "file": "types.py",
+          "line": 2582,
+          "name": "type_size_in_bytes",
+          "calls": 15824,
+          "self_s": 0.0036610490000000004,
+          "inclusive_s": 0.005730457
+        },
+        {
+          "file": "_linalg.py",
+          "line": 2598,
+          "name": "norm",
+          "calls": 450,
+          "self_s": 0.0035470840000000003,
+          "inclusive_s": 0.008567306
+        },
+        {
+          "file": "context.py",
+          "line": 4648,
+          "name": "load",
+          "calls": 2024,
+          "self_s": 0.0034493740000000003,
+          "inclusive_s": 0.010409652
+        },
+        {
+          "file": "types.py",
+          "line": 4485,
+          "name": "assign",
+          "calls": 368,
+          "self_s": 0.003433399,
+          "inclusive_s": 0.042711715000000004
+        },
+        {
+          "file": "types.py",
+          "line": 2351,
+          "name": "launch_bounds_t",
+          "calls": 2024,
+          "self_s": 0.0033365020000000003,
+          "inclusive_s": 0.008985401
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<built-in method builtins.len>",
+          "calls": 20293,
+          "self_s": 0.0031644810000000002,
+          "inclusive_s": 0.00333275
+        },
+        {
+          "file": "context.py",
+          "line": 5662,
+          "name": "context",
+          "calls": 23184,
+          "self_s": 0.0031213760000000004,
+          "inclusive_s": 0.0031213760000000004
+        },
+        {
+          "file": "codegen.py",
+          "line": 1729,
+          "name": "locked_call",
+          "calls": 2024,
+          "self_s": 0.0030776780000000004,
+          "inclusive_s": 0.00543406
+        },
+        {
+          "file": "numeric.py",
+          "line": 97,
+          "name": "zeros_like",
+          "calls": 196,
+          "self_s": 0.003005049,
+          "inclusive_s": 0.003249596
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<method 'append' of 'list' objects>",
+          "calls": 23972,
+          "self_s": 0.002965085,
+          "inclusive_s": 0.002965085
+        },
+        {
+          "file": "p3_shell_warp.py",
+          "line": 43,
+          "name": "assemble",
+          "calls": 736,
+          "self_s": 0.002887742,
+          "inclusive_s": 0.147406309
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<built-in method builtins.issubclass>",
+          "calls": 8640,
+          "self_s": 0.00288279,
+          "inclusive_s": 0.00288279
+        },
+        {
+          "file": "fromnumeric.py",
+          "line": 66,
+          "name": "_wrapreduction",
+          "calls": 936,
+          "self_s": 0.0028558900000000003,
+          "inclusive_s": 0.014996157000000001
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<built-in method _ctypes.addressof>",
+          "calls": 25760,
+          "self_s": 0.0028268240000000004,
+          "inclusive_s": 0.0028268240000000004
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<built-in method numpy.zeros>",
+          "calls": 653,
+          "self_s": 0.0027900150000000003,
+          "inclusive_s": 0.0027900150000000003
+        },
+        {
+          "file": "context.py",
+          "line": 9810,
+          "name": "clone",
+          "calls": 1472,
+          "self_s": 0.002777116,
+          "inclusive_s": 0.24122082900000003
+        },
+        {
+          "file": "context.py",
+          "line": 15516,
+          "name": "init",
+          "calls": 4968,
+          "self_s": 0.0026904150000000003,
+          "inclusive_s": 0.008156099
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<built-in method builtins.getattr>",
+          "calls": 7815,
+          "self_s": 0.002662774,
+          "inclusive_s": 0.002662774
+        },
+        {
+          "file": "context.py",
+          "line": 11132,
+          "name": "_build_launch_bounds_from_tuple",
+          "calls": 2024,
+          "self_s": 0.002658169,
+          "inclusive_s": 0.012594607
+        },
+        {
+          "file": "context.py",
+          "line": 5636,
+          "name": "is_cuda",
+          "calls": 16560,
+          "self_s": 0.002616184,
+          "inclusive_s": 0.002616184
+        },
+        {
+          "file": "fromnumeric.py",
+          "line": 2304,
+          "name": "sum",
+          "calls": 936,
+          "self_s": 0.00251415,
+          "inclusive_s": 0.017851183
+        },
+        {
+          "file": "types.py",
+          "line": 4611,
+          "name": "to",
+          "calls": 1472,
+          "self_s": 0.00243601,
+          "inclusive_s": 0.249055393
+        },
+        {
+          "file": "context.py",
+          "line": 4972,
+          "name": "deallocate",
+          "calls": 1472,
+          "self_s": 0.002295539,
+          "inclusive_s": 0.002295539
+        },
+        {
+          "file": "context.py",
+          "line": 11102,
+          "name": "_normalize_launch_dim",
+          "calls": 2024,
+          "self_s": 0.002178465,
+          "inclusive_s": 0.007066849
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<built-in method builtins.max>",
+          "calls": 2745,
+          "self_s": 0.002148898,
+          "inclusive_s": 0.0026759970000000003
+        },
+        {
+          "file": "types.py",
+          "line": 3946,
+          "name": "__del__",
+          "calls": 1840,
+          "self_s": 0.002144305,
+          "inclusive_s": 0.0055186390000000005
+        },
+        {
+          "file": "context.py",
+          "line": 8740,
+          "name": "get_device",
+          "calls": 2944,
+          "self_s": 0.0021099730000000002,
+          "inclusive_s": 0.009391366
+        },
+        {
+          "file": "types.py",
+          "line": 3106,
+          "name": "check_array_shape",
+          "calls": 1840,
+          "self_s": 0.002075024,
+          "inclusive_s": 0.002075024
+        },
+        {
+          "file": "_compressed.py",
+          "line": 399,
+          "name": "_matmul_multivector",
+          "calls": 215,
+          "self_s": 0.0020695320000000002,
+          "inclusive_s": 0.066806403
+        },
+        {
+          "file": "types.py",
+          "line": 3061,
+          "name": "types_equal",
+          "calls": 22632,
+          "self_s": 0.002037091,
+          "inclusive_s": 0.002037091
+        },
+        {
+          "file": "_aliases.py",
+          "line": 448,
+          "name": "reshape",
+          "calls": 314,
+          "self_s": 0.002002644,
+          "inclusive_s": 0.005335455
+        },
+        {
+          "file": "_funcs.py",
+          "line": 223,
+          "name": "broadcast_shapes",
+          "calls": 314,
+          "self_s": 0.001976945,
+          "inclusive_s": 0.003377309
+        },
+        {
+          "file": "types.py",
+          "line": 3309,
+          "name": "__new__",
+          "calls": 1840,
+          "self_s": 0.0019493160000000002,
+          "inclusive_s": 0.002822658
+        },
+        {
+          "file": "context.py",
+          "line": 11067,
+          "name": "_canonicalize_dim",
+          "calls": 2024,
+          "self_s": 0.001913346,
+          "inclusive_s": 0.004069772
+        },
+        {
+          "file": "utils.py",
+          "line": 1531,
+          "name": "__exit__",
+          "calls": 1472,
+          "self_s": 0.001912309,
+          "inclusive_s": 0.013288176
+        },
+        {
+          "file": "utils.py",
+          "line": 1523,
+          "name": "__enter__",
+          "calls": 1472,
+          "self_s": 0.0018660740000000001,
+          "inclusive_s": 0.017630596000000002
+        },
+        {
+          "file": "context.py",
+          "line": 5685,
+          "name": "stream",
+          "calls": 5704,
+          "self_s": 0.001864465,
+          "inclusive_s": 0.0026059290000000003
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<method 'reshape' of 'numpy.ndarray' objects>",
+          "calls": 477,
+          "self_s": 0.001816778,
+          "inclusive_s": 0.001816778
+        },
+        {
+          "file": "p3_shell_warp.py",
+          "line": 48,
+          "name": "gather",
+          "calls": 736,
+          "self_s": 0.001739754,
+          "inclusive_s": 0.058422131
+        },
+        {
+          "file": "types.py",
+          "line": 2796,
+          "name": "is_native_type",
+          "calls": 4048,
+          "self_s": 0.0017266410000000001,
+          "inclusive_s": 0.002203627
+        },
+        {
+          "file": "context.py",
+          "line": 9889,
+          "name": "empty_like",
+          "calls": 1472,
+          "self_s": 0.001701861,
+          "inclusive_s": 0.040701192000000004
+        },
+        {
+          "file": "utils.py",
+          "line": 1504,
+          "name": "__init__",
+          "calls": 1472,
+          "self_s": 0.00168665,
+          "inclusive_s": 0.008327056000000001
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<method 'all' of 'numpy.generic' objects>",
+          "calls": 1472,
+          "self_s": 0.0016749750000000002,
+          "inclusive_s": 0.00414235
+        },
+        {
+          "file": "types.py",
+          "line": 3792,
+          "name": "_init_from_ptr",
+          "calls": 368,
+          "self_s": 0.001544791,
+          "inclusive_s": 0.002440957
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<method 'all' of 'numpy.ndarray' objects>",
+          "calls": 1481,
+          "self_s": 0.0015410760000000002,
+          "inclusive_s": 0.015555712000000001
+        },
+        {
+          "file": "context.py",
+          "line": 4160,
+          "name": "get_module_hash",
+          "calls": 2024,
+          "self_s": 0.0015125750000000002,
+          "inclusive_s": 0.0017887150000000002
+        },
+        {
+          "file": "p3_shell_warp.py",
+          "line": 106,
+          "name": "<genexpr>",
+          "calls": 552,
+          "self_s": 0.001424067,
+          "inclusive_s": 0.06422654700000001
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<built-in method builtins.all>",
+          "calls": 1472,
+          "self_s": 0.0013705540000000002,
+          "inclusive_s": 0.013943227
+        },
+        {
+          "file": "types.py",
+          "line": 2618,
+          "name": "type_typestr",
+          "calls": 1840,
+          "self_s": 0.0013463750000000001,
+          "inclusive_s": 0.0017130270000000002
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<method 'extend' of 'list' objects>",
+          "calls": 8096,
+          "self_s": 0.0013308690000000001,
+          "inclusive_s": 0.0013308690000000001
+        },
+        {
+          "file": "_methods.py",
+          "line": 64,
+          "name": "_all",
+          "calls": 2953,
+          "self_s": 0.001251726,
+          "inclusive_s": 0.016482011
+        },
+        {
+          "file": "types.py",
+          "line": 3403,
+          "name": "<genexpr>",
+          "calls": 4600,
+          "self_s": 0.0012480290000000001,
+          "inclusive_s": 0.0012480290000000001
+        },
+        {
+          "file": "_array_api.py",
+          "line": 76,
+          "name": "_asarray",
+          "calls": 314,
+          "self_s": 0.0012399890000000002,
+          "inclusive_s": 0.0015170020000000002
+        },
+        {
+          "file": "_internal.py",
+          "line": 33,
+          "name": "wrapped_f",
+          "calls": 334,
+          "self_s": 0.001195394,
+          "inclusive_s": 0.006668463
+        },
+        {
+          "file": "context.py",
+          "line": 8586,
+          "name": "verify_cuda_device",
+          "calls": 2024,
+          "self_s": 0.0011881600000000002,
+          "inclusive_s": 0.0027105420000000002
+        },
+        {
+          "file": "context.py",
+          "line": 4948,
+          "name": "_set_alloc_tag_if_tracking",
+          "calls": 1472,
+          "self_s": 0.0011296490000000001,
+          "inclusive_s": 0.0011296490000000001
+        },
+        {
+          "file": "utils.py",
+          "line": 1481,
+          "name": "__exit__",
+          "calls": 1472,
+          "self_s": 0.0010476230000000001,
+          "inclusive_s": 0.005024792
+        },
+        {
+          "file": "context.py",
+          "line": 5631,
+          "name": "is_cpu",
+          "calls": 6072,
+          "self_s": 0.001046337,
+          "inclusive_s": 0.001046337
+        },
+        {
+          "file": "context.py",
+          "line": 3602,
+          "name": "get_kernel_hooks",
+          "calls": 2024,
+          "self_s": 0.0010322130000000001,
+          "inclusive_s": 0.001560928
+        },
+        {
+          "file": "context.py",
+          "line": 12671,
+          "name": "_get_apic_capture_for_device",
+          "calls": 7176,
+          "self_s": 0.0010315460000000002,
+          "inclusive_s": 0.0010315460000000002
+        },
+        {
+          "file": "types.py",
+          "line": 4359,
+          "name": "zero_",
+          "calls": 368,
+          "self_s": 0.0010288340000000002,
+          "inclusive_s": 0.007843047
+        },
+        {
+          "file": "utils.py",
+          "line": 1460,
+          "name": "__init__",
+          "calls": 1472,
+          "self_s": 0.000992995,
+          "inclusive_s": 0.006640406000000001
+        },
+        {
+          "file": "_internal.py",
+          "line": 263,
+          "name": "__init__",
+          "calls": 368,
+          "self_s": 0.000941265,
+          "inclusive_s": 0.000941265
+        },
+        {
+          "file": "utils.py",
+          "line": 1469,
+          "name": "__enter__",
+          "calls": 1472,
+          "self_s": 0.000931932,
+          "inclusive_s": 0.0049965090000000005
+        },
+        {
+          "file": "context.py",
+          "line": 5407,
+          "name": "is_capturing",
+          "calls": 184,
+          "self_s": 0.000921323,
+          "inclusive_s": 0.000921323
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<built-in method __new__ of type object at 0xa44b40>",
+          "calls": 1852,
+          "self_s": 0.0008846310000000001,
+          "inclusive_s": 0.0008846310000000001
+        },
+        {
+          "file": "fromnumeric.py",
+          "line": 207,
+          "name": "reshape",
+          "calls": 314,
+          "self_s": 0.0008684560000000001,
+          "inclusive_s": 0.0032791110000000004
+        },
+        {
+          "file": "context.py",
+          "line": 11167,
+          "name": "_resolve_kernel_scalar_tid_extent_limit",
+          "calls": 2024,
+          "self_s": 0.000851148,
+          "inclusive_s": 0.000851148
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<method 'conj' of 'numpy.generic' objects>",
+          "calls": 819,
+          "self_s": 0.00084853,
+          "inclusive_s": 0.00084853
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<method 'ravel' of 'numpy.ndarray' objects>",
+          "calls": 1051,
+          "self_s": 0.000802071,
+          "inclusive_s": 0.000802071
+        },
+        {
+          "file": "_base.py",
+          "line": 875,
+          "name": "_matmul_dispatch",
+          "calls": 215,
+          "self_s": 0.000797625,
+          "inclusive_s": 0.067786701
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<built-in method _operator.index>",
+          "calls": 5544,
+          "self_s": 0.000793491,
+          "inclusive_s": 0.000793491
+        },
+        {
+          "file": "numeric.py",
+          "line": 1975,
+          "name": "isscalar",
+          "calls": 231,
+          "self_s": 0.000758706,
+          "inclusive_s": 0.001822337
+        },
+        {
+          "file": "types.py",
+          "line": 4236,
+          "name": "grad",
+          "calls": 3680,
+          "self_s": 0.000750483,
+          "inclusive_s": 0.000750483
+        },
+        {
+          "file": "context.py",
+          "line": 11085,
+          "name": "<genexpr>",
+          "calls": 3864,
+          "self_s": 0.000742611,
+          "inclusive_s": 0.000922643
+        },
+        {
+          "file": "_sputils.py",
+          "line": 344,
+          "name": "isscalarlike",
+          "calls": 215,
+          "self_s": 0.000729989,
+          "inclusive_s": 0.002671319
+        },
+        {
+          "file": "_interface.py",
+          "line": 363,
+          "name": "matvec",
+          "calls": 314,
+          "self_s": 0.000643075,
+          "inclusive_s": 2.6104336480000003
+        },
+        {
+          "file": "_interface.py",
+          "line": 890,
+          "name": "_matvec",
+          "calls": 314,
+          "self_s": 0.0006349190000000001,
+          "inclusive_s": 2.592674477
+        },
+        {
+          "file": "types.py",
+          "line": 4318,
+          "name": "mark_init",
+          "calls": 2208,
+          "self_s": 0.0005905250000000001,
+          "inclusive_s": 0.0005905250000000001
+        },
+        {
+          "file": "context.py",
+          "line": 5601,
+          "name": "get_allocator",
+          "calls": 1472,
+          "self_s": 0.00058836,
+          "inclusive_s": 0.0008926460000000001
+        },
+        {
+          "file": "context.py",
+          "line": 11097,
+          "name": "_validate_launch_dim",
+          "calls": 2024,
+          "self_s": 0.0005775330000000001,
+          "inclusive_s": 0.000818612
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<method '__exit__' of '_thread.RLock' objects>",
+          "calls": 2024,
+          "self_s": 0.000567667,
+          "inclusive_s": 0.000567667
+        },
+        {
+          "file": "_base.py",
+          "line": 1006,
+          "name": "__matmul__",
+          "calls": 215,
+          "self_s": 0.00056371,
+          "inclusive_s": 0.07102173
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<method 'max' of 'numpy.ndarray' objects>",
+          "calls": 552,
+          "self_s": 0.0005462360000000001,
+          "inclusive_s": 0.015098084000000001
+        },
+        {
+          "file": "types.py",
+          "line": 3092,
+          "name": "strides_from_shape",
+          "calls": 368,
+          "self_s": 0.00047736400000000003,
+          "inclusive_s": 0.0007337670000000001
+        },
+        {
+          "file": "fromnumeric.py",
+          "line": 48,
+          "name": "_wrapfunc",
+          "calls": 314,
+          "self_s": 0.000465568,
+          "inclusive_s": 0.0024106550000000003
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<built-in method _abc._abc_instancecheck>",
+          "calls": 239,
+          "self_s": 0.000457694,
+          "inclusive_s": 0.000457694
+        },
+        {
+          "file": "p3_shell_warp.py",
+          "line": 41,
+          "name": "outputs",
+          "calls": 1656,
+          "self_s": 0.00038818800000000003,
+          "inclusive_s": 0.00038818800000000003
+        },
+        {
+          "file": "context.py",
+          "line": 1076,
+          "name": "_validate_cluster_launch",
+          "calls": 2024,
+          "self_s": 0.000362226,
+          "inclusive_s": 0.000362226
+        },
+        {
+          "file": "_funcs.py",
+          "line": 266,
+          "name": "<genexpr>",
+          "calls": 942,
+          "self_s": 0.000343412,
+          "inclusive_s": 0.0005270990000000001
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<method 'min' of 'numpy.ndarray' objects>",
+          "calls": 184,
+          "self_s": 0.000315771,
+          "inclusive_s": 0.015112711000000001
+        },
+        {
+          "file": "_methods.py",
+          "line": 39,
+          "name": "_amax",
+          "calls": 552,
+          "self_s": 0.000304475,
+          "inclusive_s": 0.014551848000000001
+        },
+        {
+          "file": "p3_shell_warp.py",
+          "line": 82,
+          "name": "__getattr__",
+          "calls": 438,
+          "self_s": 0.00030023,
+          "inclusive_s": 0.0006772340000000001
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<built-in method builtins.any>",
+          "calls": 184,
+          "self_s": 0.000294775,
+          "inclusive_s": 0.064521322
+        },
+        {
+          "file": "p3_shell_warp.py",
+          "line": 40,
+          "name": "geometry_inputs",
+          "calls": 920,
+          "self_s": 0.00029261200000000004,
+          "inclusive_s": 0.00029261200000000004
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<built-in method numpy.asanyarray>",
+          "calls": 322,
+          "self_s": 0.000279648,
+          "inclusive_s": 0.000279648
+        },
+        {
+          "file": "context.py",
+          "line": 3095,
+          "name": "get_hash",
+          "calls": 2024,
+          "self_s": 0.00027614,
+          "inclusive_s": 0.00027614
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<method 'items' of 'dict' objects>",
+          "calls": 946,
+          "self_s": 0.000273626,
+          "inclusive_s": 0.000273626
+        },
+        {
+          "file": "context.py",
+          "line": 5641,
+          "name": "is_capturing",
+          "calls": 184,
+          "self_s": 0.000262522,
+          "inclusive_s": 0.0013326500000000001
+        },
+        {
+          "file": "p3_shell_dynamics.py",
+          "line": 143,
+          "name": "<lambda>",
+          "calls": 132,
+          "self_s": 0.000258018,
+          "inclusive_s": 0.00031858
+        },
+        {
+          "file": "_internal.py",
+          "line": 317,
+          "name": "data",
+          "calls": 368,
+          "self_s": 0.000249817,
+          "inclusive_s": 0.000249817
+        },
+        {
+          "file": "inspect.py",
+          "line": 2366,
+          "name": "_signature_from_function",
+          "calls": 8,
+          "self_s": 0.00022321500000000002,
+          "inclusive_s": 0.000634153
+        },
+        {
+          "file": "p3_shell_dynamics.py",
+          "line": 94,
+          "name": "kinetic_energy",
+          "calls": 12,
+          "self_s": 0.000219931,
+          "inclusive_s": 0.004147431
+        },
+        {
+          "file": "types.py",
+          "line": 4353,
+          "name": "_apic_ensure_tracked",
+          "calls": 368,
+          "self_s": 0.00020006300000000003,
+          "inclusive_s": 0.000338614
+        },
+        {
+          "file": "p3_shell_dynamics.py",
+          "line": 87,
+          "name": "_validate_state",
+          "calls": 4,
+          "self_s": 0.00019987500000000002,
+          "inclusive_s": 0.000431258
+        },
+        {
+          "file": "<frozen abc>",
+          "line": 117,
+          "name": "__instancecheck__",
+          "calls": 239,
+          "self_s": 0.000199507,
+          "inclusive_s": 0.000657201
+        },
+        {
+          "file": "_base.py",
+          "line": 98,
+          "name": "_shape_as_2d",
+          "calls": 430,
+          "self_s": 0.000194901,
+          "inclusive_s": 0.00024400500000000002
+        },
+        {
+          "file": "fromnumeric.py",
+          "line": 2299,
+          "name": "_sum_dispatcher",
+          "calls": 936,
+          "self_s": 0.000185388,
+          "inclusive_s": 0.000185388
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<method 'copy' of 'numpy.ndarray' objects>",
+          "calls": 16,
+          "self_s": 0.00017843200000000002,
+          "inclusive_s": 0.00017843200000000002
+        },
+        {
+          "file": "types.py",
+          "line": 4073,
+          "name": "__len__",
+          "calls": 736,
+          "self_s": 0.000168269,
+          "inclusive_s": 0.000168269
+        },
+        {
+          "file": "_sputils.py",
+          "line": 401,
+          "name": "isdense",
+          "calls": 215,
+          "self_s": 0.00016160500000000002,
+          "inclusive_s": 0.000178819
+        },
+        {
+          "file": "_linalg.py",
+          "line": 169,
+          "name": "isComplexType",
+          "calls": 450,
+          "self_s": 0.00015718,
+          "inclusive_s": 0.00023938600000000002
+        },
+        {
+          "file": "_base.py",
+          "line": 392,
+          "name": "format",
+          "calls": 215,
+          "self_s": 0.000150029,
+          "inclusive_s": 0.000150029
+        },
+        {
+          "file": "inspect.py",
+          "line": 2712,
+          "name": "__init__",
+          "calls": 80,
+          "self_s": 0.00014748200000000002,
+          "inclusive_s": 0.000250475
+        },
+        {
+          "file": "_base.py",
+          "line": 94,
+          "name": "ndim",
+          "calls": 215,
+          "self_s": 0.00013985900000000002,
+          "inclusive_s": 0.000177674
+        },
+        {
+          "file": "_sputils.py",
+          "line": 58,
+          "name": "upcast_char",
+          "calls": 215,
+          "self_s": 0.00013788,
+          "inclusive_s": 0.00026008
+        },
+        {
+          "file": "_methods.py",
+          "line": 43,
+          "name": "_amin",
+          "calls": 184,
+          "self_s": 0.000136102,
+          "inclusive_s": 0.014796940000000001
+        },
+        {
+          "file": "_data.py",
+          "line": 24,
+          "name": "dtype",
+          "calls": 215,
+          "self_s": 0.00011531900000000001,
+          "inclusive_s": 0.00011531900000000001
+        },
+        {
+          "file": "multiarray.py",
+          "line": 748,
+          "name": "dot",
+          "calls": 951,
+          "self_s": 0.000111921,
+          "inclusive_s": 0.000111921
+        },
+        {
+          "file": "inspect.py",
+          "line": 2470,
+          "name": "_signature_from_callable",
+          "calls": 8,
+          "self_s": 0.00011145500000000001,
+          "inclusive_s": 0.0007903820000000001
+        },
+        {
+          "file": "fromnumeric.py",
+          "line": 3482,
+          "name": "ndim",
+          "calls": 28,
+          "self_s": 0.000106007,
+          "inclusive_s": 0.000130369
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<built-in method numpy.empty>",
+          "calls": 24,
+          "self_s": 9.453200000000001e-05,
+          "inclusive_s": 9.453200000000001e-05
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<method 'values' of 'dict' objects>",
+          "calls": 184,
+          "self_s": 8.560000000000001e-05,
+          "inclusive_s": 8.560000000000001e-05
+        },
+        {
+          "file": "p3_surface.py",
+          "line": 20,
+          "name": "_require",
+          "calls": 373,
+          "self_s": 8.1937e-05,
+          "inclusive_s": 8.1937e-05
+        },
+        {
+          "file": "profile_replay.py",
+          "line": 28,
+          "name": "replay",
+          "calls": 1,
+          "self_s": 6.4058e-05,
+          "inclusive_s": 2.97161145
+        },
+        {
+          "file": "_interface.py",
+          "line": 569,
+          "name": "dot",
+          "calls": 8,
+          "self_s": 6.2086e-05,
+          "inclusive_s": 0.07618390900000001
+        },
+        {
+          "file": "_linalg.py",
+          "line": 2594,
+          "name": "_norm_dispatcher",
+          "calls": 450,
+          "self_s": 6.18e-05,
+          "inclusive_s": 6.18e-05
+        },
+        {
+          "file": "utils.py",
+          "line": 31,
+          "name": "make_system",
+          "calls": 8,
+          "self_s": 5.8979000000000006e-05,
+          "inclusive_s": 0.000149459
+        },
+        {
+          "file": "_sputils.py",
+          "line": 349,
+          "name": "isintlike",
+          "calls": 24,
+          "self_s": 5.6246e-05,
+          "inclusive_s": 0.0001742
+        },
+        {
+          "file": "_interface.py",
+          "line": 227,
+          "name": "__init__",
+          "calls": 12,
+          "self_s": 5.5397000000000005e-05,
+          "inclusive_s": 0.00034275500000000003
+        },
+        {
+          "file": "fromnumeric.py",
+          "line": 203,
+          "name": "_reshape_dispatcher",
+          "calls": 314,
+          "self_s": 5.3700000000000004e-05,
+          "inclusive_s": 5.3700000000000004e-05
+        },
+        {
+          "file": "p3_shell_dynamics.py",
+          "line": 73,
+          "name": "state",
+          "calls": 1,
+          "self_s": 5.2574e-05,
+          "inclusive_s": 0.011920726000000001
+        },
+        {
+          "file": "_aliases.py",
+          "line": 70,
+          "name": "asarray",
+          "calls": 12,
+          "self_s": 5.1826e-05,
+          "inclusive_s": 0.000143632
+        },
+        {
+          "file": "inspect.py",
+          "line": 2998,
+          "name": "__init__",
+          "calls": 8,
+          "self_s": 4.9469000000000004e-05,
+          "inclusive_s": 7.3927e-05
+        },
+        {
+          "file": "_interface.py",
+          "line": 863,
+          "name": "__init__",
+          "calls": 12,
+          "self_s": 4.7219e-05,
+          "inclusive_s": 0.027758147
+        },
+        {
+          "file": "_helpers.py",
+          "line": 683,
+          "name": "_check_device",
+          "calls": 32,
+          "self_s": 4.6465e-05,
+          "inclusive_s": 6.2644e-05
+        },
+        {
+          "file": "_aliases.py",
+          "line": 40,
+          "name": "empty",
+          "calls": 16,
+          "self_s": 4.4963e-05,
+          "inclusive_s": 9.9426e-05
+        },
+        {
+          "file": "enum.py",
+          "line": 726,
+          "name": "__call__",
+          "calls": 80,
+          "self_s": 4.0352e-05,
+          "inclusive_s": 5.5309e-05
+        },
+        {
+          "file": "p3_surface.py",
+          "line": 32,
+          "name": "_positive",
+          "calls": 4,
+          "self_s": 3.4989e-05,
+          "inclusive_s": 7.6376e-05
+        },
+        {
+          "file": "_interface.py",
+          "line": 257,
+          "name": "_init_dtype",
+          "calls": 12,
+          "self_s": 3.452e-05,
+          "inclusive_s": 0.027368173000000003
+        },
+        {
+          "file": "_interface.py",
+          "line": 558,
+          "name": "_check_matching_namespace",
+          "calls": 8,
+          "self_s": 3.4332e-05,
+          "inclusive_s": 0.00010412600000000001
+        },
+        {
+          "file": "getlimits.py",
+          "line": 178,
+          "name": "__new__",
+          "calls": 12,
+          "self_s": 3.2546e-05,
+          "inclusive_s": 4.9192000000000006e-05
+        },
+        {
+          "file": "p3_shell_dynamics.py",
+          "line": 54,
+          "name": "_state",
+          "calls": 5,
+          "self_s": 2.9066000000000003e-05,
+          "inclusive_s": 0.000161504
+        },
+        {
+          "file": "_sputils.py",
+          "line": 371,
+          "name": "isshape",
+          "calls": 12,
+          "self_s": 2.8785000000000003e-05,
+          "inclusive_s": 0.00020402000000000002
+        },
+        {
+          "file": "_array_api.py",
+          "line": 1192,
+          "name": "xp_isscalar",
+          "calls": 16,
+          "self_s": 2.7931e-05,
+          "inclusive_s": 0.000100833
+        },
+        {
+          "file": "_interface.py",
+          "line": 207,
+          "name": "__new__",
+          "calls": 12,
+          "self_s": 2.7748000000000003e-05,
+          "inclusive_s": 3.9037e-05
+        },
+        {
+          "file": "_interface.py",
+          "line": 647,
+          "name": "__matmul__",
+          "calls": 8,
+          "self_s": 2.6807000000000003e-05,
+          "inclusive_s": 0.076299137
+        },
+        {
+          "file": "multiarray.py",
+          "line": 1085,
+          "name": "copyto",
+          "calls": 196,
+          "self_s": 2.4639000000000002e-05,
+          "inclusive_s": 2.4639000000000002e-05
+        },
+        {
+          "file": "inspect.py",
+          "line": 3050,
+          "name": "from_callable",
+          "calls": 8,
+          "self_s": 2.2479000000000003e-05,
+          "inclusive_s": 0.000812861
+        },
+        {
+          "file": "numeric.py",
+          "line": 91,
+          "name": "_zeros_like_dispatcher",
+          "calls": 196,
+          "self_s": 2.2289000000000003e-05,
+          "inclusive_s": 2.2289000000000003e-05
+        },
+        {
+          "file": "inspect.py",
+          "line": 175,
+          "name": "get_annotations",
+          "calls": 8,
+          "self_s": 2.2104e-05,
+          "inclusive_s": 3.8753e-05
+        },
+        {
+          "file": "multiarray.py",
+          "line": 115,
+          "name": "empty_like",
+          "calls": 196,
+          "self_s": 2.1727e-05,
+          "inclusive_s": 2.1727e-05
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<built-in method builtins.min>",
+          "calls": 31,
+          "self_s": 2.1069e-05,
+          "inclusive_s": 2.1069e-05
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<method 'isidentifier' of 'str' objects>",
+          "calls": 80,
+          "self_s": 2.0691000000000002e-05,
+          "inclusive_s": 2.0691000000000002e-05
+        },
+        {
+          "file": "_type_check_impl.py",
+          "line": 270,
+          "name": "iscomplexobj",
+          "calls": 12,
+          "self_s": 2.0035e-05,
+          "inclusive_s": 2.2855e-05
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<method 'update' of 'dict' objects>",
+          "calls": 8,
+          "self_s": 1.9472000000000003e-05,
+          "inclusive_s": 1.9472000000000003e-05
+        },
+        {
+          "file": "inspect.py",
+          "line": 3045,
+          "name": "<genexpr>",
+          "calls": 88,
+          "self_s": 1.9193e-05,
+          "inclusive_s": 2.4458000000000002e-05
+        },
+        {
+          "file": "inspect.py",
+          "line": 747,
+          "name": "unwrap",
+          "calls": 8,
+          "self_s": 1.9189000000000002e-05,
+          "inclusive_s": 3.1321e-05
+        },
+        {
+          "file": "fromnumeric.py",
+          "line": 86,
+          "name": "_wrapreduction_any_all",
+          "calls": 10,
+          "self_s": 1.8716000000000002e-05,
+          "inclusive_s": 5.9065000000000005e-05
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<method 'disable' of '_lsprof.Profiler' objects>",
+          "calls": 1,
+          "self_s": 1.8626e-05,
+          "inclusive_s": 1.8626e-05
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<method '__contains__' of 'frozenset' objects>",
+          "calls": 80,
+          "self_s": 1.8343e-05,
+          "inclusive_s": 1.8343e-05
+        },
+        {
+          "file": "inspect.py",
+          "line": 3308,
+          "name": "signature",
+          "calls": 8,
+          "self_s": 1.8247e-05,
+          "inclusive_s": 0.000831108
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<method 'any' of 'numpy.ndarray' objects>",
+          "calls": 8,
+          "self_s": 1.6275000000000003e-05,
+          "inclusive_s": 0.000256125
+        },
+        {
+          "file": "fromnumeric.py",
+          "line": 2436,
+          "name": "any",
+          "calls": 10,
+          "self_s": 1.5239000000000001e-05,
+          "inclusive_s": 7.4304e-05
+        },
+        {
+          "file": "enum.py",
+          "line": 1129,
+          "name": "__new__",
+          "calls": 80,
+          "self_s": 1.4957000000000001e-05,
+          "inclusive_s": 1.4957000000000001e-05
+        },
+        {
+          "file": "<string>",
+          "line": 2,
+          "name": "__init__",
+          "calls": 5,
+          "self_s": 1.4956e-05,
+          "inclusive_s": 1.4956e-05
+        },
+        {
+          "file": "iterative.py",
+          "line": 11,
+          "name": "_get_atol_rtol",
+          "calls": 8,
+          "self_s": 1.4861e-05,
+          "inclusive_s": 1.8906e-05
+        },
+        {
+          "file": "enum.py",
+          "line": 202,
+          "name": "__get__",
+          "calls": 12,
+          "self_s": 1.3925000000000001e-05,
+          "inclusive_s": 1.8344000000000003e-05
+        },
+        {
+          "file": "_aliases.py",
+          "line": 148,
+          "name": "zeros",
+          "calls": 4,
+          "self_s": 1.2512000000000002e-05,
+          "inclusive_s": 3.8188e-05
+        },
+        {
+          "file": "_interface.py",
+          "line": 541,
+          "name": "__mul__",
+          "calls": 8,
+          "self_s": 1.1385e-05,
+          "inclusive_s": 0.07619529400000001
+        },
+        {
+          "file": "blas.py",
+          "line": 403,
+          "name": "getter",
+          "calls": 8,
+          "self_s": 1.0158e-05,
+          "inclusive_s": 2.6617000000000003e-05
+        },
+        {
+          "file": "_methods.py",
+          "line": 55,
+          "name": "_any",
+          "calls": 8,
+          "self_s": 9.873e-06,
+          "inclusive_s": 0.00023985
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<method 'setflags' of 'numpy.ndarray' objects>",
+          "calls": 10,
+          "self_s": 9.783000000000001e-06,
+          "inclusive_s": 9.783000000000001e-06
+        },
+        {
+          "file": "_sputils.py",
+          "line": 540,
+          "name": "is_pydata_spmatrix",
+          "calls": 8,
+          "self_s": 9.405e-06,
+          "inclusive_s": 1.4673000000000002e-05
+        },
+        {
+          "file": "utils.py",
+          "line": 19,
+          "name": "coerce",
+          "calls": 8,
+          "self_s": 8.277e-06,
+          "inclusive_s": 8.277e-06
+        },
+        {
+          "file": "_helpers.py",
+          "line": 276,
+          "name": "is_array_api_obj",
+          "calls": 16,
+          "self_s": 7.433000000000001e-06,
+          "inclusive_s": 1.3076000000000002e-05
+        },
+        {
+          "file": "_matrix.py",
+          "line": 75,
+          "name": "get_shape",
+          "calls": 12,
+          "self_s": 7.056000000000001e-06,
+          "inclusive_s": 7.056000000000001e-06
+        },
+        {
+          "file": "_type_check_impl.py",
+          "line": 312,
+          "name": "isrealobj",
+          "calls": 4,
+          "self_s": 6.584000000000001e-06,
+          "inclusive_s": 1.9094e-05
+        },
+        {
+          "file": "_sparse.py",
+          "line": 10,
+          "name": "issparse",
+          "calls": 8,
+          "self_s": 6.583e-06,
+          "inclusive_s": 1.8059e-05
+        },
+        {
+          "file": "profile_replay.py",
+          "line": 25,
+          "name": "state",
+          "calls": 1,
+          "self_s": 6.019e-06,
+          "inclusive_s": 0.011926745
+        },
+        {
+          "file": "inspect.py",
+          "line": 371,
+          "name": "isfunction",
+          "calls": 16,
+          "self_s": 5.548e-06,
+          "inclusive_s": 7.055e-06
+        },
+        {
+          "file": "_array_api_override.py",
+          "line": 73,
+          "name": "array_namespace",
+          "calls": 8,
+          "self_s": 5.36e-06,
+          "inclusive_s": 5.36e-06
+        },
+        {
+          "file": "_interface.py",
+          "line": 1165,
+          "name": "aslinearoperator",
+          "calls": 16,
+          "self_s": 5.266e-06,
+          "inclusive_s": 7.805e-06
+        },
+        {
+          "file": "inspect.py",
+          "line": 2765,
+          "name": "name",
+          "calls": 80,
+          "self_s": 5.265e-06,
+          "inclusive_s": 5.265e-06
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<built-in method builtins.id>",
+          "calls": 8,
+          "self_s": 5.173e-06,
+          "inclusive_s": 5.173e-06
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<built-in method builtins.callable>",
+          "calls": 16,
+          "self_s": 4.893e-06,
+          "inclusive_s": 4.893e-06
+        },
+        {
+          "file": "enum.py",
+          "line": 1292,
+          "name": "value",
+          "calls": 12,
+          "self_s": 4.419e-06,
+          "inclusive_s": 4.419e-06
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "name": "<built-in method sys.getrecursionlimit>",
+          "calls": 8,
+          "self_s": 3.856e-06,
+          "inclusive_s": 3.856e-06
+        },
+        {
+          "file": "fromnumeric.py",
+          "line": 3478,
+          "name": "_ndim_dispatcher",
+          "calls": 28,
+          "self_s": 3.103e-06,
+          "inclusive_s": 3.103e-06
+        },
+        {
+          "file": "fromnumeric.py",
+          "line": 2431,
+          "name": "_any_dispatcher",
+          "calls": 10,
+          "self_s": 1.505e-06,
+          "inclusive_s": 1.505e-06
+        },
+        {
+          "file": "_type_check_impl.py",
+          "line": 171,
+          "name": "_is_type_dispatcher",
+          "calls": 16,
+          "self_s": 1.5040000000000001e-06,
+          "inclusive_s": 1.5040000000000001e-06
+        },
+        {
+          "file": "inspect.py",
+          "line": 3058,
+          "name": "parameters",
+          "calls": 8,
+          "self_s": 8.47e-07,
+          "inclusive_s": 8.47e-07
+        }
+      ],
+      "frame_identity": {
+        "size_bytes": 83303400,
+        "sha256": "6ae22a2d1c0bd31295f7919a85075f6885dcd16ae99dbc26f75110a18fa9e0b6"
+      }
+    }
+  ]
+}

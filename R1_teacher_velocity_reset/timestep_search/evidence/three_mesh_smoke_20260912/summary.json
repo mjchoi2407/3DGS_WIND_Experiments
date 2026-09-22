@@ -1,0 +1,122 @@
+{
+  "reference_rectangle": {
+    "environment": {
+      "device": "cuda:0",
+      "shape": "reference_rectangle",
+      "vertices": 825,
+      "triangles": 1536,
+      "p3_nodes": 7081,
+      "fixed_p3_nodes": 97,
+      "sample_bounds_scope": "개발용 수치 추정; 비정규 샘플의 엄밀한 반올림 인증은 미완료"
+    },
+    "mesh_source_sha256": null,
+    "mode": "margin30_cap4",
+    "status": "passed",
+    "internal_force_fraction": 0.3,
+    "linear_cap": 0.0001,
+    "solve_s": 33.47193434435758,
+    "audit_s": 209.00623158289818,
+    "completed_steps": 192,
+    "max_force_ratio": 0.28931772341781387,
+    "all_internal_targets_met": true,
+    "all_audits_passed": true,
+    "fallback_count": 0,
+    "frames": [
+      {
+        "frame": 0,
+        "solve_s": 5.684939179132925,
+        "max_force_ratio": 0.0
+      },
+      {
+        "frame": 1,
+        "solve_s": 14.136189938115422,
+        "max_force_ratio": 0.28931772341781387
+      },
+      {
+        "frame": 2,
+        "solve_s": 13.650805227109231,
+        "max_force_ratio": 0.007432385906669583
+      }
+    ]
+  },
+  "triangular_flag": {
+    "environment": {
+      "device": "cuda:0",
+      "shape": "triangular_flag",
+      "vertices": 409,
+      "triangles": 752,
+      "p3_nodes": 3481,
+      "fixed_p3_nodes": 49,
+      "sample_bounds_scope": "개발용 수치 추정; 비정규 샘플의 엄밀한 반올림 인증은 미완료"
+    },
+    "mesh_source_sha256": "d85217b88d4a5651849897d4545e3937990b485e8b997127411674a264b506af",
+    "mode": "margin30_cap4",
+    "status": "passed",
+    "internal_force_fraction": 0.3,
+    "linear_cap": 0.0001,
+    "solve_s": 19.41317739407532,
+    "audit_s": 99.6464810128382,
+    "completed_steps": 192,
+    "max_force_ratio": 0.27133031171390554,
+    "all_internal_targets_met": true,
+    "all_audits_passed": true,
+    "fallback_count": 0,
+    "frames": [
+      {
+        "frame": 0,
+        "solve_s": 2.8185728690586984,
+        "max_force_ratio": 0.0
+      },
+      {
+        "frame": 1,
+        "solve_s": 7.88723346311599,
+        "max_force_ratio": 0.27133031171390554
+      },
+      {
+        "frame": 2,
+        "solve_s": 8.70737106190063,
+        "max_force_ratio": 0.0063611617830120855
+      }
+    ]
+  },
+  "handkerchief": {
+    "environment": {
+      "device": "cuda:0",
+      "shape": "handkerchief",
+      "vertices": 425,
+      "triangles": 768,
+      "p3_nodes": 3577,
+      "fixed_p3_nodes": 14,
+      "sample_bounds_scope": "개발용 수치 추정; 비정규 샘플의 엄밀한 반올림 인증은 미완료"
+    },
+    "mesh_source_sha256": "1c3f1b3acf4ef67107321ec7b7e6c19212474f49c8d18f22f7f602917812daa8",
+    "mode": "margin30_cap4",
+    "status": "passed",
+    "internal_force_fraction": 0.3,
+    "linear_cap": 0.0001,
+    "solve_s": 19.153843632811913,
+    "audit_s": 102.25389469304355,
+    "completed_steps": 192,
+    "max_force_ratio": 0.27677202463776623,
+    "all_internal_targets_met": true,
+    "all_audits_passed": true,
+    "fallback_count": 0,
+    "frames": [
+      {
+        "frame": 0,
+        "solve_s": 2.8109497049299534,
+        "max_force_ratio": 0.0
+      },
+      {
+        "frame": 1,
+        "solve_s": 7.834108161012409,
+        "max_force_ratio": 0.27677202463776623
+      },
+      {
+        "frame": 2,
+        "solve_s": 8.50878576686955,
+        "max_force_ratio": 0.0064769320975881515
+      }
+    ]
+  }
+}

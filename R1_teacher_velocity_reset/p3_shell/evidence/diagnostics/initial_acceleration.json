@@ -1,0 +1,45 @@
+{
+  "cases": [
+    {
+      "resolution": 4,
+      "family": "rest_wind",
+      "energy_j": 0.0,
+      "initial_acceleration_rms_m_s2": 1.285534465084295
+    },
+    {
+      "resolution": 4,
+      "family": "bent_internal",
+      "energy_j": 0.04947938952656622,
+      "initial_acceleration_rms_m_s2": 368.4813660179535
+    },
+    {
+      "resolution": 8,
+      "family": "rest_wind",
+      "energy_j": 0.0,
+      "initial_acceleration_rms_m_s2": 1.2922592023594512
+    },
+    {
+      "resolution": 8,
+      "family": "bent_internal",
+      "energy_j": 0.04945407206940735,
+      "initial_acceleration_rms_m_s2": 1005.2742402058178
+    },
+    {
+      "resolution": 16,
+      "family": "rest_wind",
+      "energy_j": 0.0,
+      "initial_acceleration_rms_m_s2": 1.2956419486288941
+    },
+    {
+      "resolution": 16,
+      "family": "bent_internal",
+      "energy_j": 0.049450984758916953,
+      "initial_acceleration_rms_m_s2": 2793.4526234095124
+    }
+  ],
+  "cylinder_free_tip_moment_resultant_n": 0.1098901098901099,
+  "cylinder_free_side_moment_resultant_n": 0.03296703296703297,
+  "scope": "정해진 초기 원통은 자유단 moment=0과 호환되지 않는다. 갑작스러운 moment 제거의 강한 과도응답이며 rest-wind로 도달한 초기 상태와 구분한다",
+  "validator_sha256": "4c20421504bd30f2825e27313a89da964c071aea993676bae88a31ea72e59b0b",
+  "training_eligible": false
+}

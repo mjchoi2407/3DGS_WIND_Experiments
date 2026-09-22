@@ -1,0 +1,50 @@
+{
+  "branch": "frame225_F64_fresh_additional_optimization",
+  "status": "closed",
+  "closed_on": "2026-09-17",
+  "frozen_linear": {
+    "original_A64_residual": "passed",
+    "performance": "local_speedup_observed",
+    "scope": "saved_frame225_linear_system"
+  },
+  "line_search": {
+    "status": "accepted",
+    "lambda_value": 0.125,
+    "classification": "line_search_checked_frozen_candidate"
+  },
+  "nonlinear_residual_reduction_pct": {
+    "R64": 94.07,
+    "F64_fresh": 1.14
+  },
+  "full_Newton_substep_audit": "not_validated",
+  "operational_adoption": "held",
+  "numerical_failure_conclusion": false,
+  "overall_performance_degradation_conclusion": false,
+  "overall_teacher_speedup_claim": false,
+  "operational_selection": "unchanged: RTX5070 M2; GTX1080Ti M1; GTX1080Ti C0/known HL01 R64",
+  "recording_options": [
+    "summary",
+    "full"
+  ],
+  "recording_default": "full",
+  "production_enabled": false,
+  "training_eligible": false,
+  "separate_unresolved": [
+    "RTX5070 Graph infrastructure failure",
+    "training eligibility and numerical regression accuracy budget"
+  ],
+  "prohibited_followups": [
+    "additional HL01 replay",
+    "frame236 checkpoint generation",
+    "global rebuild policy",
+    "fresh P32",
+    "line-search coefficient changes",
+    "new solver",
+    "full FP32 development"
+  ],
+  "evidence": {
+    "linear": "../../../artifacts/runs/teacher_precision_v3/bounded_closeout_20260916/HL01_linear_comparison.csv",
+    "line_search": "../../../artifacts/runs/teacher_precision_v3/frozen_line_search_20260917/measurement/line_search.csv",
+    "hashes": "../../../artifacts/runs/teacher_precision_v3/frozen_line_search_20260917/manifest.json"
+  }
+}

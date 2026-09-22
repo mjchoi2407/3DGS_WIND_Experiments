@@ -1,0 +1,975 @@
+{
+  "initial_seed": {
+    "scope": "동일 원시 상태/고정 외력/물성의 국소 끝 상태; 전체 궤적 시간 수렴 아님",
+    "initial_time_s": 2.0,
+    "duration_s": 0.00026041666666666666,
+    "reference": "newmark512",
+    "reference_is_exact": false,
+    "input_sha256": "22484d5c388ca55627c31f8dee6fede7a50d48e0aef48ffa4df7581388f89bb5",
+    "rows": [
+      {
+        "name": "baseline",
+        "method": "newmark",
+        "split": 1,
+        "rebuild_every": 64,
+        "status": "passed",
+        "solve_s": [
+          2.0778207349940203,
+          2.0771622369647957,
+          2.107150999014266
+        ],
+        "solve_median_s": 2.0778207349940203,
+        "setup_s": 3.093891771044582,
+        "audit_s": 0.38358323503052816,
+        "audit": {
+          "backend": "독립 GPU Newmark",
+          "passed": true,
+          "flags": [
+            0
+          ],
+          "max_checks": [
+            0.1219371748762659,
+            1.5831092841568886e-19,
+            1.7381116077658243e-18,
+            2.056300070626055,
+            0.15555848469352715,
+            41.619705007192465
+          ],
+          "mass_info": 0,
+          "time_failed": false
+        },
+        "counts": [
+          {
+            "completed": 1,
+            "gmres_iterations": 650,
+            "matrix_rebuilds": 1,
+            "failure": 0
+          },
+          {
+            "completed": 1,
+            "gmres_iterations": 650,
+            "matrix_rebuilds": 1,
+            "failure": 0
+          },
+          {
+            "completed": 1,
+            "gmres_iterations": 650,
+            "matrix_rebuilds": 1,
+            "failure": 0
+          }
+        ],
+        "gpu": "NVIDIA GeForce GTX 1080 Ti",
+        "gpu_audit_median_s": 0.0172216750215739,
+        "gpu_audit_setup_median_s": 0.3387576499953866,
+        "solve_plus_gpu_audit_s": 2.095042410015594,
+        "difference_to_reference": {
+          "position_mass_rms_m": 1.181694112226746e-05,
+          "position_component_max_m": 4.118703740797436e-05,
+          "velocity_relative_mass": 0.3232289402205723,
+          "velocity_component_max_m_s": 0.7819976982334265
+        }
+      },
+      {
+        "name": "gauss_cpu8",
+        "method": "gauss_cpu",
+        "split": 8,
+        "rebuild_every": 1,
+        "status": "passed",
+        "solve_s": [
+          13.835880351951346,
+          13.368008280987851,
+          13.623051456001122
+        ],
+        "solve_median_s": 13.623051456001122,
+        "setup_s": 2.0856423240038566,
+        "audit_s": 5.689629017957486,
+        "audit": {
+          "backend": "독립 CPU longdouble Gauss/P3×cubic 기하",
+          "passed": true,
+          "steps": 8,
+          "force_ratio_max": 0.0009988259458025286,
+          "energy_ledger_error_max_j": 1.9562906066096738e-17
+        },
+        "counts": [
+          {
+            "completed": 8,
+            "gmres_iterations": 48,
+            "matrix_rebuilds": 16,
+            "failure": 0
+          },
+          {
+            "completed": 8,
+            "gmres_iterations": 48,
+            "matrix_rebuilds": 16,
+            "failure": 0
+          },
+          {
+            "completed": 8,
+            "gmres_iterations": 48,
+            "matrix_rebuilds": 16,
+            "failure": 0
+          }
+        ],
+        "gpu": "NVIDIA GeForce GTX 1080 Ti",
+        "gpu_audit_median_s": 0.22411400295095518,
+        "gpu_audit_setup_median_s": 0.2642363329650834,
+        "solve_plus_gpu_audit_s": 13.847165458952077,
+        "difference_to_reference": {
+          "position_mass_rms_m": 1.126681723371661e-08,
+          "position_component_max_m": 8.06832216006183e-08,
+          "velocity_relative_mass": 0.001724328191863609,
+          "velocity_component_max_m_s": 0.008680904398659954
+        }
+      },
+      {
+        "name": "gauss_gpu16_reuse64",
+        "method": "gauss_gpu",
+        "split": 16,
+        "rebuild_every": 64,
+        "status": "passed",
+        "solve_s": [
+          1.5181114259758033,
+          1.5137700809864327,
+          1.611973493010737
+        ],
+        "solve_median_s": 1.5181114259758033,
+        "setup_s": 3.333957998023834,
+        "audit_s": 10.909841346961912,
+        "audit": {
+          "backend": "독립 CPU longdouble Gauss/P3×cubic 기하",
+          "passed": true,
+          "steps": 16,
+          "force_ratio_max": 0.00010577777090643939,
+          "energy_ledger_error_max_j": 1.409850689220382e-17
+        },
+        "counts": [
+          {
+            "completed": 16,
+            "gmres_iterations": 110,
+            "matrix_rebuilds": 1,
+            "failure": 0
+          },
+          {
+            "completed": 16,
+            "gmres_iterations": 110,
+            "matrix_rebuilds": 1,
+            "failure": 0
+          },
+          {
+            "completed": 16,
+            "gmres_iterations": 110,
+            "matrix_rebuilds": 1,
+            "failure": 0
+          }
+        ],
+        "gpu": "NVIDIA GeForce GTX 1080 Ti",
+        "gpu_audit_median_s": 0.442208161985036,
+        "gpu_audit_setup_median_s": 0.24980816600145772,
+        "solve_plus_gpu_audit_s": 1.9603195879608393,
+        "difference_to_reference": {
+          "position_mass_rms_m": 5.893334906227955e-10,
+          "position_component_max_m": 2.8426271020902784e-09,
+          "velocity_relative_mass": 5.91401976695357e-05,
+          "velocity_component_max_m_s": 0.00024049217075219594
+        }
+      },
+      {
+        "name": "gauss_gpu8_rebuild1_v2",
+        "method": "gauss_gpu",
+        "split": 8,
+        "rebuild_every": 1,
+        "status": "error",
+        "solve_s": null,
+        "solve_median_s": null,
+        "setup_s": null,
+        "audit_s": null,
+        "audit": null,
+        "counts": null,
+        "gpu": "NVIDIA GeForce GTX 1080 Ti"
+      },
+      {
+        "name": "gauss_gpu8_rebuild1_v3",
+        "method": "gauss_gpu",
+        "split": 8,
+        "rebuild_every": 1,
+        "status": "error",
+        "solve_s": [
+          5.2595530050457455,
+          5.328888949006796,
+          4.905804078036454
+        ],
+        "solve_median_s": 5.2595530050457455,
+        "setup_s": 3.6476297689951025,
+        "audit_s": null,
+        "audit": null,
+        "counts": [
+          {
+            "completed": 8,
+            "gmres_iterations": 48,
+            "matrix_rebuilds": 16,
+            "failure": 0
+          },
+          {
+            "completed": 8,
+            "gmres_iterations": 48,
+            "matrix_rebuilds": 16,
+            "failure": 0
+          },
+          {
+            "completed": 8,
+            "gmres_iterations": 48,
+            "matrix_rebuilds": 16,
+            "failure": 0
+          }
+        ],
+        "gpu": "NVIDIA GeForce GTX 1080 Ti"
+      },
+      {
+        "name": "gauss_gpu8_rebuild1_v4",
+        "method": "gauss_gpu",
+        "split": 8,
+        "rebuild_every": 1,
+        "status": "passed",
+        "solve_s": [
+          3.742551392002497,
+          3.8505569840199314,
+          3.7475733530009165
+        ],
+        "solve_median_s": 3.7475733530009165,
+        "setup_s": 3.3693676910479553,
+        "audit_s": 5.725978291011415,
+        "audit": {
+          "backend": "독립 CPU longdouble Gauss/P3×cubic 기하",
+          "passed": true,
+          "steps": 8,
+          "force_ratio_max": 0.0009981734889268593,
+          "energy_ledger_error_max_j": 1.563219053094936e-17
+        },
+        "counts": [
+          {
+            "completed": 8,
+            "gmres_iterations": 48,
+            "matrix_rebuilds": 16,
+            "failure": 0
+          },
+          {
+            "completed": 8,
+            "gmres_iterations": 48,
+            "matrix_rebuilds": 16,
+            "failure": 0
+          },
+          {
+            "completed": 8,
+            "gmres_iterations": 48,
+            "matrix_rebuilds": 16,
+            "failure": 0
+          }
+        ],
+        "gpu": "NVIDIA GeForce GTX 1080 Ti",
+        "gpu_audit_median_s": 0.2210584990098141,
+        "gpu_audit_setup_median_s": 0.2517992839566432,
+        "solve_plus_gpu_audit_s": 3.9686318520107307,
+        "difference_to_reference": {
+          "position_mass_rms_m": 1.1266817233716542e-08,
+          "position_component_max_m": 8.068322160078092e-08,
+          "velocity_relative_mass": 0.0017243281918638887,
+          "velocity_component_max_m_s": 0.008680904398674898
+        }
+      },
+      {
+        "name": "gauss_gpu8_reuse64",
+        "method": "gauss_gpu",
+        "split": 8,
+        "rebuild_every": 64,
+        "status": "passed",
+        "solve_s": [
+          0.909603887994308,
+          0.9068829049938358,
+          0.9271359500125982
+        ],
+        "solve_median_s": 0.909603887994308,
+        "setup_s": 3.52371682098601,
+        "audit_s": 5.357609579979908,
+        "audit": {
+          "backend": "독립 CPU longdouble Gauss/P3×cubic 기하",
+          "passed": true,
+          "steps": 8,
+          "force_ratio_max": 0.000996277551037819,
+          "energy_ledger_error_max_j": 1.0125409931191674e-17
+        },
+        "counts": [
+          {
+            "completed": 8,
+            "gmres_iterations": 63,
+            "matrix_rebuilds": 1,
+            "failure": 0
+          },
+          {
+            "completed": 8,
+            "gmres_iterations": 63,
+            "matrix_rebuilds": 1,
+            "failure": 0
+          },
+          {
+            "completed": 8,
+            "gmres_iterations": 63,
+            "matrix_rebuilds": 1,
+            "failure": 0
+          }
+        ],
+        "gpu": "NVIDIA GeForce GTX 1080 Ti",
+        "gpu_audit_median_s": 0.24623867898480967,
+        "gpu_audit_setup_median_s": 0.24921507202088833,
+        "solve_plus_gpu_audit_s": 1.1558425669791177,
+        "difference_to_reference": {
+          "position_mass_rms_m": 1.1266817233717917e-08,
+          "position_component_max_m": 8.068322160107908e-08,
+          "velocity_relative_mass": 0.001724328191864403,
+          "velocity_component_max_m_s": 0.008680904398675898
+        }
+      },
+      {
+        "name": "newmark128",
+        "method": "newmark",
+        "split": 128,
+        "rebuild_every": 64,
+        "status": "passed",
+        "solve_s": [
+          3.7184142190380953,
+          3.8371090960572474,
+          3.904107735026628
+        ],
+        "solve_median_s": 3.8371090960572474,
+        "setup_s": 3.090960252971854,
+        "audit_s": 0.8476910649915226,
+        "audit": {
+          "backend": "독립 GPU Newmark",
+          "passed": true,
+          "flags": [
+            0
+          ],
+          "max_checks": [
+            0.04706645749921044,
+            2.253225101482615e-24,
+            6.93892037368683e-18,
+            2.056210858122885,
+            0.15555848469041186,
+            41.619705007191946
+          ],
+          "mass_info": 0,
+          "time_failed": false
+        },
+        "counts": [
+          {
+            "completed": 128,
+            "gmres_iterations": 379,
+            "matrix_rebuilds": 4,
+            "failure": 0
+          },
+          {
+            "completed": 128,
+            "gmres_iterations": 379,
+            "matrix_rebuilds": 4,
+            "failure": 0
+          },
+          {
+            "completed": 128,
+            "gmres_iterations": 379,
+            "matrix_rebuilds": 4,
+            "failure": 0
+          }
+        ],
+        "gpu": "NVIDIA GeForce GTX 1080 Ti",
+        "gpu_audit_median_s": 0.9320746900048107,
+        "gpu_audit_setup_median_s": 0.3189536589779891,
+        "solve_plus_gpu_audit_s": 4.769183786062058,
+        "difference_to_reference": {
+          "position_mass_rms_m": 1.1146593425717593e-08,
+          "position_component_max_m": 5.781809434983508e-08,
+          "velocity_relative_mass": 0.001320818154170855,
+          "velocity_component_max_m_s": 0.00531469549768428
+        }
+      },
+      {
+        "name": "newmark256",
+        "method": "newmark",
+        "split": 256,
+        "rebuild_every": 64,
+        "status": "passed",
+        "solve_s": [
+          7.583521285967436,
+          7.698961417016108,
+          7.6014270529849455
+        ],
+        "solve_median_s": 7.6014270529849455,
+        "setup_s": 2.976285739976447,
+        "audit_s": 1.3925356130348518,
+        "audit": {
+          "backend": "독립 GPU Newmark",
+          "passed": true,
+          "flags": [
+            0
+          ],
+          "max_checks": [
+            0.0007434354176921119,
+            5.755062804408329e-25,
+            6.938907138797029e-18,
+            2.0562121689620954,
+            0.15555848469038638,
+            41.619705007191946
+          ],
+          "mass_info": 0,
+          "time_failed": false
+        },
+        "counts": [
+          {
+            "completed": 256,
+            "gmres_iterations": 759,
+            "matrix_rebuilds": 8,
+            "failure": 0
+          },
+          {
+            "completed": 256,
+            "gmres_iterations": 759,
+            "matrix_rebuilds": 8,
+            "failure": 0
+          },
+          {
+            "completed": 256,
+            "gmres_iterations": 759,
+            "matrix_rebuilds": 8,
+            "failure": 0
+          }
+        ],
+        "gpu": "NVIDIA GeForce GTX 1080 Ti",
+        "gpu_audit_median_s": 1.7957995039760135,
+        "gpu_audit_setup_median_s": 0.3145846999832429,
+        "solve_plus_gpu_audit_s": 9.397226556960959,
+        "difference_to_reference": {
+          "position_mass_rms_m": 2.234987196002433e-09,
+          "position_component_max_m": 1.1747562757313292e-08,
+          "velocity_relative_mass": 0.0002648222281339067,
+          "velocity_component_max_m_s": 0.0010545715315772575
+        }
+      },
+      {
+        "name": "newmark32",
+        "method": "newmark",
+        "split": 32,
+        "rebuild_every": 64,
+        "status": "passed",
+        "solve_s": [
+          1.105415621015709,
+          1.0922711610328406,
+          1.1665974850184284
+        ],
+        "solve_median_s": 1.105415621015709,
+        "setup_s": 3.0567685050191358,
+        "audit_s": 0.44700667198048905,
+        "audit": {
+          "backend": "독립 GPU Newmark",
+          "passed": true,
+          "flags": [
+            0
+          ],
+          "max_checks": [
+            0.0006931668728621877,
+            2.9647772328533445e-23,
+            5.204170427930421e-18,
+            2.056178609561067,
+            0.15555848469057043,
+            41.619705007191975
+          ],
+          "mass_info": 0,
+          "time_failed": false
+        },
+        "counts": [
+          {
+            "completed": 32,
+            "gmres_iterations": 162,
+            "matrix_rebuilds": 1,
+            "failure": 0
+          },
+          {
+            "completed": 32,
+            "gmres_iterations": 162,
+            "matrix_rebuilds": 1,
+            "failure": 0
+          },
+          {
+            "completed": 32,
+            "gmres_iterations": 162,
+            "matrix_rebuilds": 1,
+            "failure": 0
+          }
+        ],
+        "gpu": "NVIDIA GeForce GTX 1080 Ti",
+        "gpu_audit_median_s": 0.24996335996547714,
+        "gpu_audit_setup_median_s": 0.3452956200344488,
+        "solve_plus_gpu_audit_s": 1.355378980981186,
+        "difference_to_reference": {
+          "position_mass_rms_m": 1.778914373896658e-07,
+          "position_component_max_m": 9.516973086492293e-07,
+          "velocity_relative_mass": 0.020977010772355986,
+          "velocity_component_max_m_s": 0.08992816450123914
+        }
+      },
+      {
+        "name": "newmark512",
+        "method": "newmark",
+        "split": 512,
+        "rebuild_every": 64,
+        "status": "passed",
+        "solve_s": [
+          13.327085940982215
+        ],
+        "solve_median_s": 13.327085940982215,
+        "setup_s": 3.112045971036423,
+        "audit_s": 2.7621621600119397,
+        "audit": {
+          "backend": "독립 GPU Newmark",
+          "passed": true,
+          "flags": [
+            0
+          ],
+          "max_checks": [
+            0.29986627077639894,
+            1.8752469716740271e-25,
+            6.938900521352129e-18,
+            2.0562124925120004,
+            0.15555848469037384,
+            41.61970500719194
+          ],
+          "mass_info": 0,
+          "time_failed": false
+        },
+        "counts": [
+          {
+            "completed": 512,
+            "gmres_iterations": 1434,
+            "matrix_rebuilds": 16,
+            "failure": 0
+          }
+        ],
+        "gpu": "NVIDIA GeForce GTX 1080 Ti",
+        "gpu_audit_median_s": 3.8913517519831657,
+        "gpu_audit_setup_median_s": 0.3249415809987113,
+        "solve_plus_gpu_audit_s": 17.21843769296538,
+        "difference_to_reference": {
+          "position_mass_rms_m": 0.0,
+          "position_component_max_m": 0.0,
+          "velocity_relative_mass": 0.0,
+          "velocity_component_max_m_s": 0.0
+        }
+      },
+      {
+        "name": "newmark64",
+        "method": "newmark",
+        "split": 64,
+        "rebuild_every": 64,
+        "status": "passed",
+        "solve_s": [
+          1.9853378139669076,
+          1.8935840979684144,
+          1.8851093819830567
+        ],
+        "solve_median_s": 1.8935840979684144,
+        "setup_s": 3.0365342189907096,
+        "audit_s": 0.5718334470293485,
+        "audit": {
+          "backend": "독립 GPU Newmark",
+          "passed": true,
+          "flags": [
+            0
+          ],
+          "max_checks": [
+            0.0002790947279131015,
+            7.471336553924768e-24,
+            6.938893903907228e-18,
+            2.056205339893636,
+            0.15555848469046396,
+            41.61970500719195
+          ],
+          "mass_info": 0,
+          "time_failed": false
+        },
+        "counts": [
+          {
+            "completed": 64,
+            "gmres_iterations": 192,
+            "matrix_rebuilds": 2,
+            "failure": 0
+          },
+          {
+            "completed": 64,
+            "gmres_iterations": 192,
+            "matrix_rebuilds": 2,
+            "failure": 0
+          },
+          {
+            "completed": 64,
+            "gmres_iterations": 192,
+            "matrix_rebuilds": 2,
+            "failure": 0
+          }
+        ],
+        "gpu": "NVIDIA GeForce GTX 1080 Ti",
+        "gpu_audit_median_s": 0.49452604103134945,
+        "gpu_audit_setup_median_s": 0.3340226499713026,
+        "solve_plus_gpu_audit_s": 2.388110138999764,
+        "difference_to_reference": {
+          "position_mass_rms_m": 4.6306624256248244e-08,
+          "position_component_max_m": 2.3644650815589103e-07,
+          "velocity_relative_mass": 0.00548767971359909,
+          "velocity_component_max_m_s": 0.022816996683153783
+        }
+      }
+    ],
+    "cross_backend": {
+      "gauss_gpu8_rebuild1_v4_vs_cpu8": {
+        "position_mass_rms_m": 1.914090955315158e-19,
+        "position_component_max_m": 1.2468324983583301e-18,
+        "velocity_relative_mass": 1.578535155384779e-14,
+        "velocity_component_max_m_s": 5.69905450956143e-14
+      },
+      "gauss_gpu8_reuse64_vs_cpu8": {
+        "position_mass_rms_m": 2.901166610188247e-19,
+        "position_component_max_m": 1.3688052427629493e-18,
+        "velocity_relative_mass": 2.2917474105734734e-14,
+        "velocity_component_max_m_s": 1.5504492221346533e-13
+      }
+    },
+    "training_eligible": false
+  },
+  "failure_seed": {
+    "scope": "동일 원시 상태/고정 외력/물성의 국소 끝 상태; 전체 궤적 시간 수렴 아님",
+    "initial_time_s": 2.0145833333333334,
+    "duration_s": 0.00026041666666666666,
+    "reference": "newmark512",
+    "reference_is_exact": false,
+    "input_sha256": "8f900649dfbaf384caef3abe4117328896797c686c660cd350c2f0238285d034",
+    "rows": [
+      {
+        "name": "baseline",
+        "method": "newmark",
+        "split": 1,
+        "rebuild_every": 64,
+        "status": "passed",
+        "solve_s": [
+          4.825198628997896,
+          4.799904686980881,
+          4.731427585007623
+        ],
+        "solve_median_s": 4.799904686980881,
+        "setup_s": 3.615573115996085,
+        "audit_s": 0.38580830703722313,
+        "audit": {
+          "backend": "독립 GPU Newmark",
+          "passed": true,
+          "flags": [
+            0
+          ],
+          "max_checks": [
+            0.0001355022130833634,
+            2.439672960474533e-19,
+            1.6940658945086007e-21,
+            2.0223183542854923,
+            0.15125233970343568,
+            41.37095677855305
+          ],
+          "mass_info": 0,
+          "time_failed": false
+        },
+        "counts": [
+          {
+            "completed": 1,
+            "gmres_iterations": 740,
+            "matrix_rebuilds": 1,
+            "failure": 0
+          },
+          {
+            "completed": 1,
+            "gmres_iterations": 740,
+            "matrix_rebuilds": 1,
+            "failure": 0
+          },
+          {
+            "completed": 1,
+            "gmres_iterations": 740,
+            "matrix_rebuilds": 1,
+            "failure": 0
+          }
+        ],
+        "gpu": "NVIDIA GeForce GTX 1080 Ti",
+        "gpu_audit_median_s": 0.011277031968347728,
+        "gpu_audit_setup_median_s": 0.3320216769934632,
+        "solve_plus_gpu_audit_s": 4.8111817189492285,
+        "difference_to_reference": {
+          "position_mass_rms_m": 1.144327628708021e-05,
+          "position_component_max_m": 4.717494089710677e-05,
+          "velocity_relative_mass": 0.34296420028280866,
+          "velocity_component_max_m_s": 0.6640318135205294
+        }
+      },
+      {
+        "name": "gauss_gpu16_reuse64",
+        "method": "gauss_gpu",
+        "split": 16,
+        "rebuild_every": 64,
+        "status": "passed",
+        "solve_s": [
+          3.1639725089771673,
+          3.2524784300476313,
+          3.2071003180462867
+        ],
+        "solve_median_s": 3.2071003180462867,
+        "setup_s": 3.8653432810097,
+        "audit_s": 11.04813821503194,
+        "audit": {
+          "backend": "독립 CPU longdouble Gauss/P3×cubic 기하",
+          "passed": true,
+          "steps": 16,
+          "force_ratio_max": 0.00010543648983543934,
+          "energy_ledger_error_max_j": 9.837413610945171e-18
+        },
+        "counts": [
+          {
+            "completed": 16,
+            "gmres_iterations": 113,
+            "matrix_rebuilds": 1,
+            "failure": 0
+          },
+          {
+            "completed": 16,
+            "gmres_iterations": 113,
+            "matrix_rebuilds": 1,
+            "failure": 0
+          },
+          {
+            "completed": 16,
+            "gmres_iterations": 113,
+            "matrix_rebuilds": 1,
+            "failure": 0
+          }
+        ],
+        "gpu": "NVIDIA GeForce GTX 1080 Ti",
+        "gpu_audit_median_s": 0.46949811599915847,
+        "gpu_audit_setup_median_s": 0.273407224973198,
+        "solve_plus_gpu_audit_s": 3.676598434045445,
+        "difference_to_reference": {
+          "position_mass_rms_m": 5.823014151475791e-10,
+          "position_component_max_m": 3.2826869003296528e-09,
+          "velocity_relative_mass": 6.229234369479827e-05,
+          "velocity_component_max_m_s": 0.00019095954928925992
+        }
+      },
+      {
+        "name": "gauss_gpu8_reuse64",
+        "method": "gauss_gpu",
+        "split": 8,
+        "rebuild_every": 64,
+        "status": "passed",
+        "solve_s": [
+          1.917647322989069,
+          1.8739234179956838,
+          1.9463613010011613
+        ],
+        "solve_median_s": 1.917647322989069,
+        "setup_s": 3.9430925300111994,
+        "audit_s": 5.750649010005873,
+        "audit": {
+          "backend": "독립 CPU longdouble Gauss/P3×cubic 기하",
+          "passed": true,
+          "steps": 8,
+          "force_ratio_max": 0.0007891296511601699,
+          "energy_ledger_error_max_j": 1.2866586599133442e-17
+        },
+        "counts": [
+          {
+            "completed": 8,
+            "gmres_iterations": 62,
+            "matrix_rebuilds": 1,
+            "failure": 0
+          },
+          {
+            "completed": 8,
+            "gmres_iterations": 62,
+            "matrix_rebuilds": 1,
+            "failure": 0
+          },
+          {
+            "completed": 8,
+            "gmres_iterations": 62,
+            "matrix_rebuilds": 1,
+            "failure": 0
+          }
+        ],
+        "gpu": "NVIDIA GeForce GTX 1080 Ti",
+        "gpu_audit_median_s": 0.2338186660199426,
+        "gpu_audit_setup_median_s": 0.2818539429572411,
+        "solve_plus_gpu_audit_s": 2.1514659890090115,
+        "difference_to_reference": {
+          "position_mass_rms_m": 1.127952913253633e-08,
+          "position_component_max_m": 9.531280920890622e-08,
+          "velocity_relative_mass": 0.0017592055335449895,
+          "velocity_component_max_m_s": 0.007676955927737314
+        }
+      },
+      {
+        "name": "newmark128",
+        "method": "newmark",
+        "split": 128,
+        "rebuild_every": 64,
+        "status": "passed",
+        "solve_s": [
+          7.004649019043427,
+          7.079386005003471,
+          7.094100605987478
+        ],
+        "solve_median_s": 7.079386005003471,
+        "setup_s": 3.3807391989976168,
+        "audit_s": 1.4043119359994307,
+        "audit": {
+          "backend": "독립 GPU Newmark",
+          "passed": true,
+          "flags": [
+            0
+          ],
+          "max_checks": [
+            0.04591292810079497,
+            3.1230017265568548e-24,
+            5.204183662820222e-18,
+            2.0224795152243575,
+            0.15154314010487963,
+            41.3097299757917
+          ],
+          "mass_info": 0,
+          "time_failed": false
+        },
+        "counts": [
+          {
+            "completed": 128,
+            "gmres_iterations": 379,
+            "matrix_rebuilds": 4,
+            "failure": 0
+          },
+          {
+            "completed": 128,
+            "gmres_iterations": 379,
+            "matrix_rebuilds": 4,
+            "failure": 0
+          },
+          {
+            "completed": 128,
+            "gmres_iterations": 379,
+            "matrix_rebuilds": 4,
+            "failure": 0
+          }
+        ],
+        "gpu": "NVIDIA GeForce GTX 1080 Ti",
+        "gpu_audit_median_s": 0.9564993330277503,
+        "gpu_audit_setup_median_s": 0.3290745199774392,
+        "solve_plus_gpu_audit_s": 8.035885338031221,
+        "difference_to_reference": {
+          "position_mass_rms_m": 1.1034586866643389e-08,
+          "position_component_max_m": 6.130279458845954e-08,
+          "velocity_relative_mass": 0.0013746295435695707,
+          "velocity_component_max_m_s": 0.0049865976003952
+        }
+      },
+      {
+        "name": "newmark256",
+        "method": "newmark",
+        "split": 256,
+        "rebuild_every": 64,
+        "status": "passed",
+        "solve_s": [
+          14.396545622032136
+        ],
+        "solve_median_s": 14.396545622032136,
+        "setup_s": 3.256577749038115,
+        "audit_s": 2.3646027609938756,
+        "audit": {
+          "backend": "독립 GPU Newmark",
+          "passed": true,
+          "flags": [
+            0
+          ],
+          "max_checks": [
+            0.000748530272545132,
+            8.253541314679928e-25,
+            5.204183662820222e-18,
+            2.022477936175778,
+            0.1515428697544524,
+            41.30968896005065
+          ],
+          "mass_info": 0,
+          "time_failed": false
+        },
+        "counts": [
+          {
+            "completed": 256,
+            "gmres_iterations": 759,
+            "matrix_rebuilds": 8,
+            "failure": 0
+          }
+        ],
+        "gpu": "NVIDIA GeForce GTX 1080 Ti",
+        "difference_to_reference": {
+          "position_mass_rms_m": 2.211840847831317e-09,
+          "position_component_max_m": 1.2285591627060827e-08,
+          "velocity_relative_mass": 0.0002757523865972228,
+          "velocity_component_max_m_s": 0.0010110213666838157
+        }
+      },
+      {
+        "name": "newmark512",
+        "method": "newmark",
+        "split": 512,
+        "rebuild_every": 64,
+        "status": "passed",
+        "solve_s": [
+          28.519967116008047
+        ],
+        "solve_median_s": 28.519967116008047,
+        "setup_s": 3.406337890017312,
+        "audit_s": 4.2599380040192045,
+        "audit": {
+          "backend": "독립 GPU Newmark",
+          "passed": true,
+          "flags": [
+            0
+          ],
+          "max_checks": [
+            0.2989947503046089,
+            2.2065347017221495e-25,
+            6.938900521352129e-18,
+            2.0224774569141117,
+            0.15154280470316023,
+            41.309678997674176
+          ],
+          "mass_info": 0,
+          "time_failed": false
+        },
+        "counts": [
+          {
+            "completed": 512,
+            "gmres_iterations": 1434,
+            "matrix_rebuilds": 16,
+            "failure": 0
+          }
+        ],
+        "gpu": "NVIDIA GeForce GTX 1080 Ti",
+        "difference_to_reference": {
+          "position_mass_rms_m": 0.0,
+          "position_component_max_m": 0.0,
+          "velocity_relative_mass": 0.0,
+          "velocity_component_max_m_s": 0.0
+        }
+      }
+    ],
+    "cross_backend": {},
+    "training_eligible": false
+  },
+  "scope": "2개 국소 seed, 각각1/3840초; GPU 풀이와 GPU 검산 별도 측정의 합. 전체 생성기 실측/teacher 채택 아님"
+}

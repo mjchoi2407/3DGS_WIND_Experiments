@@ -1,0 +1,18 @@
+test_aero_full_force_power_and_rejection_match_numpy (test_teacher_p3_shell_warp.ShellWarpParityTests.test_aero_full_force_power_and_rejection_match_numpy) ... ok
+test_covariance_under_global_rotation_of_surface_and_clamp (test_teacher_p3_shell_warp.ShellWarpParityTests.test_covariance_under_global_rotation_of_surface_and_clamp) ... ok
+test_energy_force_exact_hvp_and_material_geometry_match_numpy (test_teacher_p3_shell_warp.ShellWarpParityTests.test_energy_force_exact_hvp_and_material_geometry_match_numpy) ... ok
+test_repeat_is_exact_and_returned_buffers_do_not_alias_next_call (test_teacher_p3_shell_warp.ShellWarpParityTests.test_repeat_is_exact_and_returned_buffers_do_not_alias_next_call) ... ok
+test_same_newmark_equation_preserves_reset_and_matches_cpu_trajectory (test_teacher_p3_shell_warp.ShellWarpParityTests.test_same_newmark_equation_preserves_reset_and_matches_cpu_trajectory) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 8.021s
+
+OK
+Warp 1.17.0 initialized:
+   CUDA Toolkit 12.9, Driver 13.0
+   Devices:
+     "cpu"      : "x86_64"
+     "cuda:0"   : "NVIDIA GeForce GTX 1080 Ti" (11 GiB, sm_61, mempool enabled)
+   Kernel cache:
+     <workspace>/code/outputs/warp-cache/1.17.0
+Module wind3dgs.teacher.p3_shell_warp_kernels 5484a0d load on device 'cuda:0' took 4405.67 ms  (compiled)

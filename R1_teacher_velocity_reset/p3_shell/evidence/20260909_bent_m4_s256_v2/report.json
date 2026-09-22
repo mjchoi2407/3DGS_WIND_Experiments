@@ -1,0 +1,25 @@
+{
+  "schema": "wind3dgs.p3_shell_equation_validation.v1",
+  "phase": "wind",
+  "status": "completed",
+  "training_eligible": false,
+  "r1_complete": false,
+  "generated_training_samples": 0,
+  "result": {
+    "name": "mesh4_sub256_forward_resetNone_bent1.2",
+    "resolution": 4,
+    "substeps": 256,
+    "diagonal": "forward",
+    "reset_frame": null,
+    "force_residual_limit_ratio": 0.0045705723819902296,
+    "removed_kinetic_j": 0.0,
+    "max_strain_component": 0.0067843969071642585,
+    "max_normal_jump": 0.02805009063397727,
+    "max_boundary_normal_jump": 0.050633894251668206,
+    "total_energy_balance_j": 4.920817172357793e-07,
+    "total_work_j": -0.00253507423064442,
+    "hvp_calls": 19311,
+    "initial_curvature_inv_m": 1.2
+  },
+  "elapsed_s": 272.2745687869992
+}

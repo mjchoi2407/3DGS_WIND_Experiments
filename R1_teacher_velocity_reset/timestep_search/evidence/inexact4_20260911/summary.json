@@ -1,0 +1,140 @@
+{
+  "input_time_s": 1.499999999999935,
+  "frame": 90,
+  "dt_s": 0.00026041666666666666,
+  "steps": 64,
+  "policy": {
+    "force_atol_n": 1e-10,
+    "force_rtol": 1e-09,
+    "displacement_atol_m": 1e-12,
+    "displacement_rtol": 1e-09,
+    "linear_rtol": 1e-10,
+    "max_newton": 15,
+    "linear_cycles": 3,
+    "line_search_steps": 12,
+    "linear_restart": 240,
+    "linear_preconditioner": "current"
+  },
+  "environment": {
+    "device": "cuda:0",
+    "numpy": "2.4.4",
+    "scipy": "1.18.1",
+    "compute_backend": "precision_hvp_graph",
+    "linear_solver_device": "cpu",
+    "cuda_graph": true,
+    "state_encoding": "hi_lo_v1",
+    "state_mantissa_bits": 64,
+    "warp": "1.17.0",
+    "gpu_name": "NVIDIA GeForce GTX 1080 Ti"
+  },
+  "gpu_shared_with_main": true,
+  "timing_is_controlled_benchmark": false,
+  "main_modified": false,
+  "training_eligible": false,
+  "r1_complete": false,
+  "source_frame_sha256": "8d162357f8ae05250d1264d83a701c7825bf3ec14ebf850b74dbffa1c55d1d84",
+  "same_dt_curve_comparisons": {
+    "strict": {
+      "u_relative_upper": 0.0,
+      "v_relative_upper": 0.0,
+      "max_u_difference_m": 0.0,
+      "max_v_difference_m_s": 0.0
+    },
+    "fixed8": {
+      "u_relative_upper": 2.0265604935361575e-16,
+      "v_relative_upper": 3.48398487829693e-13,
+      "max_u_difference_m": 8.180644204582033e-18,
+      "max_v_difference_m_s": 4.53125050176049e-13
+    },
+    "ew": {
+      "u_relative_upper": 7.655201925736484e-15,
+      "v_relative_upper": 1.2896849424866628e-11,
+      "max_u_difference_m": 1.5945293588108533e-15,
+      "max_v_difference_m_s": 2.8238947191359075e-11
+    },
+    "strict_repeat": {
+      "u_relative_upper": 0.0,
+      "v_relative_upper": 0.0,
+      "max_u_difference_m": 0.0,
+      "max_v_difference_m_s": 0.0
+    }
+  },
+  "trials": [
+    {
+      "mode": "strict",
+      "status": "passed",
+      "solve_s": 40.18981298393919,
+      "audit_s": 72.14448454207741,
+      "completed_steps": 64,
+      "hvp_calls": 2639,
+      "linear_iterations": 2366,
+      "newton_corrections": 128,
+      "max_force_ratio": 0.008454036664800556,
+      "max_position_update_error_m": 1.3552527156068805e-20,
+      "max_energy_ledger_error_j": 1.734723475976807e-18,
+      "max_projected_gradient_upper": 0.01613208091490968,
+      "max_linear_residual_ratio": 0.9848002468977074,
+      "fallback_count": 0,
+      "preconditioner_modes": [
+        "rest"
+      ]
+    },
+    {
+      "mode": "fixed8",
+      "status": "passed",
+      "solve_s": 35.33626620602445,
+      "audit_s": 71.86486114101717,
+      "completed_steps": 64,
+      "hvp_calls": 2183,
+      "linear_iterations": 1906,
+      "newton_corrections": 128,
+      "max_force_ratio": 0.008448306528086452,
+      "max_position_update_error_m": 1.3552527156068805e-20,
+      "max_energy_ledger_error_j": 2.168404344971009e-18,
+      "max_projected_gradient_upper": 0.01613208091490968,
+      "max_linear_residual_ratio": 0.9979365581267605,
+      "fallback_count": 0,
+      "preconditioner_modes": [
+        "rest"
+      ]
+    },
+    {
+      "mode": "ew",
+      "status": "passed",
+      "solve_s": 26.959377968887566,
+      "audit_s": 70.59682653695927,
+      "completed_steps": 64,
+      "hvp_calls": 1596,
+      "linear_iterations": 1294,
+      "newton_corrections": 141,
+      "max_force_ratio": 0.9491383028089126,
+      "max_position_update_error_m": 1.3552527156068805e-20,
+      "max_energy_ledger_error_j": 1.951563910473908e-18,
+      "max_projected_gradient_upper": 0.01613208091490968,
+      "max_linear_residual_ratio": 0.9703125682384167,
+      "fallback_count": 0,
+      "preconditioner_modes": [
+        "rest"
+      ]
+    },
+    {
+      "mode": "strict_repeat",
+      "status": "passed",
+      "solve_s": 39.37968255288433,
+      "audit_s": 71.44627614394994,
+      "completed_steps": 64,
+      "hvp_calls": 2639,
+      "linear_iterations": 2366,
+      "newton_corrections": 128,
+      "max_force_ratio": 0.008454036664800556,
+      "max_position_update_error_m": 1.3552527156068805e-20,
+      "max_energy_ledger_error_j": 1.734723475976807e-18,
+      "max_projected_gradient_upper": 0.01613208091490968,
+      "max_linear_residual_ratio": 0.9848002468977074,
+      "fallback_count": 0,
+      "preconditioner_modes": [
+        "rest"
+      ]
+    }
+  ]
+}

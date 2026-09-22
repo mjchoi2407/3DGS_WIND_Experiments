@@ -1,0 +1,979 @@
+{
+  "input_sha256": "b1998e0cc033748c54ccce582798ac9c418fb958651ef4fe17e130a8c179e1df",
+  "source_sha256": "ee92dab1eb85afd4c5ad33b94f9392ebee830fccdaf3c0a2e30bbe7323dd1e79",
+  "wind_sha256": "db9c01a01eecfa78fc1dc581bb8505b8bc518c368001a98faf7894432a60bc59",
+  "runtime_manifest_sha256": "dec67d896537efadf38bbd81f52cb7d726abe4a73e58fcc1b5180ffef52a9df6",
+  "environment": {
+    "device": "cuda:0",
+    "numpy": "2.4.4",
+    "scipy": "1.18.1",
+    "compute_backend": "precision_hvp_graph",
+    "linear_solver_device": "cpu",
+    "cuda_graph": true,
+    "state_encoding": "hi_lo_v1",
+    "state_mantissa_bits": 64,
+    "warp": "1.17.0",
+    "gpu_name": "NVIDIA GeForce GTX 1080 Ti"
+  },
+  "policy": {
+    "force_atol_n": 1e-10,
+    "force_rtol": 1e-09,
+    "displacement_atol_m": 1e-12,
+    "displacement_rtol": 1e-09,
+    "linear_rtol": 1e-10,
+    "max_newton": 15,
+    "linear_cycles": 3,
+    "line_search_steps": 12,
+    "linear_restart": 240,
+    "linear_preconditioner": "current"
+  },
+  "input_time_s": 3.266666666666723,
+  "dt_s": 0.004166666666666667,
+  "order": null,
+  "method": "hybrid",
+  "action_backend": "taylor",
+  "substeps": 4,
+  "multiplier": 64.0,
+  "training_eligible": false,
+  "continuous_geometry_verified": false,
+  "status": "development_complete",
+  "rows": [
+    {
+      "index": 0,
+      "solve_s": 68.66131881599722,
+      "diagnostics": {
+        "integrator": "p3_shell_gauss6_exponential_picard_trial_v1",
+        "dt_s": 0.004166666666666667,
+        "degree": 20,
+        "continuous_geometry_verified": false,
+        "training_eligible": false,
+        "assembly": {
+          "colors": 276,
+          "nnz": 2478006,
+          "relative_action_error": 3.877409748047856e-16,
+          "assembly_s": 0.5088512849906692
+        },
+        "max_mass_solve_relative_residual": 1.1024218346598522e-15,
+        "sampled_force_fit_ratios": [
+          0.017955801518895028,
+          0.011279153759439093,
+          0.010440189834059609,
+          0.011405451908328637,
+          0.017340834125472496
+        ],
+        "action_s": 32.91395214899967,
+        "matvec_columns": 7703,
+        "quadrature": 44,
+        "coordinate_scale_s_inv": 166432.44539701208,
+        "energy_balance_residual_j": -9.01244592029746e-09,
+        "external_work_j": 5.786835078539517e-05,
+        "gauss_preparation_s": 33.10057829400466,
+        "gauss_solver": {
+          "integrator": "p3_shell_gauss6_collocation_trial_v1",
+          "attempts": [
+            {
+              "iteration": 0,
+              "force_residual_n": [
+                0.03237453962290017,
+                0.09023236478149718,
+                0.18892159290036328,
+                0.3012619587976205,
+                0.4015145210491056,
+                0.4665719279014216
+              ],
+              "force_limit_n": [
+                1.3287115175648208e-10,
+                1.9023295154609774e-10,
+                2.887879935430797e-10,
+                4.0108268182737103e-10,
+                5.013160492778411e-10,
+                5.663655608141135e-10
+              ],
+              "linear_iterations": 7,
+              "linear_info": 0,
+              "linear_residual_n": 1.0280156572947734e-11,
+              "linear_limit_n": 7.173168066282763e-11,
+              "preconditioner": [
+                {
+                  "colors": 276,
+                  "nnz": 2478006,
+                  "relative_action_error": 3.8904905141835683e-16,
+                  "assembly_s": 0.7326806030032458,
+                  "factor_s": 7.527979510996374,
+                  "factors": 3,
+                  "factor_nnz": 62992818,
+                  "stage_transform_condition": 602.6538662275997
+                }
+              ],
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "norm_n": 0.0014669549493170012
+                }
+              ]
+            },
+            {
+              "iteration": 1,
+              "force_residual_n": [
+                8.095280947334208e-07,
+                6.633638509177241e-06,
+                7.437087698747938e-05,
+                0.00033869946423737037,
+                0.0007941727693944381,
+                0.0011836187818566582
+              ],
+              "force_limit_n": [
+                1.1061959799377441e-10,
+                1.0963384908499448e-10,
+                1.0891982066389341e-10,
+                1.0872601530191122e-10,
+                1.0916795188856438e-10,
+                1.1130219606148782e-10
+              ],
+              "linear_iterations": 7,
+              "linear_info": 0,
+              "linear_residual_n": 1.893741356015503e-14,
+              "linear_limit_n": 1.4669549493170013e-13,
+              "preconditioner": [
+                {
+                  "colors": 276,
+                  "nnz": 2478006,
+                  "relative_action_error": 3.88467113029325e-16,
+                  "assembly_s": 0.5130189340125071,
+                  "factor_s": 7.588610906008398,
+                  "factors": 3,
+                  "factor_nnz": 62992818,
+                  "stage_transform_condition": 602.6538662275997
+                }
+              ],
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "norm_n": 7.30994636251395e-08
+                }
+              ]
+            },
+            {
+              "iteration": 2,
+              "force_residual_n": [
+                1.8352929006225346e-12,
+                2.099717208234563e-12,
+                3.7830653808733106e-10,
+                8.124855542893115e-09,
+                3.581891179970024e-08,
+                6.320111342817968e-08
+              ],
+              "force_limit_n": [
+                1.1061959590144838e-10,
+                1.0963352708619422e-10,
+                1.0891994909236137e-10,
+                1.087301859033736e-10,
+                1.0917694806678858e-10,
+                1.1121516974617685e-10
+              ],
+              "linear_iterations": 7,
+              "linear_info": 0,
+              "linear_residual_n": 3.9663529871487853e-19,
+              "linear_limit_n": 7.30994636251395e-18,
+              "preconditioner": [
+                {
+                  "colors": 276,
+                  "nnz": 2478006,
+                  "relative_action_error": 3.9128248779042724e-16,
+                  "assembly_s": 0.5218760660063708,
+                  "factor_s": 7.565902151996852,
+                  "factors": 3,
+                  "factor_nnz": 62992818,
+                  "stage_transform_condition": 602.6538662275997
+                }
+              ],
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "norm_n": 3.978456492920724e-12
+                }
+              ]
+            },
+            {
+              "iteration": 3,
+              "force_residual_n": [
+                1.51394944259478e-12,
+                1.5452768194462276e-12,
+                1.5251520860520149e-12,
+                1.6836980303237726e-12,
+                1.6934315951297075e-12,
+                1.7662259743089677e-12
+              ],
+              "force_limit_n": [
+                1.1061959590152675e-10,
+                1.0963352708621284e-10,
+                1.0891994908671553e-10,
+                1.0873018627594416e-10,
+                1.0917694909483863e-10,
+                1.1121516934793763e-10
+              ]
+            }
+          ],
+          "hvp_calls": 1011,
+          "stage_update_error_m": 2.710505431213761e-20
+        }
+      },
+      "audit": {
+        "position_update_error_m": 1.3552527156068805e-20,
+        "velocity_update_error_m_s": 0.0,
+        "force_evaluation_ratios": [
+          0.010134188398334461,
+          0.009697613450034082,
+          0.009586935954472945,
+          0.011543082394386468
+        ],
+        "energy_ledger_error_j": 6.936048402600046e-18,
+        "sampled_geometry": [
+          {
+            "projected_gradient_upper": 0.17592677679617033,
+            "roundoff_margin": 2.6900238788024614e-09,
+            "injectivity_sufficient_condition": true,
+            "area_ratio_lower": 0.6790966772015489,
+            "time_degree": 0
+          },
+          {
+            "projected_gradient_upper": 0.18342568632598358,
+            "roundoff_margin": 2.800246735087648e-09,
+            "injectivity_sufficient_condition": true,
+            "area_ratio_lower": 0.666793609752191,
+            "time_degree": 0
+          },
+          {
+            "projected_gradient_upper": 0.1834513140184646,
+            "roundoff_margin": 2.800139590722288e-09,
+            "injectivity_sufficient_condition": true,
+            "area_ratio_lower": 0.6667517565781721,
+            "time_degree": 0
+          },
+          {
+            "projected_gradient_upper": 0.1798302649750543,
+            "roundoff_margin": 2.7461615776928423e-09,
+            "injectivity_sufficient_condition": true,
+            "area_ratio_lower": 0.6726783942508897,
+            "time_degree": 0
+          }
+        ],
+        "scope": "힘 평가·질량 풀이·표본 기하·에너지 장부 검산. Newton 단계 방정식 잔차나 전체 시간 곡선 기하/정확도 인증 아님.",
+        "passed": true,
+        "gauss_stage_force_ratios": [
+          0.011574225439228968,
+          0.0117371386883171,
+          0.01167361207846063,
+          0.011604240594141906,
+          0.011497450511090449,
+          0.0117221638797462
+        ]
+      },
+      "end_time_s": 3.27083333333339
+    },
+    {
+      "index": 1,
+      "solve_s": 69.29930925100052,
+      "diagnostics": {
+        "integrator": "p3_shell_gauss6_exponential_picard_trial_v1",
+        "dt_s": 0.004166666666666667,
+        "degree": 20,
+        "continuous_geometry_verified": false,
+        "training_eligible": false,
+        "assembly": {
+          "colors": 276,
+          "nnz": 2478006,
+          "relative_action_error": 3.9126811180805967e-16,
+          "assembly_s": 0.5414363509917166
+        },
+        "max_mass_solve_relative_residual": 1.064600547835333e-15,
+        "sampled_force_fit_ratios": [
+          0.017305650579669075,
+          0.011731156750491755,
+          0.011178518662862277,
+          0.011876398917020026,
+          0.017450323802334102
+        ],
+        "action_s": 34.73942270700354,
+        "matvec_columns": 8107,
+        "quadrature": 44,
+        "coordinate_scale_s_inv": 166432.5186049878,
+        "energy_balance_residual_j": -1.1432927620846477e-08,
+        "external_work_j": 4.611743837450746e-05,
+        "gauss_preparation_s": 32.49637313900166,
+        "gauss_solver": {
+          "integrator": "p3_shell_gauss6_collocation_trial_v1",
+          "attempts": [
+            {
+              "iteration": 0,
+              "force_residual_n": [
+                0.33147634061982145,
+                1.661824433494788,
+                3.735816146209372,
+                6.0784692085117324,
+                8.153475594048288,
+                9.485838549646125
+              ],
+              "force_limit_n": [
+                4.3151521586124273e-10,
+                1.761827410857317e-09,
+                3.835814258406813e-09,
+                6.178465903440995e-09,
+                8.253471767195082e-09,
+                9.585834529771042e-09
+              ],
+              "linear_iterations": 6,
+              "linear_info": 0,
+              "linear_residual_n": 7.467052122757933e-10,
+              "linear_limit_n": 1.4499515318173517e-09,
+              "preconditioner": [
+                {
+                  "colors": 276,
+                  "nnz": 2478006,
+                  "relative_action_error": 3.8957205243669575e-16,
+                  "assembly_s": 0.5447187370009487,
+                  "factor_s": 7.438903217000188,
+                  "factors": 3,
+                  "factor_nnz": 62923986,
+                  "stage_transform_condition": 602.6538662275997
+                }
+              ],
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "norm_n": 0.017153714997337633
+                }
+              ]
+            },
+            {
+              "iteration": 1,
+              "force_residual_n": [
+                1.0279537047468307e-05,
+                0.00026743457695010107,
+                0.0014810528880888996,
+                0.004547562285256418,
+                0.009318165553043909,
+                0.013582203857199259
+              ],
+              "force_limit_n": [
+                1.101179024088514e-10,
+                1.0919662029559718e-10,
+                1.0903153830421935e-10,
+                1.0995699788267365e-10,
+                1.1291949966540101e-10,
+                1.177938035875911e-10
+              ],
+              "linear_iterations": 7,
+              "linear_info": 0,
+              "linear_residual_n": 6.396229642527634e-14,
+              "linear_limit_n": 1.7153714997337632e-12,
+              "preconditioner": [
+                {
+                  "colors": 276,
+                  "nnz": 2478006,
+                  "relative_action_error": 3.9123333538142577e-16,
+                  "assembly_s": 0.5352509930089582,
+                  "factor_s": 7.649695084008272,
+                  "factors": 3,
+                  "factor_nnz": 62928882,
+                  "stage_transform_condition": 602.6538662275997
+                }
+              ],
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "norm_n": 2.5525155629778247e-07
+                }
+              ]
+            },
+            {
+              "iteration": 2,
+              "force_residual_n": [
+                1.782196246360894e-12,
+                1.9429359049555647e-11,
+                1.2520570771859346e-09,
+                2.0803428121442203e-08,
+                1.0331626351675143e-07,
+                2.3247528048412465e-07
+              ],
+              "force_limit_n": [
+                1.101178832222076e-10,
+                1.0919331162451277e-10,
+                1.0892225863328739e-10,
+                1.0893400413729832e-10,
+                1.0920016395062139e-10,
+                1.1172529580208909e-10
+              ],
+              "linear_iterations": 7,
+              "linear_info": 0,
+              "linear_residual_n": 5.362351376143633e-19,
+              "linear_limit_n": 2.5525155629778247e-17,
+              "preconditioner": [
+                {
+                  "colors": 276,
+                  "nnz": 2478006,
+                  "relative_action_error": 3.94024064767499e-16,
+                  "assembly_s": 0.526714356004959,
+                  "factor_s": 7.473399846989196,
+                  "factors": 3,
+                  "factor_nnz": 62928882,
+                  "stage_transform_condition": 602.6538662275997
+                }
+              ],
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "norm_n": 4.0825258607757776e-12
+                }
+              ]
+            },
+            {
+              "iteration": 3,
+              "force_residual_n": [
+                1.4673205062068957e-12,
+                1.5312903476067302e-12,
+                1.6204429214884093e-12,
+                1.7331902788671596e-12,
+                1.788253501451129e-12,
+                1.8279779586418613e-12
+              ],
+              "force_limit_n": [
+                1.1011788322216796e-10,
+                1.0919331162469708e-10,
+                1.0892225862332376e-10,
+                1.0893400458487195e-10,
+                1.0920016251064444e-10,
+                1.1172530603970774e-10
+              ]
+            }
+          ],
+          "hvp_calls": 999,
+          "stage_update_error_m": 2.710505431213761e-20
+        }
+      },
+      "audit": {
+        "position_update_error_m": 6.776263578034403e-21,
+        "velocity_update_error_m_s": 0.0,
+        "force_evaluation_ratios": [
+          0.009586935954472945,
+          0.010141906101926636,
+          0.01029121563698825,
+          0.01112495767804407
+        ],
+        "energy_ledger_error_j": 6.941196774732576e-18,
+        "sampled_geometry": [
+          {
+            "projected_gradient_upper": 0.1834513140184646,
+            "roundoff_margin": 2.800139590722288e-09,
+            "injectivity_sufficient_condition": true,
+            "area_ratio_lower": 0.6667517565781721,
+            "time_degree": 0
+          },
+          {
+            "projected_gradient_upper": 0.19098847763594887,
+            "roundoff_margin": 2.908859402476405e-09,
+            "injectivity_sufficient_condition": true,
+            "area_ratio_lower": 0.6544996433177996,
+            "time_degree": 0
+          },
+          {
+            "projected_gradient_upper": 0.1909874559619375,
+            "roundoff_margin": 2.908834824795539e-09,
+            "injectivity_sufficient_condition": true,
+            "area_ratio_lower": 0.6545012964109379,
+            "time_degree": 0
+          },
+          {
+            "projected_gradient_upper": 0.1871478537889067,
+            "roundoff_margin": 2.8540788326527472e-09,
+            "injectivity_sufficient_condition": true,
+            "area_ratio_lower": 0.6607286115999808,
+            "time_degree": 0
+          }
+        ],
+        "scope": "힘 평가·질량 풀이·표본 기하·에너지 장부 검산. Newton 단계 방정식 잔차나 전체 시간 곡선 기하/정확도 인증 아님.",
+        "passed": true,
+        "gauss_stage_force_ratios": [
+          0.011429119635587013,
+          0.01136576821736032,
+          0.01151005463327177,
+          0.011757056645295277,
+          0.011637336744905588,
+          0.011670017762548482
+        ]
+      },
+      "end_time_s": 3.2750000000000568
+    },
+    {
+      "index": 2,
+      "solve_s": 68.40163418200973,
+      "diagnostics": {
+        "integrator": "p3_shell_gauss6_exponential_picard_trial_v1",
+        "dt_s": 0.004166666666666667,
+        "degree": 20,
+        "continuous_geometry_verified": false,
+        "training_eligible": false,
+        "assembly": {
+          "colors": 276,
+          "nnz": 2478006,
+          "relative_action_error": 3.8500301490411597e-16,
+          "assembly_s": 0.5527790100022685
+        },
+        "max_mass_solve_relative_residual": 9.112254808714087e-16,
+        "sampled_force_fit_ratios": [
+          0.01785245351570345,
+          0.011644202917096266,
+          0.011004777474496649,
+          0.01149342476427574,
+          0.017499716135103486
+        ],
+        "action_s": 34.897828853005194,
+        "matvec_columns": 8170,
+        "quadrature": 44,
+        "coordinate_scale_s_inv": 166434.5500675241,
+        "energy_balance_residual_j": -1.922577739589174e-08,
+        "external_work_j": 3.4899252480608603e-05,
+        "gauss_preparation_s": 31.320863675005967,
+        "gauss_solver": {
+          "integrator": "p3_shell_gauss6_collocation_trial_v1",
+          "attempts": [
+            {
+              "iteration": 0,
+              "force_residual_n": [
+                0.32820893763559594,
+                1.630878621300391,
+                3.6625397768374857,
+                5.958670187309513,
+                7.993602920542709,
+                9.300790075591188
+              ],
+              "force_limit_n": [
+                4.2822186367670063e-10,
+                1.7308509798752267e-09,
+                3.762506079253237e-09,
+                6.0586342550494115e-09,
+                8.093565840738824e-09,
+                9.400752420918633e-09
+              ],
+              "linear_iterations": 6,
+              "linear_info": 0,
+              "linear_residual_n": 8.617277290750539e-10,
+              "linear_limit_n": 1.421582983450952e-09,
+              "preconditioner": [
+                {
+                  "colors": 276,
+                  "nnz": 2478006,
+                  "relative_action_error": 3.9364483022029877e-16,
+                  "assembly_s": 0.6612829190125922,
+                  "factor_s": 7.3368771020032,
+                  "factors": 3,
+                  "factor_nnz": 62732529,
+                  "stage_transform_condition": 602.6538662275997
+                }
+              ],
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "norm_n": 0.013457963605677194
+                }
+              ]
+            },
+            {
+              "iteration": 1,
+              "force_residual_n": [
+                9.015553850863112e-06,
+                0.0002484726548864458,
+                0.001357735786693956,
+                0.003864068129482181,
+                0.007400779147403267,
+                0.010464653052390506
+              ],
+              "force_limit_n": [
+                1.1009133691748671e-10,
+                1.0863392031193196e-10,
+                1.0834863505083869e-10,
+                1.0905683087853628e-10,
+                1.113867731802908e-10,
+                1.151413906648523e-10
+              ],
+              "linear_iterations": 6,
+              "linear_info": 0,
+              "linear_residual_n": 4.864334035651237e-13,
+              "linear_limit_n": 1.3457963605677195e-12,
+              "preconditioner": [
+                {
+                  "colors": 276,
+                  "nnz": 2478006,
+                  "relative_action_error": 3.884806162108265e-16,
+                  "assembly_s": 0.5559345000074245,
+                  "factor_s": 7.629993285008823,
+                  "factors": 3,
+                  "factor_nnz": 62732655,
+                  "stage_transform_condition": 602.6538662275997
+                }
+              ],
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "norm_n": 1.1529277546478763e-07
+                }
+              ]
+            },
+            {
+              "iteration": 2,
+              "force_residual_n": [
+                1.826019080687432e-12,
+                1.4566321005714623e-11,
+                5.36289124690741e-10,
+                6.633373819906651e-09,
+                3.930869559992347e-08,
+                1.081802248788315e-07
+              ],
+              "force_limit_n": [
+                1.1009128144525066e-10,
+                1.0863285496063072e-10,
+                1.082119683297788e-10,
+                1.082717498463712e-10,
+                1.0866940717238237e-10,
+                1.1162803652913756e-10
+              ],
+              "linear_iterations": 7,
+              "linear_info": 0,
+              "linear_residual_n": 3.143048090732023e-19,
+              "linear_limit_n": 1.1529277546478763e-17,
+              "preconditioner": [
+                {
+                  "colors": 276,
+                  "nnz": 2478006,
+                  "relative_action_error": 3.9741366170180186e-16,
+                  "assembly_s": 0.5520111259975238,
+                  "factor_s": 7.348615221009823,
+                  "factors": 3,
+                  "factor_nnz": 62732655,
+                  "stage_transform_condition": 602.6538662275997
+                }
+              ],
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "norm_n": 4.095060473133336e-12
+                }
+              ]
+            },
+            {
+              "iteration": 3,
+              "force_residual_n": [
+                1.4754860558104569e-12,
+                1.5415135491562257e-12,
+                1.6242252578329328e-12,
+                1.7294049362821358e-12,
+                1.8052975226149446e-12,
+                1.8243214871607926e-12
+              ],
+              "force_limit_n": [
+                1.1009128144527812e-10,
+                1.0863285496109218e-10,
+                1.0821196833953293e-10,
+                1.0827175018822987e-10,
+                1.0866940882499713e-10,
+                1.1162804429872889e-10
+              ]
+            }
+          ],
+          "hvp_calls": 987,
+          "stage_update_error_m": 2.710505431213761e-20
+        }
+      },
+      "audit": {
+        "position_update_error_m": 1.3552527156068805e-20,
+        "velocity_update_error_m_s": 0.0,
+        "force_evaluation_ratios": [
+          0.01029121563698825,
+          0.010077106809370419,
+          0.010156045658709135,
+          0.011562752399574515
+        ],
+        "energy_ledger_error_j": 1.3532674821367533e-21,
+        "sampled_geometry": [
+          {
+            "projected_gradient_upper": 0.1909874559619375,
+            "roundoff_margin": 2.908834824795539e-09,
+            "injectivity_sufficient_condition": true,
+            "area_ratio_lower": 0.6545012964109379,
+            "time_degree": 0
+          },
+          {
+            "projected_gradient_upper": 0.19881484996390536,
+            "roundoff_margin": 3.0155440671183867e-09,
+            "injectivity_sufficient_condition": true,
+            "area_ratio_lower": 0.6418976446383595,
+            "time_degree": 0
+          },
+          {
+            "projected_gradient_upper": 0.19883746737355146,
+            "roundoff_margin": 3.0155188172604043e-09,
+            "injectivity_sufficient_condition": true,
+            "area_ratio_lower": 0.6418614036844252,
+            "time_degree": 0
+          },
+          {
+            "projected_gradient_upper": 0.1949194991857465,
+            "roundoff_margin": 2.9626646391577723e-09,
+            "injectivity_sufficient_condition": true,
+            "area_ratio_lower": 0.6481546127913292,
+            "time_degree": 0
+          }
+        ],
+        "scope": "힘 평가·질량 풀이·표본 기하·에너지 장부 검산. Newton 단계 방정식 잔차나 전체 시간 곡선 기하/정확도 인증 아님.",
+        "passed": true,
+        "gauss_stage_force_ratios": [
+          0.011224059316217743,
+          0.011732593059262112,
+          0.011665769565972716,
+          0.011853841424100547,
+          0.011688442555698132,
+          0.011374120205079108
+        ]
+      },
+      "end_time_s": 3.2791666666667236
+    },
+    {
+      "index": 3,
+      "solve_s": 68.92726154299453,
+      "diagnostics": {
+        "integrator": "p3_shell_gauss6_exponential_picard_trial_v1",
+        "dt_s": 0.004166666666666667,
+        "degree": 20,
+        "continuous_geometry_verified": false,
+        "training_eligible": false,
+        "assembly": {
+          "colors": 276,
+          "nnz": 2478006,
+          "relative_action_error": 3.8629557446720684e-16,
+          "assembly_s": 0.557955904994742
+        },
+        "max_mass_solve_relative_residual": 1.1857965608223395e-15,
+        "sampled_force_fit_ratios": [
+          0.017303050945272427,
+          0.011780666422039872,
+          0.011272519694128208,
+          0.011864351098443275,
+          0.017878656557141635
+        ],
+        "action_s": 35.253998426996986,
+        "matvec_columns": 8217,
+        "quadrature": 44,
+        "coordinate_scale_s_inv": 166436.89021981298,
+        "energy_balance_residual_j": -3.816598413512311e-09,
+        "external_work_j": 2.7570026556876156e-05,
+        "gauss_preparation_s": 31.555343302999972,
+        "gauss_solver": {
+          "integrator": "p3_shell_gauss6_collocation_trial_v1",
+          "attempts": [
+            {
+              "iteration": 0,
+              "force_residual_n": [
+                0.30779533885436017,
+                1.5440675660449454,
+                3.4723960461463506,
+                5.651731750449903,
+                7.583139373877131,
+                8.823818298437596
+              ],
+              "force_limit_n": [
+                4.078146282465307e-10,
+                1.6440560936040826e-09,
+                3.572380687725939e-09,
+                5.751715512738955e-09,
+                7.683122988483108e-09,
+                8.92380194036858e-09
+              ],
+              "linear_iterations": 6,
+              "linear_info": 0,
+              "linear_residual_n": 4.797733806328098e-10,
+              "linear_limit_n": 1.3484890093247202e-09,
+              "preconditioner": [
+                {
+                  "colors": 276,
+                  "nnz": 2478006,
+                  "relative_action_error": 3.9349222911106036e-16,
+                  "assembly_s": 0.6956567220040597,
+                  "factor_s": 7.466123085003346,
+                  "factors": 3,
+                  "factor_nnz": 62682642,
+                  "stage_transform_condition": 602.6538662275997
+                }
+              ],
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "norm_n": 0.014790801551963478
+                }
+              ]
+            },
+            {
+              "iteration": 1,
+              "force_residual_n": [
+                8.727401857298907e-06,
+                0.00024203738270752747,
+                0.0013656528768269238,
+                0.004149599090560601,
+                0.008163181781164581,
+                0.011532017824417796
+              ],
+              "force_limit_n": [
+                1.1034342323585824e-10,
+                1.0840155914576676e-10,
+                1.0810709824256712e-10,
+                1.0900795827206174e-10,
+                1.1172467901714134e-10,
+                1.1593962883854219e-10
+              ],
+              "linear_iterations": 6,
+              "linear_info": 0,
+              "linear_residual_n": 5.814097411130885e-13,
+              "linear_limit_n": 1.4790801551963479e-12,
+              "preconditioner": [
+                {
+                  "colors": 276,
+                  "nnz": 2478006,
+                  "relative_action_error": 3.89202965520513e-16,
+                  "assembly_s": 0.5357683389884187,
+                  "factor_s": 7.5110808220051695,
+                  "factors": 3,
+                  "factor_nnz": 62682642,
+                  "stage_transform_condition": 602.6538662275997
+                }
+              ],
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "norm_n": 1.311487849361941e-07
+                }
+              ]
+            },
+            {
+              "iteration": 2,
+              "force_residual_n": [
+                1.8563912205684956e-12,
+                1.96632663436486e-11,
+                9.513051824246367e-10,
+                1.1482955085248501e-08,
+                5.1772721804343946e-08,
+                1.1994509343061903e-07
+              ],
+              "force_limit_n": [
+                1.1034362018919841e-10,
+                1.0840340060902868e-10,
+                1.0801077722120557e-10,
+                1.0810170373135545e-10,
+                1.0851216987127155e-10,
+                1.1126941888285065e-10
+              ],
+              "linear_iterations": 6,
+              "linear_info": 0,
+              "linear_residual_n": 8.930182988897816e-18,
+              "linear_limit_n": 1.311487849361941e-17,
+              "preconditioner": [
+                {
+                  "colors": 276,
+                  "nnz": 2478006,
+                  "relative_action_error": 3.9548059266138754e-16,
+                  "assembly_s": 0.5216383969964227,
+                  "factor_s": 7.454759778993321,
+                  "factors": 3,
+                  "factor_nnz": 62682642,
+                  "stage_transform_condition": 602.6538662275997
+                }
+              ],
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "norm_n": 4.092881890659704e-12
+                }
+              ]
+            },
+            {
+              "iteration": 3,
+              "force_residual_n": [
+                1.5459187813690448e-12,
+                1.6071083345609942e-12,
+                1.599689713677805e-12,
+                1.755691478966289e-12,
+                1.7477964089941436e-12,
+                1.7557813236935134e-12
+              ],
+              "force_limit_n": [
+                1.1034362018914367e-10,
+                1.0840340060964774e-10,
+                1.0801077722441082e-10,
+                1.0810170395229063e-10,
+                1.0851216959217899e-10,
+                1.1126942422685442e-10
+              ]
+            }
+          ],
+          "hvp_calls": 975,
+          "stage_update_error_m": 2.710505431213761e-20
+        }
+      },
+      "audit": {
+        "position_update_error_m": 3.3881317890172014e-21,
+        "velocity_update_error_m_s": 0.0,
+        "force_evaluation_ratios": [
+          0.010156045658709135,
+          0.010258317825461962,
+          0.010092648409326326,
+          0.011529313533705279
+        ],
+        "energy_ledger_error_j": 6.938983239413384e-18,
+        "sampled_geometry": [
+          {
+            "projected_gradient_upper": 0.19883746737355146,
+            "roundoff_margin": 3.0155188172604043e-09,
+            "injectivity_sufficient_condition": true,
+            "area_ratio_lower": 0.6418614036844252,
+            "time_degree": 0
+          },
+          {
+            "projected_gradient_upper": 0.20664204910952572,
+            "roundoff_margin": 3.12436758744379e-09,
+            "injectivity_sufficient_condition": true,
+            "area_ratio_lower": 0.6294168382411321,
+            "time_degree": 0
+          },
+          {
+            "projected_gradient_upper": 0.2066409397551682,
+            "roundoff_margin": 3.1242929742032008e-09,
+            "injectivity_sufficient_condition": true,
+            "area_ratio_lower": 0.6294185984725627,
+            "time_degree": 0
+          },
+          {
+            "projected_gradient_upper": 0.20281774486293694,
+            "roundoff_margin": 3.0701962279630115e-09,
+            "injectivity_sufficient_condition": true,
+            "area_ratio_lower": 0.6354995479054135,
+            "time_degree": 0
+          }
+        ],
+        "scope": "힘 평가·질량 풀이·표본 기하·에너지 장부 검산. Newton 단계 방정식 잔차나 전체 시간 곡선 기하/정확도 인증 아님.",
+        "passed": true,
+        "gauss_stage_force_ratios": [
+          0.01150294585910392,
+          0.011778269170746179,
+          0.011658339162241741,
+          0.011515502389437477,
+          0.011575171660999434,
+          0.011437005556241938
+        ]
+      },
+      "end_time_s": 3.2833333333333905
+    }
+  ],
+  "end_time_s": 3.2833333333333905,
+  "endpoint_relative_mass_l2": {
+    "u": 1.8384226183242895e-06,
+    "v": 0.003701147812489661
+  }
+}

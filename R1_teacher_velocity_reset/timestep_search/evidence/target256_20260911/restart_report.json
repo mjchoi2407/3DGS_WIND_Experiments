@@ -1,0 +1,134 @@
+{
+  "input_time_s": 1.3333333333333335,
+  "target_time_s": 1.35,
+  "frame": 80,
+  "environment": {
+    "device": "cuda:0",
+    "numpy": "2.4.4",
+    "scipy": "1.18.1",
+    "compute_backend": "precision_hvp_graph",
+    "linear_solver_device": "cpu",
+    "cuda_graph": true,
+    "state_encoding": "hi_lo_v1",
+    "state_mantissa_bits": 64,
+    "warp": "1.17.0",
+    "gpu_name": "NVIDIA GeForce GTX 1080 Ti"
+  },
+  "policy": {
+    "force_atol_n": 1e-10,
+    "force_rtol": 1e-09,
+    "displacement_atol_m": 1e-12,
+    "displacement_rtol": 1e-09,
+    "linear_rtol": 1e-10,
+    "max_newton": 15,
+    "linear_cycles": 3,
+    "line_search_steps": 12,
+    "linear_restart": 240
+  },
+  "input_sha256": "f67a0b0a87bdec5404609f60601b6ae4b80a387f7dcebd4bc0116cd89f5180d4",
+  "runtime_manifest_sha256": "2a232765fe8bdddbcf625e02d37112b4dc35d18dd74dca5ec48413ba1262e26d",
+  "trials": [
+    {
+      "substeps": 1,
+      "restart": 240,
+      "max_cycles": 3,
+      "max_iterations": 720,
+      "dt_s": 0.016666666666666666,
+      "rows": [
+        {
+          "index": 0,
+          "solve_s": 21.86435957098729,
+          "attempts": [
+            {
+              "iteration": 0,
+              "force_residual_n": 87.46497406390071,
+              "force_limit_n": 8.756493594461272e-08,
+              "linear_info": 0,
+              "linear_iterations": 259,
+              "linear_residual_n": 3.5136602086253002e-09,
+              "linear_limit_n": 8.746497406390072e-09,
+              "correction_m": 0.009310282783780623,
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "residual_n": 1.405609300165649
+                }
+              ]
+            },
+            {
+              "iteration": 1,
+              "force_residual_n": 1.405609300165649,
+              "force_limit_n": 1.5055812203794992e-09,
+              "linear_info": 0,
+              "linear_iterations": 219,
+              "linear_residual_n": 4.467438311175101e-11,
+              "linear_limit_n": 1.405609300165649e-10,
+              "correction_m": 0.0066271376558406855,
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "residual_n": 0.011093658561278972
+                }
+              ]
+            },
+            {
+              "iteration": 2,
+              "force_residual_n": 0.011093658561278972,
+              "force_limit_n": 1.1136115097234598e-10,
+              "linear_info": 0,
+              "linear_iterations": 246,
+              "linear_residual_n": 6.75399668098469e-13,
+              "linear_limit_n": 1.1093658561278971e-12,
+              "correction_m": 0.00010381448912746136,
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "residual_n": 3.281386318895538e-06
+                }
+              ]
+            },
+            {
+              "iteration": 3,
+              "force_residual_n": 3.281386318895538e-06,
+              "force_limit_n": 1.0257744406485174e-10,
+              "linear_info": 0,
+              "linear_iterations": 248,
+              "linear_residual_n": 1.2517862306490938e-16,
+              "linear_limit_n": 3.281386318895538e-16,
+              "correction_m": 6.038252111444263e-07,
+              "line_search": [
+                {
+                  "alpha": 1.0,
+                  "residual_n": 1.0089423900357498e-10
+                }
+              ]
+            },
+            {
+              "iteration": 4,
+              "force_residual_n": 1.0089423900357498e-10,
+              "force_limit_n": 1.0257733417520119e-10,
+              "linear_info": 0,
+              "linear_iterations": 255,
+              "linear_residual_n": 3.773717025199196e-21,
+              "linear_limit_n": 1.00894239003575e-20,
+              "correction_m": 1.0270770310160192e-12
+            }
+          ],
+          "hvp_calls": 1242,
+          "audit": {
+            "residual_ratio": 0.9835925397259301,
+            "position_update_error_m": 2.710505431213761e-20,
+            "energy_ledger_error_j": 1.7211709488207383e-18,
+            "projected_gradient_upper": 0.032049273298670966
+          },
+          "audit_passed": true
+        }
+      ],
+      "status": "passed",
+      "end_time_s": 1.35,
+      "completed_solve_s": 21.86435957098729
+    }
+  ],
+  "training_eligible": false,
+  "r1_complete": false
+}

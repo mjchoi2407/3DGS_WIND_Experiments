@@ -1,0 +1,27 @@
+{
+  "date": "2026-09-11",
+  "tests": [
+    {
+      "module": "test_teacher_p3_shell_gauss",
+      "passed": 9
+    },
+    {
+      "module": "test_teacher_p3_shell_colored_preconditioner",
+      "passed": 2
+    },
+    {
+      "module": "test_teacher_p3_shell_precision_state",
+      "passed": 8
+    },
+    {
+      "module": "test_teacher_p3_shell_dynamics",
+      "passed": 5
+    }
+  ],
+  "total_passed": 24,
+  "scope": "CPU 단위·회귀 검사. 실제 n=32 CUDA 시험은 별도 report의 독립 검산을 따른다.",
+  "restart_scope": "Gauss4/6 coupled 실제 P3 n=4 CPU hi/lo 저장/재개; n=32는 저장 endpoint를 별도 프로세스에서 읽어 후속 계산. n=32 재개/무중단 동일 궤적 비교는 미실시.",
+  "main_run_started": false,
+  "training_eligible": false,
+  "curve_gram_check": "2분할 참조의 직접 Bernstein 질량 norm 비교와 Gram 재사용 비교의 모든 JSON 수치 동일"
+}

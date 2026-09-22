@@ -1,0 +1,29 @@
+--- before/wind3dgs/teacher/p3_shell_dynamics.py
++++ after/wind3dgs/teacher/p3_shell_dynamics.py
+@@ -134,6 +134,9 @@
+         # Newton의 위치·가속도 수정은 같은 양을 함께 누적한다. 매번 큰 u0에서
+         # 위치를 재구성하면 극소 수정이 다른 반올림 경계를 넘어 잔차가 정체한다.
+         u=u0+(dt*v0+c*(a0+a)); u[~free]=0.
++        # 서로 상쇄된 Newton 수정도 실제 수행한 연산의 반올림 오차에 기여한다.
++        # 최종 a의 크기만 사용하면 거의 0인 성분의 오차 한도를 과소평가한다.
++        acceleration_path=np.abs(a).copy()
+         last_correction=0.
+         try:
+             for iteration in range(p.max_newton+1):
+@@ -175,6 +178,7 @@
+                     except ValueError as error:
+                         searches.append({'alpha':alpha,'geometry_error':str(error)}); continue
+                     if new_norm <= (1-1e-4*alpha)*norm:
++                        acceleration_path+=np.abs(alpha*delta)
+                         a+=alpha*delta; u=trial_u; last_correction*=alpha; break
+                 else: raise ShellStepFailed('line_search',attempts)
+             u,elastic,residual,norm,limit=evaluate(a,u)
+@@ -182,7 +186,7 @@
+             predictor=u0+(dt*v0+c*(a0+a))
+             update_error=np.abs(u-predictor)
+             roundoff=8*np.finfo(float).eps*(iteration+1)*(np.abs(u0)+np.abs(dt*v0)
+-                +c*(np.abs(a0)+np.abs(a))+np.abs(u))+np.finfo(float).tiny
++                +c*(np.abs(a0)+acceleration_path+np.abs(a))+np.abs(u))+np.finfo(float).tiny
+             if (np.any(update_error[free] > roundoff[free]) or
+                     np.linalg.norm(update_error[free]) > correction_limit):
+                 raise ShellStepFailed('position_update_roundoff',attempts)

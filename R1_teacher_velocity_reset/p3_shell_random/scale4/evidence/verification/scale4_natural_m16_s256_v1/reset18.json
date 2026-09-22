@@ -1,0 +1,2060 @@
+{
+  "run": "20260909_scale4_natural_m16_s256_v1_reset18",
+  "verified": true,
+  "evaluator_device": "cuda:0",
+  "cpu_crosschecks_per_frame": 3,
+  "source_sha256": {
+    "wind3dgs/teacher/p3_shell.py": "5c154b6a97fc1ee0e8fbac4cf163acc500b65b8f791a4eb96fd6cbaecc69b922",
+    "wind3dgs/teacher/p3_shell_kernels.py": "53b6d3e27dec960403eac4774927a655b3349a39434f01c6ab42d55a75b6038d",
+    "wind3dgs/teacher/p3_shell_dynamics.py": "97f33708d8f231d8a38cb1b8dc151cde8e21cee1230a162dcdbe96440d216782",
+    "wind3dgs/teacher/p3_shell_bounds.py": "117872569a0f38801842106e7bbff228ba3bf81f8ffd02d501dfa4604ab78dea",
+    "wind3dgs/teacher/p3_surface.py": "5a40e7345bcc68070264d035c275dccb2fe7cf69115ceb605a2fc764ecb1042a",
+    "wind3dgs/teacher/p3_wind_reset.py": "a0958c452d5fc139049024cf823e12f81407215c1d49e22d96d39d71357223b6",
+    "wind3dgs/teacher/shell_structure.py": "2056257d6a7ec35670051db0366197d3ebd1fe917da64c014ae6bdc4bf037879",
+    "wind3dgs/teacher/physics_registry.py": "462ca765801e2d5d4f3ebb4589efce633a03aae8a2a5432c8e68b5e4221047e5",
+    "wind3dgs/teacher/velocity_reset.py": "0ed136d8b34999c72481549c3fcab056a3c873ecd0ca59fd72f42c1ba4efe2d8",
+    "wind3dgs/evaluation/teacher_p3_shell.py": "a4c97bda0038223c00f3ec04a46ad00f0f4c4704e238e4e4de6e8576665ab939",
+    "wind3dgs/evaluation/teacher_p3_shell_validation.py": "b4bc4b9f0e86193e23d6d7a9b75d5cb108c17a9cab098ea41f6cf1bf7bb4329a",
+    "wind3dgs/evaluation/teacher_plate_cubic.py": "b20120b72f9cce4d4f95643f0c62cfe33d6315829a406f2b47721cff8bf57a19",
+    "wind3dgs/evaluation/teacher_plate_c0ip.py": "6575a8e54b1325c8e3a2b2889d18e7ace1caf3f092a98107cab9e1382da7ae2f",
+    "wind3dgs/evaluation/teacher_plate_galerkin.py": "b9fefd812ba1c9c90212d27b40b3ea5dd0986dbed7470224689c87e53a16ec27",
+    "wind3dgs/evaluation/teacher_plate_reference.py": "9c0dcbeffb8c9b7f9ac9533ef15b0053bc918f401a62df152a35b9814b212b6f",
+    "wind3dgs/evaluation/teacher_p3_wind_reset.py": "ffdf5820cdaee581af25d1c48a105db0b327243fa947af245853f0de1a12a0af",
+    "wind3dgs/teacher/p3_shell_warp.py": "67fc5c3648810d51384cd0951df334ea947d8f6ae7049748c8ce184d0a35d8cd",
+    "wind3dgs/teacher/p3_shell_warp_kernels.py": "4ff7e5c03f839a81c4bc26c83db89d78d9d48b8216871cddea0e3f31957a347d",
+    "wind3dgs/evaluation/teacher_p3_shell_gpu.py": "469010a6e976fd23333bdaa995c80f7f6d8575fe6c2ff4473654970b73d962bc",
+    "tests/test_teacher_p3_shell_warp.py": "405687032e6f9ace702bb4030ddc4ed811ee44c85381baa84b97df3deb744499",
+    "scripts/check_teacher_p3_shell_gpu.sh": "04c9826c441e9e4871dd7ff77834ec43fb7526346903ce578d0d5e829f3efc49",
+    "pyproject.toml": "0b91786093f1a1d36e9bc6de16f37175781aa9dc7d562aaf440021b5764dfb60",
+    "wind3dgs/evaluation/teacher_p3_shell_random.py": "75397d270dcc52a5de5dd2f7e26454c9fe717ce72de6a7533b64b39d079f617f",
+    "wind3dgs/evaluation/teacher_p3_shell_random_validation.py": "1cad75e38ba45102c6fa4ae7659731d6409425bf3bce52c3aa74897823415c6e",
+    "tests/test_teacher_p3_shell_random.py": "97fca0c93410c9c81b613cf01141b26ad79eb73b6700859f3cb9b09afb1f6df1",
+    "scripts/check_teacher_p3_shell_random.sh": "000a6106abea6a8a94064dee20433d1e595d60bf388ab11651d549218a043ea3"
+  },
+  "manifest_sha256": "6c75c39f1b90888a2a4867adaddb3997b6cff1df88cbf4f800ed172928b31ff3",
+  "parent_manifest_sha256": "0235f1ef61963b969159d7038e578124ccbbc5248ac676f7884d3d775ee2bd61",
+  "frame_results": [
+    {
+      "frame": 18,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.02727587614791803,
+      "max_update_error_m": 3.469446951953614e-18,
+      "ledger_error_j": 4.253776300053945e-22,
+      "work_j": 3.32693934029382e-05,
+      "energy_balance_j": -2.4415085213341594e-15,
+      "initial_energy_j": 0.0002565700044674093,
+      "final_energy_j": 0.000289839397867906,
+      "max_nodal_displacement_m": 0.02539345615290436,
+      "sampled_max_strain_component": 1.9138711973232247e-05,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.0008566256475903899,
+        "strain_component_upper": 1.9655968188159254e-05,
+        "roundoff_margin": 7.339640083363493e-12,
+        "engineering_curvature_component_upper_inv_m": 0.25150024142583455,
+        "linearized_fibre_strain_component_upper": 0.0012771571753173322,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.9982874825123194
+      }
+    },
+    {
+      "frame": 19,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.027815590559679783,
+      "max_update_error_m": 3.469446951953614e-18,
+      "ledger_error_j": -4.7645603283054394e-21,
+      "work_j": 9.23600612545381e-05,
+      "energy_balance_j": 2.394413540545223e-14,
+      "initial_energy_j": 0.000289839397867906,
+      "final_energy_j": 0.00038219945914638823,
+      "max_nodal_displacement_m": 0.026592787984648956,
+      "sampled_max_strain_component": 2.0895299163825598e-05,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.0009355016077594179,
+        "strain_component_upper": 2.1442592516108513e-05,
+        "roundoff_margin": 8.050427810991214e-12,
+        "engineering_curvature_component_upper_inv_m": 0.2636905335824977,
+        "linearized_fibre_strain_component_upper": 0.0013398952604285971,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.9981298719477392
+      }
+    },
+    {
+      "frame": 20,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.0283004585223507,
+      "max_update_error_m": 3.469446951953614e-18,
+      "ledger_error_j": 5.823351512373315e-22,
+      "work_j": 0.00014226279828328498,
+      "energy_balance_j": -1.4519500550989466e-14,
+      "initial_energy_j": 0.00038219945914638823,
+      "final_energy_j": 0.0005244622574151537,
+      "max_nodal_displacement_m": 0.02852022984435364,
+      "sampled_max_strain_component": 2.4675213931679707e-05,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.0010692320322089732,
+        "strain_component_upper": 2.5357432601094603e-05,
+        "roundoff_margin": 9.26167190089277e-12,
+        "engineering_curvature_component_upper_inv_m": 0.2825756320777717,
+        "linearized_fibre_strain_component_upper": 0.001438235592989953,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.9978626791927208
+      }
+    },
+    {
+      "frame": 21,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.028880218719189568,
+      "max_update_error_m": 3.469446951953614e-18,
+      "ledger_error_j": -2.117582368135751e-21,
+      "work_j": 0.00018532485526618746,
+      "energy_balance_j": -1.129513128502195e-13,
+      "initial_energy_j": 0.0005244622574151537,
+      "final_energy_j": 0.0007097871125683899,
+      "max_nodal_displacement_m": 0.031126242066212995,
+      "sampled_max_strain_component": 3.0192769176484724e-05,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.0012693563456410426,
+        "strain_component_upper": 3.098882028306029e-05,
+        "roundoff_margin": 1.1049703727384071e-11,
+        "engineering_curvature_component_upper_inv_m": 0.3066150736529257,
+        "linearized_fibre_strain_component_upper": 0.0015640641885476887,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.9974628985742501
+      }
+    },
+    {
+      "frame": 22,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.03534355885665454,
+      "max_update_error_m": 6.938893903907228e-18,
+      "ledger_error_j": -7.199780051661553e-21,
+      "work_j": 0.00022377181284515343,
+      "energy_balance_j": -1.447024288518911e-14,
+      "initial_energy_j": 0.0007097871125683899,
+      "final_energy_j": 0.000933558925399073,
+      "max_nodal_displacement_m": 0.03438012614046236,
+      "sampled_max_strain_component": 3.6578547819243745e-05,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.0015521542436240173,
+        "strain_component_upper": 3.767667156242773e-05,
+        "roundoff_margin": 1.353386515482033e-11,
+        "engineering_curvature_component_upper_inv_m": 0.33499356790118273,
+        "linearized_fibre_strain_component_upper": 0.0017126445110683414,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.9968981006955481
+      }
+    },
+    {
+      "frame": 23,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.040003686267085684,
+      "max_update_error_m": 6.938893903907228e-18,
+      "ledger_error_j": -2.4775713707188285e-20,
+      "work_j": 0.00025944387024012165,
+      "energy_balance_j": 2.0341445851027485e-13,
+      "initial_energy_j": 0.000933558925399073,
+      "final_energy_j": 0.0011930027958426091,
+      "max_nodal_displacement_m": 0.038246911609366364,
+      "sampled_max_strain_component": 4.4500210898745785e-05,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.001938924725473631,
+        "strain_component_upper": 4.607872635154725e-05,
+        "roundoff_margin": 1.6870512820501886e-11,
+        "engineering_curvature_component_upper_inv_m": 0.3667792378506084,
+        "linearized_fibre_strain_component_upper": 0.0018799749156045893,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.9961259099781438
+      }
+    },
+    {
+      "frame": 24,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.044804989724769706,
+      "max_update_error_m": 6.938893903907228e-18,
+      "ledger_error_j": 2.4775713707188285e-20,
+      "work_j": 0.0002940584822896332,
+      "energy_balance_j": -9.08693940965033e-14,
+      "initial_energy_j": 0.0011930027958426091,
+      "final_energy_j": 0.001487061278041373,
+      "max_nodal_displacement_m": 0.04268902251062522,
+      "sampled_max_strain_component": 5.4821676161442845e-05,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.0024496337381513748,
+        "strain_component_upper": 5.7024280192815294e-05,
+        "roundoff_margin": 2.1295950276458768e-11,
+        "engineering_curvature_component_upper_inv_m": 0.40092462520578775,
+        "linearized_fibre_strain_component_upper": 0.002061647406221754,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.9951067332291484
+      }
+    },
+    {
+      "frame": 25,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.048523431191850507,
+      "max_update_error_m": 6.938893903907228e-18,
+      "ledger_error_j": -9.317362419797304e-21,
+      "work_j": 0.00025270493945943757,
+      "energy_balance_j": -3.385722056515228e-13,
+      "initial_energy_j": 0.001487061278041373,
+      "final_energy_j": 0.0017397662171622383,
+      "max_nodal_displacement_m": 0.04761400597657237,
+      "sampled_max_strain_component": 6.769099252157407e-05,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.0031136288130814986,
+        "strain_component_upper": 7.089016374711706e-05,
+        "roundoff_margin": 2.696626251589509e-11,
+        "engineering_curvature_component_upper_inv_m": 0.42870528260788626,
+        "linearized_fibre_strain_component_upper": 0.0022144165767865485,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.9937824370582226
+      }
+    },
+    {
+      "frame": 26,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.0516536477468276,
+      "max_update_error_m": 6.938893903907228e-18,
+      "ledger_error_j": 4.658681209898652e-21,
+      "work_j": 0.0002045467503040873,
+      "energy_balance_j": -1.3768381432457065e-13,
+      "initial_energy_j": 0.0017397662171622383,
+      "final_energy_j": 0.0019443129673286418,
+      "max_nodal_displacement_m": 0.05289334817741363,
+      "sampled_max_strain_component": 8.328330975393428e-05,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.003974367230680631,
+        "strain_component_upper": 8.650696028983334e-05,
+        "roundoff_margin": 3.430816692160756e-11,
+        "engineering_curvature_component_upper_inv_m": 0.4512378613065251,
+        "linearized_fibre_strain_component_upper": 0.002342696266822459,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.9920670611335229
+      }
+    },
+    {
+      "frame": 27,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.0555828625717064,
+      "max_update_error_m": 6.938893903907228e-18,
+      "ledger_error_j": 1.2705494208814505e-21,
+      "work_j": 0.00015869161886879936,
+      "energy_balance_j": 2.157688349043211e-13,
+      "initial_energy_j": 0.0019443129673286418,
+      "final_energy_j": 0.00210300458641321,
+      "max_nodal_displacement_m": 0.05841430473607873,
+      "sampled_max_strain_component": 0.00010079116097339025,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.005101276428202369,
+        "strain_component_upper": 0.00010338007702147842,
+        "roundoff_margin": 4.3958162306800845e-11,
+        "engineering_curvature_component_upper_inv_m": 0.46916826656773364,
+        "linearized_fibre_strain_component_upper": 0.0024492214098601464,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.9898234701647922
+      }
+    },
+    {
+      "frame": 28,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.056712986794862884,
+      "max_update_error_m": 1.3877787807814457e-17,
+      "ledger_error_j": 6.45862622281404e-21,
+      "work_j": 0.00011826173996629418,
+      "energy_balance_j": 2.172436834840035e-13,
+      "initial_energy_j": 0.00210300458641321,
+      "final_energy_j": 0.002221266326596748,
+      "max_nodal_displacement_m": 0.06392625282202803,
+      "sampled_max_strain_component": 0.00012046778204310993,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.00642138342162047,
+        "strain_component_upper": 0.00012204382375208405,
+        "roundoff_margin": 5.5538075520270985e-11,
+        "engineering_curvature_component_upper_inv_m": 0.48232902463657223,
+        "linearized_fibre_strain_component_upper": 0.002533688946934945,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.9871984673218065
+      }
+    },
+    {
+      "frame": 29,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.06797926555198046,
+      "max_update_error_m": 1.3877787807814457e-17,
+      "ledger_error_j": -1.0587911840678754e-21,
+      "work_j": 8.480727067951693e-05,
+      "energy_balance_j": -3.010220507359212e-13,
+      "initial_energy_j": 0.002221266326596748,
+      "final_energy_j": 0.0023060735969752427,
+      "max_nodal_displacement_m": 0.06918021807517785,
+      "sampled_max_strain_component": 0.00014226041640519327,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.007800358450465696,
+        "strain_component_upper": 0.0001434913306347246,
+        "roundoff_margin": 6.774379777638174e-11,
+        "engineering_curvature_component_upper_inv_m": 0.48882048163651043,
+        "linearized_fibre_strain_component_upper": 0.0025875937388172765,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.9844601286910244
+      }
+    },
+    {
+      "frame": 30,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.07464820553017391,
+      "max_update_error_m": 1.3877787807814457e-17,
+      "ledger_error_j": 1.2440796412797536e-21,
+      "work_j": 5.931104560945881e-05,
+      "energy_balance_j": -5.607674009114169e-14,
+      "initial_energy_j": 0.0023060735969752427,
+      "final_energy_j": 0.002365384642528625,
+      "max_nodal_displacement_m": 0.07397712825756665,
+      "sampled_max_strain_component": 0.000162589805814628,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.009141212908099092,
+        "strain_component_upper": 0.00016464359802533096,
+        "roundoff_margin": 7.979679543835835e-11,
+        "engineering_curvature_component_upper_inv_m": 0.49802580236201943,
+        "linearized_fibre_strain_component_upper": 0.0026547726098354284,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.981801135957233
+      }
+    },
+    {
+      "frame": 31,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.07961068942329727,
+      "max_update_error_m": 1.3877787807814457e-17,
+      "ledger_error_j": 2.302870825347629e-21,
+      "work_j": 3.9785965797894776e-05,
+      "energy_balance_j": 1.832697178976844e-13,
+      "initial_energy_j": 0.002365384642528625,
+      "final_energy_j": 0.0024051706085097893,
+      "max_nodal_displacement_m": 0.07811629951196389,
+      "sampled_max_strain_component": 0.00017907563071506427,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.010343041425501635,
+        "strain_component_upper": 0.0001824390059014211,
+        "roundoff_margin": 9.07629491164241e-11,
+        "engineering_curvature_component_upper_inv_m": 0.5133727866731618,
+        "linearized_fibre_strain_component_upper": 0.0027493029392672303,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.9794208956549263
+      }
+    },
+    {
+      "frame": 32,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.08426928134846129,
+      "max_update_error_m": 1.3877787807814457e-17,
+      "ledger_error_j": 1.402898318889935e-21,
+      "work_j": 2.4319608647553556e-05,
+      "energy_balance_j": 1.2508862484896344e-13,
+      "initial_energy_j": 0.0024051706085097893,
+      "final_energy_j": 0.0024294902172824315,
+      "max_nodal_displacement_m": 0.08142311707631063,
+      "sampled_max_strain_component": 0.00019275575651866994,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.011280853490615627,
+        "strain_component_upper": 0.00019683197143453084,
+        "roundoff_margin": 9.899728886329536e-11,
+        "engineering_curvature_component_upper_inv_m": 0.5293141880766743,
+        "linearized_fibre_strain_component_upper": 0.002843402911817902,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.9775655506742456
+      }
+    },
+    {
+      "frame": 33,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.08714484288920546,
+      "max_update_error_m": 1.3877787807814457e-17,
+      "ledger_error_j": -8.337980574534519e-22,
+      "work_j": 1.306723439374463e-05,
+      "energy_balance_j": -4.953971042085209e-14,
+      "initial_energy_j": 0.0024294902172824315,
+      "final_energy_j": 0.0024425574516266364,
+      "max_nodal_displacement_m": 0.08382628475757099,
+      "sampled_max_strain_component": 0.00020257129637391014,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.011860014444213914,
+        "strain_component_upper": 0.00020671593804774544,
+        "roundoff_margin": 1.0381559365518701e-10,
+        "engineering_curvature_component_upper_inv_m": 0.5461487941248839,
+        "linearized_fibre_strain_component_upper": 0.002937459908672165,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.9764206310541891
+      }
+    },
+    {
+      "frame": 34,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.08493069055248043,
+      "max_update_error_m": 1.3877787807814457e-17,
+      "ledger_error_j": 3.8712052667481695e-22,
+      "work_j": 5.782350790642483e-06,
+      "energy_balance_j": -3.7538222090803004e-14,
+      "initial_energy_j": 0.0024425574516266364,
+      "final_energy_j": 0.0024483398023797407,
+      "max_nodal_displacement_m": 0.085381203878742,
+      "sampled_max_strain_component": 0.00020774825709202194,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.012211091891301679,
+        "strain_component_upper": 0.00021137247661336928,
+        "roundoff_margin": 1.0668642094686875e-10,
+        "engineering_curvature_component_upper_inv_m": 0.5614239389118798,
+        "linearized_fibre_strain_component_upper": 0.003018408933107567,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.9757269269825745
+      }
+    },
+    {
+      "frame": 35,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.08954581160311845,
+      "max_update_error_m": 1.3877787807814457e-17,
+      "ledger_error_j": -1.0587911840678754e-22,
+      "work_j": 1.7310050224769408e-06,
+      "energy_balance_j": 1.0363131001696736e-14,
+      "initial_energy_j": 0.0024483398023797407,
+      "final_energy_j": 0.0024500708074125807,
+      "max_nodal_displacement_m": 0.08611662427805164,
+      "sampled_max_strain_component": 0.00020893198679694525,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.012337720387633604,
+        "strain_component_upper": 0.00021204944259248807,
+        "roundoff_margin": 1.0753091789859762e-10,
+        "engineering_curvature_component_upper_inv_m": 0.5736073424674241,
+        "linearized_fibre_strain_component_upper": 0.003078545771784915,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.9754767785690962
+      }
+    },
+    {
+      "frame": 36,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.09252584505377054,
+      "max_update_error_m": 1.3877787807814457e-17,
+      "ledger_error_j": -3.373345935567816e-24,
+      "work_j": 6.299308751192212e-08,
+      "energy_balance_j": 4.010181049506852e-15,
+      "initial_energy_j": 0.0024500708074125807,
+      "final_energy_j": 0.002450133800504103,
+      "max_nodal_displacement_m": 0.08619660515463545,
+      "sampled_max_strain_component": 0.0002075718546061811,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.012347354621490761,
+        "strain_component_upper": 0.00021050813272972075,
+        "roundoff_margin": 1.0753100413551599e-10,
+        "engineering_curvature_component_upper_inv_m": 0.5744902248621178,
+        "linearized_fibre_strain_component_upper": 0.003082568602142174,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.9754577479231674
+      }
+    },
+    {
+      "frame": 37,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.09474208025298402,
+      "max_update_error_m": 1.3877787807814457e-17,
+      "ledger_error_j": 5.86781247029804e-24,
+      "work_j": -1.0493674543812185e-07,
+      "energy_balance_j": 1.0779194479492743e-14,
+      "initial_energy_j": 0.002450133800504103,
+      "final_energy_j": 0.002450028863769444,
+      "max_nodal_displacement_m": 0.08608835065355046,
+      "sampled_max_strain_component": 0.00020414523487510827,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.012333084618934875,
+        "strain_component_upper": 0.00020681277953413758,
+        "roundoff_margin": 1.0662468652703184e-10,
+        "engineering_curvature_component_upper_inv_m": 0.5722334226678228,
+        "linearized_fibre_strain_component_upper": 0.003067885962321737,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.975485935738348
+      }
+    },
+    {
+      "frame": 38,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.0866442607632904,
+      "max_update_error_m": 1.3877787807814457e-17,
+      "ledger_error_j": -5.428372769879244e-24,
+      "work_j": 7.644345822348714e-08,
+      "energy_balance_j": -2.7808374906041825e-14,
+      "initial_energy_j": 0.002450028863769444,
+      "final_energy_j": 0.002450105307199859,
+      "max_nodal_displacement_m": 0.0853409498821584,
+      "sampled_max_strain_component": 0.00019924465812737324,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.012190979454237503,
+        "strain_component_upper": 0.00020201131747327316,
+        "roundoff_margin": 1.0472517431534316e-10,
+        "engineering_curvature_component_upper_inv_m": 0.561786149875026,
+        "linearized_fibre_strain_component_upper": 0.003010942066848403,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.9757666610715786
+      }
+    },
+    {
+      "frame": 39,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.09185038444568663,
+      "max_update_error_m": 1.3877787807814457e-17,
+      "ledger_error_j": 4.508134338414001e-23,
+      "work_j": 1.1112528280578672e-06,
+      "energy_balance_j": -8.483759713825447e-14,
+      "initial_energy_j": 0.002450105307199859,
+      "final_energy_j": 0.0024512165599430793,
+      "max_nodal_displacement_m": 0.0839162977031945,
+      "sampled_max_strain_component": 0.00019327288656900699,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.011965677291180577,
+        "strain_component_upper": 0.00019632515089631502,
+        "roundoff_margin": 1.025909580961777e-10,
+        "engineering_curvature_component_upper_inv_m": 0.5449212867096113,
+        "linearized_fibre_strain_component_upper": 0.0029209315844443717,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.9762118228506755
+      }
+    },
+    {
+      "frame": 40,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.0844585488434217,
+      "max_update_error_m": 1.3877787807814457e-17,
+      "ledger_error_j": 4.301339185275744e-23,
+      "work_j": 4.20317234690086e-06,
+      "energy_balance_j": 9.259317958126059e-14,
+      "initial_energy_j": 0.0024512165599430793,
+      "final_energy_j": 0.0024554197323825733,
+      "max_nodal_displacement_m": 0.08175337613471056,
+      "sampled_max_strain_component": 0.0001861053333906959,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.01150540763670162,
+        "strain_component_upper": 0.00018972757682278156,
+        "roundoff_margin": 9.882228063609602e-11,
+        "engineering_curvature_component_upper_inv_m": 0.5224976943757512,
+        "linearized_fibre_strain_component_upper": 0.0028022160487015378,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.9771215591314835
+      }
+    },
+    {
+      "frame": 41,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.08143132656969727,
+      "max_update_error_m": 1.3877787807814457e-17,
+      "ledger_error_j": -2.117582368135751e-22,
+      "work_j": 1.0100036246801697e-05,
+      "energy_balance_j": 1.1872594535680735e-13,
+      "initial_energy_j": 0.0024554197323825733,
+      "final_energy_j": 0.002465519768748101,
+      "max_nodal_displacement_m": 0.07877802585027305,
+      "sampled_max_strain_component": 0.00017838773085898652,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.010751737576862,
+        "strain_component_upper": 0.00018226021699673355,
+        "roundoff_margin": 9.298760761450423e-11,
+        "engineering_curvature_component_upper_inv_m": 0.49205073699582647,
+        "linearized_fibre_strain_component_upper": 0.002642513901975866,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.9786121247071977
+      }
+    },
+    {
+      "frame": 42,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.07531330320787069,
+      "max_update_error_m": 1.3877787807814457e-17,
+      "ledger_error_j": 5.955700410381799e-22,
+      "work_j": 1.94076806894043e-05,
+      "energy_balance_j": -2.1254244422863568e-13,
+      "initial_energy_j": 0.002465519768748101,
+      "final_energy_j": 0.002484927449224963,
+      "max_nodal_displacement_m": 0.0749726689974424,
+      "sampled_max_strain_component": 0.00016976278401026335,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.009754843452759204,
+        "strain_component_upper": 0.0001728226833765131,
+        "roundoff_margin": 8.530434884600244e-11,
+        "engineering_curvature_component_upper_inv_m": 0.4615863438748093,
+        "linearized_fibre_strain_component_upper": 0.0024807544027505594,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.9805854700652694
+      }
+    },
+    {
+      "frame": 43,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.07052859500131003,
+      "max_update_error_m": 1.3877787807814457e-17,
+      "ledger_error_j": 1.2970192004831474e-21,
+      "work_j": 3.324771350879729e-05,
+      "energy_balance_j": -5.18356592400152e-13,
+      "initial_energy_j": 0.002484927449224963,
+      "final_energy_j": 0.0025181751622154035,
+      "max_nodal_displacement_m": 0.07033122551648366,
+      "sampled_max_strain_component": 0.0001578087814005924,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.00860081078801239,
+        "strain_component_upper": 0.00016035682063666608,
+        "roundoff_margin": 7.593306135346333e-11,
+        "engineering_curvature_component_upper_inv_m": 0.43157255106113285,
+        "linearized_fibre_strain_component_upper": 0.0023182195759423306,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.9828723523701866
+      }
+    },
+    {
+      "frame": 44,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.05819501269583288,
+      "max_update_error_m": 1.3877787807814457e-17,
+      "ledger_error_j": 1.826414792517085e-21,
+      "work_j": 5.257366147998172e-05,
+      "energy_balance_j": -3.1021154117094337e-13,
+      "initial_energy_j": 0.0025181751622154035,
+      "final_energy_j": 0.0025707488233851737,
+      "max_nodal_displacement_m": 0.0648352183156569,
+      "sampled_max_strain_component": 0.00014324703426982222,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.007308431266425195,
+        "strain_component_upper": 0.00014528797228611706,
+        "roundoff_margin": 6.500281907387971e-11,
+        "engineering_curvature_component_upper_inv_m": 0.39451078215792895,
+        "linearized_fibre_strain_component_upper": 0.002117841883075762,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.9854365506347256
+      }
+    },
+    {
+      "frame": 45,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.05382431090978276,
+      "max_update_error_m": 6.938893903907228e-18,
+      "ledger_error_j": -4.605741650695258e-21,
+      "work_j": 7.809096978294727e-05,
+      "energy_balance_j": 3.6178492032490575e-13,
+      "initial_energy_j": 0.0025707488233851737,
+      "final_energy_j": 0.002648839793529906,
+      "max_nodal_displacement_m": 0.05854556338976549,
+      "sampled_max_strain_component": 0.00012503228690008417,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.005942420941727262,
+        "strain_component_upper": 0.00012639865380257716,
+        "roundoff_margin": 5.31643437876854e-11,
+        "engineering_curvature_component_upper_inv_m": 0.35082776926641335,
+        "linearized_fibre_strain_component_upper": 0.001880537500134644,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.9881504704831942
+      }
+    },
+    {
+      "frame": 46,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.05220907008540754,
+      "max_update_error_m": 6.938893903907228e-18,
+      "ledger_error_j": -4.605741650695258e-21,
+      "work_j": 0.00011101928988766426,
+      "energy_balance_j": -3.9611203938439335e-13,
+      "initial_energy_j": 0.002648839793529906,
+      "final_energy_j": 0.002759859083021458,
+      "max_nodal_displacement_m": 0.05160172617687286,
+      "sampled_max_strain_component": 0.00010322604036949734,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.004663010881185079,
+        "strain_component_upper": 0.00010397435880543799,
+        "roundoff_margin": 4.18881055951881e-11,
+        "engineering_curvature_component_upper_inv_m": 0.2999958925030544,
+        "linearized_fibre_strain_component_upper": 0.0016039538213207102,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.990695721908108
+      }
+    },
+    {
+      "frame": 47,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.04749968470300191,
+      "max_update_error_m": 6.938893903907228e-18,
+      "ledger_error_j": -2.6469779601696886e-21,
+      "work_j": 0.00015256854379749283,
+      "energy_balance_j": -1.0483164331819719e-12,
+      "initial_energy_j": 0.002759859083021458,
+      "final_energy_j": 0.0029124276257706345,
+      "max_nodal_displacement_m": 0.04404082835218035,
+      "sampled_max_strain_component": 8.02998943910671e-05,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.0034830462924326983,
+        "strain_component_upper": 8.06705089178943e-05,
+        "roundoff_margin": 3.1437278793505866e-11,
+        "engineering_curvature_component_upper_inv_m": 0.2416524406854148,
+        "linearized_fibre_strain_component_upper": 0.0012889327123449684,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.9930460390266098
+      }
+    },
+    {
+      "frame": 48,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.04080387843538904,
+      "max_update_error_m": 6.938893903907228e-18,
+      "ledger_error_j": 6.45862622281404e-21,
+      "work_j": 0.00020136429140732713,
+      "energy_balance_j": -6.437217902352947e-13,
+      "initial_energy_j": 0.0029124276257706345,
+      "final_energy_j": 0.00311379191653424,
+      "max_nodal_displacement_m": 0.03590648830479701,
+      "sampled_max_strain_component": 5.9622487255883705e-05,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.0024417850823880544,
+        "strain_component_upper": 5.981467125699109e-05,
+        "roundoff_margin": 2.19868065539986e-11,
+        "engineering_curvature_component_upper_inv_m": 0.17677302075663553,
+        "linearized_fibre_strain_component_upper": 0.0009436797750401688,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.9951223921496125
+      }
+    },
+    {
+      "frame": 49,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.04524994547615957,
+      "max_update_error_m": 3.469446951953614e-18,
+      "ledger_error_j": 5.6645328347631335e-21,
+      "work_j": 6.926628559582147e-05,
+      "energy_balance_j": 8.491063156143202e-13,
+      "initial_energy_j": 0.00311379191653424,
+      "final_energy_j": 0.0031830582029791677,
+      "max_nodal_displacement_m": 0.027232558660323928,
+      "sampled_max_strain_component": 4.0826778038738354e-05,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.0015390206966621712,
+        "strain_component_upper": 4.101733114435434e-05,
+        "roundoff_margin": 1.3831701658378712e-11,
+        "engineering_curvature_component_upper_inv_m": 0.13454758586181179,
+        "linearized_fibre_strain_component_upper": 0.0007137552604534132,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.9969243271913805
+      }
+    },
+    {
+      "frame": 50,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.05914344342567971,
+      "max_update_error_m": 3.469446951953614e-18,
+      "ledger_error_j": 4.301339185275744e-23,
+      "work_j": 4.818906921521001e-06,
+      "energy_balance_j": 1.1308095589717664e-12,
+      "initial_energy_j": 0.0031830582029791677,
+      "final_energy_j": 0.003187877111031498,
+      "max_nodal_displacement_m": 0.018057560768107488,
+      "sampled_max_strain_component": 2.391222604603005e-05,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.0008021607939375625,
+        "strain_component_upper": 2.4019545410813635e-05,
+        "roundoff_margin": 7.305877902128364e-12,
+        "engineering_curvature_component_upper_inv_m": 0.09372907516414924,
+        "linearized_fibre_strain_component_upper": 0.0004926649212315599,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.9983963218740641
+      }
+    },
+    {
+      "frame": 51,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.06155528192599165,
+      "max_update_error_m": 1.734723475976807e-18,
+      "ledger_error_j": -6.670384459627615e-21,
+      "work_j": -7.39227355347817e-05,
+      "energy_balance_j": -1.851207074294601e-12,
+      "initial_energy_j": 0.003187877111031498,
+      "final_energy_j": 0.0031139543736455094,
+      "max_nodal_displacement_m": 0.008355981510433026,
+      "sampled_max_strain_component": 1.023632654528761e-05,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.0002497662603833701,
+        "strain_component_upper": 1.0352594214445634e-05,
+        "roundoff_margin": 2.4019664718255333e-12,
+        "engineering_curvature_component_upper_inv_m": 0.05811600952649711,
+        "linearized_fibre_strain_component_upper": 0.0003009326418469312,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.999500529862418
+      }
+    },
+    {
+      "frame": 52,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.06130420848216949,
+      "max_update_error_m": 1.734723475976807e-18,
+      "ledger_error_j": -1.6940658945086007e-21,
+      "work_j": -0.00019295613192411385,
+      "energy_balance_j": -9.890108734555243e-13,
+      "initial_energy_j": 0.0031139543736455094,
+      "final_energy_j": 0.0029209982407323847,
+      "max_nodal_displacement_m": 0.01254477114913895,
+      "sampled_max_strain_component": 5.143114791161807e-06,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.000268572989980582,
+        "strain_component_upper": 5.202336801954095e-06,
+        "roundoff_margin": 2.268904237568425e-12,
+        "engineering_curvature_component_upper_inv_m": 0.08412822796626947,
+        "linearized_fibre_strain_component_upper": 0.0004258434766333014,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.9994629261514897
+      }
+    },
+    {
+      "frame": 53,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.05369264274896256,
+      "max_update_error_m": 3.469446951953614e-18,
+      "ledger_error_j": 1.9481757786848908e-20,
+      "work_j": -0.0003265781909802885,
+      "energy_balance_j": 1.781593462201489e-12,
+      "initial_energy_j": 0.0029209982407323847,
+      "final_energy_j": 0.0025944200515336897,
+      "max_nodal_displacement_m": 0.021901728418347997,
+      "sampled_max_strain_component": 1.737564046078166e-05,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.0009406819549177378,
+        "strain_component_upper": 1.744494695636006e-05,
+        "roundoff_margin": 7.7740394639428e-12,
+        "engineering_curvature_component_upper_inv_m": 0.10915817957476237,
+        "linearized_fibre_strain_component_upper": 0.0005632358448301719,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.998119520972705
+      }
+    },
+    {
+      "frame": 54,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.05239766879161621,
+      "max_update_error_m": 3.469446951953614e-18,
+      "ledger_error_j": 1.7575933655526732e-20,
+      "work_j": -0.00043907633133922027,
+      "energy_balance_j": 1.5752818253274363e-12,
+      "initial_energy_j": 0.0025944200515336897,
+      "final_energy_j": 0.0021553437217697513,
+      "max_nodal_displacement_m": 0.030038287747001714,
+      "sampled_max_strain_component": 3.699458711103887e-05,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.0017875673952071883,
+        "strain_component_upper": 3.712141589962603e-05,
+        "roundoff_margin": 1.5354056023439115e-11,
+        "engineering_curvature_component_upper_inv_m": 0.1476693816057151,
+        "linearized_fibre_strain_component_upper": 0.0007754683239282016,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.9964280606067781
+      }
+    },
+    {
+      "frame": 55,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.05811640769857154,
+      "max_update_error_m": 6.938893903907228e-18,
+      "ledger_error_j": -4.235164736271502e-22,
+      "work_j": -0.0005003246352288698,
+      "energy_balance_j": -3.689615882885081e-13,
+      "initial_energy_j": 0.0021553437217697513,
+      "final_energy_j": 0.0016550190861719198,
+      "max_nodal_displacement_m": 0.036904768666479265,
+      "sampled_max_strain_component": 5.769876795080897e-05,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.002605158257070724,
+        "strain_component_upper": 5.7912787878591264e-05,
+        "roundoff_margin": 2.3220316824470798e-11,
+        "engineering_curvature_component_upper_inv_m": 0.19041225109094448,
+        "linearized_fibre_strain_component_upper": 0.0010099740433333136,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.9947964703354029
+      }
+    },
+    {
+      "frame": 56,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.07504799822711017,
+      "max_update_error_m": 6.938893903907228e-18,
+      "ledger_error_j": 1.9058241313221758e-20,
+      "work_j": -0.0004809510520531347,
+      "energy_balance_j": -4.779759135992297e-13,
+      "initial_energy_j": 0.0016550190861719198,
+      "final_energy_j": 0.0011740680336408092,
+      "max_nodal_displacement_m": 0.04211177715362373,
+      "sampled_max_strain_component": 7.69203986253908e-05,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.0032312920386428834,
+        "strain_component_upper": 7.727678251007624e-05,
+        "roundoff_margin": 2.946082715875453e-11,
+        "engineering_curvature_component_upper_inv_m": 0.22436233750146917,
+        "linearized_fibre_strain_component_upper": 0.0011990884700174222,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.9935478571709532
+      }
+    },
+    {
+      "frame": 57,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.10036673640319624,
+      "max_update_error_m": 6.938893903907228e-18,
+      "ledger_error_j": -5.1880768019325896e-21,
+      "work_j": -0.0003559005020789649,
+      "energy_balance_j": 1.5510347431885635e-13,
+      "initial_energy_j": 0.0011740680336408092,
+      "final_energy_j": 0.0008181675317169478,
+      "max_nodal_displacement_m": 0.04543036602543514,
+      "sampled_max_strain_component": 9.178774221862973e-05,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.0036788562125370803,
+        "strain_component_upper": 9.219277406890426e-05,
+        "roundoff_margin": 3.3379403584937736e-11,
+        "engineering_curvature_component_upper_inv_m": 0.2372803319974931,
+        "linearized_fibre_strain_component_upper": 0.0012785397356897584,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.9926558215579584
+      }
+    },
+    {
+      "frame": 58,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.11292323455924355,
+      "max_update_error_m": 6.938893903907228e-18,
+      "ledger_error_j": -5.882908516477133e-21,
+      "work_j": -0.00011480671394420512,
+      "energy_balance_j": 1.1177344234659015e-14,
+      "initial_energy_j": 0.0008181675317169478,
+      "final_energy_j": 0.00070336081778392,
+      "max_nodal_displacement_m": 0.046875725780331993,
+      "sampled_max_strain_component": 0.00010194594734058704,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.004051851407193769,
+        "strain_component_upper": 0.00010230618096633655,
+        "roundoff_margin": 3.6967027627198506e-11,
+        "engineering_curvature_component_upper_inv_m": 0.23733250846476536,
+        "linearized_fibre_strain_component_upper": 0.0012790840905837772,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.9919127146854384
+      }
+    },
+    {
+      "frame": 59,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.12928467563163953,
+      "max_update_error_m": 6.938893903907228e-18,
+      "ledger_error_j": -7.596826745687006e-21,
+      "work_j": 0.0002355087860166638,
+      "energy_balance_j": 5.381936975813819e-14,
+      "initial_energy_j": 0.00070336081778392,
+      "final_energy_j": 0.0009388696038544032,
+      "max_nodal_displacement_m": 0.04692725704243048,
+      "sampled_max_strain_component": 0.00010851901733976987,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.004264460972284801,
+        "strain_component_upper": 0.00010948750615424518,
+        "roundoff_margin": 3.9013417448204556e-11,
+        "engineering_curvature_component_upper_inv_m": 0.23370602958823233,
+        "linearized_fibre_strain_component_upper": 0.0012738464983500781,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.9914892636828144
+      }
+    },
+    {
+      "frame": 60,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.14383521646366124,
+      "max_update_error_m": 6.938893903907228e-18,
+      "ledger_error_j": -1.8634724839594607e-20,
+      "work_j": 0.0006781625111978094,
+      "energy_balance_j": -7.053723738052265e-13,
+      "initial_energy_j": 0.0009388696038544032,
+      "final_energy_j": 0.0016170321143468402,
+      "max_nodal_displacement_m": 0.046280490603027,
+      "sampled_max_strain_component": 0.00011333633462706771,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.0042825132250723435,
+        "strain_component_upper": 0.00011373019247245147,
+        "roundoff_margin": 3.923356410446671e-11,
+        "engineering_curvature_component_upper_inv_m": 0.22762032383854758,
+        "linearized_fibre_strain_component_upper": 0.0012482166473335226,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.9914533134693783
+      }
+    },
+    {
+      "frame": 61,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.15826227943146784,
+      "max_update_error_m": 6.938893903907228e-18,
+      "ledger_error_j": -5.336307567702092e-20,
+      "work_j": 0.0006419748465991861,
+      "energy_balance_j": -8.081264073517996e-13,
+      "initial_energy_j": 0.0016170321143468402,
+      "final_energy_j": 0.0022590069601378998,
+      "max_nodal_displacement_m": 0.043455024325422656,
+      "sampled_max_strain_component": 0.00011326914220455286,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.0042449971287457115,
+        "strain_component_upper": 0.00011366456848131621,
+        "roundoff_margin": 3.855753137066314e-11,
+        "engineering_curvature_component_upper_inv_m": 0.23066139248622092,
+        "linearized_fibre_strain_component_upper": 0.0012645574576659608,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.9915280257431316
+      }
+    },
+    {
+      "frame": 62,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.16704688756955055,
+      "max_update_error_m": 6.938893903907228e-18,
+      "ledger_error_j": 1.588186776101813e-20,
+      "work_j": 0.00046627331737473284,
+      "energy_balance_j": 2.730822605102751e-12,
+      "initial_energy_j": 0.0022590069601378998,
+      "final_energy_j": 0.0027252802802434552,
+      "max_nodal_displacement_m": 0.03844673656276326,
+      "sampled_max_strain_component": 0.0001088042323670324,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.003892107377463001,
+        "strain_component_upper": 0.00010931916718274219,
+        "roundoff_margin": 3.514228452326642e-11,
+        "engineering_curvature_component_upper_inv_m": 0.22277145770258636,
+        "linearized_fibre_strain_component_upper": 0.001223091705219359,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.9922309337449117
+      }
+    },
+    {
+      "frame": 63,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.17908008854234078,
+      "max_update_error_m": 6.938893903907228e-18,
+      "ledger_error_j": 4.0234064994579266e-21,
+      "work_j": 0.0002895969972394119,
+      "energy_balance_j": 9.188182401217022e-13,
+      "initial_energy_j": 0.0027252802802434552,
+      "final_energy_j": 0.0030148772784016854,
+      "max_nodal_displacement_m": 0.03147054470551643,
+      "sampled_max_strain_component": 9.242040251378203e-05,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.0031604721052401726,
+        "strain_component_upper": 9.320172074626454e-05,
+        "roundoff_margin": 2.8771812046995307e-11,
+        "engineering_curvature_component_upper_inv_m": 0.2000701031747444,
+        "linearized_fibre_strain_component_upper": 0.0010935172385926764,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.9936890443734476
+      }
+    },
+    {
+      "frame": 64,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.159879597407774,
+      "max_update_error_m": 3.469446951953614e-18,
+      "ledger_error_j": 4.235164736271502e-22,
+      "work_j": 0.00015616104025649642,
+      "energy_balance_j": -7.2518200216408976e-12,
+      "initial_energy_j": 0.0030148772784016854,
+      "final_energy_j": 0.003171038311406362,
+      "max_nodal_displacement_m": 0.022388359702436862,
+      "sampled_max_strain_component": 6.659423121735397e-05,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.0017765585582379159,
+        "strain_component_upper": 6.730888454032448e-05,
+        "roundoff_margin": 1.658340777374335e-11,
+        "engineering_curvature_component_upper_inv_m": 0.1688630811203251,
+        "linearized_fibre_strain_component_upper": 0.00091162429014195,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.9964500390438351
+      }
+    },
+    {
+      "frame": 65,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.15718201429252934,
+      "max_update_error_m": 1.734723475976807e-18,
+      "ledger_error_j": -6.3527471044072525e-21,
+      "work_j": 7.623538013109638e-05,
+      "energy_balance_j": -5.6595483986577645e-12,
+      "initial_energy_j": 0.003171038311406362,
+      "final_energy_j": 0.0032472736858779098,
+      "max_nodal_displacement_m": 0.011875193064317648,
+      "sampled_max_strain_component": 3.345479451533073e-05,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.0005263866883803891,
+        "strain_component_upper": 3.372808841953632e-05,
+        "roundoff_margin": 5.286802757461094e-12,
+        "engineering_curvature_component_upper_inv_m": 0.12960499047833807,
+        "linearized_fibre_strain_component_upper": 0.0006814734749747389,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.998947503706185
+      }
+    },
+    {
+      "frame": 66,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.1544342133524324,
+      "max_update_error_m": 1.734723475976807e-18,
+      "ledger_error_j": 3.282252670610414e-21,
+      "work_j": 3.585192133766256e-05,
+      "energy_balance_j": 7.82790000703984e-12,
+      "initial_energy_j": 0.0032472736858779098,
+      "final_energy_j": 0.0032831256150434723,
+      "max_nodal_displacement_m": 0.011962694566013357,
+      "sampled_max_strain_component": 1.0382027470168254e-05,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.000341417896020341,
+        "strain_component_upper": 1.0749596241699244e-05,
+        "roundoff_margin": 3.377224166189012e-12,
+        "engineering_curvature_component_upper_inv_m": 0.07378342330210402,
+        "linearized_fibre_strain_component_upper": 0.0003746284989902976,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.999317280774139
+      }
+    },
+    {
+      "frame": 67,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.16940859677411207,
+      "max_update_error_m": 3.469446951953614e-18,
+      "ledger_error_j": 7.940933880509066e-23,
+      "work_j": 6.720303135023941e-06,
+      "energy_balance_j": 6.029273509988815e-12,
+      "initial_energy_j": 0.0032831256150434723,
+      "final_energy_j": 0.00328984592420777,
+      "max_nodal_displacement_m": 0.022471897128177355,
+      "sampled_max_strain_component": 1.9557176477835725e-05,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.0013415633505697278,
+        "strain_component_upper": 2.002847172107632e-05,
+        "roundoff_margin": 1.1499321456864523e-11,
+        "engineering_curvature_component_upper_inv_m": 0.11624088702981315,
+        "linearized_fibre_strain_component_upper": 0.0006012329068701421,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.9973186730910842
+      }
+    },
+    {
+      "frame": 68,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.1637745574832934,
+      "max_update_error_m": 6.938893903907228e-18,
+      "ledger_error_j": 8.867376166568457e-22,
+      "work_j": -2.0218621369426963e-05,
+      "energy_balance_j": -4.095672688332815e-12,
+      "initial_energy_j": 0.00328984592420777,
+      "final_energy_j": 0.00326962729874267,
+      "max_nodal_displacement_m": 0.031744892129199544,
+      "sampled_max_strain_component": 5.2843124284995824e-05,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.0024894913787775986,
+        "strain_component_upper": 5.3258151511165346e-05,
+        "roundoff_margin": 2.1840224223520146e-11,
+        "engineering_curvature_component_upper_inv_m": 0.14423820484941227,
+        "linearized_fibre_strain_component_upper": 0.0007744491757582266,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.9950272148097697
+      }
+    },
+    {
+      "frame": 69,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.17502270873949627,
+      "max_update_error_m": 6.938893903907228e-18,
+      "ledger_error_j": 2.514629062161204e-21,
+      "work_j": -4.059947999202335e-05,
+      "energy_balance_j": -3.782616895294461e-12,
+      "initial_energy_j": 0.00326962729874267,
+      "final_energy_j": 0.00322902781496803,
+      "max_nodal_displacement_m": 0.040346179241255824,
+      "sampled_max_strain_component": 8.54327357835416e-05,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.0032128816073739162,
+        "strain_component_upper": 8.620811487737496e-05,
+        "roundoff_margin": 2.989831910939232e-11,
+        "engineering_curvature_component_upper_inv_m": 0.1890296436224111,
+        "linearized_fibre_strain_component_upper": 0.0010313563329894305,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.9935845593934752
+      }
+    },
+    {
+      "frame": 70,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.17550101624157133,
+      "max_update_error_m": 6.938893903907228e-18,
+      "ledger_error_j": 5.849821291975012e-21,
+      "work_j": -6.350141907111241e-05,
+      "energy_balance_j": 2.872152461181484e-12,
+      "initial_energy_j": 0.00322902781496803,
+      "final_energy_j": 0.00316552639876907,
+      "max_nodal_displacement_m": 0.04820875511361788,
+      "sampled_max_strain_component": 0.00010558803440907649,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.004002282090760574,
+        "strain_component_upper": 0.00010660942645175647,
+        "roundoff_margin": 3.724394408904726e-11,
+        "engineering_curvature_component_upper_inv_m": 0.2940396600988121,
+        "linearized_fibre_strain_component_upper": 0.001576807726945817,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.9920114540804128
+      }
+    },
+    {
+      "frame": 71,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.16502404494911818,
+      "max_update_error_m": 6.938893903907228e-18,
+      "ledger_error_j": -6.1409888675936775e-21,
+      "work_j": -9.086817989256375e-05,
+      "energy_balance_j": 3.068342664543677e-12,
+      "initial_energy_j": 0.00316552639876907,
+      "final_energy_j": 0.003074658221944849,
+      "max_nodal_displacement_m": 0.05512464381901562,
+      "sampled_max_strain_component": 0.00012141224177719678,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.004649718704974917,
+        "strain_component_upper": 0.00012217557536844004,
+        "roundoff_margin": 4.35261969838905e-11,
+        "engineering_curvature_component_upper_inv_m": 0.4215655719388589,
+        "linearized_fibre_strain_component_upper": 0.0022297170247985586,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.9907221824740856
+      }
+    },
+    {
+      "frame": 72,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.17082024034218407,
+      "max_update_error_m": 6.938893903907228e-18,
+      "ledger_error_j": 6.6174449004242214e-21,
+      "work_j": -0.00011848596487473522,
+      "energy_balance_j": -1.2099863278247241e-12,
+      "initial_energy_j": 0.003074658221944849,
+      "final_energy_j": 0.0029561722558601273,
+      "max_nodal_displacement_m": 0.06132488979283558,
+      "sampled_max_strain_component": 0.00014509729591960507,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.0053256856659912085,
+        "strain_component_upper": 0.00014736956884484794,
+        "roundoff_margin": 4.9109573818491964e-11,
+        "engineering_curvature_component_upper_inv_m": 0.49481259923179766,
+        "linearized_fibre_strain_component_upper": 0.002619665385008598,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.9893769915958305
+      }
+    },
+    {
+      "frame": 73,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.16498549940775517,
+      "max_update_error_m": 1.3877787807814457e-17,
+      "ledger_error_j": -1.852884572118782e-21,
+      "work_j": -8.736671184411594e-05,
+      "energy_balance_j": -3.5668412784884986e-12,
+      "initial_energy_j": 0.0029561722558601273,
+      "final_energy_j": 0.00286880554044917,
+      "max_nodal_displacement_m": 0.06714445109362933,
+      "sampled_max_strain_component": 0.00016139352992117217,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.006270943414326179,
+        "strain_component_upper": 0.0001642260820441552,
+        "roundoff_margin": 5.618596216721059e-11,
+        "engineering_curvature_component_upper_inv_m": 0.5349134490782373,
+        "linearized_fibre_strain_component_upper": 0.0028378835702890593,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.9874974379026532
+      }
+    },
+    {
+      "frame": 74,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.16323195057501022,
+      "max_update_error_m": 1.3877787807814457e-17,
+      "ledger_error_j": -5.770411953169921e-21,
+      "work_j": -6.632129470166505e-05,
+      "energy_balance_j": -1.6485920372743129e-12,
+      "initial_energy_j": 0.00286880554044917,
+      "final_energy_j": 0.002802484244098913,
+      "max_nodal_displacement_m": 0.07302983788120555,
+      "sampled_max_strain_component": 0.00016388181830018222,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.008064503498814645,
+        "strain_component_upper": 0.0001656846448618829,
+        "roundoff_margin": 7.00092664140506e-11,
+        "engineering_curvature_component_upper_inv_m": 0.5468129621704012,
+        "linearized_fibre_strain_component_upper": 0.0028994982560543088,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.9839360292190532
+      }
+    },
+    {
+      "frame": 75,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.18100195319221646,
+      "max_update_error_m": 1.3877787807814457e-17,
+      "ledger_error_j": -1.7470054537119944e-21,
+      "work_j": -4.959943054983143e-05,
+      "energy_balance_j": 4.844505551504336e-13,
+      "initial_energy_j": 0.002802484244098913,
+      "final_energy_j": 0.002752884814033532,
+      "max_nodal_displacement_m": 0.07885360910628397,
+      "sampled_max_strain_component": 0.00016359836469037603,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.01046044263796651,
+        "strain_component_upper": 0.0001653841419225083,
+        "roundoff_margin": 8.72527698286801e-11,
+        "engineering_curvature_component_upper_inv_m": 0.5522348075790209,
+        "linearized_fibre_strain_component_upper": 0.0029185010372970686,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.9791885355842491
+      }
+    },
+    {
+      "frame": 76,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.1668380865173488,
+      "max_update_error_m": 1.3877787807814457e-17,
+      "ledger_error_j": 2.7925617479790214e-21,
+      "work_j": -3.1229475631645027e-05,
+      "energy_balance_j": 1.7629227449864368e-12,
+      "initial_energy_j": 0.002752884814033532,
+      "final_energy_j": 0.00272165534016481,
+      "max_nodal_displacement_m": 0.0843751782920402,
+      "sampled_max_strain_component": 0.0001622997616275157,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.012815020657352209,
+        "strain_component_upper": 0.0001651703129365998,
+        "roundoff_margin": 1.0646904227029861e-10,
+        "engineering_curvature_component_upper_inv_m": 0.5339779496336898,
+        "linearized_fibre_strain_component_upper": 0.0028241370102459573,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.974534183439744
+      }
+    },
+    {
+      "frame": 77,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.17612169045980497,
+      "max_update_error_m": 1.3877787807814457e-17,
+      "ledger_error_j": -2.9778502051908996e-22,
+      "work_j": -1.4806495041040716e-05,
+      "energy_balance_j": -8.959630079414451e-13,
+      "initial_energy_j": 0.00272165534016481,
+      "final_energy_j": 0.002706848844227806,
+      "max_nodal_displacement_m": 0.08833747328584135,
+      "sampled_max_strain_component": 0.00019786847631175775,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.014823070928912446,
+        "strain_component_upper": 0.00019913865555736606,
+        "roundoff_margin": 1.2285655055201264e-10,
+        "engineering_curvature_component_upper_inv_m": 0.4903710450539532,
+        "linearized_fibre_strain_component_upper": 0.00262639715593481,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.9705735815739387
+      }
+    },
+    {
+      "frame": 78,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.17518059452668538,
+      "max_update_error_m": 1.3877787807814457e-17,
+      "ledger_error_j": 5.624828165360588e-23,
+      "work_j": -4.751249286907384e-06,
+      "energy_balance_j": -5.045473850682069e-13,
+      "initial_energy_j": 0.002706848844227806,
+      "final_energy_j": 0.0027020975944363514,
+      "max_nodal_displacement_m": 0.09027098548958248,
+      "sampled_max_strain_component": 0.00021874385945641617,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.015812531716422416,
+        "strain_component_upper": 0.00021993585208635795,
+        "roundoff_margin": 1.3214607946572256e-10,
+        "engineering_curvature_component_upper_inv_m": 0.48984045746008126,
+        "linearized_fibre_strain_component_upper": 0.002669138139386764,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.9686249727264381
+      }
+    },
+    {
+      "frame": 79,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.17689147748198292,
+      "max_update_error_m": 1.3877787807814457e-17,
+      "ledger_error_j": -8.437242248040882e-23,
+      "work_j": -1.0084114269303955e-06,
+      "energy_balance_j": 1.5736399093423573e-13,
+      "initial_energy_j": 0.0027020975944363514,
+      "final_energy_j": 0.002701089183166785,
+      "max_nodal_displacement_m": 0.09096294620703986,
+      "sampled_max_strain_component": 0.0002270317396392274,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.015830185141989795,
+        "strain_component_upper": 0.00022810217468082172,
+        "roundoff_margin": 1.3380521122912873e-10,
+        "engineering_curvature_component_upper_inv_m": 0.518147104552514,
+        "linearized_fibre_strain_component_upper": 0.0028167961982586997,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.9685902244776502
+      }
+    },
+    {
+      "frame": 80,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.17172812723316846,
+      "max_update_error_m": 1.3877787807814457e-17,
+      "ledger_error_j": 1.1580528575742387e-23,
+      "work_j": -5.506112395490652e-07,
+      "energy_balance_j": 1.006242267660208e-12,
+      "initial_energy_j": 0.002701089183166785,
+      "final_energy_j": 0.002700538572933478,
+      "max_nodal_displacement_m": 0.09103090507029798,
+      "sampled_max_strain_component": 0.0002351383942738039,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.015269876630895367,
+        "strain_component_upper": 0.00023836951891690835,
+        "roundoff_margin": 1.3277204991634004e-10,
+        "engineering_curvature_component_upper_inv_m": 0.5625407398877391,
+        "linearized_fibre_strain_component_upper": 0.0030462879054850493,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.9696934158705319
+      }
+    },
+    {
+      "frame": 81,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.17287893454689887,
+      "max_update_error_m": 1.3877787807814457e-17,
+      "ledger_error_j": 7.031035206700735e-24,
+      "work_j": -8.17059686533681e-07,
+      "energy_balance_j": 6.979247997635288e-13,
+      "initial_energy_j": 0.002700538572933478,
+      "final_energy_j": 0.0026997215139448693,
+      "max_nodal_displacement_m": 0.09065311913871954,
+      "sampled_max_strain_component": 0.0002501996700012832,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.014160918162524955,
+        "strain_component_upper": 0.00025366095473210046,
+        "roundoff_margin": 1.233268521008779e-10,
+        "engineering_curvature_component_upper_inv_m": 0.6086835535696988,
+        "linearized_fibre_strain_component_upper": 0.0032936161404657446,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.9718786952781558
+      }
+    },
+    {
+      "frame": 82,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.17312745788072267,
+      "max_update_error_m": 1.3877787807814457e-17,
+      "ledger_error_j": -7.113753267956038e-23,
+      "work_j": -1.5297536524227338e-06,
+      "energy_balance_j": -6.123751350417774e-13,
+      "initial_energy_j": 0.0026997215139448693,
+      "final_energy_j": 0.0026981917596800714,
+      "max_nodal_displacement_m": 0.08913693062958336,
+      "sampled_max_strain_component": 0.0002588513219849986,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.012825769762274548,
+        "strain_component_upper": 0.00026127867472463206,
+        "roundoff_margin": 1.1430157564255685e-10,
+        "engineering_curvature_component_upper_inv_m": 0.6514320872880096,
+        "linearized_fibre_strain_component_upper": 0.003516667365774492,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.9745129608454457
+      }
+    },
+    {
+      "frame": 83,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.17759968359230713,
+      "max_update_error_m": 1.3877787807814457e-17,
+      "ledger_error_j": 4.963083675318166e-24,
+      "work_j": -3.2395238540477256e-06,
+      "energy_balance_j": 1.1254493481276753e-13,
+      "initial_energy_j": 0.0026981917596800714,
+      "final_energy_j": 0.0026949522359385686,
+      "max_nodal_displacement_m": 0.08673760658385485,
+      "sampled_max_strain_component": 0.0002549562164723129,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.011494555203075857,
+        "strain_component_upper": 0.0002577473213436964,
+        "roundoff_margin": 1.0426031474138488e-10,
+        "engineering_curvature_component_upper_inv_m": 0.651335720543307,
+        "linearized_fibre_strain_component_upper": 0.003513183657824225,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.9771430143931649
+      }
+    },
+    {
+      "frame": 84,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.1774645416863513,
+      "max_update_error_m": 1.3877787807814457e-17,
+      "ledger_error_j": -1.885971796620903e-22,
+      "work_j": -6.739150930120388e-06,
+      "energy_balance_j": -8.808966534435271e-14,
+      "initial_energy_j": 0.0026949522359385686,
+      "final_energy_j": 0.0026882130849203586,
+      "max_nodal_displacement_m": 0.08390907646999944,
+      "sampled_max_strain_component": 0.00023406063173336822,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.010540560527842222,
+        "strain_component_upper": 0.0002363505728643303,
+        "roundoff_margin": 9.428615693004136e-11,
+        "engineering_curvature_component_upper_inv_m": 0.630486462343095,
+        "linearized_fibre_strain_component_upper": 0.0033887828845798056,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.9790299823605566
+      }
+    },
+    {
+      "frame": 85,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.16980159250577187,
+      "max_update_error_m": 1.3877787807814457e-17,
+      "ledger_error_j": -7.146840492458159e-22,
+      "work_j": -1.3922511578142385e-05,
+      "energy_balance_j": 2.1387463574433462e-13,
+      "initial_energy_j": 0.0026882130849203586,
+      "final_energy_j": 0.002674290573556091,
+      "max_nodal_displacement_m": 0.08087084205972195,
+      "sampled_max_strain_component": 0.00018932945613892027,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.010081423656680568,
+        "strain_component_upper": 0.00019125290817150354,
+        "roundoff_margin": 8.60530995431734e-11,
+        "engineering_curvature_component_upper_inv_m": 0.5850854288698062,
+        "linearized_fibre_strain_component_upper": 0.0031166800525205345,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.9799387877895844
+      }
+    },
+    {
+      "frame": 86,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.18524698709778425,
+      "max_update_error_m": 1.3877787807814457e-17,
+      "ledger_error_j": -2.6469779601696886e-22,
+      "work_j": -2.376427913102997e-05,
+      "energy_balance_j": -4.809710197184408e-13,
+      "initial_energy_j": 0.002674290573556091,
+      "final_energy_j": 0.00265052629394409,
+      "max_nodal_displacement_m": 0.07770745600665123,
+      "sampled_max_strain_component": 0.0001506631863932295,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.010295513964984895,
+        "strain_component_upper": 0.00015212074455485443,
+        "roundoff_margin": 8.59794075933224e-11,
+        "engineering_curvature_component_upper_inv_m": 0.5188753937584135,
+        "linearized_fibre_strain_component_upper": 0.002746497713346922,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.9795149696778335
+      }
+    },
+    {
+      "frame": 87,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.16226247067388117,
+      "max_update_error_m": 1.3877787807814457e-17,
+      "ledger_error_j": -4.235164736271502e-22,
+      "work_j": -3.439006893088596e-05,
+      "energy_balance_j": -4.2800422994104e-13,
+      "initial_energy_j": 0.00265052629394409,
+      "final_energy_j": 0.0026161362245851996,
+      "max_nodal_displacement_m": 0.07495961613709277,
+      "sampled_max_strain_component": 0.00013892652526104055,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.010313658339518727,
+        "strain_component_upper": 0.00013990498212500014,
+        "roundoff_margin": 8.642975449061834e-11,
+        "engineering_curvature_component_upper_inv_m": 0.4469311499093023,
+        "linearized_fibre_strain_component_upper": 0.0023729152202113437,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.979479054869307
+      }
+    },
+    {
+      "frame": 88,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.15856965582605925,
+      "max_update_error_m": 1.3877787807814457e-17,
+      "ledger_error_j": -2.355810384551023e-21,
+      "work_j": -4.920914336831727e-05,
+      "energy_balance_j": 7.621341867855087e-13,
+      "initial_energy_j": 0.0026161362245851996,
+      "final_energy_j": 0.0025669270819790166,
+      "max_nodal_displacement_m": 0.0708484324101893,
+      "sampled_max_strain_component": 0.00013658195136923013,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.00973930586722348,
+        "strain_component_upper": 0.0001372077673012233,
+        "roundoff_margin": 8.227445013214617e-11,
+        "engineering_curvature_component_upper_inv_m": 0.36335052720832495,
+        "linearized_fibre_strain_component_upper": 0.001953568617772208,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.9806162423443283
+      }
+    },
+    {
+      "frame": 89,
+      "verified": true,
+      "intervals": 256,
+      "cpu_crosschecked_state_indices": [
+        0,
+        128,
+        256
+      ],
+      "max_force_residual_limit_ratio": 0.1659965040735193,
+      "max_update_error_m": 1.3877787807814457e-17,
+      "ledger_error_j": 5.558653716356346e-21,
+      "work_j": -7.0594353186338e-05,
+      "energy_balance_j": 1.6468995978948213e-12,
+      "initial_energy_j": 0.0025669270819790166,
+      "final_energy_j": 0.002496332730439578,
+      "max_nodal_displacement_m": 0.06485941232023668,
+      "sampled_max_strain_component": 0.00011810966527114886,
+      "bernstein_geometry": {
+        "projected_gradient_upper": 0.008360309356980953,
+        "strain_component_upper": 0.00011860006216988126,
+        "roundoff_margin": 6.973008854995404e-11,
+        "engineering_curvature_component_upper_inv_m": 0.3181591051967599,
+        "linearized_fibre_strain_component_upper": 0.0017032870027708993,
+        "global_injectivity_sufficient_condition": true,
+        "area_ratio_lower": 0.9833492760585825
+      }
+    }
+  ],
+  "verified_intervals": 18432,
+  "removed_kinetic_j": 0.0006839294722332618,
+  "training_eligible": false,
+  "r1_complete": false,
+  "generated_training_samples": 0,
+  "scope": "저장된 모든 interval의 원식 재계산. CUDA evaluator는 frame별 CPU 상태 대조를 별도 명시. 수렴 판정은 아님"
+}

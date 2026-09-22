@@ -1,0 +1,37 @@
+{
+  "backend": "resident_gpu_audit_v1",
+  "passed": true,
+  "failures": [],
+  "maxima": {
+    "force_ratio": 0.05524291863456771,
+    "update_error_m": 6.009156957486528e-23,
+    "energy_ledger_error_j": 1.0409187888808097e-17,
+    "projected_gradient_upper": 0.12317405545359641,
+    "strain_component_upper": 0.001004324526466633,
+    "engineering_curvature_component_upper_inv_m": 1.8728000956348945
+  },
+  "time_axis_passed": true,
+  "mass_solver_info": 0,
+  "audit_s": 7.342555191949941,
+  "timings": {
+    "prepare_and_hash_s": 3.3785434719757177,
+    "setup_s": 1.540551271988079,
+    "trace_read_s": 1.9327344019839074,
+    "first_upload_and_capture_s": 0.05032606699387543,
+    "subsequent_upload_s": 0.10763222898822278,
+    "compute_s": 5.642915107979206,
+    "summary_readback_s": 0.0011305160005576909,
+    "total_before_write_s": 12.673406248999527
+  },
+  "steps": 640,
+  "chunk_steps": 64,
+  "graph_inventory": {
+    "kernels": 248,
+    "device_copies": 8,
+    "memsets": 8,
+    "children": 1,
+    "host_copies": 0,
+    "host_callbacks": 0
+  },
+  "per_step_sha256": "3b19cec77503b7094b19578457c22df7c4f8dd32b51992d7788d91680b873873"
+}

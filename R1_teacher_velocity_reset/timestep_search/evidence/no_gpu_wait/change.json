@@ -1,0 +1,28 @@
+{
+  "reason": "사용자 요청: GPU 사용 중에도 대기 없이 시작. 출력별 중복 실행 방지는 유지.",
+  "scope": "물리 계산 전 controller 단일 파일 갱신. 기존 runtime/manifest는 보존.",
+  "changed_runtime_paths": [
+    "runtime/code/wind3dgs/evaluation/teacher_timestep_search.py"
+  ],
+  "before": {
+    "size_bytes": 23468,
+    "sha256": "80cc7a8eb285ca729879a0875387af108a503b79f33a1d7f717898f8133f7d17"
+  },
+  "after": {
+    "size_bytes": 21520,
+    "sha256": "cbb2d8030a940f8a7442b61b717017a9d54941079002e214712330bf800ba382"
+  },
+  "unchanged": {
+    "plan.json": {
+      "size_bytes": 6105,
+      "sha256": "03bfb071975ae65f311967b0f1e5403b828adee1c4556368c3003c77d334e453"
+    },
+    "wind.npz": {
+      "size_bytes": 11142,
+      "sha256": "db9c01a01eecfa78fc1dc581bb8505b8bc518c368001a98faf7894432a60bc59"
+    }
+  },
+  "confirmed_computed_frames": 0,
+  "confirmed_active_wall_s": 0,
+  "gpu_admission": "start_without_waiting"
+}

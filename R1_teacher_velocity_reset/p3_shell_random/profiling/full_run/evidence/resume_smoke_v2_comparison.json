@@ -1,0 +1,77 @@
+{
+  "status": "통과",
+  "interpolant_bounds": {
+    "u_m": {
+      "absolute_rms_upper": 1.0147850325076398e-22,
+      "reference_peak_lower": 1.463827668227891e-06,
+      "relative_upper": 6.932407786335518e-17,
+      "max_nodal_component_difference": 0.0
+    },
+    "v_m_s": {
+      "absolute_rms_upper": 0.0,
+      "reference_peak_lower": 0.00017245848009304264,
+      "relative_upper": 0.0,
+      "max_nodal_component_difference": 0.0
+    }
+  },
+  "threshold_relative": 0.01,
+  "position_increment_equals_displacement": true,
+  "scope": "rest natural 전체 보간 수치 비교. R1 전체/ODE 인증 아님.",
+  "timing_s": {
+    "baseline": {
+      "setup_s": 8.410839096000018,
+      "warmup_s": 0.5151020979992609,
+      "simulation_s": 0.20092698500047845,
+      "write_s": 0.0037433099996633246,
+      "audit_s": 0.17539193900029204,
+      "audit_read_s": 0.00317172099948948,
+      "resume_setup_warmup_s": 0.249136412999178
+    },
+    "fast": {
+      "setup_s": 0.22446564700021554,
+      "warmup_s": 0.16070672400019248,
+      "simulation_s": 0.14788666099957481,
+      "write_s": 0.003936482999961299,
+      "audit_s": 0.1501709700005449,
+      "audit_read_s": 0.0030542599997716025,
+      "resume_setup_warmup_s": 0.29797911399964505
+    }
+  },
+  "simulation_speedup": 1.3586552272017023,
+  "simulation_speed_improved": true,
+  "simulation_time_reduction_fraction": 0.26397810130270627,
+  "contains_resumed_simulation": true,
+  "timing_is_provisional_due_to_other_gpu_load": true,
+  "frame_results": [
+    {
+      "frame": 0,
+      "rms_peaks": {
+        "u_m": [
+          0.0,
+          0.0
+        ],
+        "v_m_s": [
+          0.0,
+          0.0
+        ]
+      },
+      "position_padding_m": 0.0
+    },
+    {
+      "frame": 1,
+      "rms_peaks": {
+        "u_m": [
+          0.0,
+          1.463827668227891e-06
+        ],
+        "v_m_s": [
+          0.0,
+          0.00017245848009304264
+        ]
+      },
+      "position_padding_m": 1.0147850325076398e-22
+    }
+  ],
+  "training_eligible": false,
+  "r1_complete": false
+}

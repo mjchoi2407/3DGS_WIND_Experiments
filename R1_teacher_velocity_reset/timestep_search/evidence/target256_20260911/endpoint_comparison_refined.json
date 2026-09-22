@@ -1,0 +1,118 @@
+{
+  "time_s": {
+    "1": 3.266666666666723,
+    "4": 3.266666666666724,
+    "8": 3.266666666666722,
+    "16": 3.266666666666722,
+    "32": 3.266666666666722
+  },
+  "comparisons": [
+    {
+      "first_substeps": 1,
+      "second_substeps": 4,
+      "u": {
+        "mass_l2_delta": 1.6664193201667577e-05,
+        "mass_l2_reference": 0.04720813223152499,
+        "relative": 0.0003529941222825893
+      },
+      "v": {
+        "mass_l2_delta": 0.0032652857397027927,
+        "mass_l2_reference": 0.1334360736901273,
+        "relative": 0.024470787017352006
+      }
+    },
+    {
+      "first_substeps": 1,
+      "second_substeps": 8,
+      "u": {
+        "mass_l2_delta": 1.7651961440160705e-05,
+        "mass_l2_reference": 0.04720817766441557,
+        "relative": 0.0003739174506086971
+      },
+      "v": {
+        "mass_l2_delta": 0.0023950827526800786,
+        "mass_l2_reference": 0.13343112020854064,
+        "relative": 0.017949956119208046
+      }
+    },
+    {
+      "first_substeps": 1,
+      "second_substeps": 16,
+      "u": {
+        "mass_l2_delta": 1.7746044487668987e-05,
+        "mass_l2_reference": 0.04720826573414489,
+        "relative": 0.0003759096889431715
+      },
+      "v": {
+        "mass_l2_delta": 0.002183784040236913,
+        "mass_l2_reference": 0.13343264376099673,
+        "relative": 0.01636619030159131
+      }
+    },
+    {
+      "first_substeps": 1,
+      "second_substeps": 32,
+      "u": {
+        "mass_l2_delta": 1.775435496602235e-05,
+        "mass_l2_reference": 0.047208275696297035,
+        "relative": 0.00037608564820796844
+      },
+      "v": {
+        "mass_l2_delta": 0.002151955593653831,
+        "mass_l2_reference": 0.13343363729740043,
+        "relative": 0.016127534535070008
+      }
+    },
+    {
+      "first_substeps": 4,
+      "second_substeps": 8,
+      "u": {
+        "mass_l2_delta": 1.9926086494283777e-06,
+        "mass_l2_reference": 0.04720817766441557,
+        "relative": 4.2208972004660963e-05
+      },
+      "v": {
+        "mass_l2_delta": 0.001819479819002268,
+        "mass_l2_reference": 0.13343112020854064,
+        "relative": 0.013636097906984423
+      }
+    },
+    {
+      "first_substeps": 8,
+      "second_substeps": 16,
+      "u": {
+        "mass_l2_delta": 1.0101271348264708e-06,
+        "mass_l2_reference": 0.04720826573414489,
+        "relative": 2.139725150072319e-05
+      },
+      "v": {
+        "mass_l2_delta": 0.0007003959338371482,
+        "mass_l2_reference": 0.13343264376099673,
+        "relative": 0.005249059855935183
+      }
+    },
+    {
+      "first_substeps": 16,
+      "second_substeps": 32,
+      "u": {
+        "mass_l2_delta": 3.492916018082597e-07,
+        "mass_l2_reference": 0.047208275696297035,
+        "relative": 7.398948524520199e-06
+      },
+      "v": {
+        "mass_l2_delta": 0.00027278272990412044,
+        "mass_l2_reference": 0.13343363729740043,
+        "relative": 0.00204433256433035
+      }
+    }
+  ],
+  "source_sha256": {
+    "experiments/artifacts/runs/teacher_timestep_search/20260911_target256_current_matrix_v2/restart240_step0.npz": "7565ed81995d90cd4372e3898ada88bda148ceea3aaa7f6705459e8b84ea7ad7",
+    "experiments/artifacts/runs/teacher_timestep_search/20260911_gmres_restart_probe_v1/restart240_step0.npz": "7b176f8f2a2e085fb0c389ed9e1f140713417427bcc898532380d7352c5afd47",
+    "experiments/artifacts/runs/teacher_timestep_search/20260911_target256_accuracy_reference_v1/sub8_step7.npz": "6fd7287d34e38773371582a233b804f83da1aa6ba50b75c452c4e6baf7f1be34",
+    "experiments/artifacts/runs/teacher_timestep_search/20260911_target256_accuracy_reference_v1/sub16_step15.npz": "a8a22dd754c14caa1e974af603b7d7403ca05b598fd5a5fba801c06facc5f9f3",
+    "experiments/artifacts/runs/teacher_timestep_search/20260911_target256_accuracy_refine_v1/sub32_step31.npz": "6ae615881b3d1a82917bcbce476c32e88aed462e8521b2f5f2f391d8d1e49598"
+  },
+  "scope": "공통 입력에서1/60초 후의 국소 공간 L2 끝 상태 비교; 전체 시간 보간/궤적1% 판정은 아님",
+  "training_eligible": false
+}

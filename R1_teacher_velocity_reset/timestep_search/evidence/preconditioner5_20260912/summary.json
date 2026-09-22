@@ -1,0 +1,79 @@
+{
+  "runtime_versions": {
+    "python": "3.12.3",
+    "implementation": "cpython",
+    "cache_tag": "cpython-312",
+    "machine": "x86_64",
+    "byteorder": "little",
+    "numpy": "2.4.4",
+    "scipy": "1.18.1",
+    "warp-lang": "1.17.0"
+  },
+  "frames": [
+    159,
+    160,
+    161,
+    162,
+    163
+  ],
+  "baseline_source": "experiments/artifacts/runs/teacher_timestep_search/20260912_three_scenes_10s_v2",
+  "baseline_solve_s": 507.0264505488158,
+  "baseline_hvp": 42492,
+  "historical_timing_comparison": true,
+  "trials": [
+    {
+      "name": "rest_until_failure",
+      "threshold": 1000000000,
+      "rebuild_every": 4,
+      "status": "passed",
+      "solve_s": 303.7382892432506,
+      "audit_s": 19.34220310568344,
+      "max_u_difference_m": 8.023638177478976e-16,
+      "max_v_difference_m_s": 6.446950720669087e-12,
+      "completed_steps": 320,
+      "hvp_calls": 18184,
+      "newton_corrections": 640,
+      "rebuild_count": 0,
+      "rebuild_s": 0,
+      "max_force_ratio": 0.04549889698219857,
+      "fallbacks": 0,
+      "all_internal_targets_met": true
+    },
+    {
+      "name": "reuse16",
+      "threshold": 32,
+      "rebuild_every": 16,
+      "status": "passed",
+      "solve_s": 200.04651790991193,
+      "audit_s": 16.962818173196865,
+      "max_u_difference_m": 5.5294310796760726e-17,
+      "max_v_difference_m_s": 1.4122802319965766e-12,
+      "completed_steps": 320,
+      "hvp_calls": 14528,
+      "newton_corrections": 640,
+      "rebuild_count": 35,
+      "rebuild_s": 75.39078758502728,
+      "max_force_ratio": 0.04533278676845839,
+      "fallbacks": 0,
+      "all_internal_targets_met": true
+    },
+    {
+      "name": "reuse64",
+      "threshold": 32,
+      "rebuild_every": 64,
+      "status": "passed",
+      "solve_s": 143.28427914186614,
+      "audit_s": 16.881922487315023,
+      "max_u_difference_m": 6.052558627900329e-17,
+      "max_v_difference_m_s": 1.4754079816283345e-12,
+      "completed_steps": 320,
+      "hvp_calls": 7730,
+      "newton_corrections": 640,
+      "rebuild_count": 9,
+      "rebuild_s": 20.047034634975716,
+      "max_force_ratio": 0.04533278676845839,
+      "fallbacks": 0,
+      "all_internal_targets_met": true
+    }
+  ]
+}

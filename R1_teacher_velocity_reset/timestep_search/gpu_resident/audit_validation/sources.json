@@ -1,0 +1,27 @@
+{
+  "files": {
+    "code/wind3dgs/teacher/resident_audit_bounds.py": "3d33fc73851f3a1b6ad5008d80555921cf47e73020c00e43afe7d6d3c06264dd",
+    "code/wind3dgs/teacher/resident_audit_kernels.py": "4883f8fc81159f4ae37f7e3a2140393b4fc96995218a5bf55d9985943039da1b",
+    "code/wind3dgs/teacher/resident_audit.py": "dc44ad88feded2e650f9a5b55711dc4157021b4b90328a05e351a687a0012b72",
+    "code/wind3dgs/evaluation/teacher_gpu_audit_io.py": "a0f15152b54c4b706967de61c7539ea32631b286320d0ccd205dbb7b7a6fffe8",
+    "code/wind3dgs/evaluation/teacher_resident_gpu_audit.py": "9a627a7b019e69b6b7e3b23710c9e534262f320dc315b2de9783f5bba5aa2b7e",
+    "code/tests/test_resident_audit.py": "1594a52b1e32b6ecf6d1e3ce3c1bd367c4602ae23737d2d5abfda0e820cb3360",
+    "code/scripts/check_teacher_gpu_audit_actual.py": "f9bdd1503e9673a845c74b9c0e23ea81ffa43d0f8f85a74499c1283c736b681c",
+    "experiments/R1_teacher_velocity_reset/timestep_search/gpu_resident/audit_run.py": "f891713fb8f4d00c94d882acc64239f1cc4e4b4c14092be4cbc0e2857670a102",
+    "experiments/R1_teacher_velocity_reset/timestep_search/gpu_resident/profile_run.py": "79b0fbb4397db1b59893c911c07034f7e6ba81175c2e383ba3d44cc81cce3b9e",
+    "experiments/R1_teacher_velocity_reset/timestep_search/run_gpu_audit.sh": "dc41485043767fb6af67dd2cca824ce1c7e05ceceaabbea68e21f5ea4f8a0f0f"
+  },
+  "frozen_manifest": "experiments/artifacts/runs/teacher_timestep_search/20260913_gpu_audit_frozen_validation_v1/audit_run.json",
+  "frozen_manifest_sha256": "f34c086e8452803e726f18b24a614616029daa398fe7abdd3b6a116b5ef56520",
+  "source_run": "experiments/artifacts/runs/teacher_timestep_search/20260913_gpu_reuse_uncompressed_v1/candidate",
+  "gpu_result": "experiments/artifacts/runs/teacher_timestep_search/20260913_gpu_audit_frozen_validation_v1/results/comparison.json",
+  "gpu_result_sha256": "d82fdd05bc557af9c79da06c1ed3a47ec819df51be77095c4ac77f2e99f89831",
+  "reference_check": "experiments/artifacts/runs/teacher_timestep_search/20260913_gpu_audit_reference_check_v1/validation.json",
+  "reference_check_sha256": "c59d07df689e6260e7a3f83db638899bae9905c940a3d12d78ee19bbb04d8811",
+  "regression_tests": {
+    "passed": 7,
+    "command": "WIND3DGS_TEST_DEVICE=cuda:0 PYTHONPATH=code .venv/bin/python -m unittest discover -s code/tests -p test_resident_audit.py -v"
+  },
+  "training_eligible": false,
+  "r1_complete": false
+}

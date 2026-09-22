@@ -2,7 +2,11 @@
 .venv/
 venv/
 env/
-.env/
+
+# 로컬 secret은 제외하고 secret이 없는 예시만 허용한다.
+.env
+.env.*
+!.env.example
 
 # Python/cache artifacts
 __pycache__/
@@ -26,3 +30,31 @@ M04_mesh_extraction/outputs/
 *.tar.gz
 *.tgz
 *.7z
+
+# 고정 폭 굽힘 실험의 실제 producer source만 담은 작은 재현 snapshot
+!R1_teacher_velocity_reset/clamped_samples/evidence/strip_initial_producer_snapshot.zip
+!R1_teacher_velocity_reset/clamped_samples/evidence/strip_refined_producer_snapshot.zip
+!R1_teacher_velocity_reset/p3_samples/evidence/p3_verified_producer_snapshot.zip
+!R1_teacher_velocity_reset/p3_samples/evidence/p3_sample_producer_snapshot.zip
+!R1_teacher_velocity_reset/p3_samples/evidence/p3_initial_producer_snapshot.zip
+
+# P3 유한 회전 shell의 수식 진단 producer 원본
+!R1_teacher_velocity_reset/p3_shell/evidence/p3_shell_initial_producer.zip
+!R1_teacher_velocity_reset/p3_shell/evidence/p3_shell_producer_v2.zip
+!R1_teacher_velocity_reset/p3_shell/evidence/p3_shell_producer_v3.zip
+!R1_teacher_velocity_reset/p3_shell/evidence/p3_shell_producer_v4.zip
+!R1_teacher_velocity_reset/p3_shell/evidence/p3_shell_validator_v5.zip
+
+# 동일 P3 shell의 GPU producer 및 CPU 재검산 source
+!R1_teacher_velocity_reset/p3_shell_gpu/evidence/p3_shell_gpu_producer_v1.zip
+!R1_teacher_velocity_reset/p3_shell_gpu/evidence/p3_shell_gpu_producer_v2.zip
+!R1_teacher_velocity_reset/p3_shell_gpu/evidence/p3_shell_gpu_producer_v3.zip
+!R1_teacher_velocity_reset/p3_shell_gpu/evidence/p3_shell_gpu_verification_v1.zip
+!R1_teacher_velocity_reset/p3_shell_gpu/evidence/p3_shell_runtime_bootstrap_v1.zip
+!/R1_teacher_velocity_reset/p3_shell_random/evidence/p3_shell_random_runtime_v1.zip
+!/R1_teacher_velocity_reset/p3_shell_random/evidence/p3_shell_random_runtime_v2.zip
+!/R1_teacher_velocity_reset/p3_shell_random/evidence/p3_shell_random_runtime_v3.zip
+!/R1_teacher_velocity_reset/p3_shell_random/evidence/p3_shell_random_runtime_v4.zip
+!/R1_teacher_velocity_reset/p3_shell_random/evidence/p3_shell_random_experiment_wrappers_v1.zip
+!/R1_teacher_velocity_reset/p3_shell_random/evidence/p3_shell_random_runtime_v5.zip
+!/R1_teacher_velocity_reset/p3_shell_random/evidence/p3_shell_random_experiment_wrappers_v2.zip

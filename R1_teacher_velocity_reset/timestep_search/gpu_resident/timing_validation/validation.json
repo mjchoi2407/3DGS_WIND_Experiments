@@ -1,0 +1,32 @@
+{
+  "scope": "actual_mesh_two_substeps_functional_validation_not_benchmark",
+  "passed": true,
+  "p3_nodes": 7081,
+  "substeps": 2,
+  "gpu_current_rebuilds": 1,
+  "gpu_linear_iterations": 57,
+  "checks": [
+    {
+      "force_ratio": 0.028427695113349423,
+      "update_error_m": 2.710505431213761e-20,
+      "energy_ledger_error_j": 3.273957041683242e-17,
+      "projected_gradient_upper": 0.12317405545359641,
+      "flags": [],
+      "internal_target_met": true
+    },
+    {
+      "force_ratio": 0.012692883938087447,
+      "update_error_m": 2.710505431213761e-20,
+      "energy_ledger_error_j": 8.024948960964852e-18,
+      "projected_gradient_upper": 0.12302417498659698,
+      "flags": [],
+      "internal_target_met": true
+    }
+  ],
+  "max_position_difference_from_saved_reference_m": 7.271877113851675e-19,
+  "max_velocity_difference_from_saved_reference_m_s": 7.0837622069564825e-15,
+  "frozen_run_manifest_sha256": "a518f4c9dda0939d85121b208389a624ad72dc3d0401a1774cb1d0c97e1bddc1",
+  "trace_sha256": "074b8466ee4ef1f858b0c5a6edfada9caea3b0f12e677ac5c828d5a6fe4baea0",
+  "training_eligible": false,
+  "r1_complete": false
+}

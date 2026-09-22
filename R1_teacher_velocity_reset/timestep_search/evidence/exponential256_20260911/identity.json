@@ -1,0 +1,110 @@
+{
+  "date": "2026-09-11",
+  "current_sources_and_evidence": {
+    "code/tests/test_teacher_p3_shell_exponential.py": "a8e5615a7132d898737c5007ec1e2bddeebf732ea32d7a94090ca7a723f3182d",
+    "code/wind3dgs/teacher/p3_shell_exponential.py": "7349fae3012d30213e0a32141b383cf9a81c6c3446e33f2186874fd7fc6438cd",
+    "experiments/R1_teacher_velocity_reset/timestep_search/evidence/exponential256_20260911/backend_comparison.json": "9de47b4ce8de1730f732b00251acc7230b1f2240f6746ab4ce49bc1afc1d2235",
+    "experiments/R1_teacher_velocity_reset/timestep_search/evidence/exponential256_20260911/compare_endpoints.py": "4e48d00273a6ccb114a80da03dd876471286caebd1a10b275002303391520431",
+    "experiments/R1_teacher_velocity_reset/timestep_search/evidence/exponential256_20260911/compare_increment.py": "82ae2126aa33e0c2a4846579e5079228328d378653adc0ed93375276a26c54a2",
+    "experiments/R1_teacher_velocity_reset/timestep_search/evidence/exponential256_20260911/endpoint_comparison_ref2.json": "d2f9e774ce425648e3bf4330487c97f53d085ac63ab7ec37b36e64a14bec0df6",
+    "experiments/R1_teacher_velocity_reset/timestep_search/evidence/exponential256_20260911/endpoint_comparison_ref4.json": "8e6a4848a77def027be2e09fe255dd9d036859575d0cf68add4df82737f9fbd6",
+    "experiments/R1_teacher_velocity_reset/timestep_search/evidence/exponential256_20260911/gauss_path20_increment_report.json": "c3af502c5971cd7df763f1a315e384220c1e54d8034cfc4eb30283c95d165ee5",
+    "experiments/R1_teacher_velocity_reset/timestep_search/evidence/exponential256_20260911/gauss_path20_report.json": "dbc209c1890c791779cfa58efcc03f262b70c4e8583df59799728369341bd162",
+    "experiments/R1_teacher_velocity_reset/timestep_search/evidence/exponential256_20260911/gauss_source_check.json": "2505e7430eafac8dd7281614b0206f71d4f645bf0b98b060c5ee94218565a579",
+    "experiments/R1_teacher_velocity_reset/timestep_search/evidence/exponential256_20260911/hybrid_reference2_report.json": "5ede8caeb4a35ae8ec6fc6c73f7c26e1b31c4127ece63b27c363cc95c90f5bcd",
+    "experiments/R1_teacher_velocity_reset/timestep_search/evidence/exponential256_20260911/hybrid_reference4_report.json": "fee3be967fc35993c10352ad1b11f5c3f3a49c17d64163538a484ab3c97884fd",
+    "experiments/R1_teacher_velocity_reset/timestep_search/evidence/exponential256_20260911/increment_comparison.json": "0f8cf671b538f2598e07b7cf2036d15165a3b2d0b2e58262851bad26af8881ed",
+    "experiments/R1_teacher_velocity_reset/timestep_search/evidence/exponential256_20260911/midpoint_taylor_report.json": "c4f5955c47dc86e713d560410d1dfdb611432d5eaa34f734bfedb699e2748c14",
+    "experiments/R1_teacher_velocity_reset/timestep_search/evidence/exponential256_20260911/order3_chebyshev_report.json": "0b945870784d06c949870e49710ef20ee2b965255609e2840871d5407fb3a524",
+    "experiments/R1_teacher_velocity_reset/timestep_search/evidence/exponential256_20260911/order3_taylor_report.json": "81b21b151287e23ca9da746d3085a8a04cb4eff03b3f267e98a14e82f24232ef",
+    "experiments/R1_teacher_velocity_reset/timestep_search/evidence/exponential256_20260911/order4_taylor_report.json": "47c85ee80cfbf852678ddff7d2784dd670a3a0cf4d98126d4321309ecf1ed304",
+    "experiments/R1_teacher_velocity_reset/timestep_search/evidence/exponential256_20260911/predictor_comparison.json": "5318a8dafae639ea13f242d0618b000af3e12f6bd4f5ccfe11ee9d14ca67e59b",
+    "experiments/R1_teacher_velocity_reset/timestep_search/evidence/exponential256_20260911/probe_exponential.py": "0248ef11ba10853bf104bdad340ae207aed4db36a8c9ce2d8b9d4349e1efa18d",
+    "experiments/R1_teacher_velocity_reset/timestep_search/evidence/exponential256_20260911/probe_tangent_change.py": "3ed71bfae68c0763e14b54308e38f0324f05a7ec6d8eaeb7ca552b201cdf2e5f",
+    "experiments/R1_teacher_velocity_reset/timestep_search/evidence/exponential256_20260911/summary.json": "7b3d399ded82d267f12f7d0a6e4f6bd1c5d4423b352a8a27cc8c200b41eb4454",
+    "experiments/R1_teacher_velocity_reset/timestep_search/evidence/exponential256_20260911/tangent_change.json": "d040109aaa327a120fd5b8f6e5dc14749dca6d751c1128b5bf07e40d512afa67",
+    "experiments/R1_teacher_velocity_reset/timestep_search/evidence/exponential256_20260911/validation.json": "c4cdceafda36cc349d0c1f46573c1c11dbcd8d79ada7707c0c0656434d5c904d"
+  },
+  "inputs": {
+    "experiments/artifacts/runs/teacher_timestep_search/20260911_gauss256_stage4_v1/endpoint.npz": "b1998e0cc033748c54ccce582798ac9c418fb958651ef4fe17e130a8c179e1df",
+    "experiments/artifacts/runs/teacher_timestep_search/20260911_gauss256_stage6_followup_v1/stages.npz": "0181bfe8960d1d40664d2b00f5c45fcbab2911ad9da98e2860f483c3c3e8d79d",
+    "experiments/artifacts/runs/teacher_timestep_search/20260911_target256_segments_v2/plan.json": "b609679dd788dd5cf1505c939ce0b993206d6abe168fcebe502c767433451d03",
+    "experiments/artifacts/runs/teacher_timestep_search/20260911_target256_segments_v2/wind.npz": "db9c01a01eecfa78fc1dc581bb8505b8bc518c368001a98faf7894432a60bc59",
+    "experiments/artifacts/runs/teacher_timestep_search/20260911_target256_segments_v2/runtime_manifest.json": "dec67d896537efadf38bbd81f52cb7d726abe4a73e58fcc1b5180ffef52a9df6"
+  },
+  "runs": {
+    "experiments/artifacts/runs/teacher_timestep_search/20260911_exponential256_cheb3_v1": {
+      "endpoint.npz": "e70179206ba1f8308c55ba661cd4f3acb0412f93c7ec126256d3408e5010b7ac",
+      "probe.py": "ef5442f0ecb8b4ccdbb53c54ee41df49701d0cfd069ba23bde80cd1207131da9",
+      "report.json": "0b945870784d06c949870e49710ef20ee2b965255609e2840871d5407fb3a524",
+      "source.zip": "25a1854cc6916059d65f12f5eae952ae79a049169910d49c2cd54508895198fe",
+      "step0/details.npz": "dd469d0dee08711023227d47c494c0ebc6e52c52dda3a1b761a8c08a9d625e24",
+      "step0/endpoint.npz": "e70179206ba1f8308c55ba661cd4f3acb0412f93c7ec126256d3408e5010b7ac"
+    },
+    "experiments/artifacts/runs/teacher_timestep_search/20260911_exponential256_gauss_path20_increment_v1": {
+      "endpoint.npz": "d243334cc65118af8f1b9520ed958358da2a54f1214bda166f6dee1f5a109377",
+      "probe.py": "0248ef11ba10853bf104bdad340ae207aed4db36a8c9ce2d8b9d4349e1efa18d",
+      "report.json": "c3af502c5971cd7df763f1a315e384220c1e54d8034cfc4eb30283c95d165ee5",
+      "source.zip": "1a0080319c71a065e2e88a0cea35a9afdfe8543c0a25ff78733d9495d012b6d4",
+      "step0/details.npz": "f80db63e614499910bd8a2b8fc5543241d009f05627cfa4394f27ce913df8765",
+      "step0/endpoint.npz": "d243334cc65118af8f1b9520ed958358da2a54f1214bda166f6dee1f5a109377"
+    },
+    "experiments/artifacts/runs/teacher_timestep_search/20260911_exponential256_gauss_path20_v1": {
+      "endpoint.npz": "83298fcb79af71d90e09b108c96ccbae71f6baa92ffaf9066f6e2bef775e4660",
+      "probe.py": "d86f1c431ec07a363de1ba5490839c8d0c73f71b089ac5dfc5c78b4327b61ed5",
+      "report.json": "dbc209c1890c791779cfa58efcc03f262b70c4e8583df59799728369341bd162",
+      "source.zip": "7ea418a78f2281b093dda0d0caa30854e093c7a1c4f70a39ee32307bd94e8382",
+      "step0/details.npz": "dc4e2198aaae2f75df48aa44e5bd668420772314fc08d217605b5cd347d2b1f1",
+      "step0/endpoint.npz": "83298fcb79af71d90e09b108c96ccbae71f6baa92ffaf9066f6e2bef775e4660"
+    },
+    "experiments/artifacts/runs/teacher_timestep_search/20260911_exponential256_hybrid_ref2_v1": {
+      "endpoint.npz": "6b38c716af12ff18b22c8369b75afb275bb32722fc09db390b09c9bf3d9f8d71",
+      "probe.py": "bc471a678a5f9cd36c0948a27cd38669990682517b3376fb84624f1e458e656c",
+      "report.json": "5ede8caeb4a35ae8ec6fc6c73f7c26e1b31c4127ece63b27c363cc95c90f5bcd",
+      "source.zip": "ee92dab1eb85afd4c5ad33b94f9392ebee830fccdaf3c0a2e30bbe7323dd1e79",
+      "step0/details.npz": "3cd479cd53234017ab7ede84b823fe7a9aa1a306e4a8c63bfe31a197ae123aea",
+      "step0/endpoint.npz": "bb2529ae33350d06eb1a9f22625fcbf7ce4002c1e6beaafdd277cc9a01fe17bc",
+      "step1/details.npz": "dbd648ed84f30ee0a2039fd85762590cb499786d4266ea926dc453b9c46eecb7",
+      "step1/endpoint.npz": "6b38c716af12ff18b22c8369b75afb275bb32722fc09db390b09c9bf3d9f8d71"
+    },
+    "experiments/artifacts/runs/teacher_timestep_search/20260911_exponential256_hybrid_ref4_v1": {
+      "endpoint.npz": "4931a41143dfe636921d0d627cd3e96159c140dad042b4d2fdfa02bf7179c81c",
+      "probe.py": "bc471a678a5f9cd36c0948a27cd38669990682517b3376fb84624f1e458e656c",
+      "report.json": "fee3be967fc35993c10352ad1b11f5c3f3a49c17d64163538a484ab3c97884fd",
+      "source.zip": "ee92dab1eb85afd4c5ad33b94f9392ebee830fccdaf3c0a2e30bbe7323dd1e79",
+      "step0/details.npz": "e2fc137161d31ab39a66a182b259b0645254aa6cfa688e46f1b4a69e6ba2e96d",
+      "step0/endpoint.npz": "ecc4a3993a9ac3b214d1da2723973a072749b231ba53340f259e651239c399c3",
+      "step1/details.npz": "6da1dcf830ac9bd7888ab9c9b9d73e96361c22b9c9efd26410f76211636d5447",
+      "step1/endpoint.npz": "865a32389043c38060445d258ca13a6a8687304e08c6caf73887c681dbb2b4da",
+      "step2/details.npz": "39da87dfdd0005efb290b885c7d44529b96e6484176bc93ec1f786bd6e179e84",
+      "step2/endpoint.npz": "25d76deb669e43eb591dbef42d0f756853e75b2831b7e944047ad4a6706141fb",
+      "step3/details.npz": "ae8e1a49df76c830e9fd2a9ea0bdb5a741ad3fc75bd55a6af2e79d89acb614b4",
+      "step3/endpoint.npz": "4931a41143dfe636921d0d627cd3e96159c140dad042b4d2fdfa02bf7179c81c"
+    },
+    "experiments/artifacts/runs/teacher_timestep_search/20260911_exponential256_midpoint_v1": {
+      "endpoint.npz": "51ba1ae4cb7161b57255dc53fb6cc304b6251811f197fd98138f17bf93b41763",
+      "probe.py": "e5abeea61952ba9e2169c26d610aedea1716c58595712e51619bddcfa33c0992",
+      "report.json": "c4f5955c47dc86e713d560410d1dfdb611432d5eaa34f734bfedb699e2748c14",
+      "source.zip": "a07524810ec8c7c90fe520e2a32b4abaa60868df0f2ec0c9fdabb17a9d1644a6",
+      "step0/details.npz": "cf2196b7c305b623e7f20a0b3279e9b75af3bfa4025f4719d4795e3bc6bd87d0",
+      "step0/endpoint.npz": "51ba1ae4cb7161b57255dc53fb6cc304b6251811f197fd98138f17bf93b41763"
+    },
+    "experiments/artifacts/runs/teacher_timestep_search/20260911_exponential256_order4_v1": {
+      "endpoint.npz": "d2a877e3339fbbc4332642ef1f8df0d04f8811cbf2c73d299a0731ab87bcd684",
+      "probe.py": "4861b400ff3415e8be0ceb08e96559925482d9afe4873d5d1f73a5db9e78e62e",
+      "report.json": "47c85ee80cfbf852678ddff7d2784dd670a3a0cf4d98126d4321309ecf1ed304",
+      "source.zip": "e7b0792ee09f1e0d0cc5b8bc7d85edc464bf0420f9aa9e1595b19999aa793280",
+      "step0/details.npz": "1e44462d1ffe0cad97a862d6d4346513a6b96901ee7f504a1fe5036a28f28922",
+      "step0/endpoint.npz": "d2a877e3339fbbc4332642ef1f8df0d04f8811cbf2c73d299a0731ab87bcd684"
+    },
+    "experiments/artifacts/runs/teacher_timestep_search/20260911_exponential256_v1": {
+      "endpoint.npz": "ac5f053328d41b3572cf52edf932aa0c0b222df326fbe407ecf5cc629ab9ba30",
+      "probe.py": "0541775e000a9055a6333827d34424be5cd8fd1652a0105e82a30fff65867d6c",
+      "report.json": "81b21b151287e23ca9da746d3085a8a04cb4eff03b3f267e98a14e82f24232ef",
+      "source.zip": "1e3c809b13e0837a3636b089d37be465fe790f582e0a5d7d0a1fc2d12de7be89",
+      "step0/details.npz": "ea5ac0fc16d77113fc4707a70d7ef09445d294ae693d29ca3aad7c613334ba40",
+      "step0/endpoint.npz": "ac5f053328d41b3572cf52edf932aa0c0b222df326fbe407ecf5cc629ab9ba30"
+    }
+  },
+  "scope": "로컬 동결 입력. 공식 문헌 웹 조회 수행, Git fetch·commit·push 없음."
+}

@@ -1,0 +1,49 @@
+{
+  "completed_frames": 6,
+  "completed_steps": 384,
+  "duration_s": 0.1,
+  "verified_frame_files": 18,
+  "all_gpu_step_checks_passed": true,
+  "max_gpu_force_ratio": 0.2998427972253251,
+  "internal_target_misses": 0,
+  "cpu_checks": [
+    {
+      "frame": 1,
+      "substep": 0,
+      "end_time_s": 0.01692708333333335,
+      "cpu_force_ratio": 0.005093916605057513,
+      "cpu_position_update_error_m": 2.524354896707238e-29,
+      "cpu_elastic_energy_j": 3.8848004649407174e-16,
+      "pins_exact": true,
+      "passed": true
+    },
+    {
+      "frame": 3,
+      "substep": 44,
+      "end_time_s": 0.06171874999999986,
+      "cpu_force_ratio": 0.00554112748112683,
+      "cpu_position_update_error_m": 3.308722450212111e-24,
+      "cpu_elastic_energy_j": 2.1243131973854453e-09,
+      "pins_exact": true,
+      "passed": true
+    },
+    {
+      "frame": 5,
+      "substep": 63,
+      "end_time_s": 0.09999999999999973,
+      "cpu_force_ratio": 0.005441693541721372,
+      "cpu_position_update_error_m": 2.6469779601696886e-23,
+      "cpu_elastic_energy_j": 6.201389405274751e-08,
+      "pins_exact": true,
+      "passed": true
+    }
+  ],
+  "cpu_checks_scope": "대표3단계만 CPU 독립 검산; 전체384단계 CPU 재계산은 아님",
+  "plan_sha256": "6f8e0cf54fb939975ffb464d0de2565b30b0ace61a8703e1e82f545495df52c9",
+  "manifest_sha256": "ce39e67e72f77bbc3c37db920f2f5c724c589b7f8396e845e6fe8a232097c770",
+  "report_sha256": "0b892d7058381ed95c848d4039a45b778d09033f74424334539a18d8a31943cd",
+  "verifier_sha256": "2f69d3c88296fd41611cfd1210a5c1e2f4deb3d65505543e7ee17812dbd8ed7f",
+  "ten_seconds_verified": false,
+  "refinement_verified": false,
+  "training_eligible": false
+}

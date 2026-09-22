@@ -1,0 +1,103 @@
+[
+  {
+    "substeps": 1,
+    "source_sha256": "f67a0b0a87bdec5404609f60601b6ae4b80a387f7dcebd4bc0116cd89f5180d4",
+    "rows": [],
+    "status": "numerical_failure",
+    "reason": "linear_solve",
+    "attempts": [
+      {
+        "iteration": 0,
+        "force_residual_n": 87.46497406390071,
+        "force_limit_n": 8.756493594461272e-08,
+        "linear_info": 8,
+        "linear_iterations": 480,
+        "linear_residual_n": 2.144495608765733e-08,
+        "linear_limit_n": 8.746497406390072e-09
+      }
+    ],
+    "frame": 80,
+    "substep": 0
+  },
+  {
+    "substeps": 4,
+    "source_sha256": "1c563e7df666510bb1439fafd80852295bafcf0553bdabc2112298968993d559",
+    "rows": [
+      {
+        "frame": 157,
+        "substep": 2,
+        "solve_s": 13.671960649997345,
+        "residual_ratio": 0.406197105499905,
+        "update_error_m": 2.710505431213761e-20,
+        "ledger_error_j": 1.734723475976807e-18,
+        "projected_gradient_upper": 0.05776527036358372,
+        "verified": true
+      },
+      {
+        "frame": 157,
+        "substep": 3,
+        "solve_s": 15.452535122996778,
+        "residual_ratio": 0.28926395046704106,
+        "update_error_m": 2.710505431213761e-20,
+        "ledger_error_j": 0.0,
+        "projected_gradient_upper": 0.060223174305434064,
+        "verified": true
+      }
+    ],
+    "status": "passed"
+  },
+  {
+    "substeps": 16,
+    "source_sha256": "7e3993c2e38a38f5b5afa59b2f5fb89d92fa11348fb356f03d7a5940aef3de63",
+    "rows": [
+      {
+        "frame": 158,
+        "substep": 0,
+        "solve_s": 4.103542673008633,
+        "residual_ratio": 0.011382630129783947,
+        "update_error_m": 2.710505431213761e-20,
+        "ledger_error_j": 0.0,
+        "projected_gradient_upper": 0.061308978467449704,
+        "verified": true
+      },
+      {
+        "frame": 158,
+        "substep": 1,
+        "solve_s": 4.118944064000971,
+        "residual_ratio": 0.011620809515164499,
+        "update_error_m": 2.710505431213761e-20,
+        "ledger_error_j": 0.0,
+        "projected_gradient_upper": 0.06200763081035025,
+        "verified": true
+      }
+    ],
+    "status": "passed"
+  },
+  {
+    "substeps": 64,
+    "source_sha256": "6faeed9a0fd6b3d37a399ae0f6002243f4b2655f3e6f0d37e2651e629aa9ca39",
+    "rows": [
+      {
+        "frame": 158,
+        "substep": 55,
+        "solve_s": 1.671451869988232,
+        "residual_ratio": 0.01173753073679118,
+        "update_error_m": 2.710505431213761e-20,
+        "ledger_error_j": 3.469446951953614e-18,
+        "projected_gradient_upper": 0.07087282234089239,
+        "verified": true
+      },
+      {
+        "frame": 158,
+        "substep": 56,
+        "solve_s": 1.4635849129990675,
+        "residual_ratio": 0.012019299442210293,
+        "update_error_m": 2.710505431213761e-20,
+        "ledger_error_j": 3.469446951953614e-18,
+        "projected_gradient_upper": 0.07107819789823888,
+        "verified": true
+      }
+    ],
+    "status": "passed"
+  }
+]

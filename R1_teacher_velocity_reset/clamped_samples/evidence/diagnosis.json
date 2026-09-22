@@ -1,0 +1,118 @@
+{
+  "schema": "wind3dgs.clamped_strip_failure_diagnosis.v1",
+  "status": "completed",
+  "physics_resolved": false,
+  "dataset_issued": false,
+  "verification": {
+    "initial": {
+      "status": "passed",
+      "trace_count": 25,
+      "manifest_sha256": "ed2fa7b7e7f55145cce8b6a3c8882a4167c0b8853243f9b3078c2d17f9ed5f71",
+      "finest_pairs_status": "failed",
+      "quality": {
+        "training_eligible": false,
+        "teacher_accepted": false,
+        "purpose": "development_velocity_reset_exploration"
+      }
+    },
+    "refined": {
+      "status": "passed",
+      "trace_count": 10,
+      "manifest_sha256": "4f713c221abd5199b70e5c1a31cf2470068dc5c1cef1c9d276cec3e6a54e53ea",
+      "finest_pairs_status": "failed",
+      "quality": {
+        "training_eligible": false,
+        "teacher_accepted": false,
+        "purpose": "development_velocity_reset_exploration"
+      }
+    }
+  },
+  "static": {
+    "attachment": "x <= 0.25 m",
+    "free_length_m": 0.75,
+    "edge_ke_n": 10.0,
+    "field": "delta_Y = 0.001 m * (max(X - 0.25 m, 0) / 0.75 m)^2",
+    "energy": "0.5 * edge_ke * sum_internal(rest_edge_length * theta^2)",
+    "computation": "float64 geometry; Newton kernel 실행/전체 shell 에너지 아님",
+    "levels": [
+      {
+        "n": 4,
+        "energy_j": 8.888856503722124e-06,
+        "max_abs_dihedral_rad": 0.0008888881280301031,
+        "interior_edge_count": 40,
+        "boundary_edge_count": 16,
+        "analytic_energy_j": 8.888856503722124e-06,
+        "analytic_relative_error": 0.0
+      },
+      {
+        "n": 8,
+        "energy_j": 5.185163554451887e-06,
+        "max_abs_dihedral_rad": 0.0004444443493370176,
+        "interior_edge_count": 176,
+        "boundary_edge_count": 32,
+        "analytic_energy_j": 5.185163554451887e-06,
+        "analytic_relative_error": 0.0
+      },
+      {
+        "n": 16,
+        "energy_j": 2.7777654154055966e-06,
+        "max_abs_dihedral_rad": 0.00022222221033379143,
+        "interior_edge_count": 736,
+        "boundary_edge_count": 64,
+        "analytic_energy_j": 2.7777654154055974e-06,
+        "analytic_relative_error": 3.049332181028038e-16
+      },
+      {
+        "n": 32,
+        "energy_j": 1.4351785918137932e-06,
+        "max_abs_dihedral_rad": 0.00011111110962505719,
+        "interior_edge_count": 3008,
+        "boundary_edge_count": 128,
+        "analytic_energy_j": 1.4351785918137958e-06,
+        "analytic_relative_error": 1.7705802304028449e-15
+      }
+    ],
+    "energy_ratio_n32_n4": 0.16145817982468566
+  },
+  "geometry": {
+    "source": "initial/mesh8_sub32_natural.npz",
+    "measure": "전체 25개 probe의 면적 가중 최적 평면 잔차; 탄성 에너지 비율 아님",
+    "observations": [
+      {
+        "frame": 18,
+        "time_s": 0.3,
+        "max_nodal_displacement_m": 0.000980374412357485,
+        "best_plane_probe_rms_m": 9.90506939926929e-05
+      },
+      {
+        "frame": 42,
+        "time_s": 0.7,
+        "max_nodal_displacement_m": 0.0003358696941032739,
+        "best_plane_probe_rms_m": 3.444093559525448e-05
+      },
+      {
+        "frame": 66,
+        "time_s": 1.1,
+        "max_nodal_displacement_m": 0.002840264490334196,
+        "best_plane_probe_rms_m": 0.0002913200518121572
+      },
+      {
+        "frame": 90,
+        "time_s": 1.5,
+        "max_nodal_displacement_m": 0.0020823677899543375,
+        "best_plane_probe_rms_m": 0.00021412502522008257
+      }
+    ]
+  },
+  "interpretation": [
+    "현재 BC에서도 고정된 native 계수의 굽힘 에너지가 해상도에 의존한다.",
+    "시간 간격과 solver iteration 없이 재현되므로 시간 보완만으로 이 항을 해결할 수 없다.",
+    "공간 동역학 오차의 기여율 전부를 이 정적 계산으로 확정하지 않는다.",
+    "수렴 기준을 완화하거나 방향 편향으로 탈락한 면적 보정을 재채택하지 않는다."
+  ],
+  "sources_sha256": {
+    "code/wind3dgs/evaluation/teacher_bending_audit.py": "c116b0b53c8b396b9bba99f752d80c0e85bf90e2e7fb4aaed8e06c2dad844755",
+    "code/wind3dgs/teacher/sample_meshes.py": "d2f435edb31d927ab4b1ea081d785b5bbeedfae45f5fafddbabe605e3193011f",
+    "code/wind3dgs/teacher/velocity_reset.py": "0ed136d8b34999c72481549c3fcab056a3c873ecd0ca59fd72f42c1ba4efe2d8"
+  }
+}

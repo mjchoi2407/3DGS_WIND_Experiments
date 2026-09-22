@@ -1,0 +1,657 @@
+{
+  "rows": [
+    {
+      "case": "bend_001_handkerchief",
+      "original": {
+        "scene": "bend_001/handkerchief",
+        "frame": 98,
+        "substep": 27,
+        "physical_time_s": 1.640624999999927,
+        "force_ratio": 0.022753445432610032,
+        "update_error_m": 5.421010862427522e-20,
+        "energy_ledger_error_j": 0.0,
+        "projected_gradient_upper": 1.0002261078049683,
+        "flags": [
+          "geometry_bound_unresolved"
+        ],
+        "failure_sha256": "8530ff3b4d954d7ab1f074de4851d04a3788656f92b32de57518842743ca27f6",
+        "case": "bend_001_handkerchief",
+        "shape": "handkerchief",
+        "start_s": 1.6403645833332603,
+        "frame_start_s": 1.6333333333332607
+      },
+      "newmark": {
+        "method": "newmark",
+        "steps": 1,
+        "completed": 1,
+        "solver_failure": 0,
+        "counts": [
+          2,
+          1,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          3,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        "audit": {
+          "passed": true,
+          "flags": [
+            0
+          ],
+          "max_checks": [
+            0.004438808189961769,
+            2.9853017238752854e-22,
+            8.470329472543003e-22,
+            1.0002261078049703,
+            0.024015826735922625,
+            14.849104194095275
+          ],
+          "mass_info": 0,
+          "time_failed": false
+        },
+        "solve_record_s": 0.1659851879994676,
+        "audit_post_s": 0.007109280999429757,
+        "total_s": 0.1735005659993476,
+        "timing": "Gauss는 solve_record_s 안에 단계별 검산 포함; Newmark는 audit_post_s에서 독립 검산"
+      },
+      "gauss": {
+        "method": "gauss",
+        "steps": 8,
+        "completed": 8,
+        "solver_failure": 0,
+        "counts": [
+          2,
+          0,
+          0,
+          0,
+          1,
+          0,
+          8,
+          46,
+          1,
+          16
+        ],
+        "audit": {
+          "passed": true,
+          "flags": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "max_checks": [
+            0.004009510976818042,
+            6.900418338598287e-22,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.024015836048114993,
+            14.84901954021472,
+            5.675756021314253e-18,
+            1.0002470007676008,
+            0.9279837285740727
+          ]
+        },
+        "solve_record_s": 0.6343024270008755,
+        "audit_post_s": 0.00025341099899378605,
+        "total_s": 0.6349301820009714,
+        "timing": "Gauss는 solve_record_s 안에 단계별 검산 포함; Newmark는 audit_post_s에서 독립 검산"
+      },
+      "current_selected": "newmark",
+      "current_attempts": 1,
+      "newmark_projected_warning_count": 1,
+      "newmark_projected_max": 1.0002261078049703,
+      "newmark_strain_max": 0.024015826735922625,
+      "gauss_projected_warning_count": 1,
+      "gauss_projected_max": 1.0002470007676008,
+      "gauss_area_lower_min": 0.9279524918556512,
+      "same_held": true,
+      "precision": "FP64 hi/lo",
+      "training_eligible": false,
+      "newmark_original_endpoint_difference": {
+        "position_m": 1.4265373042329732e-16,
+        "velocity_m_s": 1.0955808062222435e-12
+      },
+      "original_projected_bound_difference": 1.9984014443252818e-15
+    },
+    {
+      "case": "bend_001_reference_rectangle",
+      "original": {
+        "scene": "bend_001/reference_rectangle",
+        "frame": 174,
+        "substep": 27,
+        "physical_time_s": 2.907291666667295,
+        "force_ratio": 0.007143815075704783,
+        "update_error_m": 1.0842021724855044e-19,
+        "energy_ledger_error_j": 0.0,
+        "projected_gradient_upper": 1.0000664328274331,
+        "flags": [
+          "geometry_bound_unresolved"
+        ],
+        "failure_sha256": "39613ad8ecf3b966eb07ce985702eb295d69e2b73e22fd9f0ae675f04f885d5a",
+        "case": "bend_001_reference_rectangle",
+        "shape": "reference_rectangle",
+        "start_s": 2.907031250000628,
+        "frame_start_s": 2.9000000000006225
+      },
+      "newmark": {
+        "method": "newmark",
+        "steps": 1,
+        "completed": 1,
+        "solver_failure": 0,
+        "counts": [
+          2,
+          1,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          3,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        "audit": {
+          "passed": true,
+          "flags": [
+            0
+          ],
+          "max_checks": [
+            0.007424689123590603,
+            2.826309568005137e-23,
+            4.336808689942018e-19,
+            1.0000664328274345,
+            0.0014028539684011276,
+            9.242078672605157
+          ],
+          "mass_info": 0,
+          "time_failed": false
+        },
+        "solve_record_s": 0.21177463899948634,
+        "audit_post_s": 0.00766310600010911,
+        "total_s": 0.21982974799902877,
+        "timing": "Gauss는 solve_record_s 안에 단계별 검산 포함; Newmark는 audit_post_s에서 독립 검산"
+      },
+      "gauss": {
+        "method": "gauss",
+        "steps": 8,
+        "completed": 8,
+        "solver_failure": 0,
+        "counts": [
+          2,
+          0,
+          0,
+          0,
+          1,
+          0,
+          8,
+          42,
+          1,
+          16
+        ],
+        "audit": {
+          "passed": true,
+          "flags": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "max_checks": [
+            0.006246644813238974,
+            2.4088082367962527e-22,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0014023923778714235,
+            9.24190901424927,
+            2.366451235950905e-18,
+            1.0000593903910329,
+            0.9957945899313402
+          ]
+        },
+        "solve_record_s": 0.8458971730015037,
+        "audit_post_s": 0.000220599000385846,
+        "total_s": 0.8464643290008098,
+        "timing": "Gauss는 solve_record_s 안에 단계별 검산 포함; Newmark는 audit_post_s에서 독립 검산"
+      },
+      "current_selected": "newmark",
+      "current_attempts": 1,
+      "newmark_projected_warning_count": 1,
+      "newmark_projected_max": 1.0000664328274345,
+      "newmark_strain_max": 0.0014028539684011276,
+      "gauss_projected_warning_count": 3,
+      "gauss_projected_max": 1.0000593903910329,
+      "gauss_area_lower_min": 0.9957928228663822,
+      "same_held": true,
+      "precision": "FP64 hi/lo",
+      "training_eligible": false,
+      "newmark_original_endpoint_difference": {
+        "position_m": 2.276567908340788e-17,
+        "velocity_m_s": 1.748302660325575e-13
+      },
+      "original_projected_bound_difference": 1.3322676295501878e-15
+    },
+    {
+      "case": "bend_001_triangular_flag",
+      "original": {
+        "scene": "bend_001/triangular_flag",
+        "frame": 183,
+        "substep": 59,
+        "physical_time_s": 3.0656250000007543,
+        "force_ratio": 0.005341274468911588,
+        "update_error_m": 1.0842021724855044e-19,
+        "energy_ledger_error_j": 0.0,
+        "projected_gradient_upper": 1.0006292885168648,
+        "flags": [
+          "geometry_bound_unresolved"
+        ],
+        "failure_sha256": "ad89a055286cedcfab0278c0623e039d90f8a630034399573052f62c06d7b961",
+        "case": "bend_001_triangular_flag",
+        "shape": "triangular_flag",
+        "start_s": 3.0653645833340875,
+        "frame_start_s": 3.050000000000742
+      },
+      "newmark": {
+        "method": "newmark",
+        "steps": 1,
+        "completed": 1,
+        "solver_failure": 0,
+        "counts": [
+          2,
+          1,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          3,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        "audit": {
+          "passed": true,
+          "flags": [
+            0
+          ],
+          "max_checks": [
+            0.005239840841317965,
+            1.1093951069152574e-22,
+            0.0,
+            1.0006292885168648,
+            0.0037253658098240655,
+            8.03274225384575
+          ],
+          "mass_info": 0,
+          "time_failed": false
+        },
+        "solve_record_s": 0.13563510299900372,
+        "audit_post_s": 0.006198400998982834,
+        "total_s": 0.14219757899991237,
+        "timing": "Gauss는 solve_record_s 안에 단계별 검산 포함; Newmark는 audit_post_s에서 독립 검산"
+      },
+      "gauss": {
+        "method": "gauss",
+        "steps": 8,
+        "completed": 8,
+        "solver_failure": 0,
+        "counts": [
+          2,
+          0,
+          0,
+          0,
+          1,
+          0,
+          8,
+          42,
+          1,
+          16
+        ],
+        "audit": {
+          "passed": true,
+          "flags": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "max_checks": [
+            0.004621548674517891,
+            2.2924629479368507e-22,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0037253763964284676,
+            8.032837358368274,
+            1.511530294375299e-18,
+            1.0006359155228175,
+            0.9888362485610165
+          ]
+        },
+        "solve_record_s": 0.5930394539991539,
+        "audit_post_s": 0.00025583599926903844,
+        "total_s": 0.5937187010003981,
+        "timing": "Gauss는 solve_record_s 안에 단계별 검산 포함; Newmark는 audit_post_s에서 독립 검산"
+      },
+      "current_selected": "newmark",
+      "current_attempts": 1,
+      "newmark_projected_warning_count": 1,
+      "newmark_projected_max": 1.0006292885168648,
+      "newmark_strain_max": 0.0037253658098240655,
+      "gauss_projected_warning_count": 7,
+      "gauss_projected_max": 1.0006359155228175,
+      "gauss_area_lower_min": 0.988823870810711,
+      "same_held": true,
+      "precision": "FP64 hi/lo",
+      "training_eligible": false,
+      "newmark_original_endpoint_difference": {
+        "position_m": 2.544206118312683e-17,
+        "velocity_m_s": 1.9539479022496172e-13
+      },
+      "original_projected_bound_difference": 0.0
+    },
+    {
+      "case": "bend_010_handkerchief",
+      "original": {
+        "scene": "bend_010/handkerchief",
+        "frame": 112,
+        "substep": 51,
+        "physical_time_s": 1.8802083333332467,
+        "force_ratio": 0.004630681856119628,
+        "update_error_m": 1.0842021724855044e-19,
+        "energy_ledger_error_j": 0.0,
+        "projected_gradient_upper": 1.0005055256007762,
+        "flags": [
+          "geometry_bound_unresolved"
+        ],
+        "failure_sha256": "81fc40c0992c3dfe3645efa5568e90cc4566464fb4f29360eeda41f7825c9e91",
+        "case": "bend_010_handkerchief",
+        "shape": "handkerchief",
+        "start_s": 1.87994791666658,
+        "frame_start_s": 1.8666666666665808
+      },
+      "newmark": {
+        "method": "newmark",
+        "steps": 1,
+        "completed": 1,
+        "solver_failure": 0,
+        "counts": [
+          2,
+          1,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          3,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        "audit": {
+          "passed": true,
+          "flags": [
+            0
+          ],
+          "max_checks": [
+            0.004681270632055088,
+            1.9796030412551296e-22,
+            8.677852544620307e-19,
+            1.0005055256007773,
+            0.022441332978401687,
+            11.381992793998888
+          ],
+          "mass_info": 0,
+          "time_failed": false
+        },
+        "solve_record_s": 0.160138867000569,
+        "audit_post_s": 0.007278582999788341,
+        "total_s": 0.1678285030011466,
+        "timing": "Gauss는 solve_record_s 안에 단계별 검산 포함; Newmark는 audit_post_s에서 독립 검산"
+      },
+      "gauss": {
+        "method": "gauss",
+        "steps": 8,
+        "completed": 8,
+        "solver_failure": 0,
+        "counts": [
+          2,
+          0,
+          0,
+          0,
+          1,
+          0,
+          8,
+          44,
+          1,
+          16
+        ],
+        "audit": {
+          "passed": true,
+          "flags": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "max_checks": [
+            0.003675469762907609,
+            6.722248372850017e-22,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.02244134674119691,
+            11.38200334602184,
+            8.503999032196362e-18,
+            1.0005059846116813,
+            0.9327801729765192
+          ]
+        },
+        "solve_record_s": 0.6298254199991788,
+        "audit_post_s": 0.0002221489994553849,
+        "total_s": 0.6304085110004962,
+        "timing": "Gauss는 solve_record_s 안에 단계별 검산 포함; Newmark는 audit_post_s에서 독립 검산"
+      },
+      "current_selected": "newmark",
+      "current_attempts": 1,
+      "newmark_projected_warning_count": 1,
+      "newmark_projected_max": 1.0005055256007773,
+      "newmark_strain_max": 0.022441332978401687,
+      "gauss_projected_warning_count": 3,
+      "gauss_projected_max": 1.0005059846116813,
+      "gauss_area_lower_min": 0.9326759597764055,
+      "same_held": true,
+      "precision": "FP64 hi/lo",
+      "training_eligible": false,
+      "newmark_original_endpoint_difference": {
+        "position_m": 6.440204440597905e-17,
+        "velocity_m_s": 4.944218894332387e-13
+      },
+      "original_projected_bound_difference": 1.1102230246251565e-15
+    },
+    {
+      "case": "bend_010_triangular_flag",
+      "original": {
+        "scene": "bend_010/triangular_flag",
+        "frame": 205,
+        "substep": 34,
+        "physical_time_s": 3.425781250001041,
+        "force_ratio": 0.005721624069790025,
+        "update_error_m": 5.421010862427522e-20,
+        "energy_ledger_error_j": 0.0,
+        "projected_gradient_upper": 1.001166560032967,
+        "flags": [
+          "geometry_bound_unresolved"
+        ],
+        "failure_sha256": "ed60383fd235979cb54de815a24f5769fcf234b2d3f7fe2afbc92f1218b22f2a",
+        "case": "bend_010_triangular_flag",
+        "shape": "triangular_flag",
+        "start_s": 3.425520833334374,
+        "frame_start_s": 3.4166666666677004
+      },
+      "newmark": {
+        "method": "newmark",
+        "steps": 1,
+        "completed": 1,
+        "solver_failure": 0,
+        "counts": [
+          2,
+          1,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          3,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        "audit": {
+          "passed": true,
+          "flags": [
+            0
+          ],
+          "max_checks": [
+            0.005990199276199283,
+            4.8899528669793013e-23,
+            2.168404344971009e-18,
+            1.001166560032966,
+            0.001112898883089328,
+            2.628719509001701
+          ],
+          "mass_info": 0,
+          "time_failed": false
+        },
+        "solve_record_s": 0.14842030799991335,
+        "audit_post_s": 0.0066912740003317595,
+        "total_s": 0.15543529500064324,
+        "timing": "Gauss는 solve_record_s 안에 단계별 검산 포함; Newmark는 audit_post_s에서 독립 검산"
+      },
+      "gauss": {
+        "method": "gauss",
+        "steps": 8,
+        "completed": 8,
+        "solver_failure": 0,
+        "counts": [
+          2,
+          0,
+          0,
+          0,
+          1,
+          0,
+          8,
+          42,
+          1,
+          16
+        ],
+        "audit": {
+          "passed": true,
+          "flags": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "max_checks": [
+            0.004863765008784323,
+            4.604848208117842e-22,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0011128233527351577,
+            2.6286908702660328,
+            4.885758831656709e-18,
+            1.0011692438975448,
+            0.9966640354408723
+          ]
+        },
+        "solve_record_s": 0.5816077549989132,
+        "audit_post_s": 0.00023220000002766028,
+        "total_s": 0.5822257159998117,
+        "timing": "Gauss는 solve_record_s 안에 단계별 검산 포함; Newmark는 audit_post_s에서 독립 검산"
+      },
+      "current_selected": "newmark",
+      "current_attempts": 1,
+      "newmark_projected_warning_count": 1,
+      "newmark_projected_max": 1.001166560032966,
+      "newmark_strain_max": 0.001112898883089328,
+      "gauss_projected_warning_count": 7,
+      "gauss_projected_max": 1.0011692438975448,
+      "gauss_area_lower_min": 0.996661529941791,
+      "same_held": true,
+      "precision": "FP64 hi/lo",
+      "training_eligible": false,
+      "newmark_original_endpoint_difference": {
+        "position_m": 3.058486709798337e-17,
+        "velocity_m_s": 2.3509963416039083e-13
+      },
+      "original_projected_bound_difference": 8.881784197001252e-16
+    }
+  ],
+  "scope": "실제 실패 직전1/3840초, 원래 프레임 유지 외력. 전체 프레임 재생성은 아님.",
+  "training_eligible": false,
+  "evidence_manifest_sha256": "289050d43059578d5cb06997aaf4df523ec6d15a7ed1195c67ea82a2acd1aeb5"
+}

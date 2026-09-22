@@ -1,0 +1,129 @@
+{
+  "input_sha256": "b1998e0cc033748c54ccce582798ac9c418fb958651ef4fe17e130a8c179e1df",
+  "source_sha256": "e7b0792ee09f1e0d0cc5b8bc7d85edc464bf0420f9aa9e1595b19999aa793280",
+  "wind_sha256": "db9c01a01eecfa78fc1dc581bb8505b8bc518c368001a98faf7894432a60bc59",
+  "runtime_manifest_sha256": "dec67d896537efadf38bbd81f52cb7d726abe4a73e58fcc1b5180ffef52a9df6",
+  "environment": {
+    "device": "cuda:0",
+    "numpy": "2.4.4",
+    "scipy": "1.18.1",
+    "compute_backend": "precision_hvp_graph",
+    "linear_solver_device": "cpu",
+    "cuda_graph": true,
+    "state_encoding": "hi_lo_v1",
+    "state_mantissa_bits": 64,
+    "warp": "1.17.0",
+    "gpu_name": "NVIDIA GeForce GTX 1080 Ti"
+  },
+  "policy": {
+    "force_atol_n": 1e-10,
+    "force_rtol": 1e-09,
+    "displacement_atol_m": 1e-12,
+    "displacement_rtol": 1e-09,
+    "linear_rtol": 1e-10,
+    "max_newton": 15,
+    "linear_cycles": 3,
+    "line_search_steps": 12,
+    "linear_restart": 240,
+    "linear_preconditioner": "current"
+  },
+  "input_time_s": 3.266666666666723,
+  "dt_s": 0.016666666666666666,
+  "order": 4,
+  "action_backend": "taylor",
+  "substeps": 1,
+  "multiplier": 256.0,
+  "training_eligible": false,
+  "continuous_geometry_verified": false,
+  "status": "development_complete",
+  "rows": [
+    {
+      "index": 0,
+      "solve_s": 240.9488035730028,
+      "diagnostics": {
+        "integrator": "p3_shell_exprb4_trial_v1",
+        "order": 4,
+        "dt_s": 0.016666666666666666,
+        "actions": [
+          {
+            "backend": "taylor",
+            "seconds": 102.52632844100299,
+            "matvec_columns": 25185
+          },
+          {
+            "backend": "taylor",
+            "seconds": 54.00163193901244,
+            "matvec_columns": 13170
+          },
+          {
+            "backend": "taylor",
+            "seconds": 82.9123127060011,
+            "matvec_columns": 20186
+          }
+        ],
+        "training_eligible": false,
+        "assembly": {
+          "colors": 276,
+          "nnz": 2478006,
+          "relative_action_error": 3.943764429780607e-16,
+          "assembly_s": 0.5541906090074917
+        },
+        "max_mass_solve_relative_residual": 1.1399867167909533e-15,
+        "coordinate_scale_s_inv": 166433.4093388499,
+        "external_work_j": 0.00018988775435996105,
+        "energy_balance_residual_j": 2.044511114291723e-05,
+        "embedded_position_correction_m": 0.0028108523242727536,
+        "embedded_velocity_correction_m_s": 0.720841277544044
+      },
+      "audit": {
+        "position_update_error_m": 1.3552527156068805e-20,
+        "velocity_update_error_m_s": 2.710505431213761e-20,
+        "force_evaluation_ratios": [
+          0.010134188398334461,
+          0.000725698597777787,
+          0.0007776909743613168,
+          0.002502005629000836
+        ],
+        "energy_ledger_error_j": 1.3886443425744212e-17,
+        "sampled_geometry": [
+          {
+            "projected_gradient_upper": 0.17592677679617033,
+            "roundoff_margin": 2.6900238788024614e-09,
+            "injectivity_sufficient_condition": true,
+            "area_ratio_lower": 0.6790966772015489,
+            "time_degree": 0
+          },
+          {
+            "projected_gradient_upper": 0.20589434034438148,
+            "roundoff_margin": 3.138369000758461e-09,
+            "injectivity_sufficient_condition": true,
+            "area_ratio_lower": 0.630603798697085,
+            "time_degree": 0
+          },
+          {
+            "projected_gradient_upper": 0.20037860178498854,
+            "roundoff_margin": 3.0239404930796287e-09,
+            "injectivity_sufficient_condition": true,
+            "area_ratio_lower": 0.6393943804833299,
+            "time_degree": 0
+          },
+          {
+            "projected_gradient_upper": 0.1908276052287878,
+            "roundoff_margin": 2.9123792976866935e-09,
+            "injectivity_sufficient_condition": true,
+            "area_ratio_lower": 0.6547599644597785,
+            "time_degree": 0
+          }
+        ],
+        "scope": "힘 평가·질량 풀이·표본 기하·에너지 장부 검산. Newton 단계 방정식 잔차나 전체 시간 곡선 기하/정확도 인증 아님.",
+        "passed": true
+      },
+      "end_time_s": 3.2833333333333896
+    }
+  ],
+  "end_time_s": 3.2833333333333896,
+  "endpoint_relative_mass_l2": {
+    "u": 0.003669682498617007,
+    "v": 0.46369376047179633
+  }
+}

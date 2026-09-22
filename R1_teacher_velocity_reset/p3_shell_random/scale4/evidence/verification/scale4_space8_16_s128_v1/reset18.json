@@ -1,0 +1,1656 @@
+{
+  "law": "p3_shell_random_interpolant_response_bound_v2",
+  "first": "20260909_scale4_natural_m8_s128_v1_reset18",
+  "second": "20260909_scale4_natural_m16_s128_v1_reset18",
+  "first_manifest_sha256": "d69fd593e28cc03d0e2cf691d19c8e4c8de8da69ea17dad7d89214e273e90656",
+  "second_manifest_sha256": "cda3c356cb940096a5c1e8d64b737c43307a61512afad231cd84c0c2970c00dd",
+  "parent_manifest_sha256": [
+    "fafb6fdd82e9e0f7ffee0161f280e6b2bda88ccc97366cc8fa2e88105dec3dba",
+    "34b5581e8d4112b13a044bd40a73e4bb2b4b31b44f1a22f661ce5c40dae4cd73"
+  ],
+  "source_sha256": "d312616471f0aa764b4d6af99543c56809d8b8e5cd5c59b033f311c2030e3b5f",
+  "producer_source_sha256": {
+    "wind3dgs/teacher/p3_shell.py": "5c154b6a97fc1ee0e8fbac4cf163acc500b65b8f791a4eb96fd6cbaecc69b922",
+    "wind3dgs/teacher/p3_shell_kernels.py": "53b6d3e27dec960403eac4774927a655b3349a39434f01c6ab42d55a75b6038d",
+    "wind3dgs/teacher/p3_shell_dynamics.py": "97f33708d8f231d8a38cb1b8dc151cde8e21cee1230a162dcdbe96440d216782",
+    "wind3dgs/teacher/p3_shell_bounds.py": "117872569a0f38801842106e7bbff228ba3bf81f8ffd02d501dfa4604ab78dea",
+    "wind3dgs/teacher/p3_surface.py": "5a40e7345bcc68070264d035c275dccb2fe7cf69115ceb605a2fc764ecb1042a",
+    "wind3dgs/teacher/p3_wind_reset.py": "a0958c452d5fc139049024cf823e12f81407215c1d49e22d96d39d71357223b6",
+    "wind3dgs/teacher/shell_structure.py": "2056257d6a7ec35670051db0366197d3ebd1fe917da64c014ae6bdc4bf037879",
+    "wind3dgs/teacher/physics_registry.py": "462ca765801e2d5d4f3ebb4589efce633a03aae8a2a5432c8e68b5e4221047e5",
+    "wind3dgs/teacher/velocity_reset.py": "0ed136d8b34999c72481549c3fcab056a3c873ecd0ca59fd72f42c1ba4efe2d8",
+    "wind3dgs/evaluation/teacher_p3_shell.py": "a4c97bda0038223c00f3ec04a46ad00f0f4c4704e238e4e4de6e8576665ab939",
+    "wind3dgs/evaluation/teacher_p3_shell_validation.py": "b4bc4b9f0e86193e23d6d7a9b75d5cb108c17a9cab098ea41f6cf1bf7bb4329a",
+    "wind3dgs/evaluation/teacher_plate_cubic.py": "b20120b72f9cce4d4f95643f0c62cfe33d6315829a406f2b47721cff8bf57a19",
+    "wind3dgs/evaluation/teacher_plate_c0ip.py": "6575a8e54b1325c8e3a2b2889d18e7ace1caf3f092a98107cab9e1382da7ae2f",
+    "wind3dgs/evaluation/teacher_plate_galerkin.py": "b9fefd812ba1c9c90212d27b40b3ea5dd0986dbed7470224689c87e53a16ec27",
+    "wind3dgs/evaluation/teacher_plate_reference.py": "9c0dcbeffb8c9b7f9ac9533ef15b0053bc918f401a62df152a35b9814b212b6f",
+    "wind3dgs/evaluation/teacher_p3_wind_reset.py": "ffdf5820cdaee581af25d1c48a105db0b327243fa947af245853f0de1a12a0af",
+    "wind3dgs/teacher/p3_shell_warp.py": "67fc5c3648810d51384cd0951df334ea947d8f6ae7049748c8ce184d0a35d8cd",
+    "wind3dgs/teacher/p3_shell_warp_kernels.py": "4ff7e5c03f839a81c4bc26c83db89d78d9d48b8216871cddea0e3f31957a347d",
+    "wind3dgs/evaluation/teacher_p3_shell_gpu.py": "469010a6e976fd23333bdaa995c80f7f6d8575fe6c2ff4473654970b73d962bc",
+    "tests/test_teacher_p3_shell_warp.py": "405687032e6f9ace702bb4030ddc4ed811ee44c85381baa84b97df3deb744499",
+    "scripts/check_teacher_p3_shell_gpu.sh": "04c9826c441e9e4871dd7ff77834ec43fb7526346903ce578d0d5e829f3efc49",
+    "pyproject.toml": "0b91786093f1a1d36e9bc6de16f37175781aa9dc7d562aaf440021b5764dfb60",
+    "wind3dgs/evaluation/teacher_p3_shell_random.py": "75397d270dcc52a5de5dd2f7e26454c9fe717ce72de6a7533b64b39d079f617f",
+    "wind3dgs/evaluation/teacher_p3_shell_random_validation.py": "1cad75e38ba45102c6fa4ae7659731d6409425bf3bce52c3aa74897823415c6e",
+    "tests/test_teacher_p3_shell_random.py": "97fca0c93410c9c81b613cf01141b26ad79eb73b6700859f3cb9b09afb1f6df1",
+    "scripts/check_teacher_p3_shell_random.sh": "000a6106abea6a8a94064dee20433d1e595d60bf388ab11651d549218a043ea3"
+  },
+  "frame_results": [
+    {
+      "frame": 18,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 2.0306378417712193e-06,
+          "reference": 0.01337557499730211
+        },
+        "v_m_s": {
+          "error": 8.503439401552626e-05,
+          "reference": 0.02569821053673755
+        },
+        "delta_u_m": {
+          "error": 3.4805391720989716e-07,
+          "reference": 0.00021435120825215678
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        9.342027199908449e-15,
+        9.165722072238565e-15
+      ],
+      "position_lipschitz_padding_m": 5.536093361590756e-09
+    },
+    {
+      "frame": 19,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 2.078486142897518e-06,
+          "reference": 0.01400153798749652
+        },
+        "v_m_s": {
+          "error": 8.923423649404586e-05,
+          "reference": 0.04937021541092168
+        },
+        "delta_u_m": {
+          "error": 3.482129012242155e-07,
+          "reference": 0.0008405068860005756
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        9.832571632618274e-15,
+        9.31389234654933e-15
+      ],
+      "position_lipschitz_padding_m": 5.8095206063276254e-09
+    },
+    {
+      "frame": 20,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 2.2159449644888116e-06,
+          "reference": 0.015006949161188249
+        },
+        "v_m_s": {
+          "error": 0.00010983443835828716,
+          "reference": 0.07119985241579871
+        },
+        "delta_u_m": {
+          "error": 4.1196846675745175e-07,
+          "reference": 0.001846180267483826
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        9.761727634667288e-15,
+        9.508548137517857e-15
+      ],
+      "position_lipschitz_padding_m": 7.150679581872229e-09
+    },
+    {
+      "frame": 21,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 2.4128092680606045e-06,
+          "reference": 0.01636238590653446
+        },
+        "v_m_s": {
+          "error": 0.0001262397518638099,
+          "reference": 0.09135042035424641
+        },
+        "delta_u_m": {
+          "error": 6.061129389796365e-07,
+          "reference": 0.003201924510970516
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        1.0295968374996239e-14,
+        9.839504515149315e-15
+      ],
+      "position_lipschitz_padding_m": 8.218733846611027e-09
+    },
+    {
+      "frame": 22,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 2.686801863354308e-06,
+          "reference": 0.018041006901626952
+        },
+        "v_m_s": {
+          "error": 0.00012919885439987593,
+          "reference": 0.10998728792663262
+        },
+        "delta_u_m": {
+          "error": 8.935878625317133e-07,
+          "reference": 0.004880987188732143
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        1.2720274508330694e-14,
+        1.2271350190250822e-14
+      ],
+      "position_lipschitz_padding_m": 8.41138375161898e-09
+    },
+    {
+      "frame": 23,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 3.0626195086959233e-06,
+          "reference": 0.020018595059657324
+        },
+        "v_m_s": {
+          "error": 0.0001269567699476435,
+          "reference": 0.12727106393095844
+        },
+        "delta_u_m": {
+          "error": 1.2611545540872408e-06,
+          "reference": 0.006859341314351151
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        1.5472094429064543e-14,
+        1.4309030547454573e-14
+      ],
+      "position_lipschitz_padding_m": 8.265414712071917e-09
+    },
+    {
+      "frame": 24,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 3.520697049352321e-06,
+          "reference": 0.022273553739770684
+        },
+        "v_m_s": {
+          "error": 0.0001307157946833593,
+          "reference": 0.14333975853774944
+        },
+        "delta_u_m": {
+          "error": 1.7080836334066002e-06,
+          "reference": 0.009115555297379995
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        1.7154506470592418e-14,
+        1.5457342970629727e-14
+      ],
+      "position_lipschitz_padding_m": 8.510142885154372e-09
+    },
+    {
+      "frame": 25,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 4.009422277445595e-06,
+          "reference": 0.02473581291380657
+        },
+        "v_m_s": {
+          "error": 0.00013664529010157622,
+          "reference": 0.1523981805752527
+        },
+        "delta_u_m": {
+          "error": 2.2037148983681233e-06,
+          "reference": 0.011579994580663323
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        1.8044974105638862e-14,
+        1.7108434089000695e-14
+      ],
+      "position_lipschitz_padding_m": 8.896177743276668e-09
+    },
+    {
+      "frame": 26,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 4.526651125279605e-06,
+          "reference": 0.027296347358873246
+        },
+        "v_m_s": {
+          "error": 0.00018677247681180513,
+          "reference": 0.1557020399401885
+        },
+        "delta_u_m": {
+          "error": 2.748246525113841e-06,
+          "reference": 0.014144458028937601
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        1.9921078690269265e-14,
+        1.814105247797353e-14
+      ],
+      "position_lipschitz_padding_m": 1.21596664615799e-08
+    },
+    {
+      "frame": 27,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 5.070896597413001e-06,
+          "reference": 0.02986452966933563
+        },
+        "v_m_s": {
+          "error": 0.0002814143388415557,
+          "reference": 0.1557020399401885
+        },
+        "delta_u_m": {
+          "error": 3.342667271532061e-06,
+          "reference": 0.016718805735257185
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        1.9377855542551495e-14,
+        1.8857180591205192e-14
+      ],
+      "position_lipschitz_padding_m": 1.8321246020819707e-08
+    },
+    {
+      "frame": 28,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 5.621269471692878e-06,
+          "reference": 0.03236264821244275
+        },
+        "v_m_s": {
+          "error": 0.00035959461913720534,
+          "reference": 0.1540485167944343
+        },
+        "delta_u_m": {
+          "error": 3.959585302195186e-06,
+          "reference": 0.019224995296461198
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        2.17555710181429e-14,
+        1.996586619089044e-14
+      ],
+      "position_lipschitz_padding_m": 2.341110801946138e-08
+    },
+    {
+      "frame": 29,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 6.127016362689238e-06,
+          "reference": 0.034721383705867144
+        },
+        "v_m_s": {
+          "error": 0.00036983005634029265,
+          "reference": 0.14781909431849083
+        },
+        "delta_u_m": {
+          "error": 4.569278208046065e-06,
+          "reference": 0.02159233916899266
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        2.5972393051697697e-14,
+        2.3929708375976047e-14
+      ],
+      "position_lipschitz_padding_m": 2.4077477629569968e-08
+    },
+    {
+      "frame": 30,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 6.641159344579367e-06,
+          "reference": 0.036877685387280104
+        },
+        "v_m_s": {
+          "error": 0.0003474506325408129,
+          "reference": 0.13729550576908894
+        },
+        "delta_u_m": {
+          "error": 5.222627435592385e-06,
+          "reference": 0.02375590982133527
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        2.6352674891124435e-14,
+        2.5785239014196567e-14
+      ],
+      "position_lipschitz_padding_m": 2.2620483892770233e-08
+    },
+    {
+      "frame": 31,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 7.283798921207701e-06,
+          "reference": 0.03877499362947517
+        },
+        "v_m_s": {
+          "error": 0.0003541584466067682,
+          "reference": 0.12294382195650047
+        },
+        "delta_u_m": {
+          "error": 6.000108604913087e-06,
+          "reference": 0.025657835727238155
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        3.024070792811991e-14,
+        2.8022939385845656e-14
+      ],
+      "position_lipschitz_padding_m": 2.3057190538088013e-08
+    },
+    {
+      "frame": 32,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 8.117011826094862e-06,
+          "reference": 0.040364639856863185
+        },
+        "v_m_s": {
+          "error": 0.0003346859720277971,
+          "reference": 0.10546772479474953
+        },
+        "delta_u_m": {
+          "error": 6.93386752537305e-06,
+          "reference": 0.027249281529466984
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        3.136575888143853e-14,
+        2.8467119538722754e-14
+      ],
+      "position_lipschitz_padding_m": 2.1789451307788412e-08
+    },
+    {
+      "frame": 33,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 9.070689091920098e-06,
+          "reference": 0.04160709011138377
+        },
+        "v_m_s": {
+          "error": 0.0003755584300104319,
+          "reference": 0.08556911792755117
+        },
+        "delta_u_m": {
+          "error": 7.97028017618359e-06,
+          "reference": 0.028491412137350465
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        3.296089186883056e-14,
+        2.9662252931191224e-14
+      ],
+      "position_lipschitz_padding_m": 2.4450418624547854e-08
+    },
+    {
+      "frame": 34,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 1.0152412053560054e-05,
+          "reference": 0.04247198409183154
+        },
+        "v_m_s": {
+          "error": 0.0003863548452802894,
+          "reference": 0.06378216535332697
+        },
+        "delta_u_m": {
+          "error": 9.084839889950819e-06,
+          "reference": 0.02935497374188389
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        3.289394062280562e-14,
+        3.0293569058568874e-14
+      ],
+      "position_lipschitz_padding_m": 2.5153310243715943e-08
+    },
+    {
+      "frame": 35,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 1.137979469975186e-05,
+          "reference": 0.0429375205971536
+        },
+        "v_m_s": {
+          "error": 0.00040095832486471963,
+          "reference": 0.04048204750059084
+        },
+        "delta_u_m": {
+          "error": 1.0284316339237156e-05,
+          "reference": 0.029819275101882023
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        3.2710616128719636e-14,
+        3.09187068990389e-14
+      ],
+      "position_lipschitz_padding_m": 2.610405761252272e-08
+    },
+    {
+      "frame": 36,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 1.2702982813680789e-05,
+          "reference": 0.043019244594089734
+        },
+        "v_m_s": {
+          "error": 0.0003897706356560354,
+          "reference": 0.016069590192233755
+        },
+        "delta_u_m": {
+          "error": 1.1572229102313742e-05,
+          "reference": 0.029900651185981772
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        3.2095831778195395e-14,
+        3.142848353210212e-14
+      ],
+      "position_lipschitz_padding_m": 2.5375692429658835e-08
+    },
+    {
+      "frame": 37,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 1.4056997305487263e-05,
+          "reference": 0.04298998864197685
+        },
+        "v_m_s": {
+          "error": 0.0003985089207786678,
+          "reference": 0.034871160134386105
+        },
+        "delta_u_m": {
+          "error": 1.291637304611795e-05,
+          "reference": 0.029871391137980215
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        3.2126732884757424e-14,
+        3.095933542026585e-14
+      ],
+      "position_lipschitz_padding_m": 2.5944591200635017e-08
+    },
+    {
+      "frame": 38,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 1.541880252134915e-05,
+          "reference": 0.0426237027470765
+        },
+        "v_m_s": {
+          "error": 0.00043431726774215417,
+          "reference": 0.05981202443932059
+        },
+        "delta_u_m": {
+          "error": 1.4286200941086077e-05,
+          "reference": 0.029505870080109808
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        3.197433196996038e-14,
+        3.039041308240784e-14
+      ],
+      "position_lipschitz_padding_m": 2.8275863789356698e-08
+    },
+    {
+      "frame": 39,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 1.6725997971812495e-05,
+          "reference": 0.041840196120339915
+        },
+        "v_m_s": {
+          "error": 0.0004728938096706743,
+          "reference": 0.0842050850380637
+        },
+        "delta_u_m": {
+          "error": 1.561736193183426e-05,
+          "reference": 0.028724064313665996
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        3.250931042588927e-14,
+        3.0254392890187566e-14
+      ],
+      "position_lipschitz_padding_m": 3.07873574045207e-08
+    },
+    {
+      "frame": 40,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 1.7941381061343246e-05,
+          "reference": 0.040645454821739105
+        },
+        "v_m_s": {
+          "error": 0.0004718707992839165,
+          "reference": 0.10811169405880061
+        },
+        "delta_u_m": {
+          "error": 1.68989148810443e-05,
+          "reference": 0.02753150231861952
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        2.962685439211701e-14,
+        2.9161140211923735e-14
+      ],
+      "position_lipschitz_padding_m": 3.072075516554066e-08
+    },
+    {
+      "frame": 41,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 1.9116264144990933e-05,
+          "reference": 0.0390468435260546
+        },
+        "v_m_s": {
+          "error": 0.00047359820464276957,
+          "reference": 0.13154879463725108
+        },
+        "delta_u_m": {
+          "error": 1.816548840787774e-05,
+          "reference": 0.025934915052135216
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        2.936463278052674e-14,
+        2.86117758947274e-14
+      ],
+      "position_lipschitz_padding_m": 3.083321645187148e-08
+    },
+    {
+      "frame": 42,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 2.027620449868016e-05,
+          "reference": 0.037052480896417904
+        },
+        "v_m_s": {
+          "error": 0.00048107773291964636,
+          "reference": 0.15445566667841962
+        },
+        "delta_u_m": {
+          "error": 1.9406210374789268e-05,
+          "reference": 0.023941823242590275
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        2.7856134946742614e-14,
+        2.7064111707187077e-14
+      ],
+      "position_lipschitz_padding_m": 3.132016490719835e-08
+    },
+    {
+      "frame": 43,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 2.1376269613589067e-05,
+          "reference": 0.034671195658313725
+        },
+        "v_m_s": {
+          "error": 0.0005319642295938637,
+          "reference": 0.17673185344307774
+        },
+        "delta_u_m": {
+          "error": 2.055698251661035e-05,
+          "reference": 0.021561019135126543
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        2.6038820422543748e-14,
+        2.4670515950384473e-14
+      ],
+      "position_lipschitz_padding_m": 3.463308786748522e-08
+    },
+    {
+      "frame": 44,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 2.2348468640091963e-05,
+          "reference": 0.03191274680634416
+        },
+        "v_m_s": {
+          "error": 0.0005904839205287227,
+          "reference": 0.19830540039257652
+        },
+        "delta_u_m": {
+          "error": 2.1568825020418462e-05,
+          "reference": 0.01880314997097548
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        2.0949933175292003e-14,
+        1.9292085187335554e-14
+      ],
+      "position_lipschitz_padding_m": 3.844296357870864e-08
+    },
+    {
+      "frame": 45,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 2.3164691425010847e-05,
+          "reference": 0.028788161861271224
+        },
+        "v_m_s": {
+          "error": 0.0006003169316030883,
+          "reference": 0.2191389793372983
+        },
+        "delta_u_m": {
+          "error": 2.2403791448160632e-05,
+          "reference": 0.015681163997678365
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        1.870624393014869e-14,
+        1.822606381421302e-14
+      ],
+      "position_lipschitz_padding_m": 3.908313357031384e-08
+    },
+    {
+      "frame": 46,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 2.3801733368031946e-05,
+          "reference": 0.025309918309296534
+        },
+        "v_m_s": {
+          "error": 0.0005753279514376294,
+          "reference": 0.2391866284061598
+        },
+        "delta_u_m": {
+          "error": 2.3024333364251956e-05,
+          "reference": 0.012211512561142432
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        1.7456041172298842e-14,
+        1.6625011113554504e-14
+      ],
+      "position_lipschitz_padding_m": 3.7456246840606145e-08
+    },
+    {
+      "frame": 47,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 2.4199075409274897e-05,
+          "reference": 0.02149213994914054
+        },
+        "v_m_s": {
+          "error": 0.0006111349305115871,
+          "reference": 0.25838444381607245
+        },
+        "delta_u_m": {
+          "error": 2.3415102513144514e-05,
+          "reference": 0.008419603570083822
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        1.5750009338709856e-14,
+        1.4792015790783368e-14
+      ],
+      "position_lipschitz_padding_m": 3.978743037383653e-08
+    },
+    {
+      "frame": 48,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 2.4303692804080375e-05,
+          "reference": 0.017350700726296256
+        },
+        "v_m_s": {
+          "error": 0.0006295821045657067,
+          "reference": 0.2766841710435222
+        },
+        "delta_u_m": {
+          "error": 2.354405280803664e-05,
+          "reference": 0.004377469101831812
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        1.2520935435195935e-14,
+        1.193331613032792e-14
+      ],
+      "position_lipschitz_padding_m": 4.098841826758861e-08
+    },
+    {
+      "frame": 49,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 2.431407955289815e-05,
+          "reference": 0.012903701919683255
+        },
+        "v_m_s": {
+          "error": 0.0006651788155976213,
+          "reference": 0.2857915994992852
+        },
+        "delta_u_m": {
+          "error": 2.355778291524966e-05,
+          "reference": 0.005171666919799636
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        8.582246561872359e-15,
+        8.27291634024998e-15
+      ],
+      "position_lipschitz_padding_m": 4.330591247490081e-08
+    },
+    {
+      "frame": 50,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 2.4149245483284174e-05,
+          "reference": 0.008235585807671496
+        },
+        "v_m_s": {
+          "error": 0.0007553456192688005,
+          "reference": 0.2897238491750334
+        },
+        "delta_u_m": {
+          "error": 2.3426431980242934e-05,
+          "reference": 0.009845438252167766
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        5.798482062221582e-15,
+        5.642777883799514e-15
+      ],
+      "position_lipschitz_padding_m": 4.91761470885574e-08
+    },
+    {
+      "frame": 51,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 2.377980544877109e-05,
+          "reference": 0.003472263773546888
+        },
+        "v_m_s": {
+          "error": 0.0008203697555275649,
+          "reference": 0.2897238491750334
+        },
+        "delta_u_m": {
+          "error": 2.309171356979393e-05,
+          "reference": 0.014590842820455979
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        2.1365905182153574e-15,
+        2.1733176941206512e-15
+      ],
+      "position_lipschitz_padding_m": 5.3409489292439765e-08
+    },
+    {
+      "frame": 52,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 2.3223611089943202e-05,
+          "reference": 0.006098058649206149
+        },
+        "v_m_s": {
+          "error": 0.000917231579891719,
+          "reference": 0.28765503610831916
+        },
+        "delta_u_m": {
+          "error": 2.259746292065511e-05,
+          "reference": 0.019251638359388392
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        4.098763361679485e-15,
+        4.147902190556093e-15
+      ],
+      "position_lipschitz_padding_m": 5.971559764973735e-08
+    },
+    {
+      "frame": 53,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 2.2424348018230246e-05,
+          "reference": 0.010526447137037114
+        },
+        "v_m_s": {
+          "error": 0.000884539063876072,
+          "reference": 0.2767130928490588
+        },
+        "delta_u_m": {
+          "error": 2.186473341686225e-05,
+          "reference": 0.023663388416215857
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        7.907198110139033e-15,
+        7.202241253281651e-15
+      ],
+      "position_lipschitz_padding_m": 5.758717863874879e-08
+    },
+    {
+      "frame": 54,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 2.1333066964632062e-05,
+          "reference": 0.014513333809255262
+        },
+        "v_m_s": {
+          "error": 0.0008060226268543223,
+          "reference": 0.25523329219371016
+        },
+        "delta_u_m": {
+          "error": 2.0796010492907804e-05,
+          "reference": 0.027642954998108434
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        9.26980355916746e-15,
+        8.96029607740766e-15
+      ],
+      "position_lipschitz_padding_m": 5.2475431437015135e-08
+    },
+    {
+      "frame": 55,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 2.0006118747447806e-05,
+          "reference": 0.017876422000523168
+        },
+        "v_m_s": {
+          "error": 0.0008191303119919898,
+          "reference": 0.22311033542644954
+        },
+        "delta_u_m": {
+          "error": 1.9436174835845483e-05,
+          "reference": 0.03100569960159797
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        1.2635413070900755e-14,
+        1.2277786501526937e-14
+      ],
+      "position_lipschitz_padding_m": 5.3328796355267127e-08
+    },
+    {
+      "frame": 56,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 1.853561701794523e-05,
+          "reference": 0.02044658770845207
+        },
+        "v_m_s": {
+          "error": 0.0008822756499042716,
+          "reference": 0.18067971518654347
+        },
+        "delta_u_m": {
+          "error": 1.793204271830232e-05,
+          "reference": 0.033577007322394
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        1.541049324321529e-14,
+        1.4825808993367796e-14
+      ],
+      "position_lipschitz_padding_m": 5.743982095927786e-08
+    },
+    {
+      "frame": 57,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 1.7044365412234652e-05,
+          "reference": 0.022069550501213273
+        },
+        "v_m_s": {
+          "error": 0.0009617288923176615,
+          "reference": 0.12819507566918534
+        },
+        "delta_u_m": {
+          "error": 1.6439960287223488e-05,
+          "reference": 0.03519893934073594
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        1.6574232423861323e-14,
+        1.5632114688231744e-14
+      ],
+      "position_lipschitz_padding_m": 6.261255809569452e-08
+    },
+    {
+      "frame": 58,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 1.546898827023818e-05,
+          "reference": 0.02261367339394206
+        },
+        "v_m_s": {
+          "error": 0.0010474245263136367,
+          "reference": 0.06684639716598664
+        },
+        "delta_u_m": {
+          "error": 1.483008521237048e-05,
+          "reference": 0.03573770772838408
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        1.6973822125424677e-14,
+        1.6034739444190607e-14
+      ],
+      "position_lipschitz_padding_m": 6.819170093402638e-08
+    },
+    {
+      "frame": 59,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 1.3932100874711109e-05,
+          "reference": 0.02261341096638487
+        },
+        "v_m_s": {
+          "error": 0.0011837021578233332,
+          "reference": 0.08216508786368937
+        },
+        "delta_u_m": {
+          "error": 1.332218237886541e-05,
+          "reference": 0.03573723277520346
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        1.7253135711255173e-14,
+        1.6064734175372567e-14
+      ],
+      "position_lipschitz_padding_m": 7.706394256879239e-08
+    },
+    {
+      "frame": 60,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 1.2542424142291719e-05,
+          "reference": 0.021977739489437223
+        },
+        "v_m_s": {
+          "error": 0.0013962642743224742,
+          "reference": 0.15944424045796296
+        },
+        "delta_u_m": {
+          "error": 1.2037593377215622e-05,
+          "reference": 0.03508770854278081
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        1.6127764174296553e-14,
+        1.5706924570243174e-14
+      ],
+      "position_lipschitz_padding_m": 9.090262202827532e-08
+    },
+    {
+      "frame": 61,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 1.133454482494716e-05,
+          "reference": 0.02009739273641224
+        },
+        "v_m_s": {
+          "error": 0.0013896786704102836,
+          "reference": 0.20896096149423918
+        },
+        "delta_u_m": {
+          "error": 1.0903497446303652e-05,
+          "reference": 0.03317764550289681
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        1.5120672137368778e-14,
+        1.4515867988328642e-14
+      ],
+      "position_lipschitz_padding_m": 9.04738717734323e-08
+    },
+    {
+      "frame": 62,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 1.0294016063898441e-05,
+          "reference": 0.017155463867872964
+        },
+        "v_m_s": {
+          "error": 0.001314156202319576,
+          "reference": 0.24266339404450699
+        },
+        "delta_u_m": {
+          "error": 9.852630925042193e-06,
+          "reference": 0.030187125678139286
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        1.2182137260528008e-14,
+        1.2043620917310729e-14
+      ],
+      "position_lipschitz_padding_m": 8.55570444234246e-08
+    },
+    {
+      "frame": 63,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 9.084242736328038e-06,
+          "reference": 0.013478005733216
+        },
+        "v_m_s": {
+          "error": 0.0014412674676609824,
+          "reference": 0.26760100582499724
+        },
+        "delta_u_m": {
+          "error": 8.6270708172124e-06,
+          "reference": 0.0264554326913799
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        8.268256886864974e-15,
+        8.33881174046551e-15
+      ],
+      "position_lipschitz_padding_m": 9.38325174269264e-08
+    },
+    {
+      "frame": 64,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 8.015055221978232e-06,
+          "reference": 0.009268438578434164
+        },
+        "v_m_s": {
+          "error": 0.0017123141984859082,
+          "reference": 0.2850140508373955
+        },
+        "delta_u_m": {
+          "error": 7.448231341685456e-06,
+          "reference": 0.02220991409268328
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        6.921142183681041e-15,
+        6.485613914526214e-15
+      ],
+      "position_lipschitz_padding_m": 1.1147878896479915e-07
+    },
+    {
+      "frame": 65,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 7.508384466519277e-06,
+          "reference": 0.004686248648754219
+        },
+        "v_m_s": {
+          "error": 0.0019294871327897036,
+          "reference": 0.29377652653869885
+        },
+        "delta_u_m": {
+          "error": 6.710736563613947e-06,
+          "reference": 0.017630988142628905
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        3.38031424781515e-15,
+        3.1927902933258805e-15
+      ],
+      "position_lipschitz_padding_m": 1.256176518747576e-07
+    },
+    {
+      "frame": 66,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 7.100325640729909e-06,
+          "reference": 0.0051076875706934045
+        },
+        "v_m_s": {
+          "error": 0.001823590448528244,
+          "reference": 0.29445062143070905
+        },
+        "delta_u_m": {
+          "error": 6.284267754121822e-06,
+          "reference": 0.01288849180129713
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        3.4079132428602736e-15,
+        3.5334861596272313e-15
+      ],
+      "position_lipschitz_padding_m": 1.1872333649317613e-07
+    },
+    {
+      "frame": 67,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 6.251492711569324e-06,
+          "reference": 0.009945423532082574
+        },
+        "v_m_s": {
+          "error": 0.001542050984551944,
+          "reference": 0.29364182814045203
+        },
+        "delta_u_m": {
+          "error": 5.738820160567832e-06,
+          "reference": 0.008156198687843333
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        7.166547795309819e-15,
+        6.9410973110485165e-15
+      ],
+      "position_lipschitz_padding_m": 1.0039394430768565e-07
+    },
+    {
+      "frame": 68,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 5.539437458331473e-06,
+          "reference": 0.01464713290514001
+        },
+        "v_m_s": {
+          "error": 0.0014395418369248165,
+          "reference": 0.2875428482118504
+        },
+        "delta_u_m": {
+          "error": 5.990888962021742e-06,
+          "reference": 0.003709359711928532
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        9.525133367286909e-15,
+        9.019005743439632e-15
+      ],
+      "position_lipschitz_padding_m": 9.372017167600005e-08
+    },
+    {
+      "frame": 69,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 6.365175993171612e-06,
+          "reference": 0.019165407952672353
+        },
+        "v_m_s": {
+          "error": 0.0017877578375240422,
+          "reference": 0.2790991631558208
+        },
+        "delta_u_m": {
+          "error": 7.2766884688479454e-06,
+          "reference": 0.006197847927076817
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        1.4185303138560888e-14,
+        1.371077418477546e-14
+      ],
+      "position_lipschitz_padding_m": 1.1639048421562098e-07
+    },
+    {
+      "frame": 70,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 7.423177340781049e-06,
+          "reference": 0.023464962041943333
+        },
+        "v_m_s": {
+          "error": 0.0020575762785014127,
+          "reference": 0.26911587557769945
+        },
+        "delta_u_m": {
+          "error": 8.387603332598892e-06,
+          "reference": 0.010364856542412258
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        1.7237519800282194e-14,
+        1.6094453624685052e-14
+      ],
+      "position_lipschitz_padding_m": 1.3395678896710576e-07
+    },
+    {
+      "frame": 71,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 8.276547691573958e-06,
+          "reference": 0.02748379368709956
+        },
+        "v_m_s": {
+          "error": 0.0020556715942375943,
+          "reference": 0.2548353843196388
+        },
+        "delta_u_m": {
+          "error": 9.184770967414307e-06,
+          "reference": 0.01434583419983713
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        1.8795559111873525e-14,
+        1.8059159830708863e-14
+      ],
+      "position_lipschitz_padding_m": 1.338327860855761e-07
+    },
+    {
+      "frame": 72,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 9.096468312988265e-06,
+          "reference": 0.031132236554369634
+        },
+        "v_m_s": {
+          "error": 0.0020235575556138093,
+          "reference": 0.23368803371622543
+        },
+        "delta_u_m": {
+          "error": 9.573267444800789e-06,
+          "reference": 0.017985537390710946
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        1.93218353515072e-14,
+        1.9329337947286945e-14
+      ],
+      "position_lipschitz_padding_m": 1.3174202836279042e-07
+    },
+    {
+      "frame": 73,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 1.032434894395908e-05,
+          "reference": 0.0343509806112846
+        },
+        "v_m_s": {
+          "error": 0.002151829871015741,
+          "reference": 0.2068126017919555
+        },
+        "delta_u_m": {
+          "error": 1.0463990917325475e-05,
+          "reference": 0.02120485875426659
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        2.2412849528563685e-14,
+        2.207975357469123e-14
+      ],
+      "position_lipschitz_padding_m": 1.4009309056381728e-07
+    },
+    {
+      "frame": 74,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 1.1973500518568718e-05,
+          "reference": 0.03713006161538871
+        },
+        "v_m_s": {
+          "error": 0.00243314048171254,
+          "reference": 0.18137296507920705
+        },
+        "delta_u_m": {
+          "error": 1.1806769407890832e-05,
+          "reference": 0.023991654421111428
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        2.5595846573622737e-14,
+        2.534786522880771e-14
+      ],
+      "position_lipschitz_padding_m": 1.5840758344814345e-07
+    },
+    {
+      "frame": 75,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 1.3201663396671147e-05,
+          "reference": 0.0394731572807218
+        },
+        "v_m_s": {
+          "error": 0.0026706143239119138,
+          "reference": 0.15876197078531376
+        },
+        "delta_u_m": {
+          "error": 1.2799103965911308e-05,
+          "reference": 0.0263514405176931
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        3.0379993049099587e-14,
+        2.878501542607293e-14
+      ],
+      "position_lipschitz_padding_m": 1.7386812005020043e-07
+    },
+    {
+      "frame": 76,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 1.4157590976481271e-05,
+          "reference": 0.041381543202351316
+        },
+        "v_m_s": {
+          "error": 0.0026118262603531143,
+          "reference": 0.13542592783060173
+        },
+        "delta_u_m": {
+          "error": 1.3630790722867593e-05,
+          "reference": 0.028281267667103368
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        3.218107524150466e-14,
+        2.9467847511407294e-14
+      ],
+      "position_lipschitz_padding_m": 1.700407721624195e-07
+    },
+    {
+      "frame": 77,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 1.3477483636717929e-05,
+          "reference": 0.042849029257352685
+        },
+        "v_m_s": {
+          "error": 0.0026136755908777267,
+          "reference": 0.1078609744313951
+        },
+        "delta_u_m": {
+          "error": 1.3038545099802569e-05,
+          "reference": 0.029764756351784057
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        3.1694740658401733e-14,
+        3.0349747206424464e-14
+      ],
+      "position_lipschitz_padding_m": 1.7016117128514136e-07
+    },
+    {
+      "frame": 78,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 1.24900823675274e-05,
+          "reference": 0.04386854295817133
+        },
+        "v_m_s": {
+          "error": 0.002643321959798554,
+          "reference": 0.07681740709226863
+        },
+        "delta_u_m": {
+          "error": 1.2265568901621589e-05,
+          "reference": 0.030786845462634847
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        3.2834077944778646e-14,
+        3.120672563645303e-14
+      ],
+      "position_lipschitz_padding_m": 1.7209127342855435e-07
+    },
+    {
+      "frame": 79,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 1.2231101759093466e-05,
+          "reference": 0.04444173085634283
+        },
+        "v_m_s": {
+          "error": 0.002768447758044024,
+          "reference": 0.050073811218599586
+        },
+        "delta_u_m": {
+          "error": 1.2553802781845295e-05,
+          "reference": 0.03134973431737576
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        3.29525804688263e-14,
+        3.1540564919264494e-14
+      ],
+      "position_lipschitz_padding_m": 1.8023748425185657e-07
+    },
+    {
+      "frame": 80,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 1.3296008533972722e-05,
+          "reference": 0.04458595026842536
+        },
+        "v_m_s": {
+          "error": 0.00304541524664792,
+          "reference": 0.04171269305282369
+        },
+        "delta_u_m": {
+          "error": 1.369228307218501e-05,
+          "reference": 0.031481141442472584
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        3.258327447870812e-14,
+        3.200972302051754e-14
+      ],
+      "position_lipschitz_padding_m": 1.9826922179117922e-07
+    },
+    {
+      "frame": 81,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 1.3206887617585567e-05,
+          "reference": 0.044578802518385176
+        },
+        "v_m_s": {
+          "error": 0.0031266166947935083,
+          "reference": 0.04764834879765964
+        },
+        "delta_u_m": {
+          "error": 1.3684889060175384e-05,
+          "reference": 0.03147069710322316
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        3.27455055834231e-14,
+        3.194454599597893e-14
+      ],
+      "position_lipschitz_padding_m": 2.035557744048306e-07
+    },
+    {
+      "frame": 82,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 1.250929289915043e-05,
+          "reference": 0.04428770961389714
+        },
+        "v_m_s": {
+          "error": 0.0030179987272411506,
+          "reference": 0.059580852403570944
+        },
+        "delta_u_m": {
+          "error": 1.3002914152820014e-05,
+          "reference": 0.031165147797524405
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        3.217598678944081e-14,
+        3.196243101634881e-14
+      ],
+      "position_lipschitz_padding_m": 1.9648429214227141e-07
+    },
+    {
+      "frame": 83,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 1.3537778225060704e-05,
+          "reference": 0.043568890341632784
+        },
+        "v_m_s": {
+          "error": 0.0030645172962944513,
+          "reference": 0.0825025088275888
+        },
+        "delta_u_m": {
+          "error": 1.3059095844559585e-05,
+          "reference": 0.03043723863057207
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        3.276241151538531e-14,
+        3.110443687460122e-14
+      ],
+      "position_lipschitz_padding_m": 1.9951284481499468e-07
+    },
+    {
+      "frame": 84,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 1.5782852846302916e-05,
+          "reference": 0.042421968643520484
+        },
+        "v_m_s": {
+          "error": 0.0032236183600378183,
+          "reference": 0.10960254750745778
+        },
+        "delta_u_m": {
+          "error": 1.4926347380775164e-05,
+          "reference": 0.02928689913964521
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        3.1742652485896156e-14,
+        2.9939436922895016e-14
+      ],
+      "position_lipschitz_padding_m": 2.0987098698564456e-07
+    },
+    {
+      "frame": 85,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 1.7615785251084978e-05,
+          "reference": 0.040862278240971106
+        },
+        "v_m_s": {
+          "error": 0.003264642201469669,
+          "reference": 0.1334149368940898
+        },
+        "delta_u_m": {
+          "error": 1.6568469150075035e-05,
+          "reference": 0.02772963963561089
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        3.047317491541422e-14,
+        2.9360032164090586e-14
+      ],
+      "position_lipschitz_padding_m": 2.125418099954103e-07
+    },
+    {
+      "frame": 86,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 1.8319916975612807e-05,
+          "reference": 0.038922812793310925
+        },
+        "v_m_s": {
+          "error": 0.0034770468532973613,
+          "reference": 0.15129357022012208
+        },
+        "delta_u_m": {
+          "error": 1.7295463170920613e-05,
+          "reference": 0.025800936309945094
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        2.9732864980491235e-14,
+        2.8001757469999563e-14
+      ],
+      "position_lipschitz_padding_m": 2.2637023784863905e-07
+    },
+    {
+      "frame": 87,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 1.8075128201678808e-05,
+          "reference": 0.0366421703472039
+        },
+        "v_m_s": {
+          "error": 0.003565842245709073,
+          "reference": 0.1659791331435307
+        },
+        "delta_u_m": {
+          "error": 1.6790121945476188e-05,
+          "reference": 0.023540582261842274
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        2.7226096457730996e-14,
+        2.5772659342136192e-14
+      ],
+      "position_lipschitz_padding_m": 2.3215118787513487e-07
+    },
+    {
+      "frame": 88,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 1.754202200622165e-05,
+          "reference": 0.03405143242578733
+        },
+        "v_m_s": {
+          "error": 0.003481862002137743,
+          "reference": 0.18077021349735742
+        },
+        "delta_u_m": {
+          "error": 1.690062079134456e-05,
+          "reference": 0.020973477547028482
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        2.5373923725946412e-14,
+        2.3720128027613358e-14
+      ],
+      "position_lipschitz_padding_m": 2.2668372410070555e-07
+    },
+    {
+      "frame": 89,
+      "fine_endpoint_peaks": {
+        "u_m": {
+          "error": 1.9419561071384508e-05,
+          "reference": 0.031178387706877895
+        },
+        "v_m_s": {
+          "error": 0.0034352626373184234,
+          "reference": 0.19503574477331992
+        },
+        "delta_u_m": {
+          "error": 1.9133011274104752e-05,
+          "reference": 0.018114121045784998
+        }
+      },
+      "kinematic_defect_rms_m_s": [
+        2.0270483891523976e-14,
+        1.8986815305008357e-14
+      ],
+      "position_lipschitz_padding_m": 2.2364991128630734e-07
+    }
+  ],
+  "norm": {
+    "definition": "sqrt(integral_A0 dot(field,field) dA0 / area_A0)",
+    "reference_area_m2": 0.7500000000000003,
+    "displacement_unit": "m",
+    "velocity_unit": "m/s"
+  },
+  "interpolant_bounds": {
+    "u_m": {
+      "absolute_rms_upper": 2.435738546537305e-05,
+      "reference_peak_lower": 0.04458595026842536,
+      "relative_upper": 0.0005463018129866424
+    },
+    "v_m_s": {
+      "absolute_rms_upper": 0.003565842245709073,
+      "reference_peak_lower": 0.29445062143070905,
+      "relative_upper": 0.012110153574758873
+    },
+    "delta_u_m": {
+      "absolute_rms_upper": 2.360108882772456e-05,
+      "reference_peak_lower": 0.03573770772838408,
+      "relative_upper": 0.0006603973877423534
+    }
+  },
+  "threshold_relative": 0.01,
+  "interpolant_threshold_passed": false,
+  "raw_equations_recomputed_here": false,
+  "training_eligible": false,
+  "r1_complete": false,
+  "generated_training_samples": 0,
+  "scope": "동일 natural 또는 동일 reset 분기의 suffix 전체 수치 보간. Parent prefix/직전 reset 좌극한은 natural 검산·비교에서 확인. 정확한 ODE/interval arithmetic 인증은 아님"
+}

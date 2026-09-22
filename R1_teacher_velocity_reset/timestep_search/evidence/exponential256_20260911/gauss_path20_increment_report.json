@@ -1,0 +1,125 @@
+{
+  "input_sha256": "b1998e0cc033748c54ccce582798ac9c418fb958651ef4fe17e130a8c179e1df",
+  "source_sha256": "1a0080319c71a065e2e88a0cea35a9afdfe8543c0a25ff78733d9495d012b6d4",
+  "wind_sha256": "db9c01a01eecfa78fc1dc581bb8505b8bc518c368001a98faf7894432a60bc59",
+  "runtime_manifest_sha256": "dec67d896537efadf38bbd81f52cb7d726abe4a73e58fcc1b5180ffef52a9df6",
+  "environment": {
+    "device": "cuda:0",
+    "numpy": "2.4.4",
+    "scipy": "1.18.1",
+    "compute_backend": "precision_hvp_graph",
+    "linear_solver_device": "cpu",
+    "cuda_graph": true,
+    "state_encoding": "hi_lo_v1",
+    "state_mantissa_bits": 64,
+    "warp": "1.17.0",
+    "gpu_name": "NVIDIA GeForce GTX 1080 Ti"
+  },
+  "policy": {
+    "force_atol_n": 1e-10,
+    "force_rtol": 1e-09,
+    "displacement_atol_m": 1e-12,
+    "displacement_rtol": 1e-09,
+    "linear_rtol": 1e-10,
+    "max_newton": 15,
+    "linear_cycles": 3,
+    "line_search_steps": 12,
+    "linear_restart": 240,
+    "linear_preconditioner": "current"
+  },
+  "input_time_s": 3.266666666666723,
+  "dt_s": 0.016666666666666666,
+  "order": null,
+  "method": "path",
+  "action_backend": "taylor",
+  "substeps": 1,
+  "multiplier": 256.0,
+  "training_eligible": false,
+  "continuous_geometry_verified": false,
+  "status": "development_complete",
+  "rows": [
+    {
+      "index": 0,
+      "solve_s": 115.9146498869959,
+      "diagnostics": {
+        "integrator": "p3_shell_gauss_path_exponential_picard_trial_v1",
+        "dt_s": 0.016666666666666666,
+        "degree": 20,
+        "velocity_form": "increment",
+        "continuous_geometry_verified": false,
+        "training_eligible": false,
+        "assembly": {
+          "colors": 276,
+          "nnz": 2478006,
+          "relative_action_error": 3.8648378104607796e-16,
+          "assembly_s": 0.7646118179982295
+        },
+        "max_mass_solve_relative_residual": 9.394451344638901e-16,
+        "sampled_force_fit_ratios": [
+          0.01769851260875811,
+          0.0044407766844490925,
+          0.003023608954823277,
+          0.004857347737958827,
+          0.01649187603670527
+        ],
+        "action_s": 112.95212410700333,
+        "matvec_columns": 26865,
+        "quadrature": 44,
+        "coordinate_scale_s_inv": 166433.61256603192,
+        "energy_balance_residual_j": -6.133978169281377e-07,
+        "external_work_j": 0.00016645600361638672
+      },
+      "audit": {
+        "position_update_error_m": 1.3552527156068805e-20,
+        "velocity_update_error_m_s": 0.0,
+        "force_evaluation_ratios": [
+          0.010134188398334461,
+          0.010306005593741419,
+          0.010364294664240069,
+          0.011339214916426725
+        ],
+        "energy_ledger_error_j": 1.3879958329741796e-17,
+        "sampled_geometry": [
+          {
+            "projected_gradient_upper": 0.17592677679617033,
+            "roundoff_margin": 2.6900238788024614e-09,
+            "injectivity_sufficient_condition": true,
+            "area_ratio_lower": 0.6790966772015489,
+            "time_degree": 0
+          },
+          {
+            "projected_gradient_upper": 0.20667943324850122,
+            "roundoff_margin": 3.1244008282970058e-09,
+            "injectivity_sufficient_condition": true,
+            "area_ratio_lower": 0.6293575216309192,
+            "time_degree": 0
+          },
+          {
+            "projected_gradient_upper": 0.2066330380532426,
+            "roundoff_margin": 3.1242150414090683e-09,
+            "injectivity_sufficient_condition": true,
+            "area_ratio_lower": 0.6294311363086276,
+            "time_degree": 0
+          },
+          {
+            "projected_gradient_upper": 0.19099538864364096,
+            "roundoff_margin": 2.9087278871005095e-09,
+            "injectivity_sufficient_condition": true,
+            "area_ratio_lower": 0.6544884611958536,
+            "time_degree": 0
+          }
+        ],
+        "scope": "힘 평가·질량 풀이·표본 기하·에너지 장부 검산. Newton 단계 방정식 잔차나 전체 시간 곡선 기하/정확도 인증 아님.",
+        "passed": true
+      },
+      "end_time_s": 3.2833333333333896
+    }
+  ],
+  "path_source_sha256": "0181bfe8960d1d40664d2b00f5c45fcbab2911ad9da98e2860f483c3c3e8d79d",
+  "path_degree": 20,
+  "end_time_s": 3.2833333333333896,
+  "endpoint_relative_mass_l2": {
+    "u": 2.5431472587215107e-06,
+    "v": 0.003728598403162245
+  }
+}

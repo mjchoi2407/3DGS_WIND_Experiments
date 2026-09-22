@@ -1,0 +1,106 @@
+{
+  "status": "prefix_passed",
+  "substeps": 64,
+  "completed_frames": 7,
+  "frames": [
+    {
+      "frame": 0,
+      "array_identity": {
+        "size_bytes": 45453,
+        "sha256": "9d787aa8f9eb94b48d4ee928611b3def1326f302ef43fe1ddf3008e4016ee836"
+      },
+      "metadata_identity": {
+        "size_bytes": 23215,
+        "sha256": "9970185a986ff2158edb576484f1ea1d5d4578ff670db9608b154bdb16e35bb4"
+      }
+    },
+    {
+      "frame": 1,
+      "array_identity": {
+        "size_bytes": 26646381,
+        "sha256": "4f14c5529ab14b9765d0642102dc90afea30ca4c5893481357e48aa90d5d26f4"
+      },
+      "metadata_identity": {
+        "size_bytes": 33683,
+        "sha256": "baab4030275db1d675af9e3052bd8d92347ed9223fd11d50bb5bbcaae514ea24"
+      }
+    },
+    {
+      "frame": 2,
+      "array_identity": {
+        "size_bytes": 27741255,
+        "sha256": "6bfc7f2c17336081103ee846d8d2bff0eb4420f33b13d4f23448425a6455440f"
+      },
+      "metadata_identity": {
+        "size_bytes": 33752,
+        "sha256": "726c4ec200d8cb833eb2ab7008f960ff437fa0699316eabefb9c1bd5f150d8ee"
+      }
+    },
+    {
+      "frame": 3,
+      "array_identity": {
+        "size_bytes": 27850563,
+        "sha256": "c4489ac6dd0117e5f7393c5090fa5c226a85bf901af0ac344bf4355a4e0f5d34"
+      },
+      "metadata_identity": {
+        "size_bytes": 33695,
+        "sha256": "7f9963aa21fc6438343f615af3e4e77049e3924eae6564e3b72befe595164767"
+      }
+    },
+    {
+      "frame": 4,
+      "array_identity": {
+        "size_bytes": 28012890,
+        "sha256": "16d588dc28e8bba7f8c362c04c6534013b27a541fdc668ef1f8e1272bbccad44"
+      },
+      "metadata_identity": {
+        "size_bytes": 33722,
+        "sha256": "7104e430d7e5668f2f6a1b0ee8b4620a43ce71d07a9aaade368a6454e982872b"
+      }
+    },
+    {
+      "frame": 5,
+      "array_identity": {
+        "size_bytes": 28000315,
+        "sha256": "cc0ba551a349b3ece8242cda0de1bba7563099145c77fb46137b1a8bdbe8a5db"
+      },
+      "metadata_identity": {
+        "size_bytes": 33692,
+        "sha256": "b98c5d19b64148fba0fccd53b70675dfd685a7af7fbcff7561ce697b71fadbc7"
+      }
+    },
+    {
+      "frame": 6,
+      "array_identity": {
+        "size_bytes": 28017615,
+        "sha256": "d099dd83a37f8641e4a3ab06a1a2c4c378ae83f1e4aa764b5e588e8ac1045a81"
+      },
+      "metadata_identity": {
+        "size_bytes": 33684,
+        "sha256": "4f3ab7226474794a61b7b19ce2a41fcb3f410d0173d328c7413c00f8ebf1a9f8"
+      }
+    }
+  ],
+  "compute_s": 545.845840117996,
+  "audit_s": 22.64600868600246,
+  "write_s": 11.124060316986288,
+  "setup_s": 12.479970985004911,
+  "hvp_calls": 56064,
+  "geometry_certified": true,
+  "state_encoding": "hi_lo_v1",
+  "training_eligible": false,
+  "r1_complete": false,
+  "generated_training_samples": 0,
+  "environment": {
+    "device": "cuda:0",
+    "numpy": "2.4.4",
+    "scipy": "1.18.1",
+    "compute_backend": "precision_hvp_graph",
+    "linear_solver_device": "cpu",
+    "cuda_graph": true,
+    "state_encoding": "hi_lo_v1",
+    "state_mantissa_bits": 64,
+    "warp": "1.17.0",
+    "gpu_name": "NVIDIA GeForce GTX 1080 Ti"
+  }
+}

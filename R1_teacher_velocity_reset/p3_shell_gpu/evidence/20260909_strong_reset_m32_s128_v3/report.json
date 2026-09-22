@@ -1,0 +1,27 @@
+{
+  "schema": "wind3dgs.p3_shell_gpu_validation.v1",
+  "phase": "wind",
+  "status": "completed",
+  "training_eligible": false,
+  "r1_complete": false,
+  "generated_training_samples": 0,
+  "result": {
+    "passed": null,
+    "cpu_gpu_parity_assessed": false,
+    "execution_completed": true,
+    "cpu_gpu_errors": null,
+    "parity_policy": {
+      "relative": 1e-06,
+      "displacement_absolute_m": 1e-09,
+      "velocity_absolute_m_s": 1e-07
+    },
+    "integration_elapsed_s": 289.2367283050007,
+    "removed_kinetic_j": 0.1794059833836179,
+    "hvp_calls": 14330,
+    "max_force_residual_limit_ratio": 0.6056493541168732,
+    "total_energy_balance_j": -1.0218772919591312e-07,
+    "scope": "CPU run은 입력 조건 template이다. 변경된 grid의 GPU 전진이며 CPU/CUDA 궤적 일치는 미판정",
+    "reference_cpu_report_elapsed_s": 1348.4935870890004
+  },
+  "elapsed_s": 305.2413844449984
+}

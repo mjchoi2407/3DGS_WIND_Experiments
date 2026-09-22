@@ -1,0 +1,86 @@
+{
+  "law": "p3_newmark_interpolant_response_bound_v1",
+  "first": "20260909_strong_reset_m32_s256_v3",
+  "second": "20260909_strong_reset_m32_s256_backward_v3",
+  "baseline_sampled_comparison": {
+    "first": "20260909_strong_reset_m32_s256_v3",
+    "second": "20260909_strong_reset_m32_s256_backward_v3",
+    "errors": {
+      "u_m": {
+        "relative": 3.5654502146130674e-05,
+        "absolute_rms_peak": 1.692678401693418e-06,
+        "reference_peak": 0.04747446464841782
+      },
+      "v_m_s": {
+        "relative": 0.0004061888413495964,
+        "absolute_rms_peak": 0.0007848918792185568,
+        "reference_peak": 1.9323324506175203
+      },
+      "delta_u_m": {
+        "relative": 3.5654502146130674e-05,
+        "absolute_rms_peak": 1.692678401693418e-06,
+        "reference_peak": 0.04747446464841782
+      }
+    },
+    "producer_source_differences": [],
+    "physics_sources_equal": true,
+    "comparison_axes": [
+      "direction"
+    ],
+    "isolated_axis": true,
+    "threshold_relative": 0.01,
+    "sampled_response_threshold_passed": true,
+    "scope": "동일 입력/초기 계열의 공통 저장 시각. 연속 시간 상한과 R1 채택 판정은 아님"
+  },
+  "fine_endpoint_errors_with_reset_left_limits": {
+    "u_m": {
+      "relative": 3.5654502146130674e-05,
+      "absolute_rms_peak": 1.692678401693418e-06,
+      "reference_peak": 0.04747446464841782
+    },
+    "v_m_s": {
+      "relative": 0.0004061888413495964,
+      "absolute_rms_peak": 0.0007848918792185568,
+      "reference_peak": 1.9323324506175203
+    },
+    "delta_u_m": {
+      "relative": 3.5654502146130674e-05,
+      "absolute_rms_peak": 1.692678401693418e-06,
+      "reference_peak": 0.04747446464841782
+    }
+  },
+  "kinematic_defect_rms_m_s": [
+    7.126018766012683e-14,
+    7.113329332075095e-14
+  ],
+  "position_lipschitz_padding_m": 2.5549865864614268e-08,
+  "interpolant_bounds": {
+    "u_m": {
+      "absolute_rms_upper": 1.7182282675580324e-06,
+      "reference_peak_lower": 0.04747446464841782,
+      "relative_upper": 3.619268337795349e-05
+    },
+    "v_m_s": {
+      "absolute_rms_upper": 0.0007848918792185568,
+      "reference_peak_lower": 1.9323324506175203,
+      "relative_upper": 0.0004061888413495964
+    },
+    "delta_u_m": {
+      "absolute_rms_upper": 1.7182282675580324e-06,
+      "reference_peak_lower": 0.04747446464841782,
+      "relative_upper": 3.619268337795349e-05
+    }
+  },
+  "threshold_relative": 0.01,
+  "interpolant_threshold_passed": true,
+  "source_sha256": "642e448fa85af31efb066d8801816fedf0b1cc1bf4cfbf76cc409dd35dfc2201",
+  "manifest_sha256": {
+    "20260909_strong_reset_m32_s256_v3": "c30cedd8391061bcd46a1d3a6abb51b52277c621f7635234f4828d084066bf34",
+    "20260909_strong_reset_m32_s256_backward_v3": "0383360157b1665418ae077d1473bbea32e3ece505131a32d42ede711f2cafbb"
+  },
+  "scope": "P3 spatial overlay와 Newmark quadratic u/linear v 수치 보간의 전체 시간 상한. Float64 계산이며 정확한 연속 ODE나 interval arithmetic 인증은 아님",
+  "raw_equations_recomputed_here": false,
+  "training_eligible": false,
+  "r1_complete": false,
+  "generated_training_samples": 0
+}

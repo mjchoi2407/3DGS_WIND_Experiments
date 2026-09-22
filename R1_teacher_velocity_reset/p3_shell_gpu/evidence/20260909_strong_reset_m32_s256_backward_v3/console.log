@@ -1,0 +1,13 @@
+Warp UserWarning: Kernel cache artifacts from a previous Warp version were found in '<workspace>/code/outputs/warp-cache'. These will be ignored. You can safely delete them.
+Warp 1.17.0 initialized:
+   CUDA Toolkit 12.9, Driver 13.0
+   Devices:
+     "cpu"      : "x86_64"
+     "cuda:0"   : "NVIDIA GeForce GTX 1080 Ti" (11 GiB, sm_61, mempool enabled)
+   Kernel cache:
+     <workspace>/code/outputs/warp-cache/1.17.0
+GPU grid 진단: CPU 원본의 입력 조건을 유지하며 변경된 grid의 CPU/CUDA 궤적 일치는 미판정
+Module wind3dgs.teacher.p3_shell_warp_kernels 5484a0d load on device 'cuda:0' took 2.09 ms  (cached)
+CUDA 시간 전진 완료: mesh32 / sub256 / frame1/3
+CUDA 시간 전진 완료: mesh32 / sub256 / frame2/3
+CUDA 시간 전진 완료: mesh32 / sub256 / frame3/3
