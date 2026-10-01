@@ -1,6 +1,12 @@
 # M04 Mesh Extraction Data Preparation
 
-> **현재 역할:** 이 폴더는 GOF/SuGaR/TSDF를 이용한 offline GS reconstruction·mesh preprocessing과 mesh-based baseline을 보존한다. 추출 mesh는 training privilege, oracle/debug 자료 또는 비교군으로만 사용하며 target runtime의 필수 입력이 아니다.
+> **현재 역할(2026-10-01):** 과거 사진 기반 mesh extraction의 문서·스크립트·설정·대표 추출 mesh를 보관한다. 현재 원본 mesh → 렌더 이미지 → 3DGS 생성 경로에서 이 사진 데이터셋과 과거 학습 모델은 퇴역했으며 사용자 승인으로 정리했다.
+
+사진 원본·다운로드 압축·과거 모델과 중간 산출물은 더 이상 이 폴더에 완전하게 남아 있지 않다.
+`outputs/collected_meshes/`의 대표 mesh 모음과 작은 기록을 유지했다.
+[삭제 범위·보존·재취득 경계](../R1_teacher_velocity_reset/timestep_search/artifact_retention_20260922.md#2026-10-01-정리)를 따른다.
+아래 명령·결과는 당시 기록이며 그대로 실행 가능한 현재 입력 상태나 현행 연구 요구사항으로 해석하지 않는다.
+3DGS 학습·렌더 코드와 M04 밖의 cloth mesh·현재 teacher 결과는 유지한다.
 
 이 실험 폴더는 GOF를 기존 주 extractor로, SuGaR와 TSDF 계열을 비교군으로 사용했던 테스트 데이터와 실행 기록을 관리한다.
 

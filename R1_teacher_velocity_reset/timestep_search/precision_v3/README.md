@@ -1,5 +1,7 @@
 # FP32 우선 v3 실행 준비
 
+> 2026-10-01 보관 상태: 완료 쌍·closeout·line-search의 ZIP3개를 유지하고 byte-identical 확장 중복본만 정리했다. 관련 폴더는 부분 보관 상태다. [압축 복원 경로와 검증](../artifact_retention_20260922.md#2026-10-01-정리)을 확인하고 필요한 파일은 ZIP에서 새 경로로 복원한다. 아래 과거 결과·판정은 유지한다.
+
 현재 상태: **[frame225 추가 최적화 분기 종료](fresh_branch_closeout.md)**. 운영 채택 보류이며 추가 계산을 진행하지 않는다.
 
 2026-09-17 후속 [frame225 line search 진단](frozen_line_search_report.md)을 완료했다.

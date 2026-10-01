@@ -20,7 +20,7 @@
 | Gauss 정밀도 비교 | 양 GPU 국소 결과·적용 한계 | [FP32 우선·FP64 복구 비교](2026-09-20_03_gauss_precision_frame.md#현재-상태) |
 | 추가 정밀도 비교 | 사용자 GPU 실행 대기 기록 | [FP32/M2 probe](2026-09-20_02_extended_precision_probe.md#현재-상태), [동일 입력 연산 비교](2026-09-20_01_highload_precision_bench.md#현재-상태) |
 | 고부하 구간 복원·비교 | 182–200 비교와 기본값 유지, 복원 경로 보존 | [비교 결과·명령](2026-09-19_01_wind_window_comparison.md#현재-상태), [120→200 복원](2026-09-18_02_cascade_retry_samples.md#현재-상태) |
-| Artifact 보존·정리 | 과거 승인 정리 완료·보존 경계, 새 삭제 허가 아님 | [보존 대상·재생·hash](2026-09-22_01_artifact_cleanup.md#현재-상태) |
+| Artifact 보존·정리 | 물리 중간 자료·M04 퇴역 자료 정리 완료; 현재 비교 원본 보존·압축 복원 경로 명시 | [보존 대상·재생·hash](2026-09-22_01_artifact_cleanup.md#현재-상태) |
 | Teacher 채택 경계 | 제한 개발 검증과 생산·학습 적격성 미완료 구분 | [가속 개발 종료의 범위](2026-09-16_05_bounded_closeout.md#현재-상태) |
 | 지침·기록 구조 | 맥락 재사용·조건부 참조·계층 링크 | [이번 구조화와 검증](2026-09-10_01_token_context_optimization.md#현재-상태) |
 

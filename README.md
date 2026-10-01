@@ -29,10 +29,10 @@ Wind3DGS 프로젝트의 실험 기록, asset, output, report와 얇은 wrapper�
 | `M01_static_3dgs_io/` | Static GS I/O와 renderer baseline, TD01 fixture 후보 | 재사용 전 재검증 |
 | `M02_mesh_proxy_binding/` | Synthetic cloth asset, transport check, legacy mesh-proxy 비교 | Target runtime 아님 |
 | `M03_procedural_wind/` | Prescribed-wind 정성 deformation fixture | Physics solver/teacher 아님 |
-| `M04_mesh_extraction/` | Offline GS reconstruction/mesh preprocessing과 mesh baseline support | Training/evaluation only |
+| `M04_mesh_extraction/` | 과거 추출 기록·대표 mesh 보관; 사진/모델 대용량 자료 정리 | 현행 입력 경로에서 퇴역 |
 | `exp001_baseline_3dgs/`--`exp003_wind_prior/` | 비활성 초기 placeholder | 현재 완료 증거 없음 |
 
-과거 명령과 output은 재현성을 위해 원래 폴더에 보존한다. 기존 milestone 상태는 TD00--TD14에 승계하지 않는다.
+과거 명령·보고서와 선별한 output을 보존하며, raw 자료의 현재 보관 상태와 복원·재계산 방법은 각 실행 폴더의 `retention_status.json`과 [보존 보고서](R1_teacher_velocity_reset/timestep_search/artifact_retention_20260922.md)를 따른다. 기존 milestone 상태는 TD00--TD14에 승계하지 않는다.
 
 ## Project 내부 분리
 
