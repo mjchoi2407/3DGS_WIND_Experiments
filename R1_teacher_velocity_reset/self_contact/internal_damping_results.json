@@ -1,0 +1,700 @@
+{
+  "confirmed_on": "2026-09-29",
+  "status": "두 후보 완주·저장 검산 통과, 빠른 흔들림 잔존",
+  "full_analysis": "experiments/artifacts/runs/p3_self_contact/internal_damping_analysis_20260929T064257389264Z",
+  "analysis_report_sha256": "0bf47654c50bd1f9331ad3e1f62e4c7bb2a5915c04d8ec86fc1e7d2d7ef39667",
+  "input_manifest_sha256": "3c5ef6764035b84cf5953e4228f563577f7355b31022e036168361d6bccbe8a1",
+  "measurement": "공통512점·전체8<t<=10초·면적 가중 RMS",
+  "cases": {
+    "tau1ms": {
+      "gpu": "NVIDIA GeForce GTX 1080 Ti",
+      "source": "experiments/artifacts/runs/p3_self_contact/rectangle_wind_internal1_5ms_main_01/tau1ms/reference_rectangle/outputs/wind",
+      "report_sha256": "71f46632c7361e233058e9a27e950c91bf134a31fe1d84462529db0ebfcccd33",
+      "completed_frames": 300,
+      "accepted_substeps": 19200,
+      "accepted_flags": [
+        0
+      ],
+      "max_checks": [
+        0.29975934566636375,
+        9.957450229984372e-21,
+        1.3877787807814457e-17,
+        2.374775231791789,
+        0.27937220641612703,
+        52.36639807392783
+      ],
+      "minimum_area_ratio_lower": 0.16188338075161238,
+      "retries": [],
+      "elapsed_s": 4440.660417799023,
+      "preflight": {
+        "oracle": {
+          "status": "passed",
+          "report_sha256": "bc05eb070a28b6a7626a454dbd5c42bc784c7d9cbfabed06f4ca885ceecd99c4"
+        },
+        "smoke": {
+          "status": "complete",
+          "report_sha256": "794409024c62fff573f4cbe720258d3f86b88117306b1cbd7399c88a7e51b01f"
+        }
+      },
+      "total_dissipation_j": 0.01567916901991045,
+      "tail_dissipation_j": 0.012613435603199216,
+      "windows": {
+        "wind": {
+          "start_s": 5.0,
+          "end_s": 10.0,
+          "frames": 300,
+          "speed_rms_m_s": 0.4335956955651487,
+          "frame_secant_speed_rms_m_s": 0.4319680831330393,
+          "stored_velocity_minus_centered_frame_velocity_rms_m_s": 0.03332600930344599,
+          "second_difference_rms_m": 0.0014138310800699974,
+          "second_difference_acceleration_rms_m_s2": 5.089791888251991,
+          "centroid_removed_second_difference_rms_m": 0.0013457861325236185,
+          "position_variation_about_time_mean_rms_m": 0.16079942358481006,
+          "movement_from_5s_rms_m": 0.23338332553884994,
+          "end_movement_from_5s_rms_m": 0.28181745457341173,
+          "consistent_mass_mean_kinetic_j": 0.007092222610547802,
+          "membrane_rate_rms_s_inv": 0.025896144552434008,
+          "curvature_rate_rms_inv_m_s": 140.74898536899255,
+          "position_spectral_bands": {
+            "0.2_3Hz_rms_m": 0.1264047119361003,
+            "3_10Hz_rms_m": 0.0034786369768134238,
+            "10_30Hz_rms_m": 0.00029725209985801077
+          },
+          "position_spectral_peak_bins": [
+            {
+              "hz": 0.2,
+              "density_m2_per_hz": 0.03779910501460662
+            },
+            {
+              "hz": 0.4,
+              "density_m2_per_hz": 0.016703683603677986
+            },
+            {
+              "hz": 0.8,
+              "density_m2_per_hz": 0.009551893923251002
+            },
+            {
+              "hz": 0.6000000000000001,
+              "density_m2_per_hz": 0.008077883853964959
+            },
+            {
+              "hz": 1.0,
+              "density_m2_per_hz": 0.0053236183586603605
+            }
+          ]
+        },
+        "tail": {
+          "start_s": 8.0,
+          "end_s": 10.0,
+          "frames": 120,
+          "speed_rms_m_s": 0.5154805867445186,
+          "frame_secant_speed_rms_m_s": 0.5140864545614184,
+          "stored_velocity_minus_centered_frame_velocity_rms_m_s": 0.048707129611540716,
+          "second_difference_rms_m": 0.001918093494703618,
+          "second_difference_acceleration_rms_m_s2": 6.905136580933025,
+          "centroid_removed_second_difference_rms_m": 0.0018698793728697339,
+          "position_variation_about_time_mean_rms_m": 0.18961083781109825,
+          "movement_from_5s_rms_m": 0.26298520631734273,
+          "end_movement_from_5s_rms_m": 0.28181745457341173,
+          "consistent_mass_mean_kinetic_j": 0.010034528474587074,
+          "membrane_rate_rms_s_inv": 0.03730699702721575,
+          "curvature_rate_rms_inv_m_s": 198.62745522386052,
+          "position_spectral_bands": {
+            "0.2_3Hz_rms_m": 0.08475696647069748,
+            "3_10Hz_rms_m": 0.008170642527868349,
+            "10_30Hz_rms_m": 0.0009760904164588943
+          },
+          "position_spectral_peak_bins": [
+            {
+              "hz": 0.5,
+              "density_m2_per_hz": 0.006538645674714527
+            },
+            {
+              "hz": 1.0,
+              "density_m2_per_hz": 0.0059665010230291185
+            },
+            {
+              "hz": 1.5,
+              "density_m2_per_hz": 0.0013477438992525867
+            },
+            {
+              "hz": 2.0,
+              "density_m2_per_hz": 0.00035303135544157197
+            },
+            {
+              "hz": 2.5,
+              "density_m2_per_hz": 0.00016156477819206808
+            }
+          ]
+        },
+        "before_retry": {
+          "start_s": 8.0,
+          "end_s": 9.0,
+          "frames": 60,
+          "speed_rms_m_s": 0.551681228022272,
+          "frame_secant_speed_rms_m_s": 0.546639512121325,
+          "stored_velocity_minus_centered_frame_velocity_rms_m_s": 0.03548642765945242,
+          "second_difference_rms_m": 0.0015877772977444479,
+          "second_difference_acceleration_rms_m_s2": 5.715998271880013,
+          "centroid_removed_second_difference_rms_m": 0.001516852788399571,
+          "position_variation_about_time_mean_rms_m": 0.08670631876818595,
+          "movement_from_5s_rms_m": 0.29138602953447423,
+          "end_movement_from_5s_rms_m": 0.15574933608045416,
+          "consistent_mass_mean_kinetic_j": 0.011458743614919992,
+          "membrane_rate_rms_s_inv": 0.02722291029206734,
+          "curvature_rate_rms_inv_m_s": 159.55356629079677,
+          "position_spectral_bands": {
+            "0.2_3Hz_rms_m": 0.052715681656355616,
+            "3_10Hz_rms_m": 0.006203083095972358,
+            "10_30Hz_rms_m": 0.00040482469909370884
+          },
+          "position_spectral_peak_bins": [
+            {
+              "hz": 1.0,
+              "density_m2_per_hz": 0.0022166160655481123
+            },
+            {
+              "hz": 2.0,
+              "density_m2_per_hz": 0.0005623270269461161
+            },
+            {
+              "hz": 3.0,
+              "density_m2_per_hz": 2.9807744464303742e-05
+            },
+            {
+              "hz": 4.0,
+              "density_m2_per_hz": 6.729245663866465e-06
+            },
+            {
+              "hz": 5.0,
+              "density_m2_per_hz": 1.1080787587366727e-06
+            }
+          ]
+        },
+        "last_second": {
+          "start_s": 9.0,
+          "end_s": 10.0,
+          "frames": 60,
+          "speed_rms_m_s": 0.4765378193478291,
+          "frame_secant_speed_rms_m_s": 0.4793276638321832,
+          "stored_velocity_minus_centered_frame_velocity_rms_m_s": 0.059197537689671224,
+          "second_difference_rms_m": 0.0022038049955356936,
+          "second_difference_acceleration_rms_m_s2": 7.9336979839284965,
+          "centroid_removed_second_difference_rms_m": 0.0021707878462041367,
+          "position_variation_about_time_mean_rms_m": 0.09595465573226696,
+          "movement_from_5s_rms_m": 0.23112035668820943,
+          "end_movement_from_5s_rms_m": 0.28181745457341173,
+          "consistent_mass_mean_kinetic_j": 0.008610313334254154,
+          "membrane_rate_rms_s_inv": 0.04519443781714099,
+          "curvature_rate_rms_inv_m_s": 231.18908153565934,
+          "position_spectral_bands": {
+            "0.2_3Hz_rms_m": 0.029250259145671597,
+            "3_10Hz_rms_m": 0.005903324635669485,
+            "10_30Hz_rms_m": 0.0005400904653337366
+          },
+          "position_spectral_peak_bins": [
+            {
+              "hz": 1.0,
+              "density_m2_per_hz": 0.0006835138037367373
+            },
+            {
+              "hz": 2.0,
+              "density_m2_per_hz": 0.00017206385635220762
+            },
+            {
+              "hz": 3.0,
+              "density_m2_per_hz": 2.329648777287708e-05
+            },
+            {
+              "hz": 4.0,
+              "density_m2_per_hz": 8.083464951603677e-06
+            },
+            {
+              "hz": 5.0,
+              "density_m2_per_hz": 2.277895356756508e-06
+            }
+          ]
+        }
+      },
+      "highpass_sensitivity_check": {
+        "method": "Butterworth order4 cutoff10Hz zero phase; full5s filter, evaluate8<t<=9.8 to exclude end padding",
+        "rms_m": 0.0006238189809189191
+      }
+    },
+    "tau5ms": {
+      "gpu": "NVIDIA GeForce GTX 1080 Ti",
+      "source": "experiments/artifacts/runs/p3_self_contact/rectangle_wind_internal1_5ms_main_01/tau5ms/reference_rectangle/outputs/wind",
+      "report_sha256": "c913f5934fc9a67e1fad32edbbabe0e09a1fce5e58829a4d1ef437959004f155",
+      "completed_frames": 300,
+      "accepted_substeps": 19264,
+      "accepted_flags": [
+        0
+      ],
+      "max_checks": [
+        0.2999149933891844,
+        7.101377264665245e-21,
+        1.388456407139249e-17,
+        2.384716563813221,
+        0.2620302102903574,
+        50.95551743757066
+      ],
+      "minimum_area_ratio_lower": 0.21390936912892142,
+      "retries": [
+        {
+          "frame_zero_based": 245,
+          "trajectory_end_s": 9.1,
+          "trigger": 2,
+          "failed_substep": 45,
+          "linear_residual_n": 6.91684530981256e-13,
+          "linear_target_n": 6.332123267547868e-13,
+          "rejected_flags": [
+            0,
+            14
+          ],
+          "evidence_sha256": "f606b616b227fde2017e28ab5773cd031137de94431c40d9ce9919fef2062607"
+        }
+      ],
+      "elapsed_s": 7442.1823039089795,
+      "preflight": {
+        "oracle": {
+          "status": "passed",
+          "report_sha256": "a374e323daafeaba5b746cc5f7144b8e213377ab9ed73452260d4545145859ef"
+        },
+        "smoke": {
+          "status": "complete",
+          "report_sha256": "8259f2273cdebb203252a5c67404d82e0f147d5aed303bf2c3bf1f2939d5eeef"
+        }
+      },
+      "total_dissipation_j": 0.016724864564909004,
+      "tail_dissipation_j": 0.012178312631040161,
+      "windows": {
+        "wind": {
+          "start_s": 5.0,
+          "end_s": 10.0,
+          "frames": 300,
+          "speed_rms_m_s": 0.41798056686583596,
+          "frame_secant_speed_rms_m_s": 0.41693581548395714,
+          "stored_velocity_minus_centered_frame_velocity_rms_m_s": 0.021197374806619065,
+          "second_difference_rms_m": 0.001194931417601691,
+          "second_difference_acceleration_rms_m_s2": 4.301753103366088,
+          "centroid_removed_second_difference_rms_m": 0.0011242768817704477,
+          "position_variation_about_time_mean_rms_m": 0.15737238210847834,
+          "movement_from_5s_rms_m": 0.23399857530225934,
+          "end_movement_from_5s_rms_m": 0.27634342125869327,
+          "consistent_mass_mean_kinetic_j": 0.006585600524521819,
+          "membrane_rate_rms_s_inv": 0.012345415241686876,
+          "curvature_rate_rms_inv_m_s": 85.07237162900267,
+          "position_spectral_bands": {
+            "0.2_3Hz_rms_m": 0.12333897490702486,
+            "3_10Hz_rms_m": 0.0032574030039641804,
+            "10_30Hz_rms_m": 0.00021305436652226982
+          },
+          "position_spectral_peak_bins": [
+            {
+              "hz": 0.2,
+              "density_m2_per_hz": 0.036444840363756684
+            },
+            {
+              "hz": 0.4,
+              "density_m2_per_hz": 0.015278649415413318
+            },
+            {
+              "hz": 0.8,
+              "density_m2_per_hz": 0.00919332343344812
+            },
+            {
+              "hz": 0.6000000000000001,
+              "density_m2_per_hz": 0.007910116886222196
+            },
+            {
+              "hz": 1.0,
+              "density_m2_per_hz": 0.004923481577584498
+            }
+          ]
+        },
+        "tail": {
+          "start_s": 8.0,
+          "end_s": 10.0,
+          "frames": 120,
+          "speed_rms_m_s": 0.4881377988118394,
+          "frame_secant_speed_rms_m_s": 0.4876751346101818,
+          "stored_velocity_minus_centered_frame_velocity_rms_m_s": 0.031323301712783996,
+          "second_difference_rms_m": 0.001579140842702612,
+          "second_difference_acceleration_rms_m_s2": 5.684907033729403,
+          "centroid_removed_second_difference_rms_m": 0.0015366664815291875,
+          "position_variation_about_time_mean_rms_m": 0.18276504528340518,
+          "movement_from_5s_rms_m": 0.260390853970502,
+          "end_movement_from_5s_rms_m": 0.27634342125869327,
+          "consistent_mass_mean_kinetic_j": 0.008990014949081585,
+          "membrane_rate_rms_s_inv": 0.01672057934660591,
+          "curvature_rate_rms_inv_m_s": 116.9441444237327,
+          "position_spectral_bands": {
+            "0.2_3Hz_rms_m": 0.07991746070067471,
+            "3_10Hz_rms_m": 0.007148265072605827,
+            "10_30Hz_rms_m": 0.0007347402731709483
+          },
+          "position_spectral_peak_bins": [
+            {
+              "hz": 0.5,
+              "density_m2_per_hz": 0.005742038816571475
+            },
+            {
+              "hz": 1.0,
+              "density_m2_per_hz": 0.005294544075116172
+            },
+            {
+              "hz": 1.5,
+              "density_m2_per_hz": 0.0012788009662335223
+            },
+            {
+              "hz": 2.0,
+              "density_m2_per_hz": 0.00032133281992646225
+            },
+            {
+              "hz": 2.5,
+              "density_m2_per_hz": 0.00013688437184014015
+            }
+          ]
+        },
+        "before_retry": {
+          "start_s": 8.0,
+          "end_s": 9.0,
+          "frames": 60,
+          "speed_rms_m_s": 0.516574151362386,
+          "frame_secant_speed_rms_m_s": 0.5126535649333634,
+          "stored_velocity_minus_centered_frame_velocity_rms_m_s": 0.017054048386905375,
+          "second_difference_rms_m": 0.0011889658906789943,
+          "second_difference_acceleration_rms_m_s2": 4.28027720644438,
+          "centroid_removed_second_difference_rms_m": 0.0011182770949564327,
+          "position_variation_about_time_mean_rms_m": 0.08408746456638348,
+          "movement_from_5s_rms_m": 0.2903845454577932,
+          "end_movement_from_5s_rms_m": 0.162977289861803,
+          "consistent_mass_mean_kinetic_j": 0.010029390833922043,
+          "membrane_rate_rms_s_inv": 0.013031148891135384,
+          "curvature_rate_rms_inv_m_s": 93.28274799591028,
+          "position_spectral_bands": {
+            "0.2_3Hz_rms_m": 0.04914401274961894,
+            "3_10Hz_rms_m": 0.005390026856962334,
+            "10_30Hz_rms_m": 0.0002685195135736862
+          },
+          "position_spectral_peak_bins": [
+            {
+              "hz": 1.0,
+              "density_m2_per_hz": 0.0019167166823649176
+            },
+            {
+              "hz": 2.0,
+              "density_m2_per_hz": 0.0004984173067697913
+            },
+            {
+              "hz": 3.0,
+              "density_m2_per_hz": 2.3283723638601363e-05
+            },
+            {
+              "hz": 4.0,
+              "density_m2_per_hz": 4.309617338881353e-06
+            },
+            {
+              "hz": 5.0,
+              "density_m2_per_hz": 8.826871621107507e-07
+            }
+          ]
+        },
+        "last_second": {
+          "start_s": 9.0,
+          "end_s": 10.0,
+          "frames": 60,
+          "speed_rms_m_s": 0.4579390433256005,
+          "frame_secant_speed_rms_m_s": 0.46134628663860683,
+          "stored_velocity_minus_centered_frame_velocity_rms_m_s": 0.04102630913013592,
+          "second_difference_rms_m": 0.0018952671515906102,
+          "second_difference_acceleration_rms_m_s2": 6.822961745726197,
+          "centroid_removed_second_difference_rms_m": 0.0018684140900998166,
+          "position_variation_about_time_mean_rms_m": 0.09263820982711228,
+          "movement_from_5s_rms_m": 0.22645884708318514,
+          "end_movement_from_5s_rms_m": 0.27634342125869327,
+          "consistent_mass_mean_kinetic_j": 0.007950639064241127,
+          "membrane_rate_rms_s_inv": 0.019731819630975485,
+          "curvature_rate_rms_inv_m_s": 136.56571588919817,
+          "position_spectral_bands": {
+            "0.2_3Hz_rms_m": 0.027001810244074873,
+            "3_10Hz_rms_m": 0.005729565526504788,
+            "10_30Hz_rms_m": 0.0004445985839228098
+          },
+          "position_spectral_peak_bins": [
+            {
+              "hz": 1.0,
+              "density_m2_per_hz": 0.0005828939872146783
+            },
+            {
+              "hz": 2.0,
+              "density_m2_per_hz": 0.00014620376924234842
+            },
+            {
+              "hz": 3.0,
+              "density_m2_per_hz": 2.2903304556496935e-05
+            },
+            {
+              "hz": 4.0,
+              "density_m2_per_hz": 6.8816972174131065e-06
+            },
+            {
+              "hz": 5.0,
+              "density_m2_per_hz": 1.909063383560466e-06
+            }
+          ]
+        }
+      },
+      "highpass_sensitivity_check": {
+        "method": "Butterworth order4 cutoff10Hz zero phase; full5s filter, evaluate8<t<=9.8 to exclude end padding",
+        "rms_m": 0.00046677251429973963
+      }
+    },
+    "rate24": {
+      "gpu": "NVIDIA GeForce RTX 5070",
+      "source": "experiments/artifacts/runs/sub_pc/20260929T002107Z-65221d3a61d34d0f93b4d01006eb5602/simulation/steps64/reference_rectangle/outputs/wind",
+      "report_sha256": "ec7c8d4bef56d27aa87bd5a0ca5132a485c61e34519a9d84daade8aa9e234e0b",
+      "completed_frames": 300,
+      "accepted_substeps": 19200,
+      "accepted_flags": [
+        0
+      ],
+      "max_checks": [
+        0.016114512975324215,
+        4.500287611214548e-22,
+        5.210946691508456e-18,
+        2.037321517850077,
+        0.2066000767897719,
+        46.45696061563213
+      ],
+      "minimum_area_ratio_lower": 0.3801997696306785,
+      "retries": [],
+      "elapsed_s": 691.8938445599924,
+      "preflight": {},
+      "total_dissipation_j": null,
+      "tail_dissipation_j": null,
+      "windows": {
+        "wind": {
+          "start_s": 5.0,
+          "end_s": 10.0,
+          "frames": 300,
+          "speed_rms_m_s": 0.13964906392768625,
+          "frame_secant_speed_rms_m_s": 0.11638292478908584,
+          "stored_velocity_minus_centered_frame_velocity_rms_m_s": 0.023956440705276662,
+          "second_difference_rms_m": 0.00030049175801168365,
+          "second_difference_acceleration_rms_m_s2": 1.081770328842061,
+          "centroid_removed_second_difference_rms_m": 0.00018217877632979178,
+          "position_variation_about_time_mean_rms_m": 0.055553189490956605,
+          "movement_from_5s_rms_m": 0.10671756461066931,
+          "end_movement_from_5s_rms_m": 0.12379388627186809,
+          "consistent_mass_mean_kinetic_j": 0.0007322536301235121,
+          "membrane_rate_rms_s_inv": 0.00497504940951606,
+          "curvature_rate_rms_inv_m_s": 20.680992158762628,
+          "position_spectral_bands": {
+            "0.2_3Hz_rms_m": 0.035076084809838974,
+            "3_10Hz_rms_m": 0.0013732790329372593,
+            "10_30Hz_rms_m": 6.788370597679367e-05
+          },
+          "position_spectral_peak_bins": [
+            {
+              "hz": 0.2,
+              "density_m2_per_hz": 0.002536752952114817
+            },
+            {
+              "hz": 0.8,
+              "density_m2_per_hz": 0.001024215942464212
+            },
+            {
+              "hz": 0.4,
+              "density_m2_per_hz": 0.0009396253125374377
+            },
+            {
+              "hz": 1.0,
+              "density_m2_per_hz": 0.0006342998693285301
+            },
+            {
+              "hz": 0.6000000000000001,
+              "density_m2_per_hz": 0.0006219456723066705
+            }
+          ]
+        },
+        "tail": {
+          "start_s": 8.0,
+          "end_s": 10.0,
+          "frames": 120,
+          "speed_rms_m_s": 0.12903841301573235,
+          "frame_secant_speed_rms_m_s": 0.10784617791910853,
+          "stored_velocity_minus_centered_frame_velocity_rms_m_s": 0.021958891309208983,
+          "second_difference_rms_m": 0.00023525460869019236,
+          "second_difference_acceleration_rms_m_s2": 0.8469165912846925,
+          "centroid_removed_second_difference_rms_m": 0.0001321807860712599,
+          "position_variation_about_time_mean_rms_m": 0.03670323153537068,
+          "movement_from_5s_rms_m": 0.1364375447561323,
+          "end_movement_from_5s_rms_m": 0.12379388627186809,
+          "consistent_mass_mean_kinetic_j": 0.0006247811721884388,
+          "membrane_rate_rms_s_inv": 0.005645241156468412,
+          "curvature_rate_rms_inv_m_s": 17.804070817624407,
+          "position_spectral_bands": {
+            "0.2_3Hz_rms_m": 0.01022856982562662,
+            "3_10Hz_rms_m": 0.00043295931148512997,
+            "10_30Hz_rms_m": 1.242659804630477e-05
+          },
+          "position_spectral_peak_bins": [
+            {
+              "hz": 0.5,
+              "density_m2_per_hz": 0.00016642433393283533
+            },
+            {
+              "hz": 1.0,
+              "density_m2_per_hz": 3.402564266549886e-05
+            },
+            {
+              "hz": 1.5,
+              "density_m2_per_hz": 5.431054949023508e-06
+            },
+            {
+              "hz": 2.0,
+              "density_m2_per_hz": 2.840165398537336e-06
+            },
+            {
+              "hz": 2.5,
+              "density_m2_per_hz": 5.260844095437515e-07
+            }
+          ]
+        },
+        "before_retry": {
+          "start_s": 8.0,
+          "end_s": 9.0,
+          "frames": 60,
+          "speed_rms_m_s": 0.1541076603187748,
+          "frame_secant_speed_rms_m_s": 0.12877042639662697,
+          "stored_velocity_minus_centered_frame_velocity_rms_m_s": 0.02646678751789132,
+          "second_difference_rms_m": 0.00033091506023719976,
+          "second_difference_acceleration_rms_m_s2": 1.1912942168539191,
+          "centroid_removed_second_difference_rms_m": 0.00018560783067119496,
+          "position_variation_about_time_mean_rms_m": 0.01798047091410064,
+          "movement_from_5s_rms_m": 0.1434861694642586,
+          "end_movement_from_5s_rms_m": 0.14097622023676332,
+          "consistent_mass_mean_kinetic_j": 0.0008911671397541606,
+          "membrane_rate_rms_s_inv": 0.00793664057558067,
+          "curvature_rate_rms_inv_m_s": 24.517831450999704,
+          "position_spectral_bands": {
+            "0.2_3Hz_rms_m": 0.011378212754241158,
+            "3_10Hz_rms_m": 0.00231605815180808,
+            "10_30Hz_rms_m": 4.545279613001251e-05
+          },
+          "position_spectral_peak_bins": [
+            {
+              "hz": 1.0,
+              "density_m2_per_hz": 9.472788510256606e-05
+            },
+            {
+              "hz": 2.0,
+              "density_m2_per_hz": 3.473584037821008e-05
+            },
+            {
+              "hz": 3.0,
+              "density_m2_per_hz": 4.9814468823608435e-06
+            },
+            {
+              "hz": 4.0,
+              "density_m2_per_hz": 2.978310706958044e-07
+            },
+            {
+              "hz": 5.0,
+              "density_m2_per_hz": 3.3715911858778624e-08
+            }
+          ]
+        },
+        "last_second": {
+          "start_s": 9.0,
+          "end_s": 10.0,
+          "frames": 60,
+          "speed_rms_m_s": 0.097737674917662,
+          "frame_secant_speed_rms_m_s": 0.08172988112771791,
+          "stored_velocity_minus_centered_frame_velocity_rms_m_s": 0.016130561321890197,
+          "second_difference_rms_m": 1.63314985143443e-05,
+          "second_difference_acceleration_rms_m_s2": 0.05879339465163948,
+          "centroid_removed_second_difference_rms_m": 1.4334654096259995e-05,
+          "position_variation_about_time_mean_rms_m": 0.02333006647250576,
+          "movement_from_5s_rms_m": 0.12900436585882377,
+          "end_movement_from_5s_rms_m": 0.12379388627186809,
+          "consistent_mass_mean_kinetic_j": 0.0003583952046227167,
+          "membrane_rate_rms_s_inv": 0.0008644257072855779,
+          "curvature_rate_rms_inv_m_s": 5.731126965819162,
+          "position_spectral_bands": {
+            "0.2_3Hz_rms_m": 0.0011324544557971589,
+            "3_10Hz_rms_m": 6.0875654517741155e-05,
+            "10_30Hz_rms_m": 8.935276340604673e-07
+          },
+          "position_spectral_peak_bins": [
+            {
+              "hz": 1.0,
+              "density_m2_per_hz": 1.140527902155431e-06
+            },
+            {
+              "hz": 2.0,
+              "density_m2_per_hz": 1.4192519229940826e-07
+            },
+            {
+              "hz": 3.0,
+              "density_m2_per_hz": 3.340453387895157e-09
+            },
+            {
+              "hz": 4.0,
+              "density_m2_per_hz": 2.9901453406194846e-10
+            },
+            {
+              "hz": 5.0,
+              "density_m2_per_hz": 4.952725466125433e-11
+            }
+          ]
+        }
+      },
+      "highpass_sensitivity_check": {
+        "method": "Butterworth order4 cutoff10Hz zero phase; full5s filter, evaluate8<t<=9.8 to exclude end padding",
+        "rms_m": 3.0407022845638655e-05
+      }
+    }
+  },
+  "forcing_tail": {
+    "wind_vector_range_m_s": [
+      2.5926445471525437,
+      2.2226933589578666,
+      2.0538573425164444
+    ],
+    "frame_change_max_m_s": 0.24176528969890512,
+    "last_second_wind_vector_range_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "methodology": {
+    "surface_points": 512,
+    "point_policy": "rest_surface_32x16_equal_area_p3_v1",
+    "mapping_hash": "524a6e58961fb1f46768f8932cda353e402d9585b04acb948c606430bd88b0e2",
+    "data": "원시 FP64 hi/lo 합산 후 signed P3 보간; FP32 뷰어 캐시 미사용",
+    "spectral": "60Hz stored displacement, scipy.signal.periodogram Hann window/linear detrend, area weighted XYZ PSD sum; RMS sqrt(integrated band density)",
+    "second_difference": "u[t+dt]-2u[t]+u[t-dt]; full/tail statistics use center timestamps with neighbors in stored trajectory",
+    "geometric_rates": "체적 구적점의 Green 변형률 변화율과 현재 법선 미분을 포함한 곡률 변화율; 감쇠 고유모드 분해는 아님"
+  },
+  "limitations": [
+    "시간/공간 수렴 검사가 아님",
+    "60Hz 저장으로30Hz 초과를 식별할 수 없고 alias 가능",
+    "24 비교는 GPU와 모델이 다름",
+    "바람 강제 운동과 자유 진동의 엄밀한 분리가 아님"
+  ],
+  "interpretation": [
+    "5ms에서1ms 대비 막 변형률 변화율55.18%·곡률 변화율41.12% 감소; 속도5.30% 감소",
+    "10–30Hz 위치 성분 RMS24.73% 감소하지만 잔존; 프레임2차 차분17.67% 감소",
+    "바람 벡터가 고정된9–10초에도 진동 지표가 남음; 입력 바람 변동만으로 설명할 수 없음",
+    "5ms의9.1초 code2 한 번은dt/2로 통과; 복구 전8–9초에도 빠른 성분 존재",
+    "현재 모델은 굽힘 감쇠0. 굽힘 운동의 진동인지 수치 진동인지 이번 저장 결과만으로 확정하지 않음"
+  ],
+  "source_results_modified": false,
+  "new_simulation_executed": false,
+  "time_convergence_tested": false,
+  "training_eligible": false,
+  "user_visual_observation": "1ms/5ms 모두 진동이 있어 보임"
+}

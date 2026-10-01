@@ -1,0 +1,186 @@
+{
+  "confirmed_on": "2026-09-30",
+  "status": "두 결과 로드 정상·사이드바 가림 수정",
+  "observation": "사용자의 어느 쪽 미표시인지는 미확인; 좁은 창/큰 UI에서 왼쪽이 완전히 가려지는 별도 재현 확인",
+  "original_at_960x800": {
+    "sidebar_px": 300,
+    "fully_hidden_left_frames": 40,
+    "worst_frame": 16,
+    "worst_time_s": 0.26666666666666666
+  },
+  "fixes": [
+    "전체 저장 궤적 범위를 사이드바 밖 영역에 카메라 맞춤",
+    "창 크기/UI 배율 변경 시 다시 맞춤",
+    "Fit all recordings 버튼",
+    "로드된 결과 수 표시"
+  ],
+  "tests": {
+    "passed": 38,
+    "scope": "공용 뷰어·GPU 저장 뷰어·굽힘 강성 실행기 CPU 검사"
+  },
+  "projection_checks": [
+    {
+      "width": 1280,
+      "height": 800,
+      "sidebar": 300,
+      "all_121_frames_inside": true,
+      "cases": [
+        {
+          "case": "bend500",
+          "x_range": [
+            423.9937855773749,
+            736.1883793983292
+          ],
+          "y_range": [
+            222.08966337051922,
+            546.4278540170938
+          ]
+        },
+        {
+          "case": "bend1000",
+          "x_range": [
+            839.5619312715003,
+            1186.0213982168002
+          ],
+          "y_range": [
+            217.9195087363559,
+            596.9890897287223
+          ]
+        }
+      ]
+    },
+    {
+      "width": 960,
+      "height": 800,
+      "sidebar": 300,
+      "all_121_frames_inside": true,
+      "cases": [
+        {
+          "case": "bend500",
+          "x_range": [
+            363.0646510634112,
+            591.1990350030372
+          ],
+          "y_range": [
+            269.35212676831145,
+            509.050646348387
+          ]
+        },
+        {
+          "case": "bend1000",
+          "x_range": [
+            664.3391047322406,
+            907.3588016182432
+          ],
+          "y_range": [
+            271.97195573532537,
+            539.7992592879024
+          ]
+        }
+      ]
+    },
+    {
+      "width": 1280,
+      "height": 800,
+      "sidebar": 450,
+      "all_121_frames_inside": true,
+      "cases": [
+        {
+          "case": "bend500",
+          "x_range": [
+            555.52759562166,
+            821.3963636563383
+          ],
+          "y_range": [
+            249.62020602474283,
+            524.7833972045721
+          ]
+        },
+        {
+          "case": "bend1000",
+          "x_range": [
+            915.868863987654,
+            1198.476056656536
+          ],
+          "y_range": [
+            249.97394932020916,
+            563.2020060097772
+          ]
+        }
+      ]
+    },
+    {
+      "width": 900,
+      "height": 700,
+      "sidebar": 300,
+      "all_121_frames_inside": true,
+      "cases": [
+        {
+          "case": "bend500",
+          "x_range": [
+            363.7211890081343,
+            565.97021593117
+          ],
+          "y_range": [
+            234.52507202490054,
+            446.34773653684556
+          ]
+        },
+        {
+          "case": "bend1000",
+          "x_range": [
+            632.6281589354177,
+            847.1755990195778
+          ],
+          "y_range": [
+            236.7058235839975,
+            473.67984034150106
+          ]
+        }
+      ]
+    },
+    {
+      "width": 640,
+      "height": 480,
+      "sidebar": 300,
+      "all_121_frames_inside": true,
+      "cases": [
+        {
+          "case": "bend500",
+          "x_range": [
+            344.46542862942476,
+            452.78753353217036
+          ],
+          "y_range": [
+            178.68683006798526,
+            291.6174624046868
+          ]
+        },
+        {
+          "case": "bend1000",
+          "x_range": [
+            490.917925834117,
+            600.7530271810087
+          ],
+          "y_range": [
+            181.41545006458892,
+            304.3102013503982
+          ]
+        }
+      ]
+    }
+  ],
+  "evidence_folder": "experiments/artifacts/runs/shell_playback/bending_visibility_fix_20260930T122052033376Z",
+  "cache_paths": [
+    "experiments/artifacts/runs/shell_playback/bending_stiffness_tail2/6d63d27122c698f8/bend500",
+    "experiments/artifacts/runs/shell_playback/bending_stiffness_tail2/4554a5bab014f46c/bend1000"
+  ],
+  "preserved_source_files": true,
+  "simulation_rerun": false,
+  "limitations": [
+    "진동 개선·물리/학습 적격성은 검증하지 않음",
+    "사용자 환경의 미표시 원인이 이 가림과 같은지는 답변 대기"
+  ],
+  "actual_ui_images_visually_inspected": true,
+  "both_cloths_visible_in_960px_image": true
+}

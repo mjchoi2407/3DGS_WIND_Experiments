@@ -1,0 +1,30 @@
+{
+  "bundle": "experiments/artifacts/runs/p3_self_contact/damping_sample_v13_stronger_01",
+  "manifest_sha256": "60d1e8ea8fe47c5c68e114a2ff334a0a0f50715652984544a3ba77e863925a88",
+  "cases": {
+    "rate3": 3.0,
+    "rate5": 5.0,
+    "rate8": 8.0
+  },
+  "frames_per_case": 60,
+  "source": {
+    "source_manifest_sha256": "7e0c66997a0a0018d1fddc1786a5315cc59094521b879831864c528a8a064190",
+    "source_phase_report_sha256": "52c99125922b03e2e418947fed5a0f05333b52753397197ecade5c372107bf9e",
+    "source_frame_sha256": "0d7b4ec8179153c040777188a608517db4926e70281c8e56da5c962a63540138",
+    "shape": "triangular_flag",
+    "phase": "calm",
+    "frame": 119,
+    "trajectory_time_s": 3.0,
+    "gpu": "NVIDIA GeForce RTX 5070"
+  },
+  "validation": {
+    "cpu_tests_passed": 24,
+    "shell_syntax": true,
+    "old_and_new_manifest_verified": true,
+    "initial_and_forcing_identical_to_original_damping_sample": true,
+    "damping_and_retry_solver_files_identical": true,
+    "outputs_and_logs_absent": true
+  },
+  "simulation_executed": false,
+  "training_eligible": false
+}

@@ -1,0 +1,586 @@
+{
+  "status": "numerical_cost_search_and_full_wind_complete",
+  "bundle_manifest_sha256": "1bc5cfbff8954552878656a2520623e68b1179701b2673ef0681926d88a064bd",
+  "cpu_tests": {
+    "physics_and_runner": 53,
+    "analysis": 2,
+    "logs": [
+      "experiments/artifacts/runs/p3_self_contact/vibration_search_20260930_01/cpu_tests.log",
+      "experiments/artifacts/runs/p3_self_contact/vibration_search_20260930_01/analysis_tests.log",
+      "experiments/artifacts/runs/p3_self_contact/vibration_search_20260930_01/global_regression_tests.log",
+      "experiments/artifacts/runs/p3_self_contact/vibration_search_20260930_01/fast_cpu_tests.log",
+      "experiments/artifacts/runs/p3_self_contact/vibration_search_20260930_01/fast_cpu_tests_final.log"
+    ],
+    "global_regression": 41,
+    "fast_and_related": 19,
+    "fast_final_recheck": 2,
+    "count_note": "묶음 간 중복 검사 포함;합산한 고유 검사 수가 아님"
+  },
+  "gpu_oracles": {
+    "reference": "passed",
+    "bend10": "passed",
+    "bend20": "passed",
+    "mem10": "passed",
+    "mem20": "passed",
+    "global1": "passed",
+    "global2": "passed"
+  },
+  "default_path_replay": {
+    "0": {
+      "raw_equal": true,
+      "max_raw_difference": 0.0
+    },
+    "1": {
+      "raw_equal": true,
+      "max_raw_difference": 0.0
+    },
+    "2": {
+      "raw_equal": true,
+      "max_raw_difference": 0.0
+    },
+    "3": {
+      "raw_equal": true,
+      "max_raw_difference": 0.0
+    },
+    "4": {
+      "raw_equal": true,
+      "max_raw_difference": 0.0
+    },
+    "5": {
+      "raw_equal": true,
+      "max_raw_difference": 0.0
+    }
+  },
+  "source_results_modified": false,
+  "final_candidates_selected": true,
+  "short_screens": {
+    "reference": {
+      "cost8": {
+        "status": "complete",
+        "completed_frames": 6,
+        "frame_wall_s": 136.000526050002
+      },
+      "cost95": {
+        "status": "complete",
+        "completed_frames": 6,
+        "frame_wall_s": 207.9942408800016
+      }
+    },
+    "bend10": {
+      "cost8": {
+        "status": "complete",
+        "completed_frames": 6,
+        "frame_wall_s": 201.76271800500035
+      },
+      "cost95": {
+        "status": "complete",
+        "completed_frames": 6,
+        "frame_wall_s": 275.5520340100047
+      }
+    },
+    "bend20": {
+      "cost8": {
+        "status": "complete",
+        "completed_frames": 6,
+        "frame_wall_s": 187.68230152199976
+      },
+      "cost95": {
+        "status": "complete",
+        "completed_frames": 6,
+        "frame_wall_s": 240.5228647979966
+      }
+    },
+    "mem10": {
+      "cost8": {
+        "status": "complete",
+        "completed_frames": 6,
+        "frame_wall_s": 143.6543473490019
+      },
+      "cost95": {
+        "status": "complete",
+        "completed_frames": 6,
+        "frame_wall_s": 234.36690471499605
+      }
+    },
+    "mem20": {
+      "cost8": {
+        "status": "complete",
+        "completed_frames": 6,
+        "frame_wall_s": 218.84568478499932
+      },
+      "cost95": {
+        "status": "complete",
+        "completed_frames": 6,
+        "frame_wall_s": 394.8666260420032
+      }
+    },
+    "global1": {
+      "cost8": {
+        "status": "complete",
+        "completed_frames": 6,
+        "frame_wall_s": 136.3299702169934
+      },
+      "cost95": {
+        "status": "complete",
+        "completed_frames": 6,
+        "frame_wall_s": 198.97825212099997
+      }
+    },
+    "global2": {
+      "cost8": {
+        "status": "complete",
+        "completed_frames": 6,
+        "frame_wall_s": 132.5433123010007
+      },
+      "cost95": {
+        "status": "complete",
+        "completed_frames": 6,
+        "frame_wall_s": 193.17485484100325
+      }
+    }
+  },
+  "fast_hvp_microbenchmark": {
+    "status": "passed",
+    "same_gpu_bitwise_equal": true,
+    "median_ratios": {
+      "cost8": 0.9819155799224626,
+      "cost95": 0.9780862368319982
+    },
+    "evidence": "experiments/artifacts/runs/p3_self_contact/vibration_search_20260930_01/fast_hvp_benchmark.json",
+    "scope": "고정 평가 상태의 HVP 비용만;전체 프레임 이득은 별도"
+  },
+  "fast_frame_comparison": {
+    "status": "failed",
+    "states": {
+      "cost8": {
+        "raw_equal": true,
+        "max_raw_error": 0.0,
+        "original_wall_s": 187.68230152199976,
+        "fast_wall_s": 184.27695968500484,
+        "ratio": 0.9818558179999953
+      },
+      "cost95": {
+        "raw_equal": false,
+        "max_raw_error": 9.325873406851315e-15,
+        "original_wall_s": 240.5228647979966,
+        "fast_wall_s": 236.137947660005,
+        "ratio": 0.9817692295421716
+      }
+    },
+    "decision": "비트 동일 미달·비용 이득1.8%로 확대하지 않음;물리 검산 실패를 의미하지 않음"
+  },
+  "tail_selection": {
+    "created_utc": "2026-09-30T14:16:56.415220+00:00",
+    "reference": [
+      "bundle",
+      "reference"
+    ],
+    "selected": [
+      [
+        "bundle",
+        "bend20"
+      ],
+      [
+        "bundle",
+        "mem10"
+      ],
+      [
+        "bundle",
+        "global1"
+      ]
+    ],
+    "screen_cost_ratios": {
+      "bundle:reference": 1.0,
+      "bundle:bend10": 1.3875639919607543,
+      "bundle:bend20": 1.244801396665223,
+      "bundle:mem10": 1.0989157057174597,
+      "bundle:mem20": 1.7840745552733401,
+      "bundle:global1": 0.9747480327403417,
+      "bundle:global2": 0.9468695412110191
+    },
+    "scope": "짧은 구간 비용 선별; 효과는2초에서 별도 판정",
+    "conditional": "global1이 움직임90% 이상 유지하고 잔진동 감소50% 미만이면 global2 추가"
+  },
+  "cached_geometry": {
+    "cpu_checks": 24,
+    "cpu_log": "experiments/artifacts/runs/p3_self_contact/vibration_search_20260930_01/cached_cpu_tests_final.log",
+    "bundle_manifest_sha256": "837357199a039e318d4f9994f5e7203d65cd8384b1d2a7fff8b988b49f196b8d",
+    "gpu_status": "oracle_exact_hvp_short_and_full_tail_passed",
+    "production_enabled": false,
+    "hvp_median_ratios": {
+      "cost8": 0.093450944287485,
+      "cost95": 0.09344154877049361
+    },
+    "benchmark_report": "experiments/artifacts/runs/p3_self_contact/vibration_search_20260930_01/cached_hvp_benchmark.json",
+    "frame_comparison": {
+      "status": "roundoff_equivalent",
+      "states": {
+        "cost8": {
+          "raw_equal": true,
+          "max_raw_error": 0.0,
+          "max_position_error_m": 0.0,
+          "max_velocity_error_m_s": 0.0,
+          "original_wall_s": 187.68230152199976,
+          "cached_wall_s": 104.86284847500065,
+          "ratio": 0.5587252906886845
+        },
+        "cost95": {
+          "raw_equal": false,
+          "max_raw_error": 5.88418203051333e-15,
+          "max_position_error_m": 1.1102230246251565e-16,
+          "max_velocity_error_m_s": 5.88418203051333e-15,
+          "original_wall_s": 240.5228647979966,
+          "cached_wall_s": 129.4116924570044,
+          "ratio": 0.5380432025275059
+        }
+      },
+      "cost_ratio": 0.5471081606636489,
+      "scope": "물리 허용오차 변경 없음;비트 동일과 무시 가능한 roundoff 차이를 구분"
+    },
+    "full_comparison": {
+      "raw_equal": false,
+      "max_raw_error": 4.1300296516055823e-14,
+      "max_position_error_m": 2.220446049250313e-16,
+      "max_velocity_error_m_s": 4.1300296516055823e-14,
+      "original_wall_s": 3923.9315253520326,
+      "cached_wall_s": 2155.8118668339666,
+      "ratio": 0.5494009905385797,
+      "status": "passed"
+    },
+    "full_wind_status": "complete"
+  },
+  "default_path_full_replay": {
+    "scope": "같은 기준120프레임 전체;비트 동일과 물리 규모 차이를 구분",
+    "raw_bitwise_equal_frames": 38,
+    "total_frames": 120,
+    "first_nonidentical_frame": 38,
+    "first_nonidentical_trajectory_time_s": 8.65,
+    "max_raw_abs_errors": {
+      "u_hi": 2.3314683517128287e-15,
+      "u_lo": 2.193730841338568e-16,
+      "v_hi": 3.3790747977491264e-12,
+      "v_lo": 8.624010612983759e-16
+    },
+    "max_position_error_m": 2.3314683517128287e-15,
+    "max_velocity_error_m_s": 3.3790747977491264e-12,
+    "reference_report_sha256": "ffbc49060f010c02e80e0f8ac7ece4b568f3c7f9081310cf40110f28aebfa913",
+    "error_definition": "max(abs((new_hi+new_lo)-(old_hi+old_lo))) in FP64",
+    "status": "complete_numerically_equivalent",
+    "frame_wall_s": 3884.4010848969992
+  },
+  "normal_motion_analysis": {
+    "tests_passed": 3,
+    "cpu_log": "experiments/artifacts/runs/p3_self_contact/vibration_search_20260930_01/normal_analysis_tests.log",
+    "actual_data_check": "experiments/artifacts/runs/p3_self_contact/vibration_search_20260930_01/analysis_normals_pipeline/report.json",
+    "scope": "CG 표면 방향 떨림 보조 지표;작은 각도 근사"
+  },
+  "completed_bend20_tail": {
+    "frames": 120,
+    "relative_to_reference": {
+      "all": {
+        "mid_frequency_reduction": 0.09828527639346385,
+        "high_frequency_reduction": 0.3796630895672569,
+        "second_difference_reduction": 0.21413918442657176,
+        "speed_retention": 0.9493284499911523,
+        "low_frequency_retention": 0.9579019661379985,
+        "movement_retention": 0.9449754479622434,
+        "normal_high_frequency_reduction": 0.4636420536816156
+      },
+      "settled": {
+        "mid_frequency_reduction": 0.09322735948114003,
+        "high_frequency_reduction": 0.3733871515890439,
+        "second_difference_reduction": 0.21289011918592182,
+        "speed_retention": 0.9413020572282302,
+        "low_frequency_retention": 0.9391273296375559,
+        "movement_retention": 0.9442168075578814,
+        "normal_high_frequency_reduction": 0.4627496828672769
+      },
+      "last_second": {
+        "mid_frequency_reduction": 0.1515952930640252,
+        "high_frequency_reduction": 0.5591786697942963,
+        "second_difference_reduction": 0.2236519352543318,
+        "speed_retention": 0.9254922891303133,
+        "low_frequency_retention": 0.881378254142417,
+        "movement_retention": 0.9406061402368783,
+        "normal_high_frequency_reduction": 0.6239080712361869
+      }
+    },
+    "frame_wall_s": 3923.9315253520326,
+    "cost_ratio": 1.010176714399739,
+    "recovery_frames": 0,
+    "analysis_report": "experiments/artifacts/runs/p3_self_contact/vibration_search_20260930_01/analysis_tail_02/report.json",
+    "full_wind_validated": true,
+    "full_wind_validation_bundle": "bundle_cached/bend20/wind"
+  },
+  "completed_mem10_tail": {
+    "frames": 120,
+    "relative_to_reference": {
+      "all": {
+        "mid_frequency_reduction": 0.03310301087621037,
+        "high_frequency_reduction": 0.10662187696450764,
+        "second_difference_reduction": 0.0661885104723614,
+        "speed_retention": 0.9890096281125139,
+        "low_frequency_retention": 0.9920397835449095,
+        "movement_retention": 0.9892111529655628,
+        "normal_high_frequency_reduction": 0.08599048461984404
+      },
+      "settled": {
+        "mid_frequency_reduction": 0.052158809519086025,
+        "high_frequency_reduction": 0.10640504427650965,
+        "second_difference_reduction": 0.06643356296815983,
+        "speed_retention": 0.9877076225451591,
+        "low_frequency_retention": 0.9842032477588225,
+        "movement_retention": 0.9896539763847418,
+        "normal_high_frequency_reduction": 0.083908522648244
+      },
+      "last_second": {
+        "mid_frequency_reduction": 0.017434761037220303,
+        "high_frequency_reduction": 0.13232178019832508,
+        "second_difference_reduction": 0.06997154161162222,
+        "speed_retention": 0.9821819129663646,
+        "low_frequency_retention": 0.9682361534810762,
+        "movement_retention": 0.9889439540846771,
+        "normal_high_frequency_reduction": 0.0800128062681954
+      }
+    },
+    "frame_wall_s": 4468.633388232003,
+    "cost_ratio": 1.1504047317890438,
+    "recovery_frames": 2,
+    "analysis_report": "experiments/artifacts/runs/p3_self_contact/vibration_search_20260930_01/analysis_tail_03/report.json",
+    "decision": "현재 우선 후보 제외;비용 대비 개선 작음"
+  },
+  "completed_global1_tail": {
+    "frames": 120,
+    "relative_to_reference": {
+      "all": {
+        "mid_frequency_reduction": 0.2633559320808243,
+        "high_frequency_reduction": 0.3145969239466039,
+        "second_difference_reduction": 0.25118626647753783,
+        "speed_retention": 0.8444426357427405,
+        "low_frequency_retention": 0.8255785522703392,
+        "movement_retention": 0.8753486812126563,
+        "normal_high_frequency_reduction": 0.28883769748105526
+      },
+      "settled": {
+        "mid_frequency_reduction": 0.25129829752317434,
+        "high_frequency_reduction": 0.3293811315847983,
+        "second_difference_reduction": 0.27131423946637423,
+        "speed_retention": 0.8311854744441828,
+        "low_frequency_retention": 0.8103422521353119,
+        "movement_retention": 0.8434644954948851,
+        "normal_high_frequency_reduction": 0.3066194234625681
+      },
+      "last_second": {
+        "mid_frequency_reduction": 0.3029169756698019,
+        "high_frequency_reduction": 0.33222775693720064,
+        "second_difference_reduction": 0.32508117487737365,
+        "speed_retention": 0.7665769262296034,
+        "low_frequency_retention": 0.6602978118193236,
+        "movement_retention": 0.7250756757715463,
+        "normal_high_frequency_reduction": 0.28949215341538237
+      }
+    },
+    "frame_wall_s": 3259.25323361397,
+    "cost_ratio": 0.839061971814992,
+    "recovery_frames": 0,
+    "analysis_report": "experiments/artifacts/runs/p3_self_contact/vibration_search_20260930_01/analysis_tail_04/report.json",
+    "decision": "움직임 둔화로 우선 후보 제외;전역2 긴 비교 미확장"
+  },
+  "recommendations": "experiments/artifacts/runs/p3_self_contact/vibration_search_20260930_01/recommendations.json",
+  "full_wind_result": {
+    "frames": 300,
+    "frame_wall_s": 4261.290599255051,
+    "recovery_frames": 0,
+    "relative": {
+      "wind": {
+        "high_frequency_reduction": 0.4836508413449455,
+        "mid_frequency_reduction": 0.16679764824170884,
+        "second_difference_reduction": 0.2008057845504585,
+        "speed_retention": 0.9531271251060826,
+        "low_frequency_retention": 0.9988537167470612,
+        "movement_retention": 0.9939629801425706,
+        "normal_high_frequency_reduction": 0.5652355012595611
+      },
+      "tail": {
+        "high_frequency_reduction": 0.2855356821176801,
+        "mid_frequency_reduction": -0.005480361198749506,
+        "second_difference_reduction": 0.22513298617782385,
+        "speed_retention": 0.9403080983691305,
+        "low_frequency_retention": 0.9493460737042154,
+        "movement_retention": 0.9872231344519572,
+        "normal_high_frequency_reduction": 0.33715763354022654
+      },
+      "last_second": {
+        "high_frequency_reduction": 0.3825858512010536,
+        "mid_frequency_reduction": 0.02328013098528925,
+        "second_difference_reduction": 0.22278303903879548,
+        "speed_retention": 0.9102543244560999,
+        "low_frequency_retention": 0.8714105872973341,
+        "movement_retention": 0.9093031837762456,
+        "normal_high_frequency_reduction": 0.5055729797577293
+      }
+    },
+    "report": "experiments/artifacts/runs/p3_self_contact/vibration_search_20260930_01/analysis_wind_bundle_cached_bend20/report.json",
+    "scope": "공통5초 raw에서wind5초;학습 적격성/시간·공간 수렴 판정 아님"
+  },
+  "cost_measurements": "experiments/artifacts/runs/p3_self_contact/vibration_search_20260930_01/cost_measurements.json",
+  "production_defaults_changed": false,
+  "training_eligible": false,
+  "gpu_simulation_runs": {
+    "jobs": 24,
+    "completed": 24,
+    "accepted_frames": 1008,
+    "runs": [
+      {
+        "path": "bundle/bend10/cost8/reference_rectangle/outputs/wind/report.json",
+        "status": "complete",
+        "frames": 6
+      },
+      {
+        "path": "bundle/bend10/cost95/reference_rectangle/outputs/wind/report.json",
+        "status": "complete",
+        "frames": 6
+      },
+      {
+        "path": "bundle/bend20/cost8/reference_rectangle/outputs/wind/report.json",
+        "status": "complete",
+        "frames": 6
+      },
+      {
+        "path": "bundle/bend20/cost95/reference_rectangle/outputs/wind/report.json",
+        "status": "complete",
+        "frames": 6
+      },
+      {
+        "path": "bundle/bend20/tail/reference_rectangle/outputs/wind/report.json",
+        "status": "complete",
+        "frames": 120
+      },
+      {
+        "path": "bundle/global1/cost8/reference_rectangle/outputs/wind/report.json",
+        "status": "complete",
+        "frames": 6
+      },
+      {
+        "path": "bundle/global1/cost95/reference_rectangle/outputs/wind/report.json",
+        "status": "complete",
+        "frames": 6
+      },
+      {
+        "path": "bundle/global1/tail/reference_rectangle/outputs/wind/report.json",
+        "status": "complete",
+        "frames": 120
+      },
+      {
+        "path": "bundle/global2/cost8/reference_rectangle/outputs/wind/report.json",
+        "status": "complete",
+        "frames": 6
+      },
+      {
+        "path": "bundle/global2/cost95/reference_rectangle/outputs/wind/report.json",
+        "status": "complete",
+        "frames": 6
+      },
+      {
+        "path": "bundle/mem10/cost8/reference_rectangle/outputs/wind/report.json",
+        "status": "complete",
+        "frames": 6
+      },
+      {
+        "path": "bundle/mem10/cost95/reference_rectangle/outputs/wind/report.json",
+        "status": "complete",
+        "frames": 6
+      },
+      {
+        "path": "bundle/mem10/tail/reference_rectangle/outputs/wind/report.json",
+        "status": "complete",
+        "frames": 120
+      },
+      {
+        "path": "bundle/mem20/cost8/reference_rectangle/outputs/wind/report.json",
+        "status": "complete",
+        "frames": 6
+      },
+      {
+        "path": "bundle/mem20/cost95/reference_rectangle/outputs/wind/report.json",
+        "status": "complete",
+        "frames": 6
+      },
+      {
+        "path": "bundle/reference/cost8/reference_rectangle/outputs/wind/report.json",
+        "status": "complete",
+        "frames": 6
+      },
+      {
+        "path": "bundle/reference/cost95/reference_rectangle/outputs/wind/report.json",
+        "status": "complete",
+        "frames": 6
+      },
+      {
+        "path": "bundle/reference/tail/reference_rectangle/outputs/wind/report.json",
+        "status": "complete",
+        "frames": 120
+      },
+      {
+        "path": "bundle_fast/bend20/cost8/reference_rectangle/outputs/wind/report.json",
+        "status": "complete",
+        "frames": 6
+      },
+      {
+        "path": "bundle_fast/bend20/cost95/reference_rectangle/outputs/wind/report.json",
+        "status": "complete",
+        "frames": 6
+      },
+      {
+        "path": "bundle_cached/bend20/cost8/reference_rectangle/outputs/wind/report.json",
+        "status": "complete",
+        "frames": 6
+      },
+      {
+        "path": "bundle_cached/bend20/cost95/reference_rectangle/outputs/wind/report.json",
+        "status": "complete",
+        "frames": 6
+      },
+      {
+        "path": "bundle_cached/bend20/tail/reference_rectangle/outputs/wind/report.json",
+        "status": "complete",
+        "frames": 120
+      },
+      {
+        "path": "bundle_cached/bend20/wind/reference_rectangle/outputs/wind/report.json",
+        "status": "complete",
+        "frames": 300
+      }
+    ]
+  },
+  "final_integrity": "experiments/artifacts/runs/p3_self_contact/vibration_search_20260930_01/final_integrity.json",
+  "viewer": {
+    "wind": {
+      "screenshot_sha256": "db6f6e50ada844abfaae2d98bd7e37153c96160ec81c015363872d5240a978c4",
+      "pixels": [
+        1280,
+        800
+      ],
+      "log": "experiments/artifacts/runs/p3_self_contact/vibration_search_20260930_01/viewer_wind_smoke.log",
+      "render_exit_code": 0,
+      "scope": "2frame headless render·공통시간/외력/hash검증·두표면표시 확인;주관적 움직임 채택 아님"
+    },
+    "tail": {
+      "screenshot_sha256": "7b31f5f279504066a766e30028b9dc97d46b6c359231468fbf82635696d8ee81",
+      "pixels": [
+        1280,
+        800
+      ],
+      "log": "experiments/artifacts/runs/p3_self_contact/vibration_search_20260930_01/viewer_tail_smoke.log",
+      "render_exit_code": 0,
+      "scope": "2frame headless render·공통시간/외력/hash검증·두표면표시 확인;주관적 움직임 채택 아님"
+    }
+  },
+  "record_checks": {
+    "markdown_links_checked": 36,
+    "html_links_valid": true,
+    "selection_hashes_valid": true,
+    "shell_syntax": "passed",
+    "tracked_diff_whitespace": "passed"
+  }
+}

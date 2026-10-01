@@ -1,0 +1,43 @@
+{
+  "checked_on": "2026-09-28",
+  "status": "prepared_not_simulated",
+  "candidate": {
+    "path": "experiments/artifacts/runs/sub_pc/20260928T043613Z-b306cdad658642d089bb9b2330f8fdae/simulation",
+    "manifest_sha256": "7e0c66997a0a0018d1fddc1786a5315cc59094521b879831864c528a8a064190"
+  },
+  "reference": {
+    "path": "experiments/artifacts/runs/p3_self_contact/rectangle_gpu_drape_v13_time128",
+    "manifest_sha256": "a3f4eca81ac3547d99308cc2ca6b434e9193758eb72b22bb517d54f8e1e6ea3c",
+    "shape": "reference_rectangle",
+    "frames": {
+      "preload": 60,
+      "calm": 240,
+      "wind": 300
+    },
+    "fps": 60,
+    "base_substeps": 128,
+    "retry_substeps": 256,
+    "required_gpu_model": "NVIDIA GeForce RTX 5070"
+  },
+  "validation": {
+    "runtime_byte_identical": true,
+    "native_byte_identical": true,
+    "initial_state_byte_identical": true,
+    "forcing_byte_identical": true,
+    "only_substeps_changed": true,
+    "cpu_tests_passed": 25,
+    "test_files": [
+      "code/tests/test_teacher_gpu_time_refinement.py",
+      "code/tests/test_compare_gpu_cg_checks.py"
+    ],
+    "shell_syntax": "passed",
+    "comparator_bundle_reader": "passed",
+    "comparator_input_contract_128_and_256": "synthetic fixture passed",
+    "gpu_model_guard": "CPU mocked acceptance/rejection passed",
+    "gpu_simulation_executed": false,
+    "real_pair_compared": false,
+    "outputs_absent": true
+  },
+  "training_eligible": false,
+  "r1_complete": false
+}

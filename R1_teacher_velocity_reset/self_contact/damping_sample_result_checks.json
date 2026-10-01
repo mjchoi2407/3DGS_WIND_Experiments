@@ -1,0 +1,76 @@
+{
+  "bundle": "experiments/artifacts/runs/p3_self_contact/damping_sample_v13_01",
+  "manifest_sha256": "5dde7ab328c43863aac8c93b459152a6c3230d9f76c0f72219e50e764580bb4c",
+  "window_trajectory_s": [
+    3,
+    4
+  ],
+  "metric_window_trajectory_s": [
+    3.5,
+    4
+  ],
+  "cases": {
+    "control": {
+      "gpu": "NVIDIA GeForce GTX 1080 Ti",
+      "frames": 60,
+      "failed_rows": 0,
+      "retry_frames": 0,
+      "speed_rms_last_half_m_s": 0.2787654274712619,
+      "secant_speed_rms_last_half_m_s": 0.11607459534329995,
+      "position_variation_last_half_mm": 13.528679526853969,
+      "frame_second_difference_rms_last_half_mm": 1.245592788463699,
+      "end_displacement_from_start_rms_mm": 52.1535404528271,
+      "mean_height_change_mm": 2.7799511172989293,
+      "damping_audits": 0,
+      "damping_failed": 0,
+      "kick_energy_removed_j": 0,
+      "max_energy_scaling_error_j": 0,
+      "max_force_ratio": 0.2987127335523408,
+      "min_area_ratio_lower": 0.5246987124017025,
+      "end_difference_from_control_rms_mm": 0.0
+    },
+    "weak": {
+      "gpu": "NVIDIA GeForce GTX 1080 Ti",
+      "frames": 60,
+      "failed_rows": 0,
+      "retry_frames": 0,
+      "speed_rms_last_half_m_s": 0.19459982297363862,
+      "secant_speed_rms_last_half_m_s": 0.08838111351959828,
+      "position_variation_last_half_mm": 11.135990239515639,
+      "frame_second_difference_rms_last_half_mm": 0.8957050605294303,
+      "end_displacement_from_start_rms_mm": 35.87551470165191,
+      "mean_height_change_mm": 1.9047722717265063,
+      "damping_audits": 60,
+      "damping_failed": 0,
+      "kick_energy_removed_j": 0.0026449789385263245,
+      "max_energy_scaling_error_j": 7.806255641895632e-18,
+      "max_force_ratio": 0.29971751265096663,
+      "min_area_ratio_lower": 0.5250381627165703,
+      "end_difference_from_control_rms_mm": 16.967927233172865
+    },
+    "strong": {
+      "gpu": "NVIDIA GeForce GTX 1080 Ti",
+      "frames": 60,
+      "failed_rows": 0,
+      "retry_frames": 0,
+      "speed_rms_last_half_m_s": 0.10231549823449519,
+      "secant_speed_rms_last_half_m_s": 0.04936425255127665,
+      "position_variation_last_half_mm": 6.5514643338510385,
+      "frame_second_difference_rms_last_half_mm": 0.43805763819606125,
+      "end_displacement_from_start_rms_mm": 21.98575671533718,
+      "mean_height_change_mm": 1.7532543377896421,
+      "damping_audits": 60,
+      "damping_failed": 0,
+      "kick_energy_removed_j": 0.00413571889403878,
+      "max_energy_scaling_error_j": 3.686287386450715e-18,
+      "max_force_ratio": 0.2994037388120657,
+      "min_area_ratio_lower": 0.5257012989136572,
+      "end_difference_from_control_rms_mm": 32.36913520014675
+    }
+  },
+  "confirmed_date": "2026-09-28",
+  "method": "동일 P3 공통512점 면적 가중 RMS. 후반3.5–4초31상태. 2차 차분은 프레임 위치의 급변 지표이며 순수 고주파 진폭이 아님. 위치 변화는 평균으로부터 편차로 드리프트 포함.",
+  "validation": "manifest, 180 frame hash/flags/time/finite/pins, checkpoint hash, same initial state and GPU, 120 recorded damping audits; CPU viewer cache complete",
+  "limitations": "삼각형 무풍1초. 사용자 시각 판단/바람/장기/수렴/학습 판정 미완료",
+  "training_eligible": false
+}

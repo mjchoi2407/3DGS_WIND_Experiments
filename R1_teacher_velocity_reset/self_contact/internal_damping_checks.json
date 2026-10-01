@@ -1,0 +1,149 @@
+{
+  "confirmed_on": "2026-09-29",
+  "status": "구현·동결·CPU 검증 완료, GPU 미실행",
+  "bundle": "experiments/artifacts/runs/p3_self_contact/rectangle_wind_internal1_5ms_main_01",
+  "manifest_sha256": "3c5ef6764035b84cf5953e4228f563577f7355b31022e036168361d6bccbe8a1",
+  "cases": {
+    "tau1ms": 0.001,
+    "tau5ms": 0.005
+  },
+  "required_gpu": "NVIDIA GeForce GTX 1080 Ti",
+  "global_velocity_damping_s_inv": 0.0,
+  "bending_damping_tau_s": 0.0,
+  "fps": 60,
+  "wind_frames_per_case": 300,
+  "substeps": 64,
+  "retry_substeps": 128,
+  "reference24": {
+    "source_manifest_sha256": "fabd27091ad325b29f1940688b3f3df6e441f5fee95e60d9102ec8fe49f3afc0",
+    "report_sha256": "ec7c8d4bef56d27aa87bd5a0ca5132a485c61e34519a9d84daade8aa9e234e0b",
+    "initial_state_sha256": "8078352b8b8d3b08ad216569c56d27d7d036fca0490b279f6d3f7e28d30a3fee",
+    "gpu": "NVIDIA GeForce RTX 5070"
+  },
+  "runtime_matches_prepared_worktree": true,
+  "native_byte_identical": true,
+  "forcing_byte_identical": {
+    "tau1ms": true,
+    "tau5ms": true
+  },
+  "initial_raw_byte_identical": true,
+  "sub8_16_input_manifest_unchanged": "5ce72bed3fc26922a3b5bcbf33d179174c0eb6f4a33f96fee6997b9185ccdb26",
+  "cpu_tests": {
+    "new": 18,
+    "existing_regressions": 56,
+    "related_recheck_after_smoke_option": 17,
+    "new_files": [
+      "code/tests/test_membrane_damping.py",
+      "code/tests/test_gpu_internal_damping.py"
+    ],
+    "regression_files": [
+      "code/tests/test_teacher_gpu_contact_scene_suite.py",
+      "code/tests/test_gpu_damping_sample.py",
+      "code/tests/test_gpu_wind_damping.py",
+      "code/tests/test_gpu_damped_trajectory.py",
+      "code/tests/test_gpu_damping24_pair.py"
+    ],
+    "note": "재확인17개는 앞 검사와 중복; CUDA_VISIBLE_DEVICES 비워 GPU 시뮬레이션 미실행"
+  },
+  "actual_initial_state_numpy_warp_cpu": {
+    "tau1ms": {
+      "status": "passed",
+      "device": "cpu",
+      "law": "p3_green_membrane_kelvin_voigt_v1",
+      "tau_s": 0.001,
+      "fixtures": {
+        "stored_5s": {
+          "7680.0": {
+            "force_max_abs_n": 4.774695924552284e-15,
+            "tangent_max_abs_n": 1.0732037480920553e-10,
+            "dissipation_w": 2.3830249377613065e-06
+          },
+          "15360.0": {
+            "force_max_abs_n": 4.774695924552284e-15,
+            "tangent_max_abs_n": 2.1100277081131935e-10,
+            "dissipation_w": 2.3830249377613065e-06
+          }
+        },
+        "deforming": {
+          "7680.0": {
+            "force_max_abs_n": 1.3322676295501878e-14,
+            "tangent_max_abs_n": 1.0913936421275139e-10,
+            "dissipation_w": 16.996559398832186
+          },
+          "15360.0": {
+            "force_max_abs_n": 1.3322676295501878e-14,
+            "tangent_max_abs_n": 2.128217602148652e-10,
+            "dissipation_w": 16.996559398832186
+          }
+        },
+        "rigid_velocity": {
+          "7680.0": {
+            "force_max_abs_n": 1.151124185121019e-15,
+            "tangent_max_abs_n": 1.0822986951097846e-10,
+            "dissipation_w": 1.7682845374139288e-27
+          },
+          "15360.0": {
+            "force_max_abs_n": 1.151124185121019e-15,
+            "tangent_max_abs_n": 2.1464074961841106e-10,
+            "dissipation_w": 1.7682845374139288e-27
+          }
+        }
+      }
+    },
+    "tau5ms": {
+      "status": "passed",
+      "device": "cpu",
+      "law": "p3_green_membrane_kelvin_voigt_v1",
+      "tau_s": 0.005,
+      "fixtures": {
+        "stored_5s": {
+          "7680.0": {
+            "force_max_abs_n": 2.387350164561805e-14,
+            "tangent_max_abs_n": 5.275069270282984e-10,
+            "dissipation_w": 1.1915124688806537e-05
+          },
+          "15360.0": {
+            "force_max_abs_n": 2.387350164561805e-14,
+            "tangent_max_abs_n": 1.076841726899147e-09,
+            "dissipation_w": 1.1915124688806537e-05
+          }
+        },
+        "deforming": {
+          "7680.0": {
+            "force_max_abs_n": 7.016609515630989e-14,
+            "tangent_max_abs_n": 5.384208634495735e-10,
+            "dissipation_w": 84.98279699416094
+          },
+          "15360.0": {
+            "force_max_abs_n": 7.016609515630989e-14,
+            "tangent_max_abs_n": 1.0695657692849636e-09,
+            "dissipation_w": 84.98279699416094
+          }
+        },
+        "rigid_velocity": {
+          "7680.0": {
+            "force_max_abs_n": 5.755620925605097e-15,
+            "tangent_max_abs_n": 5.347828846424818e-10,
+            "dissipation_w": 8.841422687069643e-27
+          },
+          "15360.0": {
+            "force_max_abs_n": 5.755620925605097e-15,
+            "tangent_max_abs_n": 1.076841726899147e-09,
+            "dissipation_w": 8.841422687069643e-27
+          }
+        }
+      }
+    }
+  },
+  "shell_syntax": "passed",
+  "gpu_kernel_oracle_executed": false,
+  "gpu_simulation_executed": false,
+  "visual_review_complete": false,
+  "training_eligible": false,
+  "canonical_r1_changed": false,
+  "limitations": [
+    "새 감쇠 CUDA graph/접촉 첫 프레임/장기 궤적/실제 rollback 미검증",
+    "기존24는 RTX5070 시각 참고, 새1/5ms는GTX1080Ti",
+    "소산 장부는 순간 비음수 소산률의 사다리꼴 추정이며 정확한 에너지 보존/단조성 증명 아님"
+  ]
+}

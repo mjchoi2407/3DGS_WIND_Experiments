@@ -15,7 +15,7 @@ Wind3DGS의 experiments 독립 저장소다. 공통 지침은 [`../AGENTS.md`](.
 
 - 기존 사용자 파일은 명시적으로 정리 요청을 받은 범위 외에는 보존한다.
 - 새 재사용 구현은 `../code/wind3dgs/`에 두고 실험에서 사용하는 방법만 연결한다.
-- 새 실험에는 해당 폴더의 짧은 `README.md`와 상세 설정·결과 위치를 제공한다.
+- 독립 실험 주제를 새로 만들 때 짧은 `README.md`와 상세 설정·결과 위치를 제공한다. 같은 주제의 재실행마다 설명 문서를 복제하지 않는다.
 - 새 TD 작업의 dataset, object package, checkpoint/model, complete run, per-frame render, video와 다른 heavy working output은 `artifacts/datasets/`, `artifacts/packages/`, `artifacts/models/` 또는 `artifacts/runs/`에 둔다. 이 경로들은 Git에서 제외한다.
 - 실험을 이해하거나 재현하는 데 필요한 compact evidence만 추적한다. 여기에는 README, secret 없는 config, 작은 deterministic fixture, run manifest, compact report, completion marker와 의도적으로 선택한 대표 figure가 포함된다.
 - 기존 tracked M01--M04 asset과 output은 legacy evidence로 보존한다. 이를 모든 새 TD output을 추적하는 선례로 삼거나 TD milestone 완료 근거로 사용하지 않는다.
@@ -25,4 +25,4 @@ Wind3DGS의 experiments 독립 저장소다. 공통 지침은 [`../AGENTS.md`](.
 
 ## Session Tracking
 
-실험 결과·판정·사용자 결정·중단이 확정되면 [공통 기록 규칙](../AGENTS.md#간결한-작업-기록)에 따라 해당 note를 갱신한다. [주제별 색인](sessions/README.md#현재-상태)은 짧게 유지하고, 과거 근거는 [이전 작업 링크](sessions/README.md#이전-작업-링크--당시-상태)로 연결한다.
+[공통 기록 기준](../docs/workflows/work_records.md#간결한-작업-기록)에 따라 재개·판단에 필요한 실행 결과·판정 변화만 소유 문서에 기록한다. 기존 문서로 충분하면 별도 note를 만들지 않는다. 다른 저장소의 상세 결과는 복제하지 않고 연결한다. [주제별 색인](sessions/README.md#현재-상태)은 대표 링크·중요 상태 변경 때만 갱신한다. 공통 운영 정책 변경은 root 기록을 참조한다.

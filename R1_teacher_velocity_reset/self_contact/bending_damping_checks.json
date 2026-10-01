@@ -1,0 +1,160 @@
+{
+  "confirmed_on": "2026-09-29",
+  "status": "구현·동결·CPU 검증 완료; GPU 미실행",
+  "bundle": "experiments/artifacts/runs/p3_self_contact/rectangle_bending1_5ms_tail2_main_01",
+  "manifest_sha256": "8dba93d41b0341574c154d1a1cd2f5ba03ec5107966bceaad78622ce0585eff6",
+  "reference0": {
+    "source_manifest_sha256": "3c5ef6764035b84cf5953e4228f563577f7355b31022e036168361d6bccbe8a1",
+    "report_sha256": "c913f5934fc9a67e1fad32edbbabe0e09a1fce5e58829a4d1ef437959004f155",
+    "source_frame": 179,
+    "source_frame_sha256": "00d845e64efba0ae4dc337c07f219b0e3b32b556fbc9064b7a109b63d8eb1972",
+    "initial_state_sha256": "958cafa56b5bd98425252ac092d33b341567f3bbbc588d22f3e9ca0965489050",
+    "gpu": "NVIDIA GeForce GTX 1080 Ti"
+  },
+  "cases": {
+    "bend1ms": 0.001,
+    "bend5ms": 0.005
+  },
+  "membrane_tau_s": 0.005,
+  "global_velocity_damping_s_inv": 0.0,
+  "fps": 60,
+  "frames_per_case": 120,
+  "trajectory_segment_s": [
+    8.0,
+    10.0
+  ],
+  "phase_times_s": [
+    3.0,
+    5.0
+  ],
+  "base_substeps": 64,
+  "retry_substeps": 128,
+  "required_gpu": "NVIDIA GeForce GTX 1080 Ti",
+  "runtime_matches_prepared_worktree": true,
+  "native_byte_identical": true,
+  "initial_raw_arrays_bitwise_identical": true,
+  "forcing_equals_source_last120": {
+    "bend1ms": true,
+    "bend5ms": true
+  },
+  "tests": {
+    "new_physics": 9,
+    "new_runner": 9,
+    "shared_simulation_and_existing_membrane": 27,
+    "total_passed": 45
+  },
+  "shell_syntax": "passed",
+  "actual_8s_cpu_oracle": {
+    "bend1ms": {
+      "status": "passed",
+      "device": "cpu",
+      "bending_law": "p3_curvature_hinge_rate_damping_v1",
+      "membrane_tau_s": 0.005,
+      "bending_tau_s": 0.001,
+      "zero_bending_matches_membrane": true,
+      "fixtures": {
+        "stored_8s": {
+          "7680.0": {
+            "force_max_abs_n": 5.899817174517472e-13,
+            "tangent_max_abs_n": 5.147740012034774e-10,
+            "total_power_w": 0.018857198847510418,
+            "reference_membrane_power_w": 0.01635339734139167,
+            "reference_curvature_power_w": 0.0010619290517157583,
+            "reference_hinge_power_w": 0.0014418724544028642
+          },
+          "15360.0": {
+            "force_max_abs_n": 5.899817174517472e-13,
+            "tangent_max_abs_n": 1.0295480024069548e-09,
+            "total_power_w": 0.018857198847510418,
+            "reference_membrane_power_w": 0.01635339734139167,
+            "reference_curvature_power_w": 0.0010619290517157583,
+            "reference_hinge_power_w": 0.0014418724544028642
+          }
+        },
+        "deforming": {
+          "7680.0": {
+            "force_max_abs_n": 7.638334409421077e-14,
+            "tangent_max_abs_n": 5.165929906070232e-10,
+            "total_power_w": 86.0686986373807,
+            "reference_membrane_power_w": 86.05072116353017,
+            "reference_curvature_power_w": 0.003591965183420105,
+            "reference_hinge_power_w": 0.014385508667107673
+          },
+          "15360.0": {
+            "force_max_abs_n": 7.638334409421077e-14,
+            "tangent_max_abs_n": 1.04046193882823e-09,
+            "total_power_w": 86.0686986373807,
+            "reference_membrane_power_w": 86.05072116353017,
+            "reference_curvature_power_w": 0.003591965183420105,
+            "reference_hinge_power_w": 0.014385508667107673
+          }
+        }
+      }
+    },
+    "bend5ms": {
+      "status": "passed",
+      "device": "cpu",
+      "bending_law": "p3_curvature_hinge_rate_damping_v1",
+      "membrane_tau_s": 0.005,
+      "bending_tau_s": 0.005,
+      "zero_bending_matches_membrane": true,
+      "fixtures": {
+        "stored_8s": {
+          "7680.0": {
+            "force_max_abs_n": 5.900006638847113e-13,
+            "tangent_max_abs_n": 5.147740012034774e-10,
+            "total_power_w": 0.028872404871984916,
+            "reference_membrane_power_w": 0.01635339734139167,
+            "reference_curvature_power_w": 0.005309645258578792,
+            "reference_hinge_power_w": 0.007209362272014321
+          },
+          "15360.0": {
+            "force_max_abs_n": 5.900006638847113e-13,
+            "tangent_max_abs_n": 1.0295480024069548e-09,
+            "total_power_w": 0.028872404871984916,
+            "reference_membrane_power_w": 0.01635339734139167,
+            "reference_curvature_power_w": 0.005309645258578792,
+            "reference_hinge_power_w": 0.007209362272014321
+          }
+        },
+        "deforming": {
+          "7680.0": {
+            "force_max_abs_n": 7.460698725481052e-14,
+            "tangent_max_abs_n": 5.165929906070232e-10,
+            "total_power_w": 86.14060853278282,
+            "reference_membrane_power_w": 86.05072116353017,
+            "reference_curvature_power_w": 0.017959825917100526,
+            "reference_hinge_power_w": 0.07192754333553837
+          },
+          "15360.0": {
+            "force_max_abs_n": 7.460698725481052e-14,
+            "tangent_max_abs_n": 1.0368239600211382e-09,
+            "total_power_w": 86.14060853278282,
+            "reference_membrane_power_w": 86.05072116353017,
+            "reference_curvature_power_w": 0.017959825917100526,
+            "reference_hinge_power_w": 0.07192754333553837
+          }
+        }
+      }
+    }
+  },
+  "gpu_run": false,
+  "canonical_changed": false,
+  "limitations": [
+    "GPU 힘/접선/소산 대조·graph·첫 프레임·120프레임 완주는 사용자 실행 대기",
+    "실제 실패 주입 rollback 검증 미실행",
+    "새 모델 시간/공간 수렴·시각·학습/R1 채택 미완료",
+    "8초 감쇠 전환 진단이며 원래 wind 전체에서 같은 감쇠를 쓴 궤적이 아님"
+  ],
+  "baseline_viewer_cache": {
+    "path": "experiments/artifacts/runs/shell_playback/bending_tail2/14278ec4e7d0bc5c/bend0",
+    "states": 121,
+    "time_s": [
+      0.0,
+      2.0
+    ],
+    "status": "CPU 캐시 검증 통과; GUI 미실행"
+  },
+  "related_document_links_checked": 38,
+  "diff_check": "code·experiments 통과"
+}

@@ -1,0 +1,36 @@
+{
+  "date": "2026-09-29",
+  "bundle": "experiments/artifacts/runs/p3_self_contact/rectangle_wind_damping8_16_from24_01",
+  "manifest_sha256": "5ce72bed3fc26922a3b5bcbf33d179174c0eb6f4a33f96fee6997b9185ccdb26",
+  "cases": {
+    "rate8": 8.0,
+    "rate16": 16.0
+  },
+  "reference24": {
+    "source_manifest_sha256": "fabd27091ad325b29f1940688b3f3df6e441f5fee95e60d9102ec8fe49f3afc0",
+    "report_sha256": "ec7c8d4bef56d27aa87bd5a0ca5132a485c61e34519a9d84daade8aa9e234e0b",
+    "initial_state_sha256": "8078352b8b8d3b08ad216569c56d27d7d036fca0490b279f6d3f7e28d30a3fee",
+    "gpu": "NVIDIA GeForce RTX 5070"
+  },
+  "source": "experiments/artifacts/runs/sub_pc/20260929T002107Z-65221d3a61d34d0f93b4d01006eb5602/simulation/steps64",
+  "window_trajectory_s": [
+    5,
+    10
+  ],
+  "frames_per_case": 300,
+  "substeps": 64,
+  "required_gpu_model": "NVIDIA GeForce RTX 5070",
+  "validation": {
+    "cpu_tests_passed": 9,
+    "shell_syntax": true,
+    "runtime_native_byte_identical_to_reference24": true,
+    "forcing_byte_identical": true,
+    "raw_initial_byte_identical": true,
+    "plan_only_damping_rate_changed": true,
+    "new_outputs_absent": true,
+    "reference24_cache_and_one_frame_render": true,
+    "candidate_view_damping_and_time_rejection_fixture": true
+  },
+  "simulation_executed": false,
+  "training_eligible": false
+}

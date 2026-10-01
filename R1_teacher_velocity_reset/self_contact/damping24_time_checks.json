@@ -1,0 +1,31 @@
+{
+  "date": "2026-09-29",
+  "rate_s_inv": 24,
+  "shape": "reference_rectangle",
+  "phase_frames": {
+    "preload": 60,
+    "calm": 240,
+    "wind": 300
+  },
+  "runs": {
+    "64": {
+      "bundle": "experiments/artifacts/runs/p3_self_contact/rectangle_gpu_drape_v13_damping24_steps64_01",
+      "manifest_sha256": "a4fb8ac63b827ce011c80e7262e16fc441d148cb02aca3d8a3945eb7a6d6ebe3",
+      "required_gpu_model": "NVIDIA GeForce GTX 1080 Ti"
+    },
+    "128": {
+      "bundle": "experiments/artifacts/runs/p3_self_contact/rectangle_gpu_drape_v13_damping24_steps128_01",
+      "manifest_sha256": "37f8a80eb5b361d13fa6fe31cf0d9418e1c9336ef752a58cda4965ecd84e0c07",
+      "required_gpu_model": "NVIDIA GeForce RTX 5070"
+    }
+  },
+  "checks": {
+    "cpu_tests_passed": 66,
+    "runtime_native_identical": true,
+    "initial_forcing_identical": true,
+    "only_substeps_differ_in_plans": true,
+    "outputs_absent": true
+  },
+  "simulation_executed": false,
+  "scope": "교차 GPU+시간 간격 혼합 진단; 정식 동일 GPU 시간 비교 아님"
+}

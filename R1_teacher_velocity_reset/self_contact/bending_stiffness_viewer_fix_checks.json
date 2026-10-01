@@ -1,0 +1,58 @@
+{
+  "confirmed_on": "2026-09-30",
+  "status": "뷰어 시간 호환 수정·실제 재생 검증",
+  "input_manifest_sha256": "c34f537d7ff0baa247dcd39fdb221bac98c042ed5442fcd6e7227fede2a1f483",
+  "writer_sha256": "917142bc341966564e1b896fd8c13a3f4da20c67dde29d12cf96bb67f3c83e6a",
+  "evidence_folder": "experiments/artifacts/runs/shell_playback/bending_stiffness_viewer_fix_20260930T120329550998Z",
+  "viewer_command": [
+    "bash",
+    "experiments/R1_teacher_velocity_reset/self_contact/view_gpu_bending_stiffness.sh",
+    "--smoke-frames",
+    "1",
+    "--time",
+    "1",
+    "--screenshot",
+    "experiments/artifacts/runs/shell_playback/bending_stiffness_viewer_fix_20260930T120329550998Z/comparison_1s.png"
+  ],
+  "viewer_returncode": 0,
+  "tests": {
+    "count": 20,
+    "passed": 20,
+    "scope": "기존11개+시간 형식·잘못된 시간/NaN·원본 보존 회귀9개; CPU/모의 실행"
+  },
+  "actual": {
+    "candidate_completed_frames": 120,
+    "smoke_completed_frames": 1,
+    "recorded_phase_time_s": [
+      0.016666666666666666,
+      2.0
+    ],
+    "interpreted_wind_phase_time_s": [
+      3.0166666666666666,
+      5.0
+    ],
+    "trajectory_time_s": [
+      8.016666666666667,
+      10.0
+    ],
+    "source_writer_phase_origin_s": 0.0
+  },
+  "preservation": {
+    "original_files_unchanged": true,
+    "hashes": {
+      "experiments/artifacts/runs/p3_self_contact/rectangle_bend1000_tail2_main_01/manifest.json": "c34f537d7ff0baa247dcd39fdb221bac98c042ed5442fcd6e7227fede2a1f483",
+      "experiments/artifacts/runs/p3_self_contact/rectangle_bend1000_tail2_main_01/runtime/wind3dgs/evaluation/teacher_gpu_bending_stiffness.py": "22d423e31545e6f0ffbe96b01f7a2004af2c5884ef6dbfc1adbc94a9bb028e74",
+      "experiments/artifacts/runs/p3_self_contact/rectangle_bend1000_tail2_main_01/runtime/wind3dgs/evaluation/teacher_gpu_contact_scene_suite.py": "917142bc341966564e1b896fd8c13a3f4da20c67dde29d12cf96bb67f3c83e6a",
+      "experiments/artifacts/runs/p3_self_contact/rectangle_bend1000_tail2_main_01/bend1000/reference_rectangle/outputs/wind/report.json": "f4e6ca2a60dbb08af490cc9e9bc6f0c84ae3608ec02ac45cbd193f7e52a9f065",
+      "experiments/artifacts/runs/p3_self_contact/rectangle_bend1000_tail2_main_01/bend1000/preflight/contact_frame/report.json": "c6ece6b6d38622a447b352327041d3760f33a6a9418f5baf1f8979901b380e8f",
+      "experiments/artifacts/runs/p3_self_contact/rectangle_bend1000_tail2_main_01/bend1000/reference_rectangle/outputs/wind/checkpoint.npz": "0f923d76ebdf39d1927b953cfdf06b6e80dc417af85f9512ba9f0ac7c4394321",
+      "experiments/artifacts/runs/p3_self_contact/rectangle_wind_internal1_5ms_main_01/manifest.json": "3c5ef6764035b84cf5953e4228f563577f7355b31022e036168361d6bccbe8a1",
+      "experiments/artifacts/runs/p3_self_contact/rectangle_wind_internal1_5ms_main_01/tau5ms/reference_rectangle/outputs/wind/report.json": "c913f5934fc9a67e1fad32edbbabe0e09a1fce5e58829a4d1ef437959004f155"
+    },
+    "source_npz_rewritten": false,
+    "simulation_rerun": false
+  },
+  "limitations": [
+    "진동 개선·시각 선호·시간/공간 민감도·학습 채택은 이 뷰어 수정의 검증 범위가 아님"
+  ]
+}

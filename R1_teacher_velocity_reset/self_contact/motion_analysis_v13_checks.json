@@ -1,0 +1,196 @@
+{
+  "checked_on": "2026-09-28",
+  "status": "analysis_complete_visual_adoption_pending",
+  "command": "bash experiments/R1_teacher_velocity_reset/self_contact/analyze_gpu_v13_sub.sh",
+  "source_run": "experiments/artifacts/runs/sub_pc/20260928T043613Z-b306cdad658642d089bb9b2330f8fdae/simulation",
+  "source_manifest_sha256": "7e0c66997a0a0018d1fddc1786a5315cc59094521b879831864c528a8a064190",
+  "analysis_out": "experiments/artifacts/runs/p3_self_contact/motion_analysis/v13_sub_20260928T103705982406210Z",
+  "analysis_report_sha256": "225b6f4592dfaf87cf4a5567a095c6244a60d03335a261b9c4a9e38adba8bb78",
+  "device": "NVIDIA GeForce RTX 5070",
+  "analysis_device": "cpu",
+  "shapes": {
+    "reference_rectangle": {
+      "completed_frames": 600,
+      "recovered_frames": 466,
+      "discarded_attempts": 466,
+      "pinned_displacement_max_m": 0.0,
+      "pinned_speed_max_m_s": 0.0,
+      "phases": {
+        "preload": {
+          "frames": 60,
+          "recovered": 0,
+          "recovery_codes": {
+            "1": 0,
+            "2": 0
+          },
+          "max_force_ratio": 0.25442168114539065,
+          "min_area_ratio_lower": 0.6192733140611213,
+          "stored_flags": [
+            0
+          ],
+          "end_mean_drop_from_initial_mm": 108.52513889963629,
+          "last_second_speed_rms_m_s": 0.47862984642516904,
+          "last_second_position_variation_rms_mm": 79.28516071677218
+        },
+        "calm": {
+          "frames": 240,
+          "recovered": 166,
+          "recovery_codes": {
+            "1": 0,
+            "2": 166
+          },
+          "max_force_ratio": 0.2998498595429621,
+          "min_area_ratio_lower": 0.2814166747736435,
+          "stored_flags": [
+            0
+          ],
+          "end_mean_drop_from_initial_mm": 136.79346773399195,
+          "last_second_speed_rms_m_s": 0.2820572154966732,
+          "last_second_position_variation_rms_mm": 19.84055845051057
+        },
+        "wind": {
+          "frames": 300,
+          "recovered": 300,
+          "recovery_codes": {
+            "1": 1,
+            "2": 299
+          },
+          "max_force_ratio": 0.29991728102522924,
+          "min_area_ratio_lower": 0.12347182748304708,
+          "stored_flags": [
+            0
+          ],
+          "end_mean_drop_from_initial_mm": 98.1007388288288,
+          "last_second_speed_rms_m_s": 0.5418050282300297,
+          "last_second_position_variation_rms_mm": 74.84228216393065
+        }
+      }
+    },
+    "handkerchief": {
+      "completed_frames": 600,
+      "recovered_frames": 0,
+      "discarded_attempts": 0,
+      "pinned_displacement_max_m": 0.0,
+      "pinned_speed_max_m_s": 0.0,
+      "phases": {
+        "preload": {
+          "frames": 60,
+          "recovered": 0,
+          "recovery_codes": {
+            "1": 0,
+            "2": 0
+          },
+          "max_force_ratio": 0.007098296148642286,
+          "min_area_ratio_lower": 0.9963525712106475,
+          "stored_flags": [
+            0
+          ],
+          "end_mean_drop_from_initial_mm": 0.21820443869251385,
+          "last_second_speed_rms_m_s": 0.026900156059375086,
+          "last_second_position_variation_rms_mm": 7.012917685282553
+        },
+        "calm": {
+          "frames": 240,
+          "recovered": 0,
+          "recovery_codes": {
+            "1": 0,
+            "2": 0
+          },
+          "max_force_ratio": 0.007068384459194676,
+          "min_area_ratio_lower": 0.9957606313066233,
+          "stored_flags": [
+            0
+          ],
+          "end_mean_drop_from_initial_mm": 0.27342300758407384,
+          "last_second_speed_rms_m_s": 0.02014112741561356,
+          "last_second_position_variation_rms_mm": 3.554212074623133
+        },
+        "wind": {
+          "frames": 300,
+          "recovered": 0,
+          "recovery_codes": {
+            "1": 0,
+            "2": 0
+          },
+          "max_force_ratio": 0.2979770871673119,
+          "min_area_ratio_lower": 0.9792172397329635,
+          "stored_flags": [
+            0
+          ],
+          "end_mean_drop_from_initial_mm": -2.818453584855365,
+          "last_second_speed_rms_m_s": 0.08904330722273175,
+          "last_second_position_variation_rms_mm": 6.461350833357228
+        }
+      }
+    },
+    "triangular_flag": {
+      "completed_frames": 600,
+      "recovered_frames": 0,
+      "discarded_attempts": 0,
+      "pinned_displacement_max_m": 0.0,
+      "pinned_speed_max_m_s": 0.0,
+      "phases": {
+        "preload": {
+          "frames": 60,
+          "recovered": 0,
+          "recovery_codes": {
+            "1": 0,
+            "2": 0
+          },
+          "max_force_ratio": 0.29786467620257073,
+          "min_area_ratio_lower": 0.7761397202547395,
+          "stored_flags": [
+            0
+          ],
+          "end_mean_drop_from_initial_mm": 119.27723535747215,
+          "last_second_speed_rms_m_s": 0.5056047783708333,
+          "last_second_position_variation_rms_mm": 87.51984883626437
+        },
+        "calm": {
+          "frames": 240,
+          "recovered": 0,
+          "recovery_codes": {
+            "1": 0,
+            "2": 0
+          },
+          "max_force_ratio": 0.2995091985430445,
+          "min_area_ratio_lower": 0.4429474526352989,
+          "stored_flags": [
+            0
+          ],
+          "end_mean_drop_from_initial_mm": 158.70058798738324,
+          "last_second_speed_rms_m_s": 0.2773191907645313,
+          "last_second_position_variation_rms_mm": 25.599756547244567
+        },
+        "wind": {
+          "frames": 300,
+          "recovered": 0,
+          "recovery_codes": {
+            "1": 0,
+            "2": 0
+          },
+          "max_force_ratio": 0.2999690030637361,
+          "min_area_ratio_lower": 0.46635148925065717,
+          "stored_flags": [
+            0
+          ],
+          "end_mean_drop_from_initial_mm": 75.10109063960472,
+          "last_second_speed_rms_m_s": 0.5140647340249745,
+          "last_second_position_variation_rms_mm": 67.6071178431957
+        }
+      }
+    }
+  },
+  "validation": {
+    "source_inputs_states_forcing_times_boundaries_and_discarded_evidence": "analyzer accepted all three shapes",
+    "analysis_artifact_hashes": "passed",
+    "original_manifest_unchanged": true,
+    "new_simulation_executed": false,
+    "physical_residual_ccd_recomputed": false,
+    "time_space_sensitivity_verified": false,
+    "damping_samples_analyzed": false
+  },
+  "interpretation": "사각형/삼각형은 처짐과 무풍 후반 운동이 모두 남는다. 완주 및 저장 검산 통과를 자연스러운 천/학습 적격성으로 승격하지 않는다. 시간 평균 주위 위치 변화에는 느린 이동과 진동이 모두 포함된다.",
+  "training_eligible": false,
+  "r1_complete": false
+}

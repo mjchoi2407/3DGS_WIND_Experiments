@@ -1,0 +1,328 @@
+{
+  "confirmed_on": "2026-09-30",
+  "scope": "새 CG teacher 후보의 단기 GPU 가능성 검사",
+  "status": "속도 개선 가능성 확인; P3 움직임 선호·잔진동 해결 우선, P3/XPBD 최종 시각 채택 미완료",
+  "runs": {
+    "rectangle_xpbd_small_20260930_01": {
+      "input_manifest.json": "ef0670c4172acf9f2366be1ef3bc1378c05321019ef0d0708594fc3b54558185",
+      "result_manifest.json": "0a8932cd857dbd7bfe5ae970f4f9ea80a34a936f49b4800e8ef716ea85ad2e4e",
+      "report.json": "2833ffdef0eb877552d852e7bf4eb3a17f6b8be0e94bbeea6ba4100183554f25"
+    },
+    "rectangle_xpbd_small_20260930_01_refine64_01": {
+      "input_manifest.json": "9efaf474ac2ac24dfb97f46751d41fe6c432101d0261af2db7b02578a4ca028d",
+      "result_manifest.json": "b148f1eb6ab1c2990c91a934a5b3b4a7bf4bd5046cef3feeb93348e2d486ada6",
+      "report.json": "e98c2dda2df079b484c24eb31be2b6c88896279eec6dade1703cced9ac96b407"
+    }
+  },
+  "cases": {
+    "gravity16": {
+      "status": "complete",
+      "frames": 60,
+      "simulation_s": 1.0,
+      "solver_and_readback_s": 0.553635019999092,
+      "independent_intersection_check_s": 0.03147927000031814,
+      "setup_s": 0.5072258180000517,
+      "warmup_s": 0.016400078000060603,
+      "motion": {
+        "speed_rms_m_s": 0.6975373683491688,
+        "second_frame_difference_rms_mm": 1.6268773339297549,
+        "centroid_change_m": [
+          -0.32862349033894134,
+          -0.13550346880244035,
+          -0.14287025983997736
+        ],
+        "travel_rms_m": 0.4878181638121743
+      },
+      "max_stretch_p99": 0.06455776410547288,
+      "min_area_ratio": 0.9328775099446849,
+      "contact_hits_vf": 327,
+      "contact_hits_ee": 555,
+      "intersection_frames": 0,
+      "max_pin_error_m": 0.0,
+      "source_report": "experiments/artifacts/runs/xpbd_small_steps/rectangle_xpbd_small_20260930_01/gravity16/report.json",
+      "stored_frames": 60,
+      "accepted_frames": 60,
+      "requested_frames": 60,
+      "total_case_loop_wall_s": 0.6428867580000315,
+      "failed_frames": []
+    },
+    "gravity32": {
+      "status": "complete",
+      "frames": 60,
+      "simulation_s": 1.0,
+      "solver_and_readback_s": 0.9779666580002413,
+      "independent_intersection_check_s": 0.03186323000045377,
+      "setup_s": 0.044779565999988336,
+      "warmup_s": 0.023682379999854675,
+      "motion": {
+        "speed_rms_m_s": 0.6325243993356632,
+        "second_frame_difference_rms_mm": 1.4886244313032722,
+        "centroid_change_m": [
+          -0.2862995213108661,
+          -0.10588890041417898,
+          -0.13092697574776935
+        ],
+        "travel_rms_m": 0.44097419175543107
+      },
+      "max_stretch_p99": 0.03936902422701191,
+      "min_area_ratio": 0.9679317966796813,
+      "contact_hits_vf": 0,
+      "contact_hits_ee": 0,
+      "intersection_frames": 0,
+      "max_pin_error_m": 0.0,
+      "source_report": "experiments/artifacts/runs/xpbd_small_steps/rectangle_xpbd_small_20260930_01/gravity32/report.json",
+      "stored_frames": 60,
+      "accepted_frames": 60,
+      "requested_frames": 60,
+      "total_case_loop_wall_s": 1.0452505119999387,
+      "failed_frames": []
+    },
+    "wind16": {
+      "status": "failed",
+      "frames": 69,
+      "simulation_s": 1.15,
+      "solver_and_readback_s": 0.5816867169994566,
+      "independent_intersection_check_s": 0.03454454899906523,
+      "setup_s": 0.014061337999919488,
+      "warmup_s": 0.009766484000010678,
+      "motion": {
+        "speed_rms_m_s": 0.5956089272574803,
+        "second_frame_difference_rms_mm": 1.5750228193904339,
+        "centroid_change_m": [
+          0.1893634652659557,
+          -0.12122752420309979,
+          -0.007715399755689134
+        ],
+        "travel_rms_m": 0.2872312914858574
+      },
+      "max_stretch_p99": 0.07128444806860179,
+      "min_area_ratio": 0.9714301231689033,
+      "contact_hits_vf": 452,
+      "contact_hits_ee": 2557,
+      "intersection_frames": 1,
+      "max_pin_error_m": 0.0,
+      "source_report": "experiments/artifacts/runs/xpbd_small_steps/rectangle_xpbd_small_20260930_01/wind16/report.json",
+      "stored_frames": 69,
+      "accepted_frames": 68,
+      "requested_frames": 120,
+      "total_case_loop_wall_s": 0.6532570399999713,
+      "failed_frames": [
+        {
+          "frame": 68,
+          "solver_and_readback_s": 0.009345336000023963,
+          "independent_intersection_check_s": 0.0007384109999293287,
+          "status_code": 0,
+          "contacts_vf": 14,
+          "contacts_ee": 93,
+          "intersection": true,
+          "min_area_ratio": 0.9811399082797326,
+          "stretch_rms": 0.010084877090919087,
+          "stretch_p99": 0.0437309381313462,
+          "stretch_max": 0.09897876867240085,
+          "pin_error_m": 0.0
+        }
+      ]
+    },
+    "wind32": {
+      "status": "complete",
+      "frames": 120,
+      "simulation_s": 2.0,
+      "solver_and_readback_s": 1.9811268099997505,
+      "independent_intersection_check_s": 0.06726985600062108,
+      "setup_s": 0.02493833900007303,
+      "warmup_s": 0.02018809599985616,
+      "motion": {
+        "speed_rms_m_s": 0.5493966721988975,
+        "second_frame_difference_rms_mm": 1.4503250117731135,
+        "centroid_change_m": [
+          0.288792023666133,
+          -0.20476760682244688,
+          0.030616873580038284
+        ],
+        "travel_rms_m": 0.47913401414559087
+      },
+      "max_stretch_p99": 0.04743207395377098,
+      "min_area_ratio": 0.9716898749815496,
+      "contact_hits_vf": 726,
+      "contact_hits_ee": 8548,
+      "intersection_frames": 0,
+      "max_pin_error_m": 0.0,
+      "source_report": "experiments/artifacts/runs/xpbd_small_steps/rectangle_xpbd_small_20260930_01/wind32/report.json",
+      "stored_frames": 120,
+      "accepted_frames": 120,
+      "requested_frames": 120,
+      "total_case_loop_wall_s": 2.125517256000194,
+      "failed_frames": []
+    },
+    "gravity64": {
+      "status": "complete",
+      "frames": 60,
+      "reference_reused": false,
+      "solver_and_readback_s": 2.0326719950012375,
+      "independent_intersection_check_s": 0.03281001299956188,
+      "setup_s": 0.6388046369997937,
+      "warmup_s": 0.0582528850000017,
+      "motion": {
+        "speed_rms_m_s": 0.6671617054434164,
+        "second_frame_difference_rms_mm": 1.4792769562568042,
+        "centroid_change_m": [
+          -0.3021801721788506,
+          -0.06412457320212184,
+          -0.1346630783508651
+        ],
+        "travel_rms_m": 0.45126187521108574
+      },
+      "max_stretch_p99": 0.03463088816402148,
+      "min_area_ratio": 0.9748458047251631,
+      "max_pin_error_m": 0.0,
+      "intersection_frames": 0,
+      "contact_hits_vf": 849,
+      "contact_hits_ee": 1787,
+      "source_report": "experiments/artifacts/runs/xpbd_small_steps/rectangle_xpbd_small_20260930_01_refine64_01/gravity64/report.json",
+      "stored_frames": 60,
+      "accepted_frames": 60,
+      "requested_frames": 60,
+      "total_case_loop_wall_s": 2.1086811589998433,
+      "failed_frames": []
+    },
+    "wind64": {
+      "status": "complete",
+      "frames": 120,
+      "reference_reused": false,
+      "solver_and_readback_s": 4.012052219997713,
+      "independent_intersection_check_s": 0.08071890800010806,
+      "setup_s": 0.04950962700013406,
+      "warmup_s": 0.03939946600030453,
+      "motion": {
+        "speed_rms_m_s": 0.5429353507152752,
+        "second_frame_difference_rms_mm": 1.5605690721756722,
+        "centroid_change_m": [
+          0.28524858041589596,
+          -0.21591089039124967,
+          0.03251907688310729
+        ],
+        "travel_rms_m": 0.4881726150606025
+      },
+      "max_stretch_p99": 0.049529499438713515,
+      "min_area_ratio": 0.9605217647102499,
+      "max_pin_error_m": 0.0,
+      "intersection_frames": 0,
+      "contact_hits_vf": 1899,
+      "contact_hits_ee": 15488,
+      "source_report": "experiments/artifacts/runs/xpbd_small_steps/rectangle_xpbd_small_20260930_01_refine64_01/wind64/report.json",
+      "stored_frames": 120,
+      "accepted_frames": 120,
+      "requested_frames": 120,
+      "total_case_loop_wall_s": 4.18503071799978,
+      "failed_frames": []
+    }
+  },
+  "unique_requested_cases": 6,
+  "complete_cases": 5,
+  "failed_cases": 1,
+  "requested_frames": 540,
+  "stored_frames": 489,
+  "accepted_frames": 488,
+  "source": {
+    "manifest_sha256": "3c5ef6764035b84cf5953e4228f563577f7355b31022e036168361d6bccbe8a1",
+    "initial_frame_sha256": "00d845e64efba0ae4dc337c07f219b0e3b32b556fbc9064b7a109b63d8eb1972",
+    "report_sha256": "c913f5934fc9a67e1fad32edbbabe0e09a1fce5e58829a4d1ef437959004f155",
+    "gpu": "NVIDIA GeForce GTX 1080 Ti",
+    "law": "P3 Koiter/Newmark/IPC",
+    "frames": 120,
+    "recorded_frame_wall_s": 4059.2813693040807,
+    "scope": "별도 시간·원본 GPU 부하 불명, 모델·정밀도·접촉 보장 다름; 공정한 동일문제 가속률 아님"
+  },
+  "initial_p3_to_p1_rms_mm": 2.1884362748638835,
+  "p3_motion": {
+    "speed_rms_m_s": 0.4881377988118394,
+    "second_frame_difference_rms_mm": 1.5791408427026121,
+    "centroid_change_m": [
+      0.2682538823937401,
+      -0.19123551022506127,
+      0.024390463982877225
+    ],
+    "travel_rms_m": 0.4499197608068505
+  },
+  "comparisons": {
+    "wind16_vs_wind32": {
+      "frames_including_initial": 70,
+      "position_rms_m": 0.020698739182363056,
+      "position_over_rest_diagonal_pct": 1.6558991345890444,
+      "velocity_rms_m_s": 0.16826792833665646,
+      "velocity_relative_pct": 29.001578837694403,
+      "scope": "진단 관측값; 자동 수렴/학습 pass 없음"
+    },
+    "gravity16_vs_gravity32": {
+      "frames_including_initial": 61,
+      "position_rms_m": 0.0582527271491104,
+      "position_over_rest_diagonal_pct": 4.6602181719288325,
+      "velocity_rms_m_s": 0.2938135852762063,
+      "velocity_relative_pct": 46.83644052480152,
+      "scope": "진단 관측값; 자동 수렴/학습 pass 없음"
+    },
+    "wind32_vs_P3": {
+      "frames_including_initial": 121,
+      "position_rms_m": 0.05944978890164968,
+      "position_over_rest_diagonal_pct": 4.755983112131974,
+      "velocity_rms_m_s": 0.27603032058332067,
+      "velocity_relative_pct": 56.520814030123056,
+      "scope": "진단 관측값; 자동 수렴/학습 pass 없음"
+    },
+    "gravity32_vs_gravity64": {
+      "frames_including_initial": 61,
+      "position_rms_m": 0.08692110201350439,
+      "position_over_rest_diagonal_pct": 6.953688161080352,
+      "velocity_relative_pct": 70.90276293517866,
+      "scope": "관측 민감도이며 공식 수렴 판정 아님"
+    },
+    "wind32_vs_wind64": {
+      "frames_including_initial": 121,
+      "position_rms_m": 0.029307091015253736,
+      "position_over_rest_diagonal_pct": 2.344567281220299,
+      "velocity_relative_pct": 44.83979284264703,
+      "scope": "관측 민감도이며 공식 수렴 판정 아님"
+    },
+    "wind64_vs_P3": {
+      "frames_including_initial": 121,
+      "position_rms_m": 0.05520132234563848,
+      "position_over_rest_diagonal_pct": 4.4161057876510785,
+      "velocity_relative_pct": 60.39983763525858,
+      "scope": "관측 민감도이며 공식 수렴 판정 아님"
+    }
+  },
+  "tests": {
+    "count": 13,
+    "status": "passed",
+    "scope": "CPU 독립 미분/한 단계·강체/핀·VF/EE·CUDA 대조·실패 증거와 승인 분모"
+  },
+  "viewer": {
+    "headless_frames": 1,
+    "time_s": 1.0,
+    "status": "실제 렌더 성공; CUDA/GL interop 미지원으로 표시 전송만copy fallback",
+    "screenshot": "experiments/artifacts/runs/xpbd_small_steps/rectangle_xpbd_small_20260930_01_refine64_01/verification/viewer_frame_1s.png",
+    "visual_acceptance": "2026-09-30 사용자 평가: P3 움직임을 선호하지만 잔진동 해결이 중요함; 현재 P3/XPBD 최종 시각 채택 미완료",
+    "assistant_image_inspection": "환경 오류로 이미지 직접 열람 미완료",
+    "user_visual_assessment": {
+      "date": "2026-09-30",
+      "source": "사용자",
+      "observation": "P3 움직임을 선호하지만 진동이 남아 그 해결이 중요함",
+      "scope": "이번 프로토타입 비교에 대한 선호; 원인 분리나 XPBD 일반의 품질 판정 아님",
+      "canonical_adoption": false,
+      "next_recommendation": "P3의 큰 움직임을 유지하면서 잔진동을 줄이는 것이 우선; 기존 감쇠 비교의 진동 감소·움직임 둔화를 함께 검토하고 계산 비용도 고려; 추가 구현·실행은 미승인"
+    }
+  },
+  "resources": {
+    "first_before": "NVIDIA GeForce GTX 1080 Ti, 10 %, 1872 MiB",
+    "first_after": "NVIDIA GeForce GTX 1080 Ti, 63 %, 2038 MiB",
+    "extra_before": "NVIDIA GeForce GTX 1080 Ti, 5 %, 1909 MiB",
+    "extra_after": "NVIDIA GeForce GTX 1080 Ti, 65 %, 2056 MiB"
+  },
+  "runtime_physics_matches": true,
+  "notes": [
+    "16단계 초기 보고서의 completed_frames69는 저장 실패 프레임을 포함한다. 이 요약은 승인68·실패1로 구분한다. 기존 보고서는 보존했다.",
+    "최종 실행기에는 recorded_frames와completed_frames를 분리했고 실패를 승인 수에서 제외하는 테스트를 추가했다. 물리 구현은 실행 동결본과 동일하다.",
+    "32단계 비교 복사본은 새 계산 수에 중복 계상하지 않는다.",
+    "FP32/P1/질량/굽힘/접촉/검산 범위가 P3와 다르므로 동일문제 가속률이 아니다."
+  ]
+}

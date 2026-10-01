@@ -1,0 +1,179 @@
+{
+  "date": "2026-09-29",
+  "run": "experiments/artifacts/runs/sub_pc/20260929T002107Z-65221d3a61d34d0f93b4d01006eb5602/simulation",
+  "pair_manifest": {
+    "schema": "damping24_same_gpu_pair_v1",
+    "gpu_model": "NVIDIA GeForce RTX 5070",
+    "manifests": {
+      "64": "fabd27091ad325b29f1940688b3f3df6e441f5fee95e60d9102ec8fe49f3afc0",
+      "128": "bf1f336bdc288af33c4e6ab394d1a1a02a6e8ebad8e6f97f2d9e774ef7c2f850"
+    },
+    "source_manifests": {
+      "64": "a4fb8ac63b827ce011c80e7262e16fc441d148cb02aca3d8a3945eb7a6d6ebe3",
+      "128": "37f8a80eb5b361d13fa6fe31cf0d9418e1c9336ef752a58cda4965ecd84e0c07"
+    },
+    "execution_order": [
+      64,
+      128
+    ],
+    "training_eligible": false
+  },
+  "comparison_report": "experiments/artifacts/runs/sub_pc/20260929T002107Z-65221d3a61d34d0f93b4d01006eb5602/simulation/comparison_20260929T015341221133Z/report.json",
+  "comparison_report_sha256": "34f83cf81497e50c4971ec217dfae676c0e0215f48b42c6296a7dd4b01d0d31c",
+  "comparison_status": "numerical_pass_visual_pending",
+  "windows": {
+    "full": {
+      "start_s": 0.0,
+      "end_s": 10.0,
+      "frame_count": 600,
+      "probe_count": 512,
+      "position_rms_m": 5.867547519426783e-07,
+      "position_relative": 4.6940380155414264e-07,
+      "velocity_rms_m_s": 0.0002636690430119699,
+      "reference_speed_rms_m_s": 0.12441210754217966,
+      "velocity_denominator_m_s": 0.12441210754217966,
+      "velocity_floor_m_s": 0.0125,
+      "velocity_relative": 0.0021193198011100144,
+      "position_pass": true,
+      "velocity_pass": true
+    },
+    "preload": {
+      "start_s": 0.0,
+      "end_s": 1.0,
+      "frame_count": 60,
+      "probe_count": 512,
+      "position_rms_m": 1.2663580509461215e-07,
+      "position_relative": 1.0130864407568973e-07,
+      "velocity_rms_m_s": 0.00011624993316208475,
+      "reference_speed_rms_m_s": 0.08197397446404574,
+      "velocity_denominator_m_s": 0.08197397446404574,
+      "velocity_floor_m_s": 0.0125,
+      "velocity_relative": 0.0014181322050338383,
+      "position_pass": true,
+      "velocity_pass": true
+    },
+    "calm": {
+      "start_s": 1.0,
+      "end_s": 5.0,
+      "frame_count": 240,
+      "probe_count": 512,
+      "position_rms_m": 1.0274739565812375e-07,
+      "position_relative": 8.2197916526499e-08,
+      "velocity_rms_m_s": 4.829909691689253e-05,
+      "reference_speed_rms_m_s": 0.1124173732746434,
+      "velocity_denominator_m_s": 0.1124173732746434,
+      "velocity_floor_m_s": 0.0125,
+      "velocity_relative": 0.00042964085985975226,
+      "position_pass": true,
+      "velocity_pass": true
+    },
+    "wind": {
+      "start_s": 5.0,
+      "end_s": 10.0,
+      "frame_count": 300,
+      "probe_count": 512,
+      "position_rms_m": 8.227449972966193e-07,
+      "position_relative": 6.581959978372954e-07,
+      "velocity_rms_m_s": 0.0003667065269166454,
+      "reference_speed_rms_m_s": 0.1396519454111218,
+      "velocity_denominator_m_s": 0.1396519454111218,
+      "velocity_floor_m_s": 0.0125,
+      "velocity_relative": 0.0026258604979479297,
+      "position_pass": true,
+      "velocity_pass": true
+    },
+    "wind_last_2s": {
+      "start_s": 8.0,
+      "end_s": 10.0,
+      "frame_count": 120,
+      "probe_count": 512,
+      "position_rms_m": 1.2365348849421637e-06,
+      "position_relative": 9.89227907953731e-07,
+      "velocity_rms_m_s": 0.0004903678531209338,
+      "reference_speed_rms_m_s": 0.12904153746348523,
+      "velocity_denominator_m_s": 0.12904153746348523,
+      "velocity_floor_m_s": 0.0125,
+      "velocity_relative": 0.0038000775778085625,
+      "position_pass": true,
+      "velocity_pass": true
+    }
+  },
+  "runs": {
+    "64": {
+      "status": "complete",
+      "full_trajectory_verified": true,
+      "elapsed_s": 1448.7525565199903,
+      "phases": {
+        "preload": {
+          "status": "complete",
+          "frames": 60,
+          "gpu": "NVIDIA GeForce RTX 5070",
+          "recoveries": 0,
+          "accepted_flag_failures": 0,
+          "damping_audit_failures": 0,
+          "elapsed_s": 190.0935737999971
+        },
+        "calm": {
+          "status": "complete",
+          "frames": 240,
+          "gpu": "NVIDIA GeForce RTX 5070",
+          "recoveries": 0,
+          "accepted_flag_failures": 0,
+          "damping_audit_failures": 0,
+          "elapsed_s": 553.6612929600087
+        },
+        "wind": {
+          "status": "complete",
+          "frames": 300,
+          "gpu": "NVIDIA GeForce RTX 5070",
+          "recoveries": 0,
+          "accepted_flag_failures": 0,
+          "damping_audit_failures": 0,
+          "elapsed_s": 691.8938445599924
+        }
+      }
+    },
+    "128": {
+      "status": "complete",
+      "full_trajectory_verified": true,
+      "elapsed_s": 2483.0912521800055,
+      "phases": {
+        "preload": {
+          "status": "complete",
+          "frames": 60,
+          "gpu": "NVIDIA GeForce RTX 5070",
+          "recoveries": 0,
+          "accepted_flag_failures": 0,
+          "damping_audit_failures": 0,
+          "elapsed_s": 253.9509721200011
+        },
+        "calm": {
+          "status": "complete",
+          "frames": 240,
+          "gpu": "NVIDIA GeForce RTX 5070",
+          "recoveries": 0,
+          "accepted_flag_failures": 0,
+          "damping_audit_failures": 0,
+          "elapsed_s": 977.5643728499999
+        },
+        "wind": {
+          "status": "complete",
+          "frames": 300,
+          "gpu": "NVIDIA GeForce RTX 5070",
+          "recoveries": 0,
+          "accepted_flag_failures": 0,
+          "damping_audit_failures": 0,
+          "elapsed_s": 1248.2640008999879
+        }
+      }
+    }
+  },
+  "artifact_hashes_verified": 6,
+  "comparison_validation": "원본 manifest·raw1200프레임/시간/상태 연결/저장 검산/감쇠계수·검사 기록과 비교 산출물 hash. 기존 물리 검산을 CPU로 재실행한 것은 아님.",
+  "scope": "전 구간 감쇠24 사각형10초, RTX5070에서 독립64/128. 공통5초 상태의 wind-only 실험이 아님.",
+  "visual_review": "pending",
+  "training_eligible": false,
+  "production_enabled": false,
+  "r1_complete": false,
+  "new_simulation_executed_by_analysis": false
+}

@@ -1,0 +1,137 @@
+{
+  "schema": "wind_field_compact_checks_v1",
+  "status": "completed_comparison_not_adopted",
+  "manifests": {
+    "bundle": "61f99bb31e421c110f7cc1ec61c75aee9fd772883b8500d5ab5be9b5f6f9ad22",
+    "bundle_local_v2": "c0b4bb9726cb72931e14d431146a99b7a3fad82ba01dd7ca1f4c4a4b205a6c6f"
+  },
+  "analysis_report_sha256": "332aee13efeca1ff595b9fe5ab5fad2352123c709b6bb81fe4f9904857b75eed",
+  "cpu_tests": 18,
+  "gpu_retry_tests": 26,
+  "frames": {
+    "reference": 120,
+    "smooth": 120,
+    "local": 120
+  },
+  "retries": 0,
+  "setup_failures_preserved": 1,
+  "oracles": 4,
+  "oracle_states_each": 3,
+  "contact_smoke_frames": 4,
+  "force_numpy_max_abs_n": 8.673617379884035e-19,
+  "viewer": {
+    "cases": 3,
+    "states_each": 241,
+    "common_wind_s": [
+      0,
+      2
+    ],
+    "new_wind_s": [
+      2,
+      4
+    ],
+    "headless_render_at_s": 2.8,
+    "screenshot_sha256": "2b64049bf088f2bff9fbe08f09b6a22b807caf1551e29929efa9703392aba2f2"
+  },
+  "comparison": {
+    "reference": {
+      "all": {
+        "position_hf_reduction": 0.0,
+        "normal_hf_reduction": 0.0,
+        "second_difference_reduction": 0.0,
+        "movement_retention": 1.0,
+        "speed_retention": 1.0
+      },
+      "settled": {
+        "position_hf_reduction": 0.0,
+        "normal_hf_reduction": 0.0,
+        "second_difference_reduction": 0.0,
+        "movement_retention": 1.0,
+        "speed_retention": 1.0
+      },
+      "around_2p8": {
+        "position_hf_reduction": 0.0,
+        "normal_hf_reduction": 0.0,
+        "second_difference_reduction": 0.0,
+        "movement_retention": 1.0,
+        "speed_retention": 1.0
+      },
+      "last_second": {
+        "position_hf_reduction": 0.0,
+        "normal_hf_reduction": 0.0,
+        "second_difference_reduction": 0.0,
+        "movement_retention": 1.0,
+        "speed_retention": 1.0
+      }
+    },
+    "smooth": {
+      "all": {
+        "position_hf_reduction": 0.01864688700973527,
+        "normal_hf_reduction": 0.0018020283875672671,
+        "second_difference_reduction": -0.07114328414436377,
+        "movement_retention": 1.1708157229769864,
+        "speed_retention": 1.0671521150130778
+      },
+      "settled": {
+        "position_hf_reduction": -0.20651606718913262,
+        "normal_hf_reduction": -0.1366173558938748,
+        "second_difference_reduction": -0.07380156383284797,
+        "movement_retention": 1.1666148158424279,
+        "speed_retention": 1.0745330090468816
+      },
+      "around_2p8": {
+        "position_hf_reduction": 0.2872255587722221,
+        "normal_hf_reduction": 0.1774438834723402,
+        "second_difference_reduction": 0.18980959431807587,
+        "movement_retention": 1.025098385639389,
+        "speed_retention": 0.995836923379916
+      },
+      "last_second": {
+        "position_hf_reduction": -0.4755541522073714,
+        "normal_hf_reduction": -0.23993468828517472,
+        "second_difference_reduction": -0.22513368196348083,
+        "movement_retention": 1.218913800134236,
+        "speed_retention": 1.1107853739039073
+      }
+    },
+    "local": {
+      "all": {
+        "position_hf_reduction": 0.07609943411448739,
+        "normal_hf_reduction": -0.032340518294932785,
+        "second_difference_reduction": -0.21043396117613145,
+        "movement_retention": 1.4045700148368185,
+        "speed_retention": 1.2471394915604166
+      },
+      "settled": {
+        "position_hf_reduction": -0.03269414216321054,
+        "normal_hf_reduction": -0.010788550963100052,
+        "second_difference_reduction": -0.22718137858674692,
+        "movement_retention": 1.3962620260419663,
+        "speed_retention": 1.2729397667939808
+      },
+      "around_2p8": {
+        "position_hf_reduction": 0.09428766814578438,
+        "normal_hf_reduction": -0.17996342652014952,
+        "second_difference_reduction": 0.027113210749824534,
+        "movement_retention": 1.285898114959096,
+        "speed_retention": 1.2060848732692488
+      },
+      "last_second": {
+        "position_hf_reduction": -0.09116342306593928,
+        "normal_hf_reduction": -0.009934963632653337,
+        "second_difference_reduction": -0.3674152780122626,
+        "movement_retention": 1.433713519017067,
+        "speed_retention": 1.3136267397664227
+      }
+    }
+  },
+  "cost_minutes": {
+    "reference": 23.15432734366671,
+    "smooth": 24.672760604117137,
+    "local": 24.826142236882514
+  },
+  "training_eligible": false,
+  "decision": "시간 평활은관찰구간만개선·뒤구간악화;국소화도일관된감소없음. 기본설정미채택·사용자시각확인용재생.",
+  "final_integrity_sha256": "2c8ae77dca7fc161d60a8886ac57e2d7985a0c6f9067fa9a3f5f89531db79dd6",
+  "preexisting_solver_edits_preserved": true
+}

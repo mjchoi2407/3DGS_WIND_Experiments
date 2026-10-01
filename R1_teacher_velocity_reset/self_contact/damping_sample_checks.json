@@ -1,0 +1,51 @@
+{
+  "checked_on": "2026-09-28",
+  "status": "prepared_not_simulated",
+  "bundle": {
+    "path": "experiments/artifacts/runs/p3_self_contact/damping_sample_v13_01",
+    "manifest_sha256": "5dde7ab328c43863aac8c93b459152a6c3230d9f76c0f72219e50e764580bb4c",
+    "entries": 281,
+    "shape": "triangular_flag",
+    "source_start_s": 3.0,
+    "duration_per_case_s": 1.0,
+    "frames_per_case": 60,
+    "cases_s_inv": {
+      "control": 0.0,
+      "weak": 1.0,
+      "strong": 3.0
+    },
+    "raw_initial_state_sha256": "ee5d9e417befb9d95f536b7c94f7833ba480b4662ffb645aaaa5aa6712a2394a"
+  },
+  "source": {
+    "source_manifest_sha256": "7e0c66997a0a0018d1fddc1786a5315cc59094521b879831864c528a8a064190",
+    "source_phase_report_sha256": "52c99125922b03e2e418947fed5a0f05333b52753397197ecade5c372107bf9e",
+    "source_frame_sha256": "0d7b4ec8179153c040777188a608517db4926e70281c8e56da5c962a63540138",
+    "shape": "triangular_flag",
+    "phase": "calm",
+    "frame": 119,
+    "trajectory_time_s": 3.0,
+    "gpu": "NVIDIA GeForce RTX 5070"
+  },
+  "validation": {
+    "cpu_tests_passed": 34,
+    "test_files": [
+      "code/tests/test_gpu_damping_sample.py",
+      "code/tests/test_teacher_gpu_contact_scene_suite.py",
+      "code/tests/test_teacher_gpu_contact_drape_suite.py"
+    ],
+    "shell_syntax": "passed",
+    "frozen_runtime_import": "passed",
+    "local_environment_match": "passed",
+    "manifest_and_current_runtime_hashes": "passed",
+    "source_manifest_unchanged": true,
+    "outputs_absent": true,
+    "gpu_simulation_executed": false,
+    "cuda_graph_execution_verified": false,
+    "actual_result_viewer_rendered": false,
+    "viewer_cache_fixture_cpu_checked": true
+  },
+  "scope": "프레임 시작 지수 속도 감쇠 진단. 연속 재료 점성/teacher 채택/시간 수렴 아님",
+  "training_eligible": false,
+  "production_enabled": false,
+  "r1_complete": false
+}

@@ -1,0 +1,51 @@
+{
+  "date": "2026-09-28",
+  "tests_passed": 29,
+  "comparison_tests": 16,
+  "analysis_tests": 13,
+  "source_manifest_sha256": "0be6397195b505b314fa8b8913aa41b28c2249593f366ea2c05529f5536c994e",
+  "identity_status": "identity_check_only",
+  "frames": 600,
+  "probes": 512,
+  "recovered_frames": 113,
+  "discarded_attempts": 113,
+  "wind": {
+    "start_s": 6.0,
+    "end_s": 10.0,
+    "frame_count": 240,
+    "probe_count": 512,
+    "position_rms_m": 0.0,
+    "position_relative": 0.0,
+    "velocity_rms_m_s": 0.0,
+    "reference_speed_rms_m_s": 0.578151034934576,
+    "velocity_denominator_m_s": 0.578151034934576,
+    "velocity_floor_m_s": 0.0125,
+    "velocity_relative": 0.0,
+    "position_pass": true,
+    "velocity_pass": true
+  },
+  "wind_last_2s": {
+    "start_s": 8.0,
+    "end_s": 10.0,
+    "frame_count": 120,
+    "probe_count": 512,
+    "position_rms_m": 0.0,
+    "position_relative": 0.0,
+    "velocity_rms_m_s": 0.0,
+    "reference_speed_rms_m_s": 0.6001447217332977,
+    "velocity_denominator_m_s": 0.6001447217332977,
+    "velocity_floor_m_s": 0.0125,
+    "velocity_relative": 0.0,
+    "position_pass": true,
+    "velocity_pass": true
+  },
+  "implementation_sha256": {
+    "compare_gpu_cg_checks.py": "5a11598db498b453f3dd987fe53d86624a202dadfeda0e3d79c1683f0c5590bd",
+    "gpu_contact_recording_io.py": "e777629992c3151d69b5b8f19b703e3835b58e9717687bd1acd16debcb306f8b",
+    "p3_common_surface.py": "784d88f36efbcf51a0f6495a20906223249e186499e409ac2bc19bddb1d87a7a",
+    "analyze_gpu_contact_recording.py": "3bb46709a4cc631033020f30594dfdd722665940ab6ccdfcb522cfbb2cacdfe8"
+  },
+  "final_pass": false,
+  "actual_refinement_comparison_executed": false,
+  "browser_playback_verified": false
+}

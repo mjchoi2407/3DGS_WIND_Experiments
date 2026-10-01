@@ -1,0 +1,85 @@
+{
+  "confirmed_on": "2026-09-30",
+  "status": "준비·CPU/모의 호출 검증 완료; GPU 첫 프레임/본 계산 미실행",
+  "bundle": "experiments/artifacts/runs/p3_self_contact/rectangle_bend1000_tail2_main_01",
+  "manifest_sha256": "c34f537d7ff0baa247dcd39fdb221bac98c042ed5442fcd6e7227fede2a1f483",
+  "reference": {
+    "source_manifest_sha256": "3c5ef6764035b84cf5953e4228f563577f7355b31022e036168361d6bccbe8a1",
+    "report_sha256": "c913f5934fc9a67e1fad32edbbabe0e09a1fce5e58829a4d1ef437959004f155",
+    "source_frame": 179,
+    "source_frame_sha256": "00d845e64efba0ae4dc337c07f219b0e3b32b556fbc9064b7a109b63d8eb1972",
+    "initial_state_sha256": "958cafa56b5bd98425252ac092d33b341567f3bbbc588d22f3e9ca0965489050",
+    "gpu": "NVIDIA GeForce GTX 1080 Ti"
+  },
+  "material_reference": {
+    "E_pa": 22360679.774997897,
+    "nu": 0.3,
+    "h_m": 0.00044721359549995795,
+    "area_density_kg_m2": 0.1,
+    "membrane_scale_n_per_m": 10989.010989010989,
+    "bending_rigidity_n_m": 0.00018315018315018315
+  },
+  "material_candidate": {
+    "E_pa": 31622776.60168379,
+    "nu": 0.3,
+    "h_m": 0.00031622776601683794,
+    "area_density_kg_m2": 0.1,
+    "membrane_scale_n_per_m": 10989.010989010989,
+    "bending_rigidity_n_m": 9.157509157509158e-05
+  },
+  "changed_plan_keys": [
+    "bending_damping_tau_s",
+    "bending_ratio",
+    "case",
+    "frames",
+    "material",
+    "source_case",
+    "source_wind_frame_start"
+  ],
+  "tests": {
+    "count": 11,
+    "passed": 11,
+    "command": "PYTHONPATH=code PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python -m pytest -q --tb=short -p no:cacheprovider code/tests/test_gpu_bending_stiffness.py"
+  },
+  "checks": {
+    "raw_hilo_identical": true,
+    "raw_shape": [
+      4,
+      1813,
+      3
+    ],
+    "rest_and_mass_identical": true,
+    "membrane_unchanged": true,
+    "bending_and_edge_terms_half": true,
+    "forcing_equals_source_180_300": true,
+    "original_runtime_files": 269,
+    "runtime_preserved_with_only_new_runner": true,
+    "native_byte_identical": true,
+    "frozen_runner_matches_live": true,
+    "frozen_worker_mock_smoke_and_wind_passed": true,
+    "frozen_environment_matches_current": true,
+    "shell_syntax_passed": true,
+    "reference_viewer_cache_prepared": true,
+    "reference_viewer_cache_manifest": "experiments/artifacts/runs/shell_playback/bending_stiffness_tail2/c7b7c82de8cb8047/bend500/manifest.json",
+    "actual_gui_rendered": false
+  },
+  "execution": {
+    "new_cases": 1,
+    "frames": 120,
+    "fps": 60,
+    "substeps": 64,
+    "conditional_retry_substeps": 128,
+    "trajectory_start_s": 8.0,
+    "trajectory_end_s": 10.0,
+    "phase_time_start_s": 3.0,
+    "smoke_frames": 1,
+    "gpu": "NVIDIA GeForce GTX 1080 Ti",
+    "actual_gpu_smoke_run": false,
+    "actual_gpu_trajectory_run": false
+  },
+  "limitations": [
+    "8초에서 물성을 바꾸는 짧은 진단; 초반 전환 반응 포함",
+    "진동 감소·시각 품질·시간/공간 민감도·학습 채택 미검증",
+    "원본 굽힘1/500 마지막120프레임은 재사용; 새1/1000 완주 결과는 아직 없음"
+  ]
+}

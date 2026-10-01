@@ -1,0 +1,97 @@
+{
+  "date": "2026-09-28",
+  "source_manifest_sha256": "0be6397195b505b314fa8b8913aa41b28c2249593f366ea2c05529f5536c994e",
+  "analysis_report": "experiments/artifacts/runs/p3_self_contact/motion_analysis/v12_20260928_01/report.json",
+  "tests_passed": 13,
+  "implementation_sha256": {
+    "analyze_gpu_contact_recording.py": "3bb46709a4cc631033020f30594dfdd722665940ab6ccdfcb522cfbb2cacdfe8",
+    "gpu_contact_recording_io.py": "e777629992c3151d69b5b8f19b703e3835b58e9717687bd1acd16debcb306f8b",
+    "p3_common_surface.py": "784d88f36efbcf51a0f6495a20906223249e186499e409ac2bc19bddb1d87a7a",
+    "view_gpu_contact_recording.py": "f6a9bc1b38a75363f8eb54bd86faadd568ad983c0e11f315f90d88aa92f039b4",
+    "view_shell_recording.py": "0ceb9f066b4ebe88953aac0fccff85ece9e60e944948e664d63c55bab4f65513"
+  },
+  "simulation_executed": false,
+  "shapes": {
+    "reference_rectangle": {
+      "completed_frames": 600,
+      "state_count": 601,
+      "recovered_frames": 113,
+      "discarded_attempts": 113,
+      "mapping": {
+        "probe_hash": "50d99e20f7765615ad9a6e55c4d36c08c89e520b67c29c41220ec76fe3861587",
+        "rest_area_m2": 0.75,
+        "policy": "rest_surface_32x16_equal_area_p3_v1",
+        "probe_count": 512,
+        "node_count": 1813,
+        "boundary_count": 8,
+        "mapping_hash": "524a6e58961fb1f46768f8932cda353e402d9585b04acb948c606430bd88b0e2",
+        "constant_error": 1.1102230246251565e-16,
+        "affine_error_m": 1.1102230246251565e-16,
+        "boundary_mapping_hash": "40d35754ed78f9cc0d613fe845af8ed050bae696df8994e5cbfc8d836a8915db",
+        "normalization_length_m": 1.25,
+        "units": {
+          "position": "m",
+          "velocity": "m/s",
+          "area_weight": "m^2"
+        },
+        "scope": "공통 위치/속도 보간만. GS 회전/covariance/힘 전달·학습 적격성 검증 아님"
+      },
+      "calm_end_mean_drop_from_initial_m": 7.238333494797036e-05,
+      "calm_last_second_speed_rms_m_s": 5.3686722003784186e-05
+    },
+    "handkerchief": {
+      "completed_frames": 600,
+      "state_count": 601,
+      "recovered_frames": 0,
+      "discarded_attempts": 0,
+      "mapping": {
+        "probe_hash": "256b00e854d65f423582c256cdf3daed7eb6755f8a0d463428b8c4378283929a",
+        "rest_area_m2": 0.4899999833106996,
+        "policy": "rest_surface_32x16_equal_area_p3_v1",
+        "probe_count": 512,
+        "node_count": 925,
+        "boundary_count": 8,
+        "mapping_hash": "a099949af15f2a4c17abf92d1a1c3de8c196d963456f128eeda39fc711cfe32e",
+        "constant_error": 4.440892098500626e-16,
+        "affine_error_m": 4.440892098500626e-16,
+        "boundary_mapping_hash": "b09d46d42f9ef204be20936e42314b05a469133c965083818d45248b73e2a70b",
+        "normalization_length_m": 0.9899494768024272,
+        "units": {
+          "position": "m",
+          "velocity": "m/s",
+          "area_weight": "m^2"
+        },
+        "scope": "공통 위치/속도 보간만. GS 회전/covariance/힘 전달·학습 적격성 검증 아님"
+      },
+      "calm_end_mean_drop_from_initial_m": 5.230765062203308e-05,
+      "calm_last_second_speed_rms_m_s": 1.2200880969651325e-05
+    },
+    "triangular_flag": {
+      "completed_frames": 600,
+      "state_count": 601,
+      "recovered_frames": 0,
+      "discarded_attempts": 0,
+      "mapping": {
+        "probe_hash": "cd73e3725b80dc3d7d2452200633314b1193b3d878fe4e419a2ef8ea15821f4d",
+        "rest_area_m2": 0.45000001788139343,
+        "policy": "rest_surface_32x16_equal_area_p3_v1",
+        "probe_count": 512,
+        "node_count": 703,
+        "boundary_count": 6,
+        "mapping_hash": "b33b185c5ea20f359d1c80dd09e8e1a8d6b69e574eacf6eef6032c44c13be995",
+        "constant_error": 4.440892098500626e-16,
+        "affine_error_m": 2.220446049250313e-16,
+        "boundary_mapping_hash": "ee154429ec0b4a7e6913627369263446e6774359c566c4cdc8c439988d1350f9",
+        "normalization_length_m": 1.415097210244201,
+        "units": {
+          "position": "m",
+          "velocity": "m/s",
+          "area_weight": "m^2"
+        },
+        "scope": "공통 위치/속도 보간만. GS 회전/covariance/힘 전달·학습 적격성 검증 아님"
+      },
+      "calm_end_mean_drop_from_initial_m": 0.00010262505961544047,
+      "calm_last_second_speed_rms_m_s": 5.066013308995544e-05
+    }
+  }
+}

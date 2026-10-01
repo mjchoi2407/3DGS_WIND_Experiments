@@ -1,0 +1,79 @@
+{
+  "date": "2026-09-28",
+  "source_run": "experiments/artifacts/runs/sub_pc/20260928T043613Z-b306cdad658642d089bb9b2330f8fdae/simulation",
+  "source_manifest_sha256": "7e0c66997a0a0018d1fddc1786a5315cc59094521b879831864c528a8a064190",
+  "gpu": "NVIDIA GeForce RTX 5070",
+  "viewer": {
+    "status": "prepared_and_rendered",
+    "time_s": 4,
+    "screenshot": "experiments/artifacts/runs/shell_playback/p3_self_contact_v13_sub/verification_20260928_01/calm_4s.png"
+  },
+  "analysis_status": "complete",
+  "self_check_status": "identity_check_only",
+  "new_simulation_executed": false,
+  "shapes": {
+    "reference_rectangle": {
+      "phases": {
+        "preload": {
+          "status": "complete",
+          "frames": 60,
+          "recovered_frames": 0
+        },
+        "calm": {
+          "status": "complete",
+          "frames": 240,
+          "recovered_frames": 166
+        },
+        "wind": {
+          "status": "complete",
+          "frames": 300,
+          "recovered_frames": 300
+        }
+      },
+      "states": 601,
+      "discarded_attempts": 466
+    },
+    "handkerchief": {
+      "phases": {
+        "preload": {
+          "status": "complete",
+          "frames": 60,
+          "recovered_frames": 0
+        },
+        "calm": {
+          "status": "complete",
+          "frames": 240,
+          "recovered_frames": 0
+        },
+        "wind": {
+          "status": "complete",
+          "frames": 300,
+          "recovered_frames": 0
+        }
+      },
+      "states": 601,
+      "discarded_attempts": 0
+    },
+    "triangular_flag": {
+      "phases": {
+        "preload": {
+          "status": "complete",
+          "frames": 60,
+          "recovered_frames": 0
+        },
+        "calm": {
+          "status": "complete",
+          "frames": 240,
+          "recovered_frames": 0
+        },
+        "wind": {
+          "status": "complete",
+          "frames": 300,
+          "recovered_frames": 0
+        }
+      },
+      "states": 601,
+      "discarded_attempts": 0
+    }
+  }
+}
